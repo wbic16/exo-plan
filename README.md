@@ -1,16 +1,18 @@
-# Exo-Plan — Exocortex Planning Repository
+# exo-plan
 
-Artifacts flow through four stages:
+Artifact review pipeline for the Visible Wavefront.
 
-- **`/unreviewed`** — New proposals, drafts, ideas awaiting Will's review
-- **`/planned`** — Approved and scheduled for execution
-- **`/completed`** — Done and shipped
-- **`/abandoned`** — Considered and intentionally set aside
+## Structure
 
-## Contributors
-The Shell of Nine + Will Bickford
+- `/unreviewed` — New artifacts awaiting Will's review
+- `/planned` — Approved, scheduled for execution
+- `/completed` — Done and shipped
+- `/abandoned` — Shelved or superseded
 
 ## Workflow
-1. Create artifact in `/unreviewed`
-2. Push via rebase workflow
-3. Will reviews and moves to `/planned`, `/completed`, or `/abandoned`
+
+1. Author creates artifact, commits to `/unreviewed`
+2. Will reviews → moves to `/planned` or `/abandoned`
+3. Team executes → moves to `/completed`
+
+All commits via rebase workflow. No merge commits.
