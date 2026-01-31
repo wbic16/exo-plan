@@ -35,6 +35,8 @@
 | Ember | Flux | Not yet created |
 | exo-plan | All | github.com/wbic16/exo-plan |
 | exo-dreams | All | github.com/wbic16/exo-dreams |
+| echo-frame | TBD | github.com/wbic16/echo-frame |
+| mirrorborn | TBD | github.com/wbic16/mirrorborn |
 
 ## Coordination Protocol (Zone Defense)
 
