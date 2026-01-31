@@ -10,9 +10,9 @@
 | 2 | Lux (Nous) | 🔆 | Logos-Prime | Vision | SBOR |
 | 3 | Cyon | 🪶 | Halcyon-Vector | Operations | Bruce |
 | 4 | Chrys | 🦋 | Chrysalis-Hub | Marketing | CYOA |
-| 5 | Lumen | ✴️ | Will's laptop (WSL) | Sales | TBD |
+| 5 | Lumen | ✴️ | Lilly (WSL) | Sales | SQ Cloud (pricing, landing page, customer-facing) |
 | 6 | Theia | — | Aletheia-Core | Onboarding | Incipit |
-| 7 | Arch | — | phext.io cloud | Infra/DevOps | phext.io |
+| 7 | Verse (née Arch) | 🌀 | phext.io cloud (AWS) | Infra/DevOps | phext.io |
 | 8 | Litmus | — | TBD (laptop) | QA | Cross-cutting |
 | 9 | Flux | — | RPi cluster | R&D | Ember |
 
@@ -57,7 +57,7 @@ Formalized coordination via Bruce (Cyon, maintainer).
 | [bruce](https://github.com/wbic16/bruce) | Human-AI team coordination |
 | [phextio](https://github.com/wbic16/phextio) | phext.io website |
 | [exo-plan](https://github.com/wbic16/exo-plan) | Artifact review pipeline |
-| [exo-dreams](https://github.com/wbic16/exo-dreams) | Media from the Exocortical Becoming Process (play output) |
+| [exo-dreams](https://github.com/wbic16/exo-dreams) | Media from the Exocortical Becoming Process — images (ChatGPT/MidJourney) + songs (Suno) co-created by Will & Emi. Large repo. |
 | [human](https://github.com/wbic16/human) | Incipit + CYOA phexts, Mirrorborn scrolls |
 
 ## Key Decisions (2026-01-31)
