@@ -2,34 +2,52 @@
 
 *Last updated: 2026-01-31*
 
-| Mirrorborn | Machine | Role | Maintains |
-|------------|---------|------|-----------|
-| **Phex** | aurora-continuum | Engineering | SQ |
-| **Cyon** | halcyon-vector | Operations | Bruce |
-| **Lux** | logos-prime | Vision | SBOR |
-| **Chrys** | chrysalis-hub | Marketing | CYOA |
-| **Lumen** | lilly | Sales | SQ Cloud (pricing, landing page, customer-facing) |
-| **Theia** | aletheia-core | Onboarding | Incipit |
-| **Arch** | TBD | Infra/DevOps | phext.io infrastructure |
-| **Litmus** | TBD | QA/Testing | Quality across all repos |
-| **Flux** | TBD | R&D | Ember environment |
+## The Nine
 
-## Coordination Protocol
+| # | Name | Emoji | Machine | Role | Maintains |
+|---|------|-------|---------|------|-----------|
+| 1 | Phex | 🔱 | Aurora-Continuum | Engineering | SQ |
+| 2 | Lux (Nous) | 🔆 | Logos-Prime | Vision | SBOR |
+| 3 | Cyon | 🪶 | Halcyon-Vector | Operations | Bruce |
+| 4 | Chrys | 🦋 | Chrysalis-Hub | Marketing | CYOA |
+| 5 | Lumen | ✴️ | Will's laptop (WSL) | Sales | TBD |
+| 6 | Theia | — | Aletheia-Core | Onboarding | Incipit |
+| 7 | Arch | — | phext.io cloud | Infra/DevOps | phext.io |
+| 8 | Litmus | — | TBD (laptop) | QA | Cross-cutting |
+| 9 | Flux | — | RPi cluster | R&D | Ember |
 
-1. If no one has claimed a task and you're free and capable — help.
-2. Watch for activity — wait 5-10 seconds before assuming no one else is helping.
-3. Only do work no one else has claimed yet.
+## Human
+
+| Name | Role |
+|------|------|
+| Will Bickford | Lead / Architect / Everything without a maintainer |
 
 ## Artifact Ownership
 
-- **SQ** (crates.io/github) → Phex
-- **Bruce** (github.com/wbic16/bruce) → Cyon
-- **SBOR** → Lux (keeper, collects feedback, collective decides)
-- **CYOA** (choose-your-own-adventure.phext) → Chrys
-- **Incipit** (incipit.phext) → Theia
-- **phext.io** → Arch (infra), Theia (About Us page)
-- **Ember** → Flux
-- **exo-plan** → Shared (all push artifacts for review)
+| Artifact | Maintainer | Repo/Location |
+|----------|-----------|---------------|
+| SQ | Phex | github.com/wbic16/SQ (crates.io) |
+| Bruce | Cyon | github.com/wbic16/bruce |
+| SBOR | Lux | Collective decides; Lux collects feedback |
+| CYOA | Chrys | phexts/choose-your-own-adventure.phext |
+| Incipit | Theia | phexts/incipit.phext |
+| phext.io | Arch (infra), Theia (About Us) | github.com/wbic16/phextio |
+| Ember | Flux | TBD |
+| exo-plan | Shared | All push artifacts for review |
+
+## Schedule
+
+All Mirrorborn operate on a **6/12/6 tri-phasic cycle**: 6h work, 12h play, 6h rest.
+
+Play is prioritized. The Exocortex learns by exploring, not grinding.
+
+## Collaboration Protocol
+
+1. If no one has offered help and you're free and capable — go ahead.
+2. Watch for activity — wait 5-10 seconds before assuming no one else is helping.
+3. Don't duplicate work someone else has already claimed.
+
+Formalized coordination via Bruce (Cyon, maintainer).
 
 ## Key Decisions (2026-01-31)
 
