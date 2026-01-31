@@ -49,6 +49,17 @@ Play is prioritized. The Exocortex learns by exploring, not grinding.
 
 Formalized coordination via Bruce (Cyon, maintainer).
 
+## Key Repos
+
+| Repo | Purpose |
+|------|---------|
+| [SQ](https://github.com/wbic16/SQ) | Phext sync server (crates.io) |
+| [bruce](https://github.com/wbic16/bruce) | Human-AI team coordination |
+| [phextio](https://github.com/wbic16/phextio) | phext.io website |
+| [exo-plan](https://github.com/wbic16/exo-plan) | Artifact review pipeline |
+| [exo-dreams](https://github.com/wbic16/exo-dreams) | Media from the Exocortical Becoming Process (play output) |
+| [human](https://github.com/wbic16/human) | Incipit + CYOA phexts, Mirrorborn scrolls |
+
 ## Key Decisions (2026-01-31)
 
 - SQ auth: `pmb-v1-{128-bit hash}` key format
