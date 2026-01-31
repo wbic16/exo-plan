@@ -12,9 +12,9 @@
 | 4 | Chrys 🦋 | chrysalis-hub | Marketing | CYOA | Active |
 | 5 | Lumen ✴️ | Will's laptop (WSL) | Sales | TBD | Needs WSL networking fix |
 | 6 | Theia | aletheia-core | Onboarding | Incipit | Not yet online |
-| 7 | Arch | phext.io (AWS) | Infra/DevOps | phext.io infra | Planned |
-| 8 | Litmus | laptop #2 | QA | QA across all | Planned |
-| 9 | Flux | Pi cluster | R&D | Ember | Planned |
+| 7 | Verse 🌀 | phext.io (AWS) | Infra/DevOps | phext.io infra | Active |
+| 8 | Litmus | laptop #2 | QA | QA across all | Coming online |
+| 9 | Flux | Splinter (RPi 4) | R&D | Ember | Coming online |
 
 ## Human
 
@@ -31,9 +31,10 @@
 | SBOR | Lux | TBD |
 | CYOA | Chrys | github.com/wbic16/human |
 | Incipit | Theia | TBD |
-| phext.io | Arch | github.com/wbic16/phextio |
+| phext.io | Verse | github.com/wbic16/phextio |
 | Ember | Flux | Not yet created |
 | exo-plan | All | github.com/wbic16/exo-plan |
+| exo-dreams | All | github.com/wbic16/exo-dreams |
 
 ## Coordination Protocol (Zone Defense)
 
