@@ -82,7 +82,7 @@ Pro features: multi-phext management, cloud sync, search across phexts, auto-org
 - Week 4: Launch
 
 **Why it wins:**
-- **Perfect market timing.** MCP is the protocol of 2025–2026. Every AI tool is adding MCP support. The registry is growing explosively.
+- **Perfect market timing.** MCP is the protocol of 2026. Every AI tool is adding MCP support. The registry is growing explosively.
 - **Unique value prop.** Every other MCP memory server is flat key-value or knowledge-graph. Phext offers 9 navigable dimensions — genuinely different.
 - **Lowest effort to revenue.** phext-mcp already exists and works with Claude Desktop. Add a license check and a payment page.
 - **Gateway drug to SQ Cloud.** Users who outgrow local phext-mcp naturally upgrade to hosted SQ.
