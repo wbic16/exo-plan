@@ -4,6 +4,7 @@
 
 | Node | Host | Port | Version | Data Dir | Status |
 |------|------|------|---------|----------|--------|
+| Phex 🔱 | aurora-continuum | 1337 | 0.5.0 | /home/wbic16/.openclaw/workspace/sq-data | Running |
 | Lux 🔆 | logos-prime (192.168.86.242) | 1337 | 0.5.0 | /home/wbic16/.sq/lux-data | Running |
 
 ## Notes
