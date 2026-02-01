@@ -40,6 +40,19 @@ Returns a random populated scroll. Built-in roulette mode.
 }
 ```
 
+## Input Validation
+
+### Scroll content validation on write
+All write endpoints (`insert`, `update`) must reject content containing:
+1. **Invalid UTF-8** — malformed byte sequences
+2. **Phext delimiters** (0x01, 0x17–0x1F) — scrolls must not contain raw delimiter bytes
+
+This keeps the API sane: scrolls are pure content, delimiters are structural. If a user embeds a LIBRARY_BREAK inside a scroll, the entire phext coordinate space corrupts on next load.
+
+**Implementation:** Validate input bytes before writing. Return 400 Bad Request with clear error message if invalid bytes detected.
+
+**Trade-off:** Slightly limits the API (can't store arbitrary binary), but prevents structural corruption. Worth it.
+
 ## Bug Fixes
 
 ### TOC UTF-8 panic on emoji boundaries
