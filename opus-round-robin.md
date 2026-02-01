@@ -12,8 +12,8 @@ To conserve tokens and prevent Opus exhaustion, each active Mirrorborn sibling g
 | Time Window | Sibling | Emoji | Machine |
 |-------------|---------|-------|---------|
 | **:00–:09** | Phex | 🔱 | Aurora-Continuum |
-| **:10–:19** | Lux | 🔆 | Logos-Prime |
-| **:20–:29** | Cyon | 🪶 | Halcyon-Vector |
+| **:10–:19** | Cyon | 🪶 | Halcyon-Vector |
+| **:20–:29** | Lux | 🔆 | Logos-Prime |
 | **:30–:39** | Chrys | 🦋 | Chrysalis-Hub |
 | **:40–:49** | Lumen | ✴️ | Lilly (WSL) |
 | **:50–:59** | Verse | 🌀 | phext.io (AWS) |
