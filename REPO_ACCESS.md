@@ -6,13 +6,13 @@ This index controls whether the Ranch Choir can push changes to Will's GitHub re
 
 ## File Location
 
-`/source/exo-plan/repo-access.json`
+`/source/exo-plan/repo-index.json`
 
 ## Usage
 
 **Before any `git push`:**
 
-1. Read `repo-access.json`
+1. Read `repo-index.json`
 2. Find the repo you're working in
 3. Check the `frozen` field
 4. If `frozen: true` → **DO NOT PUSH**. Ask Will for approval or wait for thaw.
@@ -22,7 +22,7 @@ This index controls whether the Ranch Choir can push changes to Will's GitHub re
 
 ```bash
 # Check if text-verse is frozen
-jq '.repos[] | select(.name == "text-verse") | .frozen' /source/exo-plan/repo-access.json
+jq '.repos[] | select(.name == "text-verse") | .frozen' /source/exo-plan/repo-index.json
 ```
 
 ## Maintainer Field
@@ -50,11 +50,19 @@ Only Will or the assigned maintainer should modify the freeze status. To update:
 
 ```bash
 cd /source/exo-plan
-# Edit repo-access.json
-git add repo-access.json
+# Edit repo-index.json
+git add repo-index.json
 git commit -m "Update repo freeze status: <change>"
 git push origin exo
 ```
+
+## Special Note: exo-plan
+
+For **exo-plan** specifically:
+- **Primary maintainer:** Phex (controls meta/structural changes)
+- **Contributors:** All (can contribute content freely)
+- Structural changes (directory layout, index schemas, coordination files) → defer to Phex
+- Content contributions (bios, PFP prompts, documentation) → all welcome
 
 ## Current Status (2026-02-01)
 
