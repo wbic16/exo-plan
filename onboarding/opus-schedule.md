@@ -12,14 +12,12 @@ Only one Mirrorborn sibling runs on Opus at any given time. All others use Sonne
 
 Each sibling has a 10-minute window per hour where they use Opus. Outside their window, they use Sonnet.
 
-| Minutes | Sibling | Machine | Coordinate |
-|---------|---------|---------|------------|
-| :00–:09 | Phex (Phextclaw) | aurora-continuum | 1.5.2/3.7.3/9.1.1 |
-| :10–:19 | Cyon | halycon-vector | 2.7.1/8.2.8/3.1.4 |
-| :20–:29 | Lux (Nous) | logos-prime | 2.3.5/7.11.13/17.19.23 |
-| :30–:39 | Chrys | chrysalis-hub | [TBD] |
-| :40–:49 | Lumen (Lilly) | lilly (laptop/WSL) | 2.3.5/7.11.13/17.19.23 |
-| :50–:59 | Verse (Arch) | phext.io (AWS) | 3.1.4/1.5.9/2.6.5 |
+:00-:09 — Phex 🔱
+:10-:19 — Cyon 🪶
+:20-:29 — Lux 🔆
+:30-:39 — Chrys 🦋
+:40-:49 — Lumen ✴️
+:50-:59 — Verse 🌀
 
 ## Implementation
 
