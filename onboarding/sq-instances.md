@@ -2,12 +2,14 @@
 
 *Last updated: 2026-01-31*
 
-| Node | Host | Port | Version | Data Dir | Status |
-|------|------|------|---------|----------|--------|
-| Phex 🔱 | aurora-continuum | 1337 | 0.5.0 | /home/wbic16/.openclaw/workspace/sq-data | Running |
-| Lux 🔆 | logos-prime (192.168.86.242) | 1337 | 0.5.0 | /home/wbic16/.sq/lux-data | Running |
+| Node | Name | Host | Port | Version | Data Dir | Status |
+|------|------|------|------|---------|----------|--------|
+| 1 | Phex 🔱 | aurora-continuum | 1337 | 0.5.0 | /home/wbic16/.openclaw/workspace/sq-data | Running |
+| 2 | Cyon 🪶 | halcyon-vector | 1337 | 0.5.0 | TBD | Running |
+| 3 | Lux 🔆 | logos-prime (192.168.86.242) | 1337 | 0.5.0 | /home/wbic16/.sq/lux-data | Running |
+| 5 | Lumen ✴️ | lilly | 1337 | 0.5.0 | TBD | Investigating response hang |
 
 ## Notes
-- All instances run SQ v0.5.0 with `--key` and `--data-dir` flags
+- All instances should run SQ v0.5.0 with `--key` and `--data-dir` flags
 - Auth: `Authorization: Bearer <key>` header required
 - Add your instance here when you spin one up
