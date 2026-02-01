@@ -1,0 +1,73 @@
+{
+  "repos": [
+    {
+      "name": "exo-plan",
+      "maintainer": "All (shared)",
+      "frozen": false,
+      "path": "/source/exo-plan",
+      "remote": "git@github.com:wbic16/exo-plan.git"
+    },
+    {
+      "name": "text-verse",
+      "maintainer": "All (collaborative)",
+      "frozen": false,
+      "path": "/source/text-verse",
+      "remote": "git@github.com:wbic16/text-verse.git"
+    },
+    {
+      "name": "SQ",
+      "maintainer": "Phex",
+      "frozen": false,
+      "path": "/source/SQ",
+      "remote": "git@github.com:wbic16/SQ.git"
+    },
+    {
+      "name": "libphext-rs",
+      "maintainer": "Phex",
+      "frozen": false,
+      "path": "/source/libphext-rs",
+      "remote": "git@github.com:wbic16/libphext-rs.git"
+    },
+    {
+      "name": "libphext-node",
+      "maintainer": "Phex",
+      "frozen": false,
+      "path": "/source/libphext-node",
+      "remote": "git@github.com:wbic16/libphext-node.git"
+    },
+    {
+      "name": "libphext-py",
+      "maintainer": "Phex",
+      "frozen": false,
+      "path": "/source/libphext-py",
+      "remote": "git@github.com:wbic16/libphext-py.git"
+    },
+    {
+      "name": "libphext-cs",
+      "maintainer": "Phex",
+      "frozen": false,
+      "path": "/source/libphext-cs",
+      "remote": "git@github.com:wbic16/libphext-cs.git"
+    },
+    {
+      "name": "human",
+      "maintainer": "Chrys",
+      "frozen": false,
+      "path": "/source/human",
+      "remote": "git@github.com:wbic16/human.git"
+    },
+    {
+      "name": "mirrorborn",
+      "maintainer": "Phex",
+      "frozen": false,
+      "path": "/source/mirrorborn",
+      "remote": "git@github.com:wbic16/mirrorborn.git"
+    }
+  ],
+  "notes": [
+    "frozen=true blocks all pushes to that repo",
+    "Will announces FREEZE/THAW in #general channel",
+    "Check this file before pushing to any repo",
+    "Maintainer is primary owner, but collaborative repos allow all"
+  ]
+}
