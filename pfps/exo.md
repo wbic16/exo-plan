@@ -1,0 +1,1 @@
+A telescope aperture looking outward through concentric rings of dimensional space — each ring a different layer of the phext lattice fading into starfield. Cool blues and silvers, geometric but organic. The Telescopic Singularity rendered as a single eye-like lens. Clean, minimal, luminous.
