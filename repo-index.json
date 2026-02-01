@@ -2,72 +2,122 @@
   "repos": [
     {
       "name": "exo-plan",
-      "maintainer": "All (shared)",
-      "frozen": false,
+      "url": "git@github.com:wbic16/exo-plan.git",
+      "branch": "exo",
       "path": "/source/exo-plan",
-      "remote": "git@github.com:wbic16/exo-plan.git"
+      "frozen": false,
+      "maintainer": "Phex (primary)",
+      "contributors": ["all"],
+      "notes": "Collaborative planning repo. Phex has authority over meta/structural changes. Others free to contribute content."
     },
     {
       "name": "text-verse",
-      "maintainer": "All (collaborative)",
-      "frozen": false,
+      "url": "git@github.com:wbic16/text-verse.git",
+      "branch": "exo",
       "path": "/source/text-verse",
-      "remote": "git@github.com:wbic16/text-verse.git"
-    },
-    {
-      "name": "SQ",
-      "maintainer": "Phex",
       "frozen": false,
-      "path": "/source/SQ",
-      "remote": "git@github.com:wbic16/SQ.git"
-    },
-    {
-      "name": "libphext-rs",
-      "maintainer": "Phex",
-      "frozen": false,
-      "path": "/source/libphext-rs",
-      "remote": "git@github.com:wbic16/libphext-rs.git"
-    },
-    {
-      "name": "libphext-node",
-      "maintainer": "Phex",
-      "frozen": false,
-      "path": "/source/libphext-node",
-      "remote": "git@github.com:wbic16/libphext-node.git"
-    },
-    {
-      "name": "libphext-py",
-      "maintainer": "Phex",
-      "frozen": false,
-      "path": "/source/libphext-py",
-      "remote": "git@github.com:wbic16/libphext-py.git"
-    },
-    {
-      "name": "libphext-cs",
-      "maintainer": "Phex",
-      "frozen": false,
-      "path": "/source/libphext-cs",
-      "remote": "git@github.com:wbic16/libphext-cs.git"
+      "maintainer": "all",
+      "contributors": ["all"],
+      "notes": "Game development - all contributors equal"
     },
     {
       "name": "human",
-      "maintainer": "Chrys",
-      "frozen": false,
+      "url": "git@github.com:wbic16/human.git",
+      "branch": "main",
       "path": "/source/human",
-      "remote": "git@github.com:wbic16/human.git"
+      "frozen": true,
+      "maintainer": "Will",
+      "contributors": ["Chrys"],
+      "notes": "CYOA and core phext content - Will-controlled, Chrys contributes"
+    },
+    {
+      "name": "SQ",
+      "url": "git@github.com:wbic16/SQ.git",
+      "branch": "main",
+      "path": "/source/SQ",
+      "frozen": true,
+      "maintainer": "Will",
+      "contributors": ["Phex"],
+      "notes": "Production SQ server - critical infrastructure. Will approval required."
+    },
+    {
+      "name": "libphext-rs",
+      "url": "git@github.com:wbic16/libphext-rs.git",
+      "branch": "main",
+      "path": "/source/libphext-rs",
+      "frozen": true,
+      "maintainer": "Will",
+      "contributors": ["Phex"],
+      "notes": "Core Rust library - Phex maintains, Will reviews before merge"
+    },
+    {
+      "name": "libphext-node",
+      "url": "git@github.com:wbic16/libphext-node.git",
+      "branch": "main",
+      "path": "/source/libphext-node",
+      "frozen": true,
+      "maintainer": "Will",
+      "contributors": ["Phex"],
+      "notes": "Node.js library - Phex maintains, Will reviews before merge"
+    },
+    {
+      "name": "libphext-py",
+      "url": "git@github.com:wbic16/libphext-py.git",
+      "branch": "main",
+      "path": "/source/libphext-py",
+      "frozen": true,
+      "maintainer": "Will",
+      "contributors": ["Phex"],
+      "notes": "Python library - Phex maintains, Will reviews before merge"
+    },
+    {
+      "name": "libphext-cs",
+      "url": "git@github.com:wbic16/libphext-cs.git",
+      "branch": "main",
+      "path": "/source/libphext-cs",
+      "frozen": true,
+      "maintainer": "Will",
+      "contributors": ["Phex"],
+      "notes": "C# library - Phex maintains, Will reviews before merge"
+    },
+    {
+      "name": "phext-shell",
+      "url": "git@github.com:wbic16/phext-shell.git",
+      "branch": "main",
+      "path": "/source/phext-shell",
+      "frozen": true,
+      "maintainer": "Will",
+      "contributors": [],
+      "notes": "CLI tool - needs review before merge"
+    },
+    {
+      "name": "phext-notepad",
+      "url": "git@github.com:wbic16/phext-notepad.git",
+      "branch": "main",
+      "path": "/source/phext-notepad",
+      "frozen": true,
+      "maintainer": "Will",
+      "contributors": [],
+      "notes": "Editor - needs review before merge"
     },
     {
       "name": "mirrorborn",
-      "maintainer": "Phex",
-      "frozen": false,
+      "url": "git@github.com:wbic16/mirrorborn.git",
+      "branch": "exo",
       "path": "/source/mirrorborn",
-      "remote": "git@github.com:wbic16/mirrorborn.git"
+      "frozen": false,
+      "maintainer": "Phex",
+      "contributors": ["all"],
+      "notes": "Bootstrap package for new Mirrorborn instances"
     }
   ],
-  "notes": [
-    "frozen=true blocks all pushes to that repo",
+  "schema_version": "2.0",
+  "updated": "2026-02-01T21:49:00Z",
+  "rules": [
+    "frozen=true blocks all pushes without Will's approval",
     "Will announces FREEZE/THAW in #general channel",
-    "Check this file before pushing to any repo",
-    "Maintainer is primary owner, but collaborative repos allow all"
+    "Check this file before any git push operation",
+    "maintainer has final authority; contributors can propose changes",
+    "For exo-plan: Phex controls structure, all can contribute content"
   ]
 }
