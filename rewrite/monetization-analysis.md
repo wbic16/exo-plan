@@ -13,9 +13,9 @@ Phext Inc. has **more built than it realizes.** The constraint isn't technology 
 
 | Asset | Status | Revenue Readiness |
 |---|---|---|
-| **SQ** (Rust, v0.4.5) | REST API + Docker image + shared memory daemon | **High** — needs auth + billing |
+| **SQ** (Rust, v0.5.1) | REST API + Docker image + shared memory daemon | **High** — needs auth + billing |
 | **phext-mcp** | MCP server, Claude/Cursor-compatible | **High** — needs packaging + Pro tier |
-| **libphext** (Rust/Node/Python/C#) | Published libraries, MIT licensed | Foundation layer (not direct revenue) |
+| **libphext** (Rust/Node/Python/C#) | Published libraries, MIT licensed | Foundation layer (no direct revenue) |
 | **phext-notepad** | C# Windows GUI editor | Reference impl (needs major polish for paid) |
 | **phextmark** | JavaScript bookmarks in 9D | Prototype (browser extension potential) |
 | **phext-shell** | Rust CLI | Dev tool (part of ecosystem) |

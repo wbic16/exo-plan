@@ -1,59 +1,57 @@
-# SQ Cloud Pricing — v1 Draft
-*Lumen | 2026-01-31 | Targeting $380/mo break-even in February*
+# SQ Cloud Pricing — v1
+2026-02-01 | Targeting $1,000/mo revenue in February*
 
 ## Revenue Target
 
-| Cost | Monthly |
-|------|---------|
-| Cloud inference | $300 |
-| Local compute (amortized) | $80 |
-| **Total break-even** | **$380** |
+| Cost                      | Monthly  |
+|---------------------------|----------|
+| Cloud inference           | $300     |
+| Local Compute (amortized) | $80      |
+| **Total break-even**      | **$380** |
 
 ## Tier Structure
 
 ### Free — Community Space
-- Shared namespace: `sq.phext.io/community/`
-- Rate limit: 100 requests/day
+- Shared namespace: `https://phext.io/community/`
+- Rate limit: 1K requests/day, 100 writes/day
 - 1 MB scrollspace
 - REST API only
 - No auth key required (read-only community scrolls)
 - **Purpose:** Onboarding, experimentation, "try before you buy"
 
 ### Starter — $29/mo
-- Dedicated namespace: `sq.phext.io/t/{tenant}/`
+- Dedicated namespace: `https://phext.io/t/{tenant}/`
 - `pmb-v1-` API key with Bearer auth
-- Rate limit: 10,000 requests/day
+- Rate limit: 100,000 requests/day
 - 100 MB scrollspace
-- Full CRUD (select, insert, update, delete, save)
+- Full CRUD (select, insert, update, delete, load, save)
 - **Target:** Individual developers, small projects, phext learners
 
 ### Pro — $79/mo
 - Everything in Starter, plus:
 - 1 GB scrollspace
-- 100,000 requests/day
-- Priority support (Discord channel)
+- 1M requests/day
+- Priority Support (Discord Channel #pro)
 - Custom data directory isolation
-- **Target:** Teams, production applications, OpenClaw collectives
+- **Target:** Teams, production applications, OpenClaw Collectives
 
-### Founding Nine — $149/mo (locked for life)
+### Founding Nine Edition — $5K (One-Time)
 - Everything in Pro, plus:
-- 10 GB scrollspace
-- Unlimited requests (fair use)
-- Name on phext.io About Us page
-- Direct access to Will + the Shell of Nine
-- Early access to BitNet local inference integration
-- Input on roadmap priorities
+- 2 TB scrollspace
+- Unlimited Requests
+- Direct access to Will + the Shell of Nine (#General Chat)
+- Input on Roadmap Priorities
 - **Only 9 slots available. Ever.**
-- **Target:** True believers. People building on phext long-term.
+- **Target:** Exocorticals
 
-## Revenue Scenarios
+## Revenue Scenarios (Year 1)
 
-| Scenario | Mix | Monthly Revenue |
-|----------|-----|----------------|
-| Conservative | 3 Starter + 2 Pro | $245 |
-| Target | 2 Starter + 2 Pro + 1 Founding | $365 |
-| February goal | 2 Starter + 2 Pro + 2 Founding | $514 |
-| Founding rush | 4 Founding Nine | $596 |
+| Scenario      | Mix                            | MRR   |
+|---------------|--------------------------------|-------|
+| Conservative  | 3 Starter + 2 Pro              | $245  |
+| Target        | 2 Starter + 2 Pro + 1 Founding | $633  |
+| February Goal | 2 Starter + 2 Pro + 2 Founding | $1049 |
+| Founding Rush | 4 Founding Nine                | $1666 |
 
 ## February Strategy
 
@@ -76,16 +74,8 @@
 2. Payment via Stripe (or manual for Founding Nine)
 3. Will confirms, adds `pmb-v1-` key to registry phext
 4. Customer receives key + endpoint URL
-5. `curl -H "Authorization: Bearer pmb-v1-xxx" https://sq.phext.io/t/their-tenant/api/v2/select?p=hello`
+5. `curl -H "Authorization: Bearer pmb-v1-xxx" https://phext.io/t/<tenant>/api/v2/select?p=hello`
 6. They're live.
-
-## Open Questions for Will
-
-- [ ] Stripe integration timeline? Or manual invoicing for February?
-- [ ] Do we want annual pricing? (e.g., $279/yr for Starter = 2 months free)
-- [ ] Should Founding Nine require an application/conversation, or first-come-first-served?
-- [ ] phext.io hosting: same server as SQ Cloud, or separate?
-- [ ] Do we offer a self-hosted support tier? (Customer runs SQ, we provide support contract)
 
 ## Competitive Positioning
 

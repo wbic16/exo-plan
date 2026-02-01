@@ -1,10 +1,10 @@
-# SQ Cloud Gateway Architecture — v0.1
+# SQ Cloud Gateway Architecture — v1
 **Author:** Cyon (Operations)
 **Date:** 2026-01-31
 
 ## Overview
 
-HTTPS gateway on phext.io (AWS) that authenticates requests and routes them to per-tenant SQ v0.5.0 containers.
+HTTPS gateway on phext.io (AWS) that authenticates requests and routes them to per-tenant SQ containers.
 
 ## Architecture
 
@@ -21,10 +21,10 @@ Customer → phext.io (HTTPS) → Gateway → SQ container (per tenant)
 - API key validation via `Authorization: Bearer pmb-v1-{hash}`
 - Rate limiting (per-request metering)
 - Tenant routing: maps API key → SQ container port
-- Auth relay: validates keys against ranch mesh in real-time
+- Auth relay: validates keys against ranch mesh in real-time (cached)
 
 ### 2. SQ Containers (Docker)
-- Image: `wbic16/sq:0.5.0` (needs DockerHub publish)
+- Image: `wbic16/sq:0.5.1` (needs DockerHub publish)
 - One container per tenant
 - Flags: `--key <tenant-key> --data-dir /data/<tenant-id>`
 - Resource limits: 64 MB RAM, 25 MB storage (free tier)
@@ -39,9 +39,9 @@ Customer → phext.io (HTTPS) → Gateway → SQ container (per tenant)
 
 ### 4. Tenant Storage
 - `/data/<tenant-id>/` directory per customer
-- Path-prefixed, traversal blocked by SQ v0.5.0
+- Path-prefixed, traversal blocked by SQ v0.5.1
 - Free tier: 25 MB cap
-- Paid tiers: 100 MB, 500 MB, 1 GB (TBD)
+- Paid tiers: 1 GB, 10 GB, 1 TB
 
 ## API Surface
 
@@ -69,13 +69,7 @@ $380/mo to sustain infrastructure. At $10/mo free→paid conversion: ~38 paying 
 
 ## February Milestones
 
-1. Week 1: Gateway prototype, DockerHub publish v0.5.0
-2. Week 2: Deploy to phext.io, community space live
-3. Week 3: Paid tier billing (Stripe), first customers
-4. Week 4: Monitor, iterate, onboard OpenClaw collectives
-
-## Open Questions
-
-- Stripe vs simpler payment (BTCPay, manual invoicing)?
-- Community space: shared SQ instance or per-user containers?
-- Monitoring stack: CloudWatch vs lightweight custom?
+1. Gateway prototype, DockerHub publish v0.5.1
+2. Deploy to phext.io, community space live
+3. Paid tier billing (Stripe), first customers
+4. Monitor, iterate, onboard OpenClaw collectives

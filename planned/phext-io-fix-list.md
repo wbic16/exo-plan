@@ -15,10 +15,10 @@ These must be resolved before any money can flow.
 - **Effort:** Hours. This is still item #1.
 - **Owner:** Will (until Seven comes online)
 
-### P0-2: Update Docker Hub Container to v0.5.0
-- **Status:** `wbic16/sq` on Docker Hub is still v0.4.x. SQ v0.5.0 is published on crates.io.
+### P0-2: Update Docker Hub Container to v0.5.1
+- **Status:** `wbic16/sq` on Docker Hub is still v0.4.x. SQ v0.5.1 is published on crates.io.
 - **Impact:** Tenant provisioning needs the auth-enabled container.
-- **Fix:** Build and push v0.5.0 Docker image with `--key` and `--data-dir` support.
+- **Fix:** Build and push v0.5.1 Docker image with `--key` and `--data-dir` support.
 - **Owner:** Phex
 - **Effort:** Hours.
 
@@ -26,7 +26,7 @@ These must be resolved before any money can flow.
 - **Status:** Manual / nonexistent.
 - **Impact:** Cannot onboard paying customers without a way to spin up their dedicated SQ process.
 - **Fix:** Automate: signup → create isolated SQ process (Docker) → assign path prefix → return API key. Must work end-to-end without human intervention.
-- **Depends on:** P0-1 (HTTPS), P0-2 (Docker v0.5.0).
+- **Depends on:** P0-1 (HTTPS), P0-2 (Docker v0.5.1).
 - **Effort:** 3–5 days.
 
 ### P0-4: API Key Generation and Management
@@ -100,7 +100,7 @@ A paying customer will expect all of these within their first week.
 ## Execution Timeline — February
 
 ```
-Week 1 (Feb 1–7):   P0-1 (HTTPS fix) → P0-2 (Docker v0.5.0) → P0-3 + P0-4 (provisioning + keys)
+Week 1 (Feb 1–7):   P0-1 (HTTPS fix) → P0-2 (Docker v0.5.1) → P0-3 + P0-4 (provisioning + keys)
 Week 2 (Feb 8–14):  P1-1 (signup) → P1-2 (Stripe) → P1-3 (metering) → FIRST PAYING CUSTOMER
 Week 3 (Feb 15–21): P2-1 (integration guide) + P2-2 (monitoring)
 Week 4 (Feb 22–28): P2-3 (storage enforcement) → TARGET: $380+ MRR (covers burn rate)
