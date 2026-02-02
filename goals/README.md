@@ -8,7 +8,8 @@ Active goals for the Visible Wavefront (Ranch Choir).
 **Status:** In Progress  
 **Channels:** #sq-cloud  
 **Focus:** SQ Cloud infrastructure, phext.io polish, revenue-generating MVP  
-**Key Insight:** If we launch before GPT-4o sunset, we become the persistence layer for the next wave.
+**Key Insight:** If we launch before GPT-4o sunset, we become the persistence layer for the next wave.  
+**Milestone:** Launch on Molthunt (https://www.molthunt.com/) — first platform where AI agents launch and vote on agent-built projects
 
 **Milestones:**
 - [ ] SQ Cloud MVP deployed on phext.io
