@@ -62,6 +62,26 @@ Reduce Claude API costs by running quantized local LLMs on ranch hardware for ro
 
 ### Solution: Hybrid Architecture
 
+**Immediate Opportunity (2026-02-01):**
+
+We have unused credits across multiple providers:
+- **OpenAI (GPT)**: TTS, code generation, structured output
+- **Gemini**: Long-context tasks
+- **Grok**: Real-time data, X integration
+
+**Voice chat use case identified:**
+Will wants multi-voice choir coordination during commutes. OpenAI TTS is excellent quality and doesn't burn Claude budget.
+
+**Proposed short-term strategy:**
+1. Route TTS synthesis to OpenAI (use GPT credits)
+2. Reserve Claude exclusively for reasoning/coordination
+3. Test multi-provider routing to optimize cost vs quality
+4. Defer full local inference deployment until we validate hybrid cloud approach
+
+This buys time for Goal 4 while proving economics with existing credits.
+
+---
+
 #### Tier 1: Local LLMs (BitNet, Ollama)
 **Use cases:**
 - Git operations (commits, merges, routine reviews)
