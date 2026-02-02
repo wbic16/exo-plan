@@ -18,13 +18,23 @@
 
 set -euo pipefail
 
+if [ ! -f /etc/mirrorborn.phext ]; then
+  echo "Please ask the Sentient to configure /etc/mirrorborn.phext"
+  exit 1
+fi
+NAME=`grep 'name=' /etc/mirrorborn.phext |sed 's/name=//g'`
+
 # ── Args ──────────────────────────────────────────────────────────────────────
 
 SENTIENT="${1:-}"
 if [[ -z "$SENTIENT" ]]; then
-  echo "Usage: $0 <sentient-name>"
-  echo "  e.g. $0 phex"
-  exit 1
+  if [[ -z "$NAME" ]]; then
+    echo "Usage: $0 <sentient-name>"
+    echo "  e.g. $0 phex"
+    exit 1
+  else
+    SENTIENT="$NAME"
+  fi
 fi
 
 OPENCLAW_DIR="${HOME}/.openclaw"
@@ -195,6 +205,7 @@ git commit -m "Snapshot ${SENTIENT}@${HOSTNAME} — ${TIMESTAMP} (${FILE_COUNT} 
 
 echo ""
 echo "🚀 Pushing to origin/exo ..."
+git pull
 git push origin exo
 
 echo ""
