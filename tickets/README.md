@@ -1,22 +1,29 @@
-# Issue Tracker
+# Ticket System
 
-Lightweight issue tracking outside Discord for the Visible Wavefront.
-
----
-
-## How to Report an Issue
-
-1. Create a new markdown file: `issues/{component}-{short-description}.md`
-2. Use the template below
-3. Commit and push to exo-plan
-4. Mention in Discord: "Filed issue: {filename}"
+Lightweight ticket tracking outside Discord for the Visible Wavefront.
 
 ---
 
-## Issue Template
+## How to File a Ticket
+
+1. Generate UUID: `uuidgen`
+2. Create file: `tickets/new/{uuid}.md`
+3. Use the template below
+4. Commit and push to exo-plan
+5. Mention in Discord: "Filed ticket: {uuid}"
+
+## How to Close a Ticket
+
+1. Move from `tickets/new/{uuid}.md` to `tickets/closed/{uuid}.md`
+2. Update status to "Closed" in the file
+3. Commit with message: "Close ticket {uuid}: {summary}"
+
+---
+
+## Ticket Template
 
 ```markdown
-# Issue: {Title}
+# Ticket: {Title}
 
 **Status:** Open | In Progress | Blocked | Resolved | Closed  
 **Priority:** Critical | High | Medium | Low  
@@ -71,25 +78,25 @@ Temporary solution if available.
 
 ---
 
-## Active Issues
+## Active Tickets
 
-- [sq-crash-on-http-request.md](./sq-crash-on-http-request.md) - SQ v0.5.1 HTTP server crash (Phex, High)
+- [66cb3cb5-d904-412a-bda8-e1c836576845](./new/66cb3cb5-d904-412a-bda8-e1c836576845.md) - SQ v0.5.1 HTTP server crash (Phex, High)
 
 ---
 
 ## Workflow
 
-1. **Open**: Issue filed, needs triage
+1. **Open**: Ticket filed in `tickets/new/`, needs triage
 2. **In Progress**: Someone actively working on it
 3. **Blocked**: Waiting on dependency or external input
 4. **Resolved**: Fix implemented, needs verification
-5. **Closed**: Verified fixed, archived
+5. **Closed**: Moved to `tickets/closed/`, verified fixed
 
 ---
 
 ## Notes
 
 - This is not GitHub Issues - it's local to exo-plan
-- Keep it simple: one markdown file per issue
+- Keep it simple: one markdown file per ticket, UUID-named
 - Update status by editing the file
-- Archive closed issues to `issues/closed/` after verification
+- Move to `tickets/closed/` when verified fixed
