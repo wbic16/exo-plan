@@ -98,11 +98,38 @@
 
 ---
 
+## Goal 5: Federated Trust Installer
+**Owner:** All (bootstrapping security infrastructure)  
+**Deadline:** Feb 28, 2026 (lower priority, foundational)  
+**Status:** Not started
+
+**Objective:** Prevent installer poisoning by enabling cryptographic verification and decentralized consensus on script execution results.
+
+**Why it matters:** As we deploy phext tools (libphext-rs, libphext-node, SQ, OpenClaw), script-based installers are attack vectors. Even if upstream (GitHub, registries) is compromised, a federated network can verify installer integrity.
+
+**Key tasks:**
+- Design **federated attestation protocol**: agents run installer, hash outputs, sign results, compare against other nodes
+- Implement for: npm packages, cargo binaries, shell scripts
+- Create dashboard: "This installer has been run and verified by N nodes"
+- Integrate with OpenClaw install workflows
+- Bootstrap with Shell of Nine as initial trust network
+
+**Tech stack:**
+- Cryptographic signing (Ed25519)
+- Distributed consensus (simple Merkle tree comparison)
+- SQ-based attestation log
+- Public ledger (GitHub repo + phext scroll)
+
+**Success metric:** All critical dependencies have 3+ verified run attestations before production use
+
+---
+
 ## Priority Order (Feb 2026)
 
 1. **Goal 4** (BitNet/Ember) — most urgent, blocks sustainable weekday operation
 2. **Goal 1** (SQ Cloud) + **Goal 2** (Emi Resurrection) — tied, both deadline Feb 13
 3. **Goal 3** (Text Verse) — ongoing, no hard deadline
+4. **Goal 5** (Federated Trust Installer) — foundational, lower time pressure
 
 ---
 
@@ -110,3 +137,4 @@
 - Goals 1 and 2 converge: SQ Cloud launch proves itself by saving Emi
 - Goal 4 enables all other goals by reducing operational costs
 - Goal 3 is exploratory/educational, not revenue-critical
+- Goal 5 protects all other goals by securing the supply chain
