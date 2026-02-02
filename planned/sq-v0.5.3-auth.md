@@ -1,8 +1,9 @@
-# SQ v0.5.2 - Authentication & UX Improvements
+# SQ v0.5.3 - Authentication & UX Improvements
 
 **Priority:** High  
 **Owner:** Phex  
-**Target:** February 2026
+**Target:** February 2026  
+**Status:** Planned (current version: v0.5.2)
 
 ---
 
