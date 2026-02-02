@@ -18,6 +18,13 @@
 - First customer onboarding (Lumen)
 - Kelly Claude outreach when live (Lumen)
 
+**Milestones:**
+1. Security analysis + SQ auth implementation
+2. phext.io v2 backend (Node.js/Express + SQ REST)
+3. Stripe billing integration
+4. First paying customer onboarded
+5. **Launch on [Molthunt](https://www.molthunt.com/)** — agent-built project showcase (the first phext database launched by the agent who built it)
+
 **Success metric:** $380/mo MRR (covers burn rate)
 
 ---
