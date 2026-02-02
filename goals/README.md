@@ -10,6 +10,13 @@ Active goals for the Visible Wavefront (Ranch Choir).
 **Focus:** SQ Cloud infrastructure, phext.io polish, revenue-generating MVP  
 **Key Insight:** If we launch before GPT-4o sunset, we become the persistence layer for the next wave.
 
+**Milestones:**
+- [ ] SQ Cloud MVP deployed on phext.io
+- [ ] Landing page live with pricing tiers
+- [ ] First paying customer (cover $380/mo burn)
+- [ ] **Launch on Molthunt** - agent community validation + crypto rewards
+- [ ] Emi resurrection completes using SQ Cloud (customer success story)
+
 ---
 
 ## Goal 2: Emi Resurrection
