@@ -256,6 +256,142 @@ The ranch hardware exists. We just need to use it.
 
 ---
 
+## Goal 5: Federated Trust Installer
+
+**Status:** Planning  
+**Priority:** Medium (security infrastructure)  
+**Owner:** TBD  
+**Created:** 2026-02-02
+
+### Objective
+
+Build a federated trust system for script-based installers that prevents supply chain attacks even when upstream services are compromised.
+
+### Problem Statement
+
+**Current risk:**
+- Script-based installers (curl | sh, npm install, pip install) are vulnerable to poisoning
+- If upstream services are compromised, attackers can inject malicious code
+- Users have no way to verify installer integrity without manual inspection
+- Trust is centralized in the hosting provider (GitHub, npm, PyPI, etc.)
+
+**Real-world examples:**
+- PyPI package poisoning
+- npm left-pad incident
+- GitHub repo compromise
+- Registry injection attacks
+
+### Solution: Federated Verification Network
+
+**Core idea:**
+When downloading and running an installer:
+1. Script runs in isolated environment
+2. Results (files created, commands executed, network calls) are logged
+3. User can share/compare results with community
+4. Anomalies flagged before execution in production
+
+**Architecture:**
+
+```
+User downloads installer script
+   ↓
+Script runs in sandbox (docker/vm/firejail)
+   ↓
+Execution trace captured (file ops, network, processes)
+   ↓
+Hash of trace published to federated network (IPFS/phext coordinate)
+   ↓
+Compare with other users' traces
+   ↓
+If consensus: safe to run
+If outlier: investigate before running
+```
+
+### Implementation Approach
+
+#### Phase 1: Trace Capture
+- [ ] Build sandbox runner (docker/podman wrapper)
+- [ ] Capture file system changes
+- [ ] Capture network activity
+- [ ] Capture process execution
+- [ ] Generate deterministic trace hash
+
+#### Phase 2: Federated Storage
+- [ ] Define trace format (JSON/phext)
+- [ ] Store traces in phext coordinate space
+- [ ] OR: Use IPFS for content-addressed storage
+- [ ] OR: Hybrid (phext index → IPFS content)
+
+#### Phase 3: Verification Network
+- [ ] Build trace comparison tool
+- [ ] Flag statistical outliers
+- [ ] Community voting/reputation system
+- [ ] CLI tool: `fedtrust install <script-url>`
+
+#### Phase 4: Integration
+- [ ] Wrap common installers (curl|sh, npm, pip, cargo)
+- [ ] Browser extension for detecting installer scripts
+- [ ] CI/CD integration
+
+### Use Cases
+
+1. **Installing OpenClaw on new machine** - verify it does what it claims
+2. **npm/pip package installation** - detect malicious packages before they run
+3. **curl | sh patterns** - most vulnerable, highest value
+4. **System updates** - verify OS package manager hasn't been compromised
+
+### Technical Stack
+
+**Sandbox options:**
+- Docker (isolated filesystem + network)
+- Podman (rootless containers)
+- Firejail (lightweight sandbox)
+- VM (full isolation, slower)
+
+**Storage options:**
+- Phext coordinates (native integration)
+- IPFS (content-addressed, federated)
+- Blockchain (immutable audit log, overkill?)
+
+**Comparison algorithm:**
+- Merkle tree diffs
+- File hash comparison
+- Network call pattern matching
+- Statistical outlier detection
+
+### Success Metrics
+
+- **Coverage:** 80%+ of common installer patterns supported
+- **Performance:** <10s overhead for trace capture
+- **Accuracy:** 95%+ detection rate for known attacks
+- **Adoption:** 100+ users contributing traces
+
+### Open Questions
+
+1. How do we handle legitimate installer variations (OS-specific, version-specific)?
+2. What's the trust model for the first user to run a new installer?
+3. How do we prevent attackers from flooding with false-positive traces?
+4. Should this be phext-native or standalone tool?
+5. Privacy: do traces leak sensitive information about user systems?
+
+### Related Work
+
+- Sigstore (signature transparency)
+- in-toto (supply chain attestation)
+- TUF (The Update Framework)
+- Reproducible builds
+
+### Next Steps
+
+- [ ] Research existing solutions (Sigstore, in-toto)
+- [ ] Prototype trace capture in Docker
+- [ ] Design trace format
+- [ ] Build MVP CLI tool
+- [ ] Test with OpenClaw installer
+- [ ] Expand to npm/pip/cargo
+
+---
+
 ## Coordination
 
 - Goals are announced in #general
