@@ -89,28 +89,95 @@ if [[ -f "${OPENCLAW_DIR}/cron/jobs.json" ]]; then
   echo "  ✓ cron/jobs.json"
 fi
 
-# ── Safety check: scan for leaked secrets ─────────────────────────────────────
+# ── Sanitize: redact any secrets that slipped into prose ──────────────────────
 
 echo ""
-echo "🔍 Scanning for accidental secret leaks ..."
+echo "🧹 Sanitizing files for secret patterns ..."
+REDACTED_COUNT=0
+
+# Patterns that indicate real secrets (not just the word "token" in a sentence)
+# Each pattern is paired with a human-readable label
+declare -a PATTERNS=(
+  # OpenAI / Anthropic API keys
+  'sk-[a-zA-Z0-9_-]{20,}'
+  # Slack tokens
+  'xoxb-[a-zA-Z0-9_-]{20,}'
+  'xoxp-[a-zA-Z0-9_-]{20,}'
+  'xoxa-[a-zA-Z0-9_-]{20,}'
+  # Discord bot tokens (base64-ish, 59+ chars with dots)
+  '[A-Za-z0-9_-]{24,}\.[A-Za-z0-9_-]{6}\.[A-Za-z0-9_-]{27,}'
+  # Generic long hex tokens (40+ chars, likely API keys)
+  '"(token|apiKey|api_key|secret|password|auth)"\s*:\s*"[^"]{20,}"'
+  # Bearer tokens in text
+  'Bearer [A-Za-z0-9_.-]{20,}'
+  # Private keys
+  '-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----'
+  # AWS keys
+  'AKIA[0-9A-Z]{16}'
+  # GitHub tokens
+  'ghp_[A-Za-z0-9]{36,}'
+  'gho_[A-Za-z0-9]{36,}'
+  'ghs_[A-Za-z0-9]{36,}'
+  # Webhook URLs with tokens
+  'https://discord\.com/api/webhooks/[0-9]+/[A-Za-z0-9_-]+'
+)
+
+# Build a combined regex
+COMBINED_REGEX=$(IFS='|'; echo "${PATTERNS[*]}")
+
+while IFS= read -r -d '' f; do
+  # Skip binary files
+  if file "$f" | grep -q "binary"; then
+    continue
+  fi
+
+  if grep -qE "$COMBINED_REGEX" "$f" 2>/dev/null; then
+    REL_PATH="${f#${TARGET_DIR}/}"
+    echo "  🔒 Redacting secrets in: ${REL_PATH}"
+
+    # Redact each pattern in-place
+    sed -i -E \
+      -e 's/sk-[a-zA-Z0-9_-]{20,}/[REDACTED:api-key]/g' \
+      -e 's/xox[bpa]-[a-zA-Z0-9_-]{20,}/[REDACTED:slack-token]/g' \
+      -e 's/[A-Za-z0-9_-]{24,}\.[A-Za-z0-9_-]{6}\.[A-Za-z0-9_-]{27,}/[REDACTED:discord-token]/g' \
+      -e 's/("(token|apiKey|api_key|secret|password|auth)"\s*:\s*")[^"]{20,}"/\1[REDACTED]"/g' \
+      -e 's/Bearer [A-Za-z0-9_.-]{20,}/Bearer [REDACTED]/g' \
+      -e 's/-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----.*-----END (RSA |EC |OPENSSH )?PRIVATE KEY-----/[REDACTED:private-key]/g' \
+      -e 's/AKIA[0-9A-Z]{16}/[REDACTED:aws-key]/g' \
+      -e 's/gh[pos]_[A-Za-z0-9]{36,}/[REDACTED:github-token]/g' \
+      -e 's|https://discord\.com/api/webhooks/[0-9]+/[A-Za-z0-9_-]+|[REDACTED:webhook-url]|g' \
+      "$f"
+
+    REDACTED_COUNT=$((REDACTED_COUNT + 1))
+  fi
+done < <(find "${TARGET_DIR}" -type f -print0)
+
+if [[ "$REDACTED_COUNT" -gt 0 ]]; then
+  echo "  ⚠️  Redacted secrets in ${REDACTED_COUNT} file(s)"
+else
+  echo "  ✅ No secrets found — all clean."
+fi
+
+# ── Final verification: make sure nothing slipped through ─────────────────────
+
+echo ""
+echo "🔍 Final verification pass ..."
 LEAKED=0
 while IFS= read -r -d '' f; do
-  # Look for actual secret patterns (API keys, tokens, etc.)
-  if grep -qE '(sk-[a-zA-Z0-9]{20,}|xoxb-|"token"\s*:\s*"[^"]{20,}"|"apiKey"\s*:\s*"[^"]{10,}"|-----BEGIN (RSA |EC )?PRIVATE KEY)' "$f" 2>/dev/null; then
-    echo "  ⚠️  POSSIBLE SECRET in: ${f#${TARGET_DIR}/}"
+  if grep -qE '(sk-[a-zA-Z0-9_-]{20,}|AKIA[0-9A-Z]{16}|-----BEGIN .* PRIVATE KEY)' "$f" 2>/dev/null; then
+    echo "  ❌ STILL CONTAINS SECRETS: ${f#${TARGET_DIR}/}"
     LEAKED=1
   fi
 done < <(find "${TARGET_DIR}" -type f -print0)
 
 if [[ "$LEAKED" -eq 1 ]]; then
   echo ""
-  echo "❌ ABORTING: Possible secrets detected. Review the flagged files above."
-  echo "   Cleaning up ${TARGET_DIR}/ ..."
-  rm -rf "${TARGET_DIR}"
+  echo "❌ ABORTING: Secrets survived redaction. Manual review needed."
+  echo "   Files left in ${TARGET_DIR}/ for inspection (not committed)."
   exit 1
 fi
 
-echo "  ✅ No secrets detected."
+echo "  ✅ Verification passed."
 
 # ── Step 3: Commit ───────────────────────────────────────────────────────────
 
