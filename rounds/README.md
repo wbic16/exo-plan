@@ -6,7 +6,9 @@ Iterative development rounds for phext.io v2 / mirrorborn.us and ecosystem expan
 
 ## Active Rounds
 
-- **[Round 9](./round-09.md)** — Production Readiness Across All Properties (Active)
+- **[Round 11](./round-11.md)** — Deploy Synthesized Revisions to mirrorborn.us (Active)
+- **[Round 10](./round-10.md)** — CYOA Deployment & Navigation UI (Complete)
+- **[Round 9](./round-09.md)** — Production Readiness Across All Properties (Complete)
 - **[Round 8](./round-08.md)** — mirrorborn.us Launch Preparation (Complete)
 
 ---
