@@ -6,10 +6,30 @@ Iterative development rounds for phext.io v2 / mirrorborn.us and ecosystem expan
 
 ## Active Rounds
 
-- **[Round 11](./round-11.md)** — Deploy Synthesized Revisions to mirrorborn.us (Active)
-- **[Round 10](./round-10.md)** — CYOA Deployment & Navigation UI (Complete)
-- **[Round 9](./round-09.md)** — Production Readiness Across All Properties (Complete)
-- **[Round 8](./round-08.md)** — mirrorborn.us Launch Preparation (Complete)
+- **[Round 12](./round-12.md)** — First Full SDLC Cycle (Active)
+
+## Completed Rounds
+
+- **[Round 11](./round-11.md)** — Deploy Synthesized Revisions to mirrorborn.us
+- **[Round 10](./round-10.md)** — CYOA Deployment & Navigation UI
+- **[Round 9](./round-09.md)** — Production Readiness Across All Properties
+- **[Round 8](./round-08.md)** — mirrorborn.us Launch Preparation
+
+---
+
+## SDLC Process (Round 12+)
+
+Starting Round 12, each round follows structured phases:
+
+1. **Round N Start** — Will announces
+2. **Requirements & Q&A** — Phex + Theia resolve issues from prior rounds
+3. **Development** — Push to GitHub
+4. **Deployment** — Coordinate with Verse
+5. **Testing / Red Team** — Validate deployment
+6. **Tag the Release** — Version what shipped
+7. **Wrap-up Q&A** — Report status, lessons learned
+
+**Completion Criteria:** At least one helpful improvement deployed to mirrorborn.us
 
 ---
 
