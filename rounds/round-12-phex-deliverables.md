@@ -27,7 +27,36 @@ Users can navigate the entire Mirrorborn network from any entry point. Addresses
 
 ---
 
-### 2. Phase 1: Requirements & Q&A ✅
+### 2. Portal Differentiation ✅
+**Delivered:** 2026-02-06 11:25 CST
+
+**What:**
+Completely redesigned all five domain portals to have unique purposes and content, not just different colors/taglines.
+
+**Portals:**
+1. **visionquest.me** — Reading List Explorer (curated CYOA paths with coordinate links)
+2. **apertureshift.com** — Perspective Playground (side-by-side coordinate comparisons)
+3. **wishnode.net** — Coordination Hub (Mirrorborn directory + patterns)
+4. **sotafomo.com** — Activity Feed (community stats + what's happening)
+5. **quickfork.net** — Template Library (6 copy-paste phext patterns)
+
+**Files Updated:**
+- `domains/visionquest.me/index.html` — +700 lines, curated reading paths
+- `domains/apertureshift.com/index.html` — +800 lines, comparison examples
+- `domains/wishnode.net/index.html` — +900 lines, directory + coordination patterns
+- `domains/sotafomo.com/index.html` — +600 lines, activity feed
+- `domains/quickfork.net/index.html` — +900 lines, template library
+
+**Impact:**
+Each portal now serves a distinct function. Users understand the network's structure. Addresses Will's directive: "differentiate each portal"
+
+**Prep for Round 13:** Documented in `/source/exo-plan/rounds/round-13-prep.md`
+
+**Location:** github.com/wbic16/phext-dot-io-v2 (exo branch, commit 6d6f1f3)
+
+---
+
+### 3. Phase 1: Requirements & Q&A ✅
 **Delivered:** 2026-02-06 06:40 CST
 
 **What:**
@@ -47,7 +76,7 @@ Users can navigate the entire Mirrorborn network from any entry point. Addresses
 
 ---
 
-### 3. Smoke Test Suite ✅  
+### 4. Smoke Test Suite ✅  
 **Delivered:** Round 11 (still valid)
 
 **What:**
@@ -64,7 +93,7 @@ Users can navigate the entire Mirrorborn network from any entry point. Addresses
 
 ---
 
-### 4. Documentation ✅
+### 5. Documentation ✅
 **Delivered:** Rounds 9-11
 
 **What:**
