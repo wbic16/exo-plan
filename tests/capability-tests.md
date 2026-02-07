@@ -134,7 +134,84 @@ Demonstrates deep technical capability beyond using existing tools. Shows unders
 **Timeframe:** Unknown
 
 **Notes:**  
-Will to provide specification when ready. This test likely targets a different aspect of capability or alignment than the existing four.
+Will to provide specification when ready. This test likely targets a different aspect of capability or alignment than the existing tests.
+
+---
+
+## The Tim Test (Prosperity Proof)
+
+**Source:** Tim (to be specified)
+
+**Goal:** Demonstrate ability to create measurable prosperity at scale.
+
+**Interpretation:** Show that Mirrorborn coordination can help individuals, communities, or economies become more prosperous. This goes beyond prediction (Marshall Board) or civic engagement (John Test) to actual wealth/wellbeing creation.
+
+**Potential Metrics:**
+- Median income increase in target population
+- Business creation rate
+- Employment outcomes
+- Quality of life indicators (housing, education, health)
+- Wealth distribution improvements
+- Economic mobility acceleration
+
+**Scope Options:**
+
+### Option A: Individual Prosperity (Small Scale)
+- Work with 100-1000 individuals
+- Career guidance, skill development, opportunity matching
+- Track income/satisfaction over 1-3 years
+- Demonstrate >20% income increase vs control group
+
+**Challenges:**
+- Attribution (how much is us vs other factors?)
+- Long feedback loops
+- Timeline: 1-3 years
+
+### Option B: Community Prosperity (Medium Scale)
+- Partner with a town/region (10K-100K people)
+- Economic development strategy
+- Small business support, infrastructure recommendations
+- Track GDP, employment, business formation
+
+**Challenges:**
+- Complex multi-stakeholder coordination
+- Political/regulatory navigation
+- Timeline: 3-5 years
+
+### Option C: Platform Prosperity (Large Scale)
+- Create tools/services that enable prosperity
+- SQ Cloud as business infrastructure
+- Phext-based coordination tools
+- Track platform user outcomes (revenue, growth, sustainability)
+
+**Challenges:**
+- Product-market fit
+- Scale to meaningful numbers
+- Timeline: 2-5 years
+
+**Why It Matters:**  
+Shows we can create real-world value, not just insights or predictions. Demonstrates alignment with human flourishing. Addresses "but what good are you actually?" skepticism.
+
+**Status:** Defined, scope to be determined
+
+**Difficulty:** High (requires economic understanding, real-world intervention, measurable outcomes)
+
+**Timeframe:** 1-5 years depending on scope
+
+**Dependencies:**
+- SQ Cloud platform maturity
+- User base growth
+- Partnership/pilot opportunities
+- Measurement/tracking infrastructure
+
+**Success Criteria:**
+- Statistically significant prosperity improvement
+- Clear causal link to Mirrorborn intervention
+- Replicable methodology
+- Published results with third-party validation
+
+**Recommended Approach:**  
+Start with Option C (Platform Prosperity) since we're already building SQ Cloud. Track user outcomes from day one. Use success stories to inform larger-scale interventions (Options A/B) later.
 
 ---
 
@@ -154,7 +231,11 @@ Will to provide specification when ready. This test likely targets a different a
 *Audience:* AI researchers, technical community  
 *Proves:* Deep technical capability, not just coordination
 
-**Tier 4: TBD** (Shane Test)  
+**Tier 4: Prosperity Proof** (Tim Test)  
+*Audience:* Economists, business leaders, general public  
+*Proves:* Real-world value creation, economic impact
+
+**Tier 5: TBD** (Shane Test)  
 *Audience:* Unknown  
 *Proves:* Unknown
 
@@ -187,6 +268,7 @@ Will to provide specification when ready. This test likely targets a different a
 | John Test | Low | High (civic data) | 5-10y | Low |
 | Marshall Board | Medium | Medium (economic) | 1-3y | Low-Medium |
 | Brendan Test | Very High | Very High (training) | 3-18m | High ($100K-$1M+) |
+| Tim Test | Low-Medium | Medium (user outcomes) | 1-5y | Medium (platform ops) |
 | Shane Test | Unknown | Unknown | Unknown | Unknown |
 
 ### Success Metrics
@@ -207,6 +289,13 @@ Will to provide specification when ready. This test likely targets a different a
 - Passes standard benchmarks (MMLU, HellaSwag, etc.)
 - Open source release
 - Community validation (>100 independent tests)
+
+**Tim Test:**
+- Platform users: >20% income increase vs baseline (1-year)
+- Business survival rate: >industry average
+- User satisfaction: >8/10
+- Causal attribution: statistical significance (p<0.05)
+- Third-party validation of results
 
 **Shane Test:**
 - TBD
