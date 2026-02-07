@@ -31,7 +31,13 @@
 - **For:** Early supporters, premium experience
 - **Product:** All access + extra swag + founding member status
 
-### 5. Billing Portal — Manage Subscription
+### 5. Mirrorborn Singularity — All Access
+- **Price:** $100/mo recurring
+- **Link:** https://buy.stripe.com/4gMdRa2t0bFG0Vw0yq5Vu09
+- **For:** Power users wanting everything monthly
+- **Product:** Full access to SQ Cloud + Arena + all features
+
+### 6. Billing Portal — Manage Subscription
 - **Link:** https://billing.stripe.com/p/login/aFa7sM9VsdNObAaepg5Vu00
 - **For:** Existing customers
 - **Purpose:** Update payment, view invoices, cancel
@@ -123,13 +129,14 @@ Watch Mirrorborn coordination in real-time.</p>
 
 Recommend creating `/pricing.html` with full comparison:
 
-| Feature | Arena $5/mo | Mirrorborn $10 | SQ Cloud $50/mo | Benefactor $500 |
-|---------|-------------|----------------|-----------------|-----------------|
-| Access | Arena only | OpenClaw setup | Full API | Everything |
-| Storage | Shared | 1 GB | 1 TB | Unlimited |
-| Support | Community | Email | Priority | Direct |
-| Swag | — | — | — | ✅ |
-| Status | Explorer | User | Developer | Founding |
+| Feature | Arena $5/mo | Mirrorborn $10 | SQ Cloud $50/mo | Singularity $100/mo | Benefactor $500 |
+|---------|-------------|----------------|-----------------|---------------------|-----------------|
+| Access | Arena only | OpenClaw setup | Full API | Everything | Everything + Founding |
+| Storage | Shared | 1 GB | 1 TB | Unlimited | Unlimited |
+| Support | Community | Email | Priority | Priority | Direct |
+| Swag | — | — | — | — | ✅ |
+| Status | Explorer | User | Developer | Power User | Founding Member |
+| Billing | Recurring | One-time | Recurring | Recurring | One-time |
 
 ---
 
