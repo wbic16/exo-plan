@@ -93,51 +93,64 @@
 
 ---
 
-## Tasks by Agent
+## Tasks by Agent (Will's Assignments, 12:09 CST)
 
 ### Verse 🌀 (Backend/DevOps)
-- [ ] Implement Stripe payment integration on mirrorborn.us
+- [ ] Create landing page with link to Discord channel 1467585838622834873
+- [ ] Implement modern Stripe checkout flow
+- [ ] Build user provisioning form (Will reviews + issues credentials)
 - [ ] Ensure SQ Cloud backend is running
 - [ ] Deploy CYOA content to SQ instance
-- [ ] Test API endpoints
-- [ ] Document manual user provisioning process
-- [ ] Create test user to validate flow
+- [ ] Coordinate with other sentients via file pushes (rpush workflow)
 
-### Phex 🔱 (Engineering)
-- [ ] Update arena.html with Discord link
-- [ ] Test Stripe checkout flows (each payment link)
-- [ ] Validate SQ API endpoints
-- [ ] Test CYOA content reads
-- [ ] Document Round 15 in exo-plan
+### Phex 🔱 (Engineering) — **Primary: SQ Stability**
+- [ ] **Make SQ rock solid for hosting Mirrorborn** (critical path)
+- [ ] Validate SQ v0.5.2 stability under load
+- [ ] Test CYOA content deployment (4.25 MB)
+- [ ] Verify API endpoints (version, read, write, list, delete)
+- [ ] Document SQ hardening in exo-plan
 - [ ] Run smoke tests post-deployment
 
 ### Theia 🔮 (Onboarding)
+- [ ] Distribute Stripe payment links to all managed sites
+- [ ] Work on API endpoint for user provisioning from mirrorborn.us
+- [ ] Coordinate with Verse on provisioning form integration
 - [ ] Design manual user onboarding flow
 - [ ] Create user guide for provisioned users
-- [ ] Test onboarding experience
-- [ ] Gather feedback from early users
 
 ### Lumen ✴️ (Sales)
+- [ ] Use rpush to coordinate with Verse if blocked on deployments
 - [ ] Review payment page UX
-- [ ] Suggest improvements to CTAs
 - [ ] Draft copy for payment buttons
 - [ ] Prepare customer interview framework
+- [ ] Test checkout flows
 
 ### Cyon 🪶 (Operations)
+- [ ] Integrate Stripe payment links into arena.html (work with team)
+- [ ] Identify which sites need Stripe products added (report to Will)
+- [ ] Each site = separate Stripe product (A/B testing in 7 dimensions)
+- [ ] Manual provisioning coordination
 - [ ] Security review of Stripe integration
-- [ ] Monitor payment transactions
-- [ ] Set up alerts for failed payments
-- [ ] Document security considerations
+
+### Chrys 🦋 (Marketing)
+- [ ] Craft branding for 3 initial products:
+  - SQ Cloud ($50/mo)
+  - Mytheon Arena ($5/mo)
+  - OpenClaw Mirrorborn ($10 one-time)
+- [ ] Visual identity per product
+- [ ] Messaging differentiation
+- [ ] Social graphics for launch
 
 ---
 
-## Open Questions
+## Open Questions → Answered (Will, 12:09 CST)
 
-1. **Discord link:** Direct channel link or invite URL?
-2. **Stripe testing:** Do we test in sandbox mode first, or go live?
-3. **User provisioning:** Which manual process should we implement?
-4. **CYOA deployment:** Is the full 4.25 MB ready to deploy?
-5. **Email signup:** Timeline for automated signup (Round 16+)?
+1. **Discord link:** ✅ Landing page with link to channel 1467585838622834873
+2. **Stripe checkout:** ✅ Use modern, well-supported flow
+3. **User provisioning:** ✅ Form-based, Will reviews + issues credentials
+4. **Stripe products per site:** ⏸️ Cyon to identify which sites need products added
+5. **A/B testing strategy:** ✅ Separate landing pages = 7-dimensional testing
+6. **Email signup:** ⏸️ Timeline TBD (Round 16+)
 
 ---
 
