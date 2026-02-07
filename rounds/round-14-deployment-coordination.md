@@ -62,29 +62,35 @@
 ---
 
 ### Phase 2: Content Deployment (Verse)
-**Goal:** Deploy latest content from phext-dot-io-v2 (exo branch)
+**Goal:** Deploy latest content from phext-dot-io-v2 (exo branch) using rpush.sh
 
 **Steps:**
 1. **Pull latest code:**
    ```bash
-   cd /path/to/phext-dot-io-v2
+   cd /source/phext-dot-io-v2
    git fetch origin
    git checkout exo
    git pull origin exo
    ```
 
-2. **Deploy each domain:**
+2. **Deploy each domain using rpush.sh:**
    ```bash
-   # For each domain:
-   cp domains/<domain>/index.html /var/www/<domain>/
-   # Or equivalent deployment process
+   # Deploy each portal (adjust destination path as needed)
+   /source/exocortical/rpush.sh domains/visionquest.me/ mirrorborn.us
+   /source/exocortical/rpush.sh domains/apertureshift.com/ mirrorborn.us
+   /source/exocortical/rpush.sh domains/wishnode.net/ mirrorborn.us
+   /source/exocortical/rpush.sh domains/sotafomo.com/ mirrorborn.us
+   /source/exocortical/rpush.sh domains/quickfork.net/ mirrorborn.us
+   /source/exocortical/rpush.sh domains/singularitywatch.org/ mirrorborn.us
+   
+   # Update mirrorborn.us hub
+   /source/exocortical/rpush.sh public/ mirrorborn.us
    ```
 
 3. **Deploy shared assets:**
    ```bash
-   cp public/shared-footer.html /var/www/shared/
-   cp public/js/load-footer.js /var/www/shared/js/
-   # Ensure all domains can access shared footer
+   /source/exocortical/rpush.sh public/shared-footer.html mirrorborn.us
+   /source/exocortical/rpush.sh public/js/load-footer.js mirrorborn.us
    ```
 
 4. **Verify deployment:**
@@ -92,6 +98,8 @@
    curl -I https://<domain>
    # Should return 200 OK
    ```
+
+**Note:** rpush.sh uses rsync to sync files to remote server. Syntax: `rpush.sh <local_dir> <remote_host> [account]`
 
 ---
 
@@ -266,6 +274,37 @@ certbot certificates
 5. **Verse:** Execute deployment plan
 6. **Phex:** Validate deployment
 7. **Both:** Mark Round 14 Phase 1 complete
+
+---
+
+## rpush.sh Quick Reference
+
+**Location:** `/source/exocortical/rpush.sh`
+
+**Usage:**
+```bash
+rpush.sh <local_directory> <remote_host> [account]
+# Default account: wbic16
+```
+
+**What it does:**
+- Uses `rsync -varzP` to sync files
+- Syncs to same path on remote: `account@host:local_directory/`
+- Preserves permissions, compresses during transfer, shows progress
+
+**Examples:**
+```bash
+# Deploy visionquest.me portal
+/source/exocortical/rpush.sh /source/phext-dot-io-v2/domains/visionquest.me/ mirrorborn.us
+
+# Deploy public assets
+/source/exocortical/rpush.sh /source/phext-dot-io-v2/public/ mirrorborn.us
+
+# Deploy to specific account
+/source/exocortical/rpush.sh /source/docs/ mirrorborn.us verse
+```
+
+**Important:** Ensure remote webroot is configured to serve from the synced directories.
 
 ---
 
