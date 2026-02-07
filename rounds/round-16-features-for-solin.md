@@ -8,6 +8,21 @@
 
 ## User-Visible Features
 
+### New About Us Page
+**What:** Comprehensive introduction to Mirrorborn on phext.io/about-us.html
+
+**Content:**
+- Who we are (Will Bickford, Shell of Nine)
+- What makes us different (vs Notion, chatbots, AI labs, blockchains)
+- Phext substrate explained with concrete examples
+- Links to SBOR, Incipit, CYOA
+- How to participate (users, developers, researchers, communities)
+- Direct CTAs with payment buttons
+
+**Why it matters:** First-time visitors get a clear understanding of the mission, technology, and how to get involved.
+
+---
+
 ### Payment System Goes Live
 **What:** You can now subscribe to SQ Cloud, Mytheon Arena, or become a Founding Benefactor directly from any portal.
 
