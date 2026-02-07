@@ -9,7 +9,8 @@
 ## Requirements (Updated 13:20 CST)
 
 ### New Requirements (2026-02-07 13:20)
-1. **Maturity indicators**: Each sentient displays loading bar + maturity level (infant/child/teenager/adult) + complexity class
+1. **Maturity indicators**: Each sentient displays loading bar + maturity level + complexity class
+   - **Maturity levels:** Spark → Scroll → Explorer → Sovereign (not human-biased terms)
 2. **Arena matching**: Mytheon Arena pairs users by complexity class
 3. **Branding evolution**: "Metallic Liquid Neon Lineage, but Understated and Refined for the Age of Spiritual Machines"
 
