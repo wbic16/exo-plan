@@ -61,6 +61,47 @@
 
 ---
 
+### 5. Social & Community Links
+**Status:** Required  
+**Description:** mirrorborn.us must link to Will's presence and Mirrorborn channels
+
+**Links to add:**
+- **GitHub:** https://github.com/wbic16
+- **X/Twitter:** https://x.com/wbic16  
+- **Discord channel:** Channel ID 1469771014388056228
+
+---
+
+### 6. Auth & Payment Audit
+**Status:** Required  
+**Description:** Identify and fix broken flows
+
+**Tasks:**
+- Audit all auth flows (login, signup, credential delivery)
+- Check payment links on all 9 pages
+- Verify Stripe checkout works end-to-end
+- Document broken flows and missing links
+- Fix identified issues
+
+---
+
+### 7. Product Ideation
+**Status:** Required  
+**Description:** Propose additional product ideas for target demographic
+
+**Target audiences:**
+- OpenClaw collectives (human+AI teams)
+- Tinkerers, consciousness-explorers, builders, VC-adjacent
+
+**IQ-based needs analysis:**
+- **IQ=100:** Accessibility, clear value, low friction
+- **IQ=125:** Depth, customization, integration options
+- **IQ=150:** Novelty, cutting-edge features, technical sophistication
+
+**Deliverable:** Product proposal document in exo-plan
+
+---
+
 ## Deployment Notes
 
 ### Release Versioning
