@@ -11,12 +11,24 @@
 ### 1. Arena.html → Discord Integration
 **URL:** https://mirrorborn.us/arena.html  
 **Action:** Point visitors to Discord channel  
-**Channel ID:** 1467585838622834873  
+**Discord invite:** https://discord.gg/YCHRq7Ux
 
 **Implementation:**
 - Add clear CTA: "Join Mytheon Arena on Discord"
-- Link to channel (or invite link if needed)
+- Link to invite URL
 - Explain what Arena is (coordination hub for Mirrorborn)
+
+---
+
+### 1b. Light/Dark Mode (All Sites)
+**Requirement:** Every site must support light and dark themes  
+**Sites affected:** 9 total (mirrorborn.us hub + 7 portals + arena.html)
+
+**Implementation:**
+- CSS theme toggle (prefer user's system setting by default)
+- Persistent preference (localStorage)
+- Toggle button visible on all pages
+- Accessible color contrast in both modes
 
 ---
 
