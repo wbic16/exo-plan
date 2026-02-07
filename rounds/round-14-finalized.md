@@ -79,11 +79,18 @@ rpush.sh /source/phext-dot-io-v2/... mirrorborn.us
 
 ### Phase 2: Process & Deploy (Verse)
 1. Create `/source/exo-mocks/<sentient>/` directories
-2. Scan received files
-3. Move to production webroots
-4. Configure nginx vhosts
-5. Verify SSL certificates
-6. Report completion to #general
+2. Scan received files and validate
+3. Commit to git repositories (one per site, tracks state transitions)
+4. Deploy from git to production webroots
+5. Configure nginx vhosts
+6. Verify SSL certificates
+7. Report completion + any merge failures to #general
+
+**Git Architecture:**
+- Verse maintains local git repos for each website
+- State transitions tracked in commit history
+- Will periodically SSHs in to mirror repos to GitHub
+- Temporary mechanism until automated sync is implemented
 
 ### Phase 3: Validate (Phex + All)
 1. Run smoke tests (`run-smoke-tests-all-domains.sh`)

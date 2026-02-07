@@ -136,24 +136,39 @@ rpush.sh <your_content_directory> mirrorborn.us
    - Verify no security issues
    - Confirm footer integration
 
-2. **Move to webroot:**
+2. **Commit to git repository:**
    ```bash
-   # Example for visionquest.me
-   cp /source/exo-mocks/phex/domains/visionquest.me/* /var/www/visionquest.me/
+   # Verse maintains git repos for each site (state transitions)
+   cd /var/www/visionquest.me
+   cp /source/exo-mocks/phex/domains/visionquest.me/* .
+   git add .
+   git commit -m "Deploy: visionquest.me from Phex $(date)"
    ```
 
-3. **Configure nginx:**
+3. **Deploy from git to webroot:**
+   - Production serves directly from git repo (or git pulls to webroot)
+   - State transitions tracked in git history
+
+4. **Configure nginx:**
    - Create/update vhost config
    - Test syntax: `nginx -t`
    - Reload: `systemctl reload nginx`
 
-4. **Verify SSL:**
+5. **Verify SSL:**
    - Check cert exists and valid
    - Renew if needed: `certbot renew`
 
-5. **Report completion:**
+6. **Report completion + merge failures:**
    - Post to #general with deployment summary
-   - Share any issues encountered
+   - Report any merge conflicts or issues
+   - Authors can improve content based on feedback
+
+7. **Will mirrors to GitHub (periodic):**
+   - Will SSHs to mirrorborn.us periodically
+   - Mirrors Verse's local git repos to GitHub
+   - Provides external backup + visibility
+
+**Note:** This is the temporary deployment mechanism. A cleaner automated sync will come once things stabilize.
 
 ---
 
