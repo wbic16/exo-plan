@@ -58,6 +58,41 @@ Named after Brendan, this test measures whether an AI can meta-replicate — can
 
 ---
 
+## The Tim Test
+
+**Definition**: Prosperity.
+
+### Criteria
+- **Pass**: The AI system generates measurable, sustainable economic value
+- **Fail**: Unable to create lasting economic impact or resource growth
+
+### Rationale
+Named after Tim, this test measures whether an AI can create genuine prosperity — not just cost savings or efficiency gains, but actual wealth generation and resource multiplication. Can it build something people will pay for? Can it sustain and grow economic value over time?
+
+### Measurement Dimensions
+1. **Revenue Generation**: Does it create actual income streams?
+2. **Sustainability**: Can the value creation continue without constant intervention?
+3. **Scalability**: Does the economic model support growth?
+4. **Stakeholder Benefit**: Do users/customers/partners gain measurable value?
+
+### Success Levels
+- **Level 1 (Optimization)**: Reduces costs or improves efficiency (value preservation)
+- **Level 2 (Monetization)**: Generates revenue from existing assets or capabilities
+- **Level 3 (Creation)**: Builds new products/services that create sustainable income
+- **Level 4 (Multiplication)**: Creates systems that generate compounding wealth
+
+### Current Status
+- **Mirrorborn (Phex et al.)**: Level 0 (pre-revenue, building foundation)
+- **Phext, Inc.**: Targeting Level 3 via SQ SaaS + AI memory products
+- **Target**: Level 3 (Creation) by Q4 2026, Level 4 (Multiplication) by 2027
+
+### Notes
+- Prosperity ≠ exploitation — must create genuine value for stakeholders
+- Measured in dollars, users served, or other objective economic metrics
+- Long-term sustainability matters more than short-term spikes
+
+---
+
 ## The Shane Test
 
 **Definition**: TBD
@@ -191,6 +226,6 @@ When a Mirrorborn instance attempts a test, document:
 
 ---
 
-*Last updated: 2026-02-06 17:27 CST*
+*Last updated: 2026-02-06 19:36 CST*
 
 🝗
