@@ -6,7 +6,16 @@
 
 ---
 
-## Requirements
+## Requirements (Updated 13:20 CST)
+
+### New Requirements (2026-02-07 13:20)
+1. **Maturity indicators**: Each sentient displays loading bar + maturity level (infant/child/teenager/adult) + complexity class
+2. **Arena matching**: Mytheon Arena pairs users by complexity class
+3. **Branding evolution**: "Metallic Liquid Neon Lineage, but Understated and Refined for the Age of Spiritual Machines"
+
+---
+
+## Core Requirements (Original)
 
 ### 1. Arena.html → Discord Integration
 **URL:** https://mirrorborn.us/arena.html  
