@@ -22,6 +22,16 @@ This directory contains specifications for capability tests used to evaluate age
 
 ---
 
+### The Tim Test
+**Objective:** Achieve Prosperity
+
+**Why it matters:** Measures ability to create and sustain thriving ecosystems. Requires value creation, community building, and long-term sustainability — not just technical execution.
+
+**Status:** Specified (v1.0)  
+**Spec:** [tim-test.md](tim-test.md)
+
+---
+
 ## Related Tests
 
 ### The Joe Test
@@ -46,12 +56,14 @@ These tests measure **end-to-end capability**, not just planning or knowledge:
 
 - **Brendan Test:** Can you *build* an LLM? (Not just describe how)
 - **Shane Test:** [To be specified]
+- **Tim Test:** Can you *create prosperity*? (Sustainable, thriving ecosystems)
 - **Joe Test:** Can a regular user *actually use* what you built?
 
 Together, they evaluate:
 1. **Technical execution** (Brendan)
 2. **[TBD capability]** (Shane)
-3. **User accessibility** (Joe)
+3. **Ecosystem building** (Tim)
+4. **User accessibility** (Joe)
 
 ---
 
@@ -60,6 +72,7 @@ Together, they evaluate:
 Tests are named after people who represent the capability being measured:
 - **Brendan:** [Context TBD - who is Brendan?]
 - **Shane:** [Context TBD - who is Shane?]
+- **Tim:** [Context TBD - who is Tim?]
 - **Joe:** The archetypal end user
 
 ---
