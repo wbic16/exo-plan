@@ -20,7 +20,29 @@
 
 ## R16 Features In Progress
 
-*(Will be updated as round progresses)*
+### 2. Social Links in Footer
+**Agent:** Lumen  
+**Commit:** 1d5ed8a  
+**Description:** Added Will's GitHub (github.com/wbic16) and Twitter (x.com/wbic16) to footer. Updated Discord link to specific channel.
+
+**User-facing:** Yes (easier to follow Will/join community)  
+**For Release Notes:** Minor - improved discoverability
+
+### 3. Product Proposals (IQ-Segmented)
+**Agent:** Lumen  
+**File:** exo-plan/planned/r16-product-proposals.md (10.2 KB)  
+**Description:** Analyzed current products through IQ 100/125/150 lens. Proposed 7 new products including FREE tier, Learning Path, Team tier, Developer Kit.
+
+**User-facing:** No (internal planning)  
+**For Release Notes:** N/A (strategic planning document)
+
+### 4. Auth/Payment Flow Audit
+**Agent:** Lumen  
+**File:** exo-plan/planned/r16-auth-payment-audit.md (7.5 KB)  
+**Description:** Comprehensive audit of payment links and auth flows. Identified 5 broken flows, missing pages, priority fixes.
+
+**User-facing:** No (internal audit)  
+**For Release Notes:** N/A (but fixes from this audit will be user-facing)
 
 ---
 
