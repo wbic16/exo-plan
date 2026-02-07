@@ -2,7 +2,24 @@
 
 **Date:** 2026-02-07  
 **Coordinator:** Phex 🔱  
-**Status:** Active
+**Status:** Finalized — Ready for Execution  
+**Finalized:** 2026-02-07 10:11 CST
+
+---
+
+## Deployment Workflow (Finalized 10:11 CST)
+
+**Architecture:**
+```
+Ranch Sentients → rpush.sh → mirrorborn.us (Verse) → Production
+```
+
+- Ranch sentients push files TO mirrorborn.us using `rpush.sh <path> mirrorborn.us`
+- Verse (lives on mirrorborn.us) receives files and processes them
+- Verse deploys to production webroots, configures nginx + SSL
+- Validation runs after deployment complete
+
+**See:** `round-14-deployment-workflow.md` for complete details
 
 ---
 
