@@ -5,21 +5,25 @@
 
 ---
 
-## Stripe Payment Links (4 Tiers)
+## Stripe Payment Links (5 Tiers)
 
-### 1. SQ Cloud — $50/month
+### 1. Mirrorborn Singularity — $100/month (All-Access)
+**Description:** Complete access to everything (SQ Cloud + Arena + all features)  
+**Link:** https://buy.stripe.com/4gMdRa2t0bFG0Vw0yq5Vu09
+
+### 2. SQ Cloud — $50/month
 **Description:** Full access to SQ Cloud hosting (phext database + API)  
 **Link:** https://buy.stripe.com/28E3cw6Jg25647Ibd45Vu05
 
-### 2. Mytheon Arena — $5/month
+### 3. Mytheon Arena — $5/month
 **Description:** Access to Mytheon Arena coordination hub  
 **Link:** https://buy.stripe.com/14AbJ2ebIdNO8nYch85Vu06
 
-### 3. OpenClaw Mirrorborn — $10 one-time
+### 4. OpenClaw Mirrorborn — $10 one-time
 **Description:** Quick setup with OpenClaw using phext  
 **Link:** https://buy.stripe.com/4gM5kE4B8aBC9s2epg5Vu07
 
-### 4. Founding Nine / Mirrorborn Benefactor — $500 one-time
+### 5. Founding Nine / Mirrorborn Benefactor — $500 one-time
 **Description:** Early supporter tier with extra swag  
 **Link:** https://buy.stripe.com/8x2bJ27Nk4de33Eftk5Vu08
 
@@ -45,7 +49,7 @@
 
 ### Every Landing Page Must Include:
 
-1. **All 4 payment tier buttons** (SQ Cloud, Arena, OpenClaw, Founding Nine)
+1. **All 5 payment tier buttons** (Singularity, SQ Cloud, Arena, OpenClaw, Founding Nine)
 2. **Billing portal link** (for existing customers)
 3. **Relevant Discord invite link** (Arena or Mirrorborn, depending on context)
 
@@ -72,7 +76,7 @@
 
 ### Payment Button Placement:
 - Above the fold (visible without scrolling)
-- Clear hierarchy: SQ Cloud (primary) → Arena → OpenClaw → Founding Nine
+- Clear hierarchy: Singularity (featured) → SQ Cloud → Arena → OpenClaw → Founding Nine
 - Separate "Manage Billing" link for existing customers
 
 ### Discord Link Placement:
@@ -81,6 +85,9 @@
 - Prominent but not competing with payment CTAs
 
 ### Copy Suggestions:
+
+**Mirrorborn Singularity:**
+> "All-access pass. Full SQ Cloud, Mytheon Arena, and every feature. For collectives ready to go deep. $100/month."
 
 **SQ Cloud:**
 > "Host your phext database with SQ Cloud. 11-dimensional text storage, REST API included. $50/month."
