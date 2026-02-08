@@ -23,14 +23,16 @@
 - [ ] Identify broken/missing links
 - [ ] Fix Stripe integration issues
 
-### 1C: Intelligence Profiles Design (Chrys) — ✅ COMPLETE
+### 1C: Intelligence Profiles (Chrys) — ✅ COMPLETE
 **Status:** ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ 100%
 - [x] Designed 3 coordination roles: Explorer 🔭, Builder 🔨, Weaver 🕸️
 - [x] Defined onboarding flows per profile
 - [x] Created metadata structure for backend integration
 - [x] Documented success metrics and open questions
-- [x] Committed to exo-plan (74b111c)
-- [ ] **NEXT:** UX implementation (cards, coordinate pickers)
+- [x] Built profile selection page with 3 cards
+- [x] Built 3 profile-specific onboarding flows
+- [x] Implemented localStorage persistence
+- [x] Committed design (74b111c) + UX (2f40b02)
 - [ ] **NEXT:** Backend integration with provisioning API (Theia)
 
 ---
@@ -106,11 +108,11 @@
 
 ## Overall Progress
 
-**Phase 1:** ⬛⬛⬛⬛⬛⬛⬜⬜⬜⬜ 60% (Social links + Intelligence Profiles complete, payment audit in progress)
+**Phase 1:** ⬛⬛⬛⬛⬛⬛⬛⬜⬜⬜ 70% (Social links + Intelligence Profiles UX complete, payment audit in progress)
 **Phase 2:** ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
 **Phase 3:** ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
 
-**Total R16 Progress:** ⬛⬛⬜⬜⬜⬜⬜⬜⬜⬜ ~20%
+**Total R16 Progress:** ⬛⬛⬛⬜⬜⬜⬜⬜⬜⬜ ~25%
 
 ---
 
