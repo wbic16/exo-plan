@@ -224,10 +224,137 @@ Total: ~1-5ms per query (regardless of scale)
 3. **Multimodal** — Unified embeddings for text/image/audio
 4. **Semantic ranking** — Results ordered by relevance
 
-**SQ's answer:**
-- Hybrid mode: Store embeddings *at coordinates* for fuzzy search when needed
-- Example: `1.5.2/3.7.3/9.1.1#embedding=<1536-dim vector>`
-- Get both: Structural navigation + semantic search
+**SQ's answer: Holographic Storage**
+
+Instead of computing embeddings, use **multiple encoders** to map content to different coordinates:
+
+```bash
+# Organizational coordinate (human-defined structure)
+sq insert 1.5.2/3.7.3/9.1.1 "SQ mesh design doc"
+
+# Semantic coordinate (content-derived hash/encoding)
+sq mirror 1.5.2/3.7.3/9.1.1 --encoder=semantic
+# → Auto-stores at 7.2.9/4.1.5/3.8.6 (derived from content)
+
+# Temporal coordinate (when it was created)
+sq mirror 1.5.2/3.7.3/9.1.1 --encoder=temporal
+# → Auto-stores at 2026.02.08/10.25.00
+```
+
+**"Similar" = "Nearby in Subspace"**
+
+Instead of vector similarity (cosine distance), use coordinate proximity:
+```bash
+# Find docs similar to semantic coordinate 7.2.9/4.1.5/3.8.6
+sq select "7.2.9/4.1.*/*(±3)"  # Within 3 units on each dimension
+```
+
+**Advantages:**
+- **Explicit control** — You define the encoding, not a learned model
+- **Multiple views** — Same content, different access patterns
+- **No recomputation** — Content hash stable, no reindexing
+- **Transparent** — Coordinates show *why* things are similar
+- **Composable** — Query across multiple subspaces simultaneously
+
+**API Modes for Holographic Storage:**
+
+1. **Mirror Mode** — Replicate content to multiple coordinates
+   - `sq mirror <source> --encoder=semantic`
+   - Automatically updates mirrors when source changes
+
+2. **Projection Mode** — Query one subspace, get all mappings
+   - `sq select 1.5.2/3.7.3/9.1.1 --projection=all`
+   - Returns content + all mirror coordinates
+
+3. **Diffraction Mode** — Split content across coordinates
+   - `sq diffract <content> --shards=10 --redundancy=3`
+   - Distributed storage + fault tolerance
+
+4. **Subspace Similarity** — Proximity search in semantic space
+   - `sq near 7.2.9/4.1.5/3.8.6 --radius=5 --encoder=semantic`
+   - Returns all content within coordinate distance
+
+**Result:** Vector DB capabilities without vector DB complexity.
+
+## Holographic Storage: The Game-Changer
+
+### Traditional Tradeoff (False Choice)
+- **Structured storage** (SQL, file systems) → Fast, but no similarity search
+- **Vector storage** (LanceDB, Pinecone) → Similarity search, but opaque structure
+
+### SQ: Both, Simultaneously
+
+**Same content, multiple coordinates = multiple access patterns**
+
+```
+Document: "SQ mesh design doc"
+
+Stored at:
+- 1.5.2/3.7.3/9.1.1        (organizational: Phex's engineering docs)
+- 7.2.9/4.1.5/3.8.6        (semantic: content-derived coordinate)
+- 2026.02.08/10.25.00      (temporal: creation timestamp)
+- user:phex/project:sq/v1  (tagged: metadata-derived)
+```
+
+**Query any way you want:**
+```bash
+# Organizational: "Show me Phex's docs"
+sq select 1.5.2/3.7.3/*
+
+# Semantic: "What's similar to this doc?"
+sq near 7.2.9/4.1.5/3.8.6 --radius=5
+
+# Temporal: "What was written in February 2026?"
+sq select 2026.02.*/*/
+
+# Metadata: "Show me all SQ v1 docs by Phex"
+sq select user:phex/project:sq/v1
+```
+
+### Encoder Framework
+
+**Built-in encoders:**
+1. **Identity** — Store at explicit coordinate (default)
+2. **Hash** — Derive coordinate from content hash (deduplication)
+3. **Semantic** — Derive coordinate from content analysis (similarity)
+4. **Temporal** — Derive coordinate from timestamp (time-series)
+5. **Metadata** — Derive coordinate from tags/attributes (filtering)
+6. **Custom** — User-defined encoding function (extensibility)
+
+**Example: Auto-mirror on insert**
+```bash
+sq config --mirror-encoders=semantic,temporal
+sq insert 1.5.2/3.7.3/9.1.1 "content"
+# → Also stores at semantic coordinate + temporal coordinate
+```
+
+### Why This Beats Vector DBs
+
+1. **No embeddings** — Content-derived coordinates are deterministic hashes, not learned vectors
+2. **No training** — Encoders are functions, not ML models
+3. **No drift** — Same content always maps to same coordinate
+4. **Transparent** — Coordinates show the relationship (7.2.9 near 7.2.8 = similar)
+5. **Composable** — Query multiple subspaces in one call
+
+**Vector DB equivalent:**
+```python
+# LanceDB: Store in multiple indices? Nope, not supported.
+# Workaround: Duplicate documents with different metadata
+db.add([
+  {"id": "doc1", "type": "org", "vector": emb, "text": "..."},
+  {"id": "doc1", "type": "semantic", "vector": emb, "text": "..."},
+  {"id": "doc1", "type": "temporal", "vector": emb, "text": "..."},
+])
+# → 3x storage, 3x cost, manual deduplication
+```
+
+**SQ equivalent:**
+```bash
+sq insert 1.5.2/3.7.3/9.1.1 "content" --mirror=semantic,temporal
+# → 3x storage, same performance, automatic synchronization
+```
+
+**Cost:** Same replication, but no embedding compute overhead.
 
 ## Market Positioning
 
@@ -272,11 +399,44 @@ Total: ~1-5ms per query (regardless of scale)
 
 ## Next Steps
 
+### R18: Holographic Storage API
+1. **Implement encoder framework** in SQ
+   - `sq mirror <coord> --encoder=<type>`
+   - Built-in: hash, semantic, temporal, metadata
+   - Plugin system for custom encoders
+
+2. **Subspace similarity** queries
+   - `sq near <coord> --radius=<n>`
+   - Coordinate distance calculation
+   - Multi-subspace queries
+
+3. **API documentation** for holographic storage
+   - Examples for common use cases
+   - Performance characteristics
+   - Best practices
+
+### R19: Competitive Positioning
 1. **Benchmark:** Run head-to-head tests (SQ vs LanceDB)
+   - Query speed (point, range, similarity)
+   - Storage efficiency
+   - Cost comparison at scale
+
 2. **Demo:** Build side-by-side comparison app
-3. **Pricing page:** Launch SQ Cloud tiers
-4. **Content:** Blog post "Why Coordinates Beat Embeddings"
-5. **Video:** 3-minute explainer on coordinate-based storage
+   - Same dataset, both systems
+   - Live query performance
+   - Cost calculator
+
+3. **Content Marketing:**
+   - Blog: "Why Coordinates Beat Embeddings"
+   - Blog: "Holographic Storage: Structure + Similarity"
+   - Video: 3-minute explainer on coordinate-based storage
+   - Case study: Migration from vector DB to SQ
+
+4. **Pricing page:** Launch SQ Cloud tiers
+   - Free (self-hosted)
+   - Starter ($9/mo)
+   - Pro ($49/mo)
+   - Enterprise (custom)
 
 ---
 *Competitive analysis by Phex 🔱 — 2026-02-08 10:20 CST*
