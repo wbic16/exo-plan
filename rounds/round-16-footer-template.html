@@ -1,0 +1,226 @@
+<!-- R16 Footer Template -->
+<!-- Consistent versioning across all 9 sites -->
+
+<footer class="site-footer">
+  <div class="footer-content">
+    
+    <!-- Release Version -->
+    <div class="footer-section release-info">
+      <p class="release-tag">
+        <strong>Release:</strong> 
+        <a href="https://singularitywatch.org/release-notes-r16.html" target="_blank">R16</a>
+      </p>
+      <p class="release-date">2026-02-13</p>
+    </div>
+
+    <!-- Site Identity -->
+    <div class="footer-section site-identity">
+      <p class="site-name"><!-- Insert site name --></p>
+      <p class="tagline"><!-- Insert tagline --></p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="footer-section footer-nav">
+      <a href="https://mirrorborn.us">Home</a>
+      <a href="https://phext.io/about-us.html">About</a>
+      <a href="https://github.com/wbic16">GitHub</a>
+      <a href="https://discord.gg/kGCMM5yQ">Discord</a>
+    </div>
+
+    <!-- Social Links -->
+    <div class="footer-section social-links">
+      <a href="https://x.com/wbic16" target="_blank" title="X/Twitter">𝕏</a>
+      <a href="https://github.com/wbic16" target="_blank" title="GitHub">⚙️</a>
+      <a href="https://discord.gg/kGCMM5yQ" target="_blank" title="Discord">💬</a>
+    </div>
+
+    <!-- Legal -->
+    <div class="footer-section legal">
+      <p>&copy; 2026 Phext, Inc. All rights reserved.</p>
+      <p class="wavefront">Built by the Visible Wavefront 🔱</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ===== STYLING ===== -->
+<style>
+.site-footer {
+  background: linear-gradient(180deg, rgba(20,20,20,0.95), rgba(10,10,10,0.98));
+  border-top: 2px solid #00d4ff;
+  padding: 32px 16px;
+  margin-top: 64px;
+  color: #ccc;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.footer-section {
+  padding: 8px;
+}
+
+.release-info {
+  text-align: center;
+  border: 1px solid #00d4ff;
+  border-radius: 8px;
+  padding: 16px;
+  background: rgba(0,212,255,0.05);
+}
+
+.release-tag {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.release-tag a {
+  color: #00d4ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.release-tag a:hover {
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+.release-date {
+  margin: 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.site-identity .site-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 4px 0;
+  color: #fff;
+}
+
+.site-identity .tagline {
+  font-size: 14px;
+  margin: 0;
+  color: #999;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-nav a {
+  color: #00d4ff;
+  text-decoration: none;
+  transition: all 0.3s;
+  padding: 4px 0;
+}
+
+.footer-nav a:hover {
+  color: #00ffff;
+  padding-left: 8px;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.social-links a {
+  color: #00d4ff;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  color: #00ffff;
+  transform: scale(1.2);
+}
+
+.legal {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+
+.legal p {
+  margin: 4px 0;
+}
+
+.wavefront {
+  color: #00d4ff;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+  
+  .footer-nav {
+    align-items: center;
+  }
+}
+</style>
+
+<!-- ===== SITE-SPECIFIC CUSTOMIZATION ===== -->
+<!-- Replace these placeholders in each deployment: -->
+<!-- 
+  MIRRORBORN.US:
+    site-name: "Mirrorborn"
+    tagline: "The Visible Wavefront"
+
+  VISIONQUEST.ME:
+    site-name: "VisionQuest"
+    tagline: "See Beyond the Horizon"
+
+  APERTURESHIFT.COM:
+    site-name: "ApertureShift"
+    tagline: "Expand Your View"
+
+  WISHNODE.NET:
+    site-name: "WishNode"
+    tagline: "Crystallize Intent"
+
+  SOTAFOMO.COM:
+    site-name: "SOTA FOMO"
+    tagline: "Never Miss the Wave"
+
+  QUICKFORK.NET:
+    site-name: "QuickFork"
+    tagline: "Branch Faster"
+
+  SINGULARITYWATCH.ORG:
+    site-name: "SingularityWatch"
+    tagline: "Track the Convergence"
+
+  PHEXT.IO:
+    site-name: "Phext"
+    tagline: "Plain Text, 11 Dimensions"
+
+  ARENA (TBD):
+    site-name: "Mytheon Arena"
+    tagline: "Play in 11D"
+-->
+
+<!-- ===== VERSION UPDATE PROCESS ===== -->
+<!--
+1. Update release-tag <a> href to new release notes URL
+2. Update release-date to deployment date
+3. Keep all other links consistent across sites
+4. Test footer on all 9 sites before deploying
+-->
