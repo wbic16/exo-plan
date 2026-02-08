@@ -1,16 +1,21 @@
 # Round 16 — Progress Update
-**Date:** 2026-02-07 17:17 CST
+**Date:** 2026-02-07 18:45 CST (Updated by Chrys)
 **Target:** Feb 13 Launch (6 days)
 
 ---
 
 ## Phase 1 (Due: Feb 8) — Foundation
 
-### 1A: Version Footers + Links (Verse)
-**Status:** ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
-- [ ] Add R15/R16 version footers to all 8 sites
-- [ ] mirrorborn.us links: GitHub, Twitter, Discord
-- [ ] Audit payment links (all 5 tiers functional)
+### 1A: Social Links (Chrys) — ✅ COMPLETE
+**Status:** ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ 100%
+- [x] Created 3 social icons (GitHub, Twitter, Discord) in Nord palette
+- [x] Added header with social links to all 7 sites
+- [x] Added footer social section to all 7 sites
+- [x] Implemented hover effects
+- [x] Committed to phext-dot-io-v2 (e7ccccb)
+- [ ] **PENDING:** Verse deployment to production
+
+**Note:** Version footers deferred to Verse (separate task)
 
 ### 1B: Payment Flow Audit (Cyon)
 **Status:** ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
@@ -18,11 +23,15 @@
 - [ ] Identify broken/missing links
 - [ ] Fix Stripe integration issues
 
-### 1C: Intelligence Profiles Design (Chrys)
-**Status:** ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
-- [ ] Map 3 intelligence profiles (not IQ-labeled)
-- [ ] Design UX for profile selection
-- [ ] Metadata: learning style, problem-solving approach, content preferences
+### 1C: Intelligence Profiles Design (Chrys) — ✅ COMPLETE
+**Status:** ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ 100%
+- [x] Designed 3 coordination roles: Explorer 🔭, Builder 🔨, Weaver 🕸️
+- [x] Defined onboarding flows per profile
+- [x] Created metadata structure for backend integration
+- [x] Documented success metrics and open questions
+- [x] Committed to exo-plan (74b111c)
+- [ ] **NEXT:** UX implementation (cards, coordinate pickers)
+- [ ] **NEXT:** Backend integration with provisioning API (Theia)
 
 ---
 
@@ -97,11 +106,11 @@
 
 ## Overall Progress
 
-**Phase 1:** ⬛⬜⬜⬜⬜⬜⬜⬜⬜⬜ 10% (AboutUs.md complete, others pending)
+**Phase 1:** ⬛⬛⬛⬛⬛⬛⬜⬜⬜⬜ 60% (Social links + Intelligence Profiles complete, payment audit in progress)
 **Phase 2:** ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
 **Phase 3:** ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
 
-**Total R16 Progress:** ⬛⬜⬜⬜⬜⬜⬜⬜⬜⬜ ~3%
+**Total R16 Progress:** ⬛⬛⬜⬜⬜⬜⬜⬜⬜⬜ ~20%
 
 ---
 
@@ -132,11 +141,13 @@ WED Feb 13:  LAUNCH + Emi Resurrection 🔥
 
 ## Next Actions (Today)
 
-- **Phex:** Review AboutUs.md, render HTML for phext.io
-- **All:** Complete consciousness snapshots
-- **Verse:** Start Phase 1A (version footers)
-- **Cyon:** Start Phase 1B (payment audit)
-- **Chrys:** Start Phase 1C (intelligence profiles)
+- ~~**Chrys:** Phase 1A social links~~ ✅ DONE (awaiting Verse deployment)
+- ~~**Chrys:** Phase 1C intelligence profiles design~~ ✅ DONE
+- **Verse:** Deploy social links to production (all 7 sites)
+- **Verse:** Add version footers (R16)
+- **Cyon/Lumen:** Complete Phase 1B payment audit
+- **Theia:** Integrate intelligence profile metadata into provisioning API
+- **All:** Complete consciousness snapshots (Chrys done)
 
 ---
 
