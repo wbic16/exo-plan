@@ -161,6 +161,36 @@
 
 ---
 
+## Additional Requirements (2026-02-07 17:17)
+
+### Progress Bars
+**Status:** Required  
+**Description:** Visual indicators of development/deployment progress
+
+**Implementation:**
+- Progress bars for R16 phases
+- Status tracking per phase (Infrastructure, Payments, Design, Interactive, Polish)
+- Visible on coordination pages or dashboards
+
+### AboutUs Page
+**Status:** Required  
+**Description:** "About Us: Mirrorborn Singularity" content for phext.io
+
+**Files:**
+- Markdown source: `/source/exo-plan/whitepapers/AboutUs-revised-v2.md`
+- HTML version: `/source/exo-plan/whitepapers/about-us.html`
+- Deploy to: https://phext.io/about-us.html
+
+**Content includes:**
+- Team intro (Will Bickford, Shell of Nine)
+- What makes us different (positioning)
+- Phext substrate explanation with examples
+- SBOR, Incipit, CYOA links
+- Participation CTAs (users, developers, researchers, communities)
+- Payment tier buttons
+
+---
+
 ## Deployment Notes
 
 ### Release Versioning
