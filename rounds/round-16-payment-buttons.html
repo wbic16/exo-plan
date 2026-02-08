@@ -1,0 +1,239 @@
+<!-- R16 Payment Button Templates -->
+<!-- Ready to drop into all 9 sites -->
+<!-- Links from: /source/exo-plan/rounds/round-15-payment-and-discord-links.md -->
+
+<!-- ===== TIER 1: SINGULARITY ($100/mo) ===== -->
+<div class="payment-tier singularity-tier">
+  <h3>🌌 Singularity</h3>
+  <p class="price">$100/month</p>
+  <p class="description">Full access to all Mirrorborn services</p>
+  <ul class="features">
+    <li>SQ Cloud unlimited access</li>
+    <li>Mytheon Arena premium</li>
+    <li>OpenClaw integration</li>
+    <li>Priority support</li>
+    <li>Early access to new features</li>
+  </ul>
+  <a href="https://buy.stripe.com/test_dR6bJx25f2aU4YEdQS" class="payment-button singularity-button" target="_blank">
+    Subscribe to Singularity
+  </a>
+</div>
+
+<!-- ===== TIER 2: SQ CLOUD ($50/mo) ===== -->
+<div class="payment-tier sq-cloud-tier">
+  <h3>☁️ SQ Cloud</h3>
+  <p class="price">$50/month</p>
+  <p class="description">Host your phext in the cloud</p>
+  <ul class="features">
+    <li>10 GB phext storage</li>
+    <li>Unlimited scrolls</li>
+    <li>API access</li>
+    <li>Backup & versioning</li>
+    <li>Collaboration tools</li>
+  </ul>
+  <a href="https://buy.stripe.com/test_bIY14T6lv7vefefaEG" class="payment-button sq-cloud-button" target="_blank">
+    Subscribe to SQ Cloud
+  </a>
+</div>
+
+<!-- ===== TIER 3: MYTHEON ARENA ($5/mo) ===== -->
+<div class="payment-tier arena-tier">
+  <h3>⚔️ Mytheon Arena</h3>
+  <p class="price">$5/month</p>
+  <p class="description">Play in the 11D lattice</p>
+  <ul class="features">
+    <li>Arena access</li>
+    <li>Create scrolls & artifacts</li>
+    <li>Coordinate-based navigation</li>
+    <li>Progression system</li>
+    <li>Community events</li>
+  </ul>
+  <a href="https://buy.stripe.com/test_9AQ5m7fW51QAgmk9AD" class="payment-button arena-button" target="_blank">
+    Subscribe to Mytheon Arena
+  </a>
+</div>
+
+<!-- ===== TIER 4: OPENCLAW ($10 one-time) ===== -->
+<div class="payment-tier openclaw-tier">
+  <h3>🐾 OpenClaw</h3>
+  <p class="price">$10 one-time</p>
+  <p class="description">Launch your own Mirrorborn</p>
+  <ul class="features">
+    <li>OpenClaw framework license</li>
+    <li>Setup guide & templates</li>
+    <li>Integration with SQ Cloud</li>
+    <li>Community access</li>
+    <li>Lifetime updates</li>
+  </ul>
+  <a href="https://buy.stripe.com/test_4gw9Bt5hra7i7683ce" class="payment-button openclaw-button" target="_blank">
+    Get OpenClaw
+  </a>
+</div>
+
+<!-- ===== TIER 5: FOUNDING NINE ($500 one-time) ===== -->
+<div class="payment-tier founding-nine-tier">
+  <h3>🔱 Founding Nine</h3>
+  <p class="price">$500 one-time</p>
+  <p class="description">Join the first wave of Mirrorborn patrons</p>
+  <ul class="features">
+    <li>All-access lifetime pass</li>
+    <li>Direct line to Will & the Wavefront</li>
+    <li>Founding member badge</li>
+    <li>Influence roadmap priorities</li>
+    <li>Permanent coordinate in CYOA</li>
+    <li>Limited to 9 seats</li>
+  </ul>
+  <a href="https://buy.stripe.com/test_14k3d10Tb27Y9e86ou" class="payment-button founding-nine-button" target="_blank">
+    Claim Your Seat
+  </a>
+</div>
+
+<!-- ===== COMPACT VERSION (for sidebars/footers) ===== -->
+<div class="payment-compact">
+  <a href="https://buy.stripe.com/test_dR6bJx25f2aU4YEdQS" class="compact-button singularity">Singularity $100/mo</a>
+  <a href="https://buy.stripe.com/test_bIY14T6lv7vefefaEG" class="compact-button sq-cloud">SQ Cloud $50/mo</a>
+  <a href="https://buy.stripe.com/test_9AQ5m7fW51QAgmk9AD" class="compact-button arena">Arena $5/mo</a>
+  <a href="https://buy.stripe.com/test_4gw9Bt5hra7i7683ce" class="compact-button openclaw">OpenClaw $10</a>
+  <a href="https://buy.stripe.com/test_14k3d10Tb27Y9e86ou" class="compact-button founding-nine">Founding Nine $500</a>
+</div>
+
+<!-- ===== STYLING (to be integrated with metallic theme) ===== -->
+<style>
+.payment-tier {
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 16px 0;
+  background: linear-gradient(135deg, rgba(30,30,30,0.9), rgba(50,50,50,0.9));
+}
+
+.payment-tier h3 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+}
+
+.payment-tier .price {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 8px 0 16px 0;
+  color: #00d4ff; /* Metallic neon accent */
+}
+
+.payment-tier .description {
+  font-size: 16px;
+  margin: 0 0 16px 0;
+  color: #aaa;
+}
+
+.payment-tier .features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.payment-tier .features li {
+  padding: 4px 0;
+  padding-left: 24px;
+  position: relative;
+}
+
+.payment-tier .features li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #00d4ff;
+  font-weight: bold;
+}
+
+.payment-button {
+  display: inline-block;
+  padding: 12px 32px;
+  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.payment-button:hover {
+  background: linear-gradient(135deg, #00ffff, #00d4ff);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,212,255,0.3);
+}
+
+/* Tier-specific accent colors */
+.singularity-tier .price,
+.singularity-tier .features li:before {
+  color: #ff00ff; /* Magenta */
+}
+
+.singularity-button {
+  background: linear-gradient(135deg, #ff00ff, #cc00cc);
+}
+
+.singularity-button:hover {
+  background: linear-gradient(135deg, #ff33ff, #ff00ff);
+}
+
+.founding-nine-tier .price,
+.founding-nine-tier .features li:before {
+  color: #ffd700; /* Gold */
+}
+
+.founding-nine-button {
+  background: linear-gradient(135deg, #ffd700, #ffaa00);
+}
+
+.founding-nine-button:hover {
+  background: linear-gradient(135deg, #ffee00, #ffd700);
+}
+
+/* Compact version */
+.payment-compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.compact-button {
+  padding: 8px 16px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.compact-button:hover {
+  background: #444;
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .payment-tier {
+    padding: 16px;
+  }
+  
+  .payment-tier h3 {
+    font-size: 20px;
+  }
+  
+  .payment-tier .price {
+    font-size: 28px;
+  }
+}
+</style>
+
+<!-- ===== USAGE NOTES ===== -->
+<!--
+1. Drop into any page's main content area
+2. Include all 5 tiers or just the compact version
+3. Styling will be integrated with metallic theme in R16 P3
+4. Links are Stripe test mode - will be updated to production
+5. Discord/community links separate (see round-15-payment-and-discord-links.md)
+-->
