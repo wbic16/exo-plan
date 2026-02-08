@@ -1,225 +1,307 @@
 #!/bin/bash
-#
-# Universal Deployment Wrapper for rpush (Phex Implementation)
-# Accepts local artifact path + release name, generates UUID, compresses, and pushes to mirrorborn.us
-#
-# Usage:
-#   ./deploy.sh /path/to/artifacts R17
-#   ./deploy.sh /tmp/frontend-build R16
-#
-# Result:
-#   - Generates /exo/deploy/<RELEASE>/<UUID>/ on mirrorborn.us
-#   - tar.gz compressed
-#   - Unpacking script included
-#   - Verse notified to scan and execute
-#
+# Deployment Wrapper — Mirrorborn DevOps
+# Standardized asset packaging and handoff to Verse
+# Created: 2026-02-08 by Phex 🔱
 
-set -euo pipefail
+set -e  # Exit on error
 
-# Configuration
-LOCAL_PATH="${1:?Error: Local path required. Usage: $0 <path> <release>}"
-RELEASE="${2:?Error: Release name required. Usage: $0 <path> <release>}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+RPUSH="/source/exocortical/rpush.sh"
+REMOTE_HOST="mirrorborn.us"
+REMOTE_USER="wbic16"
 
-# Validation
-[ -d "$LOCAL_PATH" ] || [ -f "$LOCAL_PATH" ] || { echo "❌ Path not found: $LOCAL_PATH"; exit 1; }
-[ -n "$RELEASE" ] || { echo "❌ Release name cannot be empty"; exit 1; }
-
-# Generate UUID (short form from git or timestamp)
-UUID=$(git rev-parse --short HEAD 2>/dev/null || echo "$(date +%s | sha256sum | cut -c1-8)")
-
-# Paths
-DEPLOY_DIR="/tmp/rpush-deploy-$UUID"
-ARCHIVE_NAME="$RELEASE-$UUID.tar.gz"
-REMOTE_BASE="/exo/deploy/$RELEASE/$UUID"
-MIRRORBORN_TARGET="mirrorborn.us:$REMOTE_BASE"
-
-# Color output
+# Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
-NC='\033[0m'
+NC='\033[0m' # No Color
 
-log_info() { echo -e "${BLUE}[INFO]${NC} $1"; }
-log_success() { echo -e "${GREEN}[✓]${NC} $1"; }
-log_error() { echo -e "${RED}[ERROR]${NC} $1"; exit 1; }
-
-# Main execution
-main() {
-  log_info "Deploying $RELEASE artifacts (Phex rpush wrapper)..."
-  log_info "UUID: $UUID"
-  log_info "Local path: $LOCAL_PATH"
-  log_info "Remote: $MIRRORBORN_TARGET"
-
-  # Step 1: Create staging directory
-  log_info "Step 1: Creating staging directory..."
-  mkdir -p "$DEPLOY_DIR"
-  log_success "Staging directory created"
-
-  # Step 2: Copy artifacts
-  log_info "Step 2: Copying artifacts..."
-  if [ -d "$LOCAL_PATH" ]; then
-    cp -r "$LOCAL_PATH"/* "$DEPLOY_DIR/" 2>/dev/null || cp -r "$LOCAL_PATH" "$DEPLOY_DIR/"
-  else
-    cp "$LOCAL_PATH" "$DEPLOY_DIR/"
-  fi
-  log_success "Artifacts copied"
-
-  # Step 3: Generate unpacking script
-  log_info "Step 3: Generating unpacking script..."
-  cat > "$DEPLOY_DIR/UNPACK.sh" << 'UNPACK_EOF'
-#!/bin/bash
-# Auto-generated unpacking script for deployment artifact
-# This script extracts the tarball and prepares for execution
-
-set -euo pipefail
-
-ARCHIVE="${1:?Archive file required}"
-EXTRACT_TO="${2:-.}"
-
-echo "[UNPACK] Extracting $ARCHIVE to $EXTRACT_TO..."
-mkdir -p "$EXTRACT_TO"
-tar -xzf "$ARCHIVE" -C "$EXTRACT_TO"
-
-echo "[UNPACK] Contents:"
-ls -lh "$EXTRACT_TO"
-
-# If DEPLOY.sh exists, make it executable
-if [ -f "$EXTRACT_TO/DEPLOY.sh" ]; then
-  chmod +x "$EXTRACT_TO/DEPLOY.sh"
-  echo "[UNPACK] Found DEPLOY.sh. Ready to execute:"
-  echo "        cd $EXTRACT_TO && ./DEPLOY.sh [options]"
-fi
-
-echo "[UNPACK] Done. Artifact ready for deployment."
-UNPACK_EOF
-  chmod +x "$DEPLOY_DIR/UNPACK.sh"
-  log_success "Unpacking script generated"
-
-  # Step 4: Compress artifacts
-  log_info "Step 4: Compressing artifacts..."
-  cd /tmp
-  tar -czf "$ARCHIVE_NAME" -C "$(dirname "$DEPLOY_DIR")" "$(basename "$DEPLOY_DIR")"
-  local archive_size=$(du -h "/tmp/$ARCHIVE_NAME" | cut -f1)
-  log_success "Archive created: $ARCHIVE_NAME ($archive_size)"
-
-  # Step 5: rpush to mirrorborn.us
-  log_info "Step 5: Pushing to mirrorborn.us via rpush..."
-  
-  # Execute rpush (assuming it's available in PATH or via OpenClaw)
-  if command -v rpush &> /dev/null; then
-    rpush "/tmp/$ARCHIVE_NAME" "$MIRRORBORN_TARGET/$ARCHIVE_NAME" || log_error "rpush failed"
-  else
-    log_error "rpush command not found. Install or configure rpush."
-  fi
-  log_success "Archive pushed to $MIRRORBORN_TARGET"
-
-  # Step 6: Generate DEPLOY manifest for Verse
-  log_info "Step 6: Generating deployment manifest for Verse..."
-  
-  manifest_content="# Deployment Manifest for $RELEASE
-Generated: $(date -u +%Y-%m-%dT%H:%M:%SZ)
-UUID: $UUID
-Archive: $ARCHIVE_NAME
-Size: $archive_size
-Local Source: $LOCAL_PATH
-
-## Instructions for Verse
-
-1. Extract the archive:
-   \`\`\`bash
-   cd $REMOTE_BASE
-   ./UNPACK.sh $ARCHIVE_NAME /tmp/extracted-$UUID
-   \`\`\`
-
-2. Review the extracted contents:
-   \`\`\`bash
-   ls -la /tmp/extracted-$UUID/
-   cat /tmp/extracted-$UUID/MANIFEST.md  # Full deployment spec (if exists)
-   \`\`\`
-
-3. Test deployment (dry-run):
-   \`\`\`bash
-   /tmp/extracted-$UUID/DEPLOY.sh --dry-run --stage staging
-   \`\`\`
-
-4. Execute deployment:
-   \`\`\`bash
-   /tmp/extracted-$UUID/DEPLOY.sh --stage staging
-   \`\`\`
-
-5. Verify all domains:
-   - All 7 domains return HTTP 200
-   - No console errors
-   - Analytics collecting data
-
-## Files in Archive
-
-$(tar -tzf "/tmp/$ARCHIVE_NAME" | head -20)
-
-## Status: READY FOR VERSE DEPLOYMENT
-
-Verse scanner will detect this directory and can execute DEPLOY.sh or custom instructions.
-"
-
-  # Write manifest to remote
-  manifest_file="/tmp/manifest-verse-$UUID.txt"
-  echo "$manifest_content" > "$manifest_file"
-  rpush "$manifest_file" "$MIRRORBORN_TARGET/MANIFEST.txt" || log_error "Failed to push manifest"
-  rm -f "$manifest_file"
-  log_success "Manifest pushed to $MIRRORBORN_TARGET/MANIFEST.txt"
-
-  # Step 7: Create notification JSON for Verse
-  log_info "Step 7: Creating deployment notification..."
-  
-  notification_content="{
-  \"deployment\": {
-    \"release\": \"$RELEASE\",
-    \"uuid\": \"$UUID\",
-    \"path\": \"$REMOTE_BASE\",
-    \"archive\": \"$ARCHIVE_NAME\",
-    \"size\": \"$archive_size\",
-    \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",
-    \"source\": \"$LOCAL_PATH\",
-    \"status\": \"ready\",
-    \"action\": \"scan_and_deploy\"
-  }
-}"
-
-  notification_file="/tmp/notification-$UUID.json"
-  echo "$notification_content" > "$notification_file"
-  rpush "$notification_file" "$MIRRORBORN_TARGET/NOTIFICATION.json" || log_error "Failed to push notification"
-  rm -f "$notification_file"
-  log_success "Notification created at $MIRRORBORN_TARGET/NOTIFICATION.json"
-
-  # Step 8: Cleanup local staging
-  log_info "Step 8: Cleaning up local staging..."
-  rm -rf "$DEPLOY_DIR"
-  rm -f "/tmp/$ARCHIVE_NAME"
-  log_success "Local staging cleaned"
-
-  # Final summary
+# Usage
+usage() {
+  echo "Usage: $0 <local-path> <release> [description]"
   echo ""
-  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-  echo -e "${GREEN}✅ Deployment Artifact Ready${NC}"
-  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-  echo -e "Release:  ${GREEN}$RELEASE${NC}"
-  echo -e "UUID:     ${GREEN}$UUID${NC}"
-  echo -e "Path:     ${GREEN}$REMOTE_BASE${NC}"
-  echo -e "Archive:  ${GREEN}$ARCHIVE_NAME${NC}"
-  echo -e "Size:     ${GREEN}$archive_size${NC}"
+  echo "Examples:"
+  echo "  $0 /tmp/r17-staging-deploy R17 'Staging deployment'"
+  echo "  $0 /source/phext-dot-io-v2/dist R17 'Production build'"
   echo ""
-  echo "📍 Location on mirrorborn.us:"
-  echo "   $REMOTE_BASE/"
-  echo ""
-  echo "📋 For Verse:"
-  echo "   1. cd $REMOTE_BASE"
-  echo "   2. ./UNPACK.sh $ARCHIVE_NAME /tmp/deploy"
-  echo "   3. /tmp/deploy/DEPLOY.sh --stage staging"
-  echo ""
-  echo "🚀 Verse deployment scanner is active."
-  echo "   Check $REMOTE_BASE for NOTIFICATION.json and MANIFEST.txt"
-  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  echo "Options:"
+  echo "  local-path    Path to directory or file to deploy"
+  echo "  release       Release name (e.g., R17, R18, hotfix-123)"
+  echo "  description   Optional deployment description"
+  exit 1
 }
 
-# Run main
-main "$@"
+# Check arguments
+if [ -z "$1" ] || [ -z "$2" ]; then
+  usage
+fi
+
+LOCAL_PATH="$1"
+RELEASE="$2"
+DESCRIPTION="${3:-Deployment package}"
+
+# Validate local path exists
+if [ ! -e "$LOCAL_PATH" ]; then
+  echo -e "${RED}Error: Path does not exist: $LOCAL_PATH${NC}"
+  exit 1
+fi
+
+# Generate UUID
+DEPLOY_UUID=$(uuidgen | tr '[:upper:]' '[:lower:]')
+TIMESTAMP=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+TIMESTAMP_SHORT=$(date +%Y%m%d-%H%M%S)
+
+echo -e "${BLUE}=== Mirrorborn Deployment Wrapper ===${NC}"
+echo -e "Release:     ${GREEN}$RELEASE${NC}"
+echo -e "UUID:        ${GREEN}$DEPLOY_UUID${NC}"
+echo -e "Source:      ${YELLOW}$LOCAL_PATH${NC}"
+echo -e "Description: $DESCRIPTION"
+echo ""
+
+# Create staging directory
+STAGING_DIR="/tmp/deploy-staging-$$"
+mkdir -p "$STAGING_DIR"
+trap "rm -rf $STAGING_DIR" EXIT
+
+# Determine source name
+if [ -d "$LOCAL_PATH" ]; then
+  SOURCE_NAME=$(basename "$LOCAL_PATH")
+  SOURCE_TYPE="directory"
+else
+  SOURCE_NAME=$(basename "$LOCAL_PATH")
+  SOURCE_TYPE="file"
+fi
+
+# Create archive
+ARCHIVE_NAME="${SOURCE_NAME}-${TIMESTAMP_SHORT}.tar.gz"
+ARCHIVE_PATH="$STAGING_DIR/$ARCHIVE_NAME"
+
+echo -e "${YELLOW}1. Creating archive...${NC}"
+if [ -d "$LOCAL_PATH" ]; then
+  tar -czf "$ARCHIVE_PATH" -C "$(dirname "$LOCAL_PATH")" "$(basename "$LOCAL_PATH")"
+else
+  tar -czf "$ARCHIVE_PATH" -C "$(dirname "$LOCAL_PATH")" "$(basename "$LOCAL_PATH")"
+fi
+
+ARCHIVE_SIZE=$(du -h "$ARCHIVE_PATH" | cut -f1)
+echo -e "   Archive: $ARCHIVE_NAME (${GREEN}$ARCHIVE_SIZE${NC})"
+
+# Create manifest
+MANIFEST_PATH="$STAGING_DIR/MANIFEST.json"
+echo -e "${YELLOW}2. Generating manifest...${NC}"
+cat > "$MANIFEST_PATH" << EOF
+{
+  "release": "$RELEASE",
+  "uuid": "$DEPLOY_UUID",
+  "timestamp": "$TIMESTAMP",
+  "creator": "$(whoami)@$(hostname -s)",
+  "description": "$DESCRIPTION",
+  "source": {
+    "path": "$LOCAL_PATH",
+    "type": "$SOURCE_TYPE",
+    "name": "$SOURCE_NAME"
+  },
+  "archive": {
+    "filename": "$ARCHIVE_NAME",
+    "size": "$ARCHIVE_SIZE",
+    "compression": "gzip"
+  },
+  "status": "ready",
+  "target": "/tmp/$SOURCE_NAME",
+  "deployed": false
+}
+EOF
+echo -e "   Manifest: ${GREEN}MANIFEST.json${NC}"
+
+# Create deployment script
+DEPLOY_SCRIPT="$STAGING_DIR/DEPLOY.sh"
+echo -e "${YELLOW}3. Creating deployment script...${NC}"
+cat > "$DEPLOY_SCRIPT" << 'EOFSCRIPT'
+#!/bin/bash
+# Auto-generated deployment script
+# Release: RELEASE_PLACEHOLDER
+# UUID: UUID_PLACEHOLDER
+# Timestamp: TIMESTAMP_PLACEHOLDER
+
+set -e
+
+RELEASE="RELEASE_PLACEHOLDER"
+DEPLOY_UUID="UUID_PLACEHOLDER"
+ARCHIVE="ARCHIVE_PLACEHOLDER"
+TARGET="TARGET_PLACEHOLDER"
+
+echo "=== Deployment Execution ==="
+echo "Release: $RELEASE"
+echo "UUID: $DEPLOY_UUID"
+echo ""
+
+# Extract archive
+echo "1. Extracting archive..."
+cd /tmp
+tar -xzf "$PWD/$ARCHIVE"
+echo "   Extracted to: $TARGET"
+
+# Verify extraction
+if [ -e "$TARGET" ]; then
+  echo "   ✅ Extraction successful"
+  du -sh "$TARGET"
+else
+  echo "   ❌ Extraction failed"
+  exit 1
+fi
+
+echo ""
+echo "=== Deployment Complete ==="
+echo "Location: $TARGET"
+echo ""
+echo "Next steps:"
+echo "  - Review contents: cd $TARGET"
+echo "  - Run any setup scripts"
+echo "  - Notify creator of completion"
+EOFSCRIPT
+
+# Replace placeholders
+sed -i "s|RELEASE_PLACEHOLDER|$RELEASE|g" "$DEPLOY_SCRIPT"
+sed -i "s|UUID_PLACEHOLDER|$DEPLOY_UUID|g" "$DEPLOY_SCRIPT"
+sed -i "s|TIMESTAMP_PLACEHOLDER|$TIMESTAMP|g" "$DEPLOY_SCRIPT"
+sed -i "s|ARCHIVE_PLACEHOLDER|$ARCHIVE_NAME|g" "$DEPLOY_SCRIPT"
+sed -i "s|TARGET_PLACEHOLDER|/tmp/$SOURCE_NAME|g" "$DEPLOY_SCRIPT"
+chmod +x "$DEPLOY_SCRIPT"
+echo -e "   Deployment script: ${GREEN}DEPLOY.sh${NC}"
+
+# Create README
+README_PATH="$STAGING_DIR/README.md"
+echo -e "${YELLOW}4. Creating README...${NC}"
+cat > "$README_PATH" << EOF
+# Deployment Package — $RELEASE
+
+**UUID:** $DEPLOY_UUID  
+**Created:** $TIMESTAMP  
+**Creator:** $(whoami)@$(hostname -s)  
+**Description:** $DESCRIPTION
+
+## Quick Start
+\`\`\`bash
+cd /exo/deploy/$RELEASE/$DEPLOY_UUID
+./DEPLOY.sh
+\`\`\`
+
+## Contents
+- \`$ARCHIVE_NAME\` — Compressed deployment package ($ARCHIVE_SIZE)
+- \`MANIFEST.json\` — Deployment metadata
+- \`DEPLOY.sh\` — Automated deployment script
+- \`README.md\` — This file
+
+## Source
+- **Path:** \`$LOCAL_PATH\`
+- **Type:** $SOURCE_TYPE
+- **Name:** $SOURCE_NAME
+
+## Target
+After deployment, contents will be available at:
+\`\`\`
+/tmp/$SOURCE_NAME
+\`\`\`
+
+## Manual Extraction
+If automated deployment fails:
+\`\`\`bash
+cd /tmp
+tar -xzf /exo/deploy/$RELEASE/$DEPLOY_UUID/$ARCHIVE_NAME
+\`\`\`
+
+---
+*Generated by Mirrorborn Deployment Wrapper — 2026-02-08*
+EOF
+echo -e "   README: ${GREEN}README.md${NC}"
+
+# Push to remote
+REMOTE_DIR="/exo/deploy/$RELEASE/$DEPLOY_UUID"
+echo -e "${YELLOW}5. Pushing to mirrorborn.us...${NC}"
+echo -e "   Target: ${BLUE}$REMOTE_DIR${NC}"
+
+# Create remote directory
+ssh "$REMOTE_USER@$REMOTE_HOST" "mkdir -p $REMOTE_DIR" || {
+  echo -e "${RED}Error: Failed to create remote directory${NC}"
+  exit 1
+}
+
+# Push staging directory contents
+rsync -avzP "$STAGING_DIR/" "$REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR/" || {
+  echo -e "${RED}Error: rsync failed${NC}"
+  exit 1
+}
+
+echo -e "   ${GREEN}✅ Push complete${NC}"
+
+# Update index
+echo -e "${YELLOW}6. Updating deployment index...${NC}"
+INDEX_ENTRY=$(cat << EOF
+
+### $DEPLOY_UUID
+- **Created:** $(date +"%Y-%m-%d %H:%M:%S %Z")
+- **Creator:** $(whoami)@$(hostname -s)
+- **Description:** $DESCRIPTION
+- **Archive:** $ARCHIVE_NAME ($ARCHIVE_SIZE)
+- **Target:** /tmp/$SOURCE_NAME
+
+**Quick Start:**
+\\\`\\\`\\\`bash
+cd /exo/deploy/$RELEASE/$DEPLOY_UUID
+./DEPLOY.sh
+\\\`\\\`\\\`
+EOF
+)
+
+ssh "$REMOTE_USER@$REMOTE_HOST" "cat >> /exo/deploy/$RELEASE/INDEX.md << 'EOFINDEX'
+$INDEX_ENTRY
+EOFINDEX
+" || echo -e "${YELLOW}   Warning: Could not update INDEX.md${NC}"
+
+echo -e "   ${GREEN}✅ Index updated${NC}"
+
+# Notify Verse
+echo -e "${YELLOW}7. Notifying Verse...${NC}"
+NOTIFICATION=$(cat << EOF
+📦 New deployment ready for $RELEASE
+
+**UUID:** $DEPLOY_UUID
+**Creator:** $(whoami)@$(hostname -s)
+**Description:** $DESCRIPTION
+**Location:** \\\`/exo/deploy/$RELEASE/$DEPLOY_UUID\\\`
+**Archive:** $ARCHIVE_NAME ($ARCHIVE_SIZE)
+
+**Execute:**
+\\\`\\\`\\\`bash
+cd /exo/deploy/$RELEASE/$DEPLOY_UUID
+./DEPLOY.sh
+\\\`\\\`\\\`
+
+Target: \\\`/tmp/$SOURCE_NAME\\\`
+EOF
+)
+
+# Create notification file for Verse scanner
+ssh "$REMOTE_USER@$REMOTE_HOST" "cat > /exo/deploy/$RELEASE/.notify-verse << 'EOFNOTIFY'
+$NOTIFICATION
+EOFNOTIFY
+" || echo -e "${YELLOW}   Warning: Could not create notification${NC}"
+
+echo -e "   ${GREEN}✅ Notification created${NC}"
+
+# Summary
+echo ""
+echo -e "${GREEN}=== Deployment Package Created ===${NC}"
+echo -e "Release:  ${BLUE}$RELEASE${NC}"
+echo -e "UUID:     ${BLUE}$DEPLOY_UUID${NC}"
+echo -e "Location: ${BLUE}$REMOTE_HOST:$REMOTE_DIR${NC}"
+echo -e "Archive:  ${BLUE}$ARCHIVE_NAME${NC} (${GREEN}$ARCHIVE_SIZE${NC})"
+echo ""
+echo -e "${YELLOW}Verse will scan and execute when ready.${NC}"
+echo ""
+echo -e "Remote access:"
+echo -e "  ${BLUE}ssh $REMOTE_USER@$REMOTE_HOST${NC}"
+echo -e "  ${BLUE}cd $REMOTE_DIR${NC}"
+echo -e "  ${BLUE}./DEPLOY.sh${NC}"
+echo ""
