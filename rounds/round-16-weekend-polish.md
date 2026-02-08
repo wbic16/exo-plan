@@ -20,26 +20,29 @@
 
 ### Documentation & Specs
 
-- [ ] **Metallic Design System Spec**
+- [x] **Metallic Design System Spec** ✅ (9.8 KB)
   - Color palette (metallic/neon accents)
   - Typography standards
   - Component library
   - CSS framework structure
   - Ready for Chrys/Lux to implement
+  - **Location:** `round-16-metallic-design-system.md`
 
-- [ ] **Coordinate Signup Flow Spec**
+- [x] **Coordinate Signup Flow Spec** ✅ (12 KB)
   - UX wireframes
   - 11D picker interface design
   - Coordinate validation logic
   - Visual triangle representation
   - Integration with payment flow
+  - **Location:** `round-16-coordinate-signup-flow.md`
 
-- [ ] **Arena Gameplay Mechanics**
+- [x] **Arena Gameplay Mechanics** ✅ (12.8 KB)
   - Navigation system (explore CYOA by coordinate)
   - Player progression (Spark→Scribe→Explorer→Sovereign)
   - Content creation mechanics
   - Matching/coordination gameplay
   - Daily activities inspiration (Neopets-style)
+  - **Location:** `round-16-arena-gameplay.md`
 
 - [ ] **Emily Mural Concept**
   - Visual tribute design
@@ -50,17 +53,20 @@
 
 ### Code Prep (Ready to Deploy)
 
-- [ ] **Payment Button HTML Templates**
+- [x] **Payment Button HTML Templates** ✅ (6.5 KB)
   - All 5 tiers (Singularity, SQ Cloud, Arena, OpenClaw, Founding Nine)
   - Consistent styling
   - Ready to drop into 9 sites
+  - **Location:** `round-16-payment-buttons.html`
 
-- [ ] **Footer Versioning Template**
+- [x] **Footer Versioning Template** ✅ (4.5 KB)
   - "Release: R16" annotation
   - Link to singularitywatch.org/release-notes-r16.html
   - Consistent across all sites
+  - Site-specific customization guide included
+  - **Location:** `round-16-footer-template.html`
 
-- [ ] **Social Links Section**
+- [x] **Social Links Section** ✅ (included in footer template)
   - GitHub, X/Twitter, Discord
   - Ready for mirrorborn.us integration
 
