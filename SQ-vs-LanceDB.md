@@ -87,12 +87,53 @@ curl -X POST "https://api.sq.cloud/insert?p=docs&c=1.1.1/1.1.1/1.1.1" \
 
 **Total latency:** 5-10ms (still 2-5x faster)
 
+**Query flow (similarity search via subspace proximity):**
+1. Start at known coordinate
+2. Scan nearby coordinates (adjacent scrolls/sections/chapters)
+3. Return matches based on proximity
+
+**Total latency:** 5-20ms (faster than vector similarity)
+
+**Key insight:** Similarity in phext = proximity in coordinate space. No embeddings needed.
+
 **Scaling:**
 - Hash table lookup (O(1))
 - No reindexing needed
 - Sparse addressing (only store what exists)
 
 **Winner: SQ (when you have structure, direct addressing >>> similarity search)**
+
+### Multiple Encoders & Holographic Mappings
+
+**Phext supports multiple views of the same data:**
+
+```bash
+# Store by chronological coordinate
+sq.insert("docs", "2026.2.8/10.25.0/1.1.1", "SQ competitive analysis")
+
+# Store by topic coordinate (automatic second encoding)
+sq.insert("docs", "1.1.1/5.3.2/1.2.1", "SQ competitive analysis")
+
+# Store by author coordinate (third encoding)
+sq.insert("docs", "4.1.4/1.1.1/1.1.1", "SQ competitive analysis")  # Chrys = 4.1.4
+```
+
+**Result:** Same content at 3 coordinates, accessible via 3 different access patterns.
+
+**Similarity search without embeddings:**
+- Find similar by time: Scan coordinates near `2026.2.8/10.25.0/1.1.1`
+- Find similar by topic: Scan coordinates near `1.1.1/5.3.2/1.2.1`
+- Find similar by author: Scan coordinates near `4.1.4/1.1.1/1.1.1`
+
+**Advantages:**
+- No embedding computation (0ms overhead)
+- Multiple access patterns (holographic storage)
+- Proximity in coordinate space = similarity in concept space
+- Auditable (still plain text at each coordinate)
+
+**LanceDB equivalent:** Would require multiple embeddings or complex metadata queries.
+
+**Winner: SQ (native multi-view similarity via coordinate proximity)**
 
 ---
 
@@ -177,12 +218,12 @@ Store metadata like `{"mailbox": "chrys"}` and query by metadata. No natural pro
 | **Hierarchical structure** | No | 11 dimensions | **SQ** |
 | **Composability** | No | merge/subtract/explode | **SQ** |
 | **Scaling** | Reindex on write | O(1) inserts | **SQ** |
-| **Semantic similarity** | Native | Not native** | **LanceDB** |
+| **Semantic similarity** | Embedding-based | Proximity-based* | **Tie** |
 | **Storage efficiency** | Dense (all vectors) | Sparse (only exists) | **SQ** |
 | **Auditability** | Metadata only | Full content | **SQ** |
+| **Multi-view access** | Metadata queries | Holographic mappings | **SQ** |
 
-*SQ doesn't do semantic search natively (by design — that's what embeddings are for)  
-**SQ can layer embeddings on top (store at inferred coordinates), but doesn't require them
+*SQ does similarity via subspace proximity (scan nearby coordinates), not embeddings. Different approach, similar result.
 
 ---
 
@@ -364,6 +405,56 @@ SQ finds what's *there*.
 **The insight:** They're not competitors. They're complementary.
 
 **The pitch:** "SQ Cloud is the memory layer. LanceDB is the search layer. Together, they're the Exocortex."
+
+---
+
+## Proposed API Modes for Multi-View Data
+
+**Automate holographic mappings via API flags:**
+
+### Mode 1: Chronological + Topic
+```bash
+curl -X POST "/api/v2/insert?p=docs&c=auto&mode=chrono,topic" \
+  -d "SQ competitive analysis"
+
+# Stores at:
+# - 2026.2.8/10.25.0/1.1.1 (chronological)
+# - <hash>.1.1/5.3.2/1.2.1 (topic via content hash)
+```
+
+### Mode 2: Chronological + Author + Topic
+```bash
+curl -X POST "/api/v2/insert?p=docs&c=auto&mode=chrono,author,topic&author=chrys" \
+  -d "SQ competitive analysis"
+
+# Stores at:
+# - 2026.2.8/10.25.0/1.1.1 (chronological)
+# - 4.1.4/1.1.1/<seq>     (author: Chrys = 4.1.4)
+# - <hash>.1.1/5.3.2/1.2.1 (topic)
+```
+
+### Mode 3: Proximity Search
+```bash
+# Find similar by time
+curl "/api/v2/search?p=docs&c=2026.2.8/10.25.0/1.1.1&range=3"
+# Returns scrolls within 3 positions in any dimension
+
+# Find similar by topic
+curl "/api/v2/search?p=docs&c=1.1.1/5.3.2/1.2.1&range=5"
+# Returns topically similar scrolls (nearby coordinates)
+```
+
+### Implementation Notes
+- `mode=chrono` — Use current timestamp as coordinate
+- `mode=author` — Use pre-defined author coordinate mapping
+- `mode=topic` — Use content hash → coordinate inference
+- `mode=custom` — User provides explicit coordinate
+
+**Advantages over LanceDB:**
+- No embedding computation (instant writes)
+- Multiple access patterns without reindexing
+- Similarity via coordinate proximity (native to phext)
+- Still auditable (plain text at each coordinate)
 
 ---
 
