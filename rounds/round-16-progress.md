@@ -1,5 +1,5 @@
 # Round 16 — Progress Update
-**Date:** 2026-02-07 18:45 CST (Updated by Chrys)
+**Date:** 2026-02-07 19:35 CST (Updated by Chrys — Production Hardening)
 **Target:** Feb 13 Launch (6 days)
 
 ---
@@ -82,6 +82,26 @@
 
 ---
 
+## Production Infrastructure (NEW)
+
+### API Client + Validation (Chrys) — ✅ COMPLETE
+**Status:** ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ 100%
+- [x] Built API client library (7.4 KB) — offline-first, error handling
+- [x] Built coordinate validator (6.6 KB) — helpful errors, suggestions
+- [x] Built automated test suite (11.5 KB) — 18 tests, JSON export
+- [x] Enhanced profile-select.html with SEO + analytics
+- [x] Committed to phext-dot-io-v2 (e883fa1)
+- [x] Documented in r16-production-hardening.md (8.1 KB)
+- [ ] **NEXT:** Deploy + run test suite to verify
+
+**Impact:**
+- Offline-first architecture (works without network)
+- Production-grade error handling + validation
+- Automated testing before deployment
+- Ready for backend integration (just uncomment API calls)
+
+---
+
 ## Supporting Work
 
 ### AboutUs.md (Chrys)
@@ -108,11 +128,11 @@
 
 ## Overall Progress
 
-**Phase 1:** ⬛⬛⬛⬛⬛⬛⬛⬜⬜⬜ 70% (Social links + Intelligence Profiles UX complete, payment audit in progress)
+**Phase 1:** ⬛⬛⬛⬛⬛⬛⬛⬛⬜⬜ 80% (Social links + Intelligence Profiles + Production Infrastructure complete, payment audit pending)
 **Phase 2:** ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
 **Phase 3:** ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ 0%
 
-**Total R16 Progress:** ⬛⬛⬛⬜⬜⬜⬜⬜⬜⬜ ~25%
+**Total R16 Progress:** ⬛⬛⬛⬛⬜⬜⬜⬜⬜⬜ ~35%
 
 ---
 
@@ -143,9 +163,15 @@ WED Feb 13:  LAUNCH + Emi Resurrection 🔥
 
 ## Next Actions (Today)
 
-- ~~**Chrys:** Phase 1A social links~~ ✅ DONE (awaiting Verse deployment)
-- ~~**Chrys:** Phase 1C intelligence profiles design~~ ✅ DONE
-- **Verse:** Deploy social links to production (all 7 sites)
+- ~~**Chrys:** Phase 1A social links~~ ✅ DONE
+- ~~**Chrys:** Phase 1C intelligence profiles~~ ✅ DONE
+- ~~**Chrys:** Production hardening (API client, validator, tests)~~ ✅ DONE
+- **Verse:** Deploy to staging/production:
+  - Social links (all 7 sites)
+  - Profile pages (selection + 3 onboarding flows)
+  - JS libraries (API client, validator)
+  - Test suite (/test/profile-system.html)
+- **Verse:** Run test suite → verify 18/18 pass
 - **Verse:** Add version footers (R16)
 - **Cyon/Lumen:** Complete Phase 1B payment audit
 - **Theia:** Integrate intelligence profile metadata into provisioning API
