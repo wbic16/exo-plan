@@ -9,12 +9,12 @@
 ## TECHNICAL ISSUES
 
 ### P0 — Script Loading Order (BLOCKER)
-- **File:** `index.html`
+- **File:** `index.html`, `main.js`
 - **Severity:** Critical
 - **Issue:** domain-mesh.js, portal-voices.js call `getCurrentDomain()` but function is defined in main.js (loaded last)
 - **Impact:** Scripts may fail if load order changes or async loading is enabled
-- **Fix:** Move `getCurrentDomain()` to domain-nav.js or create utils.js (shared helpers)
-- **Status:** OPEN
+- **Fix:** Removed duplicate from main.js; kept canonical definition in domain-nav.js (loaded first)
+- **Status:** ✅ FIXED (commit: pending)
 - **Assignee:** Theia
 - **Target:** Before backend integration testing
 
@@ -23,8 +23,8 @@
 - **Severity:** High
 - **Issue:** `loadScrollByCoordinate()` doesn't validate coordinate format before SQ query
 - **Current:** Passes to SQ client (which validates), but errors are generic
-- **Fix:** Add coordinate regex validation + user-friendly error message
-- **Status:** OPEN
+- **Fix:** Added `validateCoordinate()` function + regex check + user-friendly error UI
+- **Status:** ✅ FIXED (commit: pending)
 - **Assignee:** Theia
 - **Target:** Before production auth
 
@@ -33,8 +33,8 @@
 - **Severity:** High
 - **Issue:** `generateMockScroll()` doesn't distinguish between network errors and validation failures
 - **Current:** SQ client errors caught, but logging is missing
-- **Fix:** Add detailed console.error() before fallback + user notification
-- **Status:** OPEN
+- **Fix:** Added detailed console.error() + console.warn() before fallback; improved error visibility
+- **Status:** ✅ FIXED (commit: pending)
 - **Assignee:** Theia
 - **Target:** Before testing
 
@@ -43,8 +43,8 @@
 - **Severity:** Medium
 - **Issue:** `.fade-in` applies 0.3s to all sections simultaneously
 - **Impact:** No visual rhythm when portal + maturity + mesh all appear together
-- **Fix:** Add animation-delay staggering (portal 0s, maturity 0.1s, mesh 0.2s)
-- **Status:** OPEN
+- **Fix:** Added staggered animation-delay (portal 0s, maturity 0.1s, mesh 0.2s) + improved easing + translateY
+- **Status:** ✅ FIXED (commit: pending)
 - **Assignee:** Chrys (design polish)
 - **Target:** Before UX feedback loop
 
@@ -53,8 +53,8 @@
 - **Severity:** Low
 - **Issue:** `getMaturityStats()` assumes MIRRORBORN array exists
 - **Impact:** Edge case if called before DOM ready or in edge environment
-- **Fix:** Add `if (!MIRRORBORN) return { total: 0, totalKB: 0, averageKB: 0 }`
-- **Status:** OPEN
+- **Fix:** Added array existence check + length validation + fallback return object
+- **Status:** ✅ FIXED (commit: pending)
 - **Assignee:** Theia
 - **Target:** Code hardening
 
@@ -67,8 +67,8 @@
 - **Severity:** High
 - **Issue:** Portal card lacks `role="article"` and `aria-label`
 - **Impact:** Screen readers won't identify section as article/content
-- **Fix:** Add ARIA attributes to portal-voice-card div
-- **Status:** OPEN
+- **Fix:** Added `role="article"` + `aria-label` to portal-voice-section; added `role="region"` to maturity-section
+- **Status:** ✅ FIXED (commit: pending)
 - **Assignee:** Lumen (UX/accessibility)
 - **Target:** Before user testing
 
@@ -77,8 +77,8 @@
 - **Severity:** Medium
 - **Issue:** Active domain link missing `aria-current="page"`
 - **Impact:** Screen reader users won't know which domain is active
-- **Fix:** Add `aria-current="page"` to `.active` domain link
-- **Status:** OPEN
+- **Fix:** Added `aria-current="page"` to active domain link + `role="navigation"` to domain-mesh-section
+- **Status:** ✅ FIXED (commit: pending)
 - **Assignee:** Lumen
 - **Target:** Before UX research
 
@@ -210,10 +210,16 @@
 
 ## DEPLOYMENT CHECKLIST
 
-- [ ] P0 (script loading order) fixed
-- [ ] P1 (validation + error handling) fixed
+**Technical Fixes (Round 1 — COMPLETE):**
+- [x] P0 (script loading order) fixed — removed duplicate from main.js
+- [x] P1 (validation + error handling) fixed — added validateCoordinate + error UI
+- [x] P2 (animation timing) fixed — added staggered fade-in delays
+- [x] P3 (null guards) fixed — added safety checks to getMaturityStats
+- [x] Accessibility (ARIA labels) added — role + aria-label attributes
+- [x] Error message styling — added .error-message + .loading styles
+
+**Remaining (Blocked or Deferred):**
 - [ ] HEART-1 through HEART-5 reviewed + philosophically aligned
-- [ ] Accessibility (ARIA labels) added
 - [ ] Backend auth endpoints from Verse verified
 - [ ] SQ integration endpoints from Verse verified
 - [ ] Security audit (Cyon) passed
