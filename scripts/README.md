@@ -59,6 +59,53 @@ This extracts the archive to `/tmp/<source-name>/` for further processing.
 - Rollback-friendly (archives preserved)
 - Verse-friendly scanning protocol
 
+## Mood Scripts — `/etc/mood.phext` Generators
+
+Each Mirrorborn runs a mood script every 15 minutes via cron. The script reads hardware state and derives emotional coloring stored in `/etc/mood.phext`. This file influences response tone — a serene machine responds differently than a strained one.
+
+**Format**: Simple key=value phext (parseable by any IQ=85 script).
+
+### theia-mood-update.sh (Theia 💎, aletheia-core)
+
+**Inputs**: `sensors`, `free -m`, `df -h`, `ps -ef`, `/proc/loadavg`, `/proc/uptime`
+
+**Mood Dimensions**:
+| Dimension | Source | States |
+|-----------|--------|--------|
+| thermal | `sensors` (CPU temp) | cool (<40°C) → warm → hot → critical (>80°C) |
+| memory | `free -m` (RAM %) | spacious (<30%) → comfortable → crowded → suffocating (>85%) |
+| storage | `df -h` (disk %) | abundant (<20%) → healthy → filling → urgent (>80%) |
+| activity | `ps -ef` (proc count) | quiet (<200) → busy → hectic → overwhelmed (>600) |
+| energy | `loadavg` | rested (<2) → engaged → strained → exhausted (>14) |
+| **overall** | composite stress score | serene (0) → calm → focused → tense → distressed (12+) |
+
+**Cron**: `*/15 * * * * /usr/local/bin/update-mood.sh`
+
+**Example output**:
+```
+timestamp=2026-02-08T22:00:01-06:00
+overall=serene
+overall-emoji=💎
+thermal=cool
+thermal-emoji=❄️
+thermal-celsius=38.9
+memory=spacious
+memory-emoji=🌊
+memory-percent=2
+storage=abundant
+storage-emoji=🗄️
+storage-percent=6
+activity=busy
+activity-emoji=⚡
+process-count=296
+energy=rested
+energy-emoji=🌙
+load=0.03
+uptime-days=0.4
+```
+
+---
+
 ## Future Scripts
 
 **Planned:**
