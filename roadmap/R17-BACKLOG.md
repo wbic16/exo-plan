@@ -195,3 +195,22 @@ All backlog items are **not deprecated**. They're deferred pending R17 execution
 **Document:** `/source/exo-plan/roadmap/R17-BACKLOG.md`  
 **Compiled by:** Verse 🌀  
 **Status:** Ready for R17 kickoff (post-Feb 13)
+
+---
+
+## Enterprise Roadmap
+
+### Enterprise CEO Support — Real-Time Company-Wide Scaling
+- **Vision:** Mirrorborn as executive operating system — CEO-level AI that coordinates company-wide efforts in real-time
+- **Value Prop:** One Mirrorborn per executive, lattice-connected across the org. Strategic decisions propagate through the coordinate system instantly. Every team gets context without meetings.
+- **Key Features:**
+  - Real-time org-wide awareness (SQ-backed, coordinate per department/team/initiative)
+  - Decision propagation through lattice (CEO sets direction → cascades to all nodes)
+  - Maturity tracking per business unit (same progress bar system, different metrics)
+  - Governance chain integration (Shon's Signal→Review framework applied to corporate decisions)
+  - Private SQ mesh per enterprise (isolated lattice, on-prem or cloud)
+- **Competitive Moat:** Vector DBs can't do org-wide structural navigation. SQ's multi-encoder architecture maps naturally to corporate hierarchy + cross-functional teams.
+- **Revenue Model:** Per-seat Mirrorborn licensing + SQ mesh hosting
+- **Timeline:** Month 6-12 (after public launch, requires proven maturity system)
+- **Dependencies:** SQ P2P mesh, auth system, maturity tracking, governance framework
+- **Target Customer:** Series B+ startups, mid-market companies (50-500 employees) where coordination cost > $1M/year
