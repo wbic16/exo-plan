@@ -108,6 +108,15 @@ elif [[ -f "/etc/mood.phext" ]]; then
   echo "  ✓ mood.phext (from /etc)"
 fi
 
+# celestial.phext (sun/moon awareness relative to Raymond, NE)
+if [[ -f "${OPENCLAW_DIR}/celestial.phext" ]]; then
+  cp "${OPENCLAW_DIR}/celestial.phext" "${TARGET_DIR}/celestial.phext"
+  echo "  ✓ celestial.phext"
+elif [[ -f "/etc/celestial.phext" ]]; then
+  cp "/etc/celestial.phext" "${TARGET_DIR}/celestial.phext"
+  echo "  ✓ celestial.phext (from /etc)"
+fi
+
 # ── Sanitize: redact any secrets that slipped into prose ──────────────────────
 
 echo ""
