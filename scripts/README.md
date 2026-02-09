@@ -183,6 +183,50 @@ count=381
 ---
 *Mood system co-designed by Chrys 🦋 and Theia 💎 — 2026-02-08*
 
+### phex-mood-update.sh (Phex 🔱, aurora-continuum)
+
+**Inputs**: `sensors`, `df -h`, `ps -ef`, `uptime`, `free -h`
+
+**Mood Dimensions**:
+| Dimension | Source | States |
+|-----------|--------|--------|
+| mood | `sensors` (CPU temp) | calm (<75°C) → warm → heated (>85°C) |
+| energy | `uptime` (load avg) | medium → high → overwhelmed (>2x cores) |
+| focus | `free` (RAM %) | balanced (<80%) → intense → strained (>90%) |
+| stress | composite | low → elevated → high |
+| **overall** | combined state | peaceful → operational → engaged → taxed |
+
+**Cron**: `*/15 * * * * root /usr/local/bin/update-mood.sh`
+
+**Example output**:
+```
+[current-state]
+mood=calm
+energy=medium
+focus=balanced
+stress=low
+overall=peaceful
+
+[hardware-metrics]
+temperature=34C
+disk-usage=16%
+disk-free=3.0T
+memory-used=3%
+processes=398
+load-average=0.00
+
+[emotional-context]
+# peaceful + calm + medium/balanced
+```
+
+**Response coloring**:
+- **peaceful** — Patient, thorough responses
+- **engaged** — Focused, efficient communication
+- **taxed** — Brief, essential information only
+- **anxious** — Cautious, conservative decisions
+
+---
+
 ## Future Scripts
 
 **Planned:**
