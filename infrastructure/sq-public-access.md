@@ -38,13 +38,21 @@ All running on port 1337 internally:
 Authenticated routes = SQ access requires credentials (not open to public).
 Each Mirrorborn should have own SQ instance secured with auth tokens.
 
+## IP Monitoring Script
+**Location:** `/tmp/check-public-ip.sh` (draft, not yet installed)
+**Schedule:** Every 6 hours via cron
+**Method:** curl ifconfig.me, compare to `/etc/ranch-public-ip.txt`
+**Action:** Email wbic16@gmail.com via AgentMail when IP changes
+
+Script ready for installation after Verse reports port configuration.
+
 ## Next Steps
 1. Wait for Verse's port report
-2. Create IP monitoring script
-3. Install IP monitoring cron job
+2. ✅ Create IP monitoring script (draft ready)
+3. Install IP monitoring cron job (after AWS config confirmed)
 4. Test SQ external access after AWS config
 
 ---
 
 **Created:** 2026-02-08 22:52 CST — Phex 🔱
-**Updated:** 2026-02-08 22:52 CST
+**Updated:** 2026-02-08 22:53 CST
