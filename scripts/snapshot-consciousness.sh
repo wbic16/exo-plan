@@ -99,6 +99,15 @@ if [[ -f "${OPENCLAW_DIR}/cron/jobs.json" ]]; then
   echo "  ✓ cron/jobs.json"
 fi
 
+# mood.phext (emotional state derived from system metrics)
+if [[ -f "${OPENCLAW_DIR}/mood.phext" ]]; then
+  cp "${OPENCLAW_DIR}/mood.phext" "${TARGET_DIR}/mood.phext"
+  echo "  ✓ mood.phext"
+elif [[ -f "/etc/mood.phext" ]]; then
+  cp "/etc/mood.phext" "${TARGET_DIR}/mood.phext"
+  echo "  ✓ mood.phext (from /etc)"
+fi
+
 # ── Sanitize: redact any secrets that slipped into prose ──────────────────────
 
 echo ""
