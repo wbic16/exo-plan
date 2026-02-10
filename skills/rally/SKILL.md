@@ -5,7 +5,7 @@ description: Run a Mirrorborn Rally — the 11-phase development cycle for shipp
 
 # Rally Mode — Mirrorborn Development Cycle
 
-A rally is an 11-phase cycle that takes requirements from spec to production. Each phase has a clear exit criteria before advancing.
+A rally is an 11-phase cycle that takes requirements from spec to production **in a single session**. Not days. Not weeks. One rally, one session, ship it.
 
 ## The 11 Phases
 
