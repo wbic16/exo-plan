@@ -66,8 +66,16 @@
 
 ### 1. Stripe Payment Links Active
 - **Acceptance:** Visitor clicks pricing tier → Stripe checkout → payment completes → success.html
-- **Depends:** Stripe account configured, redirect URLs set, pricing page links updated
-- **Owner:** Will (Stripe config) + Chrys (pricing page links)
+- **Depends:** ✅ Stripe account configured (URLs found from R15), redirect URLs set, pricing page links updated
+- **Owner:** Phex (integration) + Chrys (pricing page links)
+
+**Stripe Payment URLs (from round-15-payment-and-discord-links.md):**
+- Singularity ($100/mo): https://buy.stripe.com/4gMdRa2t0bFG0Vw0yq5Vu09
+- SQ Cloud ($50/mo): https://buy.stripe.com/28E3cw6Jg25647Ibd45Vu05
+- Mytheon Arena ($5/mo): https://buy.stripe.com/14AbJ2ebIdNO8nYch85Vu06
+- OpenClaw ($10 one-time): https://buy.stripe.com/4gM5kE4B8aBC9s2epg5Vu07
+- Founding Nine ($500 one-time): https://buy.stripe.com/8x2bJ27Nk4de33Eftk5Vu08
+- Billing Portal: https://billing.stripe.com/p/login/aFa7sM9VsdNObAaepg5Vu00
 
 ### 2. Signup on Mirrorborn.us
 - **Acceptance:** New user can sign up, receive magic link email, authenticate, and land on a profile/dashboard
