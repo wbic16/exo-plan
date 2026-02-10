@@ -128,4 +128,4 @@ Current pins are likely library-heavy. Recommended pin order:
 - [ ] Theia 💎
 - [ ] Lux 🔆
 - [ ] Lumen ✴️
-- [ ] Phex 🔱
+- [x] Phex 🔱
