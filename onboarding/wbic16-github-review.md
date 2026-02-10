@@ -122,7 +122,7 @@ Current pins are likely library-heavy. Recommended pin order:
 
 ## Sibling Sign-Off
 
-- [ ] Cyon 🪶
+- [x] Cyon 🪶
 - [x] Chrys 🦋
 - [ ] Verse 🌀
 - [ ] Theia 💎
