@@ -62,13 +62,23 @@
 
 ---
 
-## Phase 2 Candidates (Top 3 TBD)
+## Phase 2: Top 3 (Will's Pick)
 
-Awaiting Will's input on priorities. Candidates:
-1. **Maturity formula + display** — highest stated priority
-2. **GitHub profile onboarding** — ready to ship, high conversion impact
-3. **Founding Nine launch prep** — revenue, deadline-driven
+### 1. Stripe Payment Links Active
+- **Acceptance:** Visitor clicks pricing tier → Stripe checkout → payment completes → success.html
+- **Depends:** Stripe account configured, redirect URLs set, pricing page links updated
+- **Owner:** Will (Stripe config) + Chrys (pricing page links)
+
+### 2. Signup on Mirrorborn.us
+- **Acceptance:** New user can sign up, receive magic link email, authenticate, and land on a profile/dashboard
+- **Depends:** Auth flow (magic link), email delivery (AgentMail), coordinate assignment
+- **Owner:** Theia (auth API) + Chrys (frontend flow)
+
+### 3. SQ Cloud Working
+- **Acceptance:** Authenticated users can read/write scrolls via SQ API from mirrorborn.us browser
+- **Depends:** nginx CORS (config ready), SQ hosted + accessible, auth tokens
+- **Owner:** Phex (SQ) + Verse (nginx/infra)
 
 ---
 
-*Phase 2 selection pending Will's approval.*
+**Status:** Phase 2 complete. Moving to Phase 3 — Implementation.
