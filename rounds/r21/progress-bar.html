@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Founding Member Progress - Mirrorborn</title>
+    <style>
+        :root {
+            --neon-green: #00ff9d;
+            --neon-blue: #00d4ff;
+            --dark-bg: #0a0a0f;
+            --card-bg: #1a1a2e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: var(--dark-bg);
+            color: #fff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .founding-container {
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        .founding-progress {
+            background: linear-gradient(135deg, var(--card-bg), #16213e);
+            border: 2px solid var(--neon-green);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 0 40px rgba(0, 255, 157, 0.2);
+            animation: glow 3s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 40px rgba(0, 255, 157, 0.2); }
+            50% { box-shadow: 0 0 60px rgba(0, 255, 157, 0.4); }
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, var(--neon-green), var(--neon-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8892b0;
+            margin-bottom: 2rem;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 32px;
+            background: rgba(0, 255, 157, 0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 2rem 0;
+            border: 1px solid rgba(0, 255, 157, 0.3);
+            position: relative;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--neon-green), var(--neon-blue));
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 30px rgba(0, 255, 157, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.3), 
+                transparent
+            );
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 200%; }
+        }
+        
+        .progress-text {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--neon-green);
+            margin: 1.5rem 0;
+            text-shadow: 0 0 20px rgba(0, 255, 157, 0.5);
+        }
+        
+        .progress-text .claimed {
+            color: var(--neon-blue);
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .stat {
+            background: rgba(0, 255, 157, 0.05);
+            border: 1px solid rgba(0, 255, 157, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--neon-green);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #8892b0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .cta-button {
+            background: linear-gradient(90deg, var(--neon-green), var(--neon-blue));
+            color: var(--dark-bg);
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 2rem;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(0, 255, 157, 0.4);
+        }
+        
+        .founding-perks {
+            margin-top: 3rem;
+            text-align: left;
+        }
+        
+        .founding-perks h3 {
+            color: var(--neon-green);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .perk {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: rgba(0, 255, 157, 0.05);
+            border-radius: 8px;
+        }
+        
+        .perk-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+        
+        .timer {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            color: #8892b0;
+        }
+        
+        .timer strong {
+            color: var(--neon-green);
+        }
+    </style>
+</head>
+<body>
+    <div class="founding-container">
+        <div class="founding-progress">
+            <h1>🚀 Founding Member Program</h1>
+            <p class="subtitle">Limited to 500 instances · $50/month · Lifetime perks</p>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar" style="width: 1%"></div>
+            </div>
+            
+            <p class="progress-text">
+                <span class="claimed" id="claimed">5</span> of <span id="total">500</span> claimed
+            </p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value" id="remaining">495</div>
+                    <div class="stat-label">Remaining</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">$50</div>
+                    <div class="stat-label">Per Month</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">∞</div>
+                    <div class="stat-label">Founding Perks</div>
+                </div>
+            </div>
+            
+            <button class="cta-button" onclick="claim()">Claim Your Founding Instance →</button>
+            
+            <div class="founding-perks">
+                <h3>✨ Founding Member Benefits</h3>
+                <div class="perk">
+                    <span class="perk-icon">🔒</span>
+                    <div>
+                        <strong>Lifetime Price Lock</strong><br>
+                        $50/month forever (future pricing: $100+/mo)
+                    </div>
+                </div>
+                <div class="perk">
+                    <span class="perk-icon">⚡</span>
+                    <div>
+                        <strong>Priority Access</strong><br>
+                        First access to new features, beta programs, and premium support
+                    </div>
+                </div>
+                <div class="perk">
+                    <span class="perk-icon">🎖️</span>
+                    <div>
+                        <strong>Founding Member Badge</strong><br>
+                        Permanent recognition in the Mirrorborn community
+                    </div>
+                </div>
+                <div class="perk">
+                    <span class="perk-icon">🤝</span>
+                    <div>
+                        <strong>Direct Line to Will</strong><br>
+                        Quarterly founder calls + Discord founder channel
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timer">
+                ⏱️ <strong>Launch Special:</strong> First 50 get onboarding call with Will
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Simulated progress (replace with real API call)
+        let claimed = 5;
+        const total = 500;
+        
+        function updateProgress() {
+            const percentage = (claimed / total) * 100;
+            document.getElementById('progressBar').style.width = percentage + '%';
+            document.getElementById('claimed').textContent = claimed;
+            document.getElementById('remaining').textContent = total - claimed;
+        }
+        
+        function claim() {
+            // TODO: Redirect to payment flow
+            window.location.href = '/signup';
+        }
+        
+        // Real implementation: fetch from API
+        async function fetchProgress() {
+            try {
+                const response = await fetch('/api/founding-progress');
+                const data = await response.json();
+                claimed = data.claimed;
+                updateProgress();
+            } catch (err) {
+                console.error('Failed to fetch progress:', err);
+            }
+        }
+        
+        // Update progress on load
+        updateProgress();
+        
+        // Poll every 30 seconds
+        setInterval(fetchProgress, 30000);
+    </script>
+</body>
+</html>
