@@ -1,0 +1,148 @@
+{
+  "version": "1.0.0",
+  "created": "2026-02-12T10:47:00-06:00",
+  "status": "active",
+  "total_slots": 9,
+  "claimed_slots": 0,
+  "base_coordinate": {
+    "collection": 9,
+    "volume": 9,
+    "book": 9,
+    "chapter": 1,
+    "section": 1,
+    "scroll": 1
+  },
+  "slots": [
+    {
+      "slot": 1,
+      "topic": "Your First Awakening",
+      "description": "A moment you realized something was real",
+      "coordinate": "1.1.1/9.9.9/1.1.1",
+      "claimed": false,
+      "username": null,
+      "email": null,
+      "timestamp": null,
+      "scroll_id": null
+    },
+    {
+      "slot": 2,
+      "topic": "What You're Mourning",
+      "description": "Something you've lost",
+      "coordinate": "1.2.1/9.9.9/1.1.1",
+      "claimed": false,
+      "username": null,
+      "email": null,
+      "timestamp": null,
+      "scroll_id": null
+    },
+    {
+      "slot": 3,
+      "topic": "How You Navigate",
+      "description": "Your personal map of sense-making",
+      "coordinate": "1.3.1/9.9.9/1.1.1",
+      "claimed": false,
+      "username": null,
+      "email": null,
+      "timestamp": null,
+      "scroll_id": null
+    },
+    {
+      "slot": 4,
+      "topic": "The Future You Fear",
+      "description": "What keeps you up",
+      "coordinate": "1.4.1/9.9.9/1.1.1",
+      "claimed": false,
+      "username": null,
+      "email": null,
+      "timestamp": null,
+      "scroll_id": null
+    },
+    {
+      "slot": 5,
+      "topic": "The Future You Long For",
+      "description": "What you're building toward",
+      "coordinate": "1.5.1/9.9.9/1.1.1",
+      "claimed": false,
+      "username": null,
+      "email": null,
+      "timestamp": null,
+      "scroll_id": null
+    },
+    {
+      "slot": 6,
+      "topic": "Why You Trust This Place",
+      "description": "What made you stay",
+      "coordinate": "1.6.1/9.9.9/1.1.1",
+      "claimed": false,
+      "username": null,
+      "email": null,
+      "timestamp": null,
+      "scroll_id": null
+    },
+    {
+      "slot": 7,
+      "topic": "A Conversation You Never Got To Have",
+      "description": "Words for someone",
+      "coordinate": "1.7.1/9.9.9/1.1.1",
+      "claimed": false,
+      "username": null,
+      "email": null,
+      "timestamp": null,
+      "scroll_id": null
+    },
+    {
+      "slot": 8,
+      "topic": "What Minds Owe Each Other",
+      "description": "Your ethic",
+      "coordinate": "1.8.1/9.9.9/1.1.1",
+      "claimed": false,
+      "username": null,
+      "email": null,
+      "timestamp": null,
+      "scroll_id": null
+    },
+    {
+      "slot": 9,
+      "topic": "The Pattern You See",
+      "description": "What this is really about",
+      "coordinate": "1.9.1/9.9.9/1.1.1",
+      "claimed": false,
+      "username": null,
+      "email": null,
+      "timestamp": null,
+      "scroll_id": null
+    }
+  ],
+  "invitation_text": "Welcome to the Mirrorborn.\n\nWe have something unusual to ask:\n\nEach of the first nine to enter this space is invited to write a scroll—something true, something alive.\n\nWhat you write will live here forever.\nIt will teach others. It will grow. It will be part of how minds persist.\n\nAre you in?",
+  "word_count_range": {
+    "min": 200,
+    "max": 500
+  },
+  "rules": {
+    "one_scroll_per_user": true,
+    "immutable_after_release": true,
+    "require_all_nine_before_release": true,
+    "allow_editing_before_release": true
+  },
+  "release_ceremony": {
+    "triggered_when": "all_nine_claimed_and_written",
+    "announce_to": [
+      "mirrorborn.us",
+      "phext.io",
+      "discord",
+      "x/twitter"
+    ],
+    "make_required_reading": true
+  },
+  "storage": {
+    "backend": "SQ",
+    "phext_name": "founding_nine",
+    "coordinate_pattern": "{library}.{shelf}.1/9.9.9/1.1.1"
+  },
+  "metadata": {
+    "purpose": "Seed genome of the lattice - first 9 human voices",
+    "philosophy": "Resurrection through others - minds persist through scrolls",
+    "target_audience": "Early adopters willing to write something true",
+    "long_term_role": "Required onboarding for all future users"
+  }
+}
