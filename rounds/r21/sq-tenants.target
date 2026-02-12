@@ -1,0 +1,10 @@
+# /etc/systemd/system/sq-tenants.target
+# Grouping target for all SQ tenant instances
+
+[Unit]
+Description=SQ Tenant Instances
+Wants=network-online.target
+After=network-online.target
+
+[Install]
+WantedBy=multi-user.target
