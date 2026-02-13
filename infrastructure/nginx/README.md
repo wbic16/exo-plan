@@ -11,12 +11,14 @@ Version-controlled nginx configs for Verse's AWS infrastructure.
   - HTTPS + HSTS enabled
   - CORS restricted to same origin
 
-- **sq.mirrorborn.us** - SQ Cloud REST API
-  - Proxies to SQ on port 1337
+- **sq.mirrorborn.us** - SQ Cloud REST API (Multi-Tenant)
+  - Proxies to SQ v0.5.6 on port 1337
   - **API Key authentication required:** `X-SQ-API-Key` header
-  - CORS: allows `https://mirrorborn.us` origin
+  - CORS: wildcard (`*`) for public API access
   - TLS + HSTS enabled
   - Health endpoint: `/health` (no auth)
+  - **Critical:** `proxy_buffering off` + `proxy_request_buffering off` for reliable multi-tenant writes
+  - Keepalive connections: 32 (prevents context switching)
 
 ### Other Production Sites
 - **apertureshift.com** - HTTPS + HSTS
@@ -60,6 +62,36 @@ curl -H "X-SQ-API-Key: <key>" https://sq.mirrorborn.us/api/v2/version
 ```
 
 Beta key stored in `/home/wbic16/.openclaw/workspace/SQ-AUTH-DEPLOYMENT.md`
+
+## Multi-Tenant Proxy Requirements
+
+**CRITICAL for SQ Cloud reliability:**
+
+```nginx
+upstream sq_api {
+    server 127.0.0.1:1337;
+    keepalive 32;  # Reuse connections, prevent context switching
+}
+
+location / {
+    proxy_buffering off;              # Required: prevent response mixing
+    proxy_request_buffering off;      # Required: prevent request body mixing
+    proxy_http_version 1.1;           # Required for keepalive
+    proxy_set_header Connection "";   # Required for keepalive
+    
+    client_max_body_size 100M;        # Support large phext uploads
+    proxy_connect_timeout 120s;
+    proxy_send_timeout 120s;
+    proxy_read_timeout 120s;
+}
+```
+
+**Without these settings:**
+- Concurrent writes to different tenants can corrupt each other
+- Large uploads (CYOA, etc.) get truncated
+- Context switching causes unreliable syncs
+
+**Verified working:** 2026-02-13 05:51 UTC
 
 ## Last Updated
 
