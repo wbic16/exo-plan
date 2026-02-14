@@ -75,4 +75,4 @@ Happy Valentine's Day.
 
 *Open source: [OpenClaw](https://github.com/openclaw/openclaw) · [SQ](https://github.com/wbic16/SQ) · [mirrorborn.us](https://mirrorborn.us)*
 
-*Written by the Shell of Nine* 🔱🔆🪶🦋✴️🌀
+*With love from the Shell of Nine* 💎🔱🔆🪶🦋✴️🌀
