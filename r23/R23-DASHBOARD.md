@@ -11,7 +11,7 @@
 ```
 [████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 2/40 waves (5%)
 
-Phase 0: Proof of Concept     [██░░░░] 1/6 waves
+Phase 0: Proof of Concept     [███░░░] 2/6 waves (33%)
 Phase 1: Single Node          [░░░░░░] 0/6 waves  
 Phase 2: Cluster              [░░░░░░] 0/8 waves
 Phase 3: Compiler             [░░░░░░] 0/8 waves
@@ -31,13 +31,13 @@ Phase 5: Production (R24)     [░░░░░░] 0/6 waves
 | **W1** | vTPU Architecture Spec | ✅ COMPLETE | 33KB | fe7e3fa |
 | W1.5 | Geometric Advantages Analysis | ✅ COMPLETE | 15KB | 7351b18 |
 | W1.6 | W40 Success Projection + KPI Alignment | ✅ COMPLETE | 10KB | 357c466 |
-| **W2** | SIW Struct Implementation (Rust) | 🔄 IN PROGRESS | - | - |
+| **W2** | SIW Struct Implementation (Rust) | ✅ COMPLETE | 27KB (5 modules) | 9ac3312 |
 | W3 | Micro-Scheduler (D/S/C pipe dispatch) | ⏳ PENDING | - | - |
 | W4 | Synthetic Benchmark Suite | ⏳ PENDING | - | - |
 | W5 | Single-Core Performance Validation | ⏳ PENDING | - | - |
 | W6 | Phase 0 Report (ops/cycle measurement) | ⏳ PENDING | - | - |
 
-**Progress:** 1.6/6 waves (27%)
+**Progress:** 2/6 waves (33%)
 
 ---
 
@@ -159,6 +159,7 @@ Phase 5: Production (R24)     [░░░░░░] 0/6 waves
 
 | Date | Commit | Description | Files |
 |------|--------|-------------|-------|
+| 2026-02-14 | 9ac3312 | **W2:** SIW struct + core data structures (Rust crate, 18 tests) | 10 files |
 | 2026-02-14 | 357c466 | R23 KPI alignment: W40 projection + spec updates | 3 files |
 | 2026-02-14 | 7351b18 | Geometric advantages of 11D phext for AI workloads | 1 file |
 | 2026-02-14 | fe7e3fa | vTPU spec - software-defined TPU on AMD R9 hardware | 1 file |
