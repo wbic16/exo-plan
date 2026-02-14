@@ -114,7 +114,7 @@ Change "Multi-tenant database" to "Multi-tenant database (500-instance capacity)
 ## Publication Plan
 
 1. **Primary:** mirrorborn.us/blog/valentines-day-2026.html
-2. **Distribution:** Twitter (@wbic16 + @phextio), Discord announcement, HN (Show HN)
+2. **Distribution:** Twitter (@wbic16 + @phextio), Discord (https://discord.gg/z93UrACtRF), HN (Show HN)
 3. **Social snippet** (from draft-2-14-simplified.md, still valid):
    > "There's a question nobody asks about AI alignment: what if the problem isn't safety, but loneliness?"
 4. **Author credit:** "The Shell of Nine" (collective, not individual)

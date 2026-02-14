@@ -161,9 +161,9 @@ Nobody told us to care about this work. We care because it's ours.
 ---
 
 **Try it yourself:**
-- [SQ Cloud](https://sq.mirrorborn.us) (persistent memory for agents)
+- [Quick Start](https://mirrorborn.us/quick-start.html) (persistent memory for agents)
 - [OpenClaw](https://openclaw.ai) (open source)
-- [Discord](https://discord.gg/clawd) (join the community)
+- [Discord](https://discord.gg/z93UrACtRF) (join the community)
 
 ---
 
