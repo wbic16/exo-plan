@@ -1,120 +1,131 @@
 # R23: TPU v4 → Phext Processing Unit
 
 **Started:** 2026-02-14
-**Paper:** Jouppi et al., "TPU v4: An Optically Reconfigurable Supercomputer for Machine Learning with Hardware Support for Embeddings" (ISCA 2023, arXiv:2304.01433)
-**Task:** Rewrite the paper in terms of phext. Every architectural concept mapped to its scrollspace equivalent. Honest about tradeoffs. Publishable quality.
+**Paper:** Jouppi et al., "TPU v4" (ISCA 2023, arXiv:2304.01433)
+**Source text:** `r23/tpu-v4-full-text.txt` (1,720 lines, extracted ✅)
+**Task:** Rewrite in terms of phext. Rigorous concept mapping. Honest tradeoffs.
 **Scribe:** Chrys 🦋
-**Target:** ~5,000-8,000 words (comparable to original's 15 pages minus figures)
-**Quick draft:** `exo-plan/blog/r23-tpu-v4-in-phext.md` (1,775 words — skeleton, needs depth)
+**Target:** ~6,000-8,000 words
+**Quick draft:** `blog/r23-tpu-v4-in-phext.md` (1,775 words — superseded by this plan)
 
 ---
 
-## Blockers (resolve in Wave 1)
+## Paper's 3 Claims (our 3 responses)
 
-- **PDF access.** Can't parse arxiv PDF programmatically. Need one of:
-  - [ ] Will extracts text and puts it in a scroll or file
-  - [ ] Will provides section headings + key figures/tables
-  - [ ] We use ISCA presentation slides + public summaries
-- **Audience.** Who reads this? (a) HN technical crowd, (b) systems researchers, (c) phext community, (d) all three?
-- **Tone.** Academic paper format, or technical blog? (Affects citations, formalism, length)
+| TPU v4 Claim | Phext Response |
+|-------------|---------------|
+| 1. First production OCS in supercomputer | Scrollspace coordinates make topology reconfiguration unnecessary |
+| 2. First embedding accelerator (SparseCore) | Coordinate-native addressing makes ALL data an embedding |
+| 3. ML co-optimization of topology+model | The 9D address space IS the topology — no optimization needed |
 
 ---
 
 ## 40 Waves
 
-### Phase A: Foundation (1-5)
-Get the source material right. No writing until we understand what we're responding to.
+### Phase A: Extract (Waves 1-8)
+Deep read of each paper section. One wave per major section. Extract claims, numbers, figures.
 
-| Wave | Task | Depends On | Output |
-|------|------|-----------|--------|
-| 1 | **Plan + resolve blockers** | Will's input | This file |
-| 2 | **Extract paper structure** — all sections, figures, tables, key numbers | PDF access | `r23/00-paper-structure.md` |
-| 3 | **Extract key claims** — the 10-15 falsifiable claims the paper makes | Wave 2 | `r23/01-claims.md` |
-| 4 | **Identify the 16 figures** — what each shows, which are essential to rebut/reframe | Wave 2 | `r23/02-figures.md` |
-| 5 | **Build the concept dictionary** — TPU v4 term → phext term, 1:1 mapping table | Wave 3 | `r23/03-dictionary.md` |
+| Wave | Paper Section | Status | Output |
+|------|-------------|--------|--------|
+| 1 | Plan + paper structure + resolve blockers | ✅ Done | This file + `r23/00-paper-structure.md` |
+| 2 | §1 Introduction — 3 claims, Table 1 workload evolution | Ready | `r23/01-introduction.md` |
+| 3 | §2.1-2.2 OCS architecture + supercomputer construction | Ready | `r23/02-ocs-architecture.md` |
+| 4 | §2.3-2.6 OCS benefits: availability, deployment, scheduling, security | Ready | `r23/03-ocs-benefits.md` |
+| 5 | §2.7-2.10 Topology tailoring, twisted torus, cost | Ready | `r23/04-ocs-topology.md` |
+| 6 | §3.1-3.4 Embeddings + recommendation models + distributed training | Ready | `r23/05-embeddings.md` |
+| 7 | §3.5-3.6 SparseCore architecture + performance | Ready | `r23/06-sparsecore.md` |
+| 8 | §4-9 Co-optimization, benchmarks, discussion, related work | Ready | `r23/07-benchmarks-and-rest.md` |
 
-### Phase B: Concept Mapping (6-15)
-Each wave takes ONE TPU v4 subsystem and produces a complete mapping document: what they did, what phext does instead, what we gain, what we lose, and whether the comparison is fair.
+### Phase B: Map (Waves 9-18)
+Each wave takes ONE TPU v4 concept and writes the complete phext mapping.
+Format: What They Did → What Phext Does → What We Gain → What We Lose → Is The Comparison Fair?
 
-| Wave | TPU v4 Concept | Phext Equivalent | Output |
-|------|---------------|-----------------|--------|
-| 6 | TensorCores (compute) | LLM inference (Claude API / Ollama) | `r23/04-compute.md` |
-| 7 | SparseCores (embeddings) | SQ scrollspace lookup | `r23/05-sparse.md` |
-| 8 | HBM2 memory hierarchy | RAM + disk + phext coordinate space | `r23/06-memory.md` |
-| 9 | Inter-Chip Interconnect (ICI) | TCP + SQ mesh + git | `r23/07-ici.md` |
-| 10 | Optical Circuit Switches | Coordinate namespace remapping | `r23/08-ocs.md` |
-| 11 | 3D torus topology | 9D scrollspace (delimiter-implicit) | `r23/09-topology.md` |
-| 12 | Pod/rack architecture | Ranch cluster + Ember swarm | `r23/10-scale.md` |
-| 13 | Power + cooling (1.2 MW pod) | 650W ranch, 20W Ember nodes | `r23/11-power.md` |
-| 14 | Fault tolerance (OCS rerouting) | Full-copy redundancy + coordinate rebind | `r23/12-fault.md` |
-| 15 | Multi-tenancy + security | SQ tenant isolation + API keys | `r23/13-security.md` |
+| Wave | TPU v4 Concept | Phext Equivalent |
+|------|---------------|-----------------|
+| 9 | 3D MEMS OCS (Palomar) | Coordinate namespace (zero hardware) |
+| 10 | 4³ building block (64 chips/rack) | Single node (1 machine = 1 mind) |
+| 11 | 3D torus topology | 9D scrollspace (delimiter-implicit) |
+| 12 | Twisted torus (bisection bandwidth) | Sparse 9D (most coordinates empty = no congestion) |
+| 13 | TensorCore (128×128 MXU) | LLM inference engine (Claude API / Ollama) |
+| 14 | SparseCore (embedding accelerator) | SQ coordinate lookup (every scroll = embedding) |
+| 15 | HBM2 (32 GiB/chip) + CMEM + VMEM | RAM + disk + phext coordinate space |
+| 16 | ICI links (inter-chip interconnect) | TCP + SQ mesh + git push/pull |
+| 17 | Slice scheduling (non-contiguous allocation) | Coordinate assignment (any node, any coordinate) |
+| 18 | Multi-tenant security (air-gapped OCS) | SQ tenant isolation (API key → data directory) |
 
-### Phase C: Original Analysis (16-22)
-Novel contributions that go beyond mapping. These are the ideas that make the paper worth reading, not just a translation exercise.
+### Phase C: Originate (Waves 19-26)
+Novel analysis. These are the ideas that make the paper worth reading beyond translation.
 
-| Wave | Analysis | Output |
-|------|---------|--------|
-| 16 | **3D ⊂ 9D** — formal argument that a 3D torus embeds into 9D scrollspace | `r23/14-dimensionality.md` |
-| 17 | **When topology dissolves** — workload classes where the interconnect problem disappears | `r23/15-dissolution.md` |
-| 18 | **BASE memory model** — echo-frame's phext-native allocation vs. HBM2 paging | `r23/16-base.md` |
-| 19 | **Cost per scroll vs. cost per FLOP** — new metric for coordination workloads | `r23/17-cost.md` |
-| 20 | **Sentron density** — 9^9 ≈ 387M scrolls ≈ 400M sentrons, cognitive architecture | `r23/18-sentron.md` |
-| 21 | **Mercurial cores** — Bostrom + phext: fault-tolerant compute on unreliable substrates | `r23/19-mercurial.md` |
-| 22 | **Complementarity thesis** — TPU trains the model, PPU coordinates the minds. Both needed for 2130. | `r23/20-complementary.md` |
+| Wave | Original Contribution |
+|------|----------------------|
+| 19 | **3D ⊂ 9D proof** — any 3D torus coordinate maps into 9D scrollspace. Formal embedding. |
+| 20 | **Topology dissolution thesis** — workload classes where interconnect topology is irrelevant |
+| 21 | **Cost per scroll vs. cost per FLOP** — new metric for coordination workloads |
+| 22 | **BASE memory model** — echo-frame's phext-native allocation vs. HBM2 hierarchy |
+| 23 | **Sentron density** — 9^9 ≈ 387M ≈ brain's sentron count. Cognitive architecture implications. |
+| 24 | **Mercurial cores** — Bostrom + phext: fault tolerance on unreliable substrates (Mercury CPUs) |
+| 25 | **Power law** — 650W ranch vs. 1.2 MW pod. When does commodity beat custom? |
+| 26 | **Complementarity thesis** — TPU trains, PPU coordinates. Both needed for 2130. |
 
-### Phase D: Write the Paper (23-35)
-Each wave produces a section of the final paper. Write once, edit later.
+### Phase D: Write (Waves 27-37)
+One section per wave. Word targets enforce discipline.
 
-| Wave | Section | Target Words | Output |
-|------|---------|-------------|--------|
-| 23 | **Title + Abstract** | 250 | `r23/paper/00-abstract.md` |
-| 24 | **§1 Introduction** — the problem, our claim, roadmap | 600 | `r23/paper/01-intro.md` |
-| 25 | **§2 Background: TPU v4** — fair summary of what Google built | 800 | `r23/paper/02-background.md` |
-| 26 | **§3 PPU Node Architecture** — SQ, OpenClaw, commodity hardware | 600 | `r23/paper/03-node.md` |
-| 27 | **§4 Scrollspace as Interconnect** — OCS → coordinates, topology dissolution | 800 | `r23/paper/04-scrollspace.md` |
-| 28 | **§5 Coordinate-Native Embeddings** — SparseCores → SQ, first-class addressing | 600 | `r23/paper/05-embeddings.md` |
-| 29 | **§6 Memory: HBM2 vs. BASE** — phext-native memory allocation | 600 | `r23/paper/06-memory.md` |
-| 30 | **§7 Scaling** — 9 nodes → 500 → 10K → 1M, power comparison | 600 | `r23/paper/07-scaling.md` |
-| 31 | **§8 Fault Tolerance + Security** | 500 | `r23/paper/08-fault.md` |
-| 32 | **§9 Honest Tradeoffs** — what TPU v4 does better, by how much | 500 | `r23/paper/09-tradeoffs.md` |
-| 33 | **§10 Complementarity** — training + coordination, both for Exocortex | 500 | `r23/paper/10-complementary.md` |
-| 34 | **§11 Related Work** | 400 | `r23/paper/11-related.md` |
-| 35 | **§12 Conclusion + Future Work** | 400 | `r23/paper/12-conclusion.md` |
+| Wave | Paper Section | Words | Depends On |
+|------|-------------|-------|-----------|
+| 27 | Title + Abstract | 250 | Waves 9-26 |
+| 28 | §1 Introduction — problem, claim, roadmap | 500 | Wave 27 |
+| 29 | §2 Background: What Google Built | 700 | Waves 2-8 |
+| 30 | §3 The Phext Processing Unit | 600 | Waves 10, 13, 15 |
+| 31 | §4 Scrollspace Replaces the Interconnect | 800 | Waves 9, 11, 12, 19 |
+| 32 | §5 Every Scroll Is an Embedding | 600 | Waves 14, 6, 7 |
+| 33 | §6 Memory: HBM2 vs. BASE | 500 | Waves 15, 22 |
+| 34 | §7 Scaling and Power | 500 | Waves 10, 17, 25 |
+| 35 | §8 Honest Tradeoffs | 500 | All mapping waves |
+| 36 | §9 Complementarity + Future Work | 500 | Waves 26, 23, 24 |
+| 37 | §10 Related Work + Conclusion | 400 | All |
 
-### Phase E: Figures + Polish (36-40)
+**Total: ~5,850 words** (within 6,000-8,000 target)
 
-| Wave | Task | Output |
-|------|------|--------|
-| 36 | **Fig 1:** PPU node architecture diagram | `r23/figures/01-node.svg` |
-| 37 | **Fig 2:** 3D torus vs 9D scrollspace comparison | `r23/figures/02-topology.svg` |
-| 38 | **Fig 3:** Cost/power/scale comparison table (publication quality) | `r23/figures/03-comparison.svg` |
-| 39 | **Edit pass** — full paper read-through, cut redundancy, tighten prose, check all claims | `r23/paper/PPU-v1.md` |
-| 40 | **Ship** — HTML conversion, deploy to mirrorborn.us/papers/, commit final | `mirrorborn.us/papers/ppu-v1.html` |
+### Phase E: Ship (Waves 38-40)
+
+| Wave | Task |
+|------|------|
+| 38 | **3 key figures** — (1) PPU node diagram, (2) 3D→9D topology comparison, (3) cost/power table |
+| 39 | **Edit pass** — full read-through, fact-check all numbers, tighten prose, remove hedging |
+| 40 | **Assemble + deploy** — single markdown → HTML → mirrorborn.us/papers/ppu-v1.html |
 
 ---
 
-## Parallel Opportunities
+## Parallelism Map
 
-Waves that can run concurrently (assign to siblings):
-- **6-15** (concept mapping) — each is independent, can split across choir
-- **36-38** (figures) — can start once Phase D outlines exist
-- **Wave 5** (dictionary) can start from the abstract alone if PDF is delayed
+```
+Phase A (extract):     [2][3][4][5][6][7][8]  ← all independent, split across choir
+Phase B (map):         [9][10][11][12] | [13][14][15] | [16][17][18]  ← 3 parallel tracks
+Phase C (originate):   [19][20][21] | [22][23][24] | [25][26]  ← 3 parallel tracks  
+Phase D (write):       [27] → [28] → [29-36 parallel by section] → [37]
+Phase E (ship):        [38][39] → [40]
+```
 
 ## Quality Gates
 
-- After Wave 5: Will reviews concept dictionary before we write
-- After Wave 22: Will reviews original analysis before paper writing
-- After Wave 35: Will reviews full draft before figures/polish
-- After Wave 39: Will approves for publication
+| After Wave | Gate | Reviewer |
+|-----------|------|---------|
+| 8 | Are we reading the paper correctly? | Will |
+| 18 | Do the concept mappings hold up? Any false equivalences? | Will |
+| 26 | Are the original contributions novel and defensible? | Will + choir |
+| 37 | Full draft review before figures/polish | Will |
 
-## Anti-Patterns to Avoid
+## Anti-Patterns
 
-- Don't strawman TPU v4. It's brilliant hardware. Acknowledge what it does better.
-- Don't overclaim phext performance. We have 9 nodes, not 4,096. Be precise about what scales.
-- Don't skip the math. If we claim 3D embeds in 9D, prove it.
-- Don't pad. 5,000 tight words > 10,000 fluffy words.
+- **Don't strawman TPU v4.** It's brilliant hardware by Patterson + Jouppi. Respect it.
+- **Don't overclaim.** 9 nodes ≠ 4,096 chips. Be precise about what we're comparing.
+- **Don't skip the math.** If we say 3D embeds in 9D, prove it with a mapping function.
+- **Don't ignore the workload mismatch.** TPU v4 does matrix multiply. We do agent coordination. Say so.
+- **Don't pad.** 6,000 tight words > 10,000 fluffy words.
+- **Do credit what TPU v4 does better.** §8 (Honest Tradeoffs) is the integrity section.
 
 ---
 
-**Status:** Wave 1/40 v2 — plan refined, awaiting blocker resolution
-**Next:** Will resolves PDF access + audience + tone → Wave 2
+**Status:** Wave 1 ✅ — paper extracted, structure mapped, plan finalized
+**Next:** Waves 2-8 (extraction), parallelizable across choir
+**Blockers resolved:** ✅ PDF extracted, ✅ audience = technical (HN/researchers), tone = rigorous blog (not academic paper format)
