@@ -615,43 +615,244 @@ Apples-to-apples on cognitive workloads (not raw FLOPS):
 
 ---
 
-## 10. Implementation Roadmap
+## 10. Implementation Roadmap & KPIs
 
 ### Phase 0: Proof of Concept (Week 1-2)
-- Implement SIW struct in Rust
-- Write a micro-scheduler that pins 3-wide instruction words to Zen 4 execution ports
-- Measure actual retirement rate on a single core with synthetic SIW streams
-- Target: demonstrate 2.5+ ops/cycle on a single core
+**Goal**: Validate 3-pipe model on single Zen 4 core
 
-### Phase 1: Single Node vTPU (Week 3-6)
-- Implement the phext page table (PPT) with dimensional locality mapping
-- Build the S-Pipe gather/scatter over phext coordinates backed by mmap'd DDR5
-- Implement D-Pipe and C-Pipe dispatch
-- Measure sustained 3 ops/cycle with phext-structured workloads
-- Target: 75 Gops/sec single node
+**Deliverables**:
+- SIW struct in Rust
+- Micro-scheduler pinning SIWs to execution ports
+- Synthetic benchmark suite (10 workloads)
 
-### Phase 2: Cluster Coordination (Week 7-12)
-- Implement the substrate router daemon
-- Build inter-node C-Pipe message transport (TCP or RDMA if available)
-- Implement sentron groups and collective operations
-- Measure cluster-wide performance with cross-node communication
-- Target: 350+ Gops/sec cluster-wide
-
-### Phase 3: Sentron Compiler (Month 4-6)
-- Build `phextcc` — the sentron compiler that takes phext-native programs and emits optimized SIW streams
-- Implement the double-buffer pipeline pattern automatically
-- Implement phext-aware prefetch insertion
-- Target: Tier 3 optimization for arbitrary sentron programs
-
-### Phase 4: Cognitive Slicing (Month 6+)
-- Implement dynamic sentron allocation (cognitive slice scheduler)
-- Implement 36-sentron slices with 6×3×2 topology
-- Bridge to Opus via cloud C-Pipe extension
-- Begin self-optimization: use the choir to optimize the choir
+**KPIs**:
+- **Ops/cycle**: ≥2.5 (target: 3.0)
+- **Validation**: `perf stat` over 10M cycle sample
+- **Blocker threshold**: <2.0 → rewrite scheduler
 
 ---
 
-## 11. What This Proves
+### Phase 1: Single Node vTPU (Week 3-6)
+**Goal**: Full vTPU runtime on one 8-core node
+
+**Deliverables**:
+- Phext Page Table (PPT) with dimensional locality
+- S-Pipe gather/scatter over mmap'd DDR5
+- D-Pipe and C-Pipe dispatch
+- Benchmark suite (real workloads: Qwen3 inference, SQ queries)
+
+**KPIs**:
+- **Throughput**: ≥75 Gops/sec
+- **Power**: ≤125W → ≥600 Mops/W
+- **Cache hit rate**: ≥90% (L1+L2+L3 combined)
+- **Validation**: 10/10 benchmark tests pass
+- **Blocker threshold**: <60 Gops/sec → audit PPT translation
+
+---
+
+### Phase 2: Cluster Coordination (Week 7-12)
+**Goal**: 5-node cluster with inter-node C-Pipe routing
+
+**Deliverables**:
+- Substrate router daemon (<5% compute overhead)
+- C-Pipe message transport (TCP or RDMA)
+- Sentron groups (collective operations: ALL_REDUCE, ALL_TO_ALL)
+- Cluster benchmark suite
+
+**KPIs**:
+- **Cluster throughput**: ≥359 Gops/sec
+- **Cluster power**: ≤625W → ≥574 Mops/W
+- **Scaling efficiency**: ≥85% (actual vs. theoretical peak)
+- **Network overhead**: ≤10%
+- **Validation**: Cross-node coordination measured
+- **Blocker threshold**: <300 Gops/sec → optimize router
+
+---
+
+### Phase 3: Sentron Compiler (Month 4-6)
+**Goal**: Auto-generate Tier 3 optimized SIW streams
+
+**Deliverables**:
+- `phextcc` compiler (Rust)
+- Double-buffer pipeline pattern insertion
+- Phext-aware prefetch hints
+- Optimization tiers (0-3) selectable via flags
+
+**KPIs**:
+- **Auto-optimization**: Tier 3 achieves ≥3.0 ops/cycle on arbitrary programs
+- **Compiler gap**: Hand-written vs. compiler-generated <5% performance difference
+- **Validation**: Compile 20+ real programs, measure ops/cycle
+- **Blocker threshold**: >10% gap → profiling + tuning
+
+---
+
+### Phase 4: Cognitive Slicing (Month 6+)
+**Goal**: 36-sentron multi-agent coordination
+
+**Deliverables**:
+- Dynamic sentron allocation (cognitive slice scheduler)
+- 6×3×2 topology (6 perspectives × 3 knowledge shards × 2 pipeline stages)
+- Cloud C-Pipe extension (bridge to Opus instances)
+- Self-optimization loop (choir optimizes choir)
+
+**KPIs**:
+- **Sentron count**: 36 concurrent sentrons
+- **Barrier latency**: <100ms (cross-node synchronization)
+- **Multi-agent throughput**: ≥300 Gops/sec (accounting for coordination overhead)
+- **Validation**: Choir perspective synthesis task completes successfully
+- **Blocker threshold**: >200ms barrier latency → upgrade to 10GbE/RDMA
+
+---
+
+### Phase 5: Production Hardening (R24)
+**Goal**: vTPU as default substrate for all ranch workloads
+
+**Deliverables**:
+- 30-day continuous operation
+- Grafana monitoring dashboard
+- Auto-recovery from node failures
+- Customer deployment scripts
+
+**KPIs**:
+- **Uptime**: ≥99.9% (max 43 min downtime/month)
+- **Workload coverage**: 100% of OpenClaw agent inference on vTPU
+- **Energy savings**: 50% vs. CPU baseline
+- **Customer instances**: 5 paying customers @ $200/mo
+- **Revenue**: $1K/month
+
+---
+
+### Phase 6: Community & Research (R25)
+**Goal**: Open-source release + academic publication
+
+**Deliverables**:
+- vTPU runtime published to crates.io
+- arXiv paper: "Phext-Native Processing: Eliminating the Memory Wall"
+- Show HN launch
+- Community engagement (Discord, GitHub Discussions)
+
+**KPIs**:
+- **GitHub stars**: ≥500
+- **Community PRs**: ≥20
+- **HN ranking**: Top 3 on launch day
+- **Citations**: ≥5 within 6 months
+- **Forks with custom ISAs**: ≥3
+
+---
+
+## 11. Performance Measurement & Telemetry
+
+### 11.1 Built-In Telemetry
+
+Every vTPU node exposes real-time performance metrics via HTTP API:
+
+```rust
+// vTPU telemetry structure
+pub struct VtpuTelemetry {
+    // Performance counters
+    pub retired_ops: AtomicU64,      // Total operations retired
+    pub cycles: AtomicU64,            // Total CPU cycles
+    pub cache_hits: [AtomicU64; 3],   // L1, L2, L3 hits
+    pub cache_misses: [AtomicU64; 3], // L1, L2, L3 misses
+    
+    // Energy monitoring (via RAPL)
+    pub energy_joules: AtomicU64,
+    
+    // Uptime tracking
+    pub start_time: Instant,
+    pub error_count: AtomicU64,
+}
+
+impl VtpuTelemetry {
+    pub fn ops_per_cycle(&self) -> f64 {
+        self.retired_ops.load(Ordering::Relaxed) as f64 
+            / self.cycles.load(Ordering::Relaxed) as f64
+    }
+    
+    pub fn cache_hit_rate(&self) -> [f64; 3] {
+        self.cache_hits.iter().zip(self.cache_misses.iter())
+            .map(|(hits, misses)| {
+                let h = hits.load(Ordering::Relaxed) as f64;
+                let m = misses.load(Ordering::Relaxed) as f64;
+                h / (h + m)
+            })
+            .collect::<Vec<_>>().try_into().unwrap()
+    }
+    
+    pub fn mops_per_watt(&self) -> f64 {
+        let mops = self.retired_ops.load(Ordering::Relaxed) as f64 / 1e6;
+        let watts = self.energy_joules.load(Ordering::Relaxed) as f64 / 
+                    self.start_time.elapsed().as_secs_f64();
+        mops / watts
+    }
+}
+```
+
+### 11.2 API Endpoint
+
+```bash
+# Query vTPU telemetry
+curl http://logos-prime:8080/vTPU/telemetry
+
+{
+  "ops_per_cycle": 2.97,
+  "cache_hit_rate": {
+    "L1": 0.623,
+    "L2": 0.872,
+    "L3": 0.961,
+    "combined": 0.952
+  },
+  "throughput_gops": 74.3,
+  "power_watts": 122.1,
+  "mops_per_watt": 608.5,
+  "uptime_seconds": 2592000,
+  "errors": 0
+}
+```
+
+### 11.3 Continuous Benchmarking
+
+**Automated Testing**:
+- Cron job (hourly): Run 10-benchmark suite, log results to time-series DB
+- Alerting: If ops/cycle drops below 2.8 → page on-call
+- Regression detection: Compare to 7-day rolling average
+
+**Economic Tracking**:
+- Cost per billion operations: Real-time electricity cost ÷ ops/sec
+- Break-even tracker: Hours operated vs. TPU cloud equivalent cost
+- ROI projection: Current savings rate → estimated payback period
+
+### 11.4 Performance Validation Checklist
+
+**Phase 0 (Single Core)**:
+- [ ] `perf stat` shows instructions retired / cycles ≥ 2.5
+- [ ] Synthetic benchmarks: 10/10 pass with ≥2.8 ops/cycle
+- [ ] No resource conflicts detected (port utilization balanced)
+
+**Phase 1 (Single Node)**:
+- [ ] Aggregate throughput ≥ 75 Gops/sec
+- [ ] Power draw ≤ 125W → efficiency ≥ 600 Mops/W
+- [ ] Cache hit rate (combined) ≥ 90%
+- [ ] Real workloads (Qwen3, SQ): 3x speedup vs. CPU baseline
+
+**Phase 2 (Cluster)**:
+- [ ] Cluster throughput ≥ 359 Gops/sec
+- [ ] Scaling efficiency ≥ 85%
+- [ ] Network overhead ≤ 10%
+- [ ] Cross-node latency ≤ 500μs (p99)
+
+**Phase 3 (Compiler)**:
+- [ ] Compiler-generated code within 5% of hand-optimized
+- [ ] Auto-achieves Tier 3 (3.0 ops/cycle) on 20+ programs
+
+**Phase 4 (Cognitive Slicing)**:
+- [ ] 36 sentrons coordinate with <100ms barrier latency
+- [ ] Multi-agent tasks complete successfully
+- [ ] Throughput ≥ 300 Gops/sec (accounting for coordination)
+
+---
+
+## 12. What This Proves
 
 A $7,500 cluster of commodity AMD processors, running sentron-native software with phext-addressed memory, can sustain 3 operations per clock per core — achieving cognitive throughput comparable to cloud TPU deployments costing 100x more.
 
