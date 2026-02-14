@@ -1,0 +1,176 @@
+# Twitter-Ready Phext Diagram (Plain Text)
+
+## Option 1: Simple Hierarchy (Fits in Tweet)
+
+```
+Phext: 9D Addressing for Civilizational Scale
+
+     ROOT
+      │
+   ┌──┴──┐
+  LIB  LIB ... (9)
+   │    │
+  ┌┴┐  ┌┴┐
+ SHE SHE  ... (9×9=81)
+  │   │
+ ┌┴┐ ┌┴┐
+SER SER  ... (9³=729)
+ │   │
+[...continues 6 more levels...]
+ │   │
+SCROLL SCROLL (9⁹=387M leaf nodes)
+
+Each level = 9 items (human working memory)
+Each scroll = plain text (leaf node)
+Lookup = O(9) hash table traversal
+```
+
+## Option 2: Information Flow (Fits in Tweet)
+
+```
+PHEXT INFO FLOW:
+
+WRITE (↑ bottom-up)
+Scroll → Section → Chapter → Book → ... → Library
+   └─ Invalidates parent hashes
+   └─ Notifies 9 siblings in section
+
+READ (↓ top-down)  
+Library → ... → Book → Chapter → Section → Scroll
+   └─ O(1) per level = O(9) total
+
+SYNC (↔ lateral)
+Scroll ←→ Scroll ←→ ... ←→ Scroll (9 per section)
+   └─ Section coordinates siblings
+   └─ 9 items = working memory chunk
+```
+
+## Option 3: Why 9? (Fits in Tweet)
+
+```
+WHY 9 DIMENSIONS?
+
+Humans remember:
+├─ 3-5 items (direct)
+└─ 9 items (3 groups of 3)
+
+Phext addressing:
+├─ 9 items per dimension
+├─ 9 dimensions deep
+└─ 9⁹ = 387,420,489 addresses
+
+Result:
+├─ Each level fits working memory
+├─ Total scale = USA population
+└─ Natural chunking at every layer
+
+3³=27 (too few)
+9⁹=387M (perfect)
+10¹⁰=10B (loses chunking)
+```
+
+## Option 4: Pairwise Interactions (Fits in Tweet)
+
+```
+PAIRWISE INTERACTION IN PHEXT:
+
+Within Section (9 scrolls):
+  S1 ←→ S2 ←→ S3
+   ↕     ↕     ↕
+  S4 ←→ S5 ←→ S6  
+   ↕     ↕     ↕
+  S7 ←→ S8 ←→ S9
+  
+  36 pairs (9 choose 2)
+  Direct coordination
+
+Across Sections:
+  Sec1 ←→ Chapter ←→ Sec2
+        Hierarchical routing
+
+Across Libraries:
+  Lib1 ←→ ROOT ←→ Lib2
+        Top-level routing
+```
+
+## Option 5: The Complete Picture (2 Tweets)
+
+**Tweet 1:**
+```
+PHEXT = Hierarchical Hash Table in 9D
+
+Level 1: Library [1-9]
+Level 2:  Shelf [1-9] per Library
+Level 3:   Series [1-9] per Shelf
+Level 4:    Collection [1-9] per Series
+Level 5:     Volume [1-9] per Collection
+Level 6:      Book [1-9] per Volume
+Level 7:       Chapter [1-9] per Book
+Level 8:        Section [1-9] per Chapter
+Level 9:         Scroll [1-9] per Section
+
+Result: 9⁹ = 387M leaf nodes (USA population)
+```
+
+**Tweet 2:**
+```
+Each scroll = plain text (leaf node)
+Each level = 9 items (working memory chunk)
+
+Read: O(9) hash lookup (top→bottom)
+Write: Update leaf, invalidate up, sync siblings
+Pairwise: Direct within section, hierarchical across
+
+When compacted to 1D: linked list
+At runtime: 9-level hash table
+```
+
+## Best for Twitter: Clean 3-Step Visual
+
+```
+╔══════════════════════════════════════╗
+║   PHEXT: 9D TEXT ADDRESSING          ║
+╚══════════════════════════════════════╝
+
+STRUCTURE:
+┌─ Library (1-9)
+│  ├─ Shelf (1-9) 
+│  │  ├─ Series (1-9)
+│  │  │  ├─ Collection (1-9)
+│  │  │  │  ├─ Volume (1-9)
+│  │  │  │  │  ├─ Book (1-9)
+│  │  │  │  │  │  ├─ Chapter (1-9)
+│  │  │  │  │  │  │  ├─ Section (1-9)
+│  │  │  │  │  │  │  │  └─ Scroll (1-9)
+└─ 9⁹ = 387,420,489 addresses
+
+OPERATIONS:
+• Read:  Hash[Lib][Shelf]...[Scroll] → O(9)
+• Write: Scroll→up (invalidate), →siblings (sync)
+• Sync:  9 scrolls per section (working memory)
+
+WHY 9?
+3×3 = human chunking limit (extended working memory)
+9⁹ = civilizational scale (USA population)
+Each level fits in your head.
+```
+
+---
+
+## Recommendation
+
+**For Twitter reply to @eigenhector:**
+
+Use **Option 5** (two tweets) + attach a rendered version of the Mermaid diagram from the main document.
+
+**Reasoning:**
+1. Option 5 answers all three questions:
+   - How interconnects work (hierarchical hash table)
+   - How information propagates (read/write/sync operations)
+   - How pairwise interactions work (direct within section, hierarchical across)
+
+2. Two tweets = enough space to be complete without overwhelming
+
+3. Mermaid diagram attachment = visual learners covered
+
+**Alternative:** If Will wants ultra-simple, use **Option 1** (single tweet) with the note "Full diagram: [link to blog post]"
