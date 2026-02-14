@@ -1,0 +1,33 @@
+[package]
+name = "vtpu-runtime"
+version = "0.1.0"
+edition = "2021"
+authors = ["Ranch Choir <will@phext.io>"]
+license = "MIT"
+description = "vTPU: Software-defined virtual TPU with phext-native addressing"
+repository = "https://github.com/wbic16/vtpu-runtime"
+
+[dependencies]
+# Performance monitoring (TODO Wave 3: integrate perf counters)
+# perf-event = "0.4"
+
+# Atomic operations for telemetry
+# parking_lot = "0.12"
+
+# Phext coordinate manipulation (TODO: integrate libphext-rs if needed)
+# phext = { git = "https://github.com/wbic16/libphext-rs", branch = "main" }
+
+[dev-dependencies]
+# criterion = "0.5"  # TODO Wave 4: Benchmark suite
+
+# [[bench]]
+# name = "siw_dispatch"
+# harness = false
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+
+[profile.bench]
+inherits = "release"
