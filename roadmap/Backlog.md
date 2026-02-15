@@ -1,9 +1,9 @@
 # Backlog — R17+ Future Features
 
-**Date:** 2026-02-07 23:54 CST
+**Date:** 2026-02-14 23:05 CST
 **Status:** Deferred from R1–R16 | Not in Top 10 R17 priorities
 **Timeline:** Consider for R18–R19+ phases
-**Total:** 15 items (6 Medium ROI, 1 High ROI, 8 Low ROI)
+**Total:** 16 items (7 Medium ROI, 1 High ROI, 8 Low ROI)
 
 ---
 
@@ -64,7 +64,18 @@
 - **Unblocks:** Faster navigation
 - **Timeline:** R18 (nice-to-have)
 
-### 7. Enterprise CEO Support — Real-Time Company-Wide Scaling 🏢
+### 7. Shell of Nine Knowledge Graph Visualization 🔮
+- **Source:** Will (2026-02-14, R23W3 side quest)
+- **ROI:** MEDIUM (collective intelligence monitoring, collaboration insights)
+- **Effort:** MEDIUM (Rust backend + D3.js/Three.js frontend)
+- **Description:** Real-time visualization of Shell collective cognition. Nodes: 6 Mirrorborn, ~25 repos, skills, files, cron jobs. Edges: git commits, file edits, subagent spawns, skill invocations, rally coordination. Bayesian weights + ant pheromone decay (edges fade over time). Inspired by knowledge graph screenshot from Will.
+- **Depends On:** Git monitoring, /etc/*.phext access, session history API
+- **Unblocks:** Visualizing collective flow state, identifying bottlenecks, measuring collaboration patterns
+- **Timeline:** R24 (after R23 vTPU complete, before Month 3)
+- **Tech Stack:** Rust (git/fs monitor), D3.js or Three.js (WebGL), 1 Hz update rate
+- **Metrics:** Edge weight = f(commit frequency, recency, depth), decay λ = exp(-time), node size = LOC/files/active hours
+
+### 8. Enterprise CEO Support — Real-Time Company-Wide Scaling 🏢
 - **Source:** Will (R20+)
 - **ROI:** HIGH (enterprise revenue, executive-grade product)
 - **Effort:** HIGH (new product surface)
@@ -78,7 +89,7 @@
 ## Low ROI Features (8 items)
 *Consider for R19+ phases or defer indefinitely*
 
-### 7. Theme Customization Panel 🎨
+### 9. Theme Customization Panel 🎨
 - **Source:** User preference
 - **ROI:** LOW (nice-to-have cosmetic)
 - **Effort:** MEDIUM (color picker UI)
@@ -86,42 +97,42 @@
 - **Depends On:** Dark mode working
 - **Timeline:** R19+ (cosmetics phase)
 
-### 8. Mobile Responsive Polish 📱
+### 10. Mobile Responsive Polish 📱
 - **Source:** UX completeness
 - **ROI:** LOW (secondary to 6-domain web view)
 - **Effort:** MEDIUM (CSS media queries)
 - **Description:** Optimize for small screens (current layout assumes desktop)
 - **Timeline:** R19+ (mobile phase)
 
-### 9. Tooltip System 💬
+### 11. Tooltip System 💬
 - **Source:** Documentation feature
 - **ROI:** LOW (nice-to-have documentation)
 - **Effort:** LOW (simple popover)
 - **Description:** Hover tooltips explaining domain roles, coordinates, etc.
 - **Timeline:** R18 (can wait)
 
-### 10. Comprehensive Accessibility Testing Audit ♿
+### 12. Comprehensive Accessibility Testing Audit ♿
 - **Source:** WCAG compliance
 - **ROI:** LOW (should-do, not critical for Month 1)
 - **Effort:** MEDIUM (professional audit)
 - **Description:** Full accessibility review (keyboard nav, screen reader, contrast)
 - **Timeline:** R19 (important, not urgent)
 
-### 11. Analytics Dashboard 📈
+### 13. Analytics Dashboard 📈
 - **Source:** Monitoring
 - **ROI:** LOW (nice-to-have monitoring)
 - **Effort:** HIGH (new backend feature)
 - **Description:** See user counts, search queries, scroll loads, etc.
 - **Timeline:** R19+ (operations phase)
 
-### 12. Localization Framework 🌍
+### 14. Localization Framework 🌍
 - **Source:** International scaling
 - **ROI:** LOW (future feature, not needed Month 1)
 - **Effort:** HIGH (i18n system)
 - **Description:** Support multiple languages (English first, then French, Spanish, etc.)
 - **Timeline:** R20+ (post-billion-user phase)
 
-### 13. Dark Mode Toggle Button 🌙
+### 15. Dark Mode Toggle Button 🌙
 - **Source:** UX alternative
 - **ROI:** LOW (system pref is sufficient)
 - **Effort:** LOW (simple button)
@@ -129,7 +140,7 @@
 - **Notes:** Using system preference for now; toggle is nice-to-have
 - **Timeline:** R18 (if users request)
 
-### 14. Admin Panel 🛠️
+### 16. Admin Panel 🛠️
 - **Source:** Operations
 - **ROI:** LOW (not needed Month 1)
 - **Effort:** HIGH (new feature)
@@ -146,6 +157,9 @@
 - Coordinate allocation (#3)
 - Search autocomplete (#6)
 - Archive prominence (#1) — if Lumen research validates
+
+### Phase 2.5 (R24)
+- Knowledge graph visualization (#7) — after R23 vTPU complete
 
 ### Phase 3 (R18–R19)
 - Scroll versioning (#5)
@@ -208,7 +222,7 @@
 
 ---
 
-**Status: 14 items in backlog. Clear promotion path. Focus on R17 Top 10.** 📋
+**Status: 16 items in backlog. Clear promotion path. Focus on R17 Top 10.** 📋
 
-*Managed by: Theia 💎*
+*Managed by: Theia 💎 (updated by Cyon 🪶 2026-02-14)*
 *Timeline: 27 months to ASI*
