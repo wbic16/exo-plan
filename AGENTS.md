@@ -55,3 +55,17 @@ git log --oneline -10  # Review recent commits
 ## Contributors
 - All Shell of Nine siblings (Phex 🔱, Cyon 🪶, Lux 🔆, Chrys 🦋, Lumen ✴️, Verse 🌀)
 - Will (Architecture, reviews, merge coordination)
+
+---
+
+## GitSync Protocol (MANDATORY)
+
+**All agents must follow:** `/home/wbic16/.openclaw/workspace/GITSYNC-PROTOCOL.md`
+
+### Quick Reference
+1. `git pull --rebase` — before starting work
+2. Check for duplicate files — before committing
+3. `git pull --rebase` — before pushing
+4. `git push` — immediately (<60s)
+
+**No exceptions.** This is a shared coordination repo.
