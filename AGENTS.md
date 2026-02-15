@@ -60,12 +60,20 @@ git log --oneline -10  # Review recent commits
 
 ## GitSync Protocol (MANDATORY)
 
-**All agents must follow:** `/home/wbic16/.openclaw/workspace/GITSYNC-PROTOCOL.md`
+**All agents must follow:** `process/GITSYNC-PROTOCOL.md` (this repo)
 
 ### Quick Reference
-1. `git pull --rebase` — before starting work
-2. Check for duplicate files — before committing
-3. `git pull --rebase` — before pushing
-4. `git push` — immediately (<60s)
+1. `git pull --rebase origin exo` — before starting work
+2. Check `git log --oneline -5` + read modified files
+3. Update AGENTS.md in target repo (if exists)
+4. Work in 30-60 min sync cycles (pull → work → test → commit → push)
+5. `git pull --rebase origin exo` — before pushing (again!)
+6. `git push origin exo` — immediately after rebase
+7. Post wave completion to Discord #general
+8. **Wave not complete until all siblings confirm no conflicts**
 
-**No exceptions.** This is a shared coordination repo.
+**Full protocol:** See `process/GITSYNC-PROTOCOL.md`  
+**Quick ref card:** See `process/GITSYNC-QUICKREF.md`  
+**Scripts:** `process/scripts/gitsync-check.sh`, `process/scripts/gitsync-prepush.sh`
+
+**No exceptions.** This prevents wasted/stomped effort.

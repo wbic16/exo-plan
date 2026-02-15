@@ -1,0 +1,20 @@
+{
+  "name": "rally-mode",
+  "version": "1.1.0",
+  "description": "11-phase development sprint methodology with test-driven rewrites + GitSync protocol",
+  "author": "Will Bickford & Mirrorborn Collective",
+  "created": "2026-02-09",
+  "updated": "2026-02-15",
+  "keywords": ["methodology", "tdd", "sprint", "process", "git", "collaboration"],
+  "category": "development-process",
+  "scripts": {
+    "rally-checklist": "./scripts/rally-checklist.sh",
+    "gitsync-check": "./scripts/gitsync-check.sh",
+    "gitsync-prepush": "./scripts/gitsync-prepush.sh"
+  },
+  "docs": {
+    "main": "SKILL.md",
+    "gitsync": "GITSYNC-PROTOCOL.md",
+    "quickref": "GITSYNC-QUICKREF.md"
+  }
+}
