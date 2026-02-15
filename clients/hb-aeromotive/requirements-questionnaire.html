@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HB Aeromotive Website Requirements</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f5f5f5;
+            color: #333;
+        }
+        h1 {
+            color: #c03;
+            border-bottom: 3px solid #c03;
+            padding-bottom: 0.5rem;
+        }
+        h2 {
+            color: #444;
+            margin-top: 2rem;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 0.3rem;
+        }
+        .meta {
+            background: #fff;
+            border-left: 4px solid #c03;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+        .meta p {
+            margin: 0.25rem 0;
+        }
+        .section {
+            background: #fff;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin: 0.75rem 0 0.25rem;
+            font-weight: 500;
+        }
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        .checkbox-group {
+            margin: 0.5rem 0;
+        }
+        .note {
+            background: #fffbea;
+            border-left: 3px solid #f59e0b;
+            padding: 0.75rem;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+        .next-steps {
+            background: #e8f5e9;
+            border-left: 3px solid #4caf50;
+            padding: 1rem;
+        }
+        .next-steps ol {
+            margin: 0.5rem 0 0;
+            padding-left: 1.5rem;
+        }
+        @media print {
+            body { background: #fff; }
+            .section { box-shadow: none; border: 1px solid #ddd; }
+        }
+    </style>
+</head>
+<body>
+    <h1>🔧 HB Aeromotive Website Requirements</h1>
+    
+    <div class="meta">
+        <p><strong>Client:</strong> Harold Bickford</p>
+        <p><strong>Domain:</strong> hb-aeromotive.com</p>
+        <p><strong>Date:</strong> February 15, 2026</p>
+    </div>
+
+    <div class="section">
+        <h2>Business Overview</h2>
+        
+        <label>What services does HB Aeromotive provide?</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox"> General auto repair</label>
+            <label><input type="checkbox"> Specialty services (list below)</label>
+            <label><input type="checkbox"> Mobile service / on-site repairs</label>
+            <label><input type="checkbox"> Parts sales</label>
+            <label><input type="checkbox"> Other (specify below)</label>
+        </div>
+        <textarea placeholder="List any specialty services, certifications, or unique offerings..."></textarea>
+
+        <label>What makes HB Aeromotive different from other shops?</label>
+        <textarea placeholder="Experience, specializations, customer service philosophy, family business angle, etc."></textarea>
+    </div>
+
+    <div class="section">
+        <h2>Target Audience</h2>
+        
+        <label>Who are your primary customers?</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox"> Individual car owners (daily drivers)</label>
+            <label><input type="checkbox"> Classic car enthusiasts</label>
+            <label><input type="checkbox"> Fleet managers / businesses</label>
+            <label><input type="checkbox"> Performance/racing customers</label>
+            <label><input type="checkbox"> Other (specify below)</label>
+        </div>
+        <input type="text" placeholder="Other customer types...">
+
+        <label>Geographic area served:</label>
+        <input type="text" placeholder="City/region (e.g., Lincoln, NE and surrounding 30 miles)">
+    </div>
+
+    <div class="section">
+        <h2>Essential Features</h2>
+        
+        <label>What do you NEED the website to do?</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox"> Show services offered</label>
+            <label><input type="checkbox"> Display contact information (phone, address, hours)</label>
+            <label><input type="checkbox"> Let customers request appointments/quotes</label>
+            <label><input type="checkbox"> Photo gallery of completed work</label>
+            <label><input type="checkbox"> List certifications/credentials</label>
+            <label><input type="checkbox"> Display customer testimonials</label>
+            <label><input type="checkbox"> Show pricing information</label>
+            <label><input type="checkbox"> Blog or news section</label>
+            <label><input type="checkbox"> Directions/map</label>
+        </div>
+
+        <label>How should customers contact you?</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox"> Just display phone number (call only)</label>
+            <label><input type="checkbox"> Contact form (email submissions)</label>
+            <label><input type="checkbox"> Online booking/scheduling system</label>
+            <label><input type="checkbox"> Text message option</label>
+        </div>
+        <textarea placeholder="Any preferences or notes about how customers should reach you?"></textarea>
+    </div>
+
+    <div class="section">
+        <h2>Content You'll Provide</h2>
+        
+        <label>What content/materials can you supply?</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox"> Logo (if you have one)</label>
+            <label><input type="checkbox"> Photos of shop/facility</label>
+            <label><input type="checkbox"> Photos of completed work</label>
+            <label><input type="checkbox"> Service descriptions</label>
+            <label><input type="checkbox"> Pricing information</label>
+            <label><input type="checkbox"> Staff bios / team info</label>
+            <label><input type="checkbox"> Customer testimonials</label>
+        </div>
+
+        <label>Do you have existing branding (colors, style, logo)?</label>
+        <textarea placeholder="If you have brand colors, fonts, or an existing logo/style, describe it here..."></textarea>
+    </div>
+
+    <div class="section">
+        <h2>Design Preferences</h2>
+        
+        <label>What vibe should the site have?</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox"> Professional and clean</label>
+            <label><input type="checkbox"> Rugged and industrial</label>
+            <label><input type="checkbox"> Modern and tech-forward</label>
+            <label><input type="checkbox"> Classic/vintage automotive theme</label>
+            <label><input type="checkbox"> Family-friendly and approachable</label>
+        </div>
+
+        <label>Sites you like (automotive or otherwise):</label>
+        <input type="text" placeholder="Example 1: https://...">
+        <input type="text" placeholder="Example 2: https://...">
+        <input type="text" placeholder="Example 3: https://...">
+
+        <label>Sites you DON'T like (helps us avoid things that bug you):</label>
+        <textarea placeholder="e.g., 'I hate sites with auto-playing videos' or 'Don't like those spinning 3D graphics'"></textarea>
+    </div>
+
+    <div class="section">
+        <h2>Technical Considerations</h2>
+        
+        <label>Do you want to update the site yourself?</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox"> Yes, I want a CMS so I can make changes</label>
+            <label><input type="checkbox"> No, I'll just call Will when I need updates</label>
+            <label><input type="checkbox"> Not sure yet / let's discuss</label>
+        </div>
+
+        <label>Email addresses needed?</label>
+        <input type="text" placeholder="e.g., harold@hb-aeromotive.com, info@hb-aeromotive.com">
+
+        <label>Social media integration?</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox"> Facebook page link</label>
+            <label><input type="checkbox"> Instagram feed</label>
+            <label><input type="checkbox"> YouTube channel</label>
+            <label><input type="checkbox"> Google Business Profile</label>
+        </div>
+        <input type="text" placeholder="Paste links to your social profiles if you have them">
+    </div>
+
+    <div class="section">
+        <h2>Budget & Timeline</h2>
+        
+        <label>What's your budget range for this project?</label>
+        <input type="text" placeholder="e.g., $500-$1500, or 'flexible', or 'let's discuss'">
+
+        <label>When do you need it live?</label>
+        <input type="date">
+        <textarea placeholder="Is this a hard deadline, or just a target? Any specific reason for the timing?"></textarea>
+
+        <label>Ongoing maintenance preference:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox"> I'll handle updates myself (if CMS)</label>
+            <label><input type="checkbox"> Monthly retainer for regular updates</label>
+            <label><input type="checkbox"> Pay-as-you-go for occasional changes</label>
+            <label><input type="checkbox"> Let's discuss options</label>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Competition & Reference</h2>
+        
+        <label>What are your main competitors' websites?</label>
+        <input type="text" placeholder="Competitor 1: https://...">
+        <input type="text" placeholder="Competitor 2: https://...">
+        <input type="text" placeholder="Competitor 3: https://...">
+
+        <label>What do they do well on their sites?</label>
+        <textarea placeholder="Features, design elements, or content you'd like to match or beat..."></textarea>
+
+        <label>What do they do poorly?</label>
+        <textarea placeholder="Things to avoid or improve upon..."></textarea>
+    </div>
+
+    <div class="section">
+        <h2>Success Metrics</h2>
+        
+        <label>How will you know if the website is successful?</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox"> More phone calls from new customers</label>
+            <label><input type="checkbox"> More appointment requests</label>
+            <label><input type="checkbox"> Better quality customers (less tire-kickers)</label>
+            <label><input type="checkbox"> People mention they found me online</label>
+            <label><input type="checkbox"> Ranks well in Google searches</label>
+            <label><input type="checkbox"> Other (specify below)</label>
+        </div>
+        <textarea placeholder="Any other goals or metrics that matter to you?"></textarea>
+    </div>
+
+    <div class="section">
+        <h2>Additional Notes</h2>
+        
+        <label>Anything else we should know?</label>
+        <textarea placeholder="Business history, special requirements, pet peeves, ideas you've been thinking about..."></textarea>
+
+        <label>Questions for Will:</label>
+        <textarea placeholder="Anything you're wondering about the process, timeline, or capabilities?"></textarea>
+    </div>
+
+    <div class="next-steps">
+        <h2>Next Steps</h2>
+        <ol>
+            <li>Fill out this questionnaire (print and handwrite, or type directly)</li>
+            <li>Gather any photos, logos, or content you already have</li>
+            <li>Schedule follow-up call/meeting with Will to review</li>
+            <li>Will provides mockup/proposal based on your input</li>
+            <li>Iterate on design, then build and launch</li>
+        </ol>
+    </div>
+
+    <div class="note">
+        <strong>Contact:</strong> Will Bickford · wbic16@gmail.com
+    </div>
+
+</body>
+</html>
