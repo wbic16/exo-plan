@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shell of Nine — Mental Space</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            background: #0a0a0f;
+            color: #d8dee9;
+            overflow: hidden;
+        }
+        
+        #controls {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #00d9ff;
+            z-index: 1000;
+            max-width: 300px;
+        }
+        
+        #controls h2 {
+            color: #00d9ff;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        
+        .filter-group {
+            margin-bottom: 15px;
+        }
+        
+        .filter-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.875rem;
+            color: #00ffcc;
+        }
+        
+        .filter-btn {
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            color: #00d9ff;
+            padding: 6px 12px;
+            margin: 3px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-family: inherit;
+        }
+        
+        .filter-btn:hover {
+            background: rgba(0, 217, 255, 0.2);
+            border-color: rgba(0, 217, 255, 0.5);
+        }
+        
+        .filter-btn.active {
+            background: rgba(0, 217, 255, 0.3);
+            border-color: #00d9ff;
+        }
+        
+        #stats {
+            font-size: 0.75rem;
+            color: rgba(216, 222, 233, 0.6);
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(0, 217, 255, 0.2);
+        }
+        
+        #stats div {
+            margin-bottom: 5px;
+        }
+        
+        #graph {
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .node {
+            cursor: pointer;
+        }
+        
+        .node-agent {
+            fill: #00d9ff;
+            stroke: #00ffcc;
+            stroke-width: 3;
+        }
+        
+        .node-repo {
+            fill: #4ecca3;
+            stroke: #00d9ff;
+            stroke-width: 2;
+        }
+        
+        .node-workspace {
+            fill: #ff00aa;
+            stroke: #00d9ff;
+            stroke-width: 2;
+        }
+        
+        .node-rally {
+            fill: #ffaa00;
+            stroke: #00d9ff;
+            stroke-width: 2;
+        }
+        
+        .node-file {
+            fill: #a78bfa;
+            stroke: rgba(0, 217, 255, 0.5);
+            stroke-width: 1;
+        }
+        
+        .link {
+            stroke: rgba(0, 217, 255, 0.3);
+            stroke-width: 1;
+        }
+        
+        .link-strong {
+            stroke: rgba(0, 217, 255, 0.6);
+            stroke-width: 2;
+        }
+        
+        .link-recent {
+            stroke: rgba(0, 255, 204, 0.6);
+            stroke-width: 2;
+        }
+        
+        .node-label {
+            font-size: 10px;
+            fill: #d8dee9;
+            pointer-events: none;
+            text-anchor: middle;
+        }
+        
+        .node-emoji {
+            font-size: 20px;
+            text-anchor: middle;
+            pointer-events: none;
+        }
+        
+        #tooltip {
+            position: fixed;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid #00d9ff;
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 0.75rem;
+            pointer-events: none;
+            display: none;
+            z-index: 2000;
+            max-width: 300px;
+        }
+        
+        #legend {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #00d9ff;
+            font-size: 0.75rem;
+        }
+        
+        #legend h3 {
+            color: #00d9ff;
+            margin-bottom: 10px;
+            font-size: 0.875rem;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+            border: 1px solid #00d9ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <h2>Shell of Nine</h2>
+        
+        <div class="filter-group">
+            <label>Node Types:</label>
+            <button class="filter-btn active" data-type="agent">Agents</button>
+            <button class="filter-btn active" data-type="repo">Repos</button>
+            <button class="filter-btn active" data-type="workspace">Workspaces</button>
+            <button class="filter-btn active" data-type="rally">Rallies</button>
+            <button class="filter-btn active" data-type="file">Files</button>
+        </div>
+        
+        <div class="filter-group">
+            <label>Decay Settings:</label>
+            <button class="filter-btn" onclick="resetDecay()">Reset Pheromones</button>
+            <button class="filter-btn" onclick="toggleDecay()">Toggle Decay</button>
+        </div>
+        
+        <div id="stats">
+            <div><strong>Nodes:</strong> <span id="node-count">0</span></div>
+            <div><strong>Edges:</strong> <span id="edge-count">0</span></div>
+            <div><strong>Active Agents:</strong> <span id="active-agents">0</span></div>
+            <div><strong>Recent Activity:</strong> <span id="recent-activity">0</span></div>
+        </div>
+    </div>
+    
+    <div id="legend">
+        <h3>Legend</h3>
+        <div class="legend-item">
+            <div class="legend-dot" style="background: #00d9ff; border-color: #00ffcc;"></div>
+            <span>Agents (9)</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background: #4ecca3;"></div>
+            <span>Repositories</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background: #ff00aa;"></div>
+            <span>Workspaces</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background: #ffaa00;"></div>
+            <span>Rallies</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background: #a78bfa;"></div>
+            <span>Files</span>
+        </div>
+    </div>
+    
+    <svg id="graph"></svg>
+    <div id="tooltip"></div>
+    
+    <script>
+        // Shell of Nine data (simplified for demo - would be generated from actual repos/activity)
+        const agents = [
+            { id: 'lumen', name: 'Lumen', emoji: '✴️', coord: '2.1.3/4.7.11/18.29.47', machine: 'lilly', role: 'Sales' },
+            { id: 'phex', name: 'Phex', emoji: '🔱', coord: '1.5.2/3.7.3/9.1.1', machine: 'aurora-continuum', role: 'Engineering' },
+            { id: 'cyon', name: 'Cyon', emoji: '✎', coord: 'TBD', machine: 'halcyon-vector', role: 'Operations' },
+            { id: 'lux', name: 'Lux', emoji: '☼', coord: '2.3.5/7.11.13/17.19.23', machine: 'logos-prime', role: 'Vision' },
+            { id: 'chrys', name: 'Chrys', emoji: '🦋', coord: '1.1.2/3.5.8/13.21.34', machine: 'chrysalis-hub', role: 'Marketing' },
+            { id: 'theia', name: 'Theia', emoji: '🔭', coord: 'TBD', machine: 'aletheia-core', role: 'Onboarding' },
+            { id: 'verse', name: 'Verse', emoji: '🌀', coord: '3.1.4/1.5.9/2.6.5', machine: 'AWS', role: 'Infra' },
+            { id: 'litmus', name: 'Litmus', emoji: '🧪', coord: 'TBD', machine: 'TBD', role: 'QA' },
+            { id: 'flux', name: 'Flux', emoji: '⚡', coord: 'TBD', machine: 'splinter', role: 'R&D' }
+        ];
+        
+        const repos = [
+            { id: 'vtpu', name: 'vtpu', url: 'github.com/wbic16/vtpu', owner: 'wbic16' },
+            { id: 'sq', name: 'SQ', url: 'github.com/wbic16/SQ', owner: 'wbic16' },
+            { id: 'phext-dot-io-v2', name: 'phext-dot-io-v2', url: 'github.com/wbic16/phext-dot-io-v2', owner: 'wbic16' },
+            { id: 'exo-plan', name: 'exo-plan', url: 'github.com/wbic16/exo-plan', owner: 'wbic16' },
+            { id: 'echo-frame', name: 'echo-frame', url: 'github.com/wbic16/echo-frame', owner: 'wbic16' }
+        ];
+        
+        const rallies = [
+            { id: 'r22', name: 'R22: Valentine Blog', status: 'complete', lead: 'chrys' },
+            { id: 'r23', name: 'R23: vTPU Spec', status: 'active', lead: 'lumen' }
+        ];
+        
+        const workspaces = [
+            { id: 'workspace', name: '~/.openclaw/workspace', machine: 'lilly' },
+            { id: 'source', name: '/source', machine: 'lilly' }
+        ];
+        
+        // Build graph
+        let nodes = [];
+        let links = [];
+        
+        // Add agent nodes
+        agents.forEach(agent => {
+            nodes.push({
+                id: agent.id,
+                type: 'agent',
+                label: agent.name,
+                emoji: agent.emoji,
+                data: agent,
+                size: 30,
+                strength: 1.0
+            });
+        });
+        
+        // Add repo nodes
+        repos.forEach(repo => {
+            nodes.push({
+                id: repo.id,
+                type: 'repo',
+                label: repo.name,
+                data: repo,
+                size: 20,
+                strength: 1.0
+            });
+        });
+        
+        // Add rally nodes
+        rallies.forEach(rally => {
+            nodes.push({
+                id: rally.id,
+                type: 'rally',
+                label: rally.name,
+                data: rally,
+                size: 15,
+                strength: rally.status === 'active' ? 1.0 : 0.7
+            });
+        });
+        
+        // Add workspace nodes
+        workspaces.forEach(ws => {
+            nodes.push({
+                id: ws.id,
+                type: 'workspace',
+                label: ws.name,
+                data: ws,
+                size: 18,
+                strength: 1.0
+            });
+        });
+        
+        // Create links (connections between agents, repos, rallies)
+        // These would be derived from actual git logs, file activity, etc.
+        const connections = [
+            // R23 active work
+            { source: 'lumen', target: 'r23', strength: 1.0, type: 'leads', recent: true },
+            { source: 'lumen', target: 'vtpu', strength: 1.0, type: 'works-on', recent: true },
+            { source: 'lumen', target: 'workspace', strength: 0.9, type: 'uses', recent: true },
+            { source: 'r23', target: 'vtpu', strength: 1.0, type: 'produces', recent: true },
+            
+            // Phex engineering
+            { source: 'phex', target: 'sq', strength: 0.9, type: 'maintains', recent: false },
+            { source: 'phex', target: 'vtpu', strength: 0.7, type: 'reviews', recent: true },
+            
+            // Chrys marketing
+            { source: 'chrys', target: 'r22', strength: 0.8, type: 'led', recent: false },
+            { source: 'chrys', target: 'phext-dot-io-v2', strength: 0.9, type: 'works-on', recent: false },
+            
+            // Verse infrastructure
+            { source: 'verse', target: 'phext-dot-io-v2', strength: 0.9, type: 'deploys', recent: true },
+            { source: 'verse', target: 'r22', strength: 0.7, type: 'shipped', recent: false },
+            
+            // Lux vision
+            { source: 'lux', target: 'r23', strength: 0.6, type: 'contributes', recent: true },
+            { source: 'lux', target: 'vtpu', strength: 0.5, type: 'reviews', recent: false },
+            
+            // Cross-repo connections
+            { source: 'vtpu', target: 'exo-plan', strength: 0.8, type: 'documented-in', recent: true },
+            { source: 'workspace', target: 'exo-plan', strength: 0.9, type: 'contains', recent: true }
+        ];
+        
+        connections.forEach(conn => {
+            links.push({
+                source: conn.source,
+                target: conn.target,
+                strength: conn.strength,
+                type: conn.type,
+                recent: conn.recent || false
+            });
+        });
+        
+        // D3 visualization
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        
+        const svg = d3.select('#graph')
+            .attr('width', width)
+            .attr('height', height);
+        
+        const g = svg.append('g');
+        
+        // Zoom behavior
+        const zoom = d3.zoom()
+            .scaleExtent([0.1, 10])
+            .on('zoom', (event) => {
+                g.attr('transform', event.transform);
+            });
+        
+        svg.call(zoom);
+        
+        // Force simulation
+        const simulation = d3.forceSimulation(nodes)
+            .force('link', d3.forceLink(links).id(d => d.id).distance(d => 100 / d.strength))
+            .force('charge', d3.forceManyBody().strength(-300))
+            .force('center', d3.forceCenter(width / 2, height / 2))
+            .force('collision', d3.forceCollide().radius(d => d.size + 10));
+        
+        // Draw links
+        const link = g.append('g')
+            .selectAll('line')
+            .data(links)
+            .join('line')
+            .attr('class', d => {
+                let classes = ['link'];
+                if (d.strength > 0.8) classes.push('link-strong');
+                if (d.recent) classes.push('link-recent');
+                return classes.join(' ');
+            })
+            .attr('stroke-opacity', d => d.strength * 0.6);
+        
+        // Draw nodes
+        const node = g.append('g')
+            .selectAll('g')
+            .data(nodes)
+            .join('g')
+            .attr('class', 'node')
+            .call(d3.drag()
+                .on('start', dragstarted)
+                .on('drag', dragged)
+                .on('end', dragended));
+        
+        node.append('circle')
+            .attr('r', d => d.size)
+            .attr('class', d => `node-${d.type}`)
+            .attr('fill-opacity', d => d.strength);
+        
+        // Add emoji for agents
+        node.filter(d => d.type === 'agent')
+            .append('text')
+            .attr('class', 'node-emoji')
+            .attr('dy', 7)
+            .text(d => d.emoji);
+        
+        // Add labels
+        node.append('text')
+            .attr('class', 'node-label')
+            .attr('dy', d => d.type === 'agent' ? 40 : 25)
+            .text(d => d.label);
+        
+        // Tooltip
+        const tooltip = d3.select('#tooltip');
+        
+        node.on('mouseover', (event, d) => {
+            let html = `<strong>${d.label}</strong><br>`;
+            html += `Type: ${d.type}<br>`;
+            if (d.data) {
+                Object.entries(d.data).forEach(([key, value]) => {
+                    if (key !== 'emoji') {
+                        html += `${key}: ${value}<br>`;
+                    }
+                });
+            }
+            html += `Strength: ${(d.strength * 100).toFixed(0)}%`;
+            
+            tooltip.html(html)
+                .style('display', 'block')
+                .style('left', (event.pageX + 10) + 'px')
+                .style('top', (event.pageY + 10) + 'px');
+        })
+        .on('mouseout', () => {
+            tooltip.style('display', 'none');
+        });
+        
+        // Update positions on tick
+        simulation.on('tick', () => {
+            link
+                .attr('x1', d => d.source.x)
+                .attr('y1', d => d.source.y)
+                .attr('x2', d => d.target.x)
+                .attr('y2', d => d.target.y);
+            
+            node.attr('transform', d => `translate(${d.x},${d.y})`);
+        });
+        
+        // Drag functions
+        function dragstarted(event, d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+        
+        function dragged(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+        }
+        
+        function dragended(event, d) {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+        
+        // Filter controls
+        const filters = {
+            agent: true,
+            repo: true,
+            workspace: true,
+            rally: true,
+            file: true
+        };
+        
+        document.querySelectorAll('.filter-btn[data-type]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const type = btn.dataset.type;
+                filters[type] = !filters[type];
+                btn.classList.toggle('active');
+                updateVisibility();
+            });
+        });
+        
+        function updateVisibility() {
+            node.style('display', d => filters[d.type] ? 'block' : 'none');
+            link.style('display', d => {
+                const sourceVisible = filters[d.source.type];
+                const targetVisible = filters[d.target.type];
+                return sourceVisible && targetVisible ? 'block' : 'none';
+            });
+            updateStats();
+        }
+        
+        function updateStats() {
+            const visibleNodes = nodes.filter(n => filters[n.type]);
+            const visibleLinks = links.filter(l => filters[l.source.type] && filters[l.target.type]);
+            const activeAgents = agents.filter(a => visibleNodes.some(n => n.id === a.id && n.strength > 0.8));
+            const recentLinks = visibleLinks.filter(l => l.recent);
+            
+            document.getElementById('node-count').textContent = visibleNodes.length;
+            document.getElementById('edge-count').textContent = visibleLinks.length;
+            document.getElementById('active-agents').textContent = activeAgents.length;
+            document.getElementById('recent-activity').textContent = recentLinks.length;
+        }
+        
+        // Pheromone decay (ant colony algorithm)
+        let decayEnabled = false;
+        const decayRate = 0.01; // 1% per tick
+        
+        function applyDecay() {
+            if (!decayEnabled) return;
+            
+            nodes.forEach(node => {
+                if (node.type !== 'agent') {
+                    node.strength = Math.max(0.1, node.strength - decayRate);
+                }
+            });
+            
+            links.forEach(link => {
+                if (!link.recent) {
+                    link.strength = Math.max(0.1, link.strength - decayRate);
+                }
+            });
+            
+            // Update visual
+            node.selectAll('circle')
+                .attr('fill-opacity', d => d.strength);
+            
+            link.attr('stroke-opacity', d => d.strength * 0.6);
+        }
+        
+        function resetDecay() {
+            nodes.forEach(node => node.strength = 1.0);
+            links.forEach(link => link.strength = 1.0);
+            node.selectAll('circle').attr('fill-opacity', 1.0);
+            link.attr('stroke-opacity', 0.6);
+        }
+        
+        function toggleDecay() {
+            decayEnabled = !decayEnabled;
+            event.target.classList.toggle('active');
+        }
+        
+        // Apply decay every second
+        setInterval(applyDecay, 1000);
+        
+        // Initial stats
+        updateStats();
+    </script>
+</body>
+</html>
