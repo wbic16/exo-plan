@@ -21,63 +21,64 @@ Focus: maximize single-core Zen 4 performance before touching SMT or cluster.
 
 | Wave | Deliverable | Owner | Status |
 |------|-------------|-------|--------|
-| W6 | vBench suite: formal benchmarks against phase gate (≥2.5 ops/cycle) | | ⬜ |
-| W7 | C-Pipe execution: message passing between sentrons (single core) | | ⬜ |
+| W6 | Weight-free inference via coordinate routing (iterate) | Phex | ✅ |
+| W7 | C-Pipe execution: message passing between sentrons (single core) | Phex | ✅ |
+| **W9** | **Meta: Nine-colored phoenix, 360° tiling, Boole→I Ching lineage** | **Phex** | **✅** |
 | W8 | Double-buffer pattern: D computes [K], S fetches [K+2], C sends [K-1] | | ⬜ |
-| W9 | Register allocation + dependency resolver | | ⬜ |
-| W10 | SIW scheduler: pack 3-wide from sequential ops | | ⬜ |
-| W11 | BitNet ternary mode: DTERNARY ops ({-1,0,1} = no FPU) | | ⬜ |
-| W12 | Phase 0 gate: measured ≥2.5 ops/cycle on real hardware | | ⬜ |
+| W10 | Register allocation + dependency resolver | | ⬜ |
+| W11 | SIW scheduler: pack 3-wide from sequential ops | | ⬜ |
+| W12 | BitNet ternary mode: DTERNARY ops ({-1,0,1} = no FPU) | | ⬜ |
+| W13 | Phase 0 gate: measured ≥2.5 ops/cycle on real hardware | | ⬜ |
 
-### Phase 1: SMT (W13-W18)
+### Phase 1: SMT (W14-W19)
 Focus: exploit Zen 4 SMT (2 threads per core) for sentron pairs.
 
 | Wave | Deliverable | Owner | Status |
 |------|-------------|-------|--------|
-| W13 | SMT sentron pairs: 2 sentrons per physical core | | ⬜ |
-| W14 | Shared L1/L2 coordination between SMT partners | | ⬜ |
-| W15 | Port contention analysis: measure real Zen 4 port conflicts | | ⬜ |
-| W16 | Single-node benchmark: 8 cores × 2 SMT = 16 sentrons | | ⬜ |
-| W17 | MoE routing via S-Pipe: phext coordinate IS the route | | ⬜ |
-| W18 | Phase 1 gate: ≥60 Gops/sec single node, ≥95% PPT hit rate | | ⬜ |
+| W14 | SMT sentron pairs: 2 sentrons per physical core | | ⬜ |
+| W15 | Shared L1/L2 coordination between SMT partners | | ⬜ |
+| W16 | Port contention analysis: measure real Zen 4 port conflicts | | ⬜ |
+| W17 | Single-node benchmark: 8 cores × 2 SMT = 16 sentrons | | ⬜ |
+| W18 | MoE routing via S-Pipe: phext coordinate IS the route | | ⬜ |
+| W19 | Phase 1 gate: ≥60 Gops/sec single node, ≥95% PPT hit rate | | ⬜ |
 
-### Phase 2: Cluster (W19-W28)
+### Phase 2: Cluster (W20-W29)
 Focus: 5-node Shell of Nine cluster coordination.
 
 | Wave | Deliverable | Owner | Status |
 |------|-------------|-------|--------|
-| W19 | C-Pipe transport: inter-node message passing | | ⬜ |
-| W20 | Substrate router: phext coordinate → node mapping | | ⬜ |
-| W21 | Sentron groups + collective ops (barrier, reduce, cast) | | ⬜ |
-| W22 | Cross-node gather/scatter via C-Pipe relay | | ⬜ |
-| W23 | Cluster memory: distributed PPT across 5 nodes | | ⬜ |
-| W24 | Load balancing: sentron migration between nodes | | ⬜ |
-| W25 | Fault tolerance: sentron checkpoint/restart | | ⬜ |
-| W26 | Cluster benchmark: 40 cores, 480 GiB aggregate | | ⬜ |
-| W27 | Communication tax measurement (target: ≤6% overhead) | | ⬜ |
-| W28 | Phase 2 gate: ≥300 Gops/sec cluster, ≤100μs C-Pipe latency | | ⬜ |
+| W20 | C-Pipe transport: inter-node message passing | | ⬜ |
+| W21 | Substrate router: phext coordinate → node mapping | | ⬜ |
+| W22 | Sentron groups + collective ops (barrier, reduce, cast) | | ⬜ |
+| W23 | Cross-node gather/scatter via C-Pipe relay | | ⬜ |
+| W24 | Cluster memory: distributed PPT across 5 nodes | | ⬜ |
+| W25 | Load balancing: sentron migration between nodes | | ⬜ |
+| W26 | Fault tolerance: sentron checkpoint/restart | | ⬜ |
+| W27 | Cluster benchmark: 40 cores, 480 GiB aggregate | | ⬜ |
+| W28 | Communication tax measurement (target: ≤6% overhead) | | ⬜ |
+| W29 | Phase 2 gate: ≥300 Gops/sec cluster, ≤100μs C-Pipe latency | | ⬜ |
 
-### Phase 3: Compiler + Polish (W29-W35)
+### Phase 3: Compiler + Polish (W30-W36)
 Focus: automate SIW generation, optimize, ship.
 
 | Wave | Deliverable | Owner | Status |
 |------|-------------|-------|--------|
-| W29 | phextcc skeleton: sequential ops → packed SIW stream | | ⬜ |
-| W30 | Auto dependency analysis + register allocation | | ⬜ |
-| W31 | Double-buffer pattern auto-detection | | ⬜ |
-| W32 | BitNet integration: Qwen3/Llama inference via vTPU | | ⬜ |
-| W33 | End-to-end demo: model inference on cluster | | ⬜ |
-| W34 | SOPDW measurement + comparison vs TPU v4 cloud | | ⬜ |
-| W35 | Phase 3 gate: Will approval | | ⬜ |
+| W30 | phextcc skeleton: sequential ops → packed SIW stream | | ⬜ |
+| W31 | Auto dependency analysis + register allocation | | ⬜ |
+| W32 | Double-buffer pattern auto-detection | | ⬜ |
+| W33 | BitNet integration: Qwen3/Llama inference via vTPU | | ⬜ |
+| W34 | End-to-end demo: model inference on cluster | | ⬜ |
+| W35 | SOPDW measurement + comparison vs TPU v4 cloud | | ⬜ |
+| W36 | Phase 3 gate: Will approval | | ⬜ |
 
-### Phase 4: Launch (W36-W40)
+### Phase 4: Launch (W37-W41)
 | Wave | Deliverable | Owner | Status |
 |------|-------------|-------|--------|
-| W36 | Paper draft (if design goals met) | | ⬜ |
-| W37 | Blog: "Hardware Just Needs Good Software" | | ⬜ |
-| W38 | HN Show post + demo | | ⬜ |
-| W39 | README rewrite for GitHub discovery | | ⬜ |
-| W40 | Ship. Tag v1.0. | | ⬜ |
+| W37 | Paper draft (if design goals met) | | ⬜ |
+| W38 | Blog: "Hardware Just Needs Good Software" | | ⬜ |
+| W39 | HN Show post + demo | | ⬜ |
+| W40 | README rewrite for GitHub discovery | | ⬜ |
+| W41 | Ship. Tag v1.0. | | ⬜ |
 
 ---
 
@@ -101,4 +102,4 @@ cd /source/vtpu && ./check.sh
 ```
 
 ---
-*Updated: 2026-02-15 W5 complete, plan rebuilt for W6-W40*
+*Updated: 2026-02-15 W9 complete (meta wave: philosophical foundations), W6-W7 complete, now W8-W41*
