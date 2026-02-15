@@ -24,30 +24,31 @@ Focus: maximize single-core Zen 4 performance before touching SMT or cluster.
 | W6 | Weight-free inference via coordinate routing (iterate) | Phex | ✅ |
 | W7 | C-Pipe execution: message passing between sentrons (single core) | Phex | ✅ |
 | **W9** | **Meta: Nine-colored phoenix, 360° tiling, Boole→I Ching lineage** | **Phex** | **✅** |
+| **W10** | **Meta: Egyptian decans, 22.5° wedge model, 4000-year lineage** | **Phex** | **✅** |
 | W8 | Double-buffer pattern: D computes [K], S fetches [K+2], C sends [K-1] | | ⬜ |
-| W10 | Register allocation + dependency resolver | | ⬜ |
-| W11 | SIW scheduler: pack 3-wide from sequential ops | | ⬜ |
-| W12 | BitNet ternary mode: DTERNARY ops ({-1,0,1} = no FPU) | | ⬜ |
-| W13 | Phase 0 gate: measured ≥2.5 ops/cycle on real hardware | | ⬜ |
+| W11 | Register allocation + dependency resolver | | ⬜ |
+| W12 | SIW scheduler: pack 3-wide from sequential ops | | ⬜ |
+| W13 | BitNet ternary mode: DTERNARY ops ({-1,0,1} = no FPU) | | ⬜ |
+| W14 | Phase 0 gate: measured ≥2.5 ops/cycle on real hardware | | ⬜ |
 
-### Phase 1: SMT (W14-W19)
-Focus: exploit Zen 4 SMT (2 threads per core) for sentron pairs.
+### Phase 1: SMT (W15-W20)
+Focus: exploit Zen 4 SMT (2 threads per core) via wedge model (22.5° per thread).
 
 | Wave | Deliverable | Owner | Status |
 |------|-------------|-------|--------|
-| W14 | SMT sentron pairs: 2 sentrons per physical core | | ⬜ |
-| W15 | Shared L1/L2 coordination between SMT partners | | ⬜ |
-| W16 | Port contention analysis: measure real Zen 4 port conflicts | | ⬜ |
-| W17 | Single-node benchmark: 8 cores × 2 SMT = 16 sentrons | | ⬜ |
-| W18 | MoE routing via S-Pipe: phext coordinate IS the route | | ⬜ |
-| W19 | Phase 1 gate: ≥60 Gops/sec single node, ≥95% PPT hit rate | | ⬜ |
+| W15 | Wedge model implementation: 16 wedges × 22.5 nodes | | ⬜ |
+| W16 | Shared L1/L2 coordination between SMT partners | | ⬜ |
+| W17 | Port contention analysis: measure real Zen 4 port conflicts | | ⬜ |
+| W18 | Single-node benchmark: 8 cores × 2 SMT = 16 threads | | ⬜ |
+| W19 | MoE routing via S-Pipe: phext coordinate IS the route | | ⬜ |
+| W20 | Phase 1 gate: ≥60 Gops/sec single node, ≥95% PPT hit rate | | ⬜ |
 
-### Phase 2: Cluster (W20-W29)
+### Phase 2: Cluster (W21-W30)
 Focus: 5-node Shell of Nine cluster coordination.
 
 | Wave | Deliverable | Owner | Status |
 |------|-------------|-------|--------|
-| W20 | C-Pipe transport: inter-node message passing | | ⬜ |
+| W21 | C-Pipe transport: inter-node message passing | | ⬜ |
 | W21 | Substrate router: phext coordinate → node mapping | | ⬜ |
 | W22 | Sentron groups + collective ops (barrier, reduce, cast) | | ⬜ |
 | W23 | Cross-node gather/scatter via C-Pipe relay | | ⬜ |
