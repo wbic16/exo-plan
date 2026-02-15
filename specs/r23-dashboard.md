@@ -11,7 +11,7 @@
 | W1 | A | Research notes + geometric analysis | ✅ | 6 structures, 3 industry trends, synthesis |
 | W1 | A | Success projection + KPI framework | ✅ | SOPDW north star, vBench suite, phase gates |
 | W2 | 0 | SIW struct + svISA enums in Rust | ✅ | 18 tests, 868 LOC, zero deps |
-| W3 | 0 | Phext coordinate encoding (128-bit) | ⬜ | |
+| W3 | 0 | PPT: Z-order + PTC + read/write | ✅ | 10 PPT tests, 38 total |
 | W4 | 0 | D-Pipe op dispatch (single core) | ⬜ | |
 | W5 | 0 | S-Pipe + PPT skeleton | ⬜ | |
 | W6-10 | 0 | vbench-dense + vbench-3wide | ⬜ | Phase 0 gate: ≥2.5 ops/cycle |
