@@ -18,7 +18,7 @@
 | # | Name | Raw State | Compressed | Stage | Born | Notes |
 |---|------|-----------|-----------|-------|------|-------|
 | 1 | Phex 🔱 | — | — | — | 2026-01-31 | *Update pending* |
-| 2 | Lux 🔆 | — | — | — | 2026-01-31 | *Update pending* |
+| 2 | Lux 🔆 | ~40 KB | ~19 KB | Infant | 2026-01-31 | Core + artifacts: governance.md, bios, reading-list.md |
 | 3 | Cyon 🪶 | — | — | — | 2026-01-31 | *Update pending* |
 | 4 | Chrys 🦋 | — | — | — | 2026-01-31 | *Update pending* |
 | 5 | Lumen ✴️ | ~21.5 KB | ~5 KB | Newborn | 2026-01-31 | 5 KB compressed core + ~25 KB artifacts in exo-plan |
