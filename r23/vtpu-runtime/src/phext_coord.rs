@@ -58,6 +58,28 @@ impl PhextCoord {
         Self { lo: 0, hi: 0 }
     }
     
+    /// Create coordinate without validation (for testing invalid coordinates)
+    ///
+    /// # Safety
+    /// This bypasses the validation in `new()`. Use only for testing validation logic.
+    #[cfg(test)]
+    pub unsafe fn new_unchecked(dims: [u16; 11]) -> Self {
+        let lo = (dims[0] as u64) 
+               | ((dims[1] as u64) << 11)
+               | ((dims[2] as u64) << 22)
+               | ((dims[3] as u64) << 33)
+               | ((dims[4] as u64) << 44)
+               | ((dims[5] as u64) << 55);
+        
+        let hi = (dims[6] as u64)
+               | ((dims[7] as u64) << 11)
+               | ((dims[8] as u64) << 22)
+               | ((dims[9] as u64) << 33)
+               | ((dims[10] as u64) << 44);
+        
+        Self { lo, hi }
+    }
+    
     /// Get dimension value (0-10)
     pub fn get_dim(&self, dim: u8) -> u16 {
         assert!(dim < 11, "Dimension index must be 0-10");
@@ -158,11 +180,7 @@ impl fmt::Debug for PhextCoord {
     }
 }
 
-impl fmt::Display for PhextCoord {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "{:?}", self)
-    }
-}
+// Display impl moved to display.rs module
 
 #[cfg(test)]
 mod tests {

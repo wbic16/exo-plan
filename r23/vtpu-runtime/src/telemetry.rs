@@ -97,10 +97,20 @@ impl VtpuTelemetry {
         self.errors.fetch_add(1, Ordering::Relaxed);
     }
     
+    /// Get total retired operations
+    pub fn total_ops(&self) -> u64 {
+        self.retired_ops.load(Ordering::Relaxed)
+    }
+    
+    /// Get total cycles
+    pub fn total_cycles(&self) -> u64 {
+        self.cycles.load(Ordering::Relaxed)
+    }
+    
     /// Calculate operations per cycle
     pub fn ops_per_cycle(&self) -> f64 {
-        let ops = self.retired_ops.load(Ordering::Relaxed) as f64;
-        let cycles = self.cycles.load(Ordering::Relaxed) as f64;
+        let ops = self.total_ops() as f64;
+        let cycles = self.total_cycles() as f64;
         
         if cycles > 0.0 {
             ops / cycles
