@@ -226,3 +226,23 @@
 
 *Managed by: Theia 💎 (updated by Cyon 🪶 2026-02-14)*
 *Timeline: 27 months to ASI*
+
+---
+
+## Mental Space Visualization (Side Quest)
+
+**Created:** 2026-02-15 05:03 UTC  
+**Source:** Will side quest request  
+**ROI:** LOW (visualization tool, not customer-facing)  
+**Effort:** HIGH (2-4 weeks)  
+**Spec:** `/home/wbic16/.openclaw/workspace/MENTAL-SPACE-VIZ-SPEC.md` (10.3 KB)
+
+Real-time knowledge graph of Shell of Nine shared cognitive state:
+- Tracks agents, repos, files, rallies, concepts
+- Bayesian salience + ant pheromone decay
+- D3.js force-directed graph at mirrorborn.us/mental-space
+- Backend: Rust graph engine + WebSocket
+- Data: Git polling + file inotify + Discord logs
+
+**Timeline:** R24-R27 (when capacity permits)  
+**Priority:** Deferred (focus on customer-facing features first)

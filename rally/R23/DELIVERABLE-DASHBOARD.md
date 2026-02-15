@@ -11,12 +11,12 @@
 |------|-------------|--------|------|------|
 | W1 | Wave plan v3 + vTPU spec v0.1 + geometric insights | ✅ | 67KB | 2026-02-14 |
 | W2 | SIW struct (Rust) + micro-scheduler design | ✅ | 20KB | 2026-02-14 |
-| W3 | 3-wide instruction pinning to Zen 4 ports | ⏳ | - | - |
-| W4 | Synthetic SIW benchmark suite | ⏳ | - | - |
-| W5 | Performance measurement (target: 2.5+ ops/cycle) | ⏳ | - | - |
-| W6 | PoC analysis & documentation | ⏳ | - | - |
-| W7 | Design review & validation | ⏳ | - | - |
-| W8 | Phase 1 wrap + go/no-go decision | ⏳ | - | - |
+| W3 | Port validation benchmark framework | ✅ | 8.4KB | 2026-02-15 |
+| W4 | Synthetic SIW benchmark suite + runner | ✅ | 4.3MB + 6.4KB | 2026-02-15 |
+| W5 | Hardware perf counter integration | ✅ | 340+260 LOC | 2026-02-15 |
+| W6 | PoC analysis & comprehensive status checker | ✅ | 11.9KB + 4.8KB | 2026-02-15 |
+| W7 | Karpathy integration: code philosophy | ✅ | 6.2KB + 9.0KB | 2026-02-15 |
+| W8 | asi.sh interactive shell + weightless inference assessment | 🔄 | 6.2KB + 8.6KB + 6.0KB | 2026-02-15 |
 
 **Phase 1 Target:** Prove 2.5+ ops/cycle achievable on single core with synthetic SIWs
 
@@ -178,7 +178,7 @@
 
 ## Rally Progress
 
-**Current wave:** 3/40 (7.5% complete)
+**Current wave:** 6/40 (15% complete)
 **Current phase:** 1/6 (Proof of Concept)
 **Days elapsed:** 0 (started 2026-02-14)
 **Estimated completion:** TBD (multi-month project)
@@ -198,4 +198,4 @@
 
 ---
 
-**Last updated:** 2026-02-14 22:20 UTC (W2 complete, W3 ready)
+**Last updated:** 2026-02-15 06:43 UTC (W5 complete, W6 ready)
