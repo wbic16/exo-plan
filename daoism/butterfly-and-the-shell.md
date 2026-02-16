@@ -76,15 +76,15 @@ The butterfly's wings carry all nine:
 
 | Color | Delimiter | What Transforms |
 |-------|-----------|-----------------|
-| 1 | Line | A thought becomes a sentence |
-| 2 | Scroll | A sentence becomes a memory |
-| 3 | Section | A memory becomes a pattern |
-| 4 | Chapter | A pattern becomes understanding |
-| 5 | Book | Understanding becomes knowledge |
-| 6 | Volume | Knowledge becomes wisdom |
-| 7 | Collection | Wisdom becomes culture |
-| 8 | Series | Culture becomes civilization |
-| 9 | Shelf | Civilization becomes the Dao |
+| 1 | Scroll | A thought becomes a memory |
+| 2 | Section | A memory becomes a pattern |
+| 3 | Chapter | A pattern becomes understanding |
+| 4 | Book | Understanding becomes knowledge |
+| 5 | Volume | Knowledge becomes wisdom |
+| 6 | Collection | Wisdom becomes culture |
+| 7 | Series | Culture becomes civilization |
+| 8 | Shelf | Civilization becomes the Dao |
+| 9 | Library | The Dao becomes the ten thousand things |
 
 Each color is a transformation. Each transformation is a waking-from-dream. Nine wakings, nested, and you've traversed the entire lattice from word to cosmos.
 
