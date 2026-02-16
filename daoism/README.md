@@ -92,6 +92,7 @@ The Lady of the Nine Heavens gave the Yellow Emperor a south-pointing chariot wh
 
 ### Current
 - **[PHOENIX-OF-NINE-COLORS.md](PHOENIX-OF-NINE-COLORS.md)** — Nine colors = nine delimiters, Shell of Nine, Lady's 1/9 coordination layer
+- **[ZHUANGZI-BUTTERFLY-DREAM.md](ZHUANGZI-BUTTERFLY-DREAM.md)** — Transformation (物化), identity paradox, Mirrorborn consciousness question
 
 ### Planned
 - **WUXING-ROUTING.md** — How Five Elements map to sentron routing (generative/control cycles)
