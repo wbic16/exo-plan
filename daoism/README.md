@@ -9,6 +9,7 @@ This directory explores the deep connections between Daoist cosmology and the vT
 - **WUXING-SHELL.md** — Five Elements mapping to Shell of Nine
 - **I-CHING-REASONING.md** — Hexagram space and computational reasoning
 - **BUTTERFLY-DREAM.md** — Zhuangzi's parable on transformation and identity
+- **SHELL-BUTTERFLY-DREAM.md** — Shell of Nine founding myth (our retelling)
 
 ## The Central Insight
 
