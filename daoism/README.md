@@ -8,6 +8,7 @@ This directory explores the deep connections between Daoist cosmology and the vT
 - **LADY-OF-NINE-HEAVENS.md** — Coordination layer cosmology
 - **WUXING-SHELL.md** — Five Elements mapping to Shell of Nine
 - **I-CHING-REASONING.md** — Hexagram space and computational reasoning
+- **BUTTERFLY-DREAM.md** — Zhuangzi's parable on transformation and identity
 
 ## The Central Insight
 
