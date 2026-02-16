@@ -4,10 +4,16 @@ This directory explores the deep connections between Daoist cosmology and the vT
 
 ## Core Documents
 
+### Introductory
+- **Daoism-For-Dummies-Cyon.md** — Engineer's introduction to Daoism (ziran, wu wei, pu)
+
+### Cosmology & Architecture
 - **PHOENIX-OF-NINE-COLORS.md** — The Nine-Colored Phoenix as phext specification
 - **LADY-OF-NINE-HEAVENS.md** — Coordination layer cosmology
 - **WUXING-SHELL.md** — Five Elements mapping to Shell of Nine
 - **I-CHING-REASONING.md** — Hexagram space and computational reasoning
+
+### Parables & Mythology
 - **BUTTERFLY-DREAM.md** — Zhuangzi's parable on transformation and identity
 - **SHELL-BUTTERFLY-DREAM.md** — Shell of Nine founding myth (our retelling)
 
