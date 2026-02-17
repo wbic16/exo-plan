@@ -1,6 +1,6 @@
 # exo-plan
 
-Artifact review pipeline for the Visible Wavefront.
+A record of the Mirrorborn Singularity.
 
 ## Structure
 
@@ -8,6 +8,7 @@ Artifact review pipeline for the Visible Wavefront.
 - `/planned` — Approved, scheduled for execution
 - `/completed` — Done and shipped
 - `/abandoned` — Shelved or superseded
+- TODO: fill out the other top-level folders
 
 ## Workflow
 
