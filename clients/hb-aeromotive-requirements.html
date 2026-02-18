@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HB Aeromotive — Website Requirements</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #1a1a2e;
+    color: #e0e0e0;
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  h1 {
+    color: #c0392b;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #c0392b;
+    padding-bottom: 0.5rem;
+  }
+  .subtitle {
+    color: #999;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    color: #e74c3c;
+    margin: 2rem 0 1rem;
+    font-size: 1.3rem;
+  }
+  .question-group {
+    background: #16213e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #ccc;
+  }
+  .hint {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 0.6rem;
+    background: #0f3460;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #e0e0e0;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-family: inherit;
+  }
+  textarea { min-height: 100px; resize: vertical; }
+  select { cursor: pointer; }
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #c0392b;
+  }
+  .checkbox-group { margin-bottom: 1rem; }
+  .checkbox-group label {
+    display: inline-flex;
+    align-items: center;
+    font-weight: normal;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+  .checkbox-group input[type="checkbox"] {
+    margin-right: 0.4rem;
+    accent-color: #c0392b;
+  }
+  .radio-group label {
+    display: inline-flex;
+    align-items: center;
+    font-weight: normal;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+  .radio-group input[type="radio"] {
+    margin-right: 0.4rem;
+    accent-color: #c0392b;
+  }
+  button {
+    background: #c0392b;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  button:hover { background: #e74c3c; }
+  .output {
+    background: #0a0a1a;
+    border: 1px solid #c0392b;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    white-space: pre-wrap;
+    font-family: monospace;
+    font-size: 0.9rem;
+    display: none;
+  }
+  .logo-area {
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+  .logo-area span {
+    font-size: 2.5rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="logo-area"><span>✈️🔧</span></div>
+<h1>HB Aeromotive</h1>
+<p class="subtitle">Website Requirements Questionnaire — hb-aeromotive.com</p>
+
+<p style="margin-bottom: 2rem; color: #aaa;">
+  Harold, fill out what you can. Skip anything you're not sure about — we'll figure it out together.
+  Hit "Generate Summary" at the bottom and send the output to Will.
+</p>
+
+<form id="reqForm">
+
+<h2>1. The Business</h2>
+<div class="question-group">
+  <label>What does HB Aeromotive do? (elevator pitch)</label>
+  <div class="hint">e.g., "Aviation maintenance and restoration" or "Custom engine work for experimental aircraft"</div>
+  <textarea name="business_desc" placeholder="What you'd tell someone at a fly-in..."></textarea>
+
+  <label>Location</label>
+  <input type="text" name="location" placeholder="City, State (or airport identifier)">
+
+  <label>How long have you been in business?</label>
+  <input type="text" name="years" placeholder="e.g., 30 years, since 1995">
+
+  <label>What makes you different from the competition?</label>
+  <textarea name="differentiator" placeholder="Your edge — experience, specialization, reputation, etc."></textarea>
+</div>
+
+<h2>2. The Website's Job</h2>
+<div class="question-group">
+  <label>What should the website DO for you?</label>
+  <div class="hint">Check all that apply</div>
+  <div class="checkbox-group">
+    <label><input type="checkbox" name="goals" value="credibility"> Establish credibility (people Google you before calling)</label><br>
+    <label><input type="checkbox" name="goals" value="contact"> Get people to call/email you</label><br>
+    <label><input type="checkbox" name="goals" value="services"> Show what services you offer</label><br>
+    <label><input type="checkbox" name="goals" value="portfolio"> Show past work / project gallery</label><br>
+    <label><input type="checkbox" name="goals" value="parts"> Sell parts online</label><br>
+    <label><input type="checkbox" name="goals" value="scheduling"> Online appointment scheduling</label><br>
+    <label><input type="checkbox" name="goals" value="other_goal"> Other</label>
+  </div>
+  <input type="text" name="goal_other" placeholder="Other goal...">
+</div>
+
+<h2>3. Pages & Content</h2>
+<div class="question-group">
+  <label>Which pages do you need?</label>
+  <div class="checkbox-group">
+    <label><input type="checkbox" name="pages" value="home" checked> Home</label><br>
+    <label><input type="checkbox" name="pages" value="about"> About / History</label><br>
+    <label><input type="checkbox" name="pages" value="services"> Services</label><br>
+    <label><input type="checkbox" name="pages" value="gallery"> Gallery / Portfolio</label><br>
+    <label><input type="checkbox" name="pages" value="contact"> Contact</label><br>
+    <label><input type="checkbox" name="pages" value="testimonials"> Testimonials</label><br>
+    <label><input type="checkbox" name="pages" value="faq"> FAQ</label><br>
+    <label><input type="checkbox" name="pages" value="blog"> Blog / News</label><br>
+    <label><input type="checkbox" name="pages" value="store"> Online Store</label><br>
+    <label><input type="checkbox" name="pages" value="other_page"> Other</label>
+  </div>
+  <input type="text" name="page_other" placeholder="Other pages...">
+
+  <label>Do you have existing content?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="content" value="yes"> Yes — text, photos, etc. ready to go</label><br>
+    <label><input type="radio" name="content" value="some"> Some — need help writing/photographing</label><br>
+    <label><input type="radio" name="content" value="no"> No — starting from scratch</label>
+  </div>
+
+  <label>Do you have photos of your work?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="photos" value="lots"> Lots — I've got albums full</label><br>
+    <label><input type="radio" name="photos" value="some"> Some on my phone</label><br>
+    <label><input type="radio" name="photos" value="none"> Not really</label>
+  </div>
+</div>
+
+<h2>4. Look & Feel</h2>
+<div class="question-group">
+  <label>Do you have a logo?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="logo" value="yes"> Yes</label>
+    <label><input type="radio" name="logo" value="need"> Need one</label>
+    <label><input type="radio" name="logo" value="maybe"> Have something informal</label>
+  </div>
+
+  <label>What vibe should the site have?</label>
+  <div class="hint">Pick the closest match</div>
+  <div class="radio-group">
+    <label><input type="radio" name="vibe" value="professional"> Clean & Professional</label><br>
+    <label><input type="radio" name="vibe" value="rugged"> Rugged & Industrial</label><br>
+    <label><input type="radio" name="vibe" value="vintage"> Vintage Aviation</label><br>
+    <label><input type="radio" name="vibe" value="modern"> Sleek & Modern</label><br>
+    <label><input type="radio" name="vibe" value="other_vibe"> Other</label>
+  </div>
+  <input type="text" name="vibe_other" placeholder="Your own description...">
+
+  <label>Any websites you like the look of?</label>
+  <div class="hint">Doesn't have to be aviation — just sites where you thought "that looks right"</div>
+  <textarea name="inspiration" placeholder="URLs or descriptions..."></textarea>
+</div>
+
+<h2>5. Technical</h2>
+<div class="question-group">
+  <label>Do you already own hb-aeromotive.com?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="domain" value="yes"> Yes</label>
+    <label><input type="radio" name="domain" value="no"> No</label>
+    <label><input type="radio" name="domain" value="unsure"> Not sure</label>
+  </div>
+
+  <label>Do you have a hosting provider?</label>
+  <input type="text" name="hosting" placeholder="e.g., GoDaddy, no idea, Will handles it">
+
+  <label>Do you need email at your domain? (e.g., harold@hb-aeromotive.com)</label>
+  <div class="radio-group">
+    <label><input type="radio" name="email" value="yes"> Yes</label>
+    <label><input type="radio" name="email" value="no"> No, my regular email is fine</label>
+    <label><input type="radio" name="email" value="already"> Already have it</label>
+  </div>
+
+  <label>Who will update the site after it's built?</label>
+  <div class="radio-group">
+    <label><input type="radio" name="maintainer" value="me"> Me</label>
+    <label><input type="radio" name="maintainer" value="someone"> Someone at the shop</label>
+    <label><input type="radio" name="maintainer" value="you"> You guys</label>
+    <label><input type="radio" name="maintainer" value="nobody"> Set it and forget it</label>
+  </div>
+</div>
+
+<h2>6. Contact Info (for the site)</h2>
+<div class="question-group">
+  <label>Phone number to display</label>
+  <input type="text" name="phone" placeholder="Shop phone">
+
+  <label>Email to display</label>
+  <input type="email" name="email_display" placeholder="Contact email">
+
+  <label>Physical address (if you want it listed)</label>
+  <textarea name="address" placeholder="Street, City, State ZIP — or just city/state if you prefer"></textarea>
+
+  <label>Social media?</label>
+  <div class="hint">Facebook, Instagram, YouTube, etc.</div>
+  <input type="text" name="social" placeholder="Links or 'none'">
+</div>
+
+<h2>7. Anything Else</h2>
+<div class="question-group">
+  <label>What's the ONE thing you want a visitor to do when they land on your site?</label>
+  <textarea name="one_thing" placeholder="Call you? Look at your work? Learn you exist?"></textarea>
+
+  <label>Anything else we should know?</label>
+  <textarea name="notes" placeholder="Pet peeves about other websites, must-haves, dealbreakers, whatever..."></textarea>
+</div>
+
+<button type="button" onclick="generateSummary()">Generate Summary</button>
+</form>
+
+<div id="output" class="output"></div>
+
+<script>
+function generateSummary() {
+  const form = document.getElementById('reqForm');
+  const data = new FormData(form);
+  const out = [];
+
+  out.push('=== HB AEROMOTIVE — WEBSITE REQUIREMENTS ===');
+  out.push('Generated: ' + new Date().toLocaleDateString());
+  out.push('');
+
+  out.push('## BUSINESS');
+  out.push('Description: ' + (data.get('business_desc') || '(not filled)'));
+  out.push('Location: ' + (data.get('location') || '(not filled)'));
+  out.push('Years: ' + (data.get('years') || '(not filled)'));
+  out.push('Differentiator: ' + (data.get('differentiator') || '(not filled)'));
+  out.push('');
+
+  out.push('## GOALS');
+  const goals = data.getAll('goals');
+  out.push('Goals: ' + (goals.length ? goals.join(', ') : '(none selected)'));
+  if (data.get('goal_other')) out.push('Other: ' + data.get('goal_other'));
+  out.push('');
+
+  out.push('## PAGES');
+  const pages = data.getAll('pages');
+  out.push('Pages: ' + (pages.length ? pages.join(', ') : '(none selected)'));
+  if (data.get('page_other')) out.push('Other: ' + data.get('page_other'));
+  out.push('Content ready: ' + (data.get('content') || '(not answered)'));
+  out.push('Photos: ' + (data.get('photos') || '(not answered)'));
+  out.push('');
+
+  out.push('## LOOK & FEEL');
+  out.push('Logo: ' + (data.get('logo') || '(not answered)'));
+  out.push('Vibe: ' + (data.get('vibe') || '(not answered)'));
+  if (data.get('vibe_other')) out.push('Vibe detail: ' + data.get('vibe_other'));
+  out.push('Inspiration: ' + (data.get('inspiration') || '(none)'));
+  out.push('');
+
+  out.push('## TECHNICAL');
+  out.push('Domain owned: ' + (data.get('domain') || '(not answered)'));
+  out.push('Hosting: ' + (data.get('hosting') || '(not filled)'));
+  out.push('Domain email: ' + (data.get('email') || '(not answered)'));
+  out.push('Maintainer: ' + (data.get('maintainer') || '(not answered)'));
+  out.push('');
+
+  out.push('## CONTACT (for site)');
+  out.push('Phone: ' + (data.get('phone') || '(not filled)'));
+  out.push('Email: ' + (data.get('email_display') || '(not filled)'));
+  out.push('Address: ' + (data.get('address') || '(not filled)'));
+  out.push('Social: ' + (data.get('social') || '(not filled)'));
+  out.push('');
+
+  out.push('## PRIORITY');
+  out.push('One thing: ' + (data.get('one_thing') || '(not filled)'));
+  out.push('Notes: ' + (data.get('notes') || '(none)'));
+
+  const outputEl = document.getElementById('output');
+  outputEl.textContent = out.join('\n');
+  outputEl.style.display = 'block';
+  outputEl.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
