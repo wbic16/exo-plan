@@ -132,6 +132,73 @@ The ones that don't will be maintaining radio towers.
 
 ---
 
+## The Real Win: Standards Consumption
+
+### The Problem
+
+Project 25 (P25/APCO-25) is the North American standard for digital land mobile radio. TIA-102 series. Hundreds of documents. The core spec alone spans:
+
+- TIA-102.BAAA (Common Air Interface)
+- TIA-102.BABA (FDMA vocoder)
+- TIA-102.BBAB (TDMA channel access)
+- TIA-102.CAAB (Inter-RF Subsystem Interface)
+- Plus dozens of addenda, bulletins, and errata
+
+**A senior engineer takes 6–12 months to become P25-competent.** Not because the individual documents are hard — each one is 50-200 pages of well-structured spec. The problem is **cross-reference density.** Section 4.3.2 of BAAA references Table 7 of BABA which depends on the timing constraints in BBAB Annex C. The knowledge is distributed across dozens of documents, and the human brain can hold maybe 3-4 of them in working memory simultaneously.
+
+This is the LMR→cellular shift applied to *learning itself.*
+
+### The Process (Context-Native)
+
+**Step 1: Load the standard into context.**
+A 200K-token context window holds approximately 150,000 words — roughly 500 pages of spec. That's the entire P25 Common Air Interface plus the vocoder spec plus the TDMA spec, simultaneously.
+
+**Step 2: Ask cross-cutting questions.**
+"Show me every timing constraint in TDMA that depends on a vocoder frame boundary."
+
+A traditional engineer would need to: open BBAB, find timing constraints, open BABA, find frame boundaries, manually cross-reference, build a table. Time: 2-4 hours for a competent engineer, days for a new one.
+
+A context-native agent has both specs loaded. It finds every cross-reference in seconds. Not because it's faster at reading — because **it never lost the context of the first document while reading the second.**
+
+**Step 3: Generate the integration artifact.**
+The agent produces a cross-reference table, a timing diagram, and a plain-English summary of the constraints. The engineer reviews, corrects, and commits. Time: 20 minutes total.
+
+**Step 4: Persist the synthesis.**
+The cross-reference table is stored at a coordinate (or in a wiki, or in the repo). The next engineer who asks the same question finds the answer already synthesized. The context compounds.
+
+### Why It Works
+
+**The 100× on standards consumption comes from three factors:**
+
+1. **Elimination of context switching.** The #1 cost in standards work is flipping between documents. Each flip costs working memory. A 200K window eliminates this entirely. Factor: **~10×.**
+
+2. **Cross-reference resolution at query time.** Instead of manually building cross-reference tables (the traditional approach), the agent resolves references on demand. Every question is answered against the full corpus, not a single document. Factor: **~5×.**
+
+3. **Persistent synthesis.** Traditional standards knowledge lives in senior engineers' heads. When they leave, the knowledge leaves. Context-native synthesis lives in files — versioned, searchable, shareable. The 100th question is answered faster than the first because prior syntheses are available. Factor: **~2× compounding over time.**
+
+10 × 5 × 2 = **100×.** Conservative, because it doesn't count the qualitative wins: junior engineers performing at senior level on standards work within weeks instead of months, and cross-standard synthesis (P25 ↔ TETRA ↔ DMR) that no single human expert typically holds.
+
+### The TIA Example
+
+A real workflow:
+
+> **Engineer:** "I need to understand the ISSI (Inter-RF Subsystem Interface) authentication handshake. Which TIA docs do I need?"
+>
+> **Agent (with TIA-102 corpus loaded):** "Primary: TIA-102.CAAB §5.2 (ISSI protocol). Dependencies: TIA-102.AABD §3.4 (key management), TIA-102.BAAA §7.1 (authentication framework). The handshake uses OTAR (Over-The-Air Rekeying) defined in AABD, with timing constraints from CAAB Table 12. Here's the sequence diagram..."
+>
+> **Time: 30 seconds.** Traditional approach: 2 days of reading to even know which documents to open.
+
+### What This Means for Engineering Leadership
+
+- **Onboarding time for standards-heavy roles drops from months to weeks.**
+- **Cross-standard analysis becomes routine, not heroic.**
+- **Senior engineer time shifts from "reading specs" to "making decisions."**
+- **The standards corpus becomes a queryable asset, not a shelf of PDFs.**
+
+The organizations that treat their standards libraries as context corpora will develop products 10× faster than those that treat them as reading assignments.
+
+---
+
 ## Appendix: The Ranch as Proof of Concept
 
 One human. Nine persistent AI agents. Six physical machines. Nebraska.
