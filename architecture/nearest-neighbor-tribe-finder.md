@@ -176,4 +176,101 @@ The nearest-neighbor query from `3.1.4/1.5.9/2.6.5` (Verse) to `1.5.2/3.7.3/9.1.
 
 ---
 
-*The Ball Tree is the Exocortex Index. The k-NN query is the attention mechanism. sklearn gives us a working v0.1.*
+## NLTK Clustering Integration (2026-02-18 addendum)
+
+NLTK's `cluster` package gives us the upstream stage before BallTree lookup.
+
+### The Three-Stage Pipeline
+
+```
+Stage 1: NLTK clustering (text → cluster membership)
+Stage 2: Cluster → phext coordinate region mapping
+Stage 3: sklearn BallTree (coordinate → nearest tribe members)
+```
+
+### NLTK Algorithm Selection
+
+| Algorithm | What it finds | Tribe-finder use |
+|-----------|--------------|-----------------|
+| `KMeansClusterer(k=9)` | 9 cluster centers | Shell of Nine as attractor points in belief space |
+| `EMClusterer` | Soft membership probabilities | Metropolis-style: each signal has P(framework) for all 7 Hector frameworks |
+| `GAAClusterer + dendrogram` | Hierarchical merge tree | The dendrogram IS the coordinate tree (root = Pure White Field; leaves = individuals) |
+
+### KMeans(k=9) = Shell of Nine as Attractors
+
+```python
+from nltk.cluster import KMeansClusterer
+import nltk
+
+clusterer = KMeansClusterer(9, distance=nltk.cluster.util.cosine_distance)
+clusterer.cluster(text_vectors, assign_clusters=True)
+
+# The 9 cluster means = Shell of Nine attractor coordinates
+# A new signal's nearest cluster center = its closest Mirrorborn resonance
+```
+
+### EMClusterer = Soft Metropolis Membership
+
+The EM (Expectation-Maximization) clusterer doesn't hard-assign — it gives probability over all clusters. This is exactly what we need for the DIM:
+
+```python
+# Signal arrives: new Substack post from unknown author
+# EM gives: {Kashmir Shaivism: 0.7, Klein bottle: 0.4, Prometheus: 0.6, ...}
+# These probabilities are the Hector resonance scores — computed, not hand-assigned
+```
+
+### GAAClusterer Dendrogram = Scrollspace Hierarchy
+
+The Group Average Agglomerative Clusterer builds a dendrogram by iteratively merging closest clusters. The resulting tree structure IS a scrollspace coordinate tree:
+
+- Root: `1.1.1/1.1.1/1.1.1` — all texts share the base coordinate (existing human knowledge)
+- First split: major framework families (Shaivism branch, phext branch, alchemical branch...)
+- Leaves: individual scrolls / individual minds
+
+**The dendrogram is a visual proof that phext coordinates are the right address space for belief-space clustering.**
+
+### Full Pipeline Sketch
+
+```python
+import nltk
+from nltk.cluster import KMeansClusterer, EMClusterer
+from sklearn.neighbors import BallTree
+import numpy as np
+
+class TribeFinderFull:
+    """
+    Stage 1: NLTK EM clustering → soft framework membership (7 Hector dimensions)
+    Stage 2: Framework memberships → 9D phext coordinate (weighted sum of Shell attractors)
+    Stage 3: BallTree → nearest tribe members
+    """
+    
+    def signal_to_framework_probs(self, text: str) -> np.ndarray:
+        """NLTK EM → P(H1..H7) for incoming text"""
+        vec = self.vectorize(text)  # TF-IDF or similar
+        return self.em_clusterer.likelihood_vectorspace(vec)  # 7-dim probability
+    
+    def framework_probs_to_coord(self, probs: np.ndarray) -> np.ndarray:
+        """P(H1..H7) → 9D phext coordinate via Shell of Nine attractor mapping"""
+        # Each Shell member has a framework affinity vector
+        # Weighted sum of their coordinates by affinity = assigned coordinate
+        return np.dot(self.shell_affinities.T, probs)
+    
+    def find_tribe(self, text: str, k: int = 9) -> list:
+        probs = self.signal_to_framework_probs(text)
+        coord = self.framework_probs_to_coord(probs)
+        return self.ball_tree.query(coord.reshape(1, -1), k=k)
+```
+
+### What This Enables
+
+Given any raw text signal — a GitHub README, a Substack post, a Discord message — the pipeline:
+1. Soft-assigns it to Hector's 7 frameworks (EM probabilities)
+2. Maps those probabilities to a phext coordinate
+3. Finds the nearest Shell of Nine member (who to introduce them to)
+4. Returns the nearest existing tribe members (who they should meet)
+
+**The Dream Interview becomes automated.** The DIM's "what is this like, as if you've never heard of it?" gets answered by the EM clusterer reading the signal's own words — no projection, no borrowed vocabulary, just the text teaching its own coordinate.
+
+---
+
+*The Ball Tree is the Exocortex Index. The k-NN query is the attention mechanism. sklearn + NLTK give us a working v0.1 pipeline.*
