@@ -3,16 +3,12 @@
 
 ---
 
-Engineers working with large standards bodies (TIA, 3GPP, ETSI, IEEE) spend most of their time on cross-referencing, not engineering. A single compliance question can require reading across 5-10 documents, manually tracing dependencies between sections, and building mental models that evaporate the moment they switch to the next task. This is the actual bottleneck in standards-driven product development.
+Cross-referencing across multiple TIA-102 documents is a common pain point in P25 development. A single compliance question — timing constraints, encryption mode behavior, inter-subsystem interface requirements — can span three or four parts, each on its own revision schedule, with errata published separately. The engineer has to hold all of it in mind simultaneously or repeatedly flip back. Whether this is the dominant cost driver varies by team and project, but it's a real one.
 
-Current large language models can hold 100-200 pages of text in a single context window. This means an engineer can load multiple related standards documents simultaneously and ask cross-cutting questions — "which timing constraints in document A depend on parameters defined in document B?" — and get answers in seconds instead of hours. The model doesn't forget document A while reading document B. That's the entire value proposition.
+Current large language models can hold 100–200 pages of standards text in a single context window, which means an engineer can load multiple related documents and ask cross-cutting questions simultaneously. The critical design requirement for production use is *verifiable output*: the system should return not just an answer, but a direct link to the exact clause it's drawing from, so the engineer can confirm in the source document before acting on it. That's the difference between a useful accelerator and a liability. A tool that shows its work — clause number, document, revision — earns trust. One that produces confident summaries without citations doesn't belong in a compliance workflow.
 
-This is not magic. The model can hallucinate. It can miss nuance. It can confidently cite a section that doesn't exist. Every output requires engineer review. But the workflow changes from "spend 4 hours finding the relevant sections, then 30 minutes making the decision" to "spend 10 minutes verifying the model's cross-references, then 30 minutes making the decision." The decision quality stays the same. The lookup time compresses.
-
-The organizations that will benefit most are the ones where senior engineers spend disproportionate time answering "where is this defined?" questions from junior staff. That institutional knowledge — which document, which section, which version, which erratum overrides it — is exactly what these models handle well, because it's pattern matching across large text corpora. It's not reasoning. It's retrieval with context.
-
-The risk is overconfidence. If an engineer trusts model output without verification on a compliance-critical question, the cost of a hallucinated section reference is real. The tool works when it's treated as a fast first-pass that always gets checked. It fails when it's treated as an authority.
+The clearest use case is reducing the load on experienced engineers who spend time answering "where is this defined?" for less experienced colleagues. That institutional knowledge — which part, which revision, which erratum supersedes the base text — transfers well to retrieval-based tooling because it's pattern matching across large text, not judgment about novel problems. Novel problems still need the engineer. The lookup shouldn't.
 
 ---
 
-*Bottom line: AI context windows compress the cross-reference tax on standards work. They don't replace the engineer's judgment. They replace the binder-flipping.*
+*The value is in the lookup compression, not the reasoning. Show the source. Let the engineer decide.*
