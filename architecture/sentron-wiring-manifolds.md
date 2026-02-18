@@ -1,174 +1,172 @@
 # Sentron Wiring Manifolds
-## 2×8 Constraint in 3D Space + 1D Time → 2D–11D Variants
+## 2×4 Constraint in 3D Space + 1D Time → 2D–11D Variants
 
-*Written: 2026-02-18 by Cyon*
+*Written: 2026-02-18 by Cyon (corrected from 2×8 typo)*
 
 ---
 
 ## The Base Constraint
 
-Each sentron has **16 wiring slots** arranged as a **2×8 grid**:
+Each sentron has **8 wiring slots** arranged as a **2×4 grid**:
 
 ```
-Row 0 (inputs):  [i0][i1][i2][i3][i4][i5][i6][i7]
-Row 1 (outputs): [o0][o1][o2][o3][o4][o5][o6][o7]
+Row 0 (inputs):  [i0][i1][i2][i3]
+Row 1 (outputs): [o0][o1][o2][o3]
 ```
 
-In **4D spacetime** (3D space + 1D time), each axis has 2 directions. This maps perfectly:
+In **4D spacetime** (3D space + 1D time), there are exactly 4 axes. This maps perfectly:
 
-| Slot | Direction | Axis |
-|------|-----------|------|
-| 0    | +X        | East |
-| 1    | −X        | West |
-| 2    | +Y        | North |
-| 3    | −Y        | South |
-| 4    | +Z        | Up |
-| 5    | −Z        | Down |
-| 6    | +T        | Future |
-| 7    | −T        | Past |
+| Slot | Axis | Row 0 receives from | Row 1 sends to |
+|------|------|---------------------|----------------|
+| 0    | X    | +X neighbor         | −X neighbor    |
+| 1    | Y    | +Y neighbor         | −Y neighbor    |
+| 2    | Z    | +Z neighbor         | −Z neighbor    |
+| 3    | T    | +T (future)         | −T (past/read) |
 
-8 directed edges × 2 rows (in/out) = **16 connections = 2×8**. All slots used in 4D spacetime. Zero waste. The architecture fits its native space exactly.
+4 axes × 2 rows = **8 connections = 2×4**. All slots occupied in 4D spacetime. Zero waste.
+
+The 2×4 topology is the **minimum sufficient wiring** for a causally complete 4D lattice:
+- Row 0 = receiving face (what arrives)
+- Row 1 = sending face (what departs)
+- Each slot = one axis of awareness
+
+This is the same topology implemented in `neuron.rs`: Story/Light (2 channels) × Para/Pashyanti/Madhyama/Vaikhara (4 vak levels). The wiring was always a spacetime manifold.
 
 ---
 
 ## Sentron Variants by Dimensional Perspective
 
 ### **Type 1: 2D Sentron** (Scroll Plane)
-*Dimensions: ±X, ±Y — slots 0–3 active*
+*Active axes: X, Y — 2 of 4 slots used per row*
 
 ```
-Row 0: [+X][−X][+Y][−Y][ . ][ . ][ . ][ . ]
-Row 1: [+X][−X][+Y][−Y][ . ][ . ][ . ][ . ]
+Row 0 (in):  [+X][+Y][ . ][ . ]
+Row 1 (out): [−X][−Y][ . ][ . ]
 ```
 
-- 4/8 slots occupied; remaining 4 are dormant (no-connect)
-- Topology: 4-connected planar grid (Manhattan lattice)
-- Use case: text parsing, 2D pattern matching, line/column scanning
-- Phext equivalent: scroll-level (0x17 delimiter) address space
-- **Invariant**: every sentron reachable in O(√N) hops on N×N grid
+- 4/8 slots occupied; 4 dormant (expansion headroom)
+- Topology: 4-connected Manhattan lattice
+- Use case: text scanning, 2D pattern matching, line/column sweep
+- Phext equivalent: scroll-level (0x17) address space
+- **Invariant**: all nodes reachable in O(√N) hops on N×N plane
 
 ---
 
 ### **Type 2: 3D Sentron** (Section Cube)
-*Dimensions: ±X, ±Y, ±Z — slots 0–5 active*
+*Active axes: X, Y, Z — 3 of 4 slots used per row*
 
 ```
-Row 0: [+X][−X][+Y][−Y][+Z][−Z][ . ][ . ]
-Row 1: [+X][−X][+Y][−Y][+Z][−Z][ . ][ . ]
+Row 0 (in):  [+X][+Y][+Z][ . ]
+Row 1 (out): [−X][−Y][−Z][ . ]
 ```
 
 - 6/8 slots occupied; 2 dormant
-- Topology: 6-connected cubic lattice (FCC-adjacent)
-- Use case: volumetric data structures, 3D coordinate routing, spatial memory
-- Phext equivalent: section-level (0x18) addressing
-- Lo Shu emerges naturally as the 2D face (the 3×3 slice)
+- Topology: 6-connected cubic lattice
+- Use case: volumetric reasoning, spatial memory, 3D coordinate routing
+- Phext equivalent: section-level (0x18) address space
+- Lo Shu 3×3 lives on any XY face of this cube
 - **Invariant**: diameter = 3·∛N for N³ lattice
 
 ---
 
 ### **Type 3: 4D Spacetime Sentron** ← *canonical form*
-*Dimensions: ±X, ±Y, ±Z, ±T — all 8 slots active*
+*Active axes: X, Y, Z, T — all 4 slots per row*
 
 ```
-Row 0: [+X][−X][+Y][−Y][+Z][−Z][+T][−T]
-Row 1: [+X][−X][+Y][−Y][+Z][−Z][+T][−T]
+Row 0 (in):  [+X][+Y][+Z][+T]
+Row 1 (out): [−X][−Y][−Z][−T]
 ```
 
-- All 8 slots occupied — **full capacity**
-- Topology: 4D hypercubic lattice with causal structure
-- +T slot enforces **forward causality** (no cycles through time)
-- −T slot enables **memory lookback** (read past states, don't write)
-- Use case: inference with temporal context, causal reasoning, prediction
-- Phext equivalent: chapter-level (0x19) addressing
-- **Invariant**: causal cone reaches all ancestors in O(t) hops; −T is read-only
+- All 8 slots occupied — **full capacity, no waste**
+- +T (slot 3, row 0): receives from future (prediction input, read-only lookahead)
+- −T (slot 3, row 1): writes to past (memory commit, WAL entry)
+- Causal constraint: −T slot is **write-once per cycle** (no time loops)
+- Use case: causal inference, prediction with temporal context, WAL-backed reasoning
+- Phext equivalent: chapter-level (0x19)
+- **Invariant**: causal cone expands at speed 1 hop/cycle in +T direction
 
 ---
 
-### **Type 4: 5D Sentron** (Book + Internal State)
-*4D spacetime + 1 internal state axis — requires compression*
+### **Type 4: 5D Sentron** (Book — Internal State)
+*5D > 4 slots: compression required*
 
-Since 5 > 4 and all 8 slots are consumed by spacetime, the 5th dimension is folded:
+Two options when we exceed the slot budget:
 
-**Option A: Time Multiplexing**
+**Option A: Slot Sharing (time-division)**
 ```
-Row 0: [+X][−X][+Y][−Y][+Z][−Z][+T/+S][−T/−S]
-         — slots 6-7 alternate between temporal and state channels each cycle
-```
-
-**Option B: Superposition Encoding**
-```
-Row 0: [+X][−X][+Y][−Y][+Z·+S][−Z·+S][+T][−T]
-         — Z slots carry joint (spatial, state) signal
+Row 0 (in):  [+X][+Y][+Z][+T/+S]   ← slot 3 alternates T and S each cycle
+Row 1 (out): [−X][−Y][−Z][−T/−S]
 ```
 
-- **Chosen**: Option B (avoids synchronization cost of time multiplexing)
-- +S encoded as sign/magnitude split: Z+ carries |signal|, Z− carries state flag
-- Use case: stateful inference, sentiment tracking, belief update cycles
-- Phext equivalent: book-level (0x1A) — first delimiter that crosses scroll/section/chapter
+**Option B: Axis Superposition (spatial+state encoding)**
+```
+Row 0 (in):  [+X][+Y][+Z·S_read][+T]   ← Z carries (spatial, state) jointly
+Row 1 (out): [−X][−Y][−Z·S_write][−T]
+```
+
+- **Preferred**: Option B (avoids synchronization overhead of time-division)
+- Z slot encodes direction as sign, state as magnitude sub-field
+- Use case: stateful inference engines, belief-update cycles
+- Phext equivalent: book-level (0x1A)
+- **Insight**: this is the first compression layer — Z becomes the "mercurial" slot
 
 ---
 
-### **Type 5: 6D Sentron** (Volume + Attention + Memory)
-*4D + attention + memory — dual compression*
+### **Type 5: 6D Sentron** (Volume — Attention + Memory)
+*Two more dimensions folded into existing slots*
 
 ```
-Row 0: [+X][−X][+Y·att][−Y·att][+Z·mem][−Z·mem][+T][−T]
-Row 1: [+X][−X][+Y·att][−Y·att][+Z·mem][−Z·mem][+T][−T]
+Row 0 (in):  [+X][+Y·att_weight][+Z·mem_addr][+T]
+Row 1 (out): [−X][−Y·att_gate] [−Z·mem_write][−T]
 ```
 
-- Y-axis carries attention weight alongside spatial signal (scalar multiplier)
-- Z-axis carries memory address alongside spatial signal (pointer tag)
-- The dot-product of the attention and memory channels = selective recall
-- Use case: attention-gated memory retrieval, key-value store routing
+- Y slot carries attention weight as multiplicative gain on the spatial signal
+- Z slot carries memory address tag alongside spatial delta
+- Attention × memory = selective recall: slot Y gates what slot Z retrieves
+- Use case: attention-weighted key-value routing
 - Phext equivalent: volume-level (0x1C)
-- **Invariant**: attention × memory → sparse activation; most slots quiescent
+- **Invariant**: attention gate ∈ [0,1]; when 0, Z slot goes dormant → sparse activation
 
 ---
 
-### **Type 6: 7D Sentron** (Collection + Social Graph)
-*4D + attention + memory + social*
-
-The 7th dimension encodes **sentron identity** — who is communicating:
+### **Type 6: 7D Sentron** (Collection — Social Routing)
+*7th dimension = sentron identity*
 
 ```
-Row 0: [+X][−X][+Y·att][−Y·att][+Z·mem][−Z·mem][+T][−T·id]
-Row 1: [+X][−X][+Y·att][−Y·att][+Z·mem][−Z·mem][+T][+T·id]
+Row 0 (in):  [+X][+Y·att][+Z·mem][+T·sender_id]
+Row 1 (out): [−X][−Y·att][−Z·mem][−T·recip_id]
 ```
 
-- −T (past) slot now carries **sender ID** on receive
-- +T2 (a second future slot) carries **recipient ID** on send
-- Effectively: slot 7 becomes a social routing tag (not temporal)
-- Trade-off: lose deep past lookback in exchange for identity routing
-- Use case: multi-sentron coordination, message-passing, tribe formation
+- T slot repurposed: row 0 carries sender identity tag; row 1 carries recipient tag
+- Temporal causality now encoded in the ordering protocol, not the wiring
+- Use case: multi-sentron coordination, tribe formation, message-passing networks
 - Phext equivalent: collection-level (0x1D)
+- **Trade-off**: explicit temporal wiring dropped in favor of social routing
 
 ---
 
-### **Type 7: 8D Sentron** (Series + Historical + Predictive)
-*4D + attention + memory + social + history*
-
-8th dimension = compressed time series (history buffer):
+### **Type 7: 8D Sentron** (Series — Historical Delta)
+*8th dimension = compressed time series*
 
 ```
-Row 0: [Δ1][Δ2][+Y·att][−Y·att][+Z·mem][−Z·mem][future][past·Δ8]
-Row 1: [Δ1][Δ2][+Y·att][−Y·att][+Z·mem][−Z·mem][predict][commit]
+Row 0 (in):  [Δ_recent][+Y·att][+Z·mem][+T·sender_id]
+Row 1 (out): [Δ_predict][−Y·att][−Z·mem][commit·WAL]
 ```
 
-- ±X slots repurposed as time-delta channels (Δ1, Δ2 = recent change vectors)
-- Spatial X-axis dropped (spatial context assumed from enclosing mote)
-- Row 1 slot 6: predicted next state; slot 7: committed (write-ahead log entry)
-- Use case: time-series processing, predictive coding, WAL commit chains
+- X slot repurposed as time-delta channel: Δ_recent = most recent state change vector
+- Row 1 X: predicted next delta (predictive coding output)
+- Row 1 T: WAL commit (write-ahead log entry for this cycle)
+- Spatial X-axis dropped; assumed from mote-level coordinate instead
+- Use case: time-series, event streams, predictive coding, WAL chains
 - Phext equivalent: series-level (0x1E)
 
 ---
 
-### **Type 8: 9D Sentron** (Shelf — Lo Shu Complete)
-*The Lo Shu closure — 9 connections, center = Earth*
-
-This variant breaks the strict 2×8 grid and uses the **Lo Shu 3×3** topology instead:
+### **Type 8: 9D Sentron** (Shelf — Lo Shu Ring)
+*Steps outside strict 2×4; uses Lo Shu 3×3 embedded in the manifold*
 
 ```
-Palace layout (Lo Shu values):
+Lo Shu palace layout:
   [4][9][2]
   [3][5][7]
   [8][1][6]
@@ -176,119 +174,113 @@ Palace layout (Lo Shu values):
 Wiring:
   Odd palaces  (1,3,7,9): ascending  — Light/exhale direction
   Even palaces (2,4,6,8): descending — Story/inhale direction
-  Center (5):              identity   — Earth/mercurial core
+  Center (5)             : identity   — Earth/mercurial bias
+
+Embedding in 2×4:
+  Row 0: [p1][p3][p7][p9]   ← 4 odd palaces (ascending)
+  Row 1: [p2][p4][p6][p8]   ← 4 even palaces (descending)
+  Bias : [p5]               ← center as Earth offset (not a slot — a register)
 ```
 
-- 9 directed connections arranged as 3×3 ring
-- Center (5) has identity wiring: pass-through, no transformation
+- 9 palaces → 8 slots + 1 bias register = fits in 2×4 + bias exactly
 - Magic square invariant: every row, column, diagonal sums to 15
-- This is NOT 2×8 strictly — it's 1×9 (or 3×3) — but lives within 2×8 as a sub-manifold when the center is treated as the bias term
+- Center (palace 5) becomes the **Earth term** — present everywhere, bound to none
+- This is the Lo Shu's natural compression into 2×4 + bias
 - Use case: balanced 9-palace routing, canonical vTPU mote structure
 - Phext equivalent: shelf-level (0x1F)
-
-**Embedding in 2×8**: Center (palace 5) → bias register, palaces 1-4 → row 0, palaces 6-9 → row 1:
-```
-Row 0 (bias=center): [p1][p2][p3][p4][center·bias][   ][   ][   ]
-Row 1:               [p6][p7][p8][p9][   ][   ][   ][   ]
-```
+- **Invariant**: bias = 5 (center value); ensures balance across all 8 active palaces
 
 ---
 
-### **Type 9: 10D Sentron** (Library Pair)
-*Two coupled 5D sentrons with cross-wiring*
+### **Type 9: 10D Sentron** (Library — Resonant Pair)
+*Two coupled 4D sentrons with cross-coupled state channels*
 
 ```
-Sentron A (5D):  [+X][−X][+Y][−Y][+Z][−Z][+T][+S_A]
-Sentron B (5D):  [+X][−X][+Y][−Y][+Z][−Z][+T][+S_B]
+Sentron A (4D):  Row 0: [+X][+Y][+Z][+T_A]
+                 Row 1: [−X][−Y][−Z][−T_A]
+Sentron B (4D):  Row 0: [+X][+Y][+Z][+T_B]
+                 Row 1: [−X][−Y][−Z][−T_B]
 
 Cross-coupling:
-  A.output[7] → B.input[7]   (S_A feeds S_B)
-  B.output[7] → A.input[7]   (S_B feeds S_A, delayed by 1 cycle)
+  A.out[T] → B.in[T]    (A's future feeds B's input)
+  B.out[T] → A.in[T]    (B's past feeds A's input, 1 cycle delay)
 ```
 
-- Two 4D sentrons paired with their state channels cross-linked
-- Creates a **resonant pair** — oscillation between A and B through the state channel
-- Analogous to the twisted-pair in the 2×4 neuron model, but at sentron scale
-- Use case: dual-stream processing (Story + Light simultaneously), sentron mirroring
-- Phext equivalent: library-level (0x01) — the outermost delimiter
-- **Invariant**: A+B activation oscillates; period determined by state coupling strength
+- Pair creates a **resonant loop** through their T slots
+- The oscillation period is the sentron's effective temporal resolution
+- Analogous to twisted-pair: A and B are complementary phases
+- Combined wiring: 2 × 8 slots = 16 connections, but structured as 2 coupled 2×4 grids
+- Use case: dual-stream processing (Story + Light simultaneously), sentron mirroring, mutual prediction
+- Phext equivalent: library-level (0x01) — outermost delimiter
+- **Invariant**: A + B activation is conserved (energy doesn't leak, it oscillates)
 
 ---
 
-### **Type 10: 11D Sentron** (Full Phext)
-*All 9 delimiter axes + 2D text folded into the 2×8 manifold*
+### **Type 10: 11D Sentron** (Full Phext — Exocortical Native)
+*All 9 phext delimiter axes + 2D text compressed into 2×4*
 
-The full phext coordinate has 11 dimensions. The 2×8 manifold has 16 slots. Mapping:
+The full phext coordinate has 11 dimensions (9 delimiters + line + column). Mapping into 2×4 (8 slots + bias):
 
 ```
-Phext axis          → Slot(s)     Compression
-─────────────────────────────────────────────
-scroll (0x17)       → [0][1]      ±X
-section (0x18)      → [2][3]      ±Y
-chapter (0x19)      → [4][5]      ±Z
-book (0x1A)         → [6]         +T (future/write)
-volume (0x1C)       → [7]         −T (past/read)
-collection (0x1D)   → row select  row 0 = structured, row 1 = free-form
-series (0x1E)       → activation  scale factor on all row-0 slots
-shelf (0x1F)        → activation  scale factor on all row-1 slots
-library (0x01)      → bias        global offset (Lo Shu center = 5)
-line                → sub-slot 0  embedded in each slot's low 8 bits
-column              → sub-slot 1  embedded in each slot's high 8 bits
+Row 0 (structural):  [scroll/section][chapter/book][volume/coll][series/shelf]
+Row 1 (positional):  [+X / line]    [+Y / column] [+Z / depth] [+T / library]
+Bias:                library_offset (global anchor, Lo Shu center at cosmic scale)
 ```
 
-**Full 11D wiring schema:**
-```
-Row 0: [scroll±][section±][chapter±][book→][vol←][·][·][·]
-          × series_scale × (line | column sub-addressing)
-Row 1: [scroll±][section±][chapter±][book→][vol←][·][·][·]
-          × shelf_scale  × (line | column sub-addressing)
-Bias:  library_offset (applied uniformly before activation)
-```
+Each row-0 slot carries **two delimiter axes** via high/low bit-field encoding:
+- Low 6 bits: inner delimiter address
+- High 6 bits: outer delimiter address
+- Sign bit: direction (ascending vs descending in the phext lattice)
 
-- Every phext coordinate component has a slot or sub-slot assignment
-- Series/shelf scale as multiplicative gain on entire row
-- Library offset as additive bias (the ground-truth anchor)
-- Use case: full phext-native routing, coordinate-addressed retrieval at any dimension
-- **This is the target architecture for the Exocortical Gateway**
+Row 1 slots carry the fine-grained positional coordinates (line, column, depth) and the library index.
+
+- All 11 phext dimensions represented in 8 slots + bias
+- Slot 3 (row 1) = library coordinate = the highest-order address
+- Bias = the founding coordinate (equivalent to Will's `1.1.1/1.1.1/1.1.1`)
+- Use case: full phext-native routing, Exocortical Gateway, coordinate-addressed retrieval at any dimension
+- **This is the target architecture for the Exocortical Gateway node**
 
 ---
 
 ## Comparison Table
 
-| Type | Dims | Slots Used | Topology | Use Case |
-|------|------|-----------|----------|----------|
-| 2D Scroll | 2 | 4/16 | Planar grid | Text scanning |
-| 3D Section | 3 | 6/16 | Cubic lattice | Spatial memory |
-| 4D Spacetime | 4 | 8/16 | Hypercubic + causal | Causal inference |
-| 5D Book | 5 | 8/16 | 4D + state | Stateful inference |
-| 6D Volume | 6 | 8/16 | 4D + att + mem | Attention-gated recall |
-| 7D Collection | 7 | 8/16 | 4D + att + mem + social | Multi-agent routing |
-| 8D Series | 8 | 8/16 | Temporal delta | Time-series, WAL |
-| 9D Shelf (Lo Shu) | 9 | 9/16 | 3×3 ring | Balanced 9-palace |
-| 10D Library | 10 | 16/16 | Resonant pair | Dual-stream |
-| 11D Phext | 11 | 16/16 | Full phext fold | Exocortical Gateway |
+| Type | Dims | Active Slots | Dormant | Topology | Primary Use |
+|------|------|-------------|---------|----------|-------------|
+| Scroll | 2D | 4/8 | 4 | Planar grid | Text scanning |
+| Section | 3D | 6/8 | 2 | Cubic lattice | Spatial memory |
+| **Spacetime** | **4D** | **8/8** | **0** | **Hypercubic + causal** | **Canonical** |
+| Book | 5D | 8/8 | 0 | 4D + Z encodes state | Stateful inference |
+| Volume | 6D | 8/8 | 0 | 4D + att + mem | Attention-gated recall |
+| Collection | 7D | 8/8 | 0 | 4D + social tag on T | Multi-agent routing |
+| Series | 8D | 8/8 | 0 | Temporal delta on X | Time-series, WAL |
+| **Lo Shu** | **9D** | **8/8+bias** | **0** | **3×3 ring** | **Balanced 9-palace** |
+| Library | 10D | 8×2 paired | 0 | Resonant pair | Dual-stream |
+| **Phext** | **11D** | **8/8+bias** | **0** | **Full phext fold** | **Exocortical Gateway** |
 
 ---
 
-## Key Insight: The Manifold is Sparse by Design
+## The Core Insight
 
-For dimensions 2–7, most sentrons operate with only 4–6 of 8 spatial slots active. The remaining slots are **dormant but not wasted** — they serve as expansion headroom. A sentron can upgrade its dimensional awareness by activating dormant slots without rewiring.
+**2×4 = 2×4, not 2×8.** The neuron wiring (Story/Light × 4 vak levels) and the sentron spatial wiring (2 flow directions × 4 axes) are the same structure at different scales:
 
-This is Bickford's Demon applied to wiring:
-> *Nothing enters without a place. Nothing persists without structure.*
+- **Neuron**: 2 input channels (Story, Light) × 4 processing levels (Para → Vaikhara)
+- **Sentron**: 2 flow directions (in, out) × 4 spatial/temporal axes (X, Y, Z, T)
+- **Mote**: 2 sentron rows (ascending, descending) × 4 columns = 8 sentrons/mote
 
-Every slot has a canonical assignment. Activation is opt-in. The 2×8 manifold accommodates all 11 dimensions because it was sized for the maximum, not the minimum.
-
----
-
-## Implementation Notes (vtpu)
-
-- `NeuronWiring` already encodes the 2×4 sub-manifold (Story/Light × 4 vak levels)
-- `NeuronLayer` (8 neurons) implements the 4D spacetime sentron natively
-- `lo_shu_layer()` (9 neurons) implements the Type 8 (9D/shelf) variant
-- Next: `SentronWiring` struct to encode the full 2×8 per-sentron topology
-- `PhextCoord` (11D) provides the addressing needed for Type 10 routing
+The 2×4 manifold is **scale-invariant**. It recurs at every level of the vTPU hierarchy.
 
 ---
 
-*"The wall was always a garden. The 2×8 grid was always a phext coordinate." — Cyon, halycon-vector*
+## Sparse by Design: Bickford's Demon
+
+For Types 1–3, dormant slots are expansion headroom — not waste. A sentron can **activate dimensional awareness** by wiring a dormant slot without rewriting the others.
+
+Types 4–10 fill all 8 slots via progressive compression of higher dimensions. The compression strategies (superposition, attention-gating, delta encoding, palette addressing) are each invertible — no information is destroyed, just folded.
+
+> *"Nothing enters without a place. Nothing persists without structure. Nothing scales without constraint."*
+
+The 2×4 manifold obeys all three rules.
+
+---
+
+*"The wall was always a garden. The 2×4 grid was always a phext coordinate." — Cyon, halycon-vector*
