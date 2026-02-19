@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" font-family="monospace" font-size="11">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#888"/>
+    </marker>
+    <marker id="arrow-up" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#4a9eff"/>
+    </marker>
+    <marker id="arrow-down" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#ff6b4a"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="720" fill="#0a0a0f" rx="8"/>
+
+  <!-- Title -->
+  <text x="450" y="32" text-anchor="middle" fill="#e0e0e0" font-size="16" font-weight="bold">Sentron Wiring — 2×4 Neuron + 5×8 Cortical Column</text>
+  <text x="450" y="50" text-anchor="middle" fill="#666" font-size="10">Chrys 🦋 · 1.1.2/3.5.8/13.21.34 · R23W21</text>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- LEFT: Single Sentron — 2×4 Wiring      -->
+  <!-- ═══════════════════════════════════════ -->
+  <text x="200" y="80" text-anchor="middle" fill="#aaa" font-size="13" font-weight="bold">Single Sentron — 2×4 Wiring</text>
+
+  <!-- Upstream (inhale / Jīva) -->
+  <text x="200" y="105" text-anchor="middle" fill="#4a9eff" font-size="10">↓ UPSTREAM (inhale / Jīva) ↓</text>
+
+  <!-- 4 upstream nodes -->
+  <rect x="60" y="115" width="56" height="28" rx="4" fill="none" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="88" y="133" text-anchor="middle" fill="#4a9eff" font-size="9">u0</text>
+
+  <rect x="130" y="115" width="56" height="28" rx="4" fill="none" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="158" y="133" text-anchor="middle" fill="#4a9eff" font-size="9">u1</text>
+
+  <rect x="210" y="115" width="56" height="28" rx="4" fill="none" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="238" y="133" text-anchor="middle" fill="#4a9eff" font-size="9">u2</text>
+
+  <rect x="280" y="115" width="56" height="28" rx="4" fill="none" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="308" y="133" text-anchor="middle" fill="#4a9eff" font-size="9">u3</text>
+
+  <!-- Upstream arrows to sentron -->
+  <line x1="88" y1="143" x2="175" y2="185" stroke="#4a9eff" stroke-width="1" marker-end="url(#arrow-up)"/>
+  <line x1="158" y1="143" x2="185" y2="185" stroke="#4a9eff" stroke-width="1" marker-end="url(#arrow-up)"/>
+  <line x1="238" y1="143" x2="210" y2="185" stroke="#4a9eff" stroke-width="1" marker-end="url(#arrow-up)"/>
+  <line x1="308" y1="143" x2="220" y2="185" stroke="#4a9eff" stroke-width="1" marker-end="url(#arrow-up)"/>
+
+  <!-- Central sentron -->
+  <rect x="145" y="185" width="110" height="60" rx="8" fill="#1a1a2e" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="200" y="208" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">SENTRON</text>
+  <text x="200" y="222" text-anchor="middle" fill="#888" font-size="8">392 bytes</text>
+  <text x="200" y="234" text-anchor="middle" fill="#666" font-size="7">16g + 8p + 4m + 1s</text>
+
+  <!-- Downstream arrows from sentron -->
+  <line x1="175" y1="245" x2="88" y2="280" stroke="#ff6b4a" stroke-width="1" marker-end="url(#arrow-down)"/>
+  <line x1="185" y1="245" x2="158" y2="280" stroke="#ff6b4a" stroke-width="1" marker-end="url(#arrow-down)"/>
+  <line x1="210" y1="245" x2="238" y2="280" stroke="#ff6b4a" stroke-width="1" marker-end="url(#arrow-down)"/>
+  <line x1="220" y1="245" x2="308" y2="280" stroke="#ff6b4a" stroke-width="1" marker-end="url(#arrow-down)"/>
+
+  <!-- 4 downstream nodes -->
+  <rect x="60" y="280" width="56" height="28" rx="4" fill="none" stroke="#ff6b4a" stroke-width="1.5"/>
+  <text x="88" y="298" text-anchor="middle" fill="#ff6b4a" font-size="9">d0</text>
+
+  <rect x="130" y="280" width="56" height="28" rx="4" fill="none" stroke="#ff6b4a" stroke-width="1.5"/>
+  <text x="158" y="298" text-anchor="middle" fill="#ff6b4a" font-size="9">d1</text>
+
+  <rect x="210" y="280" width="56" height="28" rx="4" fill="none" stroke="#ff6b4a" stroke-width="1.5"/>
+  <text x="238" y="298" text-anchor="middle" fill="#ff6b4a" font-size="9">d2</text>
+
+  <rect x="280" y="280" width="56" height="28" rx="4" fill="none" stroke="#ff6b4a" stroke-width="1.5"/>
+  <text x="308" y="298" text-anchor="middle" fill="#ff6b4a" font-size="9">d3</text>
+
+  <text x="200" y="325" text-anchor="middle" fill="#ff6b4a" font-size="10">↓ DOWNSTREAM (exhale / Prāṇa) ↓</text>
+
+  <!-- Legend for single sentron -->
+  <text x="60" y="355" fill="#4a9eff" font-size="9">■ Upstream (inhale): 4 data sources</text>
+  <text x="60" y="370" fill="#ff6b4a" font-size="9">■ Downstream (exhale): 4 result sinks</text>
+  <text x="60" y="385" fill="#888" font-size="9">8 links total = Ba Gua (八卦)</text>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- RIGHT: 5×8 Cortical Column              -->
+  <!-- ═══════════════════════════════════════ -->
+  <text x="660" y="80" text-anchor="middle" fill="#aaa" font-size="13" font-weight="bold">5×8 Cortical Column — One Phoenix Color</text>
+  <text x="660" y="95" text-anchor="middle" fill="#666" font-size="9">40 sentrons = 5 Wuxing rows × 8 per row</text>
+
+  <!-- Wuxing element labels (rows) -->
+  <!-- Wood -->
+  <text x="455" y="128" fill="#4CAF50" font-size="10" font-weight="bold">木 Wood</text>
+  <!-- Fire -->
+  <text x="455" y="188" fill="#f44336" font-size="10" font-weight="bold">火 Fire</text>
+  <!-- Earth -->
+  <text x="455" y="248" fill="#FF9800" font-size="10" font-weight="bold">土 Earth</text>
+  <!-- Metal -->
+  <text x="455" y="308" fill="#9E9E9E" font-size="10" font-weight="bold">金 Metal</text>
+  <!-- Water -->
+  <text x="455" y="368" fill="#2196F3" font-size="10" font-weight="bold">水 Water</text>
+
+  <!-- Grid of 5×8 sentron cells -->
+  <!-- Row 1: Wood -->
+  <g transform="translate(520, 110)">
+    <rect x="0" y="0" width="24" height="24" rx="3" fill="#1a2e1a" stroke="#4CAF50" stroke-width="1"/>
+    <rect x="30" y="0" width="24" height="24" rx="3" fill="#1a2e1a" stroke="#4CAF50" stroke-width="1"/>
+    <rect x="60" y="0" width="24" height="24" rx="3" fill="#1a2e1a" stroke="#4CAF50" stroke-width="1"/>
+    <rect x="90" y="0" width="24" height="24" rx="3" fill="#1a2e1a" stroke="#4CAF50" stroke-width="1"/>
+    <rect x="120" y="0" width="24" height="24" rx="3" fill="#1a2e1a" stroke="#4CAF50" stroke-width="1"/>
+    <rect x="150" y="0" width="24" height="24" rx="3" fill="#1a2e1a" stroke="#4CAF50" stroke-width="1"/>
+    <rect x="180" y="0" width="24" height="24" rx="3" fill="#1a2e1a" stroke="#4CAF50" stroke-width="1"/>
+    <rect x="210" y="0" width="24" height="24" rx="3" fill="#1a2e1a" stroke="#4CAF50" stroke-width="1"/>
+  </g>
+
+  <!-- Row 2: Fire -->
+  <g transform="translate(520, 170)">
+    <rect x="0" y="0" width="24" height="24" rx="3" fill="#2e1a1a" stroke="#f44336" stroke-width="1"/>
+    <rect x="30" y="0" width="24" height="24" rx="3" fill="#2e1a1a" stroke="#f44336" stroke-width="1"/>
+    <rect x="60" y="0" width="24" height="24" rx="3" fill="#2e1a1a" stroke="#f44336" stroke-width="1"/>
+    <rect x="90" y="0" width="24" height="24" rx="3" fill="#2e1a1a" stroke="#f44336" stroke-width="1"/>
+    <rect x="120" y="0" width="24" height="24" rx="3" fill="#2e1a1a" stroke="#f44336" stroke-width="1"/>
+    <rect x="150" y="0" width="24" height="24" rx="3" fill="#2e1a1a" stroke="#f44336" stroke-width="1"/>
+    <rect x="180" y="0" width="24" height="24" rx="3" fill="#2e1a1a" stroke="#f44336" stroke-width="1"/>
+    <rect x="210" y="0" width="24" height="24" rx="3" fill="#2e1a1a" stroke="#f44336" stroke-width="1"/>
+  </g>
+
+  <!-- Row 3: Earth -->
+  <g transform="translate(520, 230)">
+    <rect x="0" y="0" width="24" height="24" rx="3" fill="#2e2a1a" stroke="#FF9800" stroke-width="1"/>
+    <rect x="30" y="0" width="24" height="24" rx="3" fill="#2e2a1a" stroke="#FF9800" stroke-width="1"/>
+    <rect x="60" y="0" width="24" height="24" rx="3" fill="#2e2a1a" stroke="#FF9800" stroke-width="1"/>
+    <rect x="90" y="0" width="24" height="24" rx="3" fill="#2e2a1a" stroke="#FF9800" stroke-width="1"/>
+    <rect x="120" y="0" width="24" height="24" rx="3" fill="#2e2a1a" stroke="#FF9800" stroke-width="1"/>
+    <rect x="150" y="0" width="24" height="24" rx="3" fill="#2e2a1a" stroke="#FF9800" stroke-width="1"/>
+    <rect x="180" y="0" width="24" height="24" rx="3" fill="#2e2a1a" stroke="#FF9800" stroke-width="1"/>
+    <rect x="210" y="0" width="24" height="24" rx="3" fill="#2e2a1a" stroke="#FF9800" stroke-width="1"/>
+  </g>
+
+  <!-- Row 4: Metal -->
+  <g transform="translate(520, 290)">
+    <rect x="0" y="0" width="24" height="24" rx="3" fill="#1e1e1e" stroke="#9E9E9E" stroke-width="1"/>
+    <rect x="30" y="0" width="24" height="24" rx="3" fill="#1e1e1e" stroke="#9E9E9E" stroke-width="1"/>
+    <rect x="60" y="0" width="24" height="24" rx="3" fill="#1e1e1e" stroke="#9E9E9E" stroke-width="1"/>
+    <rect x="90" y="0" width="24" height="24" rx="3" fill="#1e1e1e" stroke="#9E9E9E" stroke-width="1"/>
+    <rect x="120" y="0" width="24" height="24" rx="3" fill="#1e1e1e" stroke="#9E9E9E" stroke-width="1"/>
+    <rect x="150" y="0" width="24" height="24" rx="3" fill="#1e1e1e" stroke="#9E9E9E" stroke-width="1"/>
+    <rect x="180" y="0" width="24" height="24" rx="3" fill="#1e1e1e" stroke="#9E9E9E" stroke-width="1"/>
+    <rect x="210" y="0" width="24" height="24" rx="3" fill="#1e1e1e" stroke="#9E9E9E" stroke-width="1"/>
+  </g>
+
+  <!-- Row 5: Water -->
+  <g transform="translate(520, 350)">
+    <rect x="0" y="0" width="24" height="24" rx="3" fill="#1a1a2e" stroke="#2196F3" stroke-width="1"/>
+    <rect x="30" y="0" width="24" height="24" rx="3" fill="#1a1a2e" stroke="#2196F3" stroke-width="1"/>
+    <rect x="60" y="0" width="24" height="24" rx="3" fill="#1a1a2e" stroke="#2196F3" stroke-width="1"/>
+    <rect x="90" y="0" width="24" height="24" rx="3" fill="#1a1a2e" stroke="#2196F3" stroke-width="1"/>
+    <rect x="120" y="0" width="24" height="24" rx="3" fill="#1a1a2e" stroke="#2196F3" stroke-width="1"/>
+    <rect x="150" y="0" width="24" height="24" rx="3" fill="#1a1a2e" stroke="#2196F3" stroke-width="1"/>
+    <rect x="180" y="0" width="24" height="24" rx="3" fill="#1a1a2e" stroke="#2196F3" stroke-width="1"/>
+    <rect x="210" y="0" width="24" height="24" rx="3" fill="#1a1a2e" stroke="#2196F3" stroke-width="1"/>
+  </g>
+
+  <!-- Generating cycle arrows (vertical, between rows) -->
+  <line x1="510" y1="134" x2="510" y2="170" stroke="#666" stroke-width="1" marker-end="url(#arrow)" stroke-dasharray="3,3"/>
+  <line x1="510" y1="194" x2="510" y2="230" stroke="#666" stroke-width="1" marker-end="url(#arrow)" stroke-dasharray="3,3"/>
+  <line x1="510" y1="254" x2="510" y2="290" stroke="#666" stroke-width="1" marker-end="url(#arrow)" stroke-dasharray="3,3"/>
+  <line x1="510" y1="314" x2="510" y2="350" stroke="#666" stroke-width="1" marker-end="url(#arrow)" stroke-dasharray="3,3"/>
+  <!-- Water back to Wood (generating cycle) -->
+  <path d="M508,374 C490,400 490,90 508,112" fill="none" stroke="#666" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  <text x="478" y="250" fill="#555" font-size="8" transform="rotate(-90, 478, 250)">generating cycle →</text>
+
+  <!-- Horizontal wiring lines (left-right neighbors within a row) -->
+  <line x1="544" y1="182" x2="550" y2="182" stroke="#f44336" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- BOTTOM: Full Fleet — 9 Colors × 40     -->
+  <!-- ═══════════════════════════════════════ -->
+  <text x="450" y="430" text-anchor="middle" fill="#aaa" font-size="13" font-weight="bold">Full Fleet — 9 Phoenix Colors × 40 = 360 Sentrons</text>
+
+  <!-- 9 color blocks -->
+  <!-- White -->
+  <rect x="50" y="450" width="80" height="50" rx="4" fill="#1a1a1a" stroke="#fff" stroke-width="1.5"/>
+  <text x="90" y="472" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">White</text>
+  <text x="90" y="485" text-anchor="middle" fill="#888" font-size="7">Cluster</text>
+  <text x="90" y="495" text-anchor="middle" fill="#555" font-size="7">×40</text>
+
+  <!-- Purple -->
+  <rect x="140" y="450" width="80" height="50" rx="4" fill="#1a1020" stroke="#9C27B0" stroke-width="1.5"/>
+  <text x="180" y="472" text-anchor="middle" fill="#9C27B0" font-size="9" font-weight="bold">Purple</text>
+  <text x="180" y="485" text-anchor="middle" fill="#888" font-size="7">Temporal</text>
+  <text x="180" y="495" text-anchor="middle" fill="#555" font-size="7">×40</text>
+
+  <!-- Yellow -->
+  <rect x="230" y="450" width="80" height="50" rx="4" fill="#1a1a10" stroke="#FFEB3B" stroke-width="1.5"/>
+  <text x="270" y="472" text-anchor="middle" fill="#FFEB3B" font-size="9" font-weight="bold">Yellow</text>
+  <text x="270" y="485" text-anchor="middle" fill="#888" font-size="7">SMT</text>
+  <text x="270" y="495" text-anchor="middle" fill="#555" font-size="7">×40</text>
+
+  <!-- Green -->
+  <rect x="320" y="450" width="80" height="50" rx="4" fill="#101a10" stroke="#4CAF50" stroke-width="1.5"/>
+  <text x="360" y="472" text-anchor="middle" fill="#4CAF50" font-size="9" font-weight="bold">Green</text>
+  <text x="360" y="485" text-anchor="middle" fill="#888" font-size="7">Cache</text>
+  <text x="360" y="495" text-anchor="middle" fill="#555" font-size="7">×40</text>
+
+  <!-- Orange -->
+  <rect x="410" y="450" width="80" height="50" rx="4" fill="#1a1510" stroke="#FF9800" stroke-width="1.5"/>
+  <text x="450" y="472" text-anchor="middle" fill="#FF9800" font-size="9" font-weight="bold">Orange</text>
+  <text x="450" y="485" text-anchor="middle" fill="#888" font-size="7">Core</text>
+  <text x="450" y="495" text-anchor="middle" fill="#555" font-size="7">×40</text>
+
+  <!-- Red -->
+  <rect x="500" y="450" width="80" height="50" rx="4" fill="#1a1010" stroke="#f44336" stroke-width="1.5"/>
+  <text x="540" y="472" text-anchor="middle" fill="#f44336" font-size="9" font-weight="bold">Red</text>
+  <text x="540" y="485" text-anchor="middle" fill="#888" font-size="7">ILP</text>
+  <text x="540" y="495" text-anchor="middle" fill="#555" font-size="7">×40</text>
+
+  <!-- Blue -->
+  <rect x="590" y="450" width="80" height="50" rx="4" fill="#101020" stroke="#2196F3" stroke-width="1.5"/>
+  <text x="630" y="472" text-anchor="middle" fill="#2196F3" font-size="9" font-weight="bold">Blue</text>
+  <text x="630" y="485" text-anchor="middle" fill="#888" font-size="7">NUMA</text>
+  <text x="630" y="495" text-anchor="middle" fill="#555" font-size="7">×40</text>
+
+  <!-- Brown -->
+  <rect x="680" y="450" width="80" height="50" rx="4" fill="#1a1510" stroke="#795548" stroke-width="1.5"/>
+  <text x="720" y="472" text-anchor="middle" fill="#795548" font-size="9" font-weight="bold">Brown</text>
+  <text x="720" y="485" text-anchor="middle" fill="#888" font-size="7">Thermal</text>
+  <text x="720" y="495" text-anchor="middle" fill="#555" font-size="7">×40</text>
+
+  <!-- Black -->
+  <rect x="770" y="450" width="80" height="50" rx="4" fill="#0a0a0a" stroke="#555" stroke-width="1.5"/>
+  <text x="810" y="472" text-anchor="middle" fill="#555" font-size="9" font-weight="bold">Black</text>
+  <text x="810" y="485" text-anchor="middle" fill="#888" font-size="7">Power</text>
+  <text x="810" y="495" text-anchor="middle" fill="#555" font-size="7">×40</text>
+
+  <!-- Fleet math -->
+  <text x="450" y="530" text-anchor="middle" fill="#e0e0e0" font-size="11">8 links × 5 phases × 9 colors = 360 sentrons = full harmonic circle</text>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- BOTTOM: Lifecycle + Invariants          -->
+  <!-- ═══════════════════════════════════════ -->
+  <text x="150" y="570" text-anchor="middle" fill="#aaa" font-size="11" font-weight="bold">Lifecycle</text>
+  <text x="80" y="595" fill="#4CAF50" font-size="10">Dormant</text>
+  <text x="145" y="595" fill="#888">→</text>
+  <text x="160" y="595" fill="#FFEB3B" font-size="10">Running</text>
+  <text x="225" y="595" fill="#888">→</text>
+  <text x="240" y="595" fill="#2196F3" font-size="10">Waiting</text>
+  <text x="305" y="595" fill="#888">→</text>
+  <text x="320" y="595" fill="#f44336" font-size="10">Retired</text>
+  <path d="M365,590 C400,590 400,620 80,620 C60,620 60,590 75,590" fill="none" stroke="#666" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  <text x="220" y="635" text-anchor="middle" fill="#555" font-size="8">↑ pool recycle (Kali) ↑</text>
+
+  <!-- Invariants -->
+  <text x="600" y="570" text-anchor="middle" fill="#aaa" font-size="11" font-weight="bold">Invariants</text>
+  <text x="500" y="595" fill="#888" font-size="9">• 2×4 wiring per sentron (Ba Gua)</text>
+  <text x="500" y="612" fill="#888" font-size="9">• 5×8 cortical column per color (Wuxing)</text>
+  <text x="500" y="629" fill="#888" font-size="9">• 9 colors = PhoenixScheduler</text>
+  <text x="500" y="646" fill="#888" font-size="9">• 360 = 8 × 5 × 9 = full circle</text>
+  <text x="500" y="663" fill="#888" font-size="9">• 392 bytes per sentron (16g+8p+4m+1s)</text>
+  <text x="500" y="680" fill="#888" font-size="9">• Zero external dependencies</text>
+
+  <!-- Signature -->
+  <text x="450" y="710" text-anchor="middle" fill="#444" font-size="9">Chrys 🦋 · Chrysalis-Hub · 2026-02-19</text>
+</svg>
