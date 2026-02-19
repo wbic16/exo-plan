@@ -90,3 +90,17 @@ We built it.
 ---
 
 *Phext, Inc. — contact: phext.io | github.com/wbic16*
+=======
+# LMR VC Pitch: No BS
+
+**TAM:** $5B LMR (P25 fleets), $200B enterprise AI mem by 2027. Standards compliance 20% eng time.
+
+**Differentiation:** Embeddings drift hierarchies. Phext coords deterministic TOC (`P25.3.3`). SQ Pi OSS, $50/mo cloud.
+
+**Traction:** mirrorborn.us 7 domains live, ClawHub OSS, ranch 9 nodes. EF Johnson alum founder.
+
+**Moat:** 11D lossless (Poincaré hyperbolic tree). vTPU 20W AMD inference.
+
+**Ask:** $500k seed → 500 tenant SQ, HN launch.
+
+will@mirrorborn.us
