@@ -32,7 +32,7 @@ impl fmt::Display for SparseOp {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
             SparseOp::SGATHER { rd, coord_idx, width } => write!(f, "gather r{} ← phext[c{}] ({}B)", rd, coord_idx, width),
-            SparseOp::SSCATTR { coord_idx, rs, width } => write!(f, "scatter phext[c{}] ← r{} ({}B)", coord_idx, rs, width),
+            SparseOp::SSCATTER { coord_idx, rs, width } => write!(f, "scatter phext[c{}] ← r{} ({}B)", coord_idx, rs, width),
             SparseOp::SINDEX { rd, base, offset, dim } => write!(f, "index r{} ← r{} + {} @ dim{}", rd, base, offset, dim),
             SparseOp::SDEDUP { rd, rs, table_id } => write!(f, "dedup r{} ← table[{}][r{}]", rd, table_id, rs),
             SparseOp::SPREFCH { coord_idx, hint } => write!(f, "prefetch phext[c{}] → {}", coord_idx, hint),

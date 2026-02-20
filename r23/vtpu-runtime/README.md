@@ -34,7 +34,7 @@ Memory operations use 11-dimensional phext coordinates (128-bit packed):
 **Implemented:**
 - ✅ SIW struct (cache-line aligned, 64 bytes)
 - ✅ D-Pipe opcodes (8 ops: DFMA, DADD, DSUB, DMUL, DCMP, DRED, DSEL, DMOV)
-- ✅ S-Pipe opcodes (8 ops: SGATHER, SSCATTR, SINDEX, SDEDUP, SPREFCH, SFLUSH, SALLOC, SFREE)
+- ✅ S-Pipe opcodes (8 ops: SGATHER, SSCATTER, SINDEX, SDEDUP, SPREFCH, SFLUSH, SALLOC, SFREE)
 - ✅ C-Pipe opcodes (8 ops: CPACK, CROUTE, CSEND, CRECV, CBAR, CFENCE, CREDUCE, CCAST)
 - ✅ PhextCoord (11D coordinate, Manhattan distance, adjacency checks)
 - ✅ VtpuTelemetry (ops/cycle, cache hit rate, energy efficiency tracking)

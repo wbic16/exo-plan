@@ -27,9 +27,6 @@ impl PhextCoord {
     /// Maximum value per dimension (11 bits = 2048 positions)
     pub const MAX_DIM: u16 = 2047;
     
-    /// Bit mask for one dimension (11 bits)
-    const DIM_MASK: u16 = 0x7FF;
-    
     /// Create a new phext coordinate from 11 dimension values
     pub fn new(dims: [u16; 11]) -> Self {
         // Validate all dimensions fit in 11 bits

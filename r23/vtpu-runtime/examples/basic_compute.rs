@@ -40,7 +40,7 @@ fn main() {
     // Store result to coordinate 1.1.1/1.1.1/1.1.3
     builder.push(SIW::new(
         DenseOp::DNOP,
-        SparseOp::SSCATTR { coord_idx: 2, rs: 3, width: 64 },
+        SparseOp::SSCATTER { coord_idx: 2, rs: 3, width: 64 },
         CoordOp::CNOP,
         PhextCoord::new([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]),
     ));

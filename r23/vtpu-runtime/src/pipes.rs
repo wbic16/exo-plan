@@ -52,7 +52,7 @@ pub enum SparseOp {
     /// phext[coord] = scatter(rs, width bytes)
     ///
     /// Stores `width` bytes from register rs to phext coordinate.
-    SSCATTR { coord_idx: u8, rs: u8, width: u16 },
+    SSCATTER { coord_idx: u8, rs: u8, width: u16 },
     
     /// rd = index into phext along dimension dim
     SINDEX { rd: u8, base: u8, offset: i32, dim: u8 },

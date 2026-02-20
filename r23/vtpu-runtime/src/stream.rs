@@ -117,7 +117,7 @@ fn reads_register(op: &DenseOp, reg: u8) -> bool {
 // Helper: check if sparse op reads a register
 fn reads_sparse_register(op: &SparseOp, reg: u8) -> bool {
     match op {
-        SparseOp::SSCATTR { rs, .. } => *rs == reg,
+        SparseOp::SSCATTER { rs, .. } => *rs == reg,
         SparseOp::SINDEX { base, .. } => *base == reg,
         SparseOp::SDEDUP { rs, .. } => *rs == reg,
         _ => false,

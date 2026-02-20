@@ -157,7 +157,7 @@ DNOP                        // No dense operation this cycle
 
 ```
 SGATHER  rd, phext_coord, width   // rd = gather(phext[coord], width bytes)
-SSCATTR  phext_coord, rs, width   // phext[coord] = scatter(rs, width bytes)
+SSCATTER phext_coord, rs, width   // phext[coord] = scatter(rs, width bytes)
 SINDEX   rd, base, offset, dim    // rd = index into phext along dimension dim
 SDEDUP   rd, rs, table_id         // rd = deduplicated lookup in embedding table
 SPREFCH  phext_coord, hint        // Prefetch phext region (L1/L2/L3 hint)
@@ -209,7 +209,7 @@ SIW { d: DMOV r1, 0.0,         s: SPREFCH [3,1,4,1,5,9,2,6,5,3,5], L2,  c: CPACK
 SIW { d: DFMA r2, r3, r4, r1,  s: SGATHER r5, [3,1,4,1,5,9,2,6,5,3,5], 64, c: CROUTE m0, NODE_3 }
 
 // Cycle 3: Accumulate dot product, scatter result to output region, send result message  
-SIW { d: DADD r6, r2, r5,      s: SSCATTR [0,0,0,0,0,0,0,0,0,0,1], r6, 8,  c: CSEND m0, SENTRON_17 }
+SIW { d: DADD r6, r2, r5,      s: SSCATTER [0,0,0,0,0,0,0,0,0,0,1], r6, 8,  c: CSEND m0, SENTRON_17 }
 
 // Cycle 4: Compare threshold, prefetch next, barrier sync with group
 SIW { d: DCMP r7, r6, r8,      s: SPREFCH [3,1,4,1,5,9,2,6,5,3,6], L2,  c: CBAR barrier_0, 6 }
