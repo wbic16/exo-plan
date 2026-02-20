@@ -245,9 +245,11 @@ Base256 is 4× denser than hex for spoken transmission and 8× denser than NATO 
 - [x] `base256-phonetic-spec.md` — this document
 - [x] Full 256-syllable lookup table
 - [x] Encoding/decoding algorithms
-- [ ] `base256-phonetic-verse.svg` — 16×4×4 cube visualization
-- [ ] Python/Rust reference implementations
-- [ ] Phext delimiter pronunciation guide
+- [x] `base256-phonetic-verse.svg` — 16×4×4 cube visualization
+- [x] Rust reference implementation (`vtpu/src/base256.rs`)
+- [x] 27 unit tests (all passing)
+- [x] Manual verification demo (`vtpu/examples/base256_demo.rs`)
+- [x] Phext delimiter pronunciation guide
 
 ---
 
