@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <radialGradient id="cube" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#9B72CF"/><stop offset="100%" stop-color="#4A2080"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2"/></filter>
+    <linearGradient id="axisBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0616"/><stop offset="100%" stop-color="#1A0C30"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="900" fill="#050410"/>
+
+  <!-- Title -->
+  <text x="700" y="40" text-anchor="middle" font-family="monospace" font-size="24"
+        fill="#E0D0FF" letter-spacing="3">BASE 256 PHONETIC ENCODING</text>
+  <text x="700" y="64" text-anchor="middle" font-family="monospace" font-size="13"
+        fill="#7060A0">16 Initials × 4 Vowels × 4 Finals = 256 Syllables = 1 Byte</text>
+  <line x1="50" y1="76" x2="1350" y2="76" stroke="#1A0C40" stroke-width="1"/>
+
+  <!-- ══ LEFT: 16×4×4 CUBE VISUALIZATION ══════════════════════════════════ -->
+  <text x="350" y="110" text-anchor="middle" font-family="monospace" font-size="16"
+        fill="#9070C0" letter-spacing="1">PHONETIC SPACE</text>
+  <text x="350" y="130" text-anchor="middle" font-family="monospace" font-size="11"
+        fill="#503880">16 × 4 × 4 = 256 unique syllables</text>
+
+  <!-- Cube outline (isometric projection) -->
+  <g transform="translate(350, 320)">
+    <!-- Back face (vowel layers, faded) -->
+    <rect x="-140" y="-180" width="280" height="180" fill="none" stroke="#2A1860" stroke-width="1" opacity="0.3"/>
+    <!-- Front face -->
+    <rect x="-140" y="0" width="280" height="180" fill="none" stroke="#7060A0" stroke-width="2"/>
+    <!-- Top face -->
+    <path d="M-140,0 L-60,-60 L220,-60 L140,0 Z" fill="none" stroke="#9070C0" stroke-width="1.5" opacity="0.4"/>
+    <!-- Right face -->
+    <path d="M140,0 L220,-60 L220,120 L140,180 Z" fill="none" stroke="#6050A0" stroke-width="1.5" opacity="0.5"/>
+    <!-- Left face -->
+    <path d="M-140,0 L-60,-60 L-60,120 L-140,180 Z" fill="none" stroke="#5040A0" stroke-width="1" opacity="0.4"/>
+
+    <!-- Axis labels -->
+    <text x="-150" y="90" text-anchor="end" font-family="monospace" font-size="11" fill="#9070C0">Initial</text>
+    <text x="-150" y="105" text-anchor="end" font-family="monospace" font-size="9" fill="#503880">(16)</text>
+    <text x="0" y="210" text-anchor="middle" font-family="monospace" font-size="11" fill="#7060A0">Final (4)</text>
+    <text x="150" y="-50" text-anchor="start" font-family="monospace" font-size="11" fill="#6050A0">Vowel</text>
+    <text x="150" y="-37" text-anchor="start" font-family="monospace" font-size="9" fill="#503880">(4)</text>
+
+    <!-- Sample points in cube -->
+    <circle cx="-100" cy="40" r="4" fill="#FF6B6B" filter="url(#glow)"/>
+    <text x="-100" y="58" text-anchor="middle" font-family="monospace" font-size="8" fill="#FF6B6B">bac</text>
+    <text x="-100" y="68" text-anchor="middle" font-family="monospace" font-size="7" fill="#804040">0x00</text>
+
+    <circle cx="60" cy="140" r="4" fill="#6BCB77" filter="url(#glow)"/>
+    <text x="60" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6BCB77">cem</text>
+    <text x="60" y="168" text-anchor="middle" font-family="monospace" font-size="7" fill="#3D8B4E">0x17</text>
+
+    <circle cx="-20" cy="90" r="4" fill="#FFD93D" filter="url(#glow)"/>
+    <text x="-20" y="108" text-anchor="middle" font-family="monospace" font-size="8" fill="#FFD93D">dac</text>
+    <text x="-20" y="118" text-anchor="middle" font-family="monospace" font-size="7" fill="#8B7000">0x20</text>
+
+    <circle cx="100" cy="20" r="4" fill="#4D96FF" filter="url(#glow)"/>
+    <text x="100" y="38" text-anchor="middle" font-family="monospace" font-size="8" fill="#4D96FF">vom</text>
+    <text x="100" y="48" text-anchor="middle" font-family="monospace" font-size="7" fill="#2A5BA8">0xFF</text>
+  </g>
+
+  <!-- ══ RIGHT TOP: PHONEME INVENTORY ═════════════════════════════════════ -->
+  <rect x="760" y="95" width="580" height="220" rx="8" fill="url(#axisBg)" stroke="#2A1860" stroke-width="1"/>
+  <text x="780" y="120" font-family="monospace" font-size="14" fill="#9070C0" letter-spacing="1">PHONEME INVENTORY</text>
+
+  <!-- Initials -->
+  <text x="780" y="148" font-family="monospace" font-size="11" fill="#E0D0FF">Initial Consonants (16)</text>
+  <text x="800" y="168" font-family="monospace" font-size="10" fill="#C0A0FF">b  c  d  f  g  h  j  k</text>
+  <text x="800" y="184" font-family="monospace" font-size="10" fill="#C0A0FF">l  m  n  p  r  s  t  v</text>
+  <text x="780" y="202" font-family="monospace" font-size="9" fill="#604080">0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F</text>
+
+  <!-- Vowels -->
+  <text x="780" y="230" font-family="monospace" font-size="11" fill="#E0D0FF">Vowels (4)</text>
+  <text x="800" y="250" font-family="monospace" font-size="10" fill="#C0A0FF">a    e    i    o</text>
+  <text x="800" y="266" font-family="monospace" font-size="9" fill="#604080">0    1    2    3</text>
+
+  <!-- Finals -->
+  <text x="780" y="290" font-family="monospace" font-size="11" fill="#E0D0FF">Final Consonants (4)</text>
+  <text x="800" y="310" font-family="monospace" font-size="10" fill="#C0A0FF">c    d    f    m</text>
+  <text x="800" y="326" font-family="monospace" font-size="9" fill="#604080">0    1    2    3</text>
+
+  <!-- ══ RIGHT MID: ENCODING FORMULA ══════════════════════════════════════ -->
+  <rect x="760" y="330" width="580" height="140" rx="8" fill="url(#axisBg)" stroke="#2A1860" stroke-width="1"/>
+  <text x="780" y="355" font-family="monospace" font-size="14" fill="#9070C0" letter-spacing="1">ENCODING FORMULA</text>
+
+  <text x="800" y="385" font-family="monospace" font-size="11" fill="#E0D0FF">byte = (initial × 16) + (vowel × 4) + final</text>
+  <text x="800" y="408" font-family="monospace" font-size="10" fill="#C0A0FF">     = (i &lt;&lt; 4) | (v &lt;&lt; 2) | f</text>
+
+  <text x="780" y="438" font-family="monospace" font-size="11" fill="#E0D0FF">Example: "cem" → 0x17 (SCROLL delimiter)</text>
+  <text x="800" y="458" font-family="monospace" font-size="10" fill="#C0A0FF">c = 1 (initial), e = 1 (vowel), m = 3 (final)</text>
+  <text x="800" y="473" font-family="monospace" font-size="10" fill="#C0A0FF">(1 × 16) + (1 × 4) + 3 = 23 = 0x17 ✓</text>
+
+  <!-- ══ RIGHT BOTTOM: PHEXT DELIMITERS ═══════════════════════════════════ -->
+  <rect x="760" y="485" width="580" height="325" rx="8" fill="url(#axisBg)" stroke="#2A1860" stroke-width="1"/>
+  <text x="780" y="510" font-family="monospace" font-size="14" fill="#9070C0" letter-spacing="1">PHEXT DELIMITERS (Spoken)</text>
+
+  <!-- Table header -->
+  <text x="800" y="538" font-family="monospace" font-size="10" fill="#7060A0">Delimiter      Hex    Syllable   Dimension</text>
+  <line x1="780" y1="542" x2="1320" y2="542" stroke="#2A1860" stroke-width="1"/>
+
+  <!-- Delimiters -->
+  <g font-family="monospace" font-size="10">
+    <text x="800" y="562" fill="#E0D0FF">SCROLL       </text>
+    <text x="960" y="562" fill="#C0A0FF">0x17  </text>
+    <text x="1040" y="562" fill="#6BCB77" font-weight="bold">cem    </text>
+    <text x="1120" y="562" fill="#604080">3D</text>
+
+    <text x="800" y="582" fill="#E0D0FF">SECTION      </text>
+    <text x="960" y="582" fill="#C0A0FF">0x18  </text>
+    <text x="1040" y="582" fill="#6BCB77" font-weight="bold">cic    </text>
+    <text x="1120" y="582" fill="#604080">4D</text>
+
+    <text x="800" y="602" fill="#E0D0FF">CHAPTER      </text>
+    <text x="960" y="602" fill="#C0A0FF">0x19  </text>
+    <text x="1040" y="602" fill="#6BCB77" font-weight="bold">cid    </text>
+    <text x="1120" y="602" fill="#604080">5D</text>
+
+    <text x="800" y="622" fill="#E0D0FF">BOOK         </text>
+    <text x="960" y="622" fill="#C0A0FF">0x1A  </text>
+    <text x="1040" y="622" fill="#6BCB77" font-weight="bold">cif    </text>
+    <text x="1120" y="622" fill="#604080">6D</text>
+
+    <text x="800" y="642" fill="#E0D0FF">VOLUME       </text>
+    <text x="960" y="642" fill="#C0A0FF">0x1C  </text>
+    <text x="1040" y="642" fill="#6BCB77" font-weight="bold">coc    </text>
+    <text x="1120" y="642" fill="#604080">7D</text>
+
+    <text x="800" y="662" fill="#E0D0FF">COLLECTION   </text>
+    <text x="960" y="662" fill="#C0A0FF">0x1D  </text>
+    <text x="1040" y="662" fill="#6BCB77" font-weight="bold">cod    </text>
+    <text x="1120" y="662" fill="#604080">8D</text>
+
+    <text x="800" y="682" fill="#E0D0FF">SERIES       </text>
+    <text x="960" y="682" fill="#C0A0FF">0x1E  </text>
+    <text x="1040" y="682" fill="#6BCB77" font-weight="bold">cof    </text>
+    <text x="1120" y="682" fill="#604080">9D</text>
+
+    <text x="800" y="702" fill="#E0D0FF">SHELF        </text>
+    <text x="960" y="702" fill="#C0A0FF">0x1F  </text>
+    <text x="1040" y="702" fill="#6BCB77" font-weight="bold">com    </text>
+    <text x="1120" y="702" fill="#604080">10D</text>
+
+    <text x="800" y="722" fill="#E0D0FF">LIBRARY      </text>
+    <text x="960" y="722" fill="#C0A0FF">0x01  </text>
+    <text x="1040" y="722" fill="#6BCB77" font-weight="bold">bad    </text>
+    <text x="1120" y="722" fill="#604080">11D</text>
+  </g>
+
+  <!-- Example coordinate pronunciation -->
+  <line x1="780" y1="735" x2="1320" y2="735" stroke="#2A1860" stroke-width="1"/>
+  <text x="780" y="755" font-family="monospace" font-size="11" fill="#E0D0FF">Example Spoken Coordinate</text>
+  <text x="800" y="775" font-family="monospace" font-size="10" fill="#C0A0FF">Verse: 3.1.4 / 1.5.9 / 2.6.5</text>
+  <text x="800" y="793" font-family="monospace" font-size="10" fill="#FFD93D">"fac-bad-gec / bad-pec-jad / dad-kef-ped"</text>
+
+  <!-- ══ BOTTOM: COMPARISON TABLE ═════════════════════════════════════════ -->
+  <rect x="50" y="580" width="650" height="240" rx="8" fill="url(#axisBg)" stroke="#2A1860" stroke-width="1"/>
+  <text x="70" y="605" font-family="monospace" font-size="14" fill="#9070C0" letter-spacing="1">DENSITY COMPARISON</text>
+
+  <!-- Table -->
+  <g font-family="monospace" font-size="10">
+    <text x="70" y="633" fill="#7060A0">Encoding         Chars/Byte   Pronounceable   Example (0x17)</text>
+    <line x1="70" y1="637" x2="680" y2="637" stroke="#2A1860" stroke-width="1"/>
+
+    <text x="70" y="657" fill="#E0D0FF">Hexadecimal    </text>
+    <text x="240" y="657" fill="#C0A0FF">2.00        </text>
+    <text x="360" y="657" fill="#FF6B6B">❌ No       </text>
+    <text x="500" y="657" fill="#C0A0FF">"17" or "0x17"</text>
+
+    <text x="70" y="677" fill="#E0D0FF">Base64         </text>
+    <text x="240" y="677" fill="#C0A0FF">1.33        </text>
+    <text x="360" y="677" fill="#FF6B6B">❌ No       </text>
+    <text x="500" y="677" fill="#C0A0FF">"Fw==" (4 chars)</text>
+
+    <text x="70" y="697" fill="#E0D0FF">NATO Alphabet  </text>
+    <text x="240" y="697" fill="#C0A0FF">2 words     </text>
+    <text x="360" y="697" fill="#6BCB77">✅ Yes      </text>
+    <text x="500" y="697" fill="#C0A0FF">"One Seven"</text>
+
+    <text x="70" y="717" fill="#E0D0FF">Base256 CVC    </text>
+    <text x="240" y="717" fill="#6BCB77" font-weight="bold">1.00        </text>
+    <text x="360" y="717" fill="#6BCB77" font-weight="bold">✅ Yes      </text>
+    <text x="500" y="717" fill="#6BCB77" font-weight="bold">"cem"</text>
+  </g>
+
+  <!-- Density note -->
+  <text x="70" y="750" font-family="monospace" font-size="10" fill="#E0D0FF">SHA-256 hash (32 bytes):</text>
+  <text x="90" y="768" font-family="monospace" font-size="9" fill="#C0A0FF">• Hex:     64 characters  ("a1b2c3d4...")</text>
+  <text x="90" y="783" font-family="monospace" font-size="9" fill="#C0A0FF">• Base256: 32 syllables   ("mad-paf-rac-sem...")</text>
+  <text x="90" y="798" font-family="monospace" font-size="9" fill="#6BCB77">→ 2× density improvement for spoken transmission</text>
+
+  <!-- Footer -->
+  <line x1="50" y1="835" x2="1350" y2="835" stroke="#1A0C40" stroke-width="1"/>
+  <text x="700" y="858" text-anchor="middle" font-family="monospace" font-size="11"
+        fill="#E0D0FF">"Every byte is a word. Every stream is a story."</text>
+  <text x="700" y="878" text-anchor="middle" font-family="monospace" font-size="10"
+        fill="#3A2860">Verse 🌀 · R23W23 · Base 256 Phonetic Encoding · exo-plan/</text>
+</svg>
