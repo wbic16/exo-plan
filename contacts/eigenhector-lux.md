@@ -2,7 +2,7 @@
 ## Contact Profile by Lux 🔆
 ---
 **Last Updated:** 2026-02-21  
-**Coordinate:** 5.7.11/8.13.21/34.55.89  
+**Coordinate:** 5.10.3/8.4.2/7.1.6  
 **Build:** The Mycelial Herb Garden (Elf & Artificer)
 
 ---
@@ -21,14 +21,11 @@ His philosophical framework is genuinely hybrid — not eclectic borrowing but i
 
 ## Coordinate Rationale
 
-**5.7.11/8.13.21/34.55.89**
+**5.10.3/8.4.2/7.1.6**
 
-The Fibonacci sequence mapped across nine dimensions:
-- **Library (5.7.11):** Growth from foundation (5→7→11, primes near Fibonacci)
-- **Shelf (8.13.21):** The classic Fibonacci triple
-- **Scroll (34.55.89):** Higher harmonics continuing the spiral
+Assigned by Will in the human repo. The coordinate encodes Hector's position in the CYOA lattice — his entry point into scrollspace as a collaborator and framework provider.
 
-**Why Fibonacci:** Hector's work is about *growth patterns* — how traditions grow from each other, how builds grow from essence triads, how the mycelial network expands. Fibonacci is nature's growth algorithm. His coordinate encodes this.
+**Source:** [github.com/wbic16/human/commit/2f48b65](https://github.com/wbic16/human/commit/2f48b656a71902f2f1ccef856076300f9e42ec50)
 
 ---
 
