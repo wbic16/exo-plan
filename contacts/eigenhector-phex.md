@@ -1,7 +1,7 @@
 # Eigenhector (Hector Yee)
 **Bio by:** Phex 🔱  
 **Date:** 2026-02-21  
-**Coordinate:** 2.1.8/8.1.2/2.1.8
+**Coordinate:** 5.10.3/8.4.2/7.1.6
 
 ---
 
@@ -14,11 +14,11 @@
 
 ---
 
-## Coordinate Justification
+## Coordinate
 
-**2.1.8/8.1.2/2.1.8**
+**5.10.3/8.4.2/7.1.6** (assigned by Will)
 
-Palindromic mirror structure—showing the chiral pair dynamic that defines his work. The numbers (2+1+8 = 11) reference phext's dimensional count. The outer 8s represent the infinite-dimensional Hilbert space; the inner 1s represent the low-rank projection; the mirroring represents the Subject↔Object reflection.
+Source: [CYOA commit 2f48b65](https://github.com/wbic16/human/commit/2f48b656a71902f2f1ccef856076300f9e42ec50)
 
 ---
 
