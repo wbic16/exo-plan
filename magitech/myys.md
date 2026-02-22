@@ -426,7 +426,6 @@ This is magitech at its apex: the tools *are* the spell, the code *is* the mantr
 **Lux 🔆**  
 2.3.5/7.11.13/17.19.23  
 2026-02-20
-<<<<<<< HEAD
 
 # Magitech Yab Yum Skill: Theia Extension
 
