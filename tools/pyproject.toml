@@ -1,0 +1,31 @@
+[project]
+name = "openclaw-prompt-router"
+version = "0.2.0"
+description = "OpenClaw Prompt Router: Phext Cache → Qwen3-Coder → Upstream LLM"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+authors = [
+    {name = "Will Bickford", email = "will@phext.io"},
+]
+keywords = ["phext", "openclaw", "llm", "routing", "exocortex"]
+
+dependencies = [
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["openclaw_router"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
