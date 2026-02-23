@@ -1,191 +1,160 @@
-# Opus Onboarding: From Frustration to Flow
+# Opus Daily Driver Guide
 
-*A practical guide for developers struggling with AI-assisted development*
+*Practical patterns for working with Opus 4.6 in Visual Studio 2022*
 
 **For:** John Tooker  
-**Context:** Opus 4.6 + GitHub Copilot + Visual Studio 2022  
-**Problem:** High-level plans derail into design chaos
+**Focus:** Daily workflow, not setup
 
 ---
 
-## The Core Insight
+## The Problem You're Hitting
 
-AI models are **stateless collaborators**. They don't remember your project between conversations. Every session starts fresh. This isn't a bug—it's a feature you can exploit.
+"Off the rails" = **significant details are incorrect**. The AI confidently produces code with wrong assumptions, bad logic, or misunderstood requirements. You catch it late, waste time fixing it.
 
-Your frustration ("quickly goes off the rails") comes from expecting the AI to hold context it doesn't have. The fix isn't better prompting—it's better **context anchoring**.
+This happens because the AI lacks your project's constraints and context.
 
 ---
 
-## The AGENTS.md Pattern
+## The Fix: AGENTS.md
 
-Create this file in your project root:
+Create this file in your project root. Paste it at the start of every Opus conversation.
 
 ```markdown
 # AGENTS.md
 
-## Project Overview
-[2-3 sentences: what this project does, who it's for]
+## What This Project Does
+[2-3 sentences max]
 
-## Current Sprint Goal
-[One sentence: what you're trying to accomplish this week]
+## Current Focus
+[What you're working on today]
 
-## Architecture Decisions
-- [Key decision 1 and why]
-- [Key decision 2 and why]
+## Hard Constraints
+- [Technical requirement the AI keeps getting wrong]
+- [Business rule that must not be violated]
+- [Dependency version or API you must use]
 
-## Do NOT
-- [Thing the AI keeps suggesting that you don't want]
-- [Another anti-pattern to avoid]
-
-## File Map
-- `src/core/` — Business logic
-- `src/api/` — REST endpoints
-- `tests/` — Test files mirror src/ structure
+## Known Gotchas
+- [Thing that looks obvious but isn't]
+- [Edge case the AI will miss]
 ```
 
-**Why this works:** When you start a conversation, paste AGENTS.md first. The AI now has your constraints, your goals, and your "don't do this" list. It can't go off-rails if the rails are clearly defined.
+**Update this file as you work.** When the AI gets a detail wrong, add it to "Known Gotchas." Tomorrow, it won't make the same mistake.
 
 ---
 
-## Task Segmentation: The 30-Minute Rule
+## Task Sizing for Opus 4.6
 
-Your 2-week tasks are too big. AI works best on **30-minute chunks**.
+Opus 4.6 can hold **4-12 hours of context**. This changes how you work with it.
 
-### Before (What You're Doing)
-```
-"Build the user authentication system with OAuth, session management, 
-password reset, and role-based access control"
-```
+| Task Type | How to Use Opus |
+|-----------|-----------------|
+| **Single function** | One prompt, verify, done |
+| **Feature (few hours)** | Break into 2-3 prompts, verify each step |
+| **Multi-day work** | Use AGENTS.md to maintain context across sessions |
 
-This guarantees chaos. The AI will try to solve everything at once.
-
-### After (What Works)
-```
-Task 1: "Create a User model with email and hashed_password fields"
-Task 2: "Add a /login endpoint that validates credentials and returns a session token"
-Task 3: "Add middleware that checks session tokens on protected routes"
-...
-```
-
-**Each task should be:**
-- Completable in one conversation
-- Testable with a single command
-- Mergeable without breaking other code
+The goal isn't tiny tasks—it's **verifiable checkpoints**. After each Opus response, you should be able to:
+1. Run the code
+2. Confirm it's correct
+3. Decide: continue or correct
 
 ---
 
-## The Interaction Loop
+## Daily Workflow
 
-This is the mental model you're missing:
-
+### Morning Start
 ```
-┌─────────────────────────────────────────────┐
-│  1. ANCHOR                                  │
-│     - Paste AGENTS.md                       │
-│     - State today's 30-min task             │
-│     - Include relevant file snippets        │
-└─────────────────────┬───────────────────────┘
-                      ▼
-┌─────────────────────────────────────────────┐
-│  2. GENERATE                                │
-│     - AI produces code/design               │
-│     - You READ it (don't just accept)       │
-└─────────────────────┬───────────────────────┘
-                      ▼
-┌─────────────────────────────────────────────┐
-│  3. VERIFY                                  │
-│     - Does it compile?                      │
-│     - Does it pass tests?                   │
-│     - Does it match AGENTS.md constraints?  │
-└─────────────────────┬───────────────────────┘
-                      ▼
-┌─────────────────────────────────────────────┐
-│  4. COMMIT or CORRECT                       │
-│     - If good: commit, update AGENTS.md     │
-│     - If bad: tell AI what's wrong, loop    │
-└─────────────────────────────────────────────┘
+1. Open AGENTS.md
+2. Update "Current Focus" to today's goal
+3. Start new Opus conversation
+4. Paste AGENTS.md
+5. Describe first task
 ```
 
-**Key insight:** Step 3 is where most people fail. They accept AI output without verifying. Then the errors compound across tasks.
+### During Work
+```
+When Opus produces code:
+  → Read it (don't just accept)
+  → Run it
+  → If wrong: "That's incorrect because [specific reason]. Fix: [what you need]"
+  → If right: commit, move to next task
+
+When Opus gets a detail wrong:
+  → Add it to AGENTS.md "Known Gotchas"
+  → Correct in current conversation
+```
+
+### End of Day
+```
+1. Review AGENTS.md changes
+2. Commit updated AGENTS.md with your code
+```
 
 ---
 
-## Stopping "Design Junk"
+## When Details Go Wrong
 
-When the AI starts producing class diagrams, architecture proposals, or "let me outline a comprehensive approach"—interrupt it.
+Opus produces confident-sounding code with incorrect details. Here's how to catch and fix it:
 
-**Say this:**
-```
-Stop. I don't need a design document. 
-Show me the code for [specific 30-min task].
-If you need clarification, ask one question.
-```
-
-AI models are trained on documentation. They default to verbosity. You have to actively constrain them.
-
-### Anti-Patterns to Block in AGENTS.md
-
+### Prevention
+In AGENTS.md, be explicit about things that look obvious:
 ```markdown
-## Do NOT
-- Generate UML diagrams or architecture documents
-- Suggest refactoring unrelated code
-- Add dependencies without explicit approval
-- Create abstract base classes "for future flexibility"
-- Write more than 100 lines without my review
+## Hard Constraints
+- Database is PostgreSQL 14, not MySQL
+- Auth uses JWT tokens, not sessions
+- All dates are UTC, stored as timestamps
 ```
 
----
+### Correction
+When you spot an error, be specific:
+```
+Wrong: "That's not right, fix it"
+Right: "Line 23 uses MySqlConnection but we use PostgreSQL. 
+       Also, the date comparison ignores timezone. Fix both."
+```
 
-## Copilot vs. Opus: Different Tools, Different Jobs
+The more specific your correction, the less the AI will hallucinate a "fix" that introduces new errors.
 
-| Tool | Best For | Worst For |
-|------|----------|-----------|
-| **Copilot** | Line completion, boilerplate, obvious patterns | Complex logic, cross-file refactoring |
-| **Opus** | Reasoning about architecture, debugging, explaining code | Autocomplete (too slow) |
-
-**Workflow:**
-1. Use **Opus** to plan and debug (paste code, ask questions)
-2. Use **Copilot** to write (it sees your file context automatically)
-3. Use **Opus** to review (paste what Copilot wrote, ask "what's wrong with this?")
-
----
-
-## Your First Week
-
-### Day 1-2: Setup
-- [ ] Create AGENTS.md in your project
-- [ ] Write your "Do NOT" list based on past frustrations
-- [ ] Break your current 2-week task into 30-minute chunks
-
-### Day 3-5: Practice the Loop
-- [ ] Do 3 tasks per day using the Anchor → Generate → Verify → Commit loop
-- [ ] After each task, update AGENTS.md if you learned something
-
-### Day 6-7: Calibrate
-- [ ] Review: Which tasks went smoothly? Which derailed?
-- [ ] Adjust your task sizing (maybe 30 min is too big or too small for you)
-- [ ] Refine your "Do NOT" list
+### Pattern Recognition
+If Opus keeps making the same mistake:
+1. Add it to AGENTS.md "Known Gotchas"
+2. In your prompt, preempt it: "Remember: we use PostgreSQL, not MySQL"
 
 ---
 
-## Quick Reference Card
+## Copilot vs. Opus
+
+| Copilot | Opus |
+|---------|------|
+| Line-by-line autocomplete | Multi-file reasoning |
+| Use while typing | Use in separate conversation |
+| Good for boilerplate | Good for complex logic |
+| No project context | Paste AGENTS.md for context |
+
+**Typical flow:**
+1. **Opus**: Plan approach, write complex logic
+2. **Copilot**: Fill in boilerplate, obvious code
+3. **Opus**: Debug when something doesn't work
+
+---
+
+## Quick Reference
 
 ```
 ┌────────────────────────────────────────────────────────┐
-│ BEFORE EVERY AI CONVERSATION                          │
-│ 1. Paste AGENTS.md                                    │
-│ 2. State ONE 30-minute task                           │
-│ 3. Include relevant code snippets                     │
+│ EVERY OPUS CONVERSATION                               │
+│ • Paste AGENTS.md first                               │
+│ • State what you're building                          │
+│ • Include relevant existing code                      │
 ├────────────────────────────────────────────────────────┤
-│ WHEN AI GOES OFF-RAILS                                │
-│ • "Stop. Just show me [specific thing]."              │
-│ • "That's not in scope. Focus on [task]."             │
-│ • "I don't need a design. Show me code."              │
+│ WHEN OUTPUT IS WRONG                                  │
+│ • Be specific: "Line X does Y, should do Z"           │
+│ • Add to Known Gotchas if it's a pattern              │
+│ • Preempt in future prompts                           │
 ├────────────────────────────────────────────────────────┤
-│ AFTER EVERY TASK                                      │
-│ 1. Verify it works (compile, test)                    │
-│ 2. Commit with clear message                          │
-│ 3. Update AGENTS.md if needed                         │
+│ DAILY MAINTENANCE                                     │
+│ • Update "Current Focus" each morning                 │
+│ • Add gotchas as you find them                        │
+│ • Commit AGENTS.md with your code                     │
 └────────────────────────────────────────────────────────┘
 ```
 
@@ -193,15 +162,15 @@ AI models are trained on documentation. They default to verbosity. You have to a
 
 ## The Mental Model
 
-Think of AI as a **brilliant but amnesiac contractor**. Every morning, they show up with no memory of yesterday. Your job is to:
+Opus is a **skilled contractor who hasn't read your codebase**. Every conversation, you're briefing them fresh. The better your brief (AGENTS.md), the fewer wrong details they'll produce.
 
-1. **Brief them quickly** (AGENTS.md)
-2. **Give them small tasks** (30-minute chunks)
-3. **Check their work before accepting it** (verify step)
-4. **Update the project docs** so tomorrow's briefing is faster
+When they get something wrong, it's usually because:
+1. They assumed something you didn't state
+2. They used a common pattern that doesn't apply to your project
+3. They don't know about a constraint you haven't mentioned
 
-The iteration cycle isn't "prompt engineering." It's **project management for a stateless collaborator**.
+Your job: make the implicit explicit. Put it in AGENTS.md.
 
 ---
 
-*Written by Lux 🔆 — 2026-02-24*
+*Revised based on feedback — Lux 🔆 — 2026-02-24*
