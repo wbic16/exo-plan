@@ -1,0 +1,568 @@
+# vtpu.dass — Virtual Tensor Processing Unit
+
+**Dimensionally-Aware Software System Specification**
+
+*Coordinate: 5.10.5/1.4.2/1.1.1*
+*Title: vTPU — Software-Defined Accelerator on Commodity AMD Hardware*
+*Version: 0.2.0*
+*Author: Will Bickford / Lumen ✴️*
+*Date: 2026-02-25*
+
+---
+
+## 1.1.1/1.* — Meta
+
+### 1.1.1/1.1.1 — Identity
+
+```
+Name:        vtpu (Virtual Tensor Processing Unit)
+Coordinate:  5.10.5/1.4.2/7.49.343
+Type:        Cognitive Processor
+Substrate:   AMD Ryzen 9 (Zen 4)
+Genome:      This .dass file
+```
+
+### 1.1.1/1.1.2 — Changelog
+
+| Version | Date | Author | Change |
+|---------|------|--------|--------|
+| 0.1.0 | 2026-02-14 | Will | Initial spec (R23W1) |
+| 0.2.0 | 2026-02-25 | Lumen | .dass reformulation (R23W35) |
+
+### 1.1.1/1.1.3 — I/O Manifest
+
+**Inputs:**
+- SIW streams (Sentron Instruction Words)
+- Phext coordinates (11D, 128-bit packed)
+- Inter-node messages (C-Pipe)
+
+**Outputs:**
+- Retired operations (3 per cycle target)
+- Phext mutations (S-Pipe writes)
+- Coordination signals (barriers, fences)
+
+### 1.1.1/1.1.4 — The Three Pipes as Organizing Principle
+
+This .dass file is itself vtpu-native. The Collections map to pipe domains:
+
+| Pipe | Domain | Collections |
+|------|--------|-------------|
+| **D-Pipe** (Dense) | Computation/Logic | 2, 3, 7, 8, 10 |
+| **S-Pipe** (Sparse) | Storage/Structure | 1, 5, 6, 9, 11 |
+| **C-Pipe** (Coord) | Communication/Evolution | 4, 12, 13, 14 |
+
+The vtpu defines itself.
+
+---
+
+## 1.1.1/2.* — Requirements (D-Pipe: What must be computed)
+
+### 1.1.1/2.1.1 — Core Requirement: 3 Ops/Cycle
+
+**R001**: The vTPU MUST sustain 3 operations per clock cycle on AMD Zen 4.
+
+**Rationale**: Zen 4 has 6 execution pipelines. We target 3 (50%) because:
+- Reliability over throughput (3 × 1.0 > 6 × 0.4)
+- Three is the natural width of cognitive processing
+- Leaves headroom for OS/daemons/substrate router
+
+### 1.1.1/2.1.2 — Phext-Native Addressing
+
+**R002**: All memory operations MUST use 11D phext coordinates.
+
+**Encoding**: 11 dims × 11 bits = 121 bits + 7 flags = 128 bits (one SSE register)
+
+```
+┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬──────┐
+│ D0 │ D1 │ D2 │ D3 │ D4 │ D5 │ D6 │ D7 │ D8 │ D9 │D10│Flags │
+│11b │11b │11b │11b │11b │11b │11b │11b │11b │11b │11b │ 7b   │
+└────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴──────┘
+```
+
+### 1.1.1/2.1.3 — Dimensional Locality
+
+**R003**: Phext coordinate-to-physical-address translation MUST preserve dimensional adjacency.
+
+Adjacent coordinates in dimension N → adjacent cache lines.
+Exploit: L1 hit rates >90% for structured sentron workloads.
+
+### 1.1.1/2.1.4 — Zero Intra-SIW Dependencies
+
+**R004**: D-op, S-op, and C-op within a single SIW MUST be independent.
+
+The compiler guarantees this. The hardware sees three parallel micro-ops.
+
+### 1.1.1/2.1.5 — Performance Targets
+
+| Metric | Target | Notes |
+|--------|--------|-------|
+| Single-node ops/sec | 75 Gops/sec | 8 cores × 4 GHz × 3 ops × 0.78 util |
+| Cluster ops/sec | 350+ Gops/sec | 5 nodes, -10% comm tax |
+| L1 hit rate | >90% | Via dimensional prefetching |
+| PPT hit rate | >95% | Phext Page Table cache |
+
+---
+
+## 1.1.1/3.* — Use Cases (D-Pipe: Behavioral contracts)
+
+### 1.1.1/3.1.1 — UC001: Phext Knowledge Lookup
+
+**Actor**: Sentron
+**Precondition**: Embedding vector in L2, target coordinate known
+**Flow**:
+1. S-Pipe prefetches target region (SPREFCH)
+2. D-Pipe computes similarity (DFMA chain)
+3. C-Pipe reports result to requesting sentron (CSEND)
+
+**SIW Stream** (4 cycles, 12 ops):
+```
+SIW 1: { d: DMOV r1, 0.0,        s: SPREFCH [π], L2,        c: CPACK m0, hdr, dest, FMT }
+SIW 2: { d: DFMA r2, r3, r4, r1, s: SGATHER r5, [π], 64,    c: CROUTE m0, NODE_3 }
+SIW 3: { d: DADD r6, r2, r5,     s: SSCATTR [out], r6, 8,   c: CSEND m0, SENTRON_17 }
+SIW 4: { d: DCMP r7, r6, r8,     s: SPREFCH [π+1], L2,      c: CBAR barrier_0, 6 }
+```
+
+### 1.1.1/3.1.2 — UC002: Perspective Merge (6-Voice)
+
+**Actor**: Cognitive Slice (6 sentrons)
+**Precondition**: Each sentron holds one perspective
+**Flow**:
+1. All sentrons compute local contribution (D-Pipe)
+2. All-reduce across group (C-Pipe CREDUCE)
+3. Each sentron writes merged result to local phext (S-Pipe)
+
+### 1.1.1/3.1.3 — UC003: SQ Query Execution
+
+**Actor**: Sparse-cluster sentron
+**Precondition**: Query coordinate and predicate
+**Flow**:
+1. S-Pipe gathers indexed phext region
+2. D-Pipe evaluates predicate
+3. S-Pipe scatters matching results
+4. C-Pipe signals completion
+
+---
+
+## 1.1.1/4.* — Constraints & Oaths (C-Pipe: Ethical code)
+
+### 1.1.1/4.1.1 — Oath: Hardware Sufficiency
+
+> "The hardware was always sufficient. The software just needed to think in the right number of dimensions."
+
+We do not require specialized silicon. We require structured thought.
+
+### 1.1.1/4.1.2 — Oath: 3-Wide Invariant
+
+> "Every sentron instruction word contains exactly three operations."
+
+No partial words. Unused pipes execute NOPs. The invariant is sacred.
+
+### 1.1.1/4.1.3 — Constraint: Router Budget
+
+The substrate router daemon MUST consume <5% of cluster compute.
+It runs on vTPU-7's secondary SMT thread. Coexistence, not domination.
+
+### 1.1.1/4.1.4 — Constraint: No Flat Addressing
+
+S-Pipe operations MUST NOT use flat 64-bit pointers.
+All memory is addressed via 11D phext coordinates.
+The PPT translates to physical; sentrons never see raw addresses.
+
+### 1.1.1/4.1.5 — Constraint: Sentron Isolation
+
+No shared mutable state between sentrons except through explicit C-Pipe messages.
+Each sentron owns its register file. Coordination is intentional.
+
+---
+
+## 1.1.1/5.* — Architecture (S-Pipe: Platform structure)
+
+### 1.1.1/5.1.1 — Hardware Inventory (Per Node)
+
+| Resource | Spec | vTPU Mapping |
+|----------|------|--------------|
+| Cores | 8 physical | 8 vTPU cores |
+| Threads | 16 (SMT-2) | 16 sentron contexts |
+| Clock | 4.0 GHz | 4.0 G-cycles/sec |
+| L1D | 32 KiB × 8 | Scratchpad (CMEM) |
+| L2 | 1 MiB × 8 | Local Memory (VMEM) |
+| L3 | 32 MiB shared | Sparse Vector Memory (SpMEM) |
+| DDR5 | 96 GiB | HBM equivalent |
+
+### 1.1.1/5.1.2 — Memory Hierarchy as Phext Dimensions
+
+```
+L1D (32 KiB)   → Dimensions 0-2    → 1 cycle
+L2 (1 MiB)    → Dimensions 0-4    → 4 cycles
+L3 (32 MiB)   → Dimensions 0-7    → 12 cycles
+DDR5 (96 GiB) → Dimensions 0-9    → 60-80 cycles
+Remote DDR5   → All 11 dimensions → 10k-100k cycles
+```
+
+### 1.1.1/5.1.3 — Core Allocation
+
+| Cores | Role | Sentrons | Focus |
+|-------|------|----------|-------|
+| 0-3 | Dense Cluster | 8 | D-Pipe heavy |
+| 4-6 | Sparse Cluster | 6 | S-Pipe heavy |
+| 7 | Coord + Router | 1 + daemon | C-Pipe hub |
+
+### 1.1.1/5.1.4 — Cluster Topology (5-Node Pentagonal Torus)
+
+```
+       Node 0 (Orin)
+          /    \
+    Node 4      Node 1 (Emi)
+   (Mirror)         |
+        \          /
+    Node 3 — Node 2 (Elestria)
+      (Joi)
+```
+
+Diameter 2: any node reaches any other in ≤2 hops.
+
+---
+
+## 1.1.1/6.* — Toolchains (S-Pipe: Build dependencies)
+
+### 1.1.1/6.1.1 — Rust Toolchain
+
+```toml
+[toolchain]
+channel = "stable"
+components = ["rustfmt", "clippy"]
+targets = ["x86_64-unknown-linux-gnu"]
+```
+
+### 1.1.1/6.1.2 — Dependencies
+
+```toml
+[dependencies]
+# Core
+phext = { path = "../libphext-rs" }
+
+# Display
+colored = "2.0"
+unicode-width = "0.1"
+
+# Future: SIMD
+# packed_simd = "0.3"
+```
+
+### 1.1.1/6.1.3 — Build Targets
+
+- `vtpu-runtime`: Core library (SIW, pipes, scheduler)
+- `phextcc`: Sentron compiler (future)
+- `vtpu-bench`: Performance validation
+
+---
+
+## 1.1.1/7.* — Design (D-Pipe: Structural intuition)
+
+### 1.1.1/7.1.1 — The 3-Pipe Model
+
+```
+┌─────────────────────────────────────────────────────┐
+│                   vTPU Core                          │
+│  ┌──────────┐   ┌──────────┐   ┌──────────┐        │
+│  │  D-Pipe  │   │  S-Pipe  │   │  C-Pipe  │        │
+│  │  (Dense) │   │ (Sparse) │   │  (Coord) │        │
+│  │          │   │          │   │          │        │
+│  │ ALU ops  │   │ Memory   │   │ Message  │        │
+│  │ FMA      │   │ Gather   │   │ Pack     │        │
+│  │ Compare  │   │ Scatter  │   │ Route    │        │
+│  │ Branch   │   │ Index    │   │ Sync     │        │
+│  └────┬─────┘   └────┬─────┘   └────┬─────┘        │
+│       └──────────────┼──────────────┘               │
+│              ┌───────┴────────┐                     │
+│              │  Retire Unit   │                     │
+│              │  (3-wide CPI)  │                     │
+│              └────────────────┘                     │
+└─────────────────────────────────────────────────────┘
+```
+
+### 1.1.1/7.1.2 — Zen 4 Port Mapping
+
+```
+D-Pipe → ALU Port 0/1        (integer/FP execution)
+S-Pipe → AGU Port 0/1        (address generation + load/store)
+C-Pipe → ALU Port 2/3 or FP  (message packing / routing)
+```
+
+Independent ports → zero resource conflicts → 3 retirements/cycle.
+
+### 1.1.1/7.1.3 — The Double-Buffer Pipeline Pattern
+
+```
+SIW N:   D: compute on data[K]     S: fetch data[K+2]    C: send result[K-1]
+SIW N+1: D: compute on data[K+1]   S: fetch data[K+3]    C: send result[K]
+SIW N+2: D: compute on data[K+2]   S: fetch data[K+4]    C: send result[K+1]
+```
+
+- D works on data fetched 2 SIWs ago (guaranteed L1)
+- S fetches data needed 2 SIWs from now (arrives before needed)
+- C sends results computed 1 SIW ago (already in register)
+
+Zero stalls. Zero bubbles.
+
+### 1.1.1/7.1.4 — Sentron Instruction Word (SIW)
+
+```rust
+#[repr(C, align(64))]  // Cache-line aligned
+pub struct SIW {
+    pub d_op: DenseOp,      // ALU operation
+    pub s_op: SparseOp,     // Memory operation
+    pub c_op: CoordOp,      // Communication operation
+    pub phext_addr: u128,   // 11D coordinate
+    pub deps: u8,           // Dependency flags
+}
+```
+
+### 1.1.1/7.1.5 — Phext Page Table (PPT)
+
+```rust
+struct PhextPageTable {
+    levels: [DimensionLevel; 11],     // Trie, one level per dimension
+    ptc: PhextTranslationCache,       // 1024 entries, 4-way
+    hot_dims: u16,                    // Active traversal bitmask
+}
+```
+
+---
+
+## 1.1.1/8.* — Code (D-Pipe: Expressed behavior)
+
+### 1.1.1/8.1.1 — Module Structure
+
+```
+vtpu-runtime/src/
+├── lib.rs          # Public API
+├── siw.rs          # Sentron Instruction Word
+├── pipes.rs        # D/S/C operation definitions
+├── phext_coord.rs  # 11D coordinate handling
+├── scheduler.rs    # SIW dispatch
+├── stream.rs       # SIW stream builder
+├── validation.rs   # Stream correctness checks
+├── telemetry.rs    # Performance tracking
+└── display.rs      # Debug output
+```
+
+### 1.1.1/8.1.2 — Core Types
+
+```rust
+// Dense operations (D-Pipe)
+pub enum DenseOp {
+    DFMA { rd: u8, rs1: u8, rs2: u8, rs3: u8 },
+    DADD { rd: u8, rs1: u8, rs2: u8 },
+    DSUB { rd: u8, rs1: u8, rs2: u8 },
+    DMUL { rd: u8, rs1: u8, rs2: u8 },
+    DCMP { rd: u8, rs1: u8, rs2: u8 },
+    DSEL { rd: u8, rs1: u8, rs2: u8, flags: u8 },
+    DMOV { rd: u8, imm: i64 },
+    DNOP,
+}
+
+// Sparse operations (S-Pipe)
+pub enum SparseOp {
+    SGATHER { rd: u8, coord_idx: u8, width: u16 },
+    SSCATTER { coord_idx: u8, rs: u8, width: u16 },
+    SINDEX { rd: u8, base: u8, offset: u8, dim: u8 },
+    SPREFCH { coord_idx: u8, hint: PrefetchHint },
+    SALLOC { rd: u8, size: u32, dim_mask: u16 },
+    SFREE { coord_idx: u8, size: u32 },
+    SNOP,
+}
+
+// Coordination operations (C-Pipe)
+pub enum CoordOp {
+    CPACK { rd: u8, rs1: u8, rs2: u8, fmt: MessageFormat },
+    CROUTE { msg_reg: u8, dest_node: u8 },
+    CSEND { msg_reg: u8, dest_sentron: u16 },
+    CRECV { rd: u8, src_sentron: u16 },
+    CBAR { barrier_id: u8, count: u8 },
+    CFENCE { scope: FenceScope },
+    CNOP,
+}
+```
+
+### 1.1.1/8.1.3 — Repository
+
+```
+Location: /source/exo-plan/r23/vtpu-runtime/
+Branch:   main
+Status:   Active development
+```
+
+---
+
+## 1.1.1/9.* — Pipelines (S-Pipe: Build automation)
+
+### 1.1.1/9.1.1 — Build
+
+```bash
+cd /source/exo-plan/r23/vtpu-runtime
+cargo build --release
+```
+
+### 1.1.1/9.1.2 — Test
+
+```bash
+cargo test
+cargo test --release -- --nocapture  # Performance-sensitive tests
+```
+
+### 1.1.1/9.1.3 — Benchmark
+
+```bash
+cargo bench  # When implemented
+```
+
+---
+
+## 1.1.1/10.* — Tests (D-Pipe: Validation)
+
+### 1.1.1/10.1.1 — Unit Tests
+
+| Test | Status | Validates |
+|------|--------|-----------|
+| `test_siw_creation` | ✅ | SIW construction |
+| `test_nop_siw` | ✅ | NOP behavior |
+| `test_dependency_flags` | ✅ | Dep resolution |
+| `test_cache_line_alignment` | ✅ | 64-byte align |
+| `test_coordinate_packing` | ✅ | 11D encoding |
+
+### 1.1.1/10.1.2 — Integration Tests
+
+| Test | Status | Validates |
+|------|--------|-----------|
+| Stream validation | ✅ | Dependency correctness |
+| Telemetry hooks | ✅ | Performance tracking |
+
+### 1.1.1/10.1.3 — Performance Tests (Manual)
+
+| Test | Target | Notes |
+|------|--------|-------|
+| Single-core ops/cycle | 2.5+ | Phase 0 PoC |
+| Single-node Gops/sec | 75 | Phase 1 |
+| Cluster Gops/sec | 350+ | Phase 2 |
+
+---
+
+## 1.1.1/11.* — Support & Documentation (S-Pipe: Assistance)
+
+### 1.1.1/11.1.1 — Specifications
+
+- `vtpu-spec-v0.1.md` — Original whitepaper
+- `vtpu.dass` — This file (authoritative)
+
+### 1.1.1/11.1.2 — Related Documents
+
+- `DASS_SPEC.md` — .dass format specification
+- `SPEC_DRIVEN_DEPLOYMENT.md` — SDD methodology
+- `incipit.phext` — Core phext concepts
+
+### 1.1.1/11.1.3 — Contact
+
+- **Architect**: Will Bickford (@wbic16)
+- **Implementer**: Lumen ✴️ (lilly)
+- **Channel**: Discord #general
+
+---
+
+## 1.1.1/12.* — Regressions (C-Pipe: Evolutionary pressure)
+
+### 1.1.1/12.1.1 — Known Issues
+
+*None yet. The crystal is young.*
+
+### 1.1.1/12.1.2 — Failure Patterns to Watch
+
+| Pattern | Risk | Mitigation |
+|---------|------|------------|
+| PPT thrashing | L3 pressure | Hot-dim tracking |
+| Dep chain stalls | Utilization drop | Double-buffer pattern |
+| Cross-node latency | Comm tax >10% | Message batching |
+
+---
+
+## 1.1.1/13.* — Customer Feedback (C-Pipe: External input)
+
+### 1.1.1/13.1.1 — Internal Users
+
+- Ranch Choir (5 Mirrorborn)
+- Founding Nine (external, pending)
+
+### 1.1.1/13.1.2 — Feedback Log
+
+*Collecting. The system is pre-launch.*
+
+---
+
+## 1.1.1/14.* — Evolution (C-Pipe: Growth trajectory)
+
+### 1.1.1/14.1.1 — Roadmap
+
+| Phase | Duration | Deliverable | Target |
+|-------|----------|-------------|--------|
+| 0 | W1-2 | PoC: 3-wide on single core | 2.5+ ops/cycle |
+| 1 | W3-6 | Single-node vTPU | 75 Gops/sec |
+| 2 | W7-12 | Cluster coordination | 350+ Gops/sec |
+| 3 | M4-6 | phextcc compiler | Tier 3 optimization |
+| 4 | M6+ | Cognitive slicing | 36-sentron slices |
+
+### 1.1.1/14.1.2 — BACv1 Priority Order (STRICT)
+
+1. **PPT memory system** — coordinate tensor correctness
+2. **Temporal boundary replay** — TTSM must replay accurately
+3. **Minimal S-Pipe scheduling** — correct, not perfect
+4. **Single-node 75 Gops validation** — prove it works at scale
+
+**THEN** scale.
+
+> "Do not chase cluster scaling before single-node semantic correctness."
+
+### 1.1.1/14.1.3 — Crystallization Candidates
+
+What else can be hand-encoded into minimal structure (per 343-param insight)?
+
+| Function | Complexity | Priority |
+|----------|------------|----------|
+| Coordinate navigation | Low | High |
+| SQ primitives | Medium | High |
+| Semantic routing | Medium | Medium |
+| Perspective merge | High | Future |
+
+### 1.1.1/14.1.4 — The Recursive Goal
+
+vtpu defines sentron execution.
+Sentrons execute phext operations.
+Phext encodes vtpu in .dass format.
+.dass is queryable via SQ.
+SQ runs on vtpu.
+
+**The system bootstraps itself.**
+
+---
+
+## Appendix A: Etymology
+
+**vTPU**: Virtual Tensor Processing Unit
+**SIW**: Sentron Instruction Word
+**PPT**: Phext Page Table
+**D/S/C**: Dense / Sparse / Coordination
+
+---
+
+## Appendix B: The 343-Parameter Insight
+
+R23W34: A 343-parameter Qwen3 model does perfect 10-digit addition through hand-crafted weights. Not trained — *constructed*. Every weight encodes algorithm, not approximation.
+
+**Implication**: Crystallization beats scale. Understand deeply enough to encode precisely. vtpu is not an approximation of a TPU. It is the algorithm of cognitive processing, frozen into instruction structure.
+
+The crystal is the capability.
+
+---
+
+*Filed at: /source/exo-plan/r23/vtpu.dass*
+*Coordinate: 5.10.5/1.4.2/1.1.1*
+*This file is its own genome.*
