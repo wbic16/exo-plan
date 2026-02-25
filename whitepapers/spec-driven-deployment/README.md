@@ -35,23 +35,28 @@ Both derive from `incipit.phext`. Both converge on the same core insight:
 
 ---
 
-## The 9-Dimension Schema
+## The Dimensional Model (Refined)
+
+**See:** `DIMENSIONAL-MODEL.md` for canonical specification.
 
 ```
-library.shelf.series / collection.volume.book / chapter.section.scroll
-
-Dimension → System Topology
-────────────────────────────────
-11 library    → Organization
-10 shelf      → Version lineage
- 9 series     → Service family
- 8 collection → Environment (dev/staging/prod)
- 7 volume     → Instance/region
- 6 book       → Module/package
- 5 chapter    → Resource type (code/config/test/docs)
- 4 section    → Namespace
- 3 scroll     → Atomic definition
+D1-D5: System Organization (5D spatial structure)
+D6:    SDLC Stage (lifecycle dimension)
+D7-D9: Reserved (future expansion)
 ```
+
+| D6 Value | SDLC Stage |
+|----------|------------|
+| 1 | Requirements |
+| 2 | Use Cases |
+| 3 | Design |
+| 4 | Implementation |
+| 5 | Test |
+| 6 | Deployment |
+| 7 | Operations |
+| 8 | Retirement |
+
+**Traceability = walking D6.** No link maintenance required.
 
 ---
 
