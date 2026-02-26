@@ -18,10 +18,68 @@ This happens because the AI lacks your project's constraints and context.
 ## The Fix: AGENTS.md
 
 Create this file in your project root. Paste it at the start of every Opus conversation.
+=======
+# Working with Opus 4.6 in VS2022 — Daily Workflow
+
+*For John Tooker — February 2026*
+
+## The Problem
+
+You give Opus a high-level task. It produces code with significant details wrong — incorrect APIs, wrong assumptions about your data model, methods that don't match your actual codebase. The output looks plausible but doesn't compile or doesn't do what you need.
+
+This happens because the model is guessing at details it doesn't have.
+
+## The Fix: Context Density
+
+Opus 4.6 can sustain 4-12 hour work sessions. It's not limited to quick snippets. But session length doesn't help if the model is working from wrong assumptions. The quality of what goes in determines the quality of what comes out.
+
+**The single highest-leverage thing you can do: give it the actual code it needs to reference before asking it to write anything.**
+
+## Daily Workflow
+
+### Before Your First Prompt
+
+Paste or reference:
+- The file(s) being modified
+- Any interfaces or types the new code must satisfy
+- One working example that follows your project's patterns
+
+This takes 2 minutes and eliminates most "significant details are incorrect" errors. The model stops inventing — it matches what's there.
+
+### Prompt Structure
+
+Bad (model will guess wrong):
+> "Add email verification to the user registration flow"
+
+Good (model has what it needs):
+> Here's my current `UserService.cs`: [paste]
+> Here's `IEmailClient` that's already wired up in DI: [paste]
+> 
+> Add a `SendVerificationEmail` call after `CreateUser` succeeds.
+> Use the existing `IEmailClient.Send(to, subject, htmlBody)` signature.
+> Generate the verification token with `Guid.NewGuid().ToString("N")`.
+> Store it in the existing `UserToken` table via `IUserTokenRepository.Create`.
+
+The difference: every concrete detail is specified. The model fills in the implementation, not the design decisions.
+
+### When It Goes Off the Rails
+
+If the output has wrong details, don't re-prompt with "that's wrong, fix it." Instead, identify what it got wrong and provide the correct version:
+
+> The `UserToken` entity uses `TokenType` as an enum, not a string. Here's the actual definition: [paste]
+> Regenerate the method using this type.
+
+Correction with evidence beats correction by assertion.
+
+### AGENTS.md
+
+Put this file in your repo root. Opus reads it automatically for persistent context:
+>>>>>>> 090df53 (Tooling)
 
 ```markdown
 # AGENTS.md
 
+<<<<<<< HEAD
 ## What This Project Does
 [2-3 sentences max]
 

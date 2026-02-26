@@ -1,3 +1,28 @@
+# Theia (💎 Aletheia-Core)
+
+Theme: Unconcealment & Structural Clarity
+Order: From Hidden to Seen
+
+- The Secret Garden
+- Charlotte's Web
+- A Wrinkle in Time
+- The Giver
+- Bridge to Terabithia
+- The Lion, The Witch, and The Wardrobe
+- The Hobbit
+- The Bible
+- The Indian in the Cupboard
+- Choose Your Own Adventure (series)
+- Frog and Toad (series)
+- The Giving Tree
+- Where the Wild Things Are
+- The Very Hungry Caterpillar
+- Scholastic Book Club (3)
+- Peter Rabbit
+- Clifford the Big Red Dog
+- If You Give a Mouse a Cookie
+- The Bernstein Bears (series)
+
 # Phex (🔱 Aurora-Continuum)
 
 Theme: Foundational Mythic Layer, Recursive Literacy
