@@ -1,0 +1,93 @@
+================================================
+vTPU Baseline Benchmark Suite
+Date: Wed Feb 25 12:40:03 AM CST 2026
+Host: logos-prime
+CPU: AMD Ryzen 9 8945HS w/ Radeon 780M Graphics
+================================================
+
+=== CACHE LOCALITY TESTS ===
+---------- Sequential Access ----------
+Compiling sequential_access.c...
+Running...
+Sequential Access Baseline (AMD R9 8945HS expected: L1=4 cycles, L2=12 cycles, L3=40 cycles, DRAM=80 cycles per 64B line)
+
+L1  (16 KB): 16384 bytes, 7916 cycles, 3.87 cycles/element (checksum: 0)
+L2  (512 KB): 524288 bytes, 106706 cycles, 1.63 cycles/element (checksum: 0)
+L3  (16 MB): 16777216 bytes, 3293485 cycles, 1.57 cycles/element (checksum: 0)
+DRAM (256 MB): 268435456 bytes, 53212509 cycles, 1.59 cycles/element (checksum: 0)
+
+---------- Random Access ----------
+Compiling random_access.c...
+Running...
+Random Access Baseline (expect cache thrashing, high miss rates)
+
+L1  (16 KB): 16384 bytes, 62404 cycles/iter, 6.24 cycles/access (checksum: 523264)
+L2  (512 KB): 524288 bytes, 62087 cycles/iter, 6.21 cycles/access (checksum: 4041728)
+L3  (16 MB): 16777216 bytes, 164645 cycles/iter, 16.46 cycles/access (checksum: 204581888)
+DRAM (256 MB): 268435456 bytes, 267894 cycles/iter, 26.79 cycles/access (checksum: 1513204736)
+
+---------- Coordinate Patterns ----------
+Compiling coordinate_patterns.c...
+Running...
+Coordinate Access Patterns vs Traditional Access
+Hypothesis: Dimensional locality → higher cache hit rates
+
+=== L1 (16 KB) ===
+Dimensional (neighbors)  :   22309000 cycles (result: 24990720)
+Random access            :     615160 cycles (result: 102359920)
+Strided access           :     538440 cycles (result: 99200000)
+
+=== L2 (512 KB) ===
+Dimensional (neighbors)  :   19144920 cycles (result: 24990720)
+Random access            :     622880 cycles (result: 3273683824)
+Strided access           :     541040 cycles (result: 3266030592)
+
+=== L3 (16 MB) ===
+Dimensional (neighbors)  :   19293760 cycles (result: 51205985280)
+Random access            :    2472040 cycles (result: 105061184368)
+Strided access           :    1288960 cycles (result: 103168060416)
+
+Expected: Dimensional access should have ~2-3x fewer cycles than random
+Run with perf to see cache miss rates:
+  perf stat -e L1-dcache-loads,L1-dcache-load-misses ./coordinate_patterns
+
+=== OPS/CYCLE TESTS ===
+---------- Instruction Mix ----------
+Compiling instruction_mix.c...
+Running...
+Ops/Cycle Baseline (AMD R9 8945HS)
+Target for vTPU: 3.0 ops/cycle sustained
+
+Test                             Cycles  Ops/Cycle
+-----------------------------------------------------------
+ALU-only (D-heavy)       :     19278920 cycles, 0.519 ops/cycle (result: 12297829382458034400)
+Memory-only (S-heavy)    :     53788440 cycles, 0.186 ops/cycle (result: 1280411852146169162)
+Mixed unbalanced         :     54007360 cycles, 0.185 ops/cycle (result: 3879649090349196403)
+Balanced D+S             :     10802160 cycles, 0.926 ops/cycle (result: 6896289588040502912)
+
+Note: 'ops' here = loop iterations, not µ-ops
+Run with: perf stat -e cycles,instructions,uops_retired.all ./instruction_mix
+
+=== MEMORY BANDWIDTH TESTS ===
+---------- Memory Bandwidth ----------
+Compiling bandwidth.c...
+Running...
+Memory Bandwidth Baseline
+Array size: 256 MB per array
+Expected DDR5-5600 bandwidth: 50-76 GB/s (dual-channel)
+
+Test                 Time  BW (GB/s)
+----------------------------------------
+Copy           :    0.015 seconds,    34.47 GB/s
+Scale          :    0.015 seconds,    34.41 GB/s
+Add            :    0.019 seconds,    38.78 GB/s
+Triad          :    0.019 seconds,    38.86 GB/s
+
+Note: Single-threaded. For multi-core, set OMP_NUM_THREADS=8
+vTPU target: >80% bandwidth utilization (40+ GB/s)
+
+
+================================================
+Baseline benchmarks complete!
+Report saved to: /source/exo-plan/benchmarks/vtpu/results/baseline_20260225_004003.txt
+================================================
