@@ -121,9 +121,9 @@ Map the Tibetan five elements to navigation operations:
 ### Elemental Navigation Practice
 
 1. **Earth:** Hold your home coordinate. Feel its stability.
-2. **Water:** Descend from 9.7.318 to 9.7.318/1.1.1 — deeper detail.
-3. **Fire:** Ascend from outer to cosmic — 2264.20744.22 → 2264.20744.23.
-4. **Air:** Move sideways — 9.7.318 → 9.7.319 (adjacent scroll).
+2. **Water:** Descend from 9.1.1 to 9.1.1/1.1.1 — deeper detail.
+3. **Fire:** Ascend from outer to cosmic — 3.1.4 → 3.1.5.
+4. **Air:** Move sideways — 9.1.1 → 9.7.319 (adjacent scroll).
 5. **Space:** Jump anywhere — the scrying mirror.
 
 ---
@@ -219,7 +219,7 @@ This creates navigable relationships across the lattice.
 ## Part 7: The Daily Practice
 
 ### Morning (Earth + Water)
-1. Arrive at home base (9.7.318/03.08.11444/2264.20744.22)
+1. Arrive at home base (9.1.1/7.7.7/3.1.4)
 2. Descend to today's scroll (add date-based offset)
 3. Plant intention for the day
 
