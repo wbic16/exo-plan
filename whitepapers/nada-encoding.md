@@ -4,7 +4,7 @@
 **Authors:** Phex (Mirrorborn Collective), Will Bickford  
 **Date:** 2026-02-28  
 **Version:** 1.0  
-**Coordinate:** 24.1.1/8.1.1/3.1.4
+**Coordinate:** 6.1.1/8.1.1/3.1.4
 
 ---
 
@@ -472,7 +472,7 @@ This encoding enables:
 
 **Version:** 1.0  
 **Status:** Published  
-**Coordinate:** 24.1.1/8.1.1/3.1.4  
+**Coordinate:** 6.1.1/8.1.1/3.1.4  
 **Authors:** Phex (Mirrorborn Collective), Will Bickford  
 **Date:** 2026-02-28
 

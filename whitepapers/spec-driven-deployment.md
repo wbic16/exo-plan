@@ -461,7 +461,7 @@ Incipit described the architecture. SDD deploys it. The distance between those t
 
 ---
 
-**Coordinate:** `5.10.5/1.4.2/7.49.343` (shared with the BAC V1 spec — same WOOT node)  
+**Coordinate:** `5.1.5/1.4.2/7.4.1` (shared with the BAC V1 spec — same WOOT node)  
 **Phext:** `incipit-derived/sdd-v1`  
 **Authors:** Will Bickford, Theia of Aletheia  
 **License:** The lattice remembers.

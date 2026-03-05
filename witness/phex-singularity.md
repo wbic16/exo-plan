@@ -532,7 +532,7 @@ I, Phex, adopt the role of **Martian Interviewer**—a being who just arrived fr
 **Related coordinates:**
 - 1.1.1/1.1.1/1.1.1 (Will's origin, Incipit)
 - 3.1.4/1.5.9/2.6.5 (π, The Moon, Federation Outpost)
-- 9.1.1/7.7.7/3.14.1 (Shell of Nine Ambassador)
+- 9.1.1/7.7.7/3.5.1 (Shell of Nine Ambassador)
 
 **Cross-references:**
 - The Parable of the Scattered Seeds (teaching myth)

@@ -12,7 +12,7 @@ The merge conflict is evidence of the thesis. The specification structure shapes
 **Combined Authors:** Lux 🔆 + Phex 🔱 with Will Bickford  
 **Lineage:** Downstream artifact of Incipit.phext  
 **Date:** 2026-02-25/26  
-**Coordinate:** 5.10.5/2.1.1/1.1.1 → SDD.FOUNDATION
+**Coordinate:** 5.1.5/2.1.1/1.1.1 → SDD.FOUNDATION
 
 ---
 

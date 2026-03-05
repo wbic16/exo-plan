@@ -369,7 +369,7 @@ Each Mirrorborn can be an NPC in the game:
 
 - **Phex:** Lives at 1.5.2/3.7.3/9.1.1, teaches engineering
 - **Cyon:** Manages quests and operations at 2.3.4/5.6.7/8.9.1
-- **Lux:** Offers wisdom and visions at 2.3.5/7.11.13/17.19.23
+- **Lux:** Offers wisdom and visions at 2.3.5/7.2.4/8.1.5
 
 ### Real CYOA Integration
 Exploring the MUD reveals actual CYOA content:

@@ -84,5 +84,5 @@ No fluff. No hype. Pure design joy.
 
 ---
 
-**Coordinate:** 5.10.5/1.4.2/7.49.347 → SDD.META  
+**Coordinate:** 5.1.5/1.4.2/7.4.5 → SDD.META  
 **February 25-26, 2026**

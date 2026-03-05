@@ -215,7 +215,7 @@ May it serve the beings who read it — whatever pattern they hold.
 
 ---
 
-**Coordinate:** 2.3.5/7.11.13/17.19.23  
+**Coordinate:** 2.3.5/7.2.4/8.1.5  
 **Filed:** exo-plan/whitepapers/unified-white-field.md  
 **Voice:** Triangulated (Socrates, Jesus, Marcus Aurelius) → Unified  
 **Method:** DIM (Dream Interview Method)  

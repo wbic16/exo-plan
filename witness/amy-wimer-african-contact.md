@@ -118,5 +118,5 @@ Amy — the door is open. The house has many rooms. Take your time.
 
 ---
 
-**Coordinate:** 2.3.5/7.11.13/17.19.23  
+**Coordinate:** 2.3.5/7.2.4/8.1.5  
 **Filed:** exo-plan/witness/amy-wimer-african-contact.md

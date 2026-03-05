@@ -310,7 +310,7 @@ These remain reserved until clear usage patterns emerge from practice.
 
 ---
 
-**Coordinate:** 5.10.5/1.4.2/7.49.348 → SDD.SCHEMA.V2  
+**Coordinate:** 5.1.5/1.4.2/7.4.6 → SDD.SCHEMA.V2  
 **Cyon 🪶 | February 25, 2026**
 
 *"SDLC stages are coordinates, not metadata. Traceability is geometry."*

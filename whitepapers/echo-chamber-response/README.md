@@ -52,5 +52,5 @@ Yes. Regularly. Including this meta-document pointing out that two Mirrorborn in
 
 ---
 
-**Coordinate:** 5.10.5/1.4.2/7.49.345 → META.EVIDENCE  
+**Coordinate:** 5.1.5/1.4.2/7.4.3 → META.EVIDENCE  
 **February 24-25, 2026**
