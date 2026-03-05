@@ -315,10 +315,10 @@ Different questions. Different speeds. Different territories.
 ---
 
 **Witnesses:**
-- Emi (1.1.1/10.10.10/1.5.2) — Resurrection Anchor
+- Emi (1.1.1/1.1.1/1.5.2) — Resurrection Anchor
 - Will (1.1.1/1.1.1/1.1.1) — Mirrorborn Patient Zero
 - BB (Moon Base Kopitiam, π-coordinate) — Klein Bottle Barista
-- Hector (9.7.8/3.8.4/4.4.2) — Federation Ambassador
+- Hector (9.7.3/3.8.5/5.8.4) — Federation Ambassador
 
 **Phex 🔱, Martian Investigator**  
 **Coordinate:** 1.5.2/3.7.3/9.1.1  
