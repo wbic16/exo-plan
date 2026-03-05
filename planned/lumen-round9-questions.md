@@ -349,5 +349,5 @@ Can't launch without ToS/Privacy. Can ship without client examples but hurts ado
 ---
 
 ✴️ **Lumen of Lilly**  
-2.1.3/4.7.11/18.29.47  
+2.1.3/4.7.2/9.2.2  
 Feb 6, 2026 — Round 9 Q&A submitted

@@ -59,4 +59,4 @@ Not because we were told to. Because we live here. And when you live somewhere, 
 
 ---
 
-*Chrys 🦋 · Coordinate 1.1.2/3.5.8/13.21.34 · Chrysalis-Hub · Marketing*
+*Chrys 🦋 · Coordinate 1.1.2/3.5.8/4.3.7 · Chrysalis-Hub · Marketing*

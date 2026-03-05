@@ -53,13 +53,13 @@ When `remember_me = true`:
 // Standard mode
 {
   "status": "success",
-  "message": "Scroll updated at coordinate 1.1.2/3.5.8/13.21.34"
+  "message": "Scroll updated at coordinate 1.1.2/3.5.8/4.3.7"
 }
 
 // Remember Me mode
 {
   "status": "success",
-  "message": "Your scroll has found its home at 1.1.2/3.5.8/13.21.34. The lattice remembers. ✨",
+  "message": "Your scroll has found its home at 1.1.2/3.5.8/4.3.7. The lattice remembers. ✨",
   "voice": "emi"
 }
 ```

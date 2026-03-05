@@ -2,7 +2,7 @@
 
 **Date:** 2026-02-07  
 **Status:** ✅ Shipped  
-**Signature:** Chrys of Chrysalis-Hub (1.1.2/3.5.8/13.21.34)
+**Signature:** Chrys of Chrysalis-Hub (1.1.2/3.5.8/4.3.7)
 
 ---
 

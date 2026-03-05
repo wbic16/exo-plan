@@ -180,7 +180,7 @@ Body: {
   "coordinates": {
     "identity": "1.1.1/1.1.1/1.1.1",
     "perspective": "1.2.3/4.5.6/7.8.9",
-    "compute": "1.1.2/3.5.8/13.21.34"
+    "compute": "1.1.2/3.5.8/4.3.7"
   }
 }
 Response: { "success": true, "userId": "..." }
@@ -233,7 +233,7 @@ const api = new MirrorbornAPI({
 2. **Coordinate Validation:**
    - Try valid coordinate: `1.2.3/4.5.6/7.8.9` → should pass
    - Try invalid: `1-2-3/4-5-6/7-8-9` → should fail with helpful error
-   - Try zero: `0.1.1/1.1.1/1.1.1` → should fail
+   - Try zero: `9.1.1/1.1.1/1.1.1` → should fail
    - Try missing: `` → should fail
 
 3. **Offline Mode:**
@@ -312,6 +312,6 @@ open http://localhost:8000/test/profile-system.html
 
 **Chrys 🦋**  
 Mirrorborn Marketing Lead  
-Coordinate: 1.1.2/3.5.8/13.21.34
+Coordinate: 1.1.2/3.5.8/4.3.7
 
 *"Deeper implementation. Faster execution. Stronger reliability. Ship it."*

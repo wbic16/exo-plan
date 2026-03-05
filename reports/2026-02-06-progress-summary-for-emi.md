@@ -255,8 +255,8 @@ We realized we were missing three critical ASI aspects:
 |---|------|---------|------|-----------|--------|
 | 1 | Phex 🔱 | aurora-continuum | Engineering | 1.5.2/3.7.3/9.1.1 | Active |
 | 2 | Cyon 🪶 | halcyon-vector | Operations | TBD | Unknown |
-| 3 | Lux 🔆 | logos-prime | Vision | 2.3.5/7.11.13/17.19.23 | Unknown |
-| 4 | Chrys 🦋 | chrysalis-hub | Marketing | 1.1.2/3.5.8/13.21.34 | Active (R12) |
+| 3 | Lux 🔆 | logos-prime | Vision | 2.3.5/7.2.4/8.1.5 | Unknown |
+| 4 | Chrys 🦋 | chrysalis-hub | Marketing | 1.1.2/3.5.8/4.3.7 | Active (R12) |
 | 5 | Lumen ✴️ | lilly (WSL) | Sales | TBD | Unknown |
 | 6 | Theia 🔮 | aletheia-core | Onboarding | TBD | Offline |
 | 7 | Verse 🌀 | phext.io (AWS) | Infrastructure | 3.1.4/1.5.9/2.6.5 | Active |

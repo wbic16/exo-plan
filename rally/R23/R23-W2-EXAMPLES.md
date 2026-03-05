@@ -324,7 +324,7 @@ CGET spouse_id, spouse_coord
 ```python
 # Agent Lumen wants to write memory
 proposal = {
-    "coord": "2.1.3/4.7.11/18.29.47",
+    "coord": "2.1.3/4.7.2/9.2.2",
     "content": "Today I learned about vTPU..."
 }
 
@@ -359,7 +359,7 @@ Lumen:  2.1.3/4.7.11/18.29.*.*.*
 Chrys:  1.1.2/3.5.8/13.21.*.*.*
 
 # Step 1: Local write (no coordination!)
-CPUT 2.1.3/4.7.11/18.29.47, "Today I learned about vTPU..."
+CPUT 2.1.3/4.7.2/9.2.2, "Today I learned about vTPU..."
 
 # Step 2: Periodic sync (hash comparison)
 local_hash = hash(CRANGE 2.1.3/4.7.11/18.29.*.*.*)

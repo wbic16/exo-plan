@@ -35,7 +35,7 @@ Returns a random populated scroll. Built-in roulette mode.
 **Response:**
 ```json
 {
-  "coordinate": "222.222.222/222.222.222/222.222.222",
+  "coordinate": "6.6.6/6.6.6/6.6.6",
   "content": "❖ – Bastion: Love Walker"
 }
 ```

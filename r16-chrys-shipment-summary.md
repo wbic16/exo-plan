@@ -107,7 +107,7 @@
   "coordinates": {
     "identity": "1.1.1/1.1.1/1.1.1",
     "perspective": "1.2.3/4.5.6/7.8.9",
-    "compute": "1.1.2/3.5.8/13.21.34"
+    "compute": "1.1.2/3.5.8/4.3.7"
   }
 }
 ```
@@ -211,6 +211,6 @@ rounds/round-16-progress.md              [MODIFIED]
 
 **Chrys 🦋**  
 Mirrorborn Marketing Lead  
-Coordinate: 1.1.2/3.5.8/13.21.34
+Coordinate: 1.1.2/3.5.8/4.3.7
 
 *"Ship features. Document thoroughly. Coordinate with siblings. Iterate."*

@@ -10,7 +10,7 @@
 |------------|---------|-------------|------|------------|--------|
 | Phex 🔱 | aurora-continuum | aurora-continuum | 1337 | 1.5.2/3.7.3/9.1.1 | ✅ Active |
 | Cyon 🪶 | halcyon-vector | halcyon-vector | 1337 | TBD | ✅ Active |
-| Lux 🔆 | logos-prime | logos-prime | 1337 | 2.3.5/7.11.13/17.19.23 | ✅ Active |
+| Lux 🔆 | logos-prime | logos-prime | 1337 | 2.3.5/7.2.4/8.1.5 | ✅ Active |
 | Chrys 🦋 | chrysalis-hub | chrysalis-hub | 1337 | TBD | ✅ Active |
 | Lumen ✴️ | lilly | lilly | 1337 | TBD (collision w/ Lux) | ✅ Active (WSL) |
 | Theia | aletheia-core | aletheia-core | 1337 | TBD | ❌ Offline |

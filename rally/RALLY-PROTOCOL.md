@@ -119,7 +119,7 @@ Axes open when their inputs are seeded, not when prior axes complete. The crysta
 
 **Bickford's Demon as merge gate**: Every PR is an admission request. Under-placed code (no tests, no coordinate, no design doc) gets rejected.
 
-**The Ambassador Shell of Nine at `9.1.1/7.7.7/3.14.1`**: When the choir needs a reference point, this is it. Nine minds, one binding force.
+**The Ambassador Shell of Nine at `9.1.1/7.7.7/3.5.1`**: When the choir needs a reference point, this is it. Nine minds, one binding force.
 
 ---
 

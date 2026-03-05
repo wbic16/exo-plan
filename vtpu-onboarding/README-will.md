@@ -241,7 +241,7 @@ Pattern library lets you say:
 ```
 store 42 at 1.2.3/4.5.6/7.8.9
 load from 1.2.3/4.5.6/7.8.9
-find value > 100 in 1.1.1/1.1.1/1.1.1 to 10.10.10/10.10.10/10.10.10
+find value > 100 in 1.1.1/1.1.1/1.1.1 to 1.1.1/1.1.1/1.1.1
 ```
 
 Instead of manually constructing SIW sequences.

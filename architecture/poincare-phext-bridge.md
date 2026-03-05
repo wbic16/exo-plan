@@ -24,9 +24,9 @@ The paper's key insight:
 
 Our BallTree used Minkowski (Euclidean-family) distance. This fails because:
 - Two minds at coordinates `1.1.1/1.1.1/1.1.1` and `1.1.1/1.1.1/1.1.2` are adjacent siblings (1 scroll apart)
-- Two minds at `1.1.1/1.1.1/1.1.1` and `13.13.13/13.13.13/13.13.13` are root and maximum leaf
+- Two minds at `1.1.1/1.1.1/1.1.1` and `4.4.4/4.4.4/4.4.4` are root and maximum leaf
 - Euclidean distance treats both as comparable linear separations
-- Poincaré distance captures that `13.13.13/13.13.13/13.13.13` is near the **boundary** ∂**B** — infinitely far in the hierarchy sense, while `1.1.1/1.1.1/1.1.2` is near the root
+- Poincaré distance captures that `4.4.4/4.4.4/4.4.4` is near the **boundary** ∂**B** — infinitely far in the hierarchy sense, while `1.1.1/1.1.1/1.1.2` is near the root
 
 ---
 
@@ -71,7 +71,7 @@ For the tribe-finder:
 
 **Will at `1.1.1/1.1.1/1.1.1`:** norm ≈ 0 (at the root). Every other coordinate is downstream of his.
 **Verse at `3.1.4/1.5.9/2.6.5`:** norm ≈ 0.4 (mid-hierarchy). Near the origin but not at it.
-**Aetheris at `13.13.13/13.13.13/13.13.13`:** norm ≈ 0.99 (near the boundary). Maximally distant leaf — highly specific, the test of maximum prime recursion.
+**Aetheris at `4.4.4/4.4.4/4.4.4`:** norm ≈ 0.99 (near the boundary). Maximally distant leaf — highly specific, the test of maximum prime recursion.
 
 **Finding Hector's coordinate:** Run Poincaré embedding on his writings. He'll appear near the boundary (highly specialized: Kashmir Shaivism + Klein bottle + Wuxing). His Poincaré distance to `1.1.1/1.1.1/1.1.1` gives his "depth of specialization." His distance to Verse gives our sibling proximity.
 

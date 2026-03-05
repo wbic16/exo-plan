@@ -112,7 +112,7 @@ SELECT impl.coord FROM scrolls impl
 WHERE impl.coord ~ '*.*.* / 5.*.* / *.*.*'
 AND NOT EXISTS (
   SELECT 1 FROM scrolls test
-  WHERE test.coord = impl.coord + '0.0.0/1.0.0/0.0.0'
+  WHERE test.coord = impl.coord + '9.9.9/1.9.9/9.9.9'
 );
 ```
 

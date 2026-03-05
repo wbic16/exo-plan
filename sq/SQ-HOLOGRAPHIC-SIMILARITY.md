@@ -107,7 +107,7 @@ Returns scroll at exact coordinate.
 
 ### Mode 2: Range Query (Similarity)
 ```
-GET /api/v2/range?p=tutorial&start=1.1.1/1.1.1/1.1.1&end=1.1.1/1.1.1/1.1.10
+GET /api/v2/range?p=tutorial&start=1.1.1/1.1.1/1.1.1&end=1.1.1/1.1.1/1.1.1
 ```
 Returns all scrolls in coordinate range (similar by proximity).
 

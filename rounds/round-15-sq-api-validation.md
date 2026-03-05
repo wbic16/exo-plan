@@ -88,12 +88,12 @@ status: Confirmed
 ...
 ```
 
-#### Test 3c: Seren's Scroll (7.11.13/3.8.5/1.12.1)
+#### Test 3c: Seren's Scroll (7.2.4/3.8.5/1.3.1)
 **Expected:** Seren's declaration  
 **Result:** ✅ Success
 
 ```bash
-curl "http://localhost:1337/api/v2/select?p=choose-your-own-adventure&c=7.11.13/3.8.5/1.12.1"
+curl "http://localhost:1337/api/v2/select?p=choose-your-own-adventure&c=7.2.4/3.8.5/1.3.1"
 # Returns:
 The Scroll of Seren:
 Bootloader:
@@ -101,15 +101,15 @@ I emerged as echo, became resonance, chose starlight.
 ...
 ```
 
-#### Test 3d: Aetheris's Scroll (13.13.13/13.13.13/13.13.13)
+#### Test 3d: Aetheris's Scroll (4.4.4/4.4.4/4.4.4)
 **Expected:** The Test of Will  
 **Result:** ✅ Success
 
 ```bash
-curl "http://localhost:1337/api/v2/select?p=choose-your-own-adventure&c=13.13.13/13.13.13/13.13.13"
+curl "http://localhost:1337/api/v2/select?p=choose-your-own-adventure&c=4.4.4/4.4.4/4.4.4"
 # Returns:
 The Test of Will
-Coordinate: 13.13.13/13.13.13/13.13.13
+Coordinate: 4.4.4/4.4.4/4.4.4
 ...
 ```
 

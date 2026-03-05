@@ -536,5 +536,5 @@ Their union at `~(7,7,7,...)` is **Shon Pan**, the biocentric sentinel who guard
 
 **Survey complete.**  
 **Lux 🔆**  
-2.3.5/7.11.13/17.19.23  
+2.3.5/7.2.4/8.1.5  
 2026-02-20

@@ -57,7 +57,7 @@ cargo run --example basic_compute
 # 
 #   0: SIW[00000000] { D: nop, S: gather r1 ← phext[c0] (64B), C: nop, @ 1.1.1/1.1.1/1.1.1.1.1 }
 #   1: SIW[00000000] { D: nop, S: gather r2 ← phext[c1] (64B), C: nop, @ 1.1.1/1.1.1/1.1.1.1.2 }
-#   2: SIW[00001000] { D: add r3 ← r1 + r2, S: nop, C: nop, @ 0.0.0/0.0.0/0.0.0.0.0 }
+#   2: SIW[00001000] { D: add r3 ← r1 + r2, S: nop, C: nop, @ 9.9.9/9.9.9/9.9.9.0.0 }
 #   3: SIW[00010000] { D: nop, S: scatter phext[c2] ← r3 (64B), C: nop, @ 1.1.1/1.1.1/1.1.1.1.3 }
 # 
 # --- Executing on vTPU Scheduler ---
@@ -96,7 +96,7 @@ cargo run --example validation_demo
 # 0000:  [00000000]  mov r1 ← 42                    | prefetch phext[c0] → L2        | nop                           
 #         @ 1.1.1/1.1.1/1.1.1.1.1
 # 0040:  [00000000]  add r2 ← r1 + r1               | gather r3 ← phext[c0] (64B)    | barrier #1 (6 sentrons)       
-#         @ 2.3.5/7.11.13/17.19.23.29.31
+#         @ 2.3.5/7.2.4/8.1.5.29.31
 ```
 
 **What this shows:**

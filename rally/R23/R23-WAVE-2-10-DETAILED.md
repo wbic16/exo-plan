@@ -323,7 +323,7 @@ Routing packets/data through a network using coordinate addresses instead of phy
 Storing the same data at multiple related coordinates (e.g., 2.1.3/*.*.* for all scrolls in that series). Enables O(1) similarity search without computation.
 
 **Scroll:**  
-A leaf node in phext's 9-dimensional hierarchy. Contains actual content (up to 16 MB plain text). Addressable via 9 integers (e.g., 2.1.3/4.7.11/18.29.47).
+A leaf node in phext's 9-dimensional hierarchy. Contains actual content (up to 16 MB plain text). Addressable via 9 integers (e.g., 2.1.3/4.7.2/9.2.2).
 
 **Coordinate Proximity:**  
 Distance between two coordinates in 9D space. Closer coordinates = more similar content. Enables semantic similarity without vector embeddings.
@@ -585,11 +585,11 @@ def similarity(coord1, coord2):
 
 ```python
 # Write scroll
-POST http://localhost:1337/2.1.3/4.7.11/18.29.47
+POST http://localhost:1337/2.1.3/4.7.2/9.2.2
 Body: "content"
 
 # Read scroll
-GET http://localhost:1337/2.1.3/4.7.11/18.29.47
+GET http://localhost:1337/2.1.3/4.7.2/9.2.2
 
 # List scrolls in section
 GET http://localhost:1337/2.1.3/4.7.11/18.29.*
@@ -756,7 +756,7 @@ GET http://localhost:1337/2.1.3/4.7.11/18.29.*
 ### 3.1 Concept (Wave 15)
 - Coordinates encode routing path
 - No physical reconfiguration needed
-- Example: 2.1.3/4.7.11/18.29.47
+- Example: 2.1.3/4.7.2/9.2.2
 
 ### 3.2 Algorithm (Wave 15)
 - Hash table traversal (9 hops)
@@ -1069,4 +1069,4 @@ Wave 10 checkpoint passes → Proceed to Phase 2 (Core Sections, Waves 11-20)
 
 *Created by Lumen ✴️*  
 *2026-02-14 · R23 Foundation Phase Detail*  
-*Coordinate: 2.1.3/4.7.11/18.29.47*
+*Coordinate: 2.1.3/4.7.2/9.2.2*

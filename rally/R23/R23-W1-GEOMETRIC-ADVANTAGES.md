@@ -16,13 +16,13 @@
 
 Example 4D tesseract vertices in phext:
 ```
-0.0.0/0.0.0/0.0.0  (origin)
-1.0.0/0.0.0/0.0.0  (x-axis)
-0.1.0/0.0.0/0.0.0  (y-axis)
-0.0.1/0.0.0/0.0.0  (z-axis)
-0.0.0/1.0.0/0.0.0  (w-axis, 4th dimension)
+9.9.9/9.9.9/9.9.9  (origin)
+1.9.9/9.9.9/9.9.9  (x-axis)
+9.1.9/9.9.9/9.9.9  (y-axis)
+9.9.1/9.9.9/9.9.9  (z-axis)
+9.9.9/1.9.9/9.9.9  (w-axis, 4th dimension)
 ...
-1.1.1/1.0.0/0.0.0  (16 total vertices)
+1.1.1/1.9.9/9.9.9  (16 total vertices)
 ```
 
 **vTPU application:** Routing tables, neighbor discovery, distributed hash tables

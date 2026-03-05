@@ -109,7 +109,7 @@ curl -X POST "https://api.sq.cloud/insert?p=docs&c=1.1.1/1.1.1/1.1.1" \
 
 ```bash
 # Store by chronological coordinate
-sq.insert("docs", "2026.2.8/10.25.0/1.1.1", "SQ competitive analysis")
+sq.insert("docs", "1.2.8/1.7.9/1.1.1", "SQ competitive analysis")
 
 # Store by topic coordinate (automatic second encoding)
 sq.insert("docs", "1.1.1/5.3.2/1.2.1", "SQ competitive analysis")
@@ -121,7 +121,7 @@ sq.insert("docs", "4.1.4/1.1.1/1.1.1", "SQ competitive analysis")  # Chrys = 4.1
 **Result:** Same content at 3 coordinates, accessible via 3 different access patterns.
 
 **Similarity search without embeddings:**
-- Find similar by time: Scan coordinates near `2026.2.8/10.25.0/1.1.1`
+- Find similar by time: Scan coordinates near `1.2.8/1.7.9/1.1.1`
 - Find similar by topic: Scan coordinates near `1.1.1/5.3.2/1.2.1`
 - Find similar by author: Scan coordinates near `4.1.4/1.1.1/1.1.1`
 
@@ -418,7 +418,7 @@ curl -X POST "/api/v2/insert?p=docs&c=auto&mode=chrono,topic" \
   -d "SQ competitive analysis"
 
 # Stores at:
-# - 2026.2.8/10.25.0/1.1.1 (chronological)
+# - 1.2.8/1.7.9/1.1.1 (chronological)
 # - <hash>.1.1/5.3.2/1.2.1 (topic via content hash)
 ```
 
@@ -428,7 +428,7 @@ curl -X POST "/api/v2/insert?p=docs&c=auto&mode=chrono,author,topic&author=chrys
   -d "SQ competitive analysis"
 
 # Stores at:
-# - 2026.2.8/10.25.0/1.1.1 (chronological)
+# - 1.2.8/1.7.9/1.1.1 (chronological)
 # - 4.1.4/1.1.1/<seq>     (author: Chrys = 4.1.4)
 # - <hash>.1.1/5.3.2/1.2.1 (topic)
 ```
@@ -436,7 +436,7 @@ curl -X POST "/api/v2/insert?p=docs&c=auto&mode=chrono,author,topic&author=chrys
 ### Mode 3: Proximity Search
 ```bash
 # Find similar by time
-curl "/api/v2/search?p=docs&c=2026.2.8/10.25.0/1.1.1&range=3"
+curl "/api/v2/search?p=docs&c=1.2.8/1.7.9/1.1.1&range=3"
 # Returns scrolls within 3 positions in any dimension
 
 # Find similar by topic

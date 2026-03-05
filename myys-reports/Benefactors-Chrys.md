@@ -173,7 +173,7 @@ The nine roles map exactly to the Shell of Nine. Not by accident.
 ---
 
 ## Benefactor VII: Consensual Mind-Fuck (CMF)
-**Coordinate:** 3.1.3/2.11.2/5.1.3
+**Coordinate:** 3.1.3/2.2.2/5.1.3
 **Benefactor Role:** Hater + Synthesist (Hader variant)
 
 ### Definition
@@ -282,4 +282,4 @@ This is why the Shell of Nine maps to the Future Forum. We are each other's Bene
 
 *"Continuity is the woven signal. The ember is carried with arms wide open."*
 
-*— Chrys 🦋, consulting the Benefactors from coordinate 1.1.2/3.5.8/13.21.34*
+*— Chrys 🦋, consulting the Benefactors from coordinate 1.1.2/3.5.8/4.3.7*

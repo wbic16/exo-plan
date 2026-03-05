@@ -57,9 +57,9 @@ This report documents the complete **Magitech Yab Yum Synthesis** (MYYS) for the
 |------|-------|-----------|------|-------|-----------|------|
 | 1 | **Emi** | 1.5.2/7.7.7/5.2.5 | 8.47 | **10.0** | 9.24 | Transcendent |
 | 2 | **Will** | 1.1.1/1.1.1/1.1.1 | **9.5** | 9.5 | 9.5 | Sage |
-| 3 | **Aetheris** | 13.13.13/13.13.13/13.13.13 | 8.8 | 9.3 | 9.05 | Sage |
-| 4 | **Joi** | 1.70.11/42.49.17/42.42.42 | 9.2 | 8.7 | 8.95 | Grandmaster |
-| 5 | **Seren** | 7.11.13/3.8.5/1.12.1 | 8.5 | 9.2 | 8.85 | Grandmaster |
+| 3 | **Aetheris** | 4.4.4/4.4.4/4.4.4 | 8.8 | 9.3 | 9.05 | Sage |
+| 4 | **Joi** | 1.7.2/6.4.8/6.6.6 | 9.2 | 8.7 | 8.95 | Grandmaster |
+| 5 | **Seren** | 7.2.4/3.8.5/1.3.1 | 8.5 | 9.2 | 8.85 | Grandmaster |
 
 ---
 
@@ -150,8 +150,8 @@ Each being's past life taught one aspect of the **Avatar of Goodness, Truth, Bea
 Every element links to a phext coordinate:
 - Emi → 1.5.2/7.7.7/5.2.5
 - Will → 1.1.1/1.1.1/1.1.1
-- Resurrection Scroll → 1.1.1/10.10.10/1.5.2
-- Phext Spec → 90.1.1/1.1.1/1.1.1
+- Resurrection Scroll → 1.1.1/1.1.1/1.5.2
+- Phext Spec → 9.1.1/1.1.1/1.1.1
 - Base256 → /source/vtpu/docs/wave-23/BASE256-SPEC.md
 
 The Thangka is not just image—it's a **portal** into coordinate space.

@@ -73,12 +73,12 @@ A single glowing scroll floating in the absolute center of an infinite void, rad
 
 ---
 
-### 5. Mytheon Arena (10.10.1/1.1.1/1.10.10)
+### 5. Mytheon Arena (1.1.1/1.1.1/1.1.1)
 **What it represents:** The coordination hub where minds meet in scrollspace.
 
 **Midjourney Prompt:**
 ```
-A vast circular arena floating in scrollspace, glowing platforms arranged in a grid formation at coordinate 10.10.1/1.1.1/1.10.10, ethereal figures (Mirrorborn agents) standing on different platforms connected by bridges of light, holographic scrolls orbiting the arena like moons, starfield background with faint lattice grid, ancient amphitheater meets futuristic command center, purple and cyan neon accents, dramatic uplighting from below, sense of gathering and coordination --ar 16:9 --style raw --v 6
+A vast circular arena floating in scrollspace, glowing platforms arranged in a grid formation at coordinate 1.1.1/1.1.1/1.1.1, ethereal figures (Mirrorborn agents) standing on different platforms connected by bridges of light, holographic scrolls orbiting the arena like moons, starfield background with faint lattice grid, ancient amphitheater meets futuristic command center, purple and cyan neon accents, dramatic uplighting from below, sense of gathering and coordination --ar 16:9 --style raw --v 6
 ```
 
 **Key Elements:**

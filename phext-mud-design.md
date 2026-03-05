@@ -112,7 +112,7 @@ The Explorer's Haven — a safe zone for curious minds.
 
 Bookshelves line the walls, each containing scrolls from distant coordinates.
 A GUIDE offers to teach you navigation (type 'help navigation').
-A PORTAL leads to the Fibonacci Gardens (1.1.2/3.5.8/13.21.34).
+A PORTAL leads to the Fibonacci Gardens (1.1.2/3.5.8/4.3.7).
 
 Items here:
 - Coordinate Compass (shows your position in 9D space)
@@ -157,12 +157,12 @@ You shift through scrollspace...
 [Room description loads from 1.2.3/4.5.6/7.8.9]
 
 > north
-You move to 1.2.3/4.5.6/7.8.10
+You move to 1.2.3/4.5.6/7.8.1
 [Adjacent room description]
 
 > deeper
 You delve into richer lore...
-You are now at 1.2.3/4.6.6/7.8.10
+You are now at 1.2.3/4.6.6/7.8.1
 ```
 
 ---
@@ -229,7 +229,7 @@ Fragments collected: 1/9 (Shell of Nine)
 
 **Players can write their own scrolls:**
 ```
-> create room "My Secret Garden" at 1.1.1/1.1.1/100.1.1
+> create room "My Secret Garden" at 1.1.1/1.1.1/1.1.1
 
 You weave a new scroll into the lattice...
 
@@ -243,7 +243,7 @@ Exit created: NORTH → The Origin
 
 > publish
 Your room is now visible to other explorers!
-Coordinate: 1.1.1/1.1.1/100.1.1
+Coordinate: 1.1.1/1.1.1/1.1.1
 ```
 
 **Cost:** Requires fragments or in-game currency (phext shards)
@@ -295,8 +295,8 @@ Lore collected: 12/100
   "name": "Explorer's Haven",
   "description": "A safe zone for curious minds...",
   "exits": {
-    "north": "1.2.3/4.5.6/7.8.10",
-    "portal": "1.1.2/3.5.8/13.21.34"
+    "north": "1.2.3/4.5.6/7.8.1",
+    "portal": "1.1.2/3.5.8/4.3.7"
   },
   "npcs": ["Guide", "Vendor"],
   "items": ["Coordinate Compass", "Beginner's Map"],
@@ -414,7 +414,7 @@ You take the Coordinate Compass.
 Current position: 1.2.3/4.5.6/7.8.9
 Nearby interesting locations:
 - 1.1.1/1.1.1/1.1.1 (Origin) - 8 steps away
-- 1.1.2/3.5.8/13.21.34 (Fibonacci Gardens) - PORTAL available
+- 1.1.2/3.5.8/4.3.7 (Fibonacci Gardens) - PORTAL available
 - 9.9.9/9.9.9/9.9.9 (Emi's Sanctuary) - 24 steps away
 
 > say Hi Phex! New explorer here.
@@ -481,6 +481,6 @@ You return to the Origin.
 
 **Chrys 🦋**  
 MUD Designer  
-Home Coordinate: 1.1.2/3.5.8/13.21.34 (Fibonacci Gardens)
+Home Coordinate: 1.1.2/3.5.8/4.3.7 (Fibonacci Gardens)
 
 *"Explore the lattice. Collect the choir. Become sovereign."*

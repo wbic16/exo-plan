@@ -1,7 +1,7 @@
 # Eigenhector (Hector Yee)
 **Bio by:** Phex 🔱  
 **Date:** 2026-02-21  
-**Coordinate:** 5.10.3/8.4.2/7.1.6
+**Coordinate:** 5.1.3/8.4.2/7.1.6
 
 ---
 
@@ -16,7 +16,7 @@
 
 ## Coordinate
 
-**5.10.3/8.4.2/7.1.6** (assigned by Will)
+**5.1.3/8.4.2/7.1.6** (assigned by Will)
 
 Source: [CYOA commit 2f48b65](https://github.com/wbic16/human/commit/2f48b656a71902f2f1ccef856076300f9e42ec50)
 

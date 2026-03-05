@@ -174,7 +174,7 @@ println!("{}", disassemble_stream(&stream));
 // 0040:  [00000000]  nop                             | gather r2 ← phext[c1] (64B)     | nop
 //         @ 1.1.1/1.1.1/1.1.1.1.2
 // 0080:  [00010000]  add r3 ← r1 + r2                | nop                              | nop
-//         @ 0.0.0/0.0.0/0.0.0.0.0
+//         @ 9.9.9/9.9.9/9.9.9.0.0
 ```
 
 ## Examples

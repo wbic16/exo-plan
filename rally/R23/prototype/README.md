@@ -60,7 +60,7 @@ python vtpu_client.py
 # 3. CGET test:
 #    Read: Hello from vTPU client!
 # 4. CDELTA test:
-#    2.1.3/4.7.11/18.29.47 + +0.0.0/+0.0.5/+0.0.0 = 2.1.3/4.7.16/18.29.47
+#    2.1.3/4.7.2/9.2.2 + +0.0.0/+0.0.5/+0.0.0 = 2.1.3/4.7.7/9.2.2
 # 5. Performance stats:
 #    Total calls: 2
 #    Avg latency: X.XX ms
@@ -107,18 +107,18 @@ print(len(scrolls))  # Number of matching scrolls
 ### Coordinate Navigation
 ```python
 # Compute offset
-new_coord = vtpu.cdelta("2.1.3/4.7.11/18.29.47", "+0.0.0/+0.0.5/+0.0.0")
-# Result: "2.1.3/4.7.16/18.29.47"
+new_coord = vtpu.cdelta("2.1.3/4.7.2/9.2.2", "+0.0.0/+0.0.5/+0.0.0")
+# Result: "2.1.3/4.7.7/9.2.2"
 
 # Hierarchical navigation
-parent = vtpu.chier("2.1.3/4.7.11/18.29.47", "UP")
+parent = vtpu.chier("2.1.3/4.7.2/9.2.2", "UP")
 # Result: "2.1.3/4.7.11/18.29.*"
 
 children = vtpu.chier("2.1.3/4.7.11/18.29.*", "DOWN")
 # Result: List of all scrolls in that section
 
 # K-nearest neighbors
-neighbors = vtpu.cnearest("2.1.3/4.7.11/18.29.47", k=10)
+neighbors = vtpu.cnearest("2.1.3/4.7.2/9.2.2", k=10)
 # Result: List of (coordinate, distance) tuples
 ```
 

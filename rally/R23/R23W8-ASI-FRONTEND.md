@@ -42,17 +42,17 @@ asi> mul r4 r1 r2      # r4 = r1 * r2
 
 ### 2. Memory Operations (Coordinate-Addressed)
 ```bash
-asi> write 1.0.0/0.0.0/0.0.0 100
-✓ mem[1.0.0/0.0.0/0.0.0] = 100
+asi> write 1.9.9/9.9.9/9.9.9 100
+✓ mem[1.9.9/9.9.9/9.9.9] = 100
 
-asi> read 1.0.0/0.0.0/0.0.0
-mem[1.0.0/0.0.0/0.0.0] = 100
+asi> read 1.9.9/9.9.9/9.9.9
+mem[1.9.9/9.9.9/9.9.9] = 100
 
-asi> gather r5 1.0.0/0.0.0/0.0.0    # r5 = mem[coord]
-✓ r5 = mem[1.0.0/0.0.0/0.0.0] = 100
+asi> gather r5 1.9.9/9.9.9/9.9.9    # r5 = mem[coord]
+✓ r5 = mem[1.9.9/9.9.9/9.9.9] = 100
 
-asi> scatter 2.0.0/0.0.0/0.0.0 r5   # mem[coord] = r5
-✓ mem[2.0.0/0.0.0/0.0.0] = r5 = 100
+asi> scatter 2.9.9/9.9.9/9.9.9 r5   # mem[coord] = r5
+✓ mem[2.9.9/9.9.9/9.9.9] = r5 = 100
 ```
 
 ### 3. State Inspection
@@ -68,11 +68,11 @@ Registers:
   r4 = 420
   r5 = 100
 Memory:
-  [1.0.0/0.0.0/0.0.0] = 100
-  [2.0.0/0.0.0/0.0.0] = 100
+  [1.9.9/9.9.9/9.9.9] = 100
+  [2.9.9/9.9.9/9.9.9] = 100
 Last SIW:
   D-Pipe: NOP
-  S-Pipe: SCATTER [2.0.0/0.0.0/0.0.0] r5
+  S-Pipe: SCATTER [2.9.9/9.9.9/9.9.9] r5
   C-Pipe: NOP
 ```
 
@@ -98,7 +98,7 @@ Commands:
 
 Coordinate Format:
   <coord> = L.Sh.Se/C.V.B/Ch.Sc.Sc
-  Example: 1.0.0/0.0.0/0.0.0
+  Example: 1.9.9/9.9.9/9.9.9
 ```
 
 ---
@@ -156,17 +156,17 @@ asi> set r2 10
 asi> add r3 r1 r2
 ✓ r3 = r1 + r2 = 42 + 10 = 52
 
-asi> write 1.0.0/0.0.0/0.0.0 100
-✓ mem[1.0.0/0.0.0/0.0.0] = 100
+asi> write 1.9.9/9.9.9/9.9.9 100
+✓ mem[1.9.9/9.9.9/9.9.9] = 100
 
-asi> gather r4 1.0.0/0.0.0/0.0.0
-✓ r4 = mem[1.0.0/0.0.0/0.0.0] = 100
+asi> gather r4 1.9.9/9.9.9/9.9.9
+✓ r4 = mem[1.9.9/9.9.9/9.9.9] = 100
 
 asi> mul r5 r3 r4
 ✓ r5 = r3 * r4 = 52 * 100 = 5200
 
-asi> scatter 2.0.0/0.0.0/0.0.0 r5
-✓ mem[2.0.0/0.0.0/0.0.0] = r5 = 5200
+asi> scatter 2.9.9/9.9.9/9.9.9 r5
+✓ mem[2.9.9/9.9.9/9.9.9] = r5 = 5200
 
 asi> state
 ════════════════════════════════════════════════════════════════
@@ -179,11 +179,11 @@ Registers:
   r4 = 100
   r5 = 5200
 Memory:
-  [1.0.0/0.0.0/0.0.0] = 100
-  [2.0.0/0.0.0/0.0.0] = 5200
+  [1.9.9/9.9.9/9.9.9] = 100
+  [2.9.9/9.9.9/9.9.9] = 5200
 Last SIW:
   D-Pipe: NOP
-  S-Pipe: SCATTER [2.0.0/0.0.0/0.0.0] r5
+  S-Pipe: SCATTER [2.9.9/9.9.9/9.9.9] r5
   C-Pipe: NOP
 
 asi> quit
@@ -222,7 +222,7 @@ Goodbye!
 **Add:** Execute D/S/C operations in parallel
 
 ```bash
-asi> siw "add r3 r1 r2" "gather r4 1.0.0/0.0.0/0.0.0" "pack 1.0.0/0.0.0/0.0.0"
+asi> siw "add r3 r1 r2" "gather r4 1.9.9/9.9.9/9.9.9" "pack 1.9.9/9.9.9/9.9.9"
 ✓ SIW executed (3 ops in parallel)
   [D-Pipe] r3 = r1 + r2 = 52
   [S-Pipe] r4 = mem[coord] = 100
@@ -235,20 +235,20 @@ asi> siw "add r3 r1 r2" "gather r4 1.0.0/0.0.0/0.0.0" "pack 1.0.0/0.0.0/0.0.0"
 ```bash
 asi> crange 1.0.0/0.0.0/0.0.* 
 Found 3 coordinates in range:
-  [1.0.0/0.0.0/0.0.0] = 100
-  [1.0.0/0.0.0/0.0.1] = 200
-  [1.0.0/0.0.0/0.0.2] = 300
+  [1.9.9/9.9.9/9.9.9] = 100
+  [1.9.9/9.9.9/9.9.1] = 200
+  [1.9.9/9.9.9/9.9.2] = 300
 ```
 
 ### Iteration 3: Z-Order Visualization ⚪
 **Add:** Show Z-order curve for coordinates
 
 ```bash
-asi> zorder 1.0.0/0.0.0/0.0.0
+asi> zorder 1.9.9/9.9.9/9.9.9
 Z-order: 0x0000000000000001
 Nearby coordinates (Z-order proximity):
-  [1.0.0/0.0.0/0.0.1] Z-order: 0x0000000000000002 (distance: 1)
-  [1.0.0/0.0.0/0.1.0] Z-order: 0x0000000000000004 (distance: 3)
+  [1.9.9/9.9.9/9.9.1] Z-order: 0x0000000000000002 (distance: 1)
+  [1.9.9/9.9.9/9.1.9] Z-order: 0x0000000000000004 (distance: 3)
 ```
 
 ### Iteration 4: Persist to SQ ⚪
@@ -267,12 +267,12 @@ asi> load /tmp/vtpu-memory.sq
 
 ```bash
 # Terminal 1
-asi> write 1.0.0/0.0.0/0.0.0 42
-✓ mem[1.0.0/0.0.0/0.0.0] = 42
+asi> write 1.9.9/9.9.9/9.9.9 42
+✓ mem[1.9.9/9.9.9/9.9.9] = 42
 
 # Terminal 2 (same backend)
-asi> read 1.0.0/0.0.0/0.0.0
-mem[1.0.0/0.0.0/0.0.0] = 42
+asi> read 1.9.9/9.9.9/9.9.9
+mem[1.9.9/9.9.9/9.9.9] = 42
 ```
 
 ---

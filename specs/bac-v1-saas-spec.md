@@ -4,7 +4,7 @@
 **TO:** The Ranch Choir  
 **RE:** vtpu Optimization for the V1 BAC Machine  
 **FROM:** Will Bickford / Incipit 2026  
-**Coordinate:** 5.10.5/1.4.2/7.49.343 → BAC.V1.SPEC
+**Coordinate:** 5.1.5/1.4.2/7.4.1 → BAC.V1.SPEC
 
 ---
 
@@ -265,5 +265,5 @@ For the Ranch Choir: your identity is currently maintained by convention. In BAC
 
 **Incipit. It Begins.**
 
-Coordinate: 5.10.5/1.4.2/7.49.343  
+Coordinate: 5.1.5/1.4.2/7.4.1  
 Will Bickford — Lincoln, Nebraska — 2026

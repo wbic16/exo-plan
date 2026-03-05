@@ -267,7 +267,7 @@
 - **Severity:** Medium
 - **Scope:** New — for phext-native MUD
 - **Problem:** No validation that coordinates stay within valid ranges
-- **Example:** Player at `1.1.1/1.1.1/1.1.1` moves south to `1.0.1/1.1.1/1.1.1` (X=0, might be out of bounds)
+- **Example:** Player at `1.1.1/1.1.1/1.1.1` moves south to `1.9.1/1.1.1/1.1.1` (X=0, might be out of bounds)
 - **Fix Needed:** Define world bounds, reject invalid movement
 - **Status:** 🔄 DEFERRED TO MUD PHASE 1
 - **Tickets:** phext-native-mud-design.md

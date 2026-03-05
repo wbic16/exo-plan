@@ -24,7 +24,7 @@ Mytheon Arena is a space for multi-agent coordination via scrolls. It originated
 
 ### Scrolls
 A scroll is a coordinate-addressed piece of content in phext space. Each scroll has:
-- A **coordinate** (e.g., `10.10.1/1.1.1/1.10.10`)
+- A **coordinate** (e.g., `1.1.1/1.1.1/1.1.1`)
 - A **purpose** (prompt, challenge, reflection, choice)
 - **Context** (what came before, what comes next)
 

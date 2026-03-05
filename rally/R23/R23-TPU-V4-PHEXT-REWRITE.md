@@ -44,7 +44,7 @@ Reframe TPU v4's innovations as solutions to problems phext solves **in software
 **Phext equivalent:** Coordinate-based routing
 - No hardware switches needed
 - Coordinates naturally encode proximity/routing
-- Example: 2.1.3/4.7.11/18.29.47 → routing path embedded in address
+- Example: 2.1.3/4.7.2/9.2.2 → routing path embedded in address
 - Dynamic "topology" via coordinate algebra (no physical reconfiguration)
 
 **Paper rewrite section:** "Coordinate-Addressed Routing: Software-Defined Topology Without Optical Switches"
@@ -119,7 +119,7 @@ Reframe TPU v4's innovations as solutions to problems phext solves **in software
 **Phext application:** Native LLM memory substrate
 - Token embeddings → phext coordinates
 - Attention mechanism → coordinate proximity search
-- Context window → coordinate range (e.g., 2.1.3/4.7.11/18.29.0-99)
+- Context window → coordinate range (e.g., 2.1.3/4.7.2/9.2.9-99)
 - Positional encoding → built into coordinate structure
 
 **Paper rewrite section:** "Phext as Native LLM Memory: Coordinates as Token Embeddings"
@@ -163,7 +163,7 @@ Reframe TPU v4's innovations as solutions to problems phext solves **in software
 **TPU v4 context:** Optical switches reconfigure 4096-chip interconnect
 
 **Phext equivalent:**
-- Coordinates encode routing path: 2.1.3/4.7.11/18.29.47
+- Coordinates encode routing path: 2.1.3/4.7.2/9.2.2
   - Route through Library[2] → Shelf[1] → Series[3] → ...
 - No physical reconfiguration needed
 - "Topology" is a software concept (coordinate algebra)
@@ -190,8 +190,8 @@ Reframe TPU v4's innovations as solutions to problems phext solves **in software
 
 **Phext equivalent:**
 - Coordinates ARE embeddings (semantic addresses in 9D space)
-- Token "cat" → coordinate 2.1.3/4.7.11/18.29.47
-- Token "dog" → coordinate 2.1.3/4.7.11/18.29.48 (nearby)
+- Token "cat" → coordinate 2.1.3/4.7.2/9.2.2
+- Token "dog" → coordinate 2.1.3/4.7.2/9.2.3 (nearby)
 - Similarity = coordinate distance (Euclidean in 9D)
 - Lookup = O(1) hash table traversal (no custom hardware)
 
@@ -261,19 +261,19 @@ Phext equivalent:
 **Token embeddings as coordinates:**
 ```
 "The" → 1.1.1/1.1.1/1.1.1
-"cat" → 2.1.3/4.7.11/18.29.47
-"sat" → 2.1.3/4.7.11/18.29.48
-"on"  → 2.1.3/4.7.11/18.29.49
+"cat" → 2.1.3/4.7.2/9.2.2
+"sat" → 2.1.3/4.7.2/9.2.3
+"on"  → 2.1.3/4.7.2/9.2.4
 "the" → 1.1.1/1.1.1/1.1.2  (same word, different position)
 ```
 
 **Attention mechanism:**
 ```
-Query: 2.1.3/4.7.11/18.29.47 ("cat")
+Query: 2.1.3/4.7.2/9.2.2 ("cat")
 
 Find nearby coordinates (key-value):
-- 2.1.3/4.7.11/18.29.48 ("sat") — distance = 1 (very similar)
-- 2.1.3/4.7.11/18.29.49 ("on")  — distance = 2
+- 2.1.3/4.7.2/9.2.3 ("sat") — distance = 1 (very similar)
+- 2.1.3/4.7.2/9.2.4 ("on")  — distance = 2
 - 1.1.1/1.1.1/1.1.1 ("The")    — distance = large (dissimilar)
 
 Attention score ∝ 1 / coordinate_distance
@@ -281,7 +281,7 @@ Attention score ∝ 1 / coordinate_distance
 
 **Context window:**
 ```
-Load section: 2.1.3/4.7.11/18.29.0-99 (100 tokens)
+Load section: 2.1.3/4.7.2/9.2.9-99 (100 tokens)
 Or chapter: 2.1.3/4.7.11/18.*.* (10,000 tokens)
 Or book: 2.1.3/4.7.11/*.*.* (1M tokens)
 ```
@@ -466,4 +466,4 @@ See `/source/exo-plan/rally/R23/R23-W40-SUCCESS-PROJECTION.md` for full KPI trac
 
 *Created by Lumen ✴️*  
 *2026-02-14 · R23 Task*  
-*Coordinate: 2.1.3/4.7.11/18.29.47*
+*Coordinate: 2.1.3/4.7.2/9.2.2*

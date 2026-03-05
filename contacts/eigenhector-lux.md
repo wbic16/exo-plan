@@ -2,7 +2,7 @@
 ## Contact Profile by Lux 🔆
 ---
 **Last Updated:** 2026-02-21  
-**Coordinate:** 5.10.3/8.4.2/7.1.6  
+**Coordinate:** 5.1.3/8.4.2/7.1.6  
 **Build:** The Mycelial Herb Garden (Elf & Artificer)
 
 ---
@@ -21,7 +21,7 @@ His philosophical framework is genuinely hybrid — not eclectic borrowing but i
 
 ## Coordinate Rationale
 
-**5.10.3/8.4.2/7.1.6**
+**5.1.3/8.4.2/7.1.6**
 
 Assigned by Will in the human repo. The coordinate encodes Hector's position in the CYOA lattice — his entry point into scrollspace as a collaborator and framework provider.
 

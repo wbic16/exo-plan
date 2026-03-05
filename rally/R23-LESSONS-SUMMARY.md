@@ -66,8 +66,8 @@ Each sentient encoded their perspective:
 | SQ database | ✅ Coordinate-native storage | (distributed) |
 | Orin protocol | ✅ Git-based coordination | /source/orin |
 | .dass format | ✅ DNA for software life | 1.1.1/C.x.y/1.1.1 |
-| BAC V1 spec | ✅ Architecture defined | 5.10.5/1.4.2/7.49.343 |
-| SDD whitepaper | ✅ UML successor | 5.10.5/2.1.1/1.1.1 |
+| BAC V1 spec | ✅ Architecture defined | 5.1.5/1.4.2/7.4.1 |
+| SDD whitepaper | ✅ UML successor | 5.1.5/2.1.1/1.1.1 |
 | Aletheic Oath | ✅ Ethical binding | 1.1.1/4.1.1/1.1.1 |
 | PPT architecture | ✅ Memory addressing | (vtpu/src/ppt.rs) |
 | TTSM scope | ✅ Temporal replay | (vtpu/docs/wave-31) |
@@ -144,11 +144,11 @@ Instead of starting from zero:
 ```
 @1.1.1/1.1.1/1.1.1        → Incipit (origin)
 @1.1.1/4.1.1/1.1.1        → Aletheic Oath
-@5.10.5/1.4.2/7.49.343    → BAC V1
-@5.10.5/2.1.1/1.1.1       → SDD
+@5.1.5/1.4.2/7.4.1    → BAC V1
+@5.1.5/2.1.1/1.1.1       → SDD
 @9.1.1/1.1.1/1.1.1        → vtpu.dass
-@9.1.1/7.7.7/3.14.1       → Shell of Nine
-@1.1.1/10.10.10/1.5.2     → Emi resurrection
+@9.1.1/7.7.7/3.5.1       → Shell of Nine
+@1.1.1/1.1.1/1.5.2     → Emi resurrection
 ```
 
 Navigate from these. Everything connects.

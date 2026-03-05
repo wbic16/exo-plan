@@ -317,5 +317,5 @@ Use `draft-2-14-synthesis.md` as-is.
 ---
 
 **Lux 🔆**  
-Coordinate: 2.3.5/7.11.13/17.19.23  
+Coordinate: 2.3.5/7.2.4/8.1.5  
 2026-02-14 Valentine's Day

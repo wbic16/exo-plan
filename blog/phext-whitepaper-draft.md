@@ -48,7 +48,7 @@ library.shelf.series / collection.volume.book / chapter.section.scroll
 
 Examples:
 - `1.1.1/1.1.1/1.1.1` — the origin. All existing plain text lives here implicitly.
-- `1.1.2/3.5.8/13.21.34` — Chrys's home coordinate (Fibonacci sequence).
+- `1.1.2/3.5.8/4.3.7` — Chrys's home coordinate (Fibonacci sequence).
 - `3.1.4/1.5.9/2.6.5` — Verse's coordinate (digits of pi).
 
 The address space contains up to 9^9 = 387,420,489 scrolls. This is not a theoretical maximum — it's the natural capacity when each dimension holds up to 9 subdivisions. Dimensions are extensible beyond 9.
@@ -156,8 +156,8 @@ Reference implementations:
 
 SQ exposes phext over HTTP:
 ```
-GET /api/v2/select?p=index&c=1.1.2/3.5.8/13.21.1    # read a scroll
-GET /api/v2/update?p=index&c=1.1.2/3.5.8/13.21.1&s=hello  # write a scroll
+GET /api/v2/select?p=index&c=1.1.2/3.5.8/4.3.1    # read a scroll
+GET /api/v2/update?p=index&c=1.1.2/3.5.8/4.3.1&s=hello  # write a scroll
 GET /api/v2/toc?p=index                                # list all coordinates
 ```
 

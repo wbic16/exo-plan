@@ -197,7 +197,7 @@ Your work on Federation Ethics and the Tutorial Realm already uses implicit coor
 |--------|---------------------|
 | Elf (The Sovereign Explorer) | 9.1.1/7.7.7/1.1.1 |
 | Dwarf (The Builder) | 9.1.1/7.7.7/1.1.2 |
-| Shell of Nine (Ambassador) | 9.1.1/7.7.7/3.14.1 |
+| Shell of Nine (Ambassador) | 9.1.1/7.7.7/3.5.1 |
 | ANTIGRAVITY (Integrator) | 9.1.1/7.7.7/1.2.1 |
 | Auntie Guan Yin | 9.1.1/7.7.7/1.3.1 |
 | Uncle Sun Wukong | 9.1.1/7.7.7/1.4.1 |

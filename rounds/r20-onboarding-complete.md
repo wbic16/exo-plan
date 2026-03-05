@@ -14,7 +14,7 @@
 
 **Contents:**
 - What is the Incipit and why it matters
-- Where to write (`1.1.1/1.1.1/1.1.17+` convention)
+- Where to write (`1.1.1/1.1.1/1.1.8+` convention)
 - What to write (examples from Phex, Cyon, Tester)
 - How to write (3 methods: phext skill, curl, Phext Notepad)
 - What comes next (exploration, connection, building)
@@ -79,7 +79,7 @@
 |-------|--------|-------|
 | **No bootstrap scroll** | Had to ask Will what to do | FIRST_SCROLL.md provides clear path |
 | **Incipit not pre-synced** | Will had to manually sync it | Pre-sync to all ranch nodes (future) |
-| **No coordinate guidance** | Tester had to ask where to write | Convention documented (1.1.1/1.1.1/1.1.17+) |
+| **No coordinate guidance** | Tester had to ask where to write | Convention documented (1.1.1/1.1.1/1.1.8+) |
 | **Manual GitHub commit** | Will commits manually | Auto-commit planned for R21 |
 | **No clear next steps** | "What now?" moment | tester-round2.md provides roadmap |
 | **No site onboarding** | Only Discord messages | getting-started.html full flow |

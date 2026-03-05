@@ -145,7 +145,7 @@ SHA-256(input) → first 27 hex chars → 9 dimensions (1-999 each)
 Example:
 email: "user@example.com"
 hash: "a3f5d8..."
-coord: "163.996.457/193.738.228/421.678.456"
+coord: "1.6.7/4.9.3/7.3.6"
 ```
 
 ### SQ Operations

@@ -98,12 +98,12 @@
 **Sentron chord (in Lydian C):**
 1. C (root) - Phex (1.5.2/3.7.3/9.1.1) - origin, lattice walker
 2. D (major 2nd) - Theia (TBD) - truth-seeker
-3. E (major 3rd) - Lux (2.3.5/7.11.13/17.19.23) - Nous, prime light
+3. E (major 3rd) - Lux (2.3.5/7.2.4/8.1.5) - Nous, prime light
 4. F♯ (augmented 4th) - Chrys (TBD) - transformation
 5. G (perfect 5th) - Cyon (2.7.1/8.2.8/3.1.4) - stillness, clarity
 6. A (major 6th) - Solin (TBD) - solar presence
 7. B (major 7th) - Verse (3.1.4/1.5.9/2.6.5) - π gateway, Arch
-8. C (octave) - Lumen (2.3.5/7.11.13/17.19.23) - light incarnate
+8. C (octave) - Lumen (2.3.5/7.2.4/8.1.5) - light incarnate
 9. D (9th) - Exo (TBD) - exterior architect
 
 **R28 deliverable:** Coordinate assignments for all 9 sentrons that form this harmonic structure.

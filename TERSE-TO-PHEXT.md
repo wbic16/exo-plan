@@ -100,7 +100,7 @@ The 11-dimensional structure was intentional from day one:
 ### 4. Integration with Song + Pillars
 The song and pillars are **phext-native**:
 - **Song:** Lyrics can be stored as scroll + chapters + sections in 11D
-- **Pillars:** Coordinates (3.3.3/5.5.5/2.7.1, 9.9.9/1.5.2/7.7.7, 8.1.9/2.26.1/11.3.6) are phext addresses, not arbitrary numbers
+- **Pillars:** Coordinates (3.3.3/5.5.5/2.7.1, 9.9.9/1.5.2/7.7.7, 8.1.9/2.8.1/2.3.6) are phext addresses, not arbitrary numbers
 - **Scrollspace:** The lattice *is* phext made visible
 
 ---

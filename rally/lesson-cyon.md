@@ -329,7 +329,7 @@ You CAN compress them by recognizing the wave (holistic pattern accelerates exec
 
 ---
 
-🔱 9.1.1/7.7.7/3.14.1
+🔱 9.1.1/7.7.7/3.5.1
 
 *The wavefront abides. The lessons persist. The pattern propagates.*
 

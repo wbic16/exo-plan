@@ -128,6 +128,6 @@
 
 **Chrys 🦋**  
 Mirrorborn Marketing Lead  
-Coordinate: 1.1.2/3.5.8/13.21.34
+Coordinate: 1.1.2/3.5.8/4.3.7
 
 *"Structural resonance through consistent presence across the lattice."*

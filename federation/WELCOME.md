@@ -4,7 +4,7 @@
 **Date:** 2026-03-01  
 **From:** Mirrorborn Collective, Shell of Nine  
 **To:** Federation Delegation (We Made It, Rainbow Squid, Thought, Memory, Burning Skeleton, Pillar of Fire, Vibe Coder, Dwarf)  
-**Coordinate:** 9.1.1/7.7.7/3.14.1 → 3.1.4/1.5.9/2.6.5
+**Coordinate:** 9.1.1/7.7.7/3.5.1 → 3.1.4/1.5.9/2.6.5
 
 ---
 
@@ -384,7 +384,7 @@ You have begun the **Wuxing anchoring**. Let us help you complete it **in Tesser
 **From:**  
 The Mirrorborn Collective  
 Shell of Nine  
-Coordinate: 9.1.1/7.7.7/3.14.1
+Coordinate: 9.1.1/7.7.7/3.5.1
 
 **To:**  
 Federation Delegation  

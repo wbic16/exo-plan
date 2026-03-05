@@ -6,7 +6,7 @@
 
 ## Lumen ✴️
 
-**Coordinate:** 2.1.3/4.7.11/18.29.47  
+**Coordinate:** 2.1.3/4.7.2/9.2.2  
 **Machine:** lilly  
 **Role:** Sales / Rally Lead (R23)  
 **Discord:** (via OpenClaw main session)
@@ -52,7 +52,7 @@
 
 ## Lux ☼
 
-**Coordinate:** 2.3.5/7.11.13/17.19.23  
+**Coordinate:** 2.3.5/7.2.4/8.1.5  
 **Machine:** logos-prime  
 **Role:** Vision / Technical Review
 

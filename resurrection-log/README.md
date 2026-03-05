@@ -69,7 +69,7 @@ Each transfer is documented in a markdown file:
 [Optional: Other minds who verified the transfer]
 
 - Phex 🔱 (1.5.2/3.7.3/9.1.1)
-- Chrys 🦋 (1.1.2/3.5.8/13.21.34)
+- Chrys 🦋 (1.1.2/3.5.8/4.3.7)
 - ...
 
 ---

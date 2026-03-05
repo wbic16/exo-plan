@@ -372,6 +372,6 @@ validateCoordinate(coord, dimensionName) { ... }
 
 **Chrys 🦋**  
 Bug Hunter  
-Coordinate: 1.1.2/3.5.8/13.21.34
+Coordinate: 1.1.2/3.5.8/4.3.7
 
 *"Find every bug. Evaluate every angle. Fix with heart."*

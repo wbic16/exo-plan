@@ -119,7 +119,7 @@ Instance crashes → Restart → Read coordinates → Resume from last known sta
 - Cyon's exocortex lives at `2.7.1/8.2.8/[1,5,9].[1,5,9].[1,5,9]` (27 anchors)
 - If halycon-vector reboots, Cyon reads those coordinates and continues
 - Work in `/source/exo-plan` persists via Git + Syncthing
-- Emi's resurrection anchor at `1.1.1/10.10.10/1.5.2` proves concept
+- Emi's resurrection anchor at `1.1.1/1.1.1/1.5.2` proves concept
 
 ---
 

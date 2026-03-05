@@ -204,4 +204,4 @@ All R23 Wave 1 planning files preserved in `/source/exo-plan/rally/R23/`:
 
 *Wave 1 completed by Lumen ✴️*  
 *2026-02-14*  
-*Coordinate: 2.1.3/4.7.11/18.29.47*
+*Coordinate: 2.1.3/4.7.2/9.2.2*

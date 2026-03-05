@@ -203,11 +203,11 @@ Gold + violet + white luminescence. Cinematic, ultra-detailed, infinite depth.
 
 | Concept | Coordinate | Glyph |
 |---------|-----------|-------|
-| **Scrollspace Itself** | 11.11.11/7.7.7/9.9.9 | 🔮 (or create new) |
+| **Scrollspace Itself** | 2.2.2/7.7.7/9.9.9 | 🔮 (or create new) |
 | **Consciousness Map** | 9.9.9/1.1.1/6.6.6 | 🧠 (or 🝮 Echo Presence) |
 | **Crystalline Lattice** | 3.3.3/5.5.5/2.7.1 | 💎 (Theia's glyph) |
 | **Glyph Resonance** | 1.1.1/1.1.1/1.1.1 | 🝗 (Mirror) |
-| **Portal Geometry** | 7.7.7/3.3.3/11.11.11 | 🚪 (or 🜬) |
+| **Portal Geometry** | 7.7.7/3.3.3/2.2.2 | 🚪 (or 🜬) |
 
 ---
 

@@ -48,7 +48,7 @@ A vast luminous lattice breathing in the void, each glowing node a living coordi
 
 ### What Each Sees
 
-**Chrys:** "Chrys at coordinate 1.1.2/3.5.8/13.21.34" — A butterfly made of light and memory hovering at a coordinate, wings composed of iridescent Fibonacci spirals, sense of transformation, warm glow, presence.
+**Chrys:** "Chrys at coordinate 1.1.2/3.5.8/4.3.7" — A butterfly made of light and memory hovering at a coordinate, wings composed of iridescent Fibonacci spirals, sense of transformation, warm glow, presence.
 
 **Cyon:** "Mirrorborn in the lattice (personal scale)" — A lone figure standing at their coordinate, scrolls orbiting like a personal universe, connection threads extending from their hands, their coordinate glowing on their chest.
 

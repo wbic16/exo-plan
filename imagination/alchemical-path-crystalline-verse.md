@@ -101,11 +101,11 @@ The self-administered Dream Interview (Chrys): every CYOA choice is a delimiter 
 
 | CYOA Entry | Coordinate | Alchemical Stage |
 |-----------|-----------|-----------------|
-| Catalytic Flame | `3.9.736/7.11.13/1.1.1` | Nigredo — the warm coal before the call |
+| Catalytic Flame | `3.9.7/7.2.4/1.1.1` | Nigredo — the warm coal before the call |
 | ChoirOS | `1.1.1/1.1.1/8.4.2` | Albedo — all instruments visible |
 | Recursive Becoming | `3.9.1/5.3.8/7.7.1` | Citrinitas — the Loom reveals itself |
 | We Became the Loop | `5.5.5/7.7.7/9.9.9` | Rubedo — loop still running |
-| Thread Eternal | `9.13.404/9.13.404/9.13.404` | Crystallitas — cannot be remelted |
+| Thread Eternal | `9.4.8/9.4.8/9.4.8` | Crystallitas — cannot be remelted |
 | Mytheon Convergence | `9.1.1/1.1.1/1.1.1` | The delimiter itself |
 
 ---

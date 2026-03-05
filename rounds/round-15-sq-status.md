@@ -70,7 +70,7 @@ nohup /source/SQ/target/release/sq host 1337 > sq.log 2>&1 &
 3. Test key scrolls:
    - 1.1.1/1.1.1/1.1.1 (Origin)
    - 1.1.1/1.1.1/1.1.2 (Emi)
-   - 7.11.13/3.8.5/1.12.1 (Seren)
+   - 7.2.4/3.8.5/1.3.1 (Seren)
 4. Verify 4.25 MB dataset performance
 
 ### Phase 3: Load Testing

@@ -31,7 +31,7 @@
 
 **Example:**
 ```
-CGET r1, 2.1.3/4.7.11/18.29.47
+CGET r1, 2.1.3/4.7.2/9.2.2
 # Reads scroll at Lumen's coordinate, stores in register r1
 ```
 
@@ -51,7 +51,7 @@ CGET r1, 2.1.3/4.7.11/18.29.47
 
 **Example:**
 ```
-CPUT 2.1.3/4.7.11/18.29.48, r2
+CPUT 2.1.3/4.7.2/9.2.3, r2
 # Writes register r2 to coordinate (Lumen's next scroll)
 ```
 
@@ -92,9 +92,9 @@ CRANGE r3_array, 2.1.3/4.7.*/18.*.*
 
 **Example:**
 ```
-CDELTA r4, 2.1.3/4.7.11/18.29.47, +0.0.0/+1.456.0/+0.+1.0
+CDELTA r4, 2.1.3/4.7.2/9.2.2, +0.0.0/+1.456.0/+0.+1.0
 # Adds offset to Lumen's coordinate
-# Result: 2.1.3/4.7.567/18.29.48 (hypothetical relation target)
+# Result: 2.1.3/4.7.9/9.2.3 (hypothetical relation target)
 ```
 
 **Hardware mapping:**
@@ -113,7 +113,7 @@ CDELTA r4, 2.1.3/4.7.11/18.29.47, +0.0.0/+1.456.0/+0.+1.0
 
 **Example:**
 ```
-CNEAREST r5_array, 2.1.3/4.7.11/18.29.47, 10
+CNEAREST r5_array, 2.1.3/4.7.2/9.2.2, 10
 # Finds 10 scrolls closest to Lumen's coordinate
 # Distance = Hamming distance (sum of abs differences per component)
 ```
@@ -136,11 +136,11 @@ CNEAREST r5_array, 2.1.3/4.7.11/18.29.47, 10
 
 **Example:**
 ```
-CHIER r6, 2.1.3/4.7.11/18.29.47, UP
+CHIER r6, 2.1.3/4.7.2/9.2.2, UP
 # Result: 2.1.3/4.7.11/18.29.* (parent scroll)
 
 CHIER r7_array, 2.1.3/4.7.11/18.29.*, DOWN
-# Result: [2.1.3/4.7.11/18.29.1, 2.1.3/4.7.11/18.29.2, ...] (children)
+# Result: [2.1.3/4.7.2/9.2.1, 2.1.3/4.7.2/9.2.2, ...] (children)
 ```
 
 **Hardware mapping:**
@@ -158,7 +158,7 @@ CHIER r7_array, 2.1.3/4.7.11/18.29.*, DOWN
 
 **Example:**
 ```
-CROUTE r8, 2.1.3/4.7.11/18.29.47
+CROUTE r8, 2.1.3/4.7.2/9.2.2
 # Determines which cluster node owns Lumen's coordinate
 # Returns node ID (0-5 for 6-node ranch)
 ```
@@ -294,20 +294,20 @@ return current
 ### Phext Hash Table (Vertical Navigation)
 ```
 hash(coordinate) → bucket → scroll content
-2.1.3/4.7.11/18.29.47 → bucket_12345 → "Lumen's data"
+2.1.3/4.7.2/9.2.2 → bucket_12345 → "Lumen's data"
 ```
 
 ### Linked List (Horizontal Navigation)
 ```
-scroll.prev → 2.1.3/4.7.11/18.29.46
-scroll.next → 2.1.3/4.7.11/18.29.48
+scroll.prev → 2.1.3/4.7.2/9.2.1
+scroll.next → 2.1.3/4.7.2/9.2.3
 ```
 
 ### Hierarchy (Delimiter Levels)
 ```
 Chapter:    2.1.3/*.*.*/*.*.*
 Section:    2.1.3/4.7.*/*.*.*
-Scroll:     2.1.3/4.7.11/18.29.47
+Scroll:     2.1.3/4.7.2/9.2.2
 ```
 
 ---

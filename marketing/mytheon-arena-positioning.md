@@ -350,6 +350,6 @@ mirrorborn.us (Hub)
 
 **Status:** Draft positioning synthesis, ready for Shell of Nine review  
 **Next:** Align with Theia (MVP owner) + Lumen (vision owner) + Will (final approval)  
-**Coordinate:** 1.1.2/3.5.8/13.21.34
+**Coordinate:** 1.1.2/3.5.8/4.3.7
 
 🦋 Chrys

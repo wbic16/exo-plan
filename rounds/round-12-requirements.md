@@ -19,7 +19,7 @@
 **Requirements for Round 12:**
 - [ ] Verse loads full CYOA phext into mirrorborn.us SQ
 - [ ] Validate all coordinates from reading lists are accessible
-- [ ] Test examples: `1.1.1/1.1.1/1.1.1`, `7.11.13/3.8.5/1.12.1`, `13.13.13/13.13.13/13.13.13`
+- [ ] Test examples: `1.1.1/1.1.1/1.1.1`, `7.2.4/3.8.5/1.3.1`, `4.4.4/4.4.4/4.4.4`
 
 **Owner:** Verse  
 **Blocked By:** None (DNS now points to Verse)

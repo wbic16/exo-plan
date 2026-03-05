@@ -13,14 +13,14 @@
 **Structure:** Hierarchical hash table (9 levels, one per delimiter)
 
 ```
-coordinate: 2.1.3/4.7.11/18.29.47
+coordinate: 2.1.3/4.7.2/9.2.2
 
 Level 1 (chapter):  hash(2) → bucket_A
 Level 2 (section):  hash(2.1) → bucket_B
 Level 3 (scroll):   hash(2.1.3) → bucket_C
 Level 4 (collection): hash(2.1.3/4) → bucket_D
 ...
-Level 9 (scroll):   hash(2.1.3/4.7.11/18.29.47) → bucket_Z → SCROLL CONTENT
+Level 9 (scroll):   hash(2.1.3/4.7.2/9.2.2) → bucket_Z → SCROLL CONTENT
 ```
 
 **Hash function:** FNV-1a or xxHash (fast, good distribution)  
@@ -45,9 +45,9 @@ Scroll structure (256 bytes):
 
 **Example:**
 ```
-Scroll at 2.1.3/4.7.11/18.29.47:
-  prev: 2.1.3/4.7.11/18.29.46
-  next: 2.1.3/4.7.11/18.29.48
+Scroll at 2.1.3/4.7.2/9.2.2:
+  prev: 2.1.3/4.7.2/9.2.1
+  next: 2.1.3/4.7.2/9.2.3
   parent: 2.1.3/4.7.11/18.29.*
   content: "Lumen's data..."
 ```
@@ -55,7 +55,7 @@ Scroll at 2.1.3/4.7.11/18.29.47:
 **Traversal:**
 ```
 // Read next scroll
-current = CGET 2.1.3/4.7.11/18.29.47
+current = CGET 2.1.3/4.7.2/9.2.2
 next = CGET current.next_coord
 ```
 
@@ -73,13 +73,13 @@ Chapter (2.1.3/*/*/*/*):
       - Scroll (2.1.3/4.7/*/*):
           - Scroll (2.1.3/4.7.11/18.*/*):
               - Scroll (2.1.3/4.7.11/18.29.*):
-                  - Scroll (2.1.3/4.7.11/18.29.47)
+                  - Scroll (2.1.3/4.7.2/9.2.2)
 ```
 
 **Navigation:**
 ```
 // Get parent
-child = CGET 2.1.3/4.7.11/18.29.47
+child = CGET 2.1.3/4.7.2/9.2.2
 parent = CGET child.parent_coord  # 2.1.3/4.7.11/18.29.*
 
 // Get children
@@ -191,7 +191,7 @@ Node 5 (aletheia):    7.*.* / *.*.* / *.*.*  to  9.*.* / *.*.* / *.*.*
 
 **Routing:**
 ```
-coordinate: 2.1.3/4.7.11/18.29.47
+coordinate: 2.1.3/4.7.2/9.2.2
 
 Chapter = 2 → Node 2 (aurora)
 
@@ -256,7 +256,7 @@ Bytes 14-15: h (section)
 Bytes 16-17: i (scroll)
 ```
 
-**Example:** 2.1.3/4.7.11/18.29.47
+**Example:** 2.1.3/4.7.2/9.2.2
 ```
 [0x0002][0x0001][0x0003][0x0004][0x0007][0x000B][0x0012][0x001D][0x002F]
 ```
@@ -287,7 +287,7 @@ for bucket in hash_table:
 
 **Z-order curve:** Interleaves bits of all 9 coordinates into single 144-bit key
 ```
-coordinate: 2.1.3/4.7.11/18.29.47
+coordinate: 2.1.3/4.7.2/9.2.2
 binary:     0010.0001.0011 / 0100.0111.1011 / 10010.11101.101111
 
 Z-order key (interleaved):
@@ -310,8 +310,8 @@ Range query:
 ```
 Pattern: 2.1.3/4.7.*/18.*.*
 
-Z-order min: 2.1.3/4.7.0/18.0.0  → 0xABCD...0000
-Z-order max: 2.1.3/4.7.65535/18.65535.65535  → 0xABCD...FFFF
+Z-order min: 2.1.3/4.7.9/9.9.9  → 0xABCD...0000
+Z-order max: 2.1.3/4.7.6/9.6.6  → 0xABCD...FFFF
 
 B+ tree lookup: Find all keys in [0xABCD...0000, 0xABCD...FFFF]
 ```

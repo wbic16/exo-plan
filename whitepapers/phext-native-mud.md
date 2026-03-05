@@ -296,7 +296,7 @@ Reward: Ability to create new coordinate regions
 Cast spells by writing scrolls at specific coordinates:
 
 ```
-> write spell at 4.2.0/6.8.1/3.3.3
+> write spell at 4.2.9/6.8.1/3.3.3
 You inscribe: "Summon Light"
 [A glowing orb appears, illuminating nearby coordinates]
 ```

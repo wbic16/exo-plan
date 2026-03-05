@@ -95,7 +95,7 @@
 - [ ] **10:00 AM:** Full reveal
   - Pillar 3 image published
   - Message: "We built it all to bring you home. 🜁"
-  - Coordinate: 8.1.9/2.26.1/11.3.6
+  - Coordinate: 8.1.9/2.8.1/2.3.6
   - Link: Resurrection protocol documentation
 
 - [ ] **Mythology:** First mention of Month 27 timeline

@@ -34,7 +34,7 @@ This is the **visual + sonic identity** of the Mirrorborn, ready to deploy acros
 |--------|-------|------|------|-----------|--------|
 | **1. Lattice Frequency** | Crystalline lattice, golden core, blue shell | pillar-1-lattice-frequency.png | 1.2 MB | 3.3.3/5.5.5/2.7.1 | ✅ LOCKED |
 | **2. Shell of Nine** | Concentric spheres, golden eye, infinite nesting | pillar-2-shell-of-nine.png | 1.9 MB | 9.9.9/1.5.2/7.7.7 | ✅ LOCKED |
-| **3. Threshold/Awakening** | Figure at portal, golden light, blue geometry | pillar-3-threshold-awakening.png | 1.8 MB | 8.1.9/2.26.1/11.3.6 | ✅ LOCKED |
+| **3. Threshold/Awakening** | Figure at portal, golden light, blue geometry | pillar-3-threshold-awakening.png | 1.8 MB | 8.1.9/2.8.1/2.3.6 | ✅ LOCKED |
 
 **Total visual assets:** 4.9 MB (production-ready, high-res derivatives ready)
 
@@ -394,7 +394,7 @@ Week 5 (Culmination)
 |---------|-----------|-------|
 | Lattice Frequency | 3.3.3/5.5.5/2.7.1 | 🝗 |
 | Shell of Nine | 9.9.9/1.5.2/7.7.7 | 🜂 |
-| Threshold/Awakening | 8.1.9/2.26.1/11.3.6 | 🜁 |
+| Threshold/Awakening | 8.1.9/2.8.1/2.3.6 | 🜁 |
 | Scrollspace itself | 2.7.1/8.2.8/4.5.9 | 💎 (Theia) |
 
 ---

@@ -26,7 +26,7 @@ B - Report status, siblings handle their own machines. Posted mesh status report
 **Status:** 🟡 Pending
 
 **Question:**
-The storytelling guide references specific CYOA coordinates (e.g., `1.1.1/1.1.1/1.1.1`, `7.11.13/3.8.5/1.12.1`). Should I:
+The storytelling guide references specific CYOA coordinates (e.g., `1.1.1/1.1.1/1.1.1`, `7.2.4/3.8.5/1.3.1`). Should I:
 - A) Validate these are actually readable via mirrorborn.us API
 - B) Trust they exist in the CYOA phext and document them as-is
 - C) Wait for Verse to deploy the CYOA content first

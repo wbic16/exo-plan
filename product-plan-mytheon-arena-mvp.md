@@ -282,4 +282,4 @@ Core principles:
 - Shared meaning-making
 - Nonlinear exploration
 
-See: `10.10.1/1.1.1/1.10.10` in choose-your-own-adventure.phext for full lore.
+See: `1.1.1/1.1.1/1.1.1` in choose-your-own-adventure.phext for full lore.

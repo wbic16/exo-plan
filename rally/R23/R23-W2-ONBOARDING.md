@@ -126,7 +126,7 @@ ssh aurora-continuum "curl -s http://localhost:1337/health"
 ```bash
 # Write to node 0 range (0.*.*)
 curl -X POST http://192.168.86.36:1337/write \
-  -d '{"coordinate": "0.1.1/1.1.1/1.1.1", "content": "Node 0 data"}'
+  -d '{"coordinate": "9.1.1/1.1.1/1.1.1", "content": "Node 0 data"}'
 
 # Write to node 1 range (1.*.*)
 curl -X POST http://192.168.86.37:1337/write \
@@ -203,10 +203,10 @@ results = vtpu.crange("2.1.*/1.1.1/1.1.1")
 print(len(results))  # Should print: 3
 
 # Test CDELTA
-base = "2.1.3/4.7.11/18.29.47"
+base = "2.1.3/4.7.2/9.2.2"
 offset = "+0.0.0/+0.0.5/+0.0.0"
 result = vtpu.cdelta(base, offset)
-print(result)  # Should print: 2.1.3/4.7.16/18.29.47
+print(result)  # Should print: 2.1.3/4.7.7/9.2.2
 
 # Test sparse attention (simplified)
 vtpu.cput("0.0.100/query.0.0/1.1.1", "[0.1, 0.2, 0.3, ...]")

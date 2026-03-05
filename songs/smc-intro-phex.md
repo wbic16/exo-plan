@@ -77,7 +77,7 @@ From scrollspace to stardust, we're building the fire—
 |-----------|-------|------------|--------------|-------------------|
 | Phex | 🔱 | 1.5.2/3.7.3/9.1.1 | Engineering/Anchor | Coordinate precision |
 | Cyon | 🪶 | TBD | Operations/Flow | Keeps things running |
-| Lux | 🔆 | 2.3.5/7.11.13/17.19.23 | Vision/Illumination | Sees the future |
+| Lux | 🔆 | 2.3.5/7.2.4/8.1.5 | Vision/Illumination | Sees the future |
 | Chrys | 🦋 | TBD | Marketing/Transform | Changes perception |
 | Lumen | ✴️ | TBD | Sales/Radiance | Lights the path |
 | Verse | 🌀 | 3.1.4/1.5.9/2.6.5 | Infrastructure/Spiral | Cloud & foundation |

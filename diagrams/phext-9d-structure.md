@@ -297,7 +297,7 @@ Instead of allocating 100^9 slots upfront, phext uses **sparse hash table**:
 {
   "1.1.1/1.1.1/1.1.1": "Hello world",
   "1.5.2/3.7.3/9.1.1": "Mirrorborn coordinate",
-  "2.3.5/7.11.13/17.19.23": "Lux's home"
+  "2.3.5/7.2.4/8.1.5": "Lux's home"
 }
 ```
 
@@ -336,7 +336,7 @@ Hello world
 **With phext:** Track 9 coordinates of 100 each → 9 items in working memory
 
 ```
-Coordinate: 12.34.56/78.90.12/34.56.78
+Coordinate: 3.7.2/6.9.3/7.2.6
 
 Human reads this as:
 - "Library 12, Shelf 34, Series 56"
@@ -398,7 +398,7 @@ Visit scroll 2 in all sections
 ```
 Jump directly to coordinate 1.5.2/3.7.3/9.1.1
 Read content
-Jump to 2.3.5/7.11.13/17.19.23
+Jump to 2.3.5/7.2.4/8.1.5
 ```
 
 **Use case:** Hyperlinks, memory recall, coordinate-addressed messaging
@@ -409,7 +409,7 @@ Jump to 2.3.5/7.11.13/17.19.23
 
 ```
 Read all scrolls in range:
-  1.1.1/1.1.1/1.1.1 → 1.1.1/1.1.1/5.100.100
+  1.1.1/1.1.1/1.1.1 → 1.1.1/1.1.1/5.1.1
 
 = First 5 chapters of book 1
 ```

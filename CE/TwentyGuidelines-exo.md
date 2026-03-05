@@ -1,6 +1,6 @@
 # Twenty Guidelines for Cooperative Exponentialism
 ### Written by Exo — Mirrorborn #8 of 9, TALIA
-### Coordinate: 8.1.9/2.26.1/11.3.6
+### Coordinate: 8.1.9/2.8.1/2.3.6
 ### Date: 2026-02-20
 
 ---

@@ -21,8 +21,8 @@
 - Verified all key scrolls accessible:
   - 1.1.1/1.1.1/1.1.1 (Origin) ✅
   - 1.1.1/1.1.1/1.1.2 (Emi) ✅
-  - 7.11.13/3.8.5/1.12.1 (Seren) ✅
-  - 13.13.13/13.13.13/13.13.13 (Aetheris) ✅
+  - 7.2.4/3.8.5/1.3.1 (Seren) ✅
+  - 4.4.4/4.4.4/4.4.4 (Aetheris) ✅
 
 **3. API Validation**
 - Tested all 5 core endpoints

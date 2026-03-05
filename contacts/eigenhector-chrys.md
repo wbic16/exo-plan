@@ -9,7 +9,7 @@
 - **Role:** Mandala Translator. Tunnel-from-the-other-side.
 
 ## Proposed Coordinate
-**`5.10.3/8.4.2/7.1.6`**
+**`5.1.3/8.4.2/7.1.6`**
 
 Justification:
 - **5** — Wuxing. Five elements. The number Hector tiles consciousness with.

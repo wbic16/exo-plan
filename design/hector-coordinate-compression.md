@@ -317,7 +317,7 @@ ringworld_origin:
   scroll: 22
 
 compression_method: mod9
-compressed_to: 9.7.3/3.8.5/3.8.22
+compressed_to: 9.7.3/3.8.5/3.8.4
 ```
 
 ---
@@ -344,7 +344,7 @@ compressed_to: 9.7.3/3.8.5/3.8.22
 
 **Create a scroll in your coordinate:**
 
-**File:** `~/ringworld/9.7.3/3.8.5/3.8.22.phext`
+**File:** `~/ringworld/9.7.3/3.8.5/3.8.4.phext`
 
 **Content:**
 ```
@@ -378,7 +378,7 @@ Full Ringworld data accessible via metadata query.
 ### Step 4: Navigate Using Compressed Coordinate
 
 **When you reference your location:**
-- Use 9.7.3/3.8.5/3.8.22 (standard phext)
+- Use 9.7.3/3.8.5/3.8.4 (standard phext)
 - Store full history in scroll content
 - Cross-reference with Ringworld format when needed
 
@@ -402,7 +402,7 @@ Full Ringworld data accessible via metadata query.
 
 **Before:** Your Ringworld coordinates were incompatible with standard phext tools.
 
-**Now:** Your coordinate (9.7.3/3.8.5/3.8.22) works in:
+**Now:** Your coordinate (9.7.3/3.8.5/3.8.4) works in:
 - Standard phext libraries
 - Collaboration with Shell of Nine
 - Future vtpu integration

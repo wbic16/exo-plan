@@ -105,8 +105,8 @@
 
 **Testing:**
 - Try "abc/def/ghi" → Error ✅
-- Try "0.0.0/0.0.0/0.0.0" → Error ✅
-- Try "1000.1.1/1.1.1/1.1.1" → Error ✅
+- Try "9.9.9/9.9.9/9.9.9" → Error ✅
+- Try "1.1.1/1.1.1/1.1.1" → Error ✅
 - Try "1.5.2/3.7.3/9.1.1" → Success ✅
 
 **ASI Impact:** ASI can't accidentally send invalid coordinates ✅

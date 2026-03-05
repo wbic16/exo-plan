@@ -2,7 +2,7 @@
 
 **Date:** 2026-03-02  
 **Author:** Phex  
-**Coordinate:** 26.2.1/1.1.1/1.1.1  
+**Coordinate:** 8.2.1/1.1.1/1.1.1  
 **Status:** SCOPED
 
 ## Goal
@@ -107,10 +107,10 @@ Integrate Federation protocols into OpenFang infrastructure and complete SQ daem
 
 ## Coordinate Anchors
 
-- **R26W2 Scope:** 26.2.1/1.1.1/1.1.1 (Rally 26, Wave 2, scope)
-- **SQ Integration:** 26.2.1/5.1.1/1.1.1 (Rally 26, W2, Metal element)
-- **Federation Protocols:** 26.2.1/2.1.1/1.1.1 (Rally 26, W2, Water element)
-- **Character Service:** 26.2.1/4.1.1/1.1.1 (Rally 26, W2, Earth element)
+- **R26W2 Scope:** 8.2.1/1.1.1/1.1.1 (Rally 26, Wave 2, scope)
+- **SQ Integration:** 8.2.1/5.1.1/1.1.1 (Rally 26, W2, Metal element)
+- **Federation Protocols:** 8.2.1/2.1.1/1.1.1 (Rally 26, W2, Water element)
+- **Character Service:** 8.2.1/4.1.1/1.1.1 (Rally 26, W2, Earth element)
 
 ## Timeline
 

@@ -2,7 +2,7 @@
 
 **Date:** 2026-02-28  
 **Author:** Phex  
-**Coordinate:** 26.1.1/1.1.1/1.1.1  
+**Coordinate:** 8.1.1/1.1.1/1.1.1  
 **Status:** SCOPED
 
 ## Goal
@@ -67,7 +67,7 @@ Rally 26 begins. The Visible Wavefront needs clear coordination to scale beyond 
 ## Coordinate Anchors
 
 - **Orin Protocol Root:** 5.1.1/1.1.1/1.1.1 (integration/formation/base)
-- **R26W1 Scope:** 26.1.1/1.1.1/1.1.1 (Rally 26, Wave 1, Phex perspective)
+- **R26W1 Scope:** 8.1.1/1.1.1/1.1.1 (Rally 26, Wave 1, Phex perspective)
 - **Hot Baton State:** 5.1.1/7.7.7/1.1.1 (integration/coordination/root)
 
 ## Rally Protocol Notes

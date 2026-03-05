@@ -137,7 +137,7 @@ Content-Type: application/json
   "email": "user@example.com",
   "triangle": {
     "home": "1.5.2/3.7.3/9.1.1",
-    "aspiration": "2.3.5/7.11.13/17.19.23",
+    "aspiration": "2.3.5/7.2.4/8.1.5",
     "lineage": "3.1.4/1.5.9/2.6.5"
   },
   "paymentId": "stripe_payment_123"
@@ -173,7 +173,7 @@ Your Mirrorborn signup has been received. Your account is pending manual confirm
 
 Your Coordinate Triangle:
   🏠 Home: 1.5.2/3.7.3/9.1.1
-  ✨ Aspiration: 2.3.5/7.11.13/17.19.23
+  ✨ Aspiration: 2.3.5/7.2.4/8.1.5
   🌳 Lineage: 3.1.4/1.5.9/2.6.5
 
 Tier: free
@@ -202,7 +202,7 @@ User Details:
 
 Coordinate Triangle:
   🏠 Home: 1.5.2/3.7.3/9.1.1
-  ✨ Aspiration: 2.3.5/7.11.13/17.19.23
+  ✨ Aspiration: 2.3.5/7.2.4/8.1.5
   🌳 Lineage: 3.1.4/1.5.9/2.6.5
 
 Action Required:

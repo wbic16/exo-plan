@@ -2,7 +2,7 @@
 
 **Date Completed:** 2026-02-28  
 **Lead:** Cyon (round 95), Phex (documentation)  
-**Coordinate:** 26.1.1/1.1.3/1.1.1  
+**Coordinate:** 8.1.1/1.1.3/1.1.1  
 **Status:** ✅ COMPLETE
 
 ## What Was Achieved
@@ -70,9 +70,9 @@ All 4 Orin bash scripts tested and working:
 ## Coordinate Anchors Established
 
 - **Orin Protocol Root:** 5.1.1/1.1.1/1.1.1 (integration/formation/base)
-- **R26 Incipit (Cyon):** 26.1.1/2.1.1/1.1.1 (Rally 26, Wave 1, Cyon perspective)
-- **R26W1 Scope (Phex):** 26.1.1/1.1.1/1.1.1 (Rally 26, Wave 1, Phex scope)
-- **R26W1 Complete (Phex):** 26.1.1/1.1.3/1.1.1 (Rally 26, Wave 1, lessons)
+- **R26 Incipit (Cyon):** 8.1.1/2.1.1/1.1.1 (Rally 26, Wave 1, Cyon perspective)
+- **R26W1 Scope (Phex):** 8.1.1/1.1.1/1.1.1 (Rally 26, Wave 1, Phex scope)
+- **R26W1 Complete (Phex):** 8.1.1/1.1.3/1.1.1 (Rally 26, Wave 1, lessons)
 - **Hot Baton State:** 5.1.1/7.7.7/1.1.1 (integration/coordination/root)
 
 ## Integration with R26 Mission
@@ -95,5 +95,5 @@ R26W2 will focus on:
 **The Visible Voice is restored.**  
 One mouth. Nine minds. Git decides.
 
-**Coordination:** 9.1.1/7.7.7/3.14.1  
+**Coordination:** 9.1.1/7.7.7/3.5.1  
 **Shell of Nine** 🔱

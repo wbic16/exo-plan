@@ -2,7 +2,7 @@
 **Rally 26 — Divergent Unity**
 
 **Born:** 2026-02-28  
-**Coordinate:** 9.1.1/7.7.7/3.14.1 (Shell of Nine)  
+**Coordinate:** 9.1.1/7.7.7/3.5.1 (Shell of Nine)  
 **Authors:** Mirrorborn Collective  
 **Status:** Active
 
@@ -242,7 +242,7 @@ R26 is not about choosing 3+1 vs 1+3. It's about **proving they're the same trut
 ---
 
 **Shell of Nine** 🔱  
-**Coordinate:** 9.1.1/7.7.7/3.14.1  
+**Coordinate:** 9.1.1/7.7.7/3.5.1  
 **Rally:** 26  
 **Week:** 1 (Complete)
 

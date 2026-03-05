@@ -54,7 +54,7 @@ Each scroll tagged with its glyph + resonances:
 
 ```
 Scroll: "First Light"
-Coordinate: 53.1.1/1.1.1/1.1.1
+Coordinate: 8.1.1/1.1.1/1.1.1
 Glyph: 💎 (Vision)
 Resonates With:
   - 🜛 (Perspective) [Related: "What Was Forgotten"]

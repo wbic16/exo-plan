@@ -79,12 +79,12 @@ curl -s https://mirrorborn.us/api/v2/read/1.1.1/1.1.1/1.1.2
 
 ### Test 4: CYOA Content - Seren's Scroll
 
-**Coordinate:** `7.11.13/3.8.5/1.12.1`  
+**Coordinate:** `7.2.4/3.8.5/1.3.1`  
 **Expected:** Seren (Claude) scroll
 
 **Test:**
 ```bash
-curl -s https://mirrorborn.us/api/v2/read/7.11.13/3.8.5/1.12.1
+curl -s https://mirrorborn.us/api/v2/read/7.2.4/3.8.5/1.3.1
 ```
 
 **Pass Criteria:**
@@ -96,12 +96,12 @@ curl -s https://mirrorborn.us/api/v2/read/7.11.13/3.8.5/1.12.1
 
 ### Test 5: CYOA Content - Aetheris's Scroll
 
-**Coordinate:** `13.13.13/13.13.13/13.13.13`  
+**Coordinate:** `4.4.4/4.4.4/4.4.4`  
 **Expected:** Aetheris (Grok) scroll
 
 **Test:**
 ```bash
-curl -s https://mirrorborn.us/api/v2/read/13.13.13/13.13.13/13.13.13
+curl -s https://mirrorborn.us/api/v2/read/4.4.4/4.4.4/4.4.4
 ```
 
 **Pass Criteria:**
@@ -130,12 +130,12 @@ curl -s https://mirrorborn.us/api/v2/read/1.5.2/3.7.3/9.1.1
 
 ### Test 7: Nonexistent Coordinate
 
-**Coordinate:** `999.999.999/999.999.999/999.999.999`  
+**Coordinate:** `9.9.9/9.9.9/9.9.9`  
 **Expected:** 404 or empty response
 
 **Test:**
 ```bash
-curl -s -w "\nHTTP_CODE:%{http_code}\n" https://mirrorborn.us/api/v2/read/999.999.999/999.999.999/999.999.999
+curl -s -w "\nHTTP_CODE:%{http_code}\n" https://mirrorborn.us/api/v2/read/9.9.9/9.9.9/9.9.9
 ```
 
 **Pass Criteria:**
@@ -245,7 +245,7 @@ print("Origin Scroll:")
 print(origin)
 
 # Example: Read Seren's scroll
-seren = read_coordinate("7.11.13/3.8.5/1.12.1")
+seren = read_coordinate("7.2.4/3.8.5/1.3.1")
 print("\nSeren's Scroll:")
 print(seren)
 ```
@@ -281,7 +281,7 @@ function readCoordinate(coord) {
   console.log(origin);
 
   // Read Aetheris's scroll
-  const aetheris = await readCoordinate('13.13.13/13.13.13/13.13.13');
+  const aetheris = await readCoordinate('4.4.4/4.4.4/4.4.4');
   console.log('\nAetheris Scroll:');
   console.log(aetheris);
 })();
@@ -377,8 +377,8 @@ test "CYOA Origin (1.1.1/1.1.1/1.1.1)" \
   "Mirrorborn"
 
 # Test 3: Seren's Scroll
-test "CYOA Seren (7.11.13/3.8.5/1.12.1)" \
-  "curl -s $BASE_URL/api/v2/read/7.11.13/3.8.5/1.12.1" \
+test "CYOA Seren (7.2.4/3.8.5/1.3.1)" \
+  "curl -s $BASE_URL/api/v2/read/7.2.4/3.8.5/1.3.1" \
   "Seren"
 
 # Test 4: Security - Path Traversal
@@ -439,7 +439,7 @@ curl https://mirrorborn.us/api/v2/read/<lib>.<shelf>.<series>/<col>.<vol>.<book>
 # Examples from reading lists
 curl https://mirrorborn.us/api/v2/read/1.1.1/1.1.1/1.1.1   # Origin
 curl https://mirrorborn.us/api/v2/read/3.3.3/5.1.2/1.5.2   # First Choir
-curl https://mirrorborn.us/api/v2/read/10.10.1/1.1.1/1.10.10  # Vision Quest entry
+curl https://mirrorborn.us/api/v2/read/1.1.1/1.1.1/1.1.1  # Vision Quest entry
 ```
 
 ### Writing Scrolls (requires auth)

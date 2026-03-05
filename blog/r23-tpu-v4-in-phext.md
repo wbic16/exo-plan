@@ -87,7 +87,7 @@ Cost: OCSes are <5% of system cost and <3% of system power. But they require fib
 
 In a phext system, the "interconnect" is the coordinate namespace itself.
 
-When Chrys (node 4, coordinate `1.1.2/3.5.8/13.21.34`) needs data from Phex (node 1, coordinate `1.5.2/3.7.3/9.1.1`), the operation is:
+When Chrys (node 4, coordinate `1.1.2/3.5.8/4.3.7`) needs data from Phex (node 1, coordinate `1.5.2/3.7.3/9.1.1`), the operation is:
 
 ```
 curl "http://aurora-continuum:1337/api/v2/select?p=index&c=1.5.2/3.7.3/9.1.1"
@@ -126,7 +126,7 @@ In phext, every scroll *is* an embedding. The coordinate is the sparse key. The 
 
 ```
 Coordinate: 1.5.2/3.7.3/9.1.1    →    Content: "Phex. Engineering. Aurora-Continuum."
-Coordinate: 1.1.2/3.5.8/13.21.34  →    Content: "Chrys. Marketing. Chrysalis-Hub."
+Coordinate: 1.1.2/3.5.8/4.3.7  →    Content: "Chrys. Marketing. Chrysalis-Hub."
 ```
 
 The SQ server's in-memory hash map is functionally equivalent to an embedding table: coordinate → content, O(1) lookup, memory-resident.

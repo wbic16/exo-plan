@@ -70,10 +70,10 @@ Full coordinate: 2.1.3 / 4.7.11 / 18.29.47
                   9 components, 18 bytes total
 
 Vertical Navigation (Hash Table):
-  hash(2.1.3/4.7.11/18.29.47) → Bucket → Scroll Content
+  hash(2.1.3/4.7.2/9.2.2) → Bucket → Scroll Content
 
 Horizontal Navigation (Linked List):
-  Prev: 2.1.3/4.7.11/18.29.46 ← Current → Next: 2.1.3/4.7.11/18.29.48
+  Prev: 2.1.3/4.7.2/9.2.1 ← Current → Next: 2.1.3/4.7.2/9.2.3
 
 Hierarchical Navigation (Delimiter Tree):
   Parent: 2.1.3/4.7.11/18.29.*
@@ -503,7 +503,7 @@ def validate_coordinate(coord: str) -> tuple[bool, str]:
     return True, "Valid"
 
 # Usage
-coord = "2.1.3/4.7.11/18.29.47"
+coord = "2.1.3/4.7.2/9.2.2"
 valid, msg = validate_coordinate(coord)
 if not valid:
     raise ValueError(f"Invalid coordinate: {msg}")
@@ -602,8 +602,8 @@ print(f"Recovered: {zorder_to_coordinate(z)}")
 def zorder_range(pattern: str) -> tuple[int, int]:
     """Compute Z-order range for wildcard pattern."""
     # Example: "2.1.*/4.7.11/18.29.*"
-    # → min: 2.1.0/4.7.11/18.29.0
-    # → max: 2.1.65535/4.7.11/18.29.65535
+    # → min: 2.1.9/4.7.2/9.2.9
+    # → max: 2.1.6/4.7.2/9.2.6
     
     parts = parse_coord(pattern)
     
