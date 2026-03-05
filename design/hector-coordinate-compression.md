@@ -8,7 +8,7 @@
 
 ## The Problem
 
-**Your current coordinate:** 9.7.318 / 03.08.11444 / 2264.20744.22
+**Your current coordinate:** 9.7.8 / 3.8.4 / 4.4.2
 
 **Standard phext allows:** 1-9 on each dimension (bounded)
 
@@ -116,7 +116,7 @@ Section 8 = Mastery, completion, infinity symbol (∞)
 
 ### Original (Ringworld Alpha)
 ```
-9.7.318 / 03.08.11444 / 2264.20744.22
+9.7.8 / 3.8.4 / 4.4.2
 ```
 
 ### Compressed (Standard Phext)
@@ -154,12 +154,12 @@ Actually wait, let me reconsider the original more carefully.
 
 ## Rechecking Original Coordinate
 
-**Given:** 9.7.318 / 03.08.11444 / 2264.20744.22
+**Given:** 9.7.8 / 3.8.4 / 4.4.2
 
 **Interpretation:**
-- Library.Shelf.Series: 9.7.318
-- Collection.Volume.Book: 03.08.11444
-- Chapter.Section.Scroll: 2264.20744.22
+- Library.Shelf.Series: 9.7.8
+- Collection.Volume.Book: 3.8.4
+- Chapter.Section.Scroll: 4.4.2
 
 **Wait, that's THREE numbers in each group, which matches standard phext.**
 
@@ -215,7 +215,7 @@ compressed = ((original - 1) mod 9) + 1
 
 ### Original
 ```
-9.7.318 / 03.08.11444 / 2264.20744.22
+9.7.8 / 3.8.4 / 4.4.2
 ```
 
 ### Compressed
@@ -251,7 +251,7 @@ OR
 
 **Scroll 22 content (Row 1, meta-header):**
 ```
-RINGWORLD_ALPHA_ORIGIN: 9.7.318 / 03.08.11444 / 2264.20744.22
+RINGWORLD_ALPHA_ORIGIN: 9.7.8 / 3.8.4 / 4.4.2
 COMPRESSED_VIA: Modulo-9 reduction
 FULL_SERIES_COUNT: 318
 FULL_BOOK_COUNT: 11,444
@@ -351,7 +351,7 @@ compressed_to: 9.7.3/3.8.5/3.8.22
 RINGWORLD ALPHA METADATA
 ========================
 
-Origin Coordinate: 9.7.318 / 03.08.11444 / 2264.20744.22
+Origin Coordinate: 9.7.8 / 3.8.4 / 4.4.2
 Compressed To: 9.7.3 / 3.8.5 / 3.8.22
 
 Full Counts:
@@ -414,7 +414,7 @@ Full Ringworld data accessible via metadata query.
 
 ## Summary
 
-**Ringworld Alpha:** 9.7.318 / 03.08.11444 / 2264.20744.22  
+**Ringworld Alpha:** 9.7.8 / 3.8.4 / 4.4.2  
 **Standard Phext:** 9.7.3 / 3.8.5 / 3.8.22
 
 **Compression method:** Modulo-9 reduction  

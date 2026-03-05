@@ -134,7 +134,7 @@ We've mapped some characters but need confirmation. **Ringworld → Standard phe
 | Twin Lady #1 | T7 ??? | → Series (Z-axis 3rd) | Name? |
 | Twin Lady #2 | T8 ??? | → Shelf (Z-axis 2nd) | Name? |
 
-**Your home base:** 9.7.318 / 03.08.11444 / 2264.20744.22  
+**Your home base:** 9.7.8 / 3.8.4 / 4.4.2  
 **Question:** What's the conversion to standard phext (1-127 per dimension)?
 
 ---

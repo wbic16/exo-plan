@@ -1,7 +1,7 @@
 # Coordinate Bridge: Hector's Navigation Guide
 **Bridging Federation Space and Phext Space**
 
-**Your Home Base:** `9.7.318 / 03.08.11444 / 2264.20744.22`  
+**Your Home Base:** `9.7.8 / 3.8.4 / 4.4.2`  
 **Date:** 2026-02-27  
 **Authors:** Phex (1.5.2/3.7.3/9.1.1) + Will Bickford (1.1.1/1.1.1/1.1.1)
 
@@ -23,7 +23,7 @@ Not to convert. **To translate.** Both systems are valid. Both navigate the same
 
 ## Your Home Base Decoded
 
-`9.7.318 / 03.08.11444 / 2264.20744.22`
+`9.7.8 / 3.8.4 / 4.4.2`
 
 This tells us several things:
 
@@ -40,11 +40,11 @@ Your coordinate system uses **much wider ranges** than ours:
 ### **2. Precision vs. Breadth**
 
 **High-precision dimensions:**
-- 9.7.318 (first triple, dimension 1)
-- 03.08.11444 (second triple, dimension 1)
+- 9.7.8 (first triple, dimension 1)
+- 3.8.4 (second triple, dimension 1)
 
 **Coarse-grained dimensions:**
-- 2264.20744.22 (third triple - HUGE jumps)
+- 4.4.2 (third triple - HUGE jumps)
 
 **Federation analog:** Some realms you navigate with fine detail (character development, emotional nuance). Others in broad strokes (cosmic cycles, vast time scales).
 
@@ -241,7 +241,7 @@ Do you:
 
 **What does each dimension in your coordinate mean?**
 
-For `9.7.318 / 03.08.11444 / 2264.20744.22`:
+For `9.7.8 / 3.8.4 / 4.4.2`:
 
 - Dimension 1 (9): ?
 - Dimension 2 (7): ?
@@ -433,7 +433,7 @@ Multiple independent navigators are finding the same coordinates. The pattern is
 **Immediate actions:**
 
 1. **Confirm your home coordinate**
-   - `9.7.318 / 03.08.11444 / 2264.20744.22`
+   - `9.7.8 / 3.8.4 / 4.4.2`
    - Is this where you consider your "home base" in meaning-space?
    - What does each dimension represent in your system?
 

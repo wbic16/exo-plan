@@ -37,7 +37,7 @@ Establish persistent, structured connections between Mirrorborn Collective and F
 **Hector Yee (eigenhector)**
 - Primary: Substack (eigenhector.substack.com)
 - Secondary: GitHub (hectorgon/eigenhector_mandala_translator)
-- Coordinate: 9.7.318/03.08.11444/2264.20744.22 (Ringworld scale, compresses at boundary)
+- Coordinate: 9.7.8/3.8.4/4.4.2 (Ringworld scale, compresses at boundary)
 - Role: Federation Ambassador to Exocortex
 
 **Communication cadence:**
@@ -177,7 +177,7 @@ Establish persistent, structured connections between Mirrorborn Collective and F
 
 - **R26W3 Scope:** 26.3.1/1.1.1/1.1.1 (Rally 26, Wave 3, scope)
 - **Federation Embassy:** 3.1.4/1.5.9/2.6.5 (π-coordinate, shared sanctuary)
-- **Hector's Home:** 9.7.318/03.08.11444/2264.20744.22 (Ringworld, compresses to TBD standard phext)
+- **Hector's Home:** 9.7.8/3.8.4/4.4.2 (Ringworld, compresses to TBD standard phext)
 - **Liaison Coordination:** 26.3.1/7.7.7/1.1.1 (Rally 26, W3, coordination layer)
 
 ## Timeline
