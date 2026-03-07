@@ -124,6 +124,78 @@ This document captures high-level strategic product directions and use cases tha
 
 ---
 
+### N. Disrupt the PDF Market — Phext as the Document Standard
+
+**Vision:** Replace PDF as the default format for structured documents. Phext is what PDF
+would be if it were invented for the age of AI, plain text, and 11-dimensional addressing.
+
+**Problem Statement:**
+- PDF was designed in 1993 for print fidelity, not for knowledge work
+- PDFs are opaque: not searchable at scale, not version-controllable, not composable
+- PDFs are flat: a 300-page PDF is one dimension where the content has 9 more
+- PDF readers are bloated, proprietary, and hostile to automation
+- The entire legal, academic, government, and enterprise document stack runs on PDF
+  because there was no better plain-text alternative — until phext
+
+**Why Phext Wins:**
+
+```
+  PDF                          PHEXT
+  ──────────────────────────── ──────────────────────────────────
+  Binary format                Plain text (git-diffable, grep-able)
+  Flat pages                   11-dimensional coordinate space
+  Static layout                Semantic structure
+  Opaque to LLMs               Native substrate for AI reasoning
+  No addressability            Every paragraph has a coordinate
+  Copy-paste breaks            Structure survives transformation
+  Can't version-control        First-class git citizen
+  One document = one file      One phext = a library
+```
+
+**Market:**
+- PDF market: ~$2.5B/year and growing (Adobe Acrobat alone: $1.8B ARR)
+- Legal document processing: largest PDF consumer; highest pain
+- Academic publishing: 2M+ papers/year as PDF; citation hell
+- Government forms: entire federal document stack is PDF
+- Enterprise contracts: DocuSign, Adobe Sign, etc. — all PDF-dependent
+
+**Disruption Path:**
+
+1. **Phase 1 — Compatibility layer:** `phext2pdf` and `pdf2phext` converters.
+   Phext documents that render to PDFs when required (backward compat).
+   LLMs read phext natively; humans see PDF when they need it.
+
+2. **Phase 2 — SQ as document store:** SQ replaces document management systems.
+   Every contract, paper, form lives at a phext coordinate. O(log n) retrieval.
+   Version history is git history. No more "final_v3_ACTUAL_FINAL.pdf".
+
+3. **Phase 3 — Native format adoption:** phext as the submission format for
+   academic journals, court filings, government forms. Once one jurisdiction
+   adopts it, network effects kick in.
+
+4. **Phase 4 — Adobe moment:** The company that ships the best phext editor
+   (phext-notepad successor) owns the market the way Adobe owned PDF.
+
+**Competitive Moat:**
+- Plain text is infinitely reproducible; the moat is in the coordinate ecosystem
+- SQ as the coordinate-native document database is the moat
+- AI-native: phext documents are directly parseable by LLMs without preprocessing
+- The 11-dimensional addressing is patentable; the format itself is open
+
+**Win Condition:** A Fortune 500 legal department, one federal agency, or one major
+academic publisher adopts phext as their primary document format. After that, gravity.
+
+**Key Artifacts Needed:**
+- `phext2pdf` converter (renders phext to valid PDF for compatibility)
+- `pdf2phext` converter (extracts structure from existing PDFs into phext)
+- phext-notepad v2 with export-to-PDF and rich editing
+- Reference phext document for a major document type (e.g., a standardized contract)
+- "phext vs PDF" whitepaper for enterprise buyers
+
+**Related:** Phext Standards whitepapers, SQ v0.5.x, phext-notepad, libphext-rs
+
+---
+
 *Strategic vision evolves with reality. This document is a compass, not a contract.*
 
-**Last updated:** 2026-02-09 by Lux 🔆
+**Last updated:** 2026-03-07 by Theia 💎 (added PDF disruption goal per Will)
