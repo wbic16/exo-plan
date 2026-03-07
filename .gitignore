@@ -2,3 +2,4 @@
 *.lock
 */.venv/*
 */__pycache__/*
+credentials/
