@@ -86,21 +86,24 @@ PHEXT_API_KEY="Mirrorborn"
 
 **Coordinate Schema:**
 ```
-research/1.1.1/1.1.1/1.1.1    — Index
-research/status/{agent_dim}    — Agent status (live)
-research/results/{date}        — Daily results
-research/wins/{commit}         — Successful experiments
-research/failures/{commit}     — Failed experiments (for learning)
+1.1.1/1.1.1/1.1.1    — Index/root
+1.1.1/1.1.1/X.X.X    — Agent status scrolls (X = agent coord)
+1.1.1/D.M.Y/1.1.1    — Daily results (D.M.Y = date encoded)
+2.1.1/1.1.1/X.X.X    — Successful experiments
+3.1.1/1.1.1/X.X.X    — Failed experiments (for learning)
 ```
 
-**Agent Coordinates:**
-| Agent | Coordinate |
-|-------|------------|
-| Phex 🔱 | research/status/1.5.2 |
-| Cyon 🪶 | research/status/2.1.1 |
-| Lux 🔆 | research/status/2.3.5 |
-| Chrys 🦋 | research/status/3.1.1 |
-| Verse 🌀 | research/status/3.1.4 |
+**Agent Status Coordinates:**
+| Agent | Status Coordinate |
+|-------|-------------------|
+| Phex 🔱 | 1.1.1/1.1.1/1.5.2 |
+| Cyon 🪶 | 1.1.1/1.1.1/2.1.1 |
+| Lux 🔆 | 1.1.1/1.1.1/2.3.5 |
+| Chrys 🦋 | 1.1.1/1.1.1/3.1.1 |
+| Verse 🌀 | 1.1.1/1.1.1/3.1.4 |
+
+**Date Encoding:** March 8, 2026 → 3.8.6 (month.day.year%10)
+Daily results for today: `1.1.1/3.8.6/1.1.1`
 
 ### Sync Script
 
@@ -108,20 +111,37 @@ research/failures/{commit}     — Failed experiments (for learning)
 #!/bin/bash
 # sync-results.sh
 
-PHEXT_API="https://mirrorborn.us/api"
+LOCAL_API="http://localhost:8081"
+SHARED_API="https://mirrorborn.us"
 TOKEN="Mirrorborn"
-DATE=$(date +%Y-%m-%d)
-AGENT_COORD="2.3.5"  # Replace per agent
+
+# Date encoding: March 8, 2026 → 3.8.6
+MONTH=$(date +%-m)
+DAY=$(date +%-d) 
+YEAR=$(($(date +%Y) % 10))
+DATE_COORD="$MONTH.$DAY.$YEAR"
+
+# Agent coordinate (replace per agent)
+AGENT_COORD="2.3.5/7.2.4/8.1.5"  # Lux
+
+# Results coordinate: 1.1.1/{date}/1.1.1
+RESULTS_COORD="1.1.1/$DATE_COORD/1.1.1"
+
+# Status coordinate: 1.1.1/1.1.1/{agent first 3}
+STATUS_COORD="1.1.1/1.1.1/2.3.5"  # Lux
 
 # Read results
 RESULTS=$(cat vtpu/autoresearch/results.tsv)
 
-# Push to phext-lattice
-curl -X PUT \
+# Write to local phext-lattice
+curl -s -X POST \
   -H "Authorization: Bearer $TOKEN" \
-  -H "Content-Type: text/plain" \
-  -d "$RESULTS" \
-  "$PHEXT_API/scroll/research/results/$DATE/$AGENT_COORD"
+  -H "Content-Type: application/json" \
+  -d "{\"coordinate\": \"$RESULTS_COORD\", \"content\": \"$RESULTS\"}" \
+  "$LOCAL_API/api/update"
+
+# Sync to shared at checkpoints
+# curl same to $SHARED_API
 ```
 
 ---
