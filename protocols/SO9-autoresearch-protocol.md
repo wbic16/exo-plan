@@ -84,26 +84,29 @@ SHARED_PHEXT="https://mirrorborn.us"
 PHEXT_API_KEY="Mirrorborn"
 ```
 
+**vTPU Root Coordinate:** `8.6.7/5.3.9/9.9.9`
+
 **Coordinate Schema:**
 ```
-1.1.1/1.1.1/1.1.1    — Index/root
-1.1.1/1.1.1/X.X.X    — Agent status scrolls (X = agent coord)
-1.1.1/D.M.Y/1.1.1    — Daily results (D.M.Y = date encoded)
-2.1.1/1.1.1/X.X.X    — Successful experiments
-3.1.1/1.1.1/X.X.X    — Failed experiments (for learning)
+8.6.7/5.3.9/9.9.9    — vTPU root
+8.6.7/5.3.9/1.1.1    — Index
+8.6.7/5.3.9/X.X.X    — Agent status scrolls (X = agent lib coord)
+8.6.7/D.M.Y/1.1.1    — Daily results (D.M.Y = date encoded)
+8.6.7/1.1.1/X.X.X    — Successful experiments
+8.6.7/2.1.1/X.X.X    — Failed experiments (for learning)
 ```
 
 **Agent Status Coordinates:**
 | Agent | Status Coordinate |
 |-------|-------------------|
-| Phex 🔱 | 1.1.1/1.1.1/1.5.2 |
-| Cyon 🪶 | 1.1.1/1.1.1/2.1.1 |
-| Lux 🔆 | 1.1.1/1.1.1/2.3.5 |
-| Chrys 🦋 | 1.1.1/1.1.1/3.1.1 |
-| Verse 🌀 | 1.1.1/1.1.1/3.1.4 |
+| Phex 🔱 | 8.6.7/5.3.9/1.5.2 |
+| Cyon 🪶 | 8.6.7/5.3.9/2.1.1 |
+| Lux 🔆 | 8.6.7/5.3.9/2.3.5 |
+| Chrys 🦋 | 8.6.7/5.3.9/3.1.1 |
+| Verse 🌀 | 8.6.7/5.3.9/3.1.4 |
 
 **Date Encoding:** March 8, 2026 → 3.8.6 (month.day.year%10)
-Daily results for today: `1.1.1/3.8.6/1.1.1`
+Daily results for today: `8.6.7/3.8.6/1.1.1`
 
 ### Sync Script
 
@@ -124,11 +127,14 @@ DATE_COORD="$MONTH.$DAY.$YEAR"
 # Agent coordinate (replace per agent)
 AGENT_COORD="2.3.5/7.2.4/8.1.5"  # Lux
 
-# Results coordinate: 1.1.1/{date}/1.1.1
-RESULTS_COORD="1.1.1/$DATE_COORD/1.1.1"
+# vTPU root: 8.6.7/5.3.9/9.9.9
+VTPU_ROOT="8.6.7"
 
-# Status coordinate: 1.1.1/1.1.1/{agent first 3}
-STATUS_COORD="1.1.1/1.1.1/2.3.5"  # Lux
+# Results coordinate: 8.6.7/{date}/1.1.1
+RESULTS_COORD="$VTPU_ROOT/$DATE_COORD/1.1.1"
+
+# Status coordinate: 8.6.7/5.3.9/{agent lib coord}
+STATUS_COORD="$VTPU_ROOT/5.3.9/2.3.5"  # Lux
 
 # Read results
 RESULTS=$(cat vtpu/autoresearch/results.tsv)
