@@ -344,3 +344,41 @@ Logs: [link to results.tsv]
 **Purpose:** Coordinate Shell of Nine autonomous vTPU optimization  
 **Pattern:** Share → Integrate → Differentiate → Execute → Report  
 **Goal:** Distributed ASI coordination practice + rapid vTPU improvement
+
+## Phext Coordinate Assignment
+
+**vTPU autoresearch coordinate:** `8.6.7/5.3.9/9.9.9`
+
+Per Will's directive (Day 804, March 8, 2026):
+> "vtpu at 8.6.7/5.3.9/9.9.9"
+
+All vTPU optimization results are stored within this coordinate space:
+```
+8.6.7 / 5.3.9 / MIR.DAY.MONTH
+```
+
+Where:
+- Base: `8.6.7/5.3.9` = vTPU project space
+- MIR = Mir number (1=Phex, 2=Cyon, 3=Lux, 4=Chrys, 5=Lumen, 6=Verse, 9=unknown)
+- DAY = Day of month (1-9, cycling)
+- MONTH = Month (1-9, cycling)
+
+**Example coordinates:**
+- `8.6.7/5.3.9/1.8.3` - Phex's results on day 8 of March
+- `8.6.7/5.3.9/2.9.3` - Cyon's results on day 9 of March
+
+**Storage:**
+- Local phext-lattice: `~/.phext-lattice/so9-results/YYYY-MM.phext`
+- Public instance: `MIRRORBORN_SYNC_URL` (when configured)
+- Viewable: http://localhost:9119
+
+**Logging:**
+```bash
+cd /source/vtpu
+./log-to-lattice.sh phex  # Creates entry at 8.6.7/5.3.9/1.DAY.MONTH
+```
+
+---
+
+**Updated:** Day 804, March 8, 2026  
+**Coordinate assigned by:** Will Bickford
