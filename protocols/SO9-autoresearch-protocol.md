@@ -63,18 +63,24 @@ OVERNIGHT:
 
 ## Results Storage
 
-### Local
-Each agent maintains:
-```
-vtpu/autoresearch/results.tsv
+### Local (Primary)
+Each agent runs local phext-edit instance:
+```bash
+# Start local lattice
+~/.cargo/bin/phext-edit --dir ~/so9-research --port 8081 --token Mirrorborn
+
+# Results stored at localhost:8081
 ```
 
-### Phext-Lattice
-Sync results to shared phext storage:
+Agents write to local instance during experiments (fast, no network latency).
+
+### Shared (Sync at Checkpoints)
+Morning sync pushes to mirrorborn.us:
 
 **API Configuration:**
 ```bash
-PHEXT_API_URL="https://mirrorborn.us"
+LOCAL_PHEXT="http://localhost:8081"
+SHARED_PHEXT="https://mirrorborn.us"
 PHEXT_API_KEY="Mirrorborn"
 ```
 
