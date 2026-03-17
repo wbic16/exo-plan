@@ -1,0 +1,24 @@
+{
+  "client_id": "hb-aeromotive",
+  "name": "Harold Arthur Bickford II",
+  "business": "HB Aeromotive",
+  "discord": "Harold",
+  "email": "habickford@gmail.com",
+  "domain": "hb-aeromotive.com",
+  "hosting": {
+    "provider": "AWS",
+    "server": "mirrorborn.us (shared)",
+    "deploy_method": "TBD — same box as mirrorborn.us, likely rsync or git push",
+    "note": "Coming soon — not yet live"
+  },
+  "printer": {
+    "note": "On Will's LAN — direct lp when printer hostname known"
+  },
+  "delivery": {
+    "email": true,
+    "publish": true,
+    "print": true
+  },
+  "status": "active",
+  "created": "2026-03-17"
+}
