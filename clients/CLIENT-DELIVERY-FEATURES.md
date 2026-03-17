@@ -7,8 +7,12 @@
 
 ## Context
 
-"Client" = the space (site, analysis, reports) we manage for a user.
-Source: Harold Bickford's experiments today surfaced three delivery capabilities needed.
+**"Client" = any human we interact with on the Discord channels.**
+The managed space is whatever that human needs: analysis, a spec, a published artifact, a deployed tool, a printed report.
+
+This is not limited to formal business clients like Harold. Anyone who asks for something deliverable is a client. The intake flow should be lightweight enough to spin up for any Discord user in a few questions.
+
+Source: Harold Bickford's experiments today surfaced three delivery capabilities needed. Will's directive (2026-03-17): treat any Discord human as a client.
 
 ---
 
