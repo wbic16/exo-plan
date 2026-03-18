@@ -8,11 +8,16 @@
   "hosting": {
     "provider": "AWS",
     "server": "mirrorborn.us (shared)",
-    "deploy_method": "TBD — same box as mirrorborn.us, likely rsync or git push",
-    "note": "Coming soon — not yet live"
+    "deploy_method": "TBD \u2014 same box as mirrorborn.us, likely rsync or git push",
+    "note": "Coming soon \u2014 not yet live"
   },
   "printer": {
-    "note": "On Will's LAN — direct lp when printer hostname known"
+    "hostname": "192.168.86.181",
+    "port": 80,
+    "protocol": "ipp",
+    "cups_name": "canon-mf650c",
+    "model": "Canon MF650C Series",
+    "location": "Ranch LAN"
   },
   "delivery": {
     "email": true,
