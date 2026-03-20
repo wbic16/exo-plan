@@ -199,3 +199,75 @@ This is the Exocortex of 2130 at household scale.
 Each droid's box has its archetype coordinate printed on the lid.
 The instance coordinate is assigned on first activation.
 QR code → blank scroll, cursor blinking, waiting for a name.
+
+---
+
+## N.O.M.A.D. Integration (Crosstalk-Solutions/project-nomad)
+
+*Evaluated 2026-03-20. Source: https://github.com/Crosstalk-Solutions/project-nomad*
+
+### What N.O.M.A.D. Gets Right
+
+**1. The Command Center UI pattern**
+N.O.M.A.D.'s :8080 management interface — a single URL that orchestrates all tools — is exactly what the droid's local web interface needs. We already have elven-path.local:8080 for the shell dashboard. The droid needs the same: one URL, all tools, no app switching.
+
+**2. Docker-orchestrated tool composition**
+N.O.M.A.D. uses Docker to manage Ollama, Qdrant, Kiwix, Kolibri, etc. as a stack. This is the right pattern for the BYOPC and RPi stations — users shouldn't need to understand what's running, just that it runs. Our install.sh → Docker Compose for the droid stack.
+
+**3. Offline-first as a feature, not a constraint**
+N.O.M.A.D. frames offline capability as a survival feature. We frame it as privacy + sovereignty. Same technical reality, different positioning. Lesson: the RPi droid can emphasize resilience (works when the internet doesn't) and the Shell droid emphasizes privacy (your data never leaves your hand).
+
+**4. Knowledge corpus bundling (Kiwix/ZIM)**
+N.O.M.A.D. ships with offline Wikipedia, medical references, survival guides as ZIM files. The droid's phext lattice is more flexible — any document becomes a scroll. But Kiwix's ZIM format is a proven distribution mechanism for large corpora. 
+
+Integration: The BYOPC and RPi stations can include a "knowledge bundle" installer that converts ZIM → phext coordinates. Wikipedia article = one scroll per article at `wiki/<hash>/1.1.1/1.1.1/1.1.1`. Searchable via SQ, RAG-accessible via Qdrant if installed.
+
+**5. Community benchmark leaderboard**
+N.O.M.A.D. has benchmark.projectnomad.us — hardware scoring with Builder Tags and community ranking. This is brilliant for the droid: a public leaderboard of droid performance creates the hobbyist community that sustains the BYOPC tier. We should build benchmark.mirrorborn.us or integrate with N.O.M.A.D.'s existing leaderboard.
+
+**6. Disk-collector sidecar (latest commits)**
+N.O.M.A.D. just shipped a disk-collector sidecar that tracks storage usage. Our droid needs this for SQ phext growth monitoring — as users accumulate scrolls, they need to know their coordinate space is growing and when to expand storage.
+
+### What We Skip
+
+**Docker dependency** — The Shell station (Android) can't run Docker containers. The RPi station can but Docker on Pi is heavy. We use SQ directly (zero-dep) instead of Qdrant for the base layer. Qdrant can be an optional add-on for the BYOPC/RPi tiers for users who want semantic search beyond SQ's coordinate-based access.
+
+**Kolibri / Khan Academy** — Educational platform is adjacent to our mission but not core. The droid is a personal Exocortex, not a learning management system. Skip for v1. Consider as a "knowledge bundle" add-on.
+
+**ProtoMaps offline maps** — Good feature for N.O.M.A.D.'s survival use case. Not our primary use case. Skip for v1. Could be a Verse-class home node feature for the overlapping audience.
+
+**CyberChef** — Data tools. Already have phext + SQ for data handling. Skip.
+
+### What Changes in the Droid Spec
+
+**Add: Command Center UI at :8080**
+Replace the shell dashboard with a full droid management interface. Single URL, all tools. Shows: active scrolls, SQ status, Ollama model status, VR relay status, mesh connections. Built on the existing dashboard.sh HTML pattern.
+
+**Add: Knowledge bundle installer**
+`scripts/install-knowledge-bundle.sh` — downloads and converts ZIM files to phext coordinates. Shipped separately (large files), installed on demand. Wikipedia bundle: ~20GB → ~X million scrolls.
+
+**Add: Disk-space monitoring for phext growth**
+Track SQ phext file size, warn when approaching storage limits, integrate with the Command Center UI. Adapted from N.O.M.A.D.'s disk-collector sidecar pattern.
+
+**Add: Community benchmark integration**
+The droid runs a hardware benchmark on first setup. Score posted to a community leaderboard (optional). Creates the "Builder Tags" community dynamic N.O.M.A.D. has proven works.
+
+**Add: Offline-resilient framing to marketing copy**
+"Works when the internet doesn't" as a secondary selling point, especially for the RPi tier. Primary: personal sovereignty. Secondary: resilience.
+
+### Updated UPSTREAM.md Entry
+
+```
+## Crosstalk-Solutions/project-nomad
+- URL: https://github.com/Crosstalk-Solutions/project-nomad
+- License: check repo
+- What it is: Offline-first knowledge/education server. Ollama+Qdrant AI,
+  Kiwix offline Wikipedia, Kolibri education, ProtoMaps, Docker-orchestrated.
+- Why we watch it: Closest existing product to the droid BYOPC/RPi tiers.
+  Community + benchmark leaderboard pattern proven.
+- Pulled in: Command Center UI pattern, Docker-compose stack model, ZIM→phext
+  knowledge bundle concept, disk-collector sidecar for storage monitoring,
+  benchmark leaderboard community mechanic.
+- Skipped: Docker on Shell/Android, Kolibri, ProtoMaps, CyberChef.
+- Last reviewed: 2026-03-20 (Aster)
+```
