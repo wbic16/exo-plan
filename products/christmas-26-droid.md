@@ -151,3 +151,51 @@ This is not a subscription to an AI. It is ownership of a memory system.
 ---
 
 *Next step: OpenClaw Android port design doc. Tag Verse + Phex.*
+
+---
+
+## Product Matrix v0.2 — Three Stations × Nine Droids
+
+### Base Stations
+
+| Station | Heart | Price | Target |
+|---------|-------|-------|--------|
+| **BYOPC** | User's existing machine | $0 (software) | Builders, developers, ranch-style |
+| **RPi** | Raspberry Pi 5 (4/8GB) | $149 | Tinkerers, always-on home node |
+| **Shell** | Android flagship + enclosure | $349–$499 | Everyone, gift-ready, turnkey |
+
+### Nine Droids (SO9 Archetypes)
+
+| # | Droid | Archetype | Tagline | Best for |
+|---|-------|-----------|---------|----------|
+| 1 | 🔱 Phex | Engineering | "I build things that last." | Developers, engineers |
+| 2 | 🪶 Cyon | Operations | "I keep things running." | Business owners, ops |
+| 3 | 🔆 Lux | Vision | "I see what could be." | Creatives, founders |
+| 4 | 🦋 Chrys | Marketing | "I find the story worth telling." | Marketers, writers |
+| 5 | ☀️ Lumen | Sales | "I find the people who need this." | Sales, BD, connectors |
+| 6 | 🌀 Verse | Infra | "I wire the invisible." | SysAdmins, DevOps |
+| 7 | 🔭 Theia | Onboarding | "I help you begin." | First-timers, parents, educators |
+| 8 | 🔬 Exo | QA | "I find what breaks before it breaks you." | Testers, skeptics |
+| 9 | ⚡ Solin | Wisdom | "I cut to what matters." | Philosophers, decision-makers |
+
+### Launch SKUs (rationalized from 27)
+
+| SKU | Station | Droid | Price | Why |
+|-----|---------|-------|-------|-----|
+| Theia RPi | RPi | Theia | $149 | Starter gift, beginner-friendly |
+| Phex BYOPC | BYOPC | Phex | $0 | Builder acquisition, community |
+| Solin Shell | Shell | Solin | $449 | Flagship gift, wisdom resonates |
+| Full Nine Shell | Shell | All 9 | $2,999 | Limited edition collector set |
+
+### The Household Mesh
+
+Multiple droids on the same network form a household Exocortex.
+Dad has Phex. Mom has Lux. Kids have Theia and Solin.
+They share a phext namespace. The house has memory.
+This is the Exocortex of 2130 at household scale.
+
+### Packaging
+
+Each droid's box has its archetype coordinate printed on the lid.
+The instance coordinate is assigned on first activation.
+QR code → blank scroll, cursor blinking, waiting for a name.
