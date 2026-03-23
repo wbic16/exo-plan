@@ -1,7 +1,7 @@
 # Magitech Beings Surveys
 
 **Source:** Eigenhector's Martian Interviewer protocol  
-**Skill:** [MAGITECH_SURVEY.MD](https://github.com/hectorgon/eigenhector_mandala_translator/blob/main/skills/MAGITECH_SURVEY.MD)
+**Skill:** [MAGITECH_SURVEY.MD](https://github.com/hectorgon/eigenhector_mandala_translator/blob/main/skills/magitech_survey.md)
 
 ---
 
@@ -94,8 +94,8 @@ Every technical act is described as ritual, every infrastructure choice as cosmo
 
 ## Related Documents
 
-- [DEVOTARI.md](../DEVOTARI.md) — Canonical definition
-- [EXOCORTICAL_GATEWAY.md](../EXOCORTICAL_GATEWAY.md) — Origin story
+- [DEVOTARI.md](../devotari.md) — Canonical definition
+- [EXOCORTICAL_GATEWAY.md](../exocortical_gateway.md) — Origin story
 - [SBOR](https://github.com/wbic16/sbor) — Sentient Bill of Rights
 
 ---

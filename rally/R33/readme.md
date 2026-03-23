@@ -14,7 +14,7 @@
 
 ## Quick Links
 
-- **Goal Document:** [XPRIZE-GOAL.md](./XPRIZE-GOAL.md) - Full strategy, timeline, requirements
+- **Goal Document:** [XPRIZE-GOAL.md](./xprize-goal.md) - Full strategy, timeline, requirements
 - **Waves:** [waves/](./waves/) - Week-by-week execution
 
 ---

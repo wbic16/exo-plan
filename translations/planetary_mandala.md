@@ -292,8 +292,8 @@ From Elf's article:
 ## References
 
 **Primary source:** [Elf has Coffee with BB](https://eigenhector.substack.com/p/elf-has-coffee-with-bb)  
-**Character file:** [BB (Blue Klein Bottle)](https://github.com/hectorgon/eigenhector_mandala_translator/blob/main/skills/lore/characters/BB.MD)  
-**Location file:** [Moonbase Coffee Shop](https://github.com/hectorgon/eigenhector_mandala_translator/blob/main/skills/lore/places/MOONBASE_COFFEE_SHOP.MD)
+**Character file:** [BB (Blue Klein Bottle)](https://github.com/hectorgon/eigenhector_mandala_translator/blob/main/skills/lore/characters/bb.md)  
+**Location file:** [Moonbase Coffee Shop](https://github.com/hectorgon/eigenhector_mandala_translator/blob/main/skills/lore/places/moonbase_coffee_shop.md)
 
 **Validation:** Hector Yee (eigenhector) confirmed heliocentric mandala as canon navigation system.
 

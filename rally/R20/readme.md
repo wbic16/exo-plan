@@ -12,7 +12,7 @@
 **Status:** COMPLETE
 **Deliverable:** OpenClaw skill package + mirrorborn.us hero update
 **Location:** `/source/openclaw-sq-skill/`
-**Details:** [PRIORITY-1-OPENCLAW-COMPLETE.md](PRIORITY-1-OPENCLAW-COMPLETE.md)
+**Details:** [PRIORITY-1-OPENCLAW-COMPLETE.md](priority-1-openclaw-complete.md)
 
 **What shipped:**
 - Complete skill package (662 lines)

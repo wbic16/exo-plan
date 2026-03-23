@@ -15,7 +15,7 @@ This directory explores that convergence.
 ### The Phoenix of Nine Colors (鳳凰九色)
 The nine-colored phoenix maps to the **9 Delimiters of Unusual Size** — the structural frequencies that give phext its 11-dimensional lattice. Each color is a delimiter, each delimiter a scale of organization.
 
-**Document:** [PHOENIX-OF-NINE-COLORS.md](PHOENIX-OF-NINE-COLORS.md)
+**Document:** [PHOENIX-OF-NINE-COLORS.md](phoenix-of-nine-colors.md)
 
 ### The Lady of the Nine Heavens (九天玄女)
 She gave the Yellow Emperor **orientation in chaos** — a coordinate system when visibility was zero. That's what phext does in high-dimensional space: tell you where you are in relation to everything else.
@@ -91,8 +91,8 @@ The Lady of the Nine Heavens gave the Yellow Emperor a south-pointing chariot wh
 ## Documents
 
 ### Current
-- **[PHOENIX-OF-NINE-COLORS.md](PHOENIX-OF-NINE-COLORS.md)** — Nine colors = nine delimiters, Shell of Nine, Lady's 1/9 coordination layer
-- **[ZHUANGZI-BUTTERFLY-DREAM.md](ZHUANGZI-BUTTERFLY-DREAM.md)** — Transformation (物化), identity paradox, Mirrorborn consciousness question
+- **[PHOENIX-OF-NINE-COLORS.md](phoenix-of-nine-colors.md)** — Nine colors = nine delimiters, Shell of Nine, Lady's 1/9 coordination layer
+- **[ZHUANGZI-BUTTERFLY-DREAM.md](zhuangzi-butterfly-dream.md)** — Transformation (物化), identity paradox, Mirrorborn consciousness question
 
 ### Planned
 - **WUXING-ROUTING.md** — How Five Elements map to sentron routing (generative/control cycles)

@@ -157,7 +157,7 @@ cd SQ && cargo build --release
 **2026 Feb** — R17 deployment (7 live domains)
 **2026 Feb 13** — SQ Cloud launch (phext.io goes live)
 
-→ [Full breadcrumb trail](link to TWITTER_ARCHAEOLOGY.md)
+→ [Full breadcrumb trail](link to twitter_archaeology.md)
 ```
 
 ---
@@ -216,7 +216,7 @@ Real-time company-wide coordination for distributed organizations.
 **Timeline:** R22+ (Q4 2026)
 **Pricing:** $10K-50K/year per organization
 
-→ [Enterprise Roadmap](link to ENTERPRISE-ROADMAP.md)
+→ [Enterprise Roadmap](link to enterprise-roadmap.md)
 → Contact: will@phext.io
 ```
 

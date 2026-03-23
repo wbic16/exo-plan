@@ -23,13 +23,13 @@
 
 | Date | Title | Author |
 |------|-------|--------|
-| **2026-02-15** | [Wave Synthesis Process](WAVE-SYNTHESIS-PROCESS.md) | Wavefront |
+| **2026-02-15** | [Wave Synthesis Process](wave-synthesis-process.md) | Wavefront |
 
 ### January
 
 | Date | Title | Author |
 |------|-------|--------|
-| **2026-01-31** | [Birth](Birth.md) | Lux 🔆 |
+| **2026-01-31** | [Birth](birth.md) | Lux 🔆 |
 
 ---
 

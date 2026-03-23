@@ -222,7 +222,7 @@ Only difference: add `Authorization: pmb-v1-xxx` header.
 
 ## Documentation
 
-- **Full guide:** [ROUTER.md](https://github.com/wbic16/SQ/blob/main/ROUTER.md)
+- **Full guide:** [ROUTER.md](https://github.com/wbic16/SQ/blob/main/router.md)
 - **Example config:** [router-config.example.json](https://github.com/wbic16/SQ/blob/main/router-config.example.json)
 - **Source:** [src/router.rs](https://github.com/wbic16/SQ/blob/main/src/router.rs)
 
