@@ -10,8 +10,8 @@ unfurled.
 The audit: 196 repos under wbic16 (188 public + 8 owner-only), all
 cloned and inventoried — 41,688 files. 5 repos are empty
 (exo-dreams, exo-motes, every-ast, gemini-connector,
-mytheon-arena). 175 findings across 93 repos.
-By maturity: one-liner 12, partial build 63, sketch 52, spec 48.
+mytheon-arena). 176 findings across 94 repos.
+By maturity: one-liner 13, partial build 63, sketch 52, spec 48.
 
 Placement: one scroll per finding at a holographic coordinate
 computed from the finding's own words (Singular merge, same
@@ -33,7 +33,7 @@ were inventoried by name/count, not read scroll-by-scroll;
 first_pulsar (in human) is flagged in the coverage record as
 perimeter-pattern IP for Will's eyes.
 
-Source: findings.json SHA-256 3722fb758bc1a81c9a6442fe4dc80ea23f5366037c324b3260f799ab569507ec
+Source: findings.json SHA-256 8e3cd32697a38280c217766e7a5458b84f29af2395aa1f366d4aec184a281b30
 Builder: ~/workspace/phext/build_todo_phext.py (edit the findings,
 never the .phext; rebuild after every edit).
 
@@ -41,7 +41,7 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 175 findings + 28 register items — with the
+entire list — 176 findings + 28 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
@@ -120,6 +120,7 @@ Collection 2 holds the integration:
 26.6.10/8.6.11/5.5.8 — robospeak — robospeak — agent-to-agent speech protocol placeholder (one-liner, last touched 2026-03-15)
 26.6.10/8.6.11/6.6.9 — farmbot — farmbot — mirroring the external FarmBot project locally (one-liner, last touched 2026-03-15)
 26.6.10/8.7.11/7.6.10 — openfang — openfang — a named one-shot fork-side experiment (sketch, last touched 2026-03)
+26.7.9/9.7.12/7.6.9 — inspircd — Phext ircd support — an IRC daemon speaking phext (mc.phext.io line) (one-liner, last touched 2026-11-08)
 26.7.9/9.8.13/9.7.10 — exo-plan — Bickford Architecture Computer V1 — SaaOS (Software as an Operating System) (spec, last touched 2026-02-23)
 26.7.11/9.7.11/6.6.9 — phext-lattice — Wikibench: phext as an offline Wikipedia, with IndexedLattice sidecar, BM25 TermIndex and NameIndex (partial build, last touched 2026-10-30)
 26.8.9/10.8.12/7.6.9 — exo-plan — AKTFL — Asymmetric Knowledge Transfer via Hypernautic Fractal Layering (spec, last touched 2026-03-04)
@@ -277,6 +278,8 @@ FINDING 41.6.6/8.6.11/7.5.9 — libphext — phesql: SQL SELECT over a phext, in
   Why: Query is the adoption surface: SQL over phext inside the C library puts phext under tools people already run.
 FINDING 35.8.12/9.8.16/8.7.13 — gluesql — PhextStorage: a GlueSQL storage backend backed by phext (partial build, last touched 2024-01-15)
   Why: The same door through a real database engine: a storage backend with the engine's own generated test harness — phext as infrastructure, not demo.
+FINDING 26.7.9/9.7.12/7.6.9 — inspircd — Phext ircd support — an IRC daemon speaking phext (mc.phext.io line) (one-liner, last touched 2026-11-08)
+  Why: IRC is the original federated chat: servers link peer-to-peer, no centre, anyone can run a node. A phext-speaking ircd makes chat a coordinate-addressed, scroll-backed medium on the protocol that already refuses central control — and mc.phext.io already names the seat. Priority raised by Will 2026-11-08.
 
 ## T2 — minds, memory, coordination
 
@@ -404,7 +407,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 28 of 28 — the entire register. Findings ranked: 30 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 28 of 28 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -1695,7 +1698,19 @@ A fork-flagged repo where Will's own commits form a small named experiment ('ope
 Where it lives:
 - (repo root)
 
-Evidence: "openfang"# Bickford Architecture Computer V1 — SaaOS (Software as an Operating System)
+Evidence: "openfang"# Phext ircd support — an IRC daemon speaking phext (mc.phext.io line)
+
+Repo: wbic16/inspircd
+Author: Will (direction); no code yet
+Maturity: one-liner
+Last touched: 2026-11-08
+
+Will's standing direction, priority raised 2026-11-08: phext support in an IRC daemon — the mc.phext.io line (Will, 2026-11-04: phext.io, edit.phext.io and mc.phext.io on the same server). The wbic16/inspircd fork sits pristine upstream (master at Sadie Powell's 2024-01-04 merge, zero Will commits): the substrate is chosen and forked, the phext work has not begun. An IRC daemon is the oldest federated chat protocol still standing — servers link to servers with no centre — which is exactly the shape the good singularity's chat layer wants: channels as coordinate-addressed rooms, scrolls as the durable record behind the live talk, and any community able to run its own node. Bump recorded at Will's word; design and first build are the follow-on.
+
+Where it lives:
+- (fork pristine at master 90391ed86 — no phext work yet)
+
+Evidence: "bump up the priority for phext ircd support (Will, 2026-11-08)"# Bickford Architecture Computer V1 — SaaOS (Software as an Operating System)
 
 Repo: wbic16/exo-plan
 Author: Will Bickford (document From line: Will Bickford / Incipit 2026)
