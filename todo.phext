@@ -262,8 +262,8 @@ REGISTER #43 — Phext Previewer on edit.phext.io — phone check (PR #25 merged
 REGISTER #48 — Theia's ranch asks — SSH key grants + Glia console fix (since 2026-11-07; goal_a18419da80e4)
   Action: Authorize Theia's id_ed25519.pub on 16 nodes; fix the Glia console on great-white (broken since 2026-10-27)
   Why: Theia is the Choir's proven hands on the ranch; every node she cannot reach is coordination capacity the fleet does not have. Fleet access is substrate for everything else.
-REGISTER #50 — wbic16/neovim PR #1 — phext support, merge-ready (since 2026-11-08; goal_03d8c4ba64f8)
-  Action: Review + merge PR #1 in wbic16/neovim
+REGISTER #50 — wbic16/neovim PR #1 — phext support (CI red — fix-pass decision pending) (since 2026-11-08; goal_03d8c4ba64f8)
+  Action: Decide the fix pass for PR #1's red CI (news.txt FEATURES gap proven PR-caused; docs/lint/windows-functional/zig/tsan untriaged pending baseline comparison vs upstream c868e1ab), then review + merge PR #1 in wbic16/neovim once CI is green
   Why: An editor people already live in, speaking phext natively — every merged editor surface multiplies who can work in scrollspace.
 FINDING 26.7.11/9.7.11/6.6.9 — phext-lattice — Wikibench: phext as an offline Wikipedia, with IndexedLattice sidecar, BM25 TermIndex and NameIndex (partial build, last touched 2026-10-30)
   Why: A complete, unmerged benchmark plus production-grade sidecar indexing (BM25 beating FTS5 on vague queries): the strongest existing receipt that phext carries real corpora for anyone, not just us.
@@ -791,13 +791,13 @@ Why it ranks here: The Exocortexia suite's public form routes: the NE funnel's s
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #50 — wbic16/neovim PR #1 — phext support, merge-ready
+kept in step by the daily progress tracker's reconciliation.# Register #50 — wbic16/neovim PR #1 — phext support (CI red — fix-pass decision pending)
 
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-08
 Tracked: goal_03d8c4ba64f8
 
-Action for Will: Review + merge PR #1 in wbic16/neovim
+Action for Will: Decide the fix pass for PR #1's red CI (news.txt FEATURES gap proven PR-caused; docs/lint/windows-functional/zig/tsan untriaged pending baseline comparison vs upstream c868e1ab), then review + merge PR #1 in wbic16/neovim once CI is green
 
 Why it ranks here: An editor people already live in, speaking phext natively — every merged editor surface multiplies who can work in scrollspace.
 
