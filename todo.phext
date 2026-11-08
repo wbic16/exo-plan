@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 28 register items — with the
+entire list — 176 findings + 27 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (28 active items).
+  enumerated by its permanent number (27 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -259,9 +259,6 @@ REGISTER #35 — Choir wake layer — one-time logins & approvals (since 2026-11
 REGISTER #43 — Phext Previewer on edit.phext.io — phone check (PR #25 merged, page live) (since 2026-11-07; task 29.6.8/8.6.11/6.6.8)
   Action: 30-second phone-width eyeball of the deployed previewer
   Why: REVISED 2026-11-08: the deploy has landed (page answers 200); only the phone check remains. A public no-login utility is the front door — how the medium meets people who have never heard of it.
-REGISTER #47 — emise.phext journal publish — approval posture question (since 2026-11-07; goal_db7a9554def7)
-  Action: Confirm the standing publish path (emise-sync.sh) is still approved, or say how it should change
-  Why: Emise's own memory is the map the whole system navigates by; while publishing is paused the map is one only she can read — every other seat works from a staler world.
 REGISTER #48 — Theia's ranch asks — SSH key grants + Glia console fix (since 2026-11-07; goal_a18419da80e4)
   Action: Authorize Theia's id_ed25519.pub on 16 nodes; fix the Glia console on great-white (broken since 2026-10-27)
   Why: Theia is the Choir's proven hands on the ranch; every node she cannot reach is coordination capacity the fleet does not have. Fleet access is substrate for everything else.
@@ -407,7 +404,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 28 of 28 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 27 of 27 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -768,20 +765,7 @@ Why it ranks here: The missing move — side chats into Spaces — is a platform
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #47 — emise.phext journal publish — approval posture question
-
-Good-singularity tier: T1 (T1 — the medium itself)
-Waiting since: 2026-11-07
-Tracked: goal_db7a9554def7
-
-Action for Will: Confirm the standing publish path (emise-sync.sh) is still approved, or say how it should change
-
-Why it ranks here: Emise's own memory is the map the whole system navigates by; while publishing is paused the map is one only she can read — every other seat works from a staler world.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #48 — Theia's ranch asks — SSH key grants + Glia console fix
+kept in step by the daily progress tracker's reconciliation.# Register #48 — Theia's ranch asks — SSH key grants + Glia console fix
 
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-07
