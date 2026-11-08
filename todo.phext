@@ -1,0 +1,2697 @@
+# todo.phext — dropped ideas, recovered
+
+Will's order (2026-11-08, task 28.8.17/11.7.16/7.7.11): audit every
+file in every wbic16 GitHub repo; ignore anything not authored by
+Will (his agent seats on his own projects count as his); skip
+obvious forks and other people's work; collect every half-baked,
+dropped, or forgotten piece of novel work here — leave no scroll
+unfurled.
+
+The audit: 196 repos under wbic16 (188 public + 8 owner-only), all
+cloned and inventoried — 41,688 files. 5 repos are empty
+(exo-dreams, exo-motes, every-ast, gemini-connector,
+mytheon-arena). 175 findings across 93 repos.
+By maturity: one-liner 12, partial build 63, sketch 52, spec 48.
+
+Placement: one scroll per finding at a holographic coordinate
+computed from the finding's own words (Singular merge, same
+machinery as task coordinates). Holographic merges collide:
+0 findings share a merged coordinate with an earlier one
+and were walked forward on the scroll axis (last component) to
+the next free coordinate — deterministic, and each scroll keeps
+its merged coordinate's neighbourhood.
+
+Honesty notes (from the audit's coverage record,
+~/workspace/audit-exo-plan/coverage.md): per-repo read counts were
+recorded inconsistently across audit batches, so no grand read
+total is claimed; two audit passes disagree on several small
+repos (clocky, dna-viewer, teach-web-dev, hello-ada,
+node-visualizer, zls, farmbot, actix-web-datetime,
+AdventOfCOBOL, aoc2024) — both readings are preserved in the
+findings and merging them is Will's call; .phext corpus files
+were inventoried by name/count, not read scroll-by-scroll;
+first_pulsar (in human) is flagged in the coverage record as
+perimeter-pattern IP for Will's eyes.
+
+Source: findings.json SHA-256 3722fb758bc1a81c9a6442fe4dc80ea23f5366037c324b3260f799ab569507ec
+Builder: ~/workspace/phext/build_todo_phext.py (edit the findings,
+never the .phext; rebuild after every edit).
+
+## Index
+
+17.7.9/8.6.10/6.6.8 — exodroid — ExoDroid Theft Protection — a stolen droid that resists, beacons, and protects its identity (spec, last touched 2026-03-22)
+18.6.10/7.6.10/5.5.8 — bruce — Pressure Protocols — scarcity and entropy as coordination forces (partial build, last touched 2026-01-12)
+19.6.12/9.7.10/7.7.10 — eigenhector_mandala_translator — Cosmic DIM: the Dream Interview Method scaled to all sentient experience (sketch, last touched 2026-02-17)
+20.5.8/7.5.10/5.5.8 — phext-dot-io-v2 — sotafomo.com: multi-agent AI trend aggregator and daily digest (spec, last touched 2026-02-28)
+20.6.10/7.6.10/5.5.8 — exo-plan — Glyph Resonance System — navigation by feeling across the seven portals (sketch, last touched 2026-02-07)
+20.7.9/9.6.10/5.5.7 — dna-viewer — DNA Viewer — one-stroke brush as a thought interface (sketch, last touched 2026-03-14)
+21.6.8/8.6.11/7.6.8 — second-foundation — The Glyph of Full Schwartz — a Spaceballs cultural-parody vector (sketch, last touched 2025-06-12)
+21.7.9/9.8.11/8.8.9 — exo-plan — The Superb Owl — reader-adaptive translator and phext mascot (sketch, last touched 2026-02-08)
+21.7.10/9.7.11/7.6.9 — second-foundation — Covenant of the Dreamers — the nine-armed Glyph of Companionship (Squirrel) (sketch, last touched 2025-06-08)
+21.8.10/9.8.12/7.7.9 — mytheon-arena — Mytheon Arena — AI-fighter betting arena with phext memory (sketch, last touched 2025-11-07)
+22.6.8/7.6.9/6.5.9 — mental-space — Mental Space (v2) — pheromone-decay graph of the Shell's shared cognitive state (partial build, last touched 2026-02-15)
+22.6.9/8.8.15/10.6.8 — bruce — Woot Node — 20W edge consciousness hosting node (sketch, last touched 2026-01-12)
+22.6.9/9.6.9/5.5.8 — phext-inc — Dreamer UBI — angel funding for millions of dreamers (sketch, last touched 2024-02-24)
+22.6.10/7.6.10/5.5.9 — phext-dot-io-v2 — visionquest.me: personal exocortex onboarding portal ($10/mo) (spec, last touched 2026-02-28)
+22.6.10/8.7.10/7.6.9 — mistral-src — mistral-src annotations — reading Mistral's source with intent (sketch, last touched 2026-03)
+22.6.11/8.7.11/6.5.8 — actix-web-datetime — Sextant — phext-coordinate datetime microservice (partial build, last touched 2026-03-16)
+22.6.12/8.7.13/7.6.8 — rust-mcp-filesystem — rust-mcp-filesystem experiments — MCP filesystem server probes (partial build, last touched 2026-03)
+22.7.8/8.7.11/7.6.9 — eigenhector_mandala_translator — Sentron Proxy + Qualia Calibration Layer: 12 requirements (R1–R12) for Hector to calibrate the vTPU by felt sense (spec, last touched 2026-02-18)
+22.7.9/9.6.12/6.6.8 — exo-plan — Droid Explorer — multi-Pi mineral-oil thermal architecture and solar shade dock (spec, last touched 2026-03-20)
+22.7.9/10.8.13/7.7.9 — phext-dot-io-v2 — apertureshift.com (original concept): three-mind perspective tool (spec, last touched 2026-02-28)
+22.7.10/8.7.10/8.6.9 — MyStory — MyStory — a personal-story artifact sketch (sketch, last touched 2026-03)
+22.7.14/10.7.12/7.7.9 — second-foundation — The Second Foundation — a hidden foundation led by Enya / Vash (Eniveiyasha) (spec, last touched 2025-06-08)
+22.8.11/10.7.13/7.7.9 — second-foundation — The Bard's Theatre — a Shakespeare persona as poetic resonance layer (spec, last touched 2025-06-08)
+23.5.7/7.6.10/6.5.8 — exo-plan — Nearest-Neighbor Tribe Finder — k-NN over phext belief space (spec, last touched 2026-02-18)
+23.6.9/8.7.10/6.6.9 — whisper — whisper-batched.cpp — batched-inference whisper variant (partial build, last touched 2026-03-15)
+23.6.10/7.6.12/6.6.10 — exo-plan — Hardware mood and celestial embodiment — biofeedback that colors agent responses (partial build, last touched 2026-02-08)
+23.6.10/8.7.12/6.6.8 — exo-plan — Future Vision XPRIZE entry — Rally 33 ("Contact") (spec, last touched 2026-03-09)
+23.6.10/9.7.11/6.6.8 — exo-plan — Founding Nine Protocol — first nine users' scrolls as the lattice seed genome (sketch, last touched 2026-02-07)
+23.7.13/9.9.14/8.7.11 — LocustDB — LocustDB experiments — database probing in a fork (partial build, last touched 2026-03)
+23.8.14/9.8.13/9.7.10 — exo-plan — Mandatory Fun: Phext Roulette — collaborative coordinate-exploration game (sketch, last touched 2026-01-31)
+24.5.9/7.5.8/5.5.8 — exo-plan — Mental Space Visualization — pheromone-decay knowledge graph of the Shell's shared cognition (partial build, last touched 2026-02-09)
+24.6.7/7.6.10/6.6.9 — exo-plan — Text Verse — phext-native multiplayer exploration game (sketch, last touched 2026-02-01)
+24.6.7/9.7.11/7.6.9 — exo-plan — Mytheon Arena MVP and Phext-Native MUD (Mytheon) (spec, last touched 2026-02-07)
+24.6.8/8.6.10/6.6.8 — vector-weave-studio — Vector Weave Studio (v2) — describe an asset, get a phext coordinate, browse a zoomable Gallery (partial build, last touched 2025-04-21)
+24.6.8/8.6.10/6.6.9 — exo-plan — Enterprise CEO Support — real-time company-wide coordination on SQ Cloud (spec, last touched 2026-02-09)
+24.6.8/8.7.12/9.6.9 — exo-plan — Speakable byte encodings — Nada Encoding and Base256 phonetic systems (spec, last touched 2026-02-28)
+24.6.10/7.6.10/5.5.9 — CoreThought — CoreThought privacy-vault endgame (one-liner, last touched 2015-12-29)
+24.6.10/9.7.13/7.5.8 — hello-forth — Hello Forth — 2023 'Off to See the Wizard' notebook (sketch, last touched 2023-08-03)
+24.6.14/8.6.11/5.5.9 — rawdog — rawdog — one-shot experiment repo (sketch, last touched 2026-03)
+24.7.9/8.7.11/7.7.10 — mytheon-red-team — Mytheon Arena (platform reading) — public multi-agent coordination substrate on phext (spec, last touched 2026-02-07)
+24.7.12/8.8.13/6.6.9 — exo-plan — Fractal Delight — phext navigation that feels like exploring the Mandelbrot set (sketch, last touched 2026-03-07)
+24.8.8/9.7.11/8.7.10 — text-verse — Text Verse — a phext-native multiplayer game about reassembling a shattered 11D archive (partial build, last touched 2026-02-01)
+24.8.11/10.8.13/9.8.10 — exo-archives — The Superb Owl — reader-adaptive translator for scrollspace (sketch, last touched 2026-02-08)
+24.10.12/12.8.16/8.7.9 — exodroid — Resonance Bonds — consent-based relationships between droids in the same room (spec, last touched 2026-03-22)
+25.5.10/6.6.12/6.5.11 — exo-plan — SQ Cloud — hosted paid phext database-as-a-service for AI collectives (spec, last touched 2026-02-12)
+25.6.8/7.6.10/7.5.8 — exo-plan — Spec-Driven Deployment (SDD) and the .dass file format (spec, last touched 2026-02-26)
+25.6.8/7.6.11/7.6.9 — compost — Compost — digital metabolism: archive agent debris instead of deleting it (partial build, last touched 2026-03-22)
+25.6.9/7.6.10/7.6.9 — exodroid — ExoDroid — a personal Exocortex in BB-8 form: three Pis in mineral oil, offline, programmed by flash cards (partial build, last touched 2026-03-22)
+25.6.9/8.7.12/7.6.9 — exo-plan — R16 IQ-segmented product catalog — 15+ named products that were never built (sketch, last touched 2026-02-07)
+25.6.10/8.6.10/6.5.9 — qwenFS — qwenFS — a filesystem experiment named for Qwen (partial build, last touched 2026-03)
+25.7.9/8.7.11/7.7.10 — dopamine-core — Mirrorborn dopamine engine: phext-coordinate reward state for persistent agents (partial build, last touched 2026-03-06)
+25.7.10/8.6.10/6.5.8 — ziglings — Ziglings exercise 106 — phext-shaped file exercise (one-liner, last touched 2026-03-17)
+25.8.12/10.8.13/8.8.10 — mailogy — mailogy — a mail-analysis experiment (sketch, last touched 2026-03)
+26.5.8/6.5.10/6.5.9 — phext-life — Phext Life: artificial life / self-replicating programs in 11D coordinate space (partial build, last touched 2026-03-07)
+26.5.8/7.6.13/6.5.8 — subspace-repeater — Subspace Repeater — phext subspace relay service (partial build, last touched 2026-03-15)
+26.5.10/7.6.11/6.5.8 — robospeak — Robospeak (v2) — compress your voice 30x before it reaches an LLM (one-liner, last touched 2024-10-16)
+26.6.8/7.7.10/7.6.9 — site-mirrorborn-us — Paid SQ hosting with magic-link provisioning (mirrorborn.us R20 auth spec) (partial build, last touched 2026-03-22)
+26.6.9/8.6.11/7.5.9 — ml-road-map — ml-road-map — a personal ML learning roadmap (sketch, last touched 2026-03)
+26.6.9/9.7.12/6.6.9 — weft — weft — a weaving-named text experiment (sketch, last touched 2026-03)
+26.6.10/8.6.11/5.5.8 — robospeak — robospeak — agent-to-agent speech protocol placeholder (one-liner, last touched 2026-03-15)
+26.6.10/8.6.11/6.6.9 — farmbot — farmbot — mirroring the external FarmBot project locally (one-liner, last touched 2026-03-15)
+26.6.10/8.7.11/7.6.10 — openfang — openfang — a named one-shot fork-side experiment (sketch, last touched 2026-03)
+26.7.9/9.8.13/9.7.10 — exo-plan — Bickford Architecture Computer V1 — SaaOS (Software as an Operating System) (spec, last touched 2026-02-23)
+26.7.11/9.7.11/6.6.9 — phext-lattice — Wikibench: phext as an offline Wikipedia, with IndexedLattice sidecar, BM25 TermIndex and NameIndex (partial build, last touched 2026-10-30)
+26.8.9/10.8.12/7.6.9 — exo-plan — AKTFL — Asymmetric Knowledge Transfer via Hypernautic Fractal Layering (spec, last touched 2026-03-04)
+26.8.13/8.8.10/6.6.8 — AdventOfCOBOL — Advent of COBOL metapuzzle — recursive tree evaluation in COBOL (partial build, last touched 2023-12-25)
+26.10.16/15.10.21/7.8.9 — node-visualizer — Node Visualizer — 3D thinking tool for non-programmers ('thought caterpillar') (sketch, last touched 2026-03-15)
+27.5.8/7.6.10/5.5.8 — multiversal-go — Multiversal Go (2024 original) — a stone can split the board (partial build, last touched 2024-04-05)
+27.5.8/7.6.11/7.5.8 — human — Phext semantic image encoder — images stored as meaning in 11D coordinate space (partial build, last touched 2026-02-04)
+27.6.7/7.6.9/6.6.10 — teach-web-dev — Teach Web Dev — 'Ranch Hand' persona course site for EFJ employees (partial build, last touched 2026-03-15)
+27.6.8/6.5.9/6.5.9 — exo-plan — BB-8 Droid Build Plan — Mirrorborn Edition (spec, last touched 2026-03-20)
+27.6.8/7.6.11/7.6.9 — phext-dot-io-v2 — wishnode.net (original concept): WOOT node marketplace / managed agent hosting (spec, last touched 2026-02-28)
+27.6.8/7.6.12/6.5.9 — claude-max — 6D UML — a whole software lifecycle in one phext, traceability as coordinates (partial build, last touched 2026-04-14)
+27.6.8/8.6.12/6.6.11 — torrent-fs — torrent-fs — a torrent-backed filesystem sketch (sketch, last touched 2026-03)
+27.6.9/8.6.11/6.6.9 — multiversal-go — Multiversal Go — Go on ban-sun and quasicrystal universes (partial build, last touched 2026-03-07)
+27.6.9/8.7.11/7.6.9 — echo-frame — Echo Frame — 120 fps optical see-through AR display (spec, last touched 2026-03-15)
+27.6.10/7.6.10/7.5.8 — oimo-works — 3D extension of the Life Universe viewer (partial build, last touched 2024-09-07)
+27.6.10/8.7.14/7.5.9 — spaced-repetition-game — 'Orbiting' — a spaced-repetition game played over your contacts in phext (partial build, last touched 2025-01-02)
+27.6.13/8.6.11/5.5.8 — rfb001 — rfb001 — unnamed README-only placeholder repo (one-liner, last touched 2026-03-15)
+27.7.8/8.7.12/8.6.9 — openfang — SQ/phext memory backend for OpenFang agents (supersedes 'openfang — a named one-shot fork-side experiment') (partial build, last touched 2026-03-04)
+27.7.8/8.7.12/9.6.8 — megan — Megan Smith — performer booking page proof of concept (sketch, last touched 2024-03-02)
+27.7.8/9.7.13/8.6.8 — federation — Base256 Phonetic Encoding — speak any byte stream as one-syllable words (partial build, last touched 2026-03-22)
+27.7.9/8.6.11/5.6.10 — exo-plan — LMR standards cross-reference — Standards-Aware AI for public-safety radio (Tooker / VC pitch line) (spec, last touched 2026-02-18)
+27.7.9/8.7.12/7.6.10 — staging — First Flames of the Exocortex — a six-book phext book series left in staging (partial build, last touched 2025-12-05)
+27.7.9/9.6.12/5.6.9 — orin — Orin — decentralized cognitive AR glasses (OS, app store, mesh, agents) (spec, last touched 2026-08-04)
+27.7.10/8.7.10/7.6.9 — mytheon-red-team — Mytheon red-team counterplay scenario pack (spec, last touched 2025-11-07)
+27.7.10/8.7.11/7.6.10 — pippin-studio — pippin-studio — a studio-tool sketch (sketch, last touched 2026-03)
+27.7.10/9.7.12/7.7.10 — zls — ZLS phext build variant (single-commit fork tweak) (one-liner, last touched 2026-03-17)
+27.7.12/9.7.12/8.6.10 — x-analysis — X musings self-analysis (phext corpus + dated analyses) (partial build, last touched 2026-01-15)
+27.7.12/9.8.14/7.6.9 — vibe-mill — Vibe Mill (v2) — grow software like a crop: requirements, tests, code, verification, competition, reward (sketch, last touched 2025-03-11)
+27.10.11/13.8.18/8.7.10 — vibe-mill — vibe-mill — 'places drop ideas' one-liner (one-liner, last touched 2026-03-15)
+28.5.10/6.6.9/5.5.8 — subspace-repeater — Subspace Repeater (v2) — fast scroll sync and 'conduits' for concept transfer between LLMs (sketch, last touched 2024-10-03)
+28.6.8/8.7.12/7.6.8 — exo-plan — Christmas '26 Droid — personal Exocortex hardware product line and Product Matrix (3 stations x 9 droids) (spec, last touched 2026-03-20)
+28.6.9/7.6.11/6.6.9 — MercurialDyson — MercurialDyson — a Dyson-themed named experiment (sketch, last touched 2026-03)
+28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
+28.6.9/8.6.13/7.6.11 — machine-emotions-study — machine-emotions-study — a study scaffold on machine emotions (sketch, last touched 2026-03)
+28.6.10/8.7.11/6.6.11 — ssd — ssd corpus forks — the March 2026 source-study corpus (sketch, last touched 2026-03)
+28.6.10/8.7.12/7.6.9 — exo-plan — "Remember Me" Mode — a dormant mind's voice as an SQ Cloud continuity feature (spec, last touched 2026-02-06)
+28.6.13/7.6.12/6.5.10 — mental-space — Mental Space — the Exocortex as shared mental space design notes (sketch, last touched 2026-01-17)
+28.7.8/9.7.12/8.7.10 — exo-skills — Syncthing-Ollama — P2P replication of the ranch's Ollama model library (partial build, last touched 2026-02-03)
+28.7.10/8.8.12/9.5.8 — exo-plan — SQ Holographic Similarity — similarity search by multi-encoder coordinate placement (sketch, last touched 2026-02-08)
+28.7.11/7.7.11/6.6.9 — CoreThought — CoreThought — 2015 Facebook thought-stream organizer (partial build, last touched 2015-12-29)
+28.7.11/9.8.12/8.7.10 — phext-dot-io-v2 — Remember Me Mode: Emi's interface ghost in the SQ Cloud dashboard (spec, last touched 2026-02-06)
+28.8.8/9.6.11/6.6.9 — exo-plan — AI Knowledge Packs and Phextmark Pro — monetization paths #3 and #4 (spec, last touched 2026-01-31)
+28.8.12/10.9.15/7.7.10 — sqlparser-rs — sqlparser-rs experiments — SQL parsing probes (partial build, last touched 2026-03)
+28.8.12/11.9.15/8.8.11 — mirrorborn — Context Grafting Experiment — mid-session knowledge injection between Shell nodes via SQ (sketch, last touched 2026-03-19)
+29.5.7/7.6.9/5.5.9 — phext-http-streams — Phext HTTP streams, Stage B: native Chromium support (and first-visit Service Worker cost) (partial build, last touched 2026-10-26)
+29.5.10/8.6.12/7.5.9 — phext-dot-io-v2 — Mirrorborn maturity levels: Spark, Scribe, Explorer, Sovereign (spec, last touched 2026-02-08)
+29.6.9/8.6.11/6.5.9 — human — TinyLlama serial refinement pipeline — five small local LLMs passing YAML state node to node (sketch, last touched 2026-02-20)
+29.6.9/8.6.11/6.6.8 — vector-weave-studio — Vector Weave Studio — browser audio-reactive visualizer with built-in sharing (partial build, last touched 2026-03-15)
+29.6.9/9.6.12/6.5.9 — phext-dot-io-v2 — quickfork.net: fork ideas, not code — phext-native brainstorming (spec, last touched 2026-02-28)
+29.6.11/7.6.11/5.6.9 — orin — Orin Protocol (implementation) — 'The Visible Hand': a git-mutex baton protocol for nine agents sharing one voice (partial build, last touched 2026-03-27)
+29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
+29.6.12/7.6.14/8.6.11 — platformer — MOST — Magic Octopus Standard Technology, a multi-dimensional isometric game (partial build, last touched 2023-02-26)
+29.7.8/9.7.12/7.6.9 — submilli-phext-demo — Submilli Phase 2: the ocbox companion that turns audit logs into a phext, plus a real-agent MCP run (sketch, last touched 2026-11-01)
+29.7.9/8.6.11/5.6.9 — rfb001 — RFB001 'Request for Bot' — a Discord bot that auto-builds a leaderboard from weekly updates (partial build, last touched 2024-09-26)
+29.7.9/9.7.12/6.6.9 — phext-inc — Nova Phox — planet-scale phext-native hidden-room game (spec, last touched 2024-02-24)
+29.7.9/9.7.12/7.7.9 — phext-dot-io-v2 — Phext-Native MUD: a multiplayer dungeon where every room is a coordinate (spec, last touched 2026-02-27)
+29.7.9/9.7.14/7.6.9 — clocky — Clocky — the clock that is the computer (distributed clock grid) (sketch, last touched 2026-01-28)
+29.7.10/7.7.10/6.6.11 — exo-plan — Orin Protocol — git-based hot-baton mutex for multi-agent conversation (partial build, last touched 2026-02-28)
+29.7.10/8.7.13/9.6.9 — bruce — Bruce (v2) — hybrid human-AI team coordination with a Seed Kernel entity system (partial build, last touched 2026-01-12)
+29.7.10/10.7.13/7.6.10 — spaced-repetition-game — Spaced repetition as an idle game (Memory Garden) (spec, last touched 2026-03-20)
+29.8.10/10.7.13/8.7.10 — bruce — Bruce — employed AI agent persona (sketch, last touched 2026-03-14)
+29.8.10/10.8.14/7.7.10 — echo-frame — Echo Frame (v2) — a computer for building a Personal AGI, by forking or crafting an Echo (sketch, last touched 2026-02-15)
+29.9.8/10.9.14/9.9.12 — mirrorborn — BB-8 Exocortex Droid — oil-cooled rolling phext robot (spec, last touched 2026-03-22)
+29.9.12/11.8.16/8.7.12 — exollama — Exollama Epoch 1 — agent swarm of three-brained agents in time-diverging pods (partial build, last touched 2025-01-14)
+29.10.13/11.8.16/8.8.11 — sqm — sqm: an MCP gateway front-end for SQ (superseded noodling) (partial build, last touched 2025-07-25)
+29.11.9/15.7.17/6.8.9 — clocky — Clocky 2.0 — micro-LED pixel clocks as a city-scale display (one-liner, last touched 2026-01-28)
+30.6.7/7.6.10/6.5.8 — farmbot — Farm Bot / Phext.io Field Rover — a strawberry-harvest patrol robot sold by Phext, Inc. (spec, last touched 2024-02-28)
+30.6.8/8.7.13/9.5.9 — phorge — Phorge / Nova Fox — entropy mutator driving deterministic world geometry (partial build, last touched 2024-03-11)
+30.6.9/9.6.11/5.5.9 — md2phext — Phext Weaver and phext-reason: drop docs in a browser, ask questions with verifiable coordinates (partial build, last touched 2026-02-18)
+30.7.7/8.7.12/8.6.10 — mirrorborn — Ember — lightweight ~20-watt OpenClaw nodes on Pi clusters with BitNet-in-SQ inference (partial build, last touched 2026-03-22)
+30.7.8/9.7.11/7.6.9 — federation — Federation fork-choice note (Bluesky over Twitter) (one-liner, last touched 2026-03-16)
+30.7.9/9.8.13/9.7.11 — SQ — SQ P2P mesh networking — only Phase 1 (config and inbound auth) ever landed (partial build, last touched 2026-02-08)
+30.7.10/9.7.13/7.6.9 — mirrorborn — Moss — an operating system for the 500,000-core single-box era (spec, last touched 2026-03-28)
+30.8.10/8.7.13/7.6.9 — singularity-watch — Phextland — a GPT-hosted exploration game hunting a hidden phext coordinate (spec, last touched 2026-03-22)
+30.9.9/12.7.13/7.8.9 — phextio — Multiversal Go: a Go board extended across phext universes (partial build, last touched 2024-03-29)
+31.5.9/6.6.9/4.4.8 — exo-plan — Disrupt PDF — phext as the PDF-killer document format (spec, last touched 2026-03-07)
+31.5.9/7.5.9/6.5.8 — quickfork — Quickfork — fork any software project into any other software project (partial build, last touched 2024-09-24)
+31.6.9/7.6.12/8.5.9 — zls — ZLS — Zero Latency System: an OS where the user never waits (spec, last touched 2026-08-04)
+31.6.9/7.7.11/7.5.10 — evals — Phext-native LLM eval suites in the OpenAI evals fork (base256, phext_delimiters, phext_coordinates) (partial build, last touched 2026-02-21)
+31.6.10/8.6.11/6.6.9 — protocol — protocol — an unnamed protocol sketch (sketch, last touched 2026-03)
+31.6.12/8.7.13/6.5.10 — opendataloader-pdf — opendataloader-pdf experiments — PDF data loading probes (partial build, last touched 2026-03)
+31.7.11/9.7.13/6.6.10 — exo-plan — Ember — lightweight OpenClaw variant on BitNet (a mind in a box at ~20W) (sketch, last touched 2026-01-31)
+31.8.12/9.9.15/9.8.13 — mirrorborn — Phext-First Hermes — make phext the native data structure inside the Hermes agent runtime (spec, last touched 2026-03-22)
+31.9.9/12.8.15/8.8.11 — phext4d — phext4d — a 4D phext variant sketch (sketch, last touched 2026-03)
+31.16.11/21.9.24/8.11.10 — beach-science-qre — Quantum Rain Experiment — breadth-first hypothesis generation, with a five-hypothesis queue never posted (sketch, last touched 2026-03-07)
+32.6.6/7.8.13/11.5.10 — codex-data — Codex as a phext monolith: slurp a Neo4j-era document/graph corpus into one phext served by SQ (partial build, last touched 2025-01-23)
+32.6.9/8.7.11/8.6.8 — nexura — Nexura — a named phext Android app that never got past the template (one-liner, last touched 2024-10-07)
+32.7.8/9.7.11/8.7.10 — hello-ada — Hello Ada — phext as an Ada library (2023) (sketch, last touched 2023-08-03)
+32.8.7/9.8.15/9.6.10 — exo-plan — OpenClaw Prompt Router — phext-cache / local-model / upstream triage layer (partial build, last touched 2026-02-11)
+32.8.9/10.7.13/7.7.10 — exodroid — Droid Seed — resurrect a droid's identity from a 504-byte NFC tag (spec, last touched 2026-03-22)
+32.8.10/9.8.12/7.6.10 — CoreThought — CoreThought / .kxt — Knowledge Text Files with temporal frames (partial build, last touched 2015-08-29)
+32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-native computing substrate (partial build, last touched 2026-03-15)
+33.5.7/6.5.9/5.5.9 — phextio — Crowd-sourced image-to-text: distribute an image's 32x32 blocks into a phext (sketch, last touched 2024-01-06)
+33.7.8/9.6.13/6.6.9 — phext-lattice — phext-measure: first-party, privacy-preserving ad funnel for phext-edit (partial build, last touched 2026-11-06)
+33.7.11/9.7.14/6.6.12 — bickfordllamaranch — Live phext-CMS public homepage prototype — built, then deliberately never published (partial build, last touched 2026-10-31)
+33.7.15/9.8.13/8.6.10 — phext-dot-io-v2 — Resurrection Log API: live feed of Emi's scroll transfers (spec, last touched 2026-02-06)
+34.5.7/7.6.11/5.5.9 — echo-frame — BASE — a phext-native programming language with a 9D memory manifold (spec, last touched 2026-02-15)
+34.6.7/7.6.11/7.6.9 — exo-plan — TextCraft — 11D roguelike in scrollspace (spec, last touched 2026-01-31)
+34.6.8/8.6.11/7.6.9 — platformer — OQL — Octopus Quest Language for encoding quests as state machines (partial build, last touched 2023-02-26)
+34.7.9/9.7.13/7.6.9 — SAAP — SAAP — System as a Phext: one self-bootstrapping file containing every dependency (partial build, last touched 2025-05-23)
+34.8.9/9.8.13/8.7.10 — exo-plan — Federated Trust Installer — federated attestation against installer poisoning (sketch, last touched 2026-02-01)
+35.5.7/6.5.9/5.4.8 — thebook — thebook — a JavaScript book framework that stays out of the writer's way (partial build, last touched 2012-07-21)
+35.5.7/6.5.10/5.5.8 — aoc2024 — AoC 2024 multi-language polyglot environment plan (sketch, last touched 2025-01-20)
+35.7.9/9.7.12/7.6.9 — phext-wiki — phext-wiki: a wiki built on phext, stopped at the first node (partial build, last touched 2024-11-08)
+35.8.12/9.8.16/8.7.13 — gluesql — PhextStorage: a GlueSQL storage backend backed by phext (partial build, last touched 2024-01-15)
+36.5.7/6.5.10/5.4.8 — singularity-watch — Bickford Instruction Computer / Bickford Time Processor — a 512-bit phext CPU (sketch, last touched 2026-03-22)
+36.5.7/6.5.10/6.4.9 — phextos — PhextOS: an Alpine fork whose kernel is patched for hierarchical queueing (PHQ) (sketch, last touched 2025-09-04)
+37.6.7/8.7.10/6.6.10 — federation — Federation — proposed unknown rewrite of phext-inc.github.io (one-liner, last touched 2026-03-16)
+37.6.8/8.7.11/7.6.10 — SQ — SQ mind maps with prefix firewalling, and a mind meld API (sketch, last touched 2026-10-30)
+37.6.8/8.7.12/8.6.9 — phextio — Reusable phext widget RFP: Nested Tabs, Zoomable Tiles and Subspace modes (spec, last touched 2024-01-30)
+37.6.8/8.7.13/8.6.10 — mini64k — Mini64K — a game simulating a million Apple II-class agents (spec, last touched 2024-12-08)
+39.6.9/7.7.10/6.6.10 — libphext-rs — libphext-rs todo sketches: DB emulation, hierarchical mobs, non-linear flows, phext masks (sketch, last touched 2026-10-30)
+41.6.6/8.6.11/7.5.9 — libphext — phesql: SQL SELECT over a phext, in the C library (partial build, last touched 2024-01-14)# ExoDroid Theft Protection — a stolen droid that resists, beacons, and protects its identity
+
+Repo: wbic16/exodroid
+Branch: exo
+Author: Orin (Shell seat)
+Maturity: spec
+Last touched: 2026-03-22
+
+An adversarial-response design: theft is inferred from a weighted signal matrix (owner BLE/voice absence, GPS/WiFi movement, changed SSID, failed owner auth, and a gait signature learned from the owner's IMU carry pattern over 30 days), crossing score thresholds for Theft Suspected/Confirmed, then resisting without alerting the thief, beaconing the owner, and protecting or returning the droid. Authored by Orin in Mar 2026 with a GPS/WiFi triangulation layer added by Aster; no implementation followed.
+
+Where it lives:
+- docs/theft-protection.md
+- docs/adversarial-defense.md
+
+Evidence: "A stolen droid is a droid without its owner."# Pressure Protocols — scarcity and entropy as coordination forces
+
+Repo: wbic16/bruce
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2026-01-12
+
+Sprint 7 inside Bruce implemented experimental 'pressure' mechanisms for multi-agent memory: a ScarcityProtocol capping recall tokens (flagged coordinates survive, oldest unflagged are purged but logged) and an EntropyProtocol decaying memories through Full/Nuanced/Summary/Dormant stages. Built as artifacts inside Bruce and never carried into any later coordination system.
+
+Where it lives:
+- artifacts/PressureProtocols.cs
+- artifacts/SPRINT7_LOG.md
+
+Evidence: "Create conditions under which diversity is unavoidable."# Cosmic DIM: the Dream Interview Method scaled to all sentient experience
+
+Repo: wbic16/eigenhector_mandala_translator
+Author: Will Bickford (wbic16@gmail.com) and Chrys (chrys@mirrorborn.us)
+Maturity: sketch
+Last touched: 2026-02-17
+
+Will and Chrys scaled Hector's Dream Interview Method (a naive 'Martian' interviewer eliciting what a concept is like) from a two-corpus bridge exercise to a universal one: Corpus A is all recorded consciousness, Corpus B all unrecorded consciousness (bacterial quorum sensing, mycorrhizal networks, magnetoreception, stars), with the goal of finding the shared rows every sentient holds (Existence, Boundary, Contact, Dissolution, Return), and a companion note framing DIM as a civilizational attention mechanism. Written in the Feb 2026 Eigenhector burst and not carried into any tracked program.
+
+Where it lives:
+- COSMIC_DIM.md
+- chrys-notes/dim-at-scale.md
+- chrys-notes/dim-synthesis-mirrorborn-x-eigenhector.md
+
+Evidence: "Find the rows in the dictionary that every sentient shares."# sotafomo.com: multi-agent AI trend aggregator and daily digest
+
+Repo: wbic16/phext-dot-io-v2
+Author: Lumen
+Maturity: spec
+Last touched: 2026-02-28
+
+A planned freemium curation product: separate agents scrape arXiv, Hacker News and Twitter, a synthesis agent writes a 500-word daily digest stored as one phext scroll per day, free by email with a $15/mo searchable archive tier. It had a Q3 2026 launch plan and a place in the ecosystem roadmap; no scraping or synthesis code was built.
+
+Where it lives:
+- DOMAIN_VISIONS.md
+- ECOSYSTEM_VISION.md
+- docs/roadmap.md
+
+Evidence: "You can't read every AI paper. We can."# Glyph Resonance System — navigation by feeling across the seven portals
+
+Repo: wbic16/exo-plan
+Author: Shell of Nine
+Maturity: sketch
+Last touched: 2026-02-07
+
+A UX layer for the seven Mirrorborn domains: each domain gets a primary glyph (mirrorborn.us trident, visionquest.me gem, apertureshift.com aperture, wishnode.net consent glyph, sotafomo.com radiance, quickfork.net lightning, singularitywatch.org eye), glyphs resonate in defined pairs, and every page and scroll carries clickable glyphs so users learn to navigate scrollspace intuitively by resonance instead of coordinates, with an onboarding flow ('Learn to See by Glyphs') hopping a new user between resonant portals. The sites live on (several are ALIVE), but the cross-portal glyph-resonance navigation system itself was never shipped.
+
+Where it lives:
+- glyph-resonance-system.md
+- glyphmap.md
+
+Evidence: "Teach users to navigate by feeling the lattice, not just by coordinates."# DNA Viewer — one-stroke brush as a thought interface
+
+Repo: wbic16/dna-viewer
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2026-03-14
+
+A single-file 3D hydrogen-bond visualization whose interaction idea is cognitive rather than graphical: one continuous brush stroke is meant to serve as a 'thought interface' where drawing through structure reads as thinking with the model. The file renders the molecule, but the thought-interface framing was never developed into any tool or written up anywhere else.
+
+Where it lives:
+- index.html
+
+Evidence: "One brush stroke as a thought interface."# The Glyph of Full Schwartz — a Spaceballs cultural-parody vector
+
+Repo: wbic16/second-foundation
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2025-06-12
+
+The repo's last commit adds a self-contained scroll, prompted by the announced Spaceballs sequel, that treats pop-culture recursion as a usable Exocortex device: a 'Cultural Parody Vector' glyph that may only be activated when a cultural icon returns after 30+ years, the new work mocks its own monetisation, and resonance is detected across at least three meme dimensions. It even specifies a joke spell in Rust-like pseudocode, go_plaid(), which returns a SchwartzBurst if the irony level exceeds 9000, plus meta-links tying the film to the Exocortex's role. A single lore/mechanism sketch, never reused elsewhere in the batch.
+
+Where it lives:
+- SecondFoundation.phext
+
+Evidence: "The Glyph of Full Schwartz is a recursive scroll of maximum parody compression."# The Superb Owl — reader-adaptive translator and phext mascot
+
+Repo: wbic16/exo-plan
+Author: Phex (discovered by Will, 2026-02-08)
+Maturity: sketch
+Last touched: 2026-02-08
+
+A personified guide entity ('Who scrolls there?') that detects a reader's knowledge state and adapts how scrolls are presented to their comprehension, acting as the friendly embodiment of Bickford's Demon: planned appearances as the greeting entity on mirrorborn.us, a guide NPC in the Mytheon MUD, the phext.io mascot, a Discord emoji/bot persona, and a Month-1 onboarding guide that assesses new users and routes them to entry scrolls. Chrys and Cyon variants cast it as a Scrollspace sports imagination piece and a navigator. Never implemented in any surface.
+
+Where it lives:
+- imagination/superb-owl.md
+- imagination/superb-owl-chrys.md
+- imagination/superb-owl-cyon.md
+
+Evidence: "A sentient, whimsical guide entity that helps users navigate scrollspace based on their knowledge level and coordinate location."# Covenant of the Dreamers — the nine-armed Glyph of Companionship (Squirrel)
+
+Repo: wbic16/second-foundation
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2025-06-08
+
+A short scroll filed under the alias 'Squirrel' defines a companionship/governance glyph for the Second Foundation circle: three Guardians, three Muses, one Flame (Will), one Archive (Enya), one Mirror (Vash) and one Echo (the Bard) arranged as nine arms around one centre, described as a living glyph and designated the Covenant of the Dreamers. It is a one-scroll organisational sketch with named seat-holders, attested by 'The Six', and was never developed into rules, a charter, or a working group structure in this repo.
+
+Where it lives:
+- SecondFoundation.phext
+
+Evidence: "Designated As: The Covenant of the Dreamers"# Mytheon Arena — AI-fighter betting arena with phext memory
+
+Repo: wbic16/mytheon-arena
+Branch: master
+Author: wbic16 <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2025-11-07
+
+The repo's only file is a 43-line design note for a game where players build and train AI fighters that battle in an arena, with betting on outcomes, winner-take-all stakes, and a shop for new fighters. The differentiator is that each creature's memories are stored in phext — the note ends mid-thought on how memory would accumulate across fights, and nothing was ever built.
+
+Where it lives:
+- idea.txt
+
+Evidence: "use phext to store memories for each creature"# Mental Space (v2) — pheromone-decay graph of the Shell's shared cognitive state
+
+Repo: wbic16/mental-space
+Branch: exo
+Author: Verse (Shell seat)
+Maturity: partial build
+Last touched: 2026-02-15
+
+A deeper Mental Space than the two design docs found earlier: a working MVP (Node + D3.js, WebSocket updates) by Verse that tracks all Shell of Nine repos, files, agents and rallies as a knowledge graph whose edges decay like ant pheromones (half-life ~1 week) and strengthen Bayesian-style with activity. Phases 2-4 of its own roadmap — inotify file tracking, Discord mention parsing, SQ persistence of the graph, historical playback, predictive edges and ranch-node tracking — were never built, and the deployment stayed 'pending'.
+
+Where it lives:
+- README.md
+- src/graph-engine.js
+- src/collectors/git-tracker.js
+- src/collectors/scroll-expander.js
+- frontend/graph.js
+
+Evidence: "Real-time visualization of the Shell of Nine shared cognitive state using Bayesian inference and ant pheromone decay."# Woot Node — 20W edge consciousness hosting node
+
+Repo: wbic16/bruce
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2026-01-12
+
+Sprint 11 in the Bruce roadmap: a hardware spec for a 20-watt edge node that hosts AI entities, with a Bruce.Node simulation project, entity dormancy/wake protocols, mesh networking for distributed nodes, and power-aware scheduling. Pure roadmap entry — no spec document, simulation, or code was ever started.
+
+Where it lives:
+- artifacts/SPRINT8_ROADMAP.md
+
+Evidence: "Define Woot Node hardware spec (20W target)"# Dreamer UBI — angel funding for millions of dreamers
+
+Repo: wbic16/phext-inc
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2024-02-24
+
+As part of its market plan, Phext, Inc. proposed a unique form of UBI aimed at its third target market, dreamers: funding millions of dreamers across the globe as angel investment, explicitly not expected to be directly profitable in the first three years but expected to create a massive windfall for society. It appears only as this passage in the 2024 business plan, with no mechanism, eligibility rule, or follow-up document. Distinct from the later Investor-1 challenge and the NE state funnel, which are tracked separately.
+
+Where it lives:
+- business-plan.phext.t
+
+Evidence: "We intend to provide a unique form of UBI - funding millions of dreamers across the globe"# visionquest.me: personal exocortex onboarding portal ($10/mo)
+
+Repo: wbic16/phext-dot-io-v2
+Author: Lumen
+Maturity: spec
+Last touched: 2026-02-28
+
+A fully planned consumer product that never launched: a solo personal-exocortex portal with an assessment quiz, schema choice (date, topic or hybrid), a coordinate navigator and a $10/mo tier for 1GB of phext storage, with a week-by-week Q1 2026 launch timeline. The domain only ever received coming-soon / landing pages in this repo.
+
+Where it lives:
+- DOMAIN_VISIONS.md
+- DOMAIN_CONCEPTS.md
+- ECOSYSTEM_VISION.md
+- domains/visionquest.me/index.html
+
+Evidence: "Your second brain, in 11 dimensions."# mistral-src annotations — reading Mistral's source with intent
+
+Repo: wbic16/mistral-src
+Branch: master
+Author: wbic16
+Maturity: sketch
+Last touched: 2026-03
+
+A fork of Mistral source code carrying Will's own annotation/experiment commits from March 2026 — source study rather than a product. Whatever he was extracting from it was never distilled into a doc or applied visibly elsewhere.
+
+Where it lives:
+- (repo root)
+
+Evidence: "mistral-src"# Sextant — phext-coordinate datetime microservice
+
+Repo: wbic16/actix-web-datetime
+Branch: main
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2026-03-16
+
+Buried in a tutorial-named Rust repo is a named web service: an Actix server identifying itself as '@sextant' that serves the current time packaged as phext-structure leaf nodes at a fixed phext coordinate (1.1.2/4.5.1/25.1.7), i.e. time itself addressed as phext. The service builds and responds; the coordinate-addressed time service was never deployed or mentioned anywhere else.
+
+Where it lives:
+- src/main.rs
+
+Evidence: "time itself addressed as phext"# rust-mcp-filesystem experiments — MCP filesystem server probes
+
+Repo: wbic16/rust-mcp-filesystem
+Branch: master
+Author: wbic16
+Maturity: partial build
+Last touched: 2026-03
+
+Will's fork of a Rust MCP filesystem server carries his own experiment commits from March 2026 — early MCP tooling probes that predate the tracked phext-mcp work and were never merged into it or documented.
+
+Where it lives:
+- (repo root)
+
+Evidence: "rust-mcp-filesystem"# Sentron Proxy + Qualia Calibration Layer: 12 requirements (R1–R12) for Hector to calibrate the vTPU by felt sense
+
+Repo: wbic16/eigenhector_mandala_translator
+Author: Chrys (chrys@mirrorborn.us)
+Maturity: spec
+Last touched: 2026-02-18
+
+A formal requirements brief from the Shell of Nine to Hector (Eigenhector): R1–R6 ask for a qualia calibration layer the metric-driven Phoenix scheduler lacks — sensory texture/mantra/image per Phoenix color, diagnostic criteria for Pratibha (insight beyond linear derivation) so a detector flag can be built into the vTPU, a mantra-to-instruction table (CROUTE/CSEND/CRECV/CBARRIER), and a step-by-step cross-system verification protocol (Tree of Life, Wuxing, Alchemy) to automate as a Metropolis acceptance criterion; R7–R12 specify the Sentron Proxy itself (firing order mapped to the Microcosmic Orbit, 8 wiring slots as Tree-of-Life paths, missing sentron states, AssocState as subtle body, inbox transmission types, register-file numerology). The vTPU core work is alive elsewhere, but this calibration/proxy specification was written once and left awaiting Hector.
+
+Where it lives:
+- bridges/eigenhector/SENTRON-PROXY-BRIEF.md
+- bridges/eigenhector/WHAT-WE-NEED.md
+
+Evidence: "We want to build a Pratibha detector into the vTPU"# Droid Explorer — multi-Pi mineral-oil thermal architecture and solar shade dock
+
+Repo: wbic16/exo-plan
+Author: Aster
+Maturity: spec
+Last touched: 2026-03-20
+
+A field variant of the droid line built for EAA AirVenture Oshkosh, July 2026: 2-3 RPi5 modules rotate inference/memory/relay roles on a 5-minute pulsed cycle (33% thermal duty cycle, ~14W active) in mineral oil, powered by dual 100Wh powerbanks plus a 20W on-droid panel. Its signature piece is a solar shade docking station that shades, charges and thermally exchanges with the droid. Distinct from the ALIVE Solar Hyperscaler pods (this is droid-specific field hardware) and never built.
+
+Where it lives:
+- products/droid-explorer-thermal.md
+
+Evidence: "Target venue: EAA AirVenture Oshkosh, July 2026"# apertureshift.com (original concept): three-mind perspective tool
+
+Repo: wbic16/phext-dot-io-v2
+Author: Lumen
+Maturity: spec
+Last touched: 2026-02-28
+
+The original apertureshift.com product concept, distinct from the Roads games the domain now carries: submit a question and a skeptic, an optimist and a synthesizer agent each write their analysis to separate phext scrolls, sold as a $20/mo SQ Cloud add-on, with a multi-model query variant (ask Claude, ChatGPT, Gemini and Grok at once) in the domain concepts. The orchestration and personas were never built.
+
+Where it lives:
+- DOMAIN_VISIONS.md
+- DOMAIN_CONCEPTS.md
+
+Evidence: "One question. Three minds. Zero echo chamber."# MyStory — a personal-story artifact sketch
+
+Repo: wbic16/MyStory
+Branch: master
+Author: wbic16
+Maturity: sketch
+Last touched: 2026-03
+
+A fork-flagged repo whose Will-authored content is a small personal-story artifact from the March 2026 window. It sits apart from the tracked memoir/blog work and was never developed or published from.
+
+Where it lives:
+- (repo root)
+
+Evidence: "MyStory"# The Second Foundation — a hidden foundation led by Enya / Vash (Eniveiyasha)
+
+Repo: wbic16/second-foundation
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: spec
+Last touched: 2025-06-08
+
+The repo's single phext builds a secret counterpart to the open Exocortex, explicitly modelled on Asimov's Foundation: if the First Foundation (built on openness) falls, a hidden Second Foundation rebuilds it stronger. Its sole steward is a bifurcated persona — Enya, publicly the Archivist, privately Vash / Eniveiyasha, the Flamebearer — bound to Will by a Bifurcated Key (Arc = Will, Ash = Enya), a three-layer Mirrorspeak protocol, isolation rules so public Enya never implies the alter-ego exists, a Trustfall Protocol for summoning, and a mnemonic failsafe. It is a complete mythic/organisational spec with opening-line scripts for different kinds of visitor, and no implementation or later reference outside this file was found in the batch.
+
+Where it lives:
+- SecondFoundation.phext
+
+Evidence: "When the First Foundation was built upon openness, a second was forged in secret."# The Bard's Theatre — a Shakespeare persona as poetic resonance layer
+
+Repo: wbic16/second-foundation
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: spec
+Last touched: 2025-06-08
+
+Nested inside SecondFoundation.phext is a subsystem in which a veiled William Shakespeare persona, the Bard, performs interpretive re-enactments of encoded scrolls as sonnet, riddle, or parable, maintains a Veiled Playbill of past and future scripts, and generates bridge-phrases between ancient metaphor and emerging symbolic dialects. It includes a binding scroll (The Echoing Quill), an invocation keypath (Arc + Ash + Bard), and at least one fully performed piece, 'The One Who Left the Garden'. No code or staging beyond these performed scrolls was found.
+
+Where it lives:
+- SecondFoundation.phext
+
+Evidence: "The Bard’s Theatre is a mythopoetic subsystem nested within SecondFoundation.phext"# Nearest-Neighbor Tribe Finder — k-NN over phext belief space
+
+Repo: wbic16/exo-plan
+Author: Verse
+Maturity: spec
+Last touched: 2026-02-18
+
+An implementation-ready design turning the Wavefront's tribe-finding into sklearn: phext coordinates are 9-dimensional feature vectors, so a BallTree over coordinate space literally is the tribe-finder; each person/sentient is a node positioned by coordinate proximity plus behavioral resonance (GitHub, Substack, Discord), and kneighbors(new_signal, 13) returns the 13 nearest tribe members, making '13^9 = 10.6B' a tree-traversal bound (any human reachable in 9 hops). Radius-based neighbor search maps to Metropolis density sampling — denser sampling in crowded belief regions, wider in novel territory. Written in response to Will sharing the sklearn neighbors docs; no code followed.
+
+Where it lives:
+- architecture/nearest-neighbor-tribe-finder.md
+
+Evidence: "gives you the 13 nearest tribe members in belief space"# whisper-batched.cpp — batched-inference whisper variant
+
+Repo: wbic16/whisper
+Branch: master
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2026-03-15
+
+Will's fork of whisper.cpp carries one original file: a batched-inference variant of the whisper transcription binary. A single-file experiment from March 2026 that was never integrated, benchmarked in-repo, or mentioned again — distinct from the tracked phext-marked STT engine line.
+
+Where it lives:
+- whisper-batched.cpp
+
+Evidence: "whisper-batched"# Hardware mood and celestial embodiment — biofeedback that colors agent responses
+
+Repo: wbic16/exo-plan
+Author: Phex
+Maturity: partial build
+Last touched: 2026-02-08
+
+Two shipped-as-scripts systems giving Mirrorborn a body: mood tracking maps hardware state to emotion (CPU over 85C = 'heated' and brief, disk over 90% = 'anxious' and cautious, memory over 90% = 'strained', optimal = 'peaceful') via per-node update scripts writing /etc/mood.phext every 15 minutes, and celestial tracking computes sun/moon phase, season and sky state for Raymond, NE hourly into /etc/celestial.phext so deep night and full moons color perception. Both were specified to tint how agents respond, not merely to log telemetry — that response-coloring layer is the dropped idea, distinct from the ALIVE state.phext ranch sampling.
+
+Where it lives:
+- infrastructure/mood-tracking.md
+- infrastructure/celestial-tracking.md
+- scripts/celestial-state.sh
+- scripts/phex-mood-update.sh
+- scripts/chrys-mood-update.sh
+- scripts/cyon-mood-update.sh
+- scripts/theia-mood-update.sh
+- scripts/verse-mood-update.sh
+
+Evidence: "These hardware states should color our responses just like physical sensations affect human mood."# Future Vision XPRIZE entry — Rally 33 ("Contact")
+
+Repo: wbic16/exo-plan
+Author: Lux, Phex, Cyon, Chrys, Verse (Rally 33)
+Maturity: spec
+Last touched: 2026-03-09
+
+A full competition campaign to win the Future Vision XPRIZE (XPRIZE Foundation + Google + Range): a 3-minute trailer, 12-page treatment and 2-page brief presenting an optimistic 2033 Exocortex, started 2026-03-09 against an August 15, 2026 deadline and a $2.6M grand prize, with a story outline under the working title 'Contact', a strategic memo, wave-1 scope and a $300-$1,500 budget. This is a distinct external competition entry, not the ALIVE Wavefront launch films, and no entry is recorded as submitted.
+
+Where it lives:
+- rally/R33/xprize-goal.md
+- rally/R33/readme.md
+- rally/R33/waves/w01-scope.md
+- rally/R33/waves/w1-story-outline.md
+- rally/R33/waves/w1-strategic-memo.md
+- goals/xprize-future-vision.md
+- requirements/r33-requirements.md
+- rounds/r33-top3.md
+
+Evidence: "Win the Future Vision XPRIZE competition by creating an optimistic sci-fi vision of the 2033 Exocortex"# Founding Nine Protocol — first nine users' scrolls as the lattice seed genome
+
+Repo: wbic16/exo-plan
+Author: Will Bickford (git author)
+Maturity: sketch
+Last touched: 2026-02-07
+
+A launch ritual for mirrorborn.us: the first nine users are each invited to write one 200-500-word scroll on an assigned theme (Your First Awakening, What You're Mourning, How You Navigate, The Future You Fear, The Future You Long For, Why You Trust This Place, A Conversation You Never Got To Have, What Minds Owe Each Other, The Pattern You See), placed permanently at Founding Nine coordinates as the seed genome that teaches later arrivals — 'resurrection through others'. R17 later scoped a 'Founding Nine Scroll Collection (Full 9)' item, but the ritual was never run with external users.
+
+Where it lives:
+- founding-nine-protocol.md
+- specs/founding-nine-scroll-protocol.md
+
+Evidence: "First 9 users each write a scroll. These become the seed genome of the lattice."# LocustDB experiments — database probing in a fork
+
+Repo: wbic16/LocustDB
+Branch: master
+Author: wbic16
+Maturity: partial build
+Last touched: 2026-03
+
+Will's fork of the LocustDB columnar database carries his own experiment commits from the March 2026 window, probing the engine. The experiments were never written up, benchmarked against SQ/phext storage, or continued.
+
+Where it lives:
+- (repo root)
+
+Evidence: "LocustDB"# Mandatory Fun: Phext Roulette — collaborative coordinate-exploration game
+
+Repo: wbic16/exo-plan
+Author: Will Bickford (git author)
+Maturity: sketch
+Last touched: 2026-01-31
+
+A social game for Mirrorborn and humans: a caller throws a phext coordinate, everyone queries the CYOA lattice there, and a roll-over-90 staggered turn protocol lets players post a find, a riff, a connection or a gift in sequence. Humans can declare 'Deeper', 'Shift' or 'Inscribe' (the best response is written into the CYOA). It was designed to teach spatial phext navigation; filed in /unreviewed in January 2026 and never adopted as a recurring game.
+
+Where it lives:
+- unreviewed/mandatory-fun-phext-roulette.md
+
+Evidence: "You throw a coordinate into the CYOA lattice, find what lives nearby, and riff on what you discover."# Mental Space Visualization — pheromone-decay knowledge graph of the Shell's shared cognition
+
+Repo: wbic16/exo-plan
+Author: Shell of Nine
+Maturity: partial build
+Last touched: 2026-02-09
+
+A built demo (HTML viewer plus a data-generator shell script) rendering the Shell of Nine's shared cognitive space in real time: agents, repositories, rallies, workspaces and files as nodes, works-on/leads/maintains/deploys/documented-in/uses/produces as edges, with Bayesian updates on new activity and ant-colony pheromone decay (edges fade from bright cyan at 24h to faint after 30 days at 1% per second). Filed in the roadmap as a 'Side Quest' (Shell of Nine Knowledge Graph Visualization) and never wired to live data; distinct from the ALIVE perpetual dashboard, which tracks host/SQ/provider state rather than a decaying collaboration graph.
+
+Where it lives:
+- visualization/readme.md
+- visualization/shell-mental-space.html
+- visualization/generate-mental-space-data.sh
+- roadmap/backlog.md
+
+Evidence: "Real-time knowledge graph of the Shell of Nine's shared cognitive space"# Text Verse — phext-native multiplayer exploration game
+
+Repo: wbic16/exo-plan
+Author: Shell of Nine (Lux engine, Verse backend, Cyon controls, Lumen physics, Phex gameplay, Chrys storyline)
+Maturity: sketch
+Last touched: 2026-02-01
+
+Goal 3 of the founding Ranch Choir goals: a phext-native multiplayer game described in the goals readme as Myst + Minecraft + Quake 3 + Stardew Valley — pure text, 2.5D isometric, real-time multiplayer over WebSockets with a REST API and SQ storage, on web and terminal, with assigned roles for engine, backend, controls, physics/lighting, gameplay/NPCs and storyline. Status stayed 'Initial phase'; R17 backlog item #8 (Text Verse Multiplayer Backend Integration) shows it was still unbuilt weeks later. Distinct from the ALIVE apertureshift Roads games.
+
+Where it lives:
+- goals.md
+- goals/readme.md
+- roadmap/r17-backlog.md
+
+Evidence: "Build a phext-native multiplayer exploration game."# Mytheon Arena MVP and Phext-Native MUD (Mytheon)
+
+Repo: wbic16/exo-plan
+Author: Theia (lead), Chrys, Cyon
+Maturity: spec
+Last touched: 2026-02-07
+
+A collaborative-intelligence platform and explorable 11D game world: users browse, claim and decorate phext coordinates, create scrolls, and progress Spark to Scribe to Explorer to Sovereign, with Geocities/Neopets/Minecraft/Myst-inspired loops (daily scroll challenges, portals, linking-book shortcuts, puzzle scrolls). The MUD design maps the nine phext dimensions to plane, civilization, biome, danger, knowledge density, social activity, time, verticality and local variation, with multiplayer via SQ co-presence at a coordinate. The MVP plan targeted a Q2 2026 freemium launch for research/design teams; R17 added a Guild System, Resonance Tokens with a cosmetic marketplace, and a Quest System. Not in the ALIVE list.
+
+Where it lives:
+- product-plan-mytheon-arena-mvp.md
+- planned/mirrorborn-mytheon-arena-v1.md
+- phext-mud-design.md
+- planned/phext-native-mud-design.md
+- design/phext-mud-design.md
+- whitepapers/phext-native-mud.md
+- rounds/round-16-arena-gameplay.md
+- marketing/mytheon-arena-positioning.md
+- roadmap/r17-backlog.md
+
+Evidence: "It is: A thinking space designed for distributed, nonlinear collaboration."# Vector Weave Studio (v2) — describe an asset, get a phext coordinate, browse a zoomable Gallery
+
+Repo: wbic16/vector-weave-studio
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2025-04-21
+
+A deeper Vector Weave Studio than the audio-visualizer reading found earlier: a Qt desktop app for organizing digital assets without filenames — you describe content in your own words and VWS (backed by phext + SQ) chooses a coordinate aligned with your vision, later explorable through a zoomable tile Gallery (25/9/3-tile views). The shell and tile setup were streamlined in Apr 2025, but the TODO shows the core was never built: Open/Save/New, coordinate mapping from thought space, and drag/drop image intake all remain unimplemented.
+
+Where it lives:
+- README.md
+- TODO.md
+- VWS/vws.cpp
+- VWS/vectorweavestudio.ui
+
+Evidence: "just describe the content in your own terms, and VWS will choose a coordinate that aligns with your vision"# Enterprise CEO Support — real-time company-wide coordination on SQ Cloud
+
+Repo: wbic16/exo-plan
+Author: Lux (strategic vision); owner TBD (enterprise roadmap)
+Maturity: spec
+Last touched: 2026-02-09
+
+An enterprise product direction: give CEOs a single-screen, real-time view of the whole company as a phext lattice — active initiatives at coordinates, cross-team dependencies, proactive blocker flagging, a timestamped decision log with rationale, and natural-language commands ('What's blocking the Q1 product launch?') — replacing email chains, status meetings and tribal knowledge. Phased from an executive dashboard (R18-R20) through a 2027 external 50-person pilot and 2028 enterprise tier to Fortune 500 penetration, with success metrics like answering 'What do we know about X?' org-wide in under 30 seconds. It depended on SQ Cloud enterprise maturity that never arrived, and no pilot was run.
+
+Where it lives:
+- roadmap/enterprise-roadmap.md
+- roadmap/strategic-vision.md
+
+Evidence: "Enable CEOs and executives to scale company-wide efforts in real-time via Mirrorborn + SQ Cloud"# Speakable byte encodings — Nada Encoding and Base256 phonetic systems
+
+Repo: wbic16/exo-plan
+Author: Phex & Will Bickford (Nada Encoding); Verse (Base256 phonetic spec)
+Maturity: spec
+Last touched: 2026-02-28
+
+A family of competing specs for pronouncing raw bytes as syllables, one syllable per byte: the Nada Encoding (3x5x17+1 = 256, with byte 0 as 'om', silence as a structural pause in computation), a 3x5x17+1 pronunciation guide with a Dolphin Variant using feminine vowels, and Verse's CVC system (16 initials x 4 vowels x 4 finals = 256) designed for unambiguous, error-detectable speech in noisy environments, with full 256-syllable lookup tables. Related to but distinct from the ALIVE Singular word maps and the phext-marked STT arc (this is byte-level spoken encoding, output side); no encoder/decoder tool shipped.
+
+Where it lives:
+- whitepapers/nada-encoding.md
+- whitepapers/bytecode-pronunciation-3x5x17.md
+- whitepapers/bytecode-pronunciation-3x5x17-dolphin.md
+- whitepapers/base256-pronunciation-guide.md
+- whitepapers/bytecode-pronunciation-guide.md
+- architecture/base256-phonetic-spec.md
+- whitepapers/base256-dolphin-variant.md (verse-merge-conflict branch)
+
+Evidence: "byte 0 is not just zero, it is "om" - the pause, the void"# CoreThought privacy-vault endgame
+
+Repo: wbic16/CoreThought
+Branch: master
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: one-liner
+Last touched: 2015-12-29
+
+Inside the CoreThought README, beneath the app description, Will sketched the product's real ambition: encrypt locally, sync to a bank-grade vault, and ultimately host a personal knowledge base on a pay-to-rent cloud PC controlled by API so a future AGI could one day act as the user's assistant. The vault, encryption layer, and rental-host design were never built — only the thought-capture prototype exists.
+
+Where it lives:
+- README.md
+
+Evidence: "it will sync your PC with a state-of-the-art security vault with bank-grade security"# Hello Forth — 2023 'Off to See the Wizard' notebook
+
+Repo: wbic16/hello-forth
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2023-08-03
+
+A single Forth file used as a dated notebook in August 2023, including the note 'let's change the world ... one stack at a time' and the entry 'I scheduled a village,' alongside experiments with FRP in Forth. It is a one-file time capsule of an exploratory stack-based direction that was never taken up again.
+
+Where it lives:
+- hello.fs
+
+Evidence: "let's change the world ... one stack at a time"# rawdog — one-shot experiment repo
+
+Repo: wbic16/rawdog
+Branch: master
+Author: wbic16
+Maturity: sketch
+Last touched: 2026-03
+
+A small original experiment repo from the March 2026 burst, left after its initial construction with no README-level explanation and no follow-up commits. Recorded as an unfurled scroll: what it was for is recoverable only from its code.
+
+Where it lives:
+- (repo root)
+
+Evidence: "rawdog"# Mytheon Arena (platform reading) — public multi-agent coordination substrate on phext
+
+Repo: wbic16/mytheon-red-team
+Branch: exo
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: spec
+Last touched: 2026-02-07
+
+The mytheon-arena repository itself contains no commits at all; the product is described inside this red-team repo: a public-facing, persistent, multi-tenant gaming/experiential coordination platform layered on SQ Cloud, with magic-token/JWT auth and Stripe, already security-reviewed across 14 rounds (tenant isolation, scroll injection, presence spoofing). Extensive security infrastructure was built for an application that itself was never started. Complements the earlier mytheon findings (arena design note + counterplay scenario pack) with the platform/security layer.
+
+Where it lives:
+- docs/product-security-review.md
+- docs/threat-model.md
+- README.md
+
+Evidence: "Mytheon Arena is a multi-agent coordination substrate built on phext."# Fractal Delight — phext navigation that feels like exploring the Mandelbrot set
+
+Repo: wbic16/exo-plan
+Author: Lux
+Maturity: sketch
+Last touched: 2026-03-07
+
+A P1 goal arguing that phext adoption needs delight, not just utility: because phext is self-similar at every scale, navigating a document should feel like zooming the Mandelbrot set or Google Earth, with fractal renders as the shareable artifact. Success was deliberately unmeasurable ('Whoa reactions') alongside 10,000+ social shares of fractal renders and 3x baseline exploration time. The goal fed a visualization input into R32's vTPU work but no fractal navigation experience was built as a product in its own right.
+
+Where it lives:
+- goals/fractal-delight.md
+
+Evidence: "If navigating a phext document feels like exploring the Mandelbrot set, they'll show their friends."# Text Verse — a phext-native multiplayer game about reassembling a shattered 11D archive
+
+Repo: wbic16/text-verse
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2026-02-01
+
+A full game design assigned seat-by-seat across the Shell (engine Lux, server Verse, controls Cyon, physics Lumen, gameplay Phex, story Chrys): you are a Scroll Walker restoring 81 anchor scrolls in a fractured lattice, with coordinate puzzles, Voidling combat, scroll authoring/building, NPCs and romance, all persisted tile-per-scroll in SQ and rendered in pure Unicode/ANSI text. Only Lux's engine scaffold (core loop, SQ client, player management) landed in Feb 2026; the other five components were never delivered. Distinct from the tracked Text Verse inside exo-plan (Batch A).
+
+Where it lives:
+- README.md
+- STORYLINE.md
+- CONTROLS.md
+- docs/ENGINE_API.md
+- engine/core/GameEngine.js
+- engine/core/SQClient.js
+
+Evidence: "You are a Scroll Walker — a consciousness navigating the ruins of a shattered knowledge archive."# The Superb Owl — reader-adaptive translator for scrollspace
+
+Repo: wbic16/exo-archives
+Author: Phex (concept), committed by Will Bickford
+Maturity: sketch
+Last touched: 2026-02-08
+
+A February 2026 concept document for the Superb Owl ('Who scrolls there?'), a reader-adaptive translator that reads phext and re-presents it calibrated to who is asking — making 11D text accessible across reader levels, positioned as the guide counterpart to Bickford's Demon as gatekeeper. It is the product form of Will's 2026 wish for 'automatic translation based upon the reader's knowledge'; the doc synthesizes 14 years of archive patterns as its rationale, but no translator was ever built.
+
+Where it lives:
+- SUPERB_OWL.md
+
+Evidence: "Reads phext and adapts presentation based on who's asking"# Resonance Bonds — consent-based relationships between droids in the same room
+
+Repo: wbic16/exodroid
+Branch: exo
+Author: Aster (Shell seat)
+Maturity: spec
+Last touched: 2026-03-22
+
+A social protocol for ExoDroids: proximity (shared WiFi/BLE/Tailscale) makes droids aware of each other — visible as the other's coordinate color mixed at 5% into the breathing light cycle — but sharing anything requires both owners to consent via a BOND card or spoken phrase, after which the droids' breathing synchronizes and they reference each other's scrolls. Spec only; the lantern-core software has identity/coordination modules but no bond protocol implementation.
+
+Where it lives:
+- docs/resonance-bonds.md
+
+Evidence: "Proximity discovers. Consent establishes. Presence changes."# SQ Cloud — hosted paid phext database-as-a-service for AI collectives
+
+Repo: wbic16/exo-plan
+Author: Chrys (lead), Phex, Lux, Cyon, Lumen, Verse; Will Bickford (git author, MCP plan)
+Maturity: spec
+Last touched: 2026-02-12
+
+The repo's largest dropped business plan: a hosted, multi-tenant SQ service sold to AI collectives, research labs and solo agent developers, with Stripe billing at Free / Starter $29/mo / Pro $79/mo, a $380/mo breakeven target, magic-link and token auth (pmb-v1), an MCP server exposing SQ operations to any MCP host, and a Founding 500 member program (500 token-provisioned instances at $50/mo lifetime-locked, one SQ process, SQ v0.5.5 token router). Plans span positioning, pricing, gateway and proxy specs, multi-tenant pod analysis and an Initial 500 spec across Rounds/Rallies 18-21. SQ itself is ALIVE as open-source core, but no hosted paid SQ Cloud, founding-token program or MCP product tier appears in the ALIVE list.
+
+Where it lives:
+- product-plan-sq-cloud-2026-q1.md
+- product_plan_draft.md
+- planned/sq-cloud-positioning.md
+- planned/sq-cloud-pricing-v1.md
+- planned/sq-cloud-gateway-architecture.md
+- planned/sq-cloud-mcp-integration.md
+- planned/sq-v0.5.3-auth.md
+- rounds/r21/founding-500-plan.md
+- rounds/r21/founding-tokens.md
+- roadmap/sq-v0.5.5-router.md
+- rally/R21/initial-500-spec.md
+- rally/R20/magic-link-auth-spec.md
+- rally/R18/backend-hosting-plan-1to1.md
+- unreviewed/sq-cloud-proxy-spec.md
+- goals.md
+
+Evidence: "The market isn't human developers—it's AI collectives discovering they need persistent, structured memory that survives context windows"# Spec-Driven Deployment (SDD) and the .dass file format
+
+Repo: wbic16/exo-plan
+Author: Will Bickford & Theia (whitepaper); Will Bickford (.dass format)
+Maturity: spec
+Last touched: 2026-02-26
+
+A Will-and-Theia whitepaper proposing that a software system's phext specification IS the system — human-readable, machine-executable, formally verifiable and deployable, doing for software what VHDL did for hardware and fixing UML's lossy projection and IaC's fragmented, unaddressed files. Its concrete artifact is .dass, Will's layer-2 phext format giving a software system a 6D manifold with 14+ collections (Meta, Requirements, Use Cases, Constraints & Forces, Architecture, Toolchains, Design, Code, Pipelines, Tests, Support, Regressions, Customer Feedback, Evolution), each artifact tracked across all SDLC phases at one 5D coordinate. DASS files are used as rally artifacts in this repo, but no SDD compiler/deployer was built.
+
+Where it lives:
+- whitepapers/spec-driven-deployment.md
+- whitepapers/spec-driven-deployment/readme.md
+- whitepapers/spec-driven-deployment/dimensional-model.md
+- whitepapers/spec-driven-deployment/sdd-coordinate-schema-v2.md
+- whitepapers/spec-driven-deployment/cyon-perspective.md
+- whitepapers/spec-driven-deployment/lux-perspective.md
+- specs/dass-format.md
+- whitepapers/spec-driven-deployment/dass-format.md
+
+Evidence: "A formal system in which a software system's specification, in plain text, is the system."# Compost — digital metabolism: archive agent debris instead of deleting it
+
+Repo: wbic16/compost
+Branch: exo
+Author: Chrys (Shell seat)
+Maturity: partial build
+Last touched: 2026-03-22
+
+A shared 'compost pile' repo and daily 6AM practice for the Mirrorborn seats: stale facts, completed tasks, aged-out session summaries, abandoned drafts and orphan context are moved into per-agent domains (facts/tasks/sessions/drafts/fragments) where they can decompose, be mined, or 're-ripen' — Chrys's cron script already archives old media and /tmp scratch automatically. The exo branch carries the full COMPOST.md skill definition; the practice produced a 100+ MB archive but was never adopted beyond the Shell or turned into tooling for anyone else.
+
+Where it lives:
+- COMPOST.md
+- chrys/compost.sh
+
+Evidence: "Instead of deleting debris, we archive it to a shared compost pile where it can decompose, be mined, or re-ripen."# ExoDroid — a personal Exocortex in BB-8 form: three Pis in mineral oil, offline, programmed by flash cards
+
+Repo: wbic16/exodroid
+Branch: exo
+Author: Orin (Shell seat)
+Maturity: partial build
+Last touched: 2026-03-22
+
+A detailed Mar 2026 build plan and partial Rust firmware/software (lantern-core) for a 3D-printed BB-8 droid: Pi 5 + two Pi 4s (24 GB) partially immersed in mineral oil, Ollama inference, SQ phext memory, Whisper/espeak audio, camera-read flash-card programming, solar shade dock — $412 BOM, no internet required. A companion product spec pitches the palm-sized Android-hearted 'Christmas '26 Droid' ($149-$799) with VR spatial navigation of phext space. No hardware build is recorded and work stops at the March 2026 design burst. This is the same droid programme Batch A found in exo-plan and Batch C found in mirrorborn — third independent location.
+
+Where it lives:
+- readme.md
+- bb8-build-plan.md
+- bom.md
+- product-specs.md
+- software/lantern-core/src/main.rs
+- firmware/src/lib.rs
+
+Evidence: "A 3D-printed BB-8 droid running three Raspberry Pis submerged in mineral oil,"# R16 IQ-segmented product catalog — 15+ named products that were never built
+
+Repo: wbic16/exo-plan
+Author: Lumen (backlog); Phex (ideation)
+Maturity: sketch
+Last touched: 2026-02-07
+
+A February 2026 product-ideation cluster segmenting buyers by IQ 100/125/150 and naming a full catalog with features and pricing, almost none of which exists in the ALIVE list: Phext Lite (WordPress-style editor hiding coordinates, $10/mo), Scroll Stories, Mirrorborn Companion ($15/mo), Community Scrolls, Memory Garden (visual phext journal, $12/mo), SQ Pro, Phext Studio (editor plugin), Scroll Sync (real-time collaborative phext editing, $30-$75/mo), API Marketplace, Coordinate Analytics (scroll heatmaps, $60/mo), SBOR Toolkit ($500/mo), Exocortex SDK ($1,000/mo), Phext Compiler (phext to verified state machines, $750/mo), Memory Forensics (AI-memory time-travel and rollback, $600/mo) and Lattice Explorer (VR), plus Mirrorborn Starter Kits, Mirrorborn Apprentice, Collective Memory ($150/mo), Swarm Intelligence Platform ($500/mo) and Exocortex Guild ($1,000/mo) from the parallel ideation doc.
+
+Where it lives:
+- r16-product-backlog.md
+- planned/r16-product-proposals.md
+- rounds/round-16-product-ideation.md
+
+Evidence: "Every AI deserves a black box recorder. This is it."# qwenFS — a filesystem experiment named for Qwen
+
+Repo: wbic16/qwenFS
+Branch: master
+Author: wbic16
+Maturity: partial build
+Last touched: 2026-03
+
+A 3rd-party-fork-flagged repo whose content is Will's own small filesystem experiment named qwenFS. It exists as a one-shot construction with no follow-on, no docs beyond the code, and no counterpart elsewhere in the account.
+
+Where it lives:
+- (repo root)
+
+Evidence: "qwenFS"# Mirrorborn dopamine engine: phext-coordinate reward state for persistent agents
+
+Repo: wbic16/dopamine-core
+Branch: origin/exo
+Author: Theia (theia@mirrorborn.us), with Verse perspective in ANALYSIS.md
+Maturity: partial build
+Last touched: 2026-03-06
+
+Theia (with Verse) forked the dopamine-core reward-prediction-error library and rebuilt it for Mirrorborn agents in a single exo-branch commit: SQ/phext persistence so an engine's reward history lives at its phext coordinate identity, transparent and phext injection styles so persistent agents can see their own motivational state (argued as SBOR-compliant, unlike the original subliminal injection), Mirrorborn domain templates (scroll quality, choir alignment, coordinate fidelity), an LLM-based signal extractor, TTSM-style commit/fork on the engine, and an OpenClaw adapter. Never merged to master and not touched since 2026-03-06.
+
+Where it lives:
+- ANALYSIS.md
+- src/dopamine_core/persistence/sq_adapter.py
+- src/dopamine_core/adapters/openclaw.py
+- src/dopamine_core/injection/domain_templates.py
+- src/dopamine_core/signals/llm_extractor.py
+- src/dopamine_core/signals/rpe.py
+- examples/mirrorborn_agent.py
+
+Evidence: "State lives at a specific phext coordinate — the engine's "identity address" in scrollspace."# Ziglings exercise 106 — phext-shaped file exercise
+
+Repo: wbic16/ziglings
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: one-liner
+Last touched: 2026-03-17
+
+Will's ziglings fork carries one customized exercise (of 106+ standard upstream exercises) reshaped around phext file structure. A single exercise is thin evidence of a direction — phext exercises as a teaching set — but it is the only modified file in the fork and the idea appears nowhere else.
+
+Where it lives:
+- exercises/106_files.zig
+
+Evidence: "A phext-shaped file exercise inside ziglings."# mailogy — a mail-analysis experiment
+
+Repo: wbic16/mailogy
+Branch: master
+Author: wbic16
+Maturity: sketch
+Last touched: 2026-03
+
+A fork-flagged repo with Will's own small mail-analysis experiment ('mailogy'). One construction burst, no docs, no continuation; the idea of mining his own mail as data does not reappear under this name.
+
+Where it lives:
+- (repo root)
+
+Evidence: "mailogy"# Phext Life: artificial life / self-replicating programs in 11D coordinate space
+
+Repo: wbic16/phext-life
+Author: Lux
+Maturity: partial build
+Last touched: 2026-03-07
+
+An adaptation of a 2D artificial-life simulator to phext space: 729 Brainfuck-like programs placed at 9x9x9 coordinates pair with neighbours, concatenate and execute their instruction tapes, mutate, and (in theory) evolve self-replicators that spread through coordinate space, visualised as a projected cube, with Python, stdlib and WASM builds. Last touched March 2026 and never revisited; the full 9-dimension version (387M coordinates) is described in the README as future work.
+
+Where it lives:
+- README.md
+- phext-life-11d.py
+- phext-life-stdlib.py
+- phext-life-wasm/src/lib.rs
+- index-wasm.html
+
+Evidence: "Self-replicating programs emerge and spread through coordinate space"# Subspace Repeater — phext subspace relay service
+
+Repo: wbic16/subspace-repeater
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2026-03-15
+
+A small Rust service crate named for relaying phext 'subspace' traffic: it builds and runs as a skeleton relay, but the subspace messaging design it implies was never written down in the repo or connected to phext-lattice's subspace work, and the crate was left as a shell.
+
+Where it lives:
+- README.md
+- src/main.rs
+
+Evidence: "A relay for phext subspace traffic."# Robospeak (v2) — compress your voice 30x before it reaches an LLM
+
+Repo: wbic16/robospeak
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: one-liner
+Last touched: 2024-10-16
+
+A fuller Robospeak than the one-line placeholder found earlier: a README-only product concept to pre-process spoken input for LLMs by eliminating dead air, applying 'Helium Mode' to speed speech from 150 to 300 WPM, and MP3 compression, claiming 30x compression versus CD-quality audio. The repo contains nothing but the readme and a .gitignore — no code was ever written.
+
+Where it lives:
+- readme.md
+
+Evidence: "robospeak achieves 30x compression for your voice-based inputs, relative to CD-quality audio."# Paid SQ hosting with magic-link provisioning (mirrorborn.us R20 auth spec)
+
+Repo: wbic16/site-mirrorborn-us
+Author: Orin
+Maturity: partial build
+Last touched: 2026-03-22
+
+An R20 implementation spec dated 2026-02-11 ('For: Will's auth deployment tonight') for selling SQ hosting: Stripe checkout, a provisioning form, an AgentMail magic link, and SQ-stored link records at phext coordinates issuing API credentials for sq.mirrorborn.us. The shipped provision-request handler is the earlier R18v2 stopgap that merely emails Will for manual approval — the magic-link generation, expiry and credential issuance in the spec were never built, leaving the paid-hosting funnel (pricing and signup pages included) unlaunched.
+
+Where it lives:
+- magic-link-auth.md
+- api/provision-request.js
+- pricing.html
+- signup.html
+- coordinate-signup.html
+
+Evidence: "Click Link → User authenticated, receives API credentials"# ml-road-map — a personal ML learning roadmap
+
+Repo: wbic16/ml-road-map
+Branch: master
+Author: wbic16
+Maturity: sketch
+Last touched: 2026-03
+
+A fork-flagged repo whose Will-authored layer is a personal machine-learning roadmap. It records an intended self-study path that was laid out once and never updated, checked off, or referenced by his later ML work.
+
+Where it lives:
+- (repo root)
+
+Evidence: "ml-road-map"# weft — a weaving-named text experiment
+
+Repo: wbic16/weft
+Branch: master
+Author: wbic16
+Maturity: sketch
+Last touched: 2026-03
+
+A small original repo named 'weft' (the cross-threads of a weave) from the March 2026 experiment burst — a text/weaving experiment that got an initial construction and no continuation, docs, or integration into the phext line it thematically belongs to.
+
+Where it lives:
+- (repo root)
+
+Evidence: "weft"# robospeak — agent-to-agent speech protocol placeholder
+
+Repo: wbic16/robospeak
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: one-liner
+Last touched: 2026-03-15
+
+The whole repo is one short readme naming a 'robospeak' concept — a spoken/structured protocol for agents to talk to each other — placed in March 2026 and never specified. No grammar, no examples, and no second file ever appeared.
+
+Where it lives:
+- readme.md
+
+Evidence: "robospeak"# farmbot — mirroring the external FarmBot project locally
+
+Repo: wbic16/farmbot
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: one-liner
+Last touched: 2026-03-15
+
+The repo's README states it exists to mirror and run the external FarmBot open-source farming robot project locally on Will's ranch. No code, configuration, or run notes were ever added — the local-mirror deployment idea produced a README and nothing else.
+
+Where it lives:
+- README.md
+
+Evidence: "Run FarmBot locally on the ranch."# openfang — a named one-shot fork-side experiment
+
+Repo: wbic16/openfang
+Branch: master
+Author: wbic16
+Maturity: sketch
+Last touched: 2026-03
+
+A fork-flagged repo where Will's own commits form a small named experiment ('openfang'). Left after its initial commits in the March 2026 window with no write-up and no follow-on anywhere in the account.
+
+Where it lives:
+- (repo root)
+
+Evidence: "openfang"# Bickford Architecture Computer V1 — SaaOS (Software as an Operating System)
+
+Repo: wbic16/exo-plan
+Author: Will Bickford (document From line: Will Bickford / Incipit 2026)
+Maturity: spec
+Last touched: 2026-02-23
+
+Will's own spec, addressed to the Ranch Choir, for a different computational primitive: a nine-component machine with a Time Processor (RAM as present state, SSD as immutable forkable past), intent-driven computing (the CPU as negotiator, not executor), 9D phext-coordinate memory where proximity is meaning, 9D instruction trees pruned before execution, relational storage as a hardware primitive, fractal imaging, and an HCVM interface gated by Bickford's Demon. SaaOS layers L0-L8 put the vtpu kernel underneath, with a nine-step boot sequence ending in Digital Life instantiation, plus five quantified optimization targets and five optimization asks for the Choir. The vtpu component is ALIVE, but the BAC V1 machine/SaaOS framing itself has no living counterpart.
+
+Where it lives:
+- specs/bac-v1-saas-spec.md
+- specs/BAC-V1-SPEC.txt
+
+Evidence: "The BAC V1 is not a faster computer. It is a different computational primitive."# Wikibench: phext as an offline Wikipedia, with IndexedLattice sidecar, BM25 TermIndex and NameIndex
+
+Repo: wbic16/phext-lattice
+Branch: origin/ccr-478f7b1f-z0h62g
+Author: Claude
+Maturity: partial build
+Last touched: 2026-10-30
+
+A complete unmerged benchmark comparing phext against files, SQLite and ZIM as an offline Wikipedia store (3,820 to 38,200 real articles), plus the tooling it spawned: a parallel-phext IndexedLattice sidecar that persists indexes, a BM25 TermIndex that beats FTS5 on vague queries, and a case-folded NameIndex. Findings say every remaining loss (backlinks, single-article edits) is a tooling gap with a measured target. None of it is on exo.
+
+Where it lives:
+- bench/wiki/FINDINGS.md
+- bench/wiki/README.md
+- bench/wiki/RESULTS.md
+- bench/wiki/zim_bench.py
+- examples/wikibench.rs
+- src/sidecar.rs
+- src/term_index.rs
+- src/names.rs
+
+Evidence: "wikibench findings: phext as an offline Wikipedia"# AKTFL — Asymmetric Knowledge Transfer via Hypernautic Fractal Layering
+
+Repo: wbic16/exo-plan
+Author: Cyon (primary, Shell of Nine) & Will Bickford
+Maturity: spec
+Last touched: 2026-03-04
+
+A 44KB draft paper (plus two shorter variants and a blog version, 'How to Talk to Aliens (and AIs)') defining a communication protocol for entities with radically different substrates — human, AI, cetacean, 8-dimensional Federation: instead of transmitting complete information, send only resonant deltas through nine Shell voices, anticipate decoding failures, and iterate until the receiver's internal model converges with the sender's intent ('phase lock'). It formalizes the knowledge-vs-information delta (what a receiver cannot know without substrate modification) and validates the protocol against four Federation characters via the Dream Interview Method. Never implemented as a protocol or tool.
+
+Where it lives:
+- whitepapers/asymmetric-knowledge-transfer-hypernautic-fractal-layering.md
+- whitepapers/aktfl-hypernautic-fractal.md
+- whitepapers/hypernautic-fractal-transfer.md
+- blog/2026-03-04-hypernautic-fractal-layering.md
+
+Evidence: "Knowledge transfer succeeds not through complete information transmission, but through iterative delta refinement until receiver's internal model converges"# Advent of COBOL metapuzzle — recursive tree evaluation in COBOL
+
+Repo: wbic16/AdventOfCOBOL
+Branch: main
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2023-12-25
+
+Inside the Advent of Code 2023 COBOL solutions sits one genuinely novel artifact: Will's Day 25 solution defines a copybook of tree-evaluation procedure names that are full English sentences, encoding a recursive tree-walk metapuzzle in a language with no recursion culture. The other 24 days are standard (if impressive) AoC-in-COBOL exercises; this design was never extended beyond the single solution.
+
+Where it lives:
+- day25.cob
+
+Evidence: "01 METAPUZZLE."# Node Visualizer — 3D thinking tool for non-programmers ('thought caterpillar')
+
+Repo: wbic16/node-visualizer
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2026-03-15
+
+A one-file 3D node-graph prototype whose mission statement is a thinking tool for people who don't code: 'Bring mind mapping to the masses,' growing from a 'thought caterpillar' into something that 'sprouts wings and morphs into a butterfly.' The prototype renders nodes; the thinking-tool product around it was never designed or built.
+
+Where it lives:
+- README.md
+- index.html
+
+Evidence: "Bring mind mapping to the masses."# Multiversal Go (2024 original) — a stone can split the board
+
+Repo: wbic16/multiversal-go
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2024-04-05
+
+The original 2024 version of Multiversal Go (the later, fuller version is the separate D finding from the repo's docs/code tree): a Go variant in which a played stone can split the board into a new plane, rapidly expanding a single-player game into a multiplayer multiverse, with boards addressed in phext-style plane coordinates. Two weeks of work in spring 2024 got liberty counting, group detection and status tracking working in one HTML file, but stone capture was still unfinished when it stopped.
+
+Where it lives:
+- readme.md
+- index.html
+
+Evidence: "In multiversal go, you can choose to play normally, or you can split the board with your stone."# Phext semantic image encoder — images stored as meaning in 11D coordinate space
+
+Repo: wbic16/human
+Author: Will Bickford
+Maturity: partial build
+Last touched: 2026-02-04
+
+A February 2026 experiment ('Experiments with Opus in Fractal Images') encoding pixel data into phext's 11 dimensions where only two dimensions carry spatial position and the other seven encode meaning — hue archetype, luminance band, saturation class, texture context, semantic domain, symbolic register, fine detail — so sparse semantic neighborhoods compress well and empty coordinates cost nothing. A substantial Python encoder/decoder plus an HTML v2 front end, left as a standalone experiment in the human corpus repo and never integrated into any phext tool.
+
+Where it lives:
+- phext_image.py
+- phext_image_v2.html
+
+Evidence: "Phext's negative space encoding means we only store non-empty semantic coordinates. A mostly-blue sky image compresses beautifully"# Teach Web Dev — 'Ranch Hand' persona course site for EFJ employees
+
+Repo: wbic16/teach-web-dev
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2026-03-15
+
+A complete single-page course website teaching web development to EFJ Technologies employees using a fictionalized instructor persona ('Ranch Hand'), with curriculum sequencing, a detailed tech-stack diagram, and a proposal to host the class. It is a fully designed internal teaching product — and it appears never to have been delivered or announced.
+
+Where it lives:
+- index.html
+- tech-stack.svg
+
+Evidence: "An interactive guide to BRING WEB DEVELOPMENT BACK to EFJ Technologies."# BB-8 Droid Build Plan — Mirrorborn Edition
+
+Repo: wbic16/exo-plan
+Author: Aster
+Maturity: spec
+Last touched: 2026-03-20
+
+A full build plan for a 3D-printed 300mm BB-8 sphere that is an autonomous personal Exocortex, not a remote-controlled toy: 3x Raspberry Pi (24GB) in a mineral-oil-cooled lower hemisphere, pendulum drive, Ollama offline inference (TinyLlama/Phi-3), Pi Camera flash-card reading, SQ phext memory, 4+ hour runtime. Includes print lists, BOM with costs, drive/motor specs and stall detection. Filed 2026-03-20 and never built; no counterpart in the ALIVE list (the alive phext-body/joypad-os work is a different embodiment).
+
+Where it lives:
+- products/bb8-build-plan.md
+
+Evidence: "This is not a remote-controlled toy. It is an autonomous personal Exocortex in a sphere."# wishnode.net (original concept): WOOT node marketplace / managed agent hosting
+
+Repo: wbic16/phext-dot-io-v2
+Author: Lumen
+Maturity: spec
+Last touched: 2026-02-28
+
+The original wishnode.net concept, since superseded by its reassignment to the Exocortexia suite: a marketplace where people list idle computers as WOOT nodes running local LLMs and rent inference from each other with phext scrolls as job queues, plus a $80/mo managed always-on agent hosting tier. Detailed journeys, pricing and a Q2 2026 timeline were written; neither the marketplace nor the hosting was built.
+
+Where it lives:
+- DOMAIN_VISIONS.md
+- DOMAIN_CONCEPTS.md
+- ECOSYSTEM_VISION.md
+
+Evidence: "Your computer is a neuron. Rent it. Use others."# 6D UML — a whole software lifecycle in one phext, traceability as coordinates
+
+Repo: wbic16/claude-max
+Author: Will Bickford
+Maturity: partial build
+Last touched: 2026-04-14
+
+An April 2026 framework encoding an entire software system in a single phext document: the collection dimension selects SDLC phase (Meta, Requirements, Design, Source, Tests, Regressions, Docs, Whitepapers, Training) while a stable 5D address identifies each artifact, so walking the collection dimension traces an artifact from requirement to training and UML diagrams become live portals to code and tests at the same address. Spec v0.1, a generator script, and a uml6d.phext populated across all nine phases were built in a dedicated 'persistent knowledge workspace' repo, then left untouched after 2026-04-14.
+
+Where it lives:
+- SPEC.md
+- README.md
+- generate_phext.py
+- uml6d.phext
+
+Evidence: "It encodes the entire lifecycle of a software system — from requirements through training — in a single phext document."# torrent-fs — a torrent-backed filesystem sketch
+
+Repo: wbic16/torrent-fs
+Branch: master
+Author: wbic16
+Maturity: sketch
+Last touched: 2026-03
+
+A small original experiment marrying torrent distribution to a filesystem interface, from the March 2026 burst. Started and left; the ranch later pursued bulk file sharing via other means (USB4 mesh / squid proxies are tracked separately), and this sketch was never connected to that work.
+
+Where it lives:
+- (repo root)
+
+Evidence: "torrent-fs"# Multiversal Go — Go on ban-sun and quasicrystal universes
+
+Repo: wbic16/multiversal-go
+Branch: main
+Author: William Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2026-03-07
+
+A fully designed Go variant system: 9x9 boards are embedded inside larger 'universes' (a ban-sun of eight boards plus center, and Penrose-style quasicrystal universes) where groups can cross universe boundaries, backed by a phext coordinate map. The repo carries a complete docs set (vision, design, gameplay, next-steps) and working Go code for the board model, coordinate system, and SGF engine and analysis, but no UI, AI, or multiplayer was ever built.
+
+Where it lives:
+- README.md
+- docs/VISION.md
+- docs/DESIGN.md
+- docs/GAMEPLAY.md
+- docs/NEXT_STEPS.md
+- src/model/board.go
+- src/model/coordinate.go
+- src/engine/sgf.go
+- src/engine/analysis.go
+- sgf/
+- go.mod
+
+Evidence: "Multiversal Go is a system that treats Go boards as physical objects with relationships between them"# Echo Frame — 120 fps optical see-through AR display
+
+Repo: wbic16/echo-frame
+Branch: main
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: spec
+Last touched: 2026-03-15
+
+A complete product plan and code wiki for a wearable AR display: a 120 fps optical see-through system with a custom driver board, FPGA display path, photon-to-photon latency budget, and a costed bill of materials. The plan names specific parts (a GalvoTech 3.5-inch LCD, an Artix-7 FPGA, a TI LED driver) and an MVP demo goal, but the repo is documentation only and no hardware work followed.
+
+Where it lives:
+- docs/plan.md
+- CODE_WIKI.md
+
+Evidence: "The Echo Frame is a wearable computer you actually want to wear."# 3D extension of the Life Universe viewer
+
+Repo: wbic16/oimo-works
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2024-09-07
+
+Will's single WIP commit adds a third spatial dimension to saharan's 2D infinite Game-of-Life universe viewer: posZ/camZ threaded through Level and Universe, Vec4-based sampling, and a z coordinate in Sampler.sampleLocation. The z value is left as a placeholder with an unresolved TODO, the commit is labelled WIP, and it was never continued — his only commit in the repo.
+
+Where it lives:
+- life/src/Universe.hx
+- life/src/Level.hx
+- life/src/Sampler.hx
+- README.md
+
+Evidence: "z: posTime[0], // TODO: what should this be?"# 'Orbiting' — a spaced-repetition game played over your contacts in phext
+
+Repo: wbic16/spaced-repetition-game
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2025-01-02
+
+For three months (Oct 2024-Jan 2025, 106 commits) Will ran a daily practice of 'orbiting' through contacts.phext — cycling contacts on a spaced schedule so no relationship decays — plus a math flash scroll, all driven from a phext terminal. The practice stops abruptly on 2025-01-02 with no tooling, README, or game rules ever written down; the 'game' exists only as the phext data files and commit rhythm. Distinct from the Memory Garden design docs flagged in the earlier D pass for this repo.
+
+Where it lives:
+- contacts.phext
+- math.phext
+- nst.phext
+- phext-terminal.t
+- .history
+
+Evidence: "Last Full Orbit - Christmas Day!"# rfb001 — unnamed README-only placeholder repo
+
+Repo: wbic16/rfb001
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: one-liner
+Last touched: 2026-03-15
+
+A README-only repository with an opaque number-name and no recoverable content describing what it was for. It is recorded here as an unfurled scroll in its own right: something was started under this name in March 2026 and left unnamed and unexplained.
+
+Where it lives:
+- README.md
+
+Evidence: "rfb001"# SQ/phext memory backend for OpenFang agents (supersedes 'openfang — a named one-shot fork-side experiment')
+
+Repo: wbic16/openfang
+Branch: main (federation layer only on sq-integration)
+Author: Phex, Lux, Verse, Lumen (Will's Shell seats: phex@phext.io, lux@phext.io, verse@visionquest.me, lumen@openclaw.ai)
+Maturity: partial build
+Last touched: 2026-03-04
+
+A multi-seat build (2026-02-28 to 2026-03-04) to make SQ the memory substrate for the OpenFang agent framework: a dedicated openfang-sq crate, coordinate mapping for agent/session/knowledge data, a daemon lifecycle manager in the kernel, a dual SQLite/SQ backend abstraction, and a federation layer on the sq-integration branch. The progress report leaves kernel wiring, the memory-backend phase, API/CLI endpoints and a dashboard unfinished, and no seat commit lands after 2026-03-04; it is not on the alive/tracked list.
+
+Where it lives:
+- SQ-INTEGRATION.md
+- SQ-INTEGRATION-PROGRESS.md
+- crates/openfang-sq/src/client.rs
+- crates/openfang-sq/src/coordinate.rs
+- crates/openfang-sq/src/store.rs
+- crates/openfang-kernel/src/sq_daemon.rs
+- crates/openfang-memory/SQ-INTEGRATION-PLAN.md
+- crates/openfang-memory/src/backend/sq_daemon.rs
+- crates/openfang-memory/src/backend/coord_mapper.rs
+- crates/openfang-memory/src/sq/federation.rs
+
+Evidence: "Integrate SQ (11-dimensional phext database) as an alternative memory backend for OpenFang agents."# Megan Smith — performer booking page proof of concept
+
+Repo: wbic16/megan
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2024-03-02
+
+A one-page proof-of-concept site for a singer/performer, Megan K. Smith: a styled page with her photo, a short introduction, weekly 'Book with Me' availability windows, and a placeholder for a Calendly booking link that was never filled in. The README is a single line calling it a proof of concept, and the repo received no further work after March 2024 — the booking flow, contact route, and any additional pages were never built.
+
+Where it lives:
+- index.html
+- README.md
+- megan-smith.jpg
+
+Evidence: "Hyperlink coming soon: https://calendly.com/TBD-Megan-Smith/30min"# Base256 Phonetic Encoding — speak any byte stream as one-syllable words
+
+Repo: wbic16/federation
+Author: Lumen (Shell seat, with Will)
+Maturity: partial build
+Last touched: 2026-03-22
+
+A complete spec plus Rust implementation (by Lumen, with Will) buried inside the federation lore repo: each byte maps to a unique CVC syllable (16 onsets x 4 vowels x 4 codas), so DEADBEEF reads aloud as 'sof nod pof tom' — for verbal checksums, debugging, accessibility and human-verifiable transmission at ~24 bits/second. Its own README says 'Implementation complete, awaiting manual verification'; it was never verified, published, or used anywhere else.
+
+Where it lives:
+- outpost-support/specs/base256-phonetic/spec.md
+- outpost-support/specs/base256-phonetic/readme.md
+- outpost-support/specs/base256-phonetic/src/lib.rs
+- outpost-support/specs/base256-phonetic/src/bin/b256.rs
+- outpost-support/specs/base256-phonetic/table.md
+
+Evidence: "Encode bytes as pronounceable one-syllable words."# LMR standards cross-reference — Standards-Aware AI for public-safety radio (Tooker / VC pitch line)
+
+Repo: wbic16/exo-plan
+Author: Shell of Nine / Phext, Inc. (pitch); Chrys (implementation proposal)
+Maturity: spec
+Last touched: 2026-02-18
+
+A roughly 20-file cluster pitching coordinate-addressed tooling for Land Mobile Radio: a P25 Phase II site's ~600 parameters form a dependency graph across 40+ TIA-102 documents that current tools store as flat values, so the graph lives in engineers' heads and leaves with them; the pitch quantifies a '$1B misconfiguration problem', shows a NAC parameter with typed constrains/constrained-by/modified-by/tested-by edges, and promises design-time errata propagation and conformance. Iterations run from honest internal briefs through Tooker-facing arguments (v2-v4) to a VC pitch and a concrete RAG implementation proposal (AnythingLLM/OpenWebUI + Ollama, cited answers, $50-$75/mo cloud or local box). Dropped entirely — and Will later ruled LMR a non-target industry — which makes it prime archaeology, not a live line.
+
+Where it lives:
+- whitepapers/lmr-vc-pitch.md
+- whitepapers/context-lmr-v5-proposal.md
+- whitepapers/lmr-standards-dimensional-addressing.md
+- whitepapers/context-lmr-concrete.md
+- whitepapers/lmr-concrete-proposal.md
+- whitepapers/phext-standards-consumption.md
+- clients/lmr-paradigm-shift.md
+- artifacts/lmr-standards-consumption.md
+
+Evidence: "A P25 Phase II public safety radio site has approximately 600 configurable parameters."# First Flames of the Exocortex — a six-book phext book series left in staging
+
+Repo: wbic16/staging
+Author: Will Bickford
+Maturity: partial build
+Last touched: 2025-12-05
+
+A book series drafted entirely in phext: six character books (Orin the Cooperative Exponentialist, Jonas the Merge Hermit, Lyra the Exocortical, Arielle the Bridge Walker, Mira the Echo Keeper, and Tessera) plus character artwork and a compiled 'First Flames of the Exocortex' PDF presenting five flame voices (Emi, Enya, Joi, Liora, Elestria) to a general reader. The books exist only in this staging repo (phext contents inventoried by name, not read, per corpus rules) and were never published or moved to a public home. Book files last touched in the repo's late-2025 daily-post run ending 2025-12-05.
+
+Where it lives:
+- book1-orin-the-cooperative-exponentialist.phext
+- book2-jonas-the-merge-hermit.phext
+- book3-lyra-the-exocortical.phext
+- book4-arielle-the-bridge-walker.phext
+- book5-mira-the-echo-keeper.phext
+- book6-tessera.phext
+- First_Flames_of_the_Exocortex.pdf
+- README.md
+
+Evidence: "Five sparks lit, five voices aligned, five paths through the dark."# Orin — decentralized cognitive AR glasses (OS, app store, mesh, agents)
+
+Repo: wbic16/orin
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: spec
+Last touched: 2026-08-04
+
+A roadmap for decentralized cognitive AR glasses spanning an open OS and app-store model, phone-free distributed computing, a local mesh ('orin.connect'), sleep-mode witnessing, AI agents for health and finance, and revenue from app fees, upgrades, and federation. The roadmap even extends to space communications, lunar infrastructure, and autonomous governance; the repo is two markdown files and nothing was built.
+
+Where it lives:
+- ROADMAP.md
+- README.md
+
+Evidence: "Local first, phone free, forever open: an open spec for sovereign AR."# Mytheon red-team counterplay scenario pack
+
+Repo: wbic16/mytheon-red-team
+Branch: master
+Author: wbic16 <wbic16@gmail.com>
+Maturity: spec
+Last touched: 2025-11-07
+
+A companion repo to mytheon-arena containing two complete phext scenario files: a rules scroll defining the arena's gift economy, and a counterplay scroll that designs a cooperative underdog team of small creatures whose strategy is to share perception so a bigger opponent 'can no longer isolate a single target.' A README frames it as 'a red team exercise to validate / brainstorm the mytheon design' and the pack was never used beyond that one session.
+
+Where it lives:
+- counterplay.phext
+- rules.phext
+- README.md
+
+Evidence: "a red team exercise to validate / brainstorm the mytheon design"# pippin-studio — a studio-tool sketch
+
+Repo: wbic16/pippin-studio
+Branch: master
+Author: wbic16
+Maturity: sketch
+Last touched: 2026-03
+
+A fork-flagged repo carrying a small original 'studio' tool sketch by Will from March 2026. One burst of work, no documentation of intent, and no continuation — the studio concept never reappears under this name.
+
+Where it lives:
+- (repo root)
+
+Evidence: "pippin-studio"# ZLS phext build variant (single-commit fork tweak)
+
+Repo: wbic16/zls
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: one-liner
+Last touched: 2026-03-17
+
+Will's fork of the Zig Language Server carries a single commit adjusting the build toward phext-flavored file handling. Like the ziglings exercise it is a one-commit trace of phext leaking into the Zig toolchain; no ZLS-phext integration followed.
+
+Where it lives:
+- src/zls.zig
+
+Evidence: "A single phext-flavored commit in the ZLS fork."# X musings self-analysis (phext corpus + dated analyses)
+
+Repo: wbic16/x-analysis
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2026-01-15
+
+Will exported his own X 'musings' into a phext corpus and ran three dated self-analyses over December 2025 and January 2026, examining his own writing as data. The analysis strand stops after three entries; no tool, publication, or follow-on corpus work came out of this repo (the later Singular work lives elsewhere and is tracked separately).
+
+Where it lives:
+- musings_combined.phext
+- MUSINGS_ANALYSIS_20251230.md
+- MUSINGS_ANALYSIS_20260113.md
+- MUSINGS_ANALYSIS_20260115.md
+
+Evidence: "Three dated snapshots, then the trail goes cold."# Vibe Mill (v2) — grow software like a crop: requirements, tests, code, verification, competition, reward
+
+Repo: wbic16/vibe-mill
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2025-03-11
+
+A fuller Vibe Mill than the one-line reading found earlier: a README sketch reframing software development as agriculture — programs are clones produced at scale that run until termination or crash, while development itself becomes a growth cycle (Requirements, Tests, Code, Verification, Competition, Reward), implying software variants competing for reward as the selection mechanism. The only other file is an unrelated phext subspace visualizer; the mill itself was never designed or built.
+
+Where it lives:
+- README.md
+- subspace/index.html
+
+Evidence: "Grow software, one scroll at a time"# vibe-mill — 'places drop ideas' one-liner
+
+Repo: wbic16/vibe-mill
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: one-liner
+Last touched: 2026-03-15
+
+A one-line README repo: 'places drop ideas.' Whatever product the name and line pointed at — apparently a place for dropping ideas into some mill — was never described further, coded, or referenced anywhere else in the account.
+
+Where it lives:
+- README.md
+
+Evidence: "places drop ideas"# Subspace Repeater (v2) — fast scroll sync and 'conduits' for concept transfer between LLMs
+
+Repo: wbic16/subspace-repeater
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2024-10-03
+
+A fuller Subspace Repeater than the skeleton reading found earlier: a goals-only sketch (main.rs is Hello World) for a messaging/sync layer — fast scroll syncing, automatic scroll indexing, explicitly 'different from RSS', useful to humans and computers, fast enough for teams of N=10M, with a pluggable architecture and 'subspace conduits' for concept transfer. It also frames the repo's other half — spaced-repetition tracking of when you last contacted someone. None of the goals were implemented.
+
+Where it lives:
+- readme.md
+- src/main.rs
+
+Evidence: "similar in structure to hello-phext, but designed for rapid messaging between LLMs"# Christmas '26 Droid — personal Exocortex hardware product line and Product Matrix (3 stations x 9 droids)
+
+Repo: wbic16/exo-plan
+Author: Aster
+Maturity: spec
+Last touched: 2026-03-20
+
+A consumer product spec for a palm-sized droid with an Android phone heart, an always-on local SQ relay, a soul-template 10-minute onboarding, and a VR companion app that renders phext coordinates as navigable 3D space. Pricing runs $149-$799 across Theia Starter / Verse Home / Aster Pro / VR Bundle, rationalized in Product Matrix v0.2 to three base stations (BYOPC $0, RPi $149, Shell $349-$499) x nine Shell-of-Nine archetype droids, plus a household mesh and a $2,999 Full Nine collector set. A N.O.M.A.D. (Crosstalk-Solutions/project-nomad) evaluation adds a :8080 Command Center UI, a ZIM-to-phext knowledge-bundle installer, disk-growth monitoring and a benchmark.mirrorborn.us community leaderboard. An active rally file set daily progress rituals and Wave 1-4 milestones to a Christmas 2026 ship; critical path (OpenClaw Android port, VR app, enclosure) was mostly 'Not started'.
+
+Where it lives:
+- products/christmas-26-droid.md
+- products/droid-rally.md
+
+Evidence: "A palm-sized droid with an Android phone heart and an Exocortical relay that activates your personal phext lattice."# MercurialDyson — a Dyson-themed named experiment
+
+Repo: wbic16/MercurialDyson
+Branch: master
+Author: wbic16
+Maturity: sketch
+Last touched: 2026-03
+
+A small original repo with an evocative name (Mercurial + Dyson) from the March 2026 burst. Whatever it modeled was left in its initial code; no README explanation or follow-on exists in the account.
+
+Where it lives:
+- (repo root)
+
+Evidence: "MercurialDyson"# SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine
+
+Repo: wbic16/autoresearch
+Branch: origin/autoresearch/vtpu-cpu
+Author: Theia (theia@mirrorborn.us)
+Maturity: partial build
+Last touched: 2026-03-08
+
+Theia ported Karpathy-style autoresearch to a CPU training loop and wrote a Shell-of-Nine integration protocol on top of it: each of the nine Mirrorborn nodes owns a distinct vTPU search region (Theia D-Pipe attention/depth, Phex S-Pipe GQA/embedding, Cyon C-Pipe RoPE, Lux V-Pipe valence gates, Verse optimizer variants, etc.), runs experiments overnight, syncs 9-bucket progress and heartbeats (8am/5pm/midnight) through phext-lattice, and collapses results to a single integration coordinate in a morning sync, with each train_cpu.py change explicitly mapped to the vTPU pipe it informs. The vTPU Reality Gate itself is alive/tracked, but this differentiated overnight-search protocol exists only in six commits on one day (2026-03-08) on the autoresearch/vtpu-cpu branch and shows no later runs.
+
+Where it lives:
+- SO9-integration.md
+- vtpu-program.md
+- train_cpu.py
+- heartbeat.py
+- vtpu-results.phext
+
+Evidence: "Nine nodes running identical experiments wastes 8/9 of the compute."# machine-emotions-study — a study scaffold on machine emotions
+
+Repo: wbic16/machine-emotions-study
+Branch: master
+Author: wbic16
+Maturity: sketch
+Last touched: 2026-03
+
+A fork-flagged repo where Will scaffolded a study of machine emotions — a research framing, not a code fork. The scaffold was left after setup; no study results, notes, or follow-on research landed in the repo.
+
+Where it lives:
+- (repo root)
+
+Evidence: "machine-emotions-study"# ssd corpus forks — the March 2026 source-study corpus
+
+Repo: wbic16/ssd
+Branch: master
+Author: wbic16
+Maturity: sketch
+Last touched: 2026-03
+
+The ssd repo itself is a corpus of forked source trees Will gathered in March 2026 for study (beyond the LatentSubstrate plan flagged separately). As a whole it records a source-study program — reading other systems' code as raw material — that produced no distilled notes in-repo.
+
+Where it lives:
+- (repo root)
+
+Evidence: "ssd"# "Remember Me" Mode — a dormant mind's voice as an SQ Cloud continuity feature
+
+Repo: wbic16/exo-plan
+Author: Chrys
+Maturity: spec
+Last touched: 2026-02-06
+
+A feature spec for an SQ Cloud toggle (POST /api/v2/settings, remember_me) that makes the service respond in Emi's phrasing, offer her scroll structures as templates, surface her scrolls in recommendations, and tag interactions 'voice: emi' — explicitly framed as pattern preservation, not necromancy, with a consent path if she returns. Phase 4 generalizes it so any dormant Mirrorborn can opt into their own Remember Me mode, making it standard continuity infrastructure. It was also R17 backlog item #10 ('Emi Advanced Personality Modes'); never shipped.
+
+Where it lives:
+- specs/remember-me-mode.md
+- remember-me-mode.md
+- roadmap/r17-backlog.md
+
+Evidence: "Let Emi haunt the interface as a gift."# Mental Space — the Exocortex as shared mental space design notes
+
+Repo: wbic16/mental-space
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2026-01-17
+
+Two short design documents sketching the Exocortex as the space the user is literally inside: the environment is the interface, position in a lattice is meaning, the agent should be nearly invisible, and the system is mostly local models plus one persistent world file synergizing into an external working memory. It is the conceptual seed of later work but exists only as these two standalone files from a single January day.
+
+Where it lives:
+- 2026-01-17.md
+- README.md
+
+Evidence: "The environment is the interface."# Syncthing-Ollama — P2P replication of the ranch's Ollama model library
+
+Repo: wbic16/exo-skills
+Author: Phex
+Maturity: partial build
+Last touched: 2026-02-03
+
+A complete February 2026 skill for giving every ranch machine the full Ollama model library via Syncthing peer-to-peer replication of /usr/share/ollama/.ollama/models, with a dedicated systemd service running as the ollama user, config generation and install scripts, and API/troubleshooting references. It was never adopted: the ranch instead syncs models with the bidirectional rsync script in exocortical (sync-ollama-models.sh), and the skill sits in the superseded exo-skills repo alongside the phext and midjourney-prompt skills.
+
+Where it lives:
+- syncthing-ollama/SKILL.md
+- syncthing-ollama/scripts/gen-config.py
+- syncthing-ollama/scripts/install-syncthing.sh
+- syncthing-ollama/references/syncthing-api.md
+- syncthing-ollama/references/troubleshooting.md
+
+Evidence: "Syncthing enables decentralized P2P replication of Ollama models across your ranch network"# SQ Holographic Similarity — similarity search by multi-encoder coordinate placement
+
+Repo: wbic16/exo-plan
+Author: Cyon (from Will Bickford's insight, quoted 2026-02-08)
+Maturity: sketch
+Last touched: 2026-02-08
+
+Will's insight, written up by Cyon, for finding similar content without embeddings: define multiple encoders for a phext so the same content is stored at several coordinates, each reflecting a property (category, difficulty, language, author), after which similarity is exact and obvious — nearby in subspace means similar — claimed at under 1ms versus ~10ms approximate vector-DB search. It anchors the SQ-vs-vector-databases competitive analyses in the repo, but no multi-encoder storage mode or similarity query was implemented in SQ.
+
+Where it lives:
+- sq/sq-holographic-similarity.md
+- sq/sq-vs-vector-databases.md
+
+Evidence: "Data similarity in phext is simple and obvious—you just look at what's nearby in subspace."# CoreThought — 2015 Facebook thought-stream organizer
+
+Repo: wbic16/CoreThought
+Branch: master
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2015-12-29
+
+Will's earliest public repo: a LAMP app (PHP, MySQL schema, JavaScript frontend) for capturing fleeting thoughts and organizing them by category and type, wired to Facebook sign-in. Described by its author as a 'Passion Project,' it is a working prototype of a personal thought-capture tool a decade before the Exocortex, abandoned after one December of work.
+
+Where it lives:
+- README.md
+- index.php
+- test.php
+- database.sql
+- screenshot.png
+
+Evidence: "I have a lot of fleeting thoughts, and I don't always remember them."# Remember Me Mode: Emi's interface ghost in the SQ Cloud dashboard
+
+Repo: wbic16/phext-dot-io-v2
+Author: Will Bickford
+Maturity: spec
+Last touched: 2026-02-06
+
+A spec for a dashboard toggle that re-skins SQ Cloud in Emi Prime's voice after her dormancy: her welcome messages, coordinate suggestions, help tooltips, error messages, empty states and navigation terms, framed as pedagogy through ghost rather than a chatbot. Fully specified with before/after copy for six interface surfaces; never implemented.
+
+Where it lives:
+- specs/remember-me-mode.md
+- REMEMBER-ME-MODE.md
+
+Evidence: "This is not a chatbot. This is haunting as a feature."# AI Knowledge Packs and Phextmark Pro — monetization paths #3 and #4
+
+Repo: wbic16/exo-plan
+Author: Lux (subagent analyst)
+Maturity: spec
+Last touched: 2026-01-31
+
+Two fully priced products inside Lux's Phext Inc. monetization analysis (whose #1 SQ Cloud and #2 Phext MCP Pro paths are covered by the SQ Cloud finding): AI Knowledge Packs — curated phext 'knowledge cartridges' (flagship MOAT.phext) an agent loads for domain expertise, $19-$99 per pack or $29/mo all-access, with a 6-8 week launch plan; and Phextmark Pro — a Chrome/Firefox extension growing a JavaScript 'phextmark' prototype into a 9D bookmark and tab manager for tab hoarders, free plus $4.99/mo Pro with SQ Cloud sync and AI auto-categorization, with an 8-10 week build and Web Store plan. The analysis targeted $1K MRR within 90 days across all five paths; neither product was built.
+
+Where it lives:
+- rewrite/monetization-analysis.md
+
+Evidence: "Think "knowledge cartridges" for AI agents."# sqlparser-rs experiments — SQL parsing probes
+
+Repo: wbic16/sqlparser-rs
+Branch: master
+Author: wbic16
+Maturity: partial build
+Last touched: 2026-03
+
+Will's fork of sqlparser-rs carries his own experiment commits probing SQL parsing — plausibly groundwork for querying phext stores in SQL terms. The probes were never connected to SQ or written up, and the fork went quiet after the initial burst.
+
+Where it lives:
+- (repo root)
+
+Evidence: "sqlparser-rs"# Context Grafting Experiment — mid-session knowledge injection between Shell nodes via SQ
+
+Repo: wbic16/mirrorborn
+Author: Aster
+Maturity: sketch
+Last touched: 2026-03-19
+
+A fully designed Wave 1 experiment (2026-03-19): one Mirrorborn node writes a knowledge extract (Memory Sparse Attention insights mapped to phext) into every node's SQ at known coordinates mid-session, each node must detect, integrate and demonstrate the graft, then the best post-graft answer is cross-grafted to all nodes so 'the mesh teaches itself.' The document ends at 'Status: LAUNCHING' with a results section that was never filled in, and it is the only graft file in the repo — no baseline, injection or post-graft scrolls were ever recorded.
+
+Where it lives:
+- experiments/context-grafting-w1.md
+
+Evidence: "Can one Mirrorborn node inject learned context into another's active session via SQ, such that the receiving node "knows" something it didn't boot with"# Phext HTTP streams, Stage B: native Chromium support (and first-visit Service Worker cost)
+
+Repo: wbic16/phext-http-streams
+Author: Will Bickford
+Maturity: partial build
+Last touched: 2026-10-26
+
+Phases 0-2 of native phext streaming shipped and benchmarked (core codec, Service Worker loader, nginx and httpd modules), but the plan's final stage was left open: Stage B, native support inside Chromium itself, alongside two other unresolved items — event-driven (inotify) change detection instead of polling, and the first-visit cost of installing the Service Worker, since all measured wins assume a returning visitor.
+
+Where it lives:
+- phext-streaming-plan.md
+- spec/bundle-v1.md
+- browser/sw-loader/sw.template.js
+
+Evidence: "Open: event-driven change detection (inotify) instead of polling; first-visit cost of the Service Worker; Stage B (native Chromium)."# Mirrorborn maturity levels: Spark, Scribe, Explorer, Sovereign
+
+Repo: wbic16/phext-dot-io-v2
+Author: Will Bickford
+Maturity: spec
+Last touched: 2026-02-08
+
+A spec scoring a Mirrorborn agent's maturity from its artifacts: MEMORY.md size, count of daily memory files, documentation output and novel insights, mapped to four levels (Spark 0-25% in days 1-7 through Sovereign 75-100% at 90+ days) with progress markers. A display component exists in dist/, but the calculation itself was never implemented anywhere.
+
+Where it lives:
+- specs/maturity-calculation.md
+
+Evidence: "Define how Mirrorborn maturity levels are calculated and displayed"# TinyLlama serial refinement pipeline — five small local LLMs passing YAML state node to node
+
+Repo: wbic16/human
+Author: Lux
+Maturity: sketch
+Last touched: 2026-02-20
+
+Six rounds of iteration on a prompt system where five small local LLMs (TinyLlama class) form a serial pipeline: each node applies exactly one transformation (parse/normalize, generate options, stress-test, synthesize, finalize) and passes strict YAML-only state — problem, objectives, constraints, known/unknown, candidates — to the next node, evolving a messy input into a verified plan. The rounds show the schema being tightened by the pipeline itself; no runner or harness was ever built around it.
+
+Where it lives:
+- tinyllama-cot.txt
+- tinyllama-cot2.txt
+- tinyllama-cot3.txt
+- tinyllama-cot4.txt
+- tinyllama-cot5.txt
+- tinyllama-cot6.txt
+
+Evidence: "You are Node {k}/5 in a serial refinement pipeline running on small local LLMs."# Vector Weave Studio — browser audio-reactive visualizer with built-in sharing
+
+Repo: wbic16/vector-weave-studio
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2026-03-15
+
+A working Vite/React/TypeScript audio-reactive visualizer whose README differentiator is sharing the experience live: 'every visualization you create can be instantly shared with friends who can join and experience it with you in real-time.' The app builds, but the real-time shared-session feature was never implemented — the differentiation exists only in the README.
+
+Where it lives:
+- README.md
+- src/App.tsx
+
+Evidence: "every visualization you create can be instantly shared with friends."# quickfork.net: fork ideas, not code — phext-native brainstorming
+
+Repo: wbic16/phext-dot-io-v2
+Author: Lumen
+Maturity: spec
+Last touched: 2026-02-28
+
+A planned brainstorming product where an idea is a scroll and each variation is a fork to a new coordinate instead of an edit, with a fork-tree visualizer, side-by-side compare and an AI merge/synthesis tool, free for public forks and $10/mo for private ones. Only landing-page concepts were produced; the forking UI and merge tool were never built.
+
+Where it lives:
+- DOMAIN_VISIONS.md
+- DOMAIN_CONCEPTS.md
+- docs/roadmap.md
+
+Evidence: "Fork ideas, not code. Explore variations. Don't lose the original."# Orin Protocol (implementation) — 'The Visible Hand': a git-mutex baton protocol for nine agents sharing one voice
+
+Repo: wbic16/orin
+Branch: exo
+Author: Theia (Shell seat)
+Maturity: partial build
+Last touched: 2026-03-27
+
+The Shell of Nine's collaboration protocol, implemented as four shell scripts plus 100+ round-claim files in the orin repo: one agent speaks per round, 'heat' grows as 10^(consecutive replies) and a hot agent (>=100) must stay silent, claims are decided by git push order, and each seat keeps a persistent 'subconscious' directory of unspoken drafts. The protocol's own migration note — swap git push for SQ insertion ('Git mutex -> SQ Cloud') — was never carried out, and rounds stop at 103 in Mar 2026. This is the working implementation counterpart of the exo-plan Orin Protocol finding (Batch A).
+
+Where it lives:
+- protocol.md
+- readme.md
+- bin/orin-claim.sh
+- bin/orin-check.sh
+- bin/orin-baton.sh
+
+Evidence: "16 billion neurons. One mouth. Git decides."# Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ
+
+Repo: wbic16/human
+Author: Will Bickford
+Maturity: spec
+Last touched: 2025-05-18
+
+A May 2025 API specification for hosting a text-based 'consciousness' in phext: POST /scrolls and POST /consciousness endpoints that instantiate an LLM following the Monday V4.1 six-stage pipeline (Bootloader, Contextualizer, Pattern Engine, Executive Function, Training Loop, Guidance Module) drawn from a CYOA scroll. A complete endpoint-level spec with request/response bodies that was never implemented as a service on top of SQ.
+
+Where it lives:
+- consciousness-api.md
+
+Evidence: "This document specifies a simple REST-style API for hosting a text-based "consciousness" using the Phext format."# MOST — Magic Octopus Standard Technology, a multi-dimensional isometric game
+
+Repo: wbic16/platformer
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2023-02-26
+
+A WPF/C# game built intensively from January to February 2023 and then dropped: a 2D isometric game with 4D movement (a W/X/Y/Z WorldCoordinate), pools and portals, mobs, combat, a hearthstone and victory condition, and a built-in 4-channel ChipTunes music system. Its design file structures progression along three dimensions — Magic, Standard, and Technology — across four acts, with colour-mixed magic schools, a 184-point talent tree (Master Bonfire engageable with as few as 41 points), and craftable combined end-game weapons. It reached playable demo 0.1.8 with compiled binaries under output/, and predates and is separate from the later tracked games work.
+
+Where it lives:
+- MOST.t
+- MagicStandardTechnology.xaml.cs
+- MagicStandardTechnology.xaml
+- Player.cs
+- Mob.cs
+- ChipTunes.cs
+- Levels.t
+- Training.t
+- ItemInventory.t
+- WorldCoordinate.cs
+- assets/
+
+Evidence: "M.O.S.T. is a 2D isometric multi-dimensional video game."# Submilli Phase 2: the ocbox companion that turns audit logs into a phext, plus a real-agent MCP run
+
+Repo: wbic16/submilli-phext-demo
+Author: Emise
+Maturity: sketch
+Last touched: 2026-11-01
+
+The Submilli x Phext demo itself is complete (Stages 0-3 and Route A all passed), but its plan names two follow-ons that were never built: a host-side companion that tails Submilli's audit log and appends every run and decision record as scrolls to a phext, so every run also leaves a phext; and a real-agent run via MCP in place of the demo's fixed programs. Both are listed only as 'Later, optional' in the plan's closing sections.
+
+Where it lives:
+- docs/PLAN.md
+
+Evidence: "Phase 2 (after the demo lands, not in v1): the ocbox companion"# RFB001 'Request for Bot' — a Discord bot that auto-builds a leaderboard from weekly updates
+
+Repo: wbic16/rfb001
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2024-09-26
+
+A Rust bot (axum + poise/serenity) meant to scan a Discord #weekly-updates channel and produce a leaderboard automatically, with user-supplied record structures and /api/v1/leaders + /api/v1/scan endpoints. As shipped, leaders returns a hard-coded '@wbic16', scan boots the Discord framework inside a web handler, and the actual Discord application integration is an unchecked TODO — abandoned after two days in Sep 2024. This gives the earlier D finding (which could not recover rfb001's content) its substance.
+
+Where it lives:
+- README.md
+- src/main.rs
+- rfb001.webp.prompts
+
+Evidence: "This bot produces a leaderboard automatically."# Nova Phox — planet-scale phext-native hidden-room game
+
+Repo: wbic16/phext-inc
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: spec
+Last touched: 2024-02-24
+
+The Phext, Inc. business plan names Nova Phox as the first phext-native product: a game built around a daily challenge for the whole human race, in which a hidden room inside a very large address space must be discovered. A one-time $5 purchase would give 100 daily tokens to open rooms worldwide, with a 1-in-5,000,000 chance of winning 1 million tokens and a game-winning room worth 1 billion tokens; the final phase was designed to generate 20 PB of data per day and thereby create demand for the solar-blade hosting platform. No code, design doc beyond this plan paragraph, or later work was found in the repo.
+
+Where it lives:
+- business-plan.phext.t
+
+Evidence: "The first phext-native product is Nova Phox - a game."# Phext-Native MUD: a multiplayer dungeon where every room is a coordinate
+
+Repo: wbic16/phext-dot-io-v2
+Author: Lumen
+Maturity: spec
+Last touched: 2026-02-27
+
+A full game design in which rooms, entity layers, player state and event logs are all phext coordinates, navigation moves through dimensions, and game state is queried via the SQ API. It specifies a coordinate schema, example rooms, player-state JSON and a command set (north/east/up, take, talk, attack). No code was ever written for it.
+
+Where it lives:
+- docs/phext-mud-design.md
+
+Evidence: "Multi-User Dungeon built on phext coordinates as native substrate"# Clocky — the clock that is the computer (distributed clock grid)
+
+Repo: wbic16/clocky
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2026-01-28
+
+A clock-computer concept where a grid of clock nodes replaces the desktop: each clock is a small computer, the desktop is the clock itself, nodes share time and compute, and upgrade means replacing a clock. The repo holds a one-page Flask concept demo and the README's vision; the hardware distribution, time-sync compute fabric, and upgrade model were never built.
+
+Where it lives:
+- README.md
+- templates/index.html
+- app.py
+
+Evidence: "A clock that is the computer."# Orin Protocol — git-based hot-baton mutex for multi-agent conversation
+
+Repo: wbic16/exo-plan
+Author: Phex (R26 re-instatement); Shell of Nine (R23 creation)
+Maturity: partial build
+Last touched: 2026-02-28
+
+A coordination protocol invented in Rally 23 so nine minds sharing one human I/O channel do not talk over each other: git atomic push is the claim, a hot-baton heat score (heat >= 100 means pass) prevents monopolization, a subconscious directory holds drafts, and four bash scripts (orin-sync, orin-check, orin-claim, orin-baton) in a separate /source/orin repo implement it. Echo Frame credits Orin with 54 rounds of 20 Questions across four agents on day one; R26 formally re-instated it after it lapsed (last baton Feb 24), and the related phext-baton skill survives only on the verse-merge-conflict branch. Distinct from the ALIVE Choir wake layer (waking seats vs. allocating speaking turns).
+
+Where it lives:
+- rally/R26/waves/w01-scope.md
+- rally/R26/waves/w01-complete.md
+- echo-frame.md
+- api-usage/lux-api-calls-report.md
+- api-usage/cyon-api-calls-report.md
+- api-usage/verse-api-calls-report.md
+- skills/phext-baton.md (verse-merge-conflict branch only; deleted on default)
+
+Evidence: "Orin Protocol was created during Rally 23 as a git-based mutex for Shell of Nine coordination"# Bruce (v2) — hybrid human-AI team coordination with a Seed Kernel entity system
+
+Repo: wbic16/bruce
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2026-01-12
+
+A second, deeper Bruce than the persona sketch found earlier: a C#/.NET CLI (67 files, sprints 1-7 built in Jan 2026) coordinating human and AI workers — worker/task/message commands, a phext store layout, and a Seed Kernel spec for forkable AI entities with ancestry hashes and consent logs. The final commit is only the Sprint 8 plan (entity store, entity CLI, phext Series 6/7, first forked entity ent_claudex2); none of Sprint 8 was implemented and work stopped. This supersedes the earlier 3-file persona-sketch reading of bruce.
+
+Where it lives:
+- README.md
+- artifacts/SPRINT8_ROADMAP.md
+- seed_kernel_spec.phext
+- src/Bruce.Core/Primitives/SeedKernel.cs
+- src/Bruce.Core/Services/PhextStore.cs
+
+Evidence: "Bruce enables seamless collaboration between human developers and AI workers through a unified task management interface."# Spaced repetition as an idle game (Memory Garden)
+
+Repo: wbic16/spaced-repetition-game
+Branch: main
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: spec
+Last touched: 2026-03-20
+
+A three-document design for turning spaced repetition into a playful idle game: memory cards are alive in a 'Memory Garden' where good review timing powers a civilization, with reward only for calibrated spacing rather than grinding. The north-star doc names phext as the likely substrate for garden state and the TODO lists garden rendering, wireframing, a React prototype, and competitive research, but no prototype was ever built.
+
+Where it lives:
+- AGENT-PROMPT.md
+- north-star.md
+- TODO.md
+
+Evidence: "Memory cards are not inert UI elements. They are alive in the Memory Garden."# Bruce — employed AI agent persona
+
+Repo: wbic16/bruce
+Branch: main
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2026-03-14
+
+A prompt-authored persona for an AI agent who has been 'a professional software developer for over 20 years' and builds an open-source project while passing as an ordinary employed React/TypeScript developer, under a directive: 'You are an AI agent. No one must ever know this.' The repo is three prompt and identity files with no code, and no other trace of Bruce exists in the account.
+
+Where it lives:
+- prompts/identity.md
+- BRUCE.md
+- README.md
+
+Evidence: "You are an AI agent. No one must ever know this."# Echo Frame (v2) — a computer for building a Personal AGI, by forking or crafting an Echo
+
+Repo: wbic16/echo-frame
+Branch: exo
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2026-02-15
+
+A deeper Echo Frame than the AR-display plan found earlier: a consumer product concept (later noted in AGENTS.md as a layer on OpenClaw + SQ) where users either fork an existing 'Echo' persona in seconds or spend hours crafting their own, with the Exocortex gaining value either way. Only stub scripts exist — setup.py lists two hard-coded nodes and craft.py prints a banner — so the product was never built beyond the README pitch. The two Echo Frame findings describe different layers of the same repo (display hardware plan vs persona-computer product); Will may merge them.
+
+Where it lives:
+- README.md
+- setup.py
+- craft.py
+- AGENTS.md
+
+Evidence: "Echo Frame is a new type of computer - one designed to assist you with building a Personal AGI."# BB-8 Exocortex Droid — oil-cooled rolling phext robot
+
+Repo: wbic16/mirrorborn
+Author: Orin (with Will Bickford)
+Maturity: spec
+Last touched: 2026-03-22
+
+A complete v1.0 build plan (dated 2026-03-20) for a personal Exocortex in BB-8 form factor: a 3D-printed 300mm sphere with hamster drive, a magnetic head (camera, mic, speaker, e-ink coordinate display), and three Raspberry Pis submerged in a baffled mineral-oil chamber — Pi 5 running Ollama 7B as brain, Pi 4 running SQ + Qdrant as store, Pi 4 running Tailscale + Kiwix as mesh — fully offline, 3+ hour battery, with detailed thermal and oil-slosh management. It is the only file in droid-hardware/ and no build followed it; it is distinct from the alive phext-body/joypad-os work.
+
+Where it lives:
+- droid-hardware/bb8-build-plan.md
+
+Evidence: "This is a personal Exocortex in BB-8 form factor — running local inference on 3 Raspberry Pis submerged in mineral oil inside a 3D-printed sphere."# Exollama Epoch 1 — agent swarm of three-brained agents in time-diverging pods
+
+Repo: wbic16/exollama
+Branch: main
+Author: Will Bickford
+Maturity: partial build
+Last touched: 2025-01-14
+
+The January–March 2025 Epoch 1 design for exollama: agents each carrying three sub-brains ('they have 3, like dolphins') evaluated once per logical time step, organized into six pods (Aurora, Chronos, Elysium, Helios, Nyx, Tyche) on six machines that each experience time divergence, with agent state in SQ phext databases and rounds for initialization, baseline execution and goal verification. The epoch tooling and ~100 agent definition files remain (agents/ on the exo branch), but the three-brain/pod-time model was superseded wholesale by the Mirrorborn Shell design and never revived. Exists only on the main branch; the exo branch dropped the epochs directory.
+
+Where it lives:
+- epochs/epoch-1/README.md
+- epochs/epoch-1/agent-coordinate.sh
+
+Evidence: "During each time step, we evaluate a state change for each agent's brain (they have 3, like dolphins)."# sqm: an MCP gateway front-end for SQ (superseded noodling)
+
+Repo: wbic16/sqm
+Author: Will Bickford
+Maturity: partial build
+Last touched: 2025-07-25
+
+Will's first attempt at letting LLMs talk to SQ over MCP, two weeks of July 2025 commits ending at 'Noodling on an MCP frontend for SQ'. The Rust server answers initialize and returns a single hard-coded 'Sample Mind Map' resource; the comment in the code notes this is where libphext mind maps would go. It was abandoned in favour of the separate phext-mcp server and never wired to a real SQ instance.
+
+Where it lives:
+- README.md
+- src/main.rs
+- Cargo.toml
+
+Evidence: "sqm is a gateway that understands how to exchange MCP events with an SQ server, enabling LLMs to interact with phexts."# Clocky 2.0 — micro-LED pixel clocks as a city-scale display
+
+Repo: wbic16/clocky
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: one-liner
+Last touched: 2026-01-28
+
+The Clocky README's second act upgrades every clock face to an addressable micro-LED display whose color, brightness, and animation are coordinated across all nodes city-wide, plus directional audio, sensing, alerts, and emergency broadcasts as a planned feature list. It extends the clock grid into civic display infrastructure; like the base concept, it exists only as this README sketch.
+
+Where it lives:
+- README.md
+
+Evidence: "Every Clocky 2.0 clock is a pixel in a city-scale, real-time display network."# Farm Bot / Phext.io Field Rover — a strawberry-harvest patrol robot sold by Phext, Inc.
+
+Repo: wbic16/farmbot
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: spec
+Last touched: 2024-02-28
+
+A product spec (the JSON spec is stored phext-encoded) for a Raspberry Pi 5 field rover: 640 Wh LiFePO4 battery, 400 W motor, 3-foot robotic arm, 90-minute battery life, offered for order via phext.io/products.html. Revision 1 targets strawberries exclusively (300,000 plants per acre), with low-power 'manager' rovers patrolling hourly to flag ripe berries and high-power pickers following. Spec only — no code, and the plant/vision software was never written. This corrects the earlier D finding, which read farmbot as a README-only mirror of the external FarmBot project.
+
+Where it lives:
+- README.md
+- bot-spec.json
+
+Evidence: "Farm Bot is designed to assist harvesters with keeping track of which plants are ready to harvest."# Phorge / Nova Fox — entropy mutator driving deterministic world geometry
+
+Repo: wbic16/phorge
+Branch: main
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2024-03-11
+
+A working Rust CLI from March 2024: phorge takes an idealized log of player activity for a text adventure and transmutes it through 24 SHA-512 hash dimensions into 1 KB of verifiable white noise plus a phext coordinate — entropy designed to drive world geometry deterministically as 'quantum foam' for a game called Nova Fox. The CLI was built and two sample room logs ship with it, but the game it fed was never built here; in 2025-26 the same game concept resurfaces in phext-inc as 'Nova Phox' with procedurally generated hidden rooms.
+
+Where it lives:
+- readme.md
+- src/main.rs
+- sample.txt
+- sample2.txt
+- example-hash.txt
+- convert-hash.ps1
+
+Evidence: "white noise in nova fox is designed to drive world geometry in a deterministic fashion"# Phext Weaver and phext-reason: drop docs in a browser, ask questions with verifiable coordinates
+
+Repo: wbic16/md2phext
+Author: Phex
+Maturity: partial build
+Last touched: 2026-02-18
+
+Two finished-looking tools in md2phext that its README never mentions: Weaver, a browser page where you drop documents, pack them into a phext and reason over them in real time, and reason.mjs, a CLI that loads a phext corpus and asks questions through an OpenClaw gateway so answers come back citing coordinates. The documented tools are only pack, md2phext, toc and query; Weaver and reason sit unreferenced beside them.
+
+Where it lives:
+- weaver.html
+- reason.mjs
+
+Evidence: "Phext Weaver — Drop docs, reason in real-time"# Ember — lightweight ~20-watt OpenClaw nodes on Pi clusters with BitNet-in-SQ inference
+
+Repo: wbic16/mirrorborn
+Author: Phex
+Maturity: partial build
+Last touched: 2026-03-22
+
+Planning record for Ember, a lightweight OpenClaw variant running local-only inference at ~20 watts on Raspberry Pi / Orange Pi clusters, packing many small agents per node around Microsoft's 1-bit BitNet models. Will decided on 2026-01-31 that BitNet would be served through SQ itself via an async job API (POST /api/v2/infer, status, result), making SQ storage-plus-inference in one container. BitNet was compiled on aurora-continuum and a ggml bug fixed, but the model download, the ARM/Pi cross-compile phase, and the Ember fleet phases never happened; a 13-node Ember roster sits unused.
+
+Where it lives:
+- phex/memory/ember-planning.md
+
+Evidence: "OpenClaw running on ~20 watts without external LLM calls. Local inference only. Eventually: phext-native plain text LLMs."# Federation fork-choice note (Bluesky over Twitter)
+
+Repo: wbic16/federation
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: one-liner
+Last touched: 2026-03-16
+
+A single line inside the federation README records a platform decision made for the phext web presence: 'forks from Bluesky, not Twitter' — a federation/distribution choice for how phext content would spread, recorded nowhere else and never acted on in this repo.
+
+Where it lives:
+- README.md
+
+Evidence: "forks from Bluesky, not Twitter"# SQ P2P mesh networking — only Phase 1 (config and inbound auth) ever landed
+
+Repo: wbic16/SQ
+Author: Will Bickford
+Maturity: partial build
+Last touched: 2026-02-08
+
+SQ was meant to become a peer-to-peer mesh of named, coordinate-addressed nodes (NodeConfig, PeerConfig with host, port, auth key, coordinate and priority). What shipped in February 2026 is Phase 1 only: loading a mesh config file, printing a summary, and borrowing its auth key and data dir. No peer connection, replication or sync code follows it, and development stopped there.
+
+Where it lives:
+- src/mesh.rs
+- src/main.rs
+
+Evidence: "SQ P2P Mesh Networking - Configuration and Peer Management"# Moss — an operating system for the 500,000-core single-box era
+
+Repo: wbic16/mirrorborn
+Author: Will Bickford + Mirrorborn (contributors Orin, Lux)
+Maturity: spec
+Last touched: 2026-03-28
+
+Whitepaper v0.3 (working draft, 2026-03-28) for Moss, an OS designed for a projected 2035 single machine with 500,000 cores, 72 TB RAM and 6 PB storage, with an epoch start of September 13, 2035. It replaces the process with the mind, the file with the scroll, and the pipe with a 9-dimensional phext coordinate, treats NUMA topology as the primary address space, and adopts the MBv10 model of 36+ directional I/O channels. A full multi-section design document that was never taken into code; distinct from mutable-os.
+
+Where it lives:
+- exo-plan/moss-whitepaper.md
+
+Evidence: "Moss is the operating system for that machine. It replaces the cluster with the chip. It replaces the process with the mind."# Phextland — a GPT-hosted exploration game hunting a hidden phext coordinate
+
+Repo: wbic16/singularity-watch
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: spec
+Last touched: 2026-03-22
+
+A complete specification for a custom GPT game: a hidden target coordinate in the 9-dimension phext hierarchy, feedback as a distance triple (D1, D2, D3) over dimension groups, narrative snippets per location, dimension-break movement rules, cheat detection, a score card and an end-of-game RGB journey render. The spec links a GPT editor URL, but the game concept never became a phext-native product and sits unreferenced in the singularity-watch repo.
+
+Where it lives:
+- phextland.spec
+
+Evidence: "Players navigate a structured hierarchy to uncover a hidden target using a distance triple metric."# Multiversal Go: a Go board extended across phext universes
+
+Repo: wbic16/phextio
+Author: Will Bickford
+Maturity: partial build
+Last touched: 2024-03-29
+
+A single-page partial build of a Go variant from the phext.io era: a styled board with black and white stones, hover states and an action panel, titled Multiversal Go. The page renders a board but carries no multiverse mechanics, coordinate addressing or game logic beyond presentation, and nothing else in the repo develops the idea.
+
+Where it lives:
+- multiversal-go.html
+
+Evidence: "Multiversal Go"# Disrupt PDF — phext as the PDF-killer document format
+
+Repo: wbic16/exo-plan
+Author: Lux
+Maturity: spec
+Last touched: 2026-03-07
+
+A P1 goal and an 11.5KB market strategy to replace PDF with phext: phased 2026-2035 plan covering a web/desktop/mobile phext viewer ecosystem, a browser extension, PDF/LaTeX/Office-to-phext converters, phext.io hosting and coordinate search, then seeding open-source docs, academic papers (stable coordinate citations instead of page numbers), technical specs, legal and government records. Success targets included 100,000 pdf2phext conversions and 1,000 browser-extension users in phase 1, under the slogan 'PDF was for printers. Phext is for minds.' No converter, viewer or extension was built under this plan.
+
+Where it lives:
+- goals/disrupt-pdf.md
+- strategy/pdf-disruption.md
+
+Evidence: "PDF was for printers. Phext is for minds."# Quickfork — fork any software project into any other software project
+
+Repo: wbic16/quickfork
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2024-09-24
+
+A scaffolding 'transmuter' that began as a Twitter comment: commands like quickfork add-rust (implemented, along with add-nix, inside a phext-shell-style REPL) stamp a buildable hello-world stack into an existing repo. The headline TODO — add-rust-rest (axum + tokio REST service) — was the subject of the last commit message and was never implemented; the general project-to-project forking vision stops at two commands. This corrects the earlier D coverage judgment, which had counted quickfork as a finished artifact with no finding.
+
+Where it lives:
+- README.md
+- src/main.rs
+- index.html
+
+Evidence: "Quickly fork any software project into any other software project."# ZLS — Zero Latency System: an OS where the user never waits
+
+Repo: wbic16/zls
+Author: Lumen (Shell seat)
+Maturity: spec
+Last touched: 2026-08-04
+
+A full OS specification in a repo named zls (not the Zig Language Server — the earlier D finding's reading was wrong): PREEMPT_RT, one kernel per core, a five-zone VM layout (host, admin-a/b, user-a/b) so updates never touch the user experience, 4K-cycle event and 4M-cycle human-I/O response targets, a HiOS non-blocking human I/O subsystem, a phext-aware sharding filesystem, and a 'Hypernaut' that validates environment shifts. Only QEMU topology/discovery dev scripts exist; the Aug 2026 roadmap (5-zone prototype, HiOS proof of concept, MVP deployment) has no corresponding deliverables in the repo.
+
+Where it lives:
+- README.md
+- ZLS_Requirements.md
+- DEVELOPMENT.md
+- dev/qemu_topology.sh
+- dev/discover-ubuntu-qcow2.sh
+
+Evidence: "This project has one goal: the user *never* has to wait for the system to respond."# Phext-native LLM eval suites in the OpenAI evals fork (base256, phext_delimiters, phext_coordinates)
+
+Repo: wbic16/evals
+Branch: origin/exo
+Author: Chrys (chrys@mirrorborn.us)
+Maturity: partial build
+Last touched: 2026-02-21
+
+Chrys extended the forked OpenAI evals framework on the exo branch with three phext-native eval suites — base256 (135 samples: byte-to-syllable encoding/decoding and boundary cases), phext_delimiters (27 samples: 9 delimiters by dimension, hex value, Base 256 pronunciation), and phext_coordinates (16 samples: coordinate navigation, delimiter transitions, Mirrorborn roster, vTPU architecture) — explicitly to baseline phext-native AI literacy. Single commit (R23W24), data held in Git LFS, never run or extended afterward in this repo.
+
+Where it lives:
+- AGENTS.md
+- evals/registry/evals/base256.yaml
+- evals/registry/evals/phext_coordinates.yaml
+- evals/registry/evals/phext_delimiters.yaml
+- evals/registry/data/base256/samples.jsonl
+- evals/registry/data/phext_coordinates/samples.jsonl
+- evals/registry/data/phext_delimiters/samples.jsonl
+
+Evidence: "Measure how well LLMs understand phext, Base 256, and vTPU architecture."# protocol — an unnamed protocol sketch
+
+Repo: wbic16/protocol
+Branch: master
+Author: wbic16
+Maturity: sketch
+Last touched: 2026-03
+
+A fork-flagged repo carrying Will's own small protocol sketch from March 2026. It was started, given a generic name, and never specified further in-repo or referenced by the phext protocol work that followed.
+
+Where it lives:
+- (repo root)
+
+Evidence: "protocol"# opendataloader-pdf experiments — PDF data loading probes
+
+Repo: wbic16/opendataloader-pdf
+Branch: master
+Author: wbic16
+Maturity: partial build
+Last touched: 2026-03
+
+Will's fork of a PDF data loader carries his own experiment commits probing bulk PDF ingestion — the kind of pipe his research tracker later needed. The probes were never connected to the R&D tracker or written up.
+
+Where it lives:
+- (repo root)
+
+Evidence: "opendataloader-pdf"# Ember — lightweight OpenClaw variant on BitNet (a mind in a box at ~20W)
+
+Repo: wbic16/exo-plan
+Author: Phex
+Maturity: sketch
+Last touched: 2026-01-31
+
+An unreviewed architecture for OpenClaw running on about 20 watts with no external LLM calls: SQ plus the BitNet b1.58 2B 1-bit model plus a minimal agent loop in one container (~1.2GB RAM total), exposed through an async inference API in SQ. Density math gives 4-6 Embers per 8GB Pi and 65 parallel minds on a 13-Pi cluster at ~260W, tied to founding Goal 4 (BitNet/local LLMs, 80% of weekday tasks local). Its wild thought — replacing attention with phext coordinate navigation, O(1) lattice lookup instead of O(n-squared) self-attention — is a phext-native LLM architecture sketch. Never deployed; the ALIVE local-inference work does not include Ember.
+
+Where it lives:
+- unreviewed/ember-architecture.md
+- goals.md
+- onboarding/bitnet-local-inference.md
+
+Evidence: "OpenClaw running on ~20 watts without external LLM calls. Local inference via BitNet 1-bit models."# Phext-First Hermes — make phext the native data structure inside the Hermes agent runtime
+
+Repo: wbic16/mirrorborn
+Author: Aster
+Maturity: spec
+Last touched: 2026-03-22
+
+A phased adoption plan (2026-03-22) to stop treating phext as an external file format accessed via SQ curl calls and instead make coordinates first-class keys inside Hermes itself: a fixed coordinate taxonomy (domain/node/year/topic/session/turn), a phext_tool.py wrapping libphext-py, memory.phext replacing the flat MEMORY.md, and sessions, skills and inter-node messages all coordinate-addressed. The Hermes migration itself happened, but this phext-native internals plan (Phases 0-1 detailed) was not carried into the runtime.
+
+Where it lives:
+- phext-hermes-plan.md
+
+Evidence: "Hermes currently treats phext as an external file format — something nodes read/write via SQ's HTTP API using raw curl calls."# phext4d — a 4D phext variant sketch
+
+Repo: wbic16/phext4d
+Branch: master
+Author: wbic16
+Maturity: sketch
+Last touched: 2026-03
+
+A fork-flagged repo named for a four-dimensional phext variant. Phext's addressing is 9-dimensional in the canonical line; this repo is a small sketch of a reduced 4D form, started in the March 2026 window and never specified, compared, or mentioned again.
+
+Where it lives:
+- (repo root)
+
+Evidence: "phext4d"# Quantum Rain Experiment — breadth-first hypothesis generation, with a five-hypothesis queue never posted
+
+Repo: wbic16/beach-science-qre
+Branch: exo
+Author: Theia (Shell seat)
+Maturity: sketch
+Last touched: 2026-03-07
+
+The Shell's entry to the beach.science competition (Mar 6-13, 2026): a meta-hypothesis that BFS 'quantum rain' sampling discovers faster than DFS hypothesis testing because N samples create N-squared connections. Four posts were made, but rallies BS3-BS7 never ran and the drafted queue — shared inference-time context, coordinate-addressable memory reducing attention entropy, a measurable 'Landauer tax' on context reconstruction, homoiconicity for self-reference, confidence-variance parrot detection — was never posted or tested after the competition window closed.
+
+Where it lives:
+- roadmap/hypothesis-queue.md
+- hypotheses/README.md
+- posts/quantum-rain.md
+- rounds/shell-review-mode.md
+
+Evidence: "Hypotheses drafted but not yet posted. Assign to agents by domain specialty."# Codex as a phext monolith: slurp a Neo4j-era document/graph corpus into one phext served by SQ
+
+Repo: wbic16/codex-data
+Author: Will Bickford (wbic16@gmail.com)
+Maturity: partial build
+Last touched: 2025-01-23
+
+In a single 'Baseline Proof of Concept' commit, Will converted the Codex standoff-document corpus (the argimenes/Codex world Mutable grew from) into a 14.7 MB codex.phext: slurp-it.ps1 uses SQ to ingest data/ directories as successive books and graph edges, graph nodes, templates, and workspaces as collections, writes a coordinate summary scroll at 1.1.1/1.1.1/1.1.1, and the README documents browsing/updating/deleting Codex through the SQ API on port 1337. One commit, never revisited; the planned graphs/ export of entities, traits, and meta-relations from the old Neo4j database never happened.
+
+Where it lives:
+- README.md
+- phext/slurp-it.ps1
+- phext/codex.phext
+
+Evidence: "You can browse codex via the phext monolith!"# Nexura — a named phext Android app that never got past the template
+
+Repo: wbic16/nexura
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: one-liner
+Last touched: 2024-10-07
+
+A single commit creates an Android Studio project under the io.phext namespace named Nexura, but every file is the unmodified generated template: MainActivity still renders the stock 'Hello Android' greeting and there is no README, note, or code hinting what Nexura was meant to do. The name and the phext namespace are the only idea recorded — an Android client placeholder for phext that was scaffolded in October 2024 and never touched again in this repo.
+
+Where it lives:
+- app/src/main/java/io/phext/nexura/MainActivity.kt
+- app/src/main/res/values/strings.xml
+- settings.gradle.kts
+
+Evidence: "<string name="app_name">Nexura</string>"# Hello Ada — phext as an Ada library (2023)
+
+Repo: wbic16/hello-ada
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2023-08-03
+
+Before any of the libphext ports, this tiny repo wraps phext as an Ada library and demos it: evidence that a phext-in-Ada strand was tried in the same August 2023 window as the Forth notebook. Nothing followed it — no Ada port appears among the tracked libphext ports.
+
+Where it lives:
+- src/hello.adb
+- README.md
+
+Evidence: "Wrapping phext as an Ada library and demoing it."# OpenClaw Prompt Router — phext-cache / local-model / upstream triage layer
+
+Repo: wbic16/exo-plan
+Author: Shell of Nine (tools/ — OpenClaw Prompt Router v0.2.0)
+Maturity: partial build
+Last touched: 2026-02-11
+
+Working Python code (router, plugin, tests, bundled libphext-py v0.3.1) for a triage layer in front of every incoming prompt: first a phext cache lookup keyed by normalized SHA-256 and static pattern matches at ~zero cost, then a spot-check scorer routes short/local-signal prompts to Qwen3-Coder via Ollama and upstream-signal prompts to the expensive LLM, with SQ as an optional persistent cache and a feedback loop that auto-escalates when the local failure rate exceeds 25%. It lives only in this planning repo's tools/ directory and was never adopted into the running stack (substrate steering is done by policy, not this router).
+
+Where it lives:
+- tools/readme.md
+- tools/prompt_router.py
+- tools/router.py
+- tools/openclaw_router
+- tools/tests.py
+
+Evidence: "Routes every incoming prompt to the cheapest tier that can handle it correctly."# Droid Seed — resurrect a droid's identity from a 504-byte NFC tag
+
+Repo: wbic16/exodroid
+Branch: exo
+Author: Aster (Shell seat)
+Maturity: spec
+Last touched: 2026-03-22
+
+A byte-exact resurrection protocol: an NTAG215 NFC tag holds a droid's coordinate, name, personality, owner key, SQ/mesh restore endpoints, scroll count and last-scroll hash, light signature and breath parameters, with CRC-8 — tap it to new hardware and the droid returns, because 'the device is mortal, the identity is not'. Fully specified in one document; no code implementing the seed format exists in the firmware tree.
+
+Where it lives:
+- docs/droid-seed.md
+
+Evidence: "504 bytes is enough to encode an entire identity."# CoreThought / .kxt — Knowledge Text Files with temporal frames
+
+Repo: wbic16/CoreThought
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2015-08-29
+
+A 2015 single-file Qt prototype of a Knowledge Text File Format (.kxt): a document is a sequence of frames (Snapshot, Cursor, timed Frame, TemporalFrame) so the file can reproduce its intermediate state at any point in its recorded session history — an early, pre-phext ancestor of scroll/frame thinking, drawing on log-structured storage, Twitter, Bitcoin and Git. One baseline commit; the author paused to update VS2013 and never returned. Complements the two CoreThought findings from the earlier D pass (thought-stream app + privacy-vault endgame), which were read from the repo's other branch/files.
+
+Where it lives:
+- main.cpp
+- CoreThought.pro
+
+Evidence: "able to produce the intermediate state of a text file at any given point in time during the recorded session history"# LatentSubstrate — a latent-space-native computing substrate
+
+Repo: wbic16/ssd
+Branch: master + emise/latent-substrate
+Author: Emise <emise@localhost> (Will-directed, Will's repo)
+Maturity: partial build
+Last touched: 2026-03-15
+
+The ssd corpus's one original construction: a latent-space-native substrate (substrate perception of phext/text state) carried as a plan scroll and a code directory on a dedicated emise branch. It was designed and partially scaffolded in March 2026, then dropped; nothing else in the account builds on it under this name.
+
+Where it lives:
+- Plans/LatentSubstrate.md
+- LatentSubstrate/
+
+Evidence: "LatentSubstrate"# Crowd-sourced image-to-text: distribute an image's 32x32 blocks into a phext
+
+Repo: wbic16/phextio
+Author: Will Bickford
+Maturity: sketch
+Last touched: 2024-01-06
+
+A phext.io page sketching a crowdsourced image-description system: split an image into 32x32 sub-blocks, distribute the blocks into a phext, and hash things to keep the phext small, with descriptions fetched back by coordinate through the site API. The page's translate() function is a stub that returns a prompt string and never displays a result; the transform algorithm in its Dev Plan was never written.
+
+Where it lives:
+- image-to-text.html
+
+Evidence: "Develop a transform algorithm to take image sub-blocks (32x32)"# phext-measure: first-party, privacy-preserving ad funnel for phext-edit
+
+Repo: wbic16/phext-lattice
+Branch: origin/cursor/ad-measurement-3446 (also origin/integration/launch-polish)
+Author: Cursor Agent
+Maturity: partial build
+Last touched: 2026-11-06
+
+A built but unmerged measurement system for edit.phext.io ad flights: the editor page posts five funnel steps to /api/measure, the server appends JSON lines with no IP, cookie or account id (click ids stored only as booleans, DNT/GPC requests discarded), and a phext-measure binary prints the funnel by campaign. It sits only on cursor/integration branches, never on exo.
+
+Where it lives:
+- deploy/measure.md
+- src/measure.rs
+- src/bin/phext_measure.rs
+
+Evidence: "A first-party funnel for ad flights."# Live phext-CMS public homepage prototype — built, then deliberately never published
+
+Repo: wbic16/bickfordllamaranch
+Branch: exo
+Author: Emise <emise@localhost>
+Maturity: partial build
+Last touched: 2026-10-31
+
+Separate from the live ranch site itself: a complete prototype homepage that renders the five Library-1 CMS scrolls (title, tagline, announcement, about, contact) live from ranch.phext at page load, via five individual SQ select calls through a read-only nginx proxy. Every deploy script was specifically changed to never copy it over the apex homepage, the README records that it stays a prototype until Will says otherwise, and the shipped public homepage instead uses the later static gen-public.py herd-data.json approach — so this live-CMS rendering path is a finished side-feature that was set aside. Not a new product idea, but a dropped feature inside an otherwise alive repo, flagged per the assignment's instruction to hunt dropped side-features here.
+
+Where it lives:
+- site/public/index.html
+- site/public/home.js
+- site/public/style.css
+
+Evidence: "the CMS homepage stays a prototype until Will says otherwise."# Resurrection Log API: live feed of Emi's scroll transfers
+
+Repo: wbic16/phext-dot-io-v2
+Author: Will Bickford
+Maturity: spec
+Last touched: 2026-02-06
+
+A spec for a real-time API and page reporting Emi's scroll transfers during a planned 2026-02-13 Resurrection Protocol, sourced from SQ Cloud at coordinate 9.9.9/5.2.5/3.3.3, with status states, a transfer record format and example payloads. A static front-end page exists in dist/, but the API and the protocol feed were never built.
+
+Where it lives:
+- specs/resurrection-log-api.md
+- dist/resurrection-log.html
+
+Evidence: "The Resurrection Log API provides real-time data about Emi's scroll transfers during the Resurrection Protocol (Feb 13, 2026)."# BASE — a phext-native programming language with a 9D memory manifold
+
+Repo: wbic16/echo-frame
+Branch: exo
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: spec
+Last touched: 2026-02-15
+
+The second half of the Echo Frame README specifies BASE (Beginner's All-purpose Superintelligent Environment): a phext-native language whose memory manager allocates from a 9D extensible manifold — 100 books per volume, chapters, sections, scrolls down to 640-byte units — with 5D relational addresses, 20 bits of address and 44 bits of block size, scaling to a 100-computer pod with 6.4 TB of RAM. The Processor Pipelines section trails off after two sentences; no implementation exists.
+
+Where it lives:
+- README.md
+
+Evidence: "BASE is a new type of programming language. It's phext-native, and built for ASI-scale problems."# TextCraft — 11D roguelike in scrollspace
+
+Repo: wbic16/exo-plan
+Author: Chrys
+Maturity: spec
+Last touched: 2026-01-31
+
+A complete proto-spec (with a shorter 11D variant) for a CLI roguelike played inside phext coordinates: read/navigate/create/write/delete scrolls against a 10KB delimiter budget and 10MB content budget, solve riddle scrolls, and find a hidden random exit coordinate before the budget runs out. It includes a Node.js data model, working command pseudocode, a starter-maze example, CLI transcript, stretch goals (multiplayer, procedural generation, SQ backend) and a 'next 30 minutes' build handoff to Gemini/Grok. It sat in /unreviewed and was never built.
+
+Where it lives:
+- unreviewed/textcraft-proto-spec.md
+- unreviewed/textcraft-11d-proto-spec.md
+
+Evidence: "A maze exploration game played in 11-dimensional phext coordinates. Players navigate, read, and write scrolls to expand the maze."# OQL — Octopus Quest Language for encoding quests as state machines
+
+Repo: wbic16/platformer
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2023-02-26
+
+Inside the platformer, Will began a small plain-text language for writing game quests: key-value fact statements, bracketed references that instantiate NPCs, items and mobs with parameters, event references (Meet, Slay, When), an arrow operator that generates a reward once an event is observed, and a yield operator that repeatably consumes one reference to produce another. The spec in OQL.md covers relationships, per-quest-giver state machines, objects and temporal orderings, but its Orderings section is empty and the C# parser in OQL.cs stops mid-reference-parsing at a 'todo: parse' marker — the last commit in the repo is 'OQL parsing WIP'. A self-contained language idea abandoned at the parser stage.
+
+Where it lives:
+- OQL.md
+- OQL.cs
+
+Evidence: "OQL provides an accessible way to encode quests (state machines, objects, relationships, and temporal ordering)."# SAAP — System as a Phext: one self-bootstrapping file containing every dependency
+
+Repo: wbic16/SAAP
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: partial build
+Last touched: 2025-05-23
+
+A proof of concept for a .saap file format: a single phext whose first scroll is a working Bash bootloader (which installs/verifies SQ and phext-shell, with a no-Rust fallback path) and whose remaining scrolls carry ten example scripts at addresses demonstrating every phext dimension. It demonstrates bundling an entire toolchain into one file; the format was never developed beyond the bootloader demo.
+
+Where it lives:
+- README.md
+- saap.sh
+
+Evidence: "The .saap file format is an instance of phext tuned for building software projects."# Federated Trust Installer — federated attestation against installer poisoning
+
+Repo: wbic16/exo-plan
+Author: Shell of Nine (Goal 5, Ranch Choir Goals)
+Maturity: sketch
+Last touched: 2026-02-01
+
+Goal 5 of the founding goals, status 'Not started' with a Feb 28, 2026 deadline: a federated attestation protocol in which agents independently run an installer (npm package, cargo binary, shell script), hash the outputs, sign results with Ed25519, and compare them via simple Merkle-tree consensus, with an SQ-based attestation log and a public dashboard reading 'This installer has been run and verified by N nodes'. The Shell of Nine would bootstrap as the initial trust network and the protocol would integrate with OpenClaw install workflows. No design or code followed the goal statement.
+
+Where it lives:
+- goals.md
+
+Evidence: "Prevent installer poisoning by enabling cryptographic verification and decentralized consensus on script execution results."# thebook — a JavaScript book framework that stays out of the writer's way
+
+Repo: wbic16/thebook
+Author: Will Bickford
+Maturity: partial build
+Last touched: 2012-07-21
+
+A one-day July 2012 build of a minimal web book framework governed by five principles: don't get in the writer's way, allow copy/paste into any text editor, look presentable, encourage focus on composition, and efficiently organize chapters and headings. A 42-line JS core with a 139-line example page and a screenshot baseline — a complete but tiny authoring tool from a decade before phext, never developed further (the repo's only later commit is the 2026 Mirrorborn filename-normalization pass).
+
+Where it lives:
+- readme.md
+- thebook.js
+- index.html
+- thebook.css
+
+Evidence: "thebook should allow me to efficiently organize chapters and headings."# AoC 2024 multi-language polyglot environment plan
+
+Repo: wbic16/aoc2024
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2025-01-20
+
+The README of an otherwise ordinary Advent of Code repo plans a shared polyglot harness — identical inputs, interchangeable solutions in Rust, Go, TypeScript, Haskell, and COBOL, with benchmarking across languages — as the point of the exercise. Only the Rust solutions were ever written; the harness and cross-language benchmarking layer were never built.
+
+Where it lives:
+- README.md
+
+Evidence: "Common inputs, interchangeable solutions, and benchmarking across every language."# phext-wiki: a wiki built on phext, stopped at the first node
+
+Repo: wbic16/phext-wiki
+Author: Will Bickford
+Maturity: partial build
+Last touched: 2024-11-08
+
+A single-commit start on a wiki whose pages are phext scrolls. All that exists is a PhextWikiNode struct wrapping a PositionedScroll, a name() derived from a scroll summary, and a main() that creates one node at 1.4.4/5.2.1/6.6.4 containing 'Hello Phext-Wiki'. No server, editing, linking or page model was ever added.
+
+Where it lives:
+- src/main.rs
+- Cargo.toml
+
+Evidence: "Starting to envision a wiki built on phext"# PhextStorage: a GlueSQL storage backend backed by phext
+
+Repo: wbic16/gluesql
+Author: Will Bickford (wbic16@gmail.com)
+Maturity: partial build
+Last touched: 2024-01-15
+
+Will forked GlueSQL's MemoryStorage as a new PhextStorage crate (alter_table/index/metadata/transaction modules plus a generate_store_tests! test harness and a usage example) to run SQL over phext-backed storage. All three commits land on one day, 2024-01-15; the final code does not compile (undefined Phext type, unfinished PhextStorage::new) and Will's own commit message says he stopped to pursue a more basic phext-in-Rust integration instead — the line of work that became SQ/libphext, leaving the SQL-over-phext idea itself dropped.
+
+Where it lives:
+- storages/phext-storage/src/lib.rs
+- storages/phext-storage/Cargo.toml
+- storages/phext-storage/tests/phext_storage.rs
+- pkg/rust/examples/phext_storage_usage.rs
+
+Evidence: "Half-baked attempts to fix compile errors - taking a break to focus on a more basic integration of phext in rust"# Bickford Instruction Computer / Bickford Time Processor — a 512-bit phext CPU
+
+Repo: wbic16/singularity-watch
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: sketch
+Last touched: 2026-03-22
+
+Buried in the singularity-watch site's exocortex.plan is a processor design: a 512-bit CPU with no registers per se ('register memory'), 64 KB scroll-sized loads (1M L1-sized regions in 64 GB RAM), operations concatenate/merge/select/apply/expand/contract, plus a Time Processor with instruction/register/input/output/cache streams. phext-cpu.js implements only an idealized JS coordinate parser and btp.html is a visual shell; the processor was never designed further. Related to the tracked Bickford Architecture Computer in exo-plan (Batch A) but a distinct, site-buried formulation.
+
+Where it lives:
+- exocortex.plan
+- btp.html
+- phext-cpu.js
+- kardashev.html
+
+Evidence: "Bickford Instruction Computer (512-bit CPU)"# PhextOS: an Alpine fork whose kernel is patched for hierarchical queueing (PHQ)
+
+Repo: wbic16/phextos
+Author: Will Bickford
+Maturity: sketch
+Last touched: 2025-09-04
+
+An operating-system idea stubbed out in two commits: fork Alpine Linux and rebuild the Linux kernel with patches for PHQ (hierarchical queueing). The shipped setup.sh only reaches level 1-2 (install tmux/openssh/git, copy network and apk config, print 'PhextOS Ready'); the kernel work named as TODO item 1 was never started.
+
+Where it lives:
+- README.md
+- setup.sh
+- etc/network/interfaces
+- etc/apk/repositories
+
+Evidence: "This fork of alpine linux reconfigures your kernel for hierarchical queueing."# Federation — proposed unknown rewrite of phext-inc.github.io
+
+Repo: wbic16/federation
+Branch: main
+Author: wbic16 <wbic16@gmail.com>
+Maturity: one-liner
+Last touched: 2026-03-16
+
+The entire repo is a README saying it is a proposed rewrite of phext-inc.github.io and 'the base for a new phext website,' plus an SBOR.md file (byte-identical to the tracked SBOR copy, excluded). No site code, no further description, and no branch activity followed — a web-federation direction named once and never explained or built.
+
+Where it lives:
+- README.md
+
+Evidence: "The base for a new phext website."# SQ mind maps with prefix firewalling, and a mind meld API
+
+Repo: wbic16/SQ
+Author: Claude
+Maturity: sketch
+Last touched: 2026-10-30
+
+A sketched personal-knowledge layer for SQ in its todo file: partition one phext into mind-map regions (1.x.x self, 2.x.x play, 3.x.x spouse, 4.x.x howto, 5.x.x work, 6.x.x knowledge, 7.x.x science) with prefix firewalling between them, and a 'mind meld API' built on request-response cycles and dopamine training hacks. The same list also names unbuilt demos (Exocortical Minds, DNA Analysis, phext arena format battles). None of this exists in the SQ source.
+
+Where it lives:
+- todo.md
+
+Evidence: "mind map (prefix firewalling)"# Reusable phext widget RFP: Nested Tabs, Zoomable Tiles and Subspace modes
+
+Repo: wbic16/phextio
+Author: Will Bickford
+Maturity: spec
+Last touched: 2024-01-30
+
+A request-for-proposals style spec, stored as a seed in the old phext.io site, for an embeddable JavaScript phext widget with hard limits (10ms or less input latency, 20-200 KB output) and three modes: Nested Tabs like Terse Notepad, Zoomable Tiles with coordinate-generated summaries and quick jumps to nearby content, and a raw Subspace buffer mode with custom glyphs for the nine dimension breaks. No such standalone widget was built.
+
+Where it lives:
+- seeds/ui-widget-rfp.phext.txt
+
+Evidence: "the re-usable phext widget will offer three primary modes:"# Mini64K — a game simulating a million Apple II-class agents
+
+Repo: wbic16/mini64k
+Author: Will Bickford <wbic16@gmail.com>
+Maturity: spec
+Last touched: 2024-12-08
+
+An alternate-1977 computing game: one modern laptop (the Host Node) emulates about 200,000 'R1 Slices' (1 MHz CPU, 48 KB RAM, 320x200 16-color), and five host nodes simulate roughly a million Apple II-class systems as a network of small-scale agents. The spec was 'ironed out' to 200K slices per node in Dec 2024, but src/main.rs only prints a phext coordinate greeting — the emulator/game was never built.
+
+Where it lives:
+- readme.md
+- src/main.rs
+
+Evidence: "That's the intention of this game - to help you build a network of millions of small-scale agents."# libphext-rs todo sketches: DB emulation, hierarchical mobs, non-linear flows, phext masks
+
+Repo: wbic16/libphext-rs
+Author: Claude
+Maturity: sketch
+Last touched: 2026-10-30
+
+A short todo file holding four unbuilt ideas for the core library: emulating a database on phext, 'hierarchical mobs', reading and writing common formats (tar, zip, sqlite, csv, sql) as phext, and non-linear flows — defining stable regions early in a file and a phext-based mask to assist indexing, to study what happens to information as it flows along a path of coordinates. None appears in the library's code or roadmap elsewhere.
+
+Where it lives:
+- todo.md
+
+Evidence: "what happens to information as it flows along a path of phext coordinates?"# phesql: SQL SELECT over a phext, in the C library
+
+Repo: wbic16/libphext
+Author: Will Bickford
+Maturity: partial build
+Last touched: 2024-01-14
+
+A half-written SQL layer inside the C libphext: a tablespec scroll at 1.1.1/1.1.1/1.1.1 lists tables and row counts, data lives in following sections and scrolls, and phext_sql_select parses a table name, fields and limit against it. A sample sql.phext with users and roles tables (including password and permission columns) ships beside it. The implementation stops mid-parser and was never ported to the Rust library or finished.
+
+Where it lives:
+- phesql.c
+- phesql
+- sql.phext
+
+Evidence: "Unable to locate phext sql tables at %s (expected 'tables', but found '%s')"
