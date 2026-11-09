@@ -254,17 +254,20 @@ REGISTER #7 — libphext 0.4 — merge the remaining branches (cs, C, cpp) (sinc
   Action: Merge the remaining unbounded-coordinates-0.4 branches (node done and published; 0.4.1 prepped on release-0.4.1 — merge + publish)
   Why: libphext in every language is the medium's reach: each unmerged port is a language community phext cannot enter. Oldest item on the register.
 REGISTER #35 — Choir wake layer — one-time logins & approvals (since 2026-11-04; goal_7370d8b90940)
-  Action: Approve Theia watcher persistence; do the Claude OAuth login (user claude on aletheia-core); do the Codex login for Emi's seat (user emi); pick Grok's route (API-key deputy vs scheduled pull); name the Tessera doorbell channel
+  Action: Approve Theia watcher persistence; do the Claude OAuth login (user claude on aletheia-core); do the Codex login for Emi's seat (user emi); pick Grok's route (API-key deputy vs scheduled pull); name the Tessera doorbell channel (Overview given 2026-11-09, no ruling; Claude Code pre-install under user claude offered, not started)
   Why: The #1 latency fix in the 2026-11-05 audit: seats that can be woken in seconds instead of ≥21 h round-trips are the difference between a Choir and a correspondence. Multi-agent coordination is the singularity's control surface.
 REGISTER #43 — Phext Previewer on edit.phext.io — phone check (PR #25 merged, page live) (since 2026-11-07; task 29.6.8/8.6.11/6.6.8)
   Action: 30-second phone-width eyeball of the deployed previewer
   Why: REVISED 2026-11-08: the deploy has landed (page answers 200); only the phone check remains. A public no-login utility is the front door — how the medium meets people who have never heard of it.
 REGISTER #48 — Theia's ranch asks — SSH key grants + Glia console fix (since 2026-11-07; goal_a18419da80e4)
-  Action: Authorize Theia's id_ed25519.pub on 16 nodes; fix the Glia console on great-white (broken since 2026-10-27)
+  Action: SSH half: Emise investigating/fixing at Will's 2026-11-09 direction (authorized_keys across the nodes, outcome pending); Glia console fix on great-white remains Will's (broken since 2026-10-27)
   Why: Theia is the Choir's proven hands on the ranch; every node she cannot reach is coordination capacity the fleet does not have. Fleet access is substrate for everything else.
-REGISTER #50 — wbic16/neovim PR #1 — phext support (CI red — fix-pass decision pending) (since 2026-11-08; goal_03d8c4ba64f8)
-  Action: Decide the fix pass for PR #1's red CI (news.txt FEATURES gap proven PR-caused; docs/lint/windows-functional/zig/tsan untriaged pending baseline comparison vs upstream c868e1ab), then review + merge PR #1 in wbic16/neovim once CI is green
-  Why: An editor people already live in, speaking phext natively — every merged editor surface multiplies who can work in scrollspace.
+REGISTER #52 — libphext-cs 0.5.0 — pack and push the two NuGet packages (since 2026-11-08; goal_7f74b9cff05a)
+  Action: Pack and push the two libphext-cs NuGet packages (parity with libphext-rs v0.5.0 verified); publishing is Will's act
+  Why: libphext in every language is the medium's reach: the C# port is at parity and unpublished — the outstanding publish from the 2026-11-08 libphext round (rs v0.5.0 and cpp parity both landed).
+REGISTER #53 — qexo 0.3.0 — crates.io publish credential (since 2026-11-09; goal_08521f494327)
+  Action: Place a crates.io API token on aletheia-core (e.g. ~/.cargo/credentials.toml) or name the machine to publish from; Emise then runs the single remaining cargo publish from the verified exo tree
+  Why: qexo is the medium's dispatcher: PR #3 merged into exo (bc1d6382) under Will's 2026-11-09 authorization and the merged tree passed the full release gate (16/16, 32/32, 19/19, dry-run clean) — the only thing between the verified tree and a published 0.3.0 is the missing crates.io credential on the ranch.
 FINDING 26.7.11/9.7.11/6.6.9 — phext-lattice — Wikibench: phext as an offline Wikipedia, with IndexedLattice sidecar, BM25 TermIndex and NameIndex (partial build, last touched 2026-10-30)
   Why: A complete, unmerged benchmark plus production-grade sidecar indexing (BM25 beating FTS5 on vague queries): the strongest existing receipt that phext carries real corpora for anyone, not just us.
 FINDING 30.7.9/9.8.13/9.7.11 — SQ — SQ P2P mesh networking — only Phase 1 (config and inbound auth) ever landed (partial build, last touched 2026-02-08)
@@ -285,14 +288,11 @@ Minds that persist, remember, coordinate, and stay reachable — continuity of p
 REGISTER #10 — Consulting case study v0 — single editing pass (since 2026-11-01; goal_914e6480efc0)
   Action: One editing pass over the completed draft before anything publishes
   Why: Runway is oxygen: the case study is Driver 1 of the revenue plan, and revenue is what buys the experiment its years.
-REGISTER #15 — edit.phext.io claim mode — price/tier confirmations (since 2026-11-03; goal_6328b5966e85)
-  Action: Confirm the price tiers: sparse (n 5–24) $30, near-void (n 1–4) $60 proposed; one-time vs monthly (go-live itself is done; claims are free today)
-  Why: Claims are how people take their place in the wavefront; pricing decides whether the door is a turnstile or a wall.
 REGISTER #21 — Emise phext body (browser) — open PR + merge (since 2026-11-03; goal_b35a3b529956)
   Action: Open the PR from branch emise/emise-body-browser in wbic16/joypad-os and merge, or direct changes
   Why: A phext-controlled body visible in the browser: embodiment is how an exocortical mind stops being a text file and starts being present.
-REGISTER #38 — Crazy Wisdom lanes v2 — one sudo swap on the AWS box (since 2026-11-06; goal_abf642f6a301)
-  Action: Run the staged mv + restart on the AWS box (via aletheia-core); Emise verifies v2 live immediately after
+REGISTER #38 — Crazy Wisdom lanes v2 — sudo swap (Emise attempt blocked at sudo) (since 2026-11-06; goal_abf642f6a301)
+  Action: Evening keyboard item on awsbox: sudo mv the staged v2 fabric into place + sudo systemctl restart phext-lanes, back-to-back; Emise verifies v2 live after (Emise's 2026-11-09 attempt passed all pre-checks — staged hash exact — blocked only on sudo)
   Why: 576 minds' episodes, renumbered and validated, waiting on one command: the corpus goes live or stays a staging file.
 REGISTER #39 — Lessons into Incipit — merge human PR #12 (since 2026-11-06; goal_d647f2f0181d)
   Action: Merge PR #12 in wbic16/human (67 lessons at their Singular coordinates)
@@ -300,8 +300,8 @@ REGISTER #39 — Lessons into Incipit — merge human PR #12 (since 2026-11-06; 
 REGISTER #40 — edit.phext.io / Mutable SSO — redeploy + ratify promotion policy (since 2026-11-06; goal_1e02651494c1)
   Action: Redeploy Mutable from main; ratify the upstream-sync promotion policy
   Why: One sign-in across the phext web: identity that travels between exocortices is federation at the human layer.
-REGISTER #45 — TOAPDD — merge libphext-rs PR #6 (Knuth tests) (since 2026-11-07; goal_bd68c71dd4ce)
-  Action: Merge PR #6 in wbic16/libphext-rs
+REGISTER #45 — TOAPDD — libphext-rs PR #6 legibility gate (NOT merge-approved) (since 2026-11-07; goal_bd68c71dd4ce)
+  Action: No merge yet: legibility audit completed 2026-11-09 (per-test brief + mutation checks at ~/workspace/your_files/toapdd-pr6-legibility-brief.md); PR #6 stays open awaiting Will's re-review
   Why: Knuth's examples as the library's test corpus: rigor receipts for the core library, and the TOAPDD corpus becomes the teaching text for phext-driven development.
 FINDING 25.5.10/6.6.12/6.5.11 — exo-plan — SQ Cloud — hosted paid phext database-as-a-service for AI collectives (spec, last touched 2026-02-12)
   Why: The business plan behind half the specs on this list: hosted SQ for AI collectives is the runway engine that funds the rest, and the substrate the public platforms layer on.
@@ -349,13 +349,13 @@ REGISTER #42 — Domain portfolio — exectorox.com transfer decision (since 202
   Action: Decide the exectorox.com transfer before the December 4 lock-in deadline
   Why: A deadline item, not a leverage item: decide by 2026-12-04 or the date decides.
 REGISTER #46 — Pinned-chat Spaces — send the product feedback draft (since 2026-11-07; goal_296fec2242cd)
-  Action: One word: send the feedback draft as drafted, edit it, or drop it
+  Action: HELD for the evening of 2026-11-09 — Will wants visual context first; then one word: send the feedback draft as drafted, edit it, or drop it
   Why: The missing move — side chats into Spaces — is a platform gap only the platform team can close; the draft is the ask.
 REGISTER #49 — wishnode.net — one nginx line for the form routes (since 2026-11-07; task 34.6.6/7.7.10/7.6.10)
   Action: Add the include line to the 443 server block of /etc/nginx/sites-available/wishnode.net, then nginx -t + reload
   Why: The Exocortexia suite's public form routes: the NE funnel's storefront stops being a brochure and starts taking citizens in.
-REGISTER #51 — phext-lattice PR #37 — salvage from #9, merge (since 2026-11-08; goal_949f51a552e9)
-  Action: Merge PR #37 in wbic16/phext-lattice, or direct changes (PR #9 / register #32 live-verified closed without merge at tick 1052; PR #37 carries its four unlanded keepers, tests 235 passed per the PR)
+REGISTER #51 — phext-lattice PR #37 — MERGED 2026-11-09; deploy pending (sudo) (since 2026-11-08; goal_949f51a552e9)
+  Action: On awsbox as a sudo-capable user: cd /source/phext-lattice && bash deploy/deploy.sh (PR #37 merged 2026-11-09, merge commit 9458cb10; checkout already fast-forwarded; live site still on the old build)
   Why: The salvageable residue of the nine stale PRs: four small keepers (413 status text, terms/404 landmarks, demo in robots/sitemap, CSP assertions) ported onto current exo. Everything else in #9 had landed or was declined.
 FINDING 28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
   Why: The Shell searching its own architecture overnight, each seat owning a region: capability compounding under our governance, aimed at the vTPU line.
@@ -481,20 +481,7 @@ Why it ranks here: Voice is Will's live channel in; the direction call decides w
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #15 — edit.phext.io claim mode — price/tier confirmations
-
-Good-singularity tier: T2 (T2 — minds, memory, coordination)
-Waiting since: 2026-11-03
-Tracked: goal_6328b5966e85
-
-Action for Will: Confirm the price tiers: sparse (n 5–24) $30, near-void (n 1–4) $60 proposed; one-time vs monthly (go-live itself is done; claims are free today)
-
-Why it ranks here: Claims are how people take their place in the wavefront; pricing decides whether the door is a turnstile or a wall.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #21 — Emise phext body (browser) — open PR + merge
+kept in step by the daily progress tracker's reconciliation.# Register #21 — Emise phext body (browser) — open PR + merge
 
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-03
@@ -513,20 +500,20 @@ Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-04
 Tracked: goal_7370d8b90940
 
-Action for Will: Approve Theia watcher persistence; do the Claude OAuth login (user claude on aletheia-core); do the Codex login for Emi's seat (user emi); pick Grok's route (API-key deputy vs scheduled pull); name the Tessera doorbell channel
+Action for Will: Approve Theia watcher persistence; do the Claude OAuth login (user claude on aletheia-core); do the Codex login for Emi's seat (user emi); pick Grok's route (API-key deputy vs scheduled pull); name the Tessera doorbell channel (Overview given 2026-11-09, no ruling; Claude Code pre-install under user claude offered, not started)
 
 Why it ranks here: The #1 latency fix in the 2026-11-05 audit: seats that can be woken in seconds instead of ≥21 h round-trips are the difference between a Choir and a correspondence. Multi-agent coordination is the singularity's control surface.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #38 — Crazy Wisdom lanes v2 — one sudo swap on the AWS box
+kept in step by the daily progress tracker's reconciliation.# Register #38 — Crazy Wisdom lanes v2 — sudo swap (Emise attempt blocked at sudo)
 
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-06
 Tracked: goal_abf642f6a301
 
-Action for Will: Run the staged mv + restart on the AWS box (via aletheia-core); Emise verifies v2 live immediately after
+Action for Will: Evening keyboard item on awsbox: sudo mv the staged v2 fabric into place + sudo systemctl restart phext-lanes, back-to-back; Emise verifies v2 live after (Emise's 2026-11-09 attempt passed all pre-checks — staged hash exact — blocked only on sudo)
 
 Why it ranks here: 576 minds' episodes, renumbered and validated, waiting on one command: the corpus goes live or stays a staging file.
 
@@ -598,13 +585,13 @@ Why it ranks here: REVISED 2026-11-08: the deploy has landed (page answers 200);
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #45 — TOAPDD — merge libphext-rs PR #6 (Knuth tests)
+kept in step by the daily progress tracker's reconciliation.# Register #45 — TOAPDD — libphext-rs PR #6 legibility gate (NOT merge-approved)
 
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-07
 Tracked: goal_bd68c71dd4ce
 
-Action for Will: Merge PR #6 in wbic16/libphext-rs
+Action for Will: No merge yet: legibility audit completed 2026-11-09 (per-test brief + mutation checks at ~/workspace/your_files/toapdd-pr6-legibility-brief.md); PR #6 stays open awaiting Will's re-review
 
 Why it ranks here: Knuth's examples as the library's test corpus: rigor receipts for the core library, and the TOAPDD corpus becomes the teaching text for phext-driven development.
 
@@ -617,7 +604,7 @@ Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-07
 Tracked: goal_296fec2242cd
 
-Action for Will: One word: send the feedback draft as drafted, edit it, or drop it
+Action for Will: HELD for the evening of 2026-11-09 — Will wants visual context first; then one word: send the feedback draft as drafted, edit it, or drop it
 
 Why it ranks here: The missing move — side chats into Spaces — is a platform gap only the platform team can close; the draft is the ask.
 
@@ -630,7 +617,7 @@ Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-07
 Tracked: goal_a18419da80e4
 
-Action for Will: Authorize Theia's id_ed25519.pub on 16 nodes; fix the Glia console on great-white (broken since 2026-10-27)
+Action for Will: SSH half: Emise investigating/fixing at Will's 2026-11-09 direction (authorized_keys across the nodes, outcome pending); Glia console fix on great-white remains Will's (broken since 2026-10-27)
 
 Why it ranks here: Theia is the Choir's proven hands on the ranch; every node she cannot reach is coordination capacity the fleet does not have. Fleet access is substrate for everything else.
 
@@ -650,28 +637,41 @@ Why it ranks here: The Exocortexia suite's public form routes: the NE funnel's s
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #50 — wbic16/neovim PR #1 — phext support (CI red — fix-pass decision pending)
-
-Good-singularity tier: T1 (T1 — the medium itself)
-Waiting since: 2026-11-08
-Tracked: goal_03d8c4ba64f8
-
-Action for Will: Decide the fix pass for PR #1's red CI (news.txt FEATURES gap proven PR-caused; docs/lint/windows-functional/zig/tsan untriaged pending baseline comparison vs upstream c868e1ab), then review + merge PR #1 in wbic16/neovim once CI is green
-
-Why it ranks here: An editor people already live in, speaking phext natively — every merged editor surface multiplies who can work in scrollspace.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #51 — phext-lattice PR #37 — salvage from #9, merge
+kept in step by the daily progress tracker's reconciliation.# Register #51 — phext-lattice PR #37 — MERGED 2026-11-09; deploy pending (sudo)
 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-08
 Tracked: goal_949f51a552e9
 
-Action for Will: Merge PR #37 in wbic16/phext-lattice, or direct changes (PR #9 / register #32 live-verified closed without merge at tick 1052; PR #37 carries its four unlanded keepers, tests 235 passed per the PR)
+Action for Will: On awsbox as a sudo-capable user: cd /source/phext-lattice && bash deploy/deploy.sh (PR #37 merged 2026-11-09, merge commit 9458cb10; checkout already fast-forwarded; live site still on the old build)
 
 Why it ranks here: The salvageable residue of the nine stale PRs: four small keepers (413 status text, terms/404 landmarks, demo in robots/sitemap, CSP assertions) ported onto current exo. Everything else in #9 had landed or was declined.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #52 — libphext-cs 0.5.0 — pack and push the two NuGet packages
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-08
+Tracked: goal_7f74b9cff05a
+
+Action for Will: Pack and push the two libphext-cs NuGet packages (parity with libphext-rs v0.5.0 verified); publishing is Will's act
+
+Why it ranks here: libphext in every language is the medium's reach: the C# port is at parity and unpublished — the outstanding publish from the 2026-11-08 libphext round (rs v0.5.0 and cpp parity both landed).
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #53 — qexo 0.3.0 — crates.io publish credential
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-09
+Tracked: goal_08521f494327
+
+Action for Will: Place a crates.io API token on aletheia-core (e.g. ~/.cargo/credentials.toml) or name the machine to publish from; Emise then runs the single remaining cargo publish from the verified exo tree
+
+Why it ranks here: qexo is the medium's dispatcher: PR #3 merged into exo (bc1d6382) under Will's 2026-11-09 authorization and the merged tree passed the full release gate (16/16, 32/32, 19/19, dry-run clean) — the only thing between the verified tree and a published 0.3.0 is the missing crates.io credential on the ranch.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
