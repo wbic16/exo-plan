@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 27 register items — with the
+entire list — 176 findings + 19 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (27 active items).
+  enumerated by its permanent number (19 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -291,12 +291,6 @@ REGISTER #15 — edit.phext.io claim mode — price/tier confirmations (since 20
 REGISTER #21 — Emise phext body (browser) — open PR + merge (since 2026-11-03; goal_b35a3b529956)
   Action: Open the PR from branch emise/emise-body-browser in wbic16/joypad-os and merge, or direct changes
   Why: A phext-controlled body visible in the browser: embodiment is how an exocortical mind stops being a text file and starts being present.
-REGISTER #26 — phext-lattice PR #8 — signed-out demo for first visitors [HIGH] (since 2026-11-04; goal_949f51a552e9)
-  Action: Merge, rebase-then-merge, or close PR #8
-  Why: The editor-trial counterpart of the public-access principle: a first visitor who must sign in to try the medium mostly never tries it.
-REGISTER #27 — phext-lattice PR #12 — deep links to a phext + coordinate [HIGH] (since 2026-11-04; goal_949f51a552e9)
-  Action: Merge, rebase-then-merge, or close PR #12
-  Why: Deep links are the sharing mechanics of the medium itself: an address nobody can link to is an address nobody visits.
 REGISTER #38 — Crazy Wisdom lanes v2 — one sudo swap on the AWS box (since 2026-11-06; goal_abf642f6a301)
   Action: Run the staged mv + restart on the AWS box (via aletheia-core); Emise verifies v2 live immediately after
   Why: 576 minds' episodes, renumbered and validated, waiting on one command: the corpus goes live or stays a staging file.
@@ -348,27 +342,9 @@ REGISTER #9 — Ink OS fork integration branches — merge (since 2026-11-01; go
 REGISTER #11 — Speech-to-text engine — direction call (since 2026-10-31; goal_47946182b829)
   Action: Rule: pursue a low-dimensional/shared frame phase, or park the brain-data line and return to the audio engine
   Why: Voice is Will's live channel in; the direction call decides whether the STT line compounds or closes honestly. The oldest wait on the board.
-REGISTER #28 — phext-lattice PR #6 — phone layout + keyboard access [HIGH] (since 2026-11-04; goal_949f51a552e9)
-  Action: Merge, rebase-then-merge, or close PR #6
-  Why: The editor usable on a phone and by keyboard: access in the literal sense, below the front-door items it supports.
-REGISTER #29 — phext-lattice PR #4 — share metadata, icons, Open Graph image [HIGH] (since 2026-11-04; goal_949f51a552e9)
-  Action: Merge, rebase-then-merge, or close PR #4
-  Why: How edit.phext.io links present everywhere else: small surface, real first impressions.
-REGISTER #30 — phext-lattice PR #13 — local e2e regression tests [MEDIUM] (since 2026-11-04; goal_949f51a552e9)
-  Action: Merge, rebase-then-merge, or close PR #13
-  Why: The safety net every other lattice merge wants; it protects the editor line's velocity rather than adding to it.
-REGISTER #31 — phext-lattice PR #14 — --local startup error names the path [MEDIUM] (since 2026-11-04; goal_949f51a552e9)
-  Action: Merge, rebase-then-merge, or close PR #14
-  Why: A developer-experience fix for local mode: small, kind, and below the items it unblocks.
 REGISTER #32 — phext-lattice PR #9 — launch polish for edit.phext.io [MEDIUM] (since 2026-11-04; goal_949f51a552e9)
   Action: Merge, rebase-then-merge, or close PR #9
-  Why: A launch-week grab-bag, most likely of the nine to be partly superseded by later exo work — Grok's triage speaks first.
-REGISTER #33 — phext-lattice PR #10 — offline-Wikipedia benchmark + Unicode search panic fix [LOW] (since 2026-11-04; goal_949f51a552e9)
-  Action: Merge, rebase-then-merge, split, or close PR #10
-  Why: The benchmark half is superseded by the stronger Wikibench finding in this same phext; the bundled Unicode panic fix is the shipping part.
-REGISTER #34 — phext-lattice PR #7 — first-party funnel log for ad traffic [LOW] (since 2026-11-04; goal_949f51a552e9)
-  Action: Merge, rebase-then-merge, or close PR #7
-  Why: Measurement for an ad push that is not currently running; the phext-measure finding covers the same ground more completely.
+  Why: A launch-week grab-bag, most likely of the nine to be partly superseded by later exo work — Grok's triage speaks first. Tick 1049 (2026-11-08): live-verified the SOLE survivor of the nine stale PRs — PR #9 still open and unmerged; the other eight (#26-#31, #33, #34) resolved.
 REGISTER #41 — phext-lattice upstream sync — identify the upstream source (since 2026-11-06; goal_04b37956a4b1)
   Action: Identify the upstream source the sync cycle should pull from, or confirm it means the other builders' branches in the same repo
   Why: One sentence that unblocks a whole maintenance cycle; the fork stays healthy only if the sync knows what it syncs with.
@@ -404,7 +380,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 27 of 27 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 19 of 19 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -531,85 +507,7 @@ Why it ranks here: A phext-controlled body visible in the browser: embodiment is
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #26 — phext-lattice PR #8 — signed-out demo for first visitors [HIGH]
-
-Good-singularity tier: T2 (T2 — minds, memory, coordination)
-Waiting since: 2026-11-04
-Tracked: goal_949f51a552e9
-
-Action for Will: Merge, rebase-then-merge, or close PR #8
-
-Why it ranks here: The editor-trial counterpart of the public-access principle: a first visitor who must sign in to try the medium mostly never tries it.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #27 — phext-lattice PR #12 — deep links to a phext + coordinate [HIGH]
-
-Good-singularity tier: T2 (T2 — minds, memory, coordination)
-Waiting since: 2026-11-04
-Tracked: goal_949f51a552e9
-
-Action for Will: Merge, rebase-then-merge, or close PR #12
-
-Why it ranks here: Deep links are the sharing mechanics of the medium itself: an address nobody can link to is an address nobody visits.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #28 — phext-lattice PR #6 — phone layout + keyboard access [HIGH]
-
-Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
-Waiting since: 2026-11-04
-Tracked: goal_949f51a552e9
-
-Action for Will: Merge, rebase-then-merge, or close PR #6
-
-Why it ranks here: The editor usable on a phone and by keyboard: access in the literal sense, below the front-door items it supports.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #29 — phext-lattice PR #4 — share metadata, icons, Open Graph image [HIGH]
-
-Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
-Waiting since: 2026-11-04
-Tracked: goal_949f51a552e9
-
-Action for Will: Merge, rebase-then-merge, or close PR #4
-
-Why it ranks here: How edit.phext.io links present everywhere else: small surface, real first impressions.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #30 — phext-lattice PR #13 — local e2e regression tests [MEDIUM]
-
-Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
-Waiting since: 2026-11-04
-Tracked: goal_949f51a552e9
-
-Action for Will: Merge, rebase-then-merge, or close PR #13
-
-Why it ranks here: The safety net every other lattice merge wants; it protects the editor line's velocity rather than adding to it.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #31 — phext-lattice PR #14 — --local startup error names the path [MEDIUM]
-
-Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
-Waiting since: 2026-11-04
-Tracked: goal_949f51a552e9
-
-Action for Will: Merge, rebase-then-merge, or close PR #14
-
-Why it ranks here: A developer-experience fix for local mode: small, kind, and below the items it unblocks.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #32 — phext-lattice PR #9 — launch polish for edit.phext.io [MEDIUM]
+kept in step by the daily progress tracker's reconciliation.# Register #32 — phext-lattice PR #9 — launch polish for edit.phext.io [MEDIUM]
 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-04
@@ -617,38 +515,12 @@ Tracked: goal_949f51a552e9
 
 Action for Will: Merge, rebase-then-merge, or close PR #9
 
-Why it ranks here: A launch-week grab-bag, most likely of the nine to be partly superseded by later exo work — Grok's triage speaks first.
+Why it ranks here: A launch-week grab-bag, most likely of the nine to be partly superseded by later exo work — Grok's triage speaks first. Tick 1049 (2026-11-08): live-verified the SOLE survivor of the nine stale PRs — PR #9 still open and unmerged; the other eight (#26-#31, #33, #34) resolved.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #33 — phext-lattice PR #10 — offline-Wikipedia benchmark + Unicode search panic fix [LOW]
-
-Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
-Waiting since: 2026-11-04
-Tracked: goal_949f51a552e9
-
-Action for Will: Merge, rebase-then-merge, split, or close PR #10
-
-Why it ranks here: The benchmark half is superseded by the stronger Wikibench finding in this same phext; the bundled Unicode panic fix is the shipping part.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #34 — phext-lattice PR #7 — first-party funnel log for ad traffic [LOW]
-
-Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
-Waiting since: 2026-11-04
-Tracked: goal_949f51a552e9
-
-Action for Will: Merge, rebase-then-merge, or close PR #7
-
-Why it ranks here: Measurement for an ad push that is not currently running; the phext-measure finding covers the same ground more completely.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #35 — Choir wake layer — one-time logins & approvals
+kept in step by the daily progress tracker's reconciliation.# Register #35 — Choir wake layer — one-time logins & approvals
 
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-04
