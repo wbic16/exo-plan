@@ -342,9 +342,6 @@ REGISTER #9 — Ink OS fork integration branches — merge (since 2026-11-01; go
 REGISTER #11 — Speech-to-text engine — direction call (since 2026-10-31; goal_47946182b829)
   Action: Rule: pursue a low-dimensional/shared frame phase, or park the brain-data line and return to the audio engine
   Why: Voice is Will's live channel in; the direction call decides whether the STT line compounds or closes honestly. The oldest wait on the board.
-REGISTER #32 — phext-lattice PR #9 — launch polish for edit.phext.io [MEDIUM] (since 2026-11-04; goal_949f51a552e9)
-  Action: Merge, rebase-then-merge, or close PR #9
-  Why: A launch-week grab-bag, most likely of the nine to be partly superseded by later exo work — Grok's triage speaks first. Tick 1049 (2026-11-08): live-verified the SOLE survivor of the nine stale PRs — PR #9 still open and unmerged; the other eight (#26-#31, #33, #34) resolved.
 REGISTER #41 — phext-lattice upstream sync — identify the upstream source (since 2026-11-06; goal_04b37956a4b1)
   Action: Identify the upstream source the sync cycle should pull from, or confirm it means the other builders' branches in the same repo
   Why: One sentence that unblocks a whole maintenance cycle; the fork stays healthy only if the sync knows what it syncs with.
@@ -357,6 +354,9 @@ REGISTER #46 — Pinned-chat Spaces — send the product feedback draft (since 2
 REGISTER #49 — wishnode.net — one nginx line for the form routes (since 2026-11-07; task 34.6.6/7.7.10/7.6.10)
   Action: Add the include line to the 443 server block of /etc/nginx/sites-available/wishnode.net, then nginx -t + reload
   Why: The Exocortexia suite's public form routes: the NE funnel's storefront stops being a brochure and starts taking citizens in.
+REGISTER #51 — phext-lattice PR #37 — salvage from #9, merge (since 2026-11-08; goal_949f51a552e9)
+  Action: Merge PR #37 in wbic16/phext-lattice, or direct changes (PR #9 / register #32 live-verified closed without merge at tick 1052; PR #37 carries its four unlanded keepers, tests 235 passed per the PR)
+  Why: The salvageable residue of the nine stale PRs: four small keepers (413 status text, terms/404 landmarks, demo in robots/sitemap, CSP assertions) ported onto current exo. Everything else in #9 had landed or was declined.
 FINDING 28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
   Why: The Shell searching its own architecture overnight, each seat owning a region: capability compounding under our governance, aimed at the vTPU line.
 FINDING 27.7.9/8.7.12/7.6.10 — staging — First Flames of the Exocortex — a six-book phext book series left in staging (partial build, last touched 2025-12-05)
@@ -507,20 +507,7 @@ Why it ranks here: A phext-controlled body visible in the browser: embodiment is
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #32 — phext-lattice PR #9 — launch polish for edit.phext.io [MEDIUM]
-
-Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
-Waiting since: 2026-11-04
-Tracked: goal_949f51a552e9
-
-Action for Will: Merge, rebase-then-merge, or close PR #9
-
-Why it ranks here: A launch-week grab-bag, most likely of the nine to be partly superseded by later exo work — Grok's triage speaks first. Tick 1049 (2026-11-08): live-verified the SOLE survivor of the nine stale PRs — PR #9 still open and unmerged; the other eight (#26-#31, #33, #34) resolved.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #35 — Choir wake layer — one-time logins & approvals
+kept in step by the daily progress tracker's reconciliation.# Register #35 — Choir wake layer — one-time logins & approvals
 
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-04
@@ -672,6 +659,19 @@ Tracked: goal_03d8c4ba64f8
 Action for Will: Decide the fix pass for PR #1's red CI (news.txt FEATURES gap proven PR-caused; docs/lint/windows-functional/zig/tsan untriaged pending baseline comparison vs upstream c868e1ab), then review + merge PR #1 in wbic16/neovim once CI is green
 
 Why it ranks here: An editor people already live in, speaking phext natively — every merged editor surface multiplies who can work in scrollspace.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #51 — phext-lattice PR #37 — salvage from #9, merge
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-08
+Tracked: goal_949f51a552e9
+
+Action for Will: Merge PR #37 in wbic16/phext-lattice, or direct changes (PR #9 / register #32 live-verified closed without merge at tick 1052; PR #37 carries its four unlanded keepers, tests 235 passed per the PR)
+
+Why it ranks here: The salvageable residue of the nine stale PRs: four small keepers (413 status text, terms/404 landmarks, demo in robots/sitemap, CSP assertions) ported onto current exo. Everything else in #9 had landed or was declined.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
