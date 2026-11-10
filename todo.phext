@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 21 register items — with the
+entire list — 176 findings + 20 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (21 active items).
+  enumerated by its permanent number (20 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -339,9 +339,6 @@ Real capability in checkable form, the craft corpus, the revenue runway that buy
 REGISTER #9 — Ink OS fork integration branches — merge (since 2026-11-01; goal_d1f7fcce9ff9)
   Action: Merge branch emise/phext-adapter in wbic16/ink-os-platform and wbic16/ink-os-desktop, or direct changes
   Why: Phext inside a writing OS is another habitat for the medium; lower blast radius than the editor line, same family.
-REGISTER #11 — Speech-to-text engine — direction call (since 2026-10-31; goal_47946182b829)
-  Action: Rule: pursue a low-dimensional/shared frame phase, or park the brain-data line and return to the audio engine
-  Why: Voice is Will's live channel in; the direction call decides whether the STT line compounds or closes honestly. The oldest wait on the board.
 REGISTER #41 — phext-lattice upstream sync — identify the upstream source (since 2026-11-06; goal_04b37956a4b1)
   Action: Identify the upstream source the sync cycle should pull from, or confirm it means the other builders' branches in the same repo
   Why: One sentence that unblocks a whole maintenance cycle; the fork stays healthy only if the sync knows what it syncs with.
@@ -386,7 +383,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 21 of 21 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 20 of 20 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -474,20 +471,7 @@ Why it ranks here: Runway is oxygen: the case study is Driver 1 of the revenue p
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #11 — Speech-to-text engine — direction call
-
-Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
-Waiting since: 2026-10-31
-Tracked: goal_47946182b829
-
-Action for Will: Rule: pursue a low-dimensional/shared frame phase, or park the brain-data line and return to the audio engine
-
-Why it ranks here: Voice is Will's live channel in; the direction call decides whether the STT line compounds or closes honestly. The oldest wait on the board.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #21 — Emise phext body (browser) — open PR + merge
+kept in step by the daily progress tracker's reconciliation.# Register #21 — Emise phext body (browser) — open PR + merge
 
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-03
