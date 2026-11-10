@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 21 register items — with the
+entire list — 176 findings + 20 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (21 active items).
+  enumerated by its permanent number (20 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -354,15 +354,12 @@ REGISTER #46 — Pinned-chat Spaces — send the product feedback draft (since 2
 REGISTER #49 — wishnode.net — one nginx line for the form routes (since 2026-11-07; task 34.6.6/7.7.10/7.6.10)
   Action: Add the include line to the 443 server block of /etc/nginx/sites-available/wishnode.net, then nginx -t + reload
   Why: The Exocortexia suite's public form routes: the NE funnel's storefront stops being a brochure and starts taking citizens in.
-REGISTER #54 — exocortical PR #4 — setup.sh Phase 12 bundles exovim (since 2026-11-09; task 38.6.8/7.6.10/6.5.8)
-  Action: Review + merge PR #4 in wbic16/exocortical (Phase 1 gains the six exovim build deps; Phase 12 builds exovim into /opt/exovim, stamp-idempotent) — live-verified OPEN via the GitHub API at tick 1183
-  Why: The install path that puts the phext editor on a fresh box: exocortical setup is how the exocortex reproduces itself, and bundling exovim makes the editor part of that reproduction rather than a manual side-step.
-REGISTER #55 — quarterexo PR #4 — qexo tool catalog + bundled exovim (since 2026-11-09; task 38.6.8/7.6.10/6.5.8)
-  Action: Review + merge PR #4 in wbic16/quarterexo (static tool catalog in src/tools.rs; exovim entry complete with deps, recipe, and the phcc LUA_MATH_LIBRARY pitfall) — live-verified OPEN via the GitHub API at tick 1183
-  Why: qexo dispatching work needs to know the tools it can install: the catalog turns phext-lattice, rust, phcc, phcpp, phst, and exovim from tribal knowledge into a checkable registry the orchestrator can act on.
-REGISTER #56 — wbic16/exovim PR #2 — merge the exovim 0.12.6.1 release fork (since 2026-11-09; task 31.6.9/8.6.11/6.6.9)
-  Action: Review + merge PR #2 in wbic16/exovim (full fork from Neovim v0.12.6; PR #3 phext-native UI merged into exovim-0.12 first, so this single merge lands both)
-  Why: The release-line exovim (0.12.6-exovim.1, tag + GitHub release exovim-0.12.6.1 already cut) becomes the shipped editor only on this merge; capability/craft tier, same class as the #54/#55 exovim-bundling items.
+REGISTER #57 — exocortical PR #5 — invoke the compiler as phcc, not tcc (since 2026-11-09; task 24.7.12/9.8.11/6.7.10)
+  Action: Review + merge PR #5 in wbic16/exocortical (one line in setup.sh Phase 12 comment block)
+  Why: The tcc→phcc sweep for the merged exovim-bundling work: the installer must invoke the compiler by its own name, phcc — capability/craft tier, same class as the #54/#55 items it follows.
+REGISTER #58 — quarterexo PR #5 — name the phcc binary phcc, not tcc (since 2026-11-09; task 24.7.12/9.8.11/6.7.10)
+  Action: Review + merge PR #5 in wbic16/quarterexo (tools.rs phcc ToolSpec binary and the exovim pitfall recipe now invoke phcc; gates cargo 21/21, CLI 32/32, HTTP/MCP 19/19)
+  Why: Same tcc→phcc sweep on the qexo side: the tool catalog is the orchestrator's registry, and its phcc entry must name the binary it actually installs.
 FINDING 28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
   Why: The Shell searching its own architecture overnight, each seat owning a region: capability compounding under our governance, aimed at the vTPU line.
 FINDING 27.7.9/8.7.12/7.6.10 — staging — First Flames of the Exocortex — a six-book phext book series left in staging (partial build, last touched 2025-12-05)
@@ -386,7 +383,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 21 of 21 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 20 of 20 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -669,41 +666,28 @@ Why it ranks here: qexo is the medium's dispatcher: PR #3 merged into exo (bc1d6
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #54 — exocortical PR #4 — setup.sh Phase 12 bundles exovim
+kept in step by the daily progress tracker's reconciliation.# Register #57 — exocortical PR #5 — invoke the compiler as phcc, not tcc
 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-09
-Tracked: task 38.6.8/7.6.10/6.5.8
+Tracked: task 24.7.12/9.8.11/6.7.10
 
-Action for Will: Review + merge PR #4 in wbic16/exocortical (Phase 1 gains the six exovim build deps; Phase 12 builds exovim into /opt/exovim, stamp-idempotent) — live-verified OPEN via the GitHub API at tick 1183
+Action for Will: Review + merge PR #5 in wbic16/exocortical (one line in setup.sh Phase 12 comment block)
 
-Why it ranks here: The install path that puts the phext editor on a fresh box: exocortical setup is how the exocortex reproduces itself, and bundling exovim makes the editor part of that reproduction rather than a manual side-step.
+Why it ranks here: The tcc→phcc sweep for the merged exovim-bundling work: the installer must invoke the compiler by its own name, phcc — capability/craft tier, same class as the #54/#55 items it follows.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #55 — quarterexo PR #4 — qexo tool catalog + bundled exovim
+kept in step by the daily progress tracker's reconciliation.# Register #58 — quarterexo PR #5 — name the phcc binary phcc, not tcc
 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-09
-Tracked: task 38.6.8/7.6.10/6.5.8
+Tracked: task 24.7.12/9.8.11/6.7.10
 
-Action for Will: Review + merge PR #4 in wbic16/quarterexo (static tool catalog in src/tools.rs; exovim entry complete with deps, recipe, and the phcc LUA_MATH_LIBRARY pitfall) — live-verified OPEN via the GitHub API at tick 1183
+Action for Will: Review + merge PR #5 in wbic16/quarterexo (tools.rs phcc ToolSpec binary and the exovim pitfall recipe now invoke phcc; gates cargo 21/21, CLI 32/32, HTTP/MCP 19/19)
 
-Why it ranks here: qexo dispatching work needs to know the tools it can install: the catalog turns phext-lattice, rust, phcc, phcpp, phst, and exovim from tribal knowledge into a checkable registry the orchestrator can act on.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #56 — wbic16/exovim PR #2 — merge the exovim 0.12.6.1 release fork
-
-Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
-Waiting since: 2026-11-09
-Tracked: task 31.6.9/8.6.11/6.6.9
-
-Action for Will: Review + merge PR #2 in wbic16/exovim (full fork from Neovim v0.12.6; PR #3 phext-native UI merged into exovim-0.12 first, so this single merge lands both)
-
-Why it ranks here: The release-line exovim (0.12.6-exovim.1, tag + GitHub release exovim-0.12.6.1 already cut) becomes the shipped editor only on this merge; capability/craft tier, same class as the #54/#55 exovim-bundling items.
+Why it ranks here: Same tcc→phcc sweep on the qexo side: the tool catalog is the orchestrator's registry, and its phcc entry must name the binary it actually installs.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
