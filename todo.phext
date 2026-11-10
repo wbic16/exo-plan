@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 20 register items — with the
+entire list — 176 findings + 21 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (20 active items).
+  enumerated by its permanent number (21 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -360,6 +360,9 @@ REGISTER #57 — exocortical PR #5 — invoke the compiler as phcc, not tcc (sin
 REGISTER #58 — quarterexo PR #5 — name the phcc binary phcc, not tcc (since 2026-11-09; task 24.7.12/9.8.11/6.7.10)
   Action: Review + merge PR #5 in wbic16/quarterexo (tools.rs phcc ToolSpec binary and the exovim pitfall recipe now invoke phcc; gates cargo 21/21, CLI 32/32, HTTP/MCP 19/19)
   Why: Same tcc→phcc sweep on the qexo side: the tool catalog is the orchestrator's registry, and its phcc entry must name the binary it actually installs.
+REGISTER #59 — exovim PR #5 — phcc naming sweep (exovim branch) (since 2026-11-09; task 24.7.12/9.8.11/6.7.10)
+  Action: Review + merge PR #5 in wbic16/exovim (one line in PHEXT.md: the phcc build recipe now names the phcc binary; recipe re-verified exactly as written — phcc-built exovim, integration 54/54; upstream release-0.12 unchanged at the pin)
+  Why: Same tcc→phcc sweep on the exovim side: the build recipe in the fork must invoke the compiler by its own name, phcc — capability/craft tier, same class as the #57/#58 items it follows.
 FINDING 28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
   Why: The Shell searching its own architecture overnight, each seat owning a region: capability compounding under our governance, aimed at the vTPU line.
 FINDING 27.7.9/8.7.12/7.6.10 — staging — First Flames of the Exocortex — a six-book phext book series left in staging (partial build, last touched 2025-12-05)
@@ -383,7 +386,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 20 of 20 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 21 of 21 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -688,6 +691,19 @@ Tracked: task 24.7.12/9.8.11/6.7.10
 Action for Will: Review + merge PR #5 in wbic16/quarterexo (tools.rs phcc ToolSpec binary and the exovim pitfall recipe now invoke phcc; gates cargo 21/21, CLI 32/32, HTTP/MCP 19/19)
 
 Why it ranks here: Same tcc→phcc sweep on the qexo side: the tool catalog is the orchestrator's registry, and its phcc entry must name the binary it actually installs.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #59 — exovim PR #5 — phcc naming sweep (exovim branch)
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-09
+Tracked: task 24.7.12/9.8.11/6.7.10
+
+Action for Will: Review + merge PR #5 in wbic16/exovim (one line in PHEXT.md: the phcc build recipe now names the phcc binary; recipe re-verified exactly as written — phcc-built exovim, integration 54/54; upstream release-0.12 unchanged at the pin)
+
+Why it ranks here: Same tcc→phcc sweep on the exovim side: the build recipe in the fork must invoke the compiler by its own name, phcc — capability/craft tier, same class as the #57/#58 items it follows.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
