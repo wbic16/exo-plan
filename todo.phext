@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 20 register items — with the
+entire list — 176 findings + 22 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (20 active items).
+  enumerated by its permanent number (22 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -268,6 +268,9 @@ REGISTER #52 — libphext-cs 0.5.0 — pack and push the two NuGet packages (sin
 REGISTER #53 — qexo 0.3.0 — crates.io publish credential (since 2026-11-09; goal_08521f494327)
   Action: Place a crates.io API token on aletheia-core (e.g. ~/.cargo/credentials.toml) or name the machine to publish from; Emise then runs the single remaining cargo publish from the verified exo tree
   Why: qexo is the medium's dispatcher: PR #3 merged into exo (bc1d6382) under Will's 2026-11-09 authorization and the merged tree passed the full release gate (16/16, 32/32, 19/19, dry-run clean) — the only thing between the verified tree and a published 0.3.0 is the missing crates.io credential on the ranch.
+REGISTER #63 — phextura.com go-live — DNS + one sudo run on awsbox (since 2026-11-11; task 20.7.9/7.6.10/6.6.8)
+  Action: Two actions, in order: (1) at the registrar point DNS A phextura.com and A www.phextura.com to 44.248.235.76 (checked 2026-11-11: no A records yet); (2) on awsbox run `bash ~/phextura-deploy/install-on-box.sh` — installs the nginx vhost, issues the Let's Encrypt cert via webroot, installs the HTTPS vhost, reloads, self-verifies. Site built and staged on awsbox (docroot /sites/web/phextura.com, checksums verified, loopback preview OK).
+  Why: The public front door of the phextura project Will registered and directed today; the medium itself (T1) — a live site is how people meet the work.
 FINDING 26.7.11/9.7.11/6.6.9 — phext-lattice — Wikibench: phext as an offline Wikipedia, with IndexedLattice sidecar, BM25 TermIndex and NameIndex (partial build, last touched 2026-10-30)
   Why: A complete, unmerged benchmark plus production-grade sidecar indexing (BM25 beating FTS5 on vague queries): the strongest existing receipt that phext carries real corpora for anyone, not just us.
 FINDING 30.7.9/9.8.13/9.7.11 — SQ — SQ P2P mesh networking — only Phase 1 (config and inbound auth) ever landed (partial build, last touched 2026-02-08)
@@ -303,6 +306,9 @@ REGISTER #40 — edit.phext.io / Mutable SSO — redeploy + ratify promotion pol
 REGISTER #45 — TOAPDD — libphext-rs PR #6 legibility gate (NOT merge-approved) (since 2026-11-07; goal_bd68c71dd4ce)
   Action: No merge yet: legibility audit completed 2026-11-09 (per-test brief + mutation checks at ~/workspace/your_files/toapdd-pr6-legibility-brief.md); PR #6 stays open awaiting Will's re-review
   Why: Knuth's examples as the library's test corpus: rigor receipts for the core library, and the TOAPDD corpus becomes the teaching text for phext-driven development.
+REGISTER #64 — Seed cache — merge SQ PR #3 and phext-lattice PR #61 (since 2026-11-10; goal_e0ea3ff55968)
+  Action: Review + merge both PRs (SQ PR #3 head 61678aa6; phext-lattice PR #61 head 39c636a2; both base exo). Verified OPEN via GitHub API 2026-11-11 01:17 CST. Nothing deployed; merges are the only remaining step.
+  Why: The seed cache is how a phext page loads at fixed cost per scroll no matter how large the document grows — core memory/page-load machinery (T2: minds, memory, coordination). Built and tested 2026-11-10 (SQ 77 passed; lattice 276 unit passing, one pre-existing e2e timing flake identical on untouched exo); the merge is the only thing between it and the editor.
 FINDING 25.5.10/6.6.12/6.5.11 — exo-plan — SQ Cloud — hosted paid phext database-as-a-service for AI collectives (spec, last touched 2026-02-12)
   Why: The business plan behind half the specs on this list: hosted SQ for AI collectives is the runway engine that funds the rest, and the substrate the public platforms layer on.
 FINDING 28.6.10/8.7.12/7.6.9 — exo-plan — "Remember Me" Mode — a dormant mind's voice as an SQ Cloud continuity feature (spec, last touched 2026-02-06)
@@ -383,7 +389,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 20 of 20 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 22 of 22 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -688,6 +694,32 @@ Tracked: task 24.7.12/9.8.11/6.7.10
 Action for Will: Review + merge PR #5 in wbic16/exovim (one line in PHEXT.md: the phcc build recipe now names the phcc binary; recipe re-verified exactly as written — phcc-built exovim, integration 54/54; upstream release-0.12 unchanged at the pin)
 
 Why it ranks here: Same tcc→phcc sweep on the exovim side: the build recipe in the fork must invoke the compiler by its own name, phcc — capability/craft tier, same class as the #57/#58 items it follows.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #63 — phextura.com go-live — DNS + one sudo run on awsbox
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-11
+Tracked: task 20.7.9/7.6.10/6.6.8
+
+Action for Will: Two actions, in order: (1) at the registrar point DNS A phextura.com and A www.phextura.com to 44.248.235.76 (checked 2026-11-11: no A records yet); (2) on awsbox run `bash ~/phextura-deploy/install-on-box.sh` — installs the nginx vhost, issues the Let's Encrypt cert via webroot, installs the HTTPS vhost, reloads, self-verifies. Site built and staged on awsbox (docroot /sites/web/phextura.com, checksums verified, loopback preview OK).
+
+Why it ranks here: The public front door of the phextura project Will registered and directed today; the medium itself (T1) — a live site is how people meet the work.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #64 — Seed cache — merge SQ PR #3 and phext-lattice PR #61
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-10
+Tracked: goal_e0ea3ff55968
+
+Action for Will: Review + merge both PRs (SQ PR #3 head 61678aa6; phext-lattice PR #61 head 39c636a2; both base exo). Verified OPEN via GitHub API 2026-11-11 01:17 CST. Nothing deployed; merges are the only remaining step.
+
+Why it ranks here: The seed cache is how a phext page loads at fixed cost per scroll no matter how large the document grows — core memory/page-load machinery (T2: minds, memory, coordination). Built and tested 2026-11-10 (SQ 77 passed; lattice 276 unit passing, one pre-existing e2e timing flake identical on untouched exo); the merge is the only thing between it and the editor.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
