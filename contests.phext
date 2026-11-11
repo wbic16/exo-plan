@@ -1,0 +1,276 @@
+# contests.phext — the hackathon sweep register
+
+Will's declaration (2026-11-10 21:59 CST, MOAT): "We're going
+to target winning them all." His framing of the sweep:
+"(How else do you demonstrate AGI?)" Campaign task:
+27.4.12/7.6.10/5.6.8. Plan:
+~/workspace/hackathon-campaign/CAMPAIGN.md. Source research:
+~/workspace/research_notes/online-ai-hackathons-nov2026-feb2027-20261111-0314/report.md.
+
+Every contest in the sweep has one scroll here, at
+1.1.1/1.1.1/1.1.(k+1), in official-deadline order, holding its
+window, deadline, prize, eligibility, AI-tool stance,
+submission requirements, internal target, status, and
+verification note. Source of truth: contests-source.json
+beside this builder (build_contests_phext.py); never
+hand-edit the .phext. Published at wbic16/exo-plan@exo, repo
+root, beside todo.phext.
+
+Standing constraints: Will is the entrant of record
+everywhere (team caps count humans; the Choir is the
+workshop, not the roster). Each Devpost event gets its own
+NEW build on its own stack inside its submission window.
+Kaggle entries are independent efforts and run on Kaggle's
+compute. Drafts and builds proceed without waiting; the act
+of entering or submitting under Will's name gets his eyes
+first.
+
+Buffer policy (so every deadline is hit with room to spare):
+internal submit-ready target = official close minus 3 days
+for Devpost build events; minus 2 days for Kaggle finals;
+UGREEN Round 1 target Nov 13, 2026 (minus 2); Agent Harness
+target Dec 29, 2026 (minus ~7, hedging its unconfirmed
+close); United Hacks is a live weekend — build plan frozen
+by Jan 6, 2027; Hack-Nation target Feb 24, 2027; MLH Global
+Hack Week has no target (exhibition, no prize deadline).
+
+Verification legend: facts marked with a dagger (†) rest on
+secondary sources quoting the organizer's pages, not on the
+organizer's rendered page itself — confirm them on the
+platform before committing a run.
+
+Contests in the sweep: 13
+
+Deadline board (official close — internal target — status):
+- 1. UGREEN Hackathon 2026 on AI NAS — Round 1 closes Nov 15, 2026, 11:45 PM PT. Round 2 closes Nov 30, 2026, 11:45 PM PT. — target: Round 1 submit-ready by Nov 13, 2026 (official close minus 2 days). — round 1 drafted
+- 2. #BuildHybridAI 2026 — Nov 30, 2026, 2:00 PM PT. — target: Submit-ready by Nov 27, 2026 (official close minus 3 days). — not started
+- 3. The Gemma 4 Developer Agent Competition — Final submission Dec 2, 2026, 11:59 PM UTC. — target: Submit-ready by Nov 30, 2026 (official close minus 2 days); the entry plan freezes final candidates Nov 29, 2026. — entry plan complete
+- 4. Kiroween 2026 — Dec 4, 2026, 2:00 PM PT. — target: Submit-ready by Dec 1, 2026 (official close minus 3 days). — not started
+- 5. MLH Global Hack Week: Open Source Week — No prize deadline - exhibition event; no exact registration cutoff was found on MLH's pages. — target: None (exhibition). — not started
+- 6. Enveda CASMI 2026 - Molecule ID From Mass Spectra — Final submission Dec 14, 2026, 11:59 PM UTC †. — target: Submit-ready by Dec 12, 2026 (official close minus 2 days). — not started
+- 7. Codegeist 2026 — Dec 22, 2026, 12:00 PM PT. — target: Submit-ready by Dec 19, 2026 (official close minus 3 days). — not started
+- 8. Agent Harness on Physical-Engineering's Last Exam — ~Jan 5, 2027 † - NOT confirmed on Kaggle's own page; a third-party listing (TensorHack) showed '55d left' on Nov 11, 2026. — target: Submit-ready by Dec 29, 2026 (minus ~7 days, hedging the unconfirmed close). — not started
+- 9. NFL Big Data Bowl 2027 — Final submission Jan 6, 2027, 11:59 PM UTC †. — target: Submit-ready by Jan 4, 2027 (official close minus 2 days). — not started
+- 10. United Hacks V8 — Submissions Jan 10, 2027, 12:00 PM EST (live weekend event). — target: Build plan frozen by Jan 6, 2027 (live-weekend event: the plan, stack and team roles are the deliverable before the weekend). — not started
+- 11. Name That LLM — Final submission Jan 13, 2027, 11:59 PM UTC †. — target: Submit-ready by Jan 11, 2027 (official close minus 2 days). — not started
+- 12. Verifiable Quantum Circuit Compilation — Final submission Jan 20, 2027 †. — target: Submit-ready by Jan 18, 2027 (official close minus 2 days). — not started
+- 13. Hack-Nation - 8th Global AI Hackathon — Submission Feb 28, 2027, 9:00 AM ET. — target: Submit-ready by Feb 24, 2027. — not started
+# 1. UGREEN Hackathon 2026 on AI NAS
+
+Coordinate: 1.1.1/1.1.1/1.1.2
+Organizer / platform: UGREEN (Devpost)
+Event: https://ugreenhackathon.devpost.com/
+Window: Registration & Round 1: Oct 22 - Nov 15, 2026. Finalist invitations Nov 21, 2026. Round 2: Nov 22-30, 2026 (each finalist gets one assigned testing day, Nov 22-28, on an iDX6011 Pro, 64GB). Winners announced ~Dec 6, 2026.
+Official deadline: Round 1 closes Nov 15, 2026, 11:45 PM PT. Round 2 closes Nov 30, 2026, 11:45 PM PT.
+Internal target: Round 1 submit-ready by Nov 13, 2026 (official close minus 2 days).
+Prize: $46,000 total: Gold $20,000 / Silver $10,000 / Bronze $6,000 / Most Creative $5,000 x2. One prize per project.
+Eligibility: Individuals and teams of up to 3, age of majority. Existing organizations are NOT eligible. US eligible (Quebec excluded); the rules' country list excludes India, China, Brazil, Russia, Ukraine and others.
+AI tools: Disclosure required: SKILL.md or its references must disclose the AI tools used and their principal uses, third-party components with sources and licenses, and the principal functionality developed for the hackathon.
+Submission: Round 1: (1) a PDF (<=1 MB) answering ten specified questions, <=500 English words total across the ten responses; (2) a Skill Package ZIP (<=10 MB, <=1 MB per file, <=100 files) containing SKILL.md. Skills must follow the Uliya Skill Development Standard and use supported UGOS CLI capabilities through registered expert agents - custom executables, scripts and binaries are PROHIBITED in the package. Judging, equal weights: User Value, Innovation & Differentiation, Technical Quality, AI NAS Fit & Validation.
+Status: round 1 drafted
+Verification: Verified from the official rules and event page fetched 2026-11-10; these facts supersede the research report's index notes where they differ (the PDF is a ten-question form, not a free-form proposal).
+
+Notes:
+- Our entry: 'Phext Memory' - a personal-memory skill: the owner's corpus as phext plain text on their own NAS, four operations (read / write / search / navigate) exposed via UGOS capabilities; the existing phext MCP server is disclosed as prior reference work, not a package component.
+- Current artifact: round-1 draft at ~/workspace/hackathon-campaign/ugreen/ (proposal.md + SKILL.md; the ten responses total 476 words).
+- New-work rule: the Skill and its core workflow must be newly developed during the hackathon; pre-conceived ideas and prior components are allowed with disclosure. Hold that line in all later materials.
+- Open item: the phext license-name placeholder in SKILL.md ('as published with the format's source') must be confirmed from the phext repo before the package is finalized.
+- Open technical question: whether UGOS exposes skills to external MCP clients is not verified; it needs the Starter Kit docs (ai.ugreen.com/pages/hackathon-starter-kit).
+# 2. #BuildHybridAI 2026
+
+Coordinate: 1.1.1/1.1.1/1.1.3
+Organizer / platform: Google / Firebase (Devpost)
+Event: https://firebasehybridaihackathon.devpost.com/
+Window: Submissions Nov 11 - Nov 30, 2026.
+Official deadline: Nov 30, 2026, 2:00 PM PT.
+Internal target: Submit-ready by Nov 27, 2026 (official close minus 3 days).
+Prize: $30,000 cash pool. Grand-prize figure conflicts on the event's own page: prose says $10,000 (plus $3,000 per platform award); the prize widget says $30,000. Unresolved - do not rely on either until the official rules post.
+Eligibility: Individuals, teams and organizations in 'most countries'. New or significantly-updated existing apps are eligible.
+AI tools: Explicitly welcomed: 'Build with any AI coding tool or IDE... such as Antigravity, Android Studio, Claude Code, Codex or Cursor.'
+Submission: Working demo app; public GitHub/GitLab repo with an open-source license showing Firebase AI Logic actually being called; demo video <=3 min (YouTube, English or English subtitles); text description. Hard constraint: all app AI inference must go through Firebase AI Logic (on-device + cloud hybrid); direct calls to other model APIs are not allowed.
+Status: not started
+Verification: Dates, theme and AI-tool stance read on the event's own Devpost page (index fetch, 2026-11-11). The Devpost rules page said 'Official Rules are not yet available' at fetch time - re-check the rules before building.
+# 3. The Gemma 4 Developer Agent Competition
+
+Coordinate: 1.1.1/1.1.1/1.1.4
+Organizer / platform: Google DeepMind (Kaggle)
+Event: https://www.kaggle.com/competitions/gemma-4-developer-agent
+Window: Paper Track closes Nov 12, 2026. Entry / rules-acceptance deadline Nov 25, 2026. Final submission Dec 2, 2026, 23:59 UTC.
+Official deadline: Final submission Dec 2, 2026, 11:59 PM UTC.
+Internal target: Submit-ready by Nov 30, 2026 (official close minus 2 days); the entry plan freezes final candidates Nov 29, 2026.
+Prize: $110,000 total, confirmed on Kaggle's own page: main track $65,000 (1st $37,000 / 2nd $18,000 / 3rd $10,000), Paper Track $35,000, Small Model Development bonus $10,000 (best entry built on Gemma 4 E2B/E4B; LoRA allowed). The $75,000 figure in early coverage was a stale header and is dropped.
+Eligibility: Teams up to 5; 18+ / age of majority; worldwide except sanctioned regions.
+AI tools: The entry IS a post-trained model agent: post-train an open Gemma 4 model into an offline coding agent that fixes Python bugs. LoRA fine-tuning is allowed.
+Submission: A declarative-YAML ADK agent package (submission.zip, optional LoRA adapters) - NOT a Kaggle notebook. Evaluation runs on Kaggle's harness: the agent works in an air-gapped sandbox, its patch is extracted and verified SWE-bench-style; metric is Resolution Rate.
+Status: entry plan complete
+Verification: Prize total and the Nov 25 / Dec 2 dates corroborated on Kaggle's own pages, 2026-11-10 evening (this supersedes the research report's dagger flags for this contest). Still unverified: per-task caps and the 3 GiB zip cap rest on secondary sources quoting the harness README - resolving them is the entry plan's first action.
+
+Notes:
+- Entry plan: ~/workspace/hackathon-campaign/gemma4/PLAN.md - Slot A: E4B + LoRA; Slot B: 31B QAT; finals freeze Nov 29, 2026.
+- Paper Track (separate line): closes Nov 12, 2026 - closes before campaign start; Hail Mary only. Status: not pursued unless a submittable write-up already exists.
+# 4. Kiroween 2026
+
+Coordinate: 1.1.1/1.1.1/1.1.5
+Organizer / platform: Kiro / AWS (Devpost)
+Event: https://kiroween.devpost.com/
+Window: Registration Oct 13 - Dec 4, 2026. Submission period Oct 30 - Dec 4, 2026. Judging Dec 16, 2026 - Jan 29, 2027; winners ~Feb 3, 2027.
+Official deadline: Dec 4, 2026, 2:00 PM PT.
+Internal target: Submit-ready by Dec 1, 2026 (official close minus 3 days).
+Prize: $100,000 cash: 1st $30,000 / 2nd $20,000 / 3rd $10,000; four category prizes of $5,000 (Resurrection, Frankenstein, Skeleton Crew, Costume Contest); Best Startup $10,000; student bonuses $1,500.
+Eligibility: Age of majority; teams max 3; organizations allowed. Excluded: Quebec, Argentina, Australia, Brazil, Italy, Philippines, Russia, UAE, Cuba, Iran, North Korea, Syria, Belarus, Crimea/DNR/LNR and OFAC-sanctioned (US otherwise eligible).
+AI tools: Kiro use is mandatory and central: build a NEW working app using Kiro (IDE/CLI/Web/Crew) during the submission period.
+Submission: Public GitHub repo with an open-source license AND a /.kiro directory at the repo root; app URL; text description; demo video <3 min (YouTube); a write-up on how Kiro was used.
+Status: not started
+Verification: Dates, prizes, eligibility and submission shape read on the event's own Devpost page and rules page (index fetch, 2026-11-11).
+
+Notes:
+- December's forcing function: the Dec 4 close is the earliest of the December Devpost builds.
+# 5. MLH Global Hack Week: Open Source Week
+
+Coordinate: 1.1.1/1.1.1/1.1.6
+Organizer / platform: MLH
+Event: https://ghw.mlh.com/events/open-source
+Window: Event Dec 4-10, 2026, online, free.
+Official deadline: No prize deadline - exhibition event; no exact registration cutoff was found on MLH's pages.
+Internal target: None (exhibition).
+Prize: No prize pool stated.
+Eligibility: Open to anyone, anywhere.
+AI tools: Silent. The week is not AI-themed; format is community challenges and workshops.
+Submission: Community/challenges format; nothing prize-bearing to submit.
+Status: not started
+Verification: Read on MLH's own pages (index fetch, 2026-11-11). MLH has no AI-focused online event in the window; its Jan-Feb 2027 season events are in-person and student-oriented.
+
+Notes:
+- In the sweep as exhibition/honors only - there is no winner to take. Effort goes here only after prize events are covered.
+# 6. Enveda CASMI 2026 - Molecule ID From Mass Spectra
+
+Coordinate: 1.1.1/1.1.1/1.1.7
+Organizer / platform: Enveda (Kaggle)
+Event: https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra
+Window: Opened Sep 14, 2026. Entry deadline Dec 7, 2026 †. Final submission Dec 14, 2026, 11:59 PM UTC †.
+Official deadline: Final submission Dec 14, 2026, 11:59 PM UTC †.
+Internal target: Submit-ready by Dec 12, 2026 (official close minus 2 days).
+Prize: $50,000 to the top 5 ($16,000 / $12,000 / $9,000 / $7,000 / $6,000), per Enveda's Business Wire release.
+Eligibility: 18+ / age of majority, worldwide †.
+AI tools: Standard Kaggle code competition; no special AI-tool stance recorded.
+Submission: A file (molecule_id,smiles) with up to 25 SMILES candidates per molecule, best first; scored MRR@25. Winning solutions under MIT license.
+Status: not started
+Verification: Submission format and scoring (MRR@25) confirmed on Kaggle's own page (index fetch, 2026-11-11). Exact dates and the prize split are †: secondary sources (Business Wire release and sources quoting the Kaggle overview), not read on a rendered Kaggle timeline - confirm on Kaggle before committing the run.
+
+Notes:
+- Niche ML-for-chemistry; the weakest theme fit in the sweep, kept because the campaign targets all of them.
+# 7. Codegeist 2026
+
+Coordinate: 1.1.1/1.1.1/1.1.8
+Organizer / platform: Atlassian (Devpost)
+Event: https://codegeist2026.devpost.com/
+Window: Registration & submission period Oct 27 - Dec 22, 2026. Judging Jan 5 - Feb 3, 2027; winners announced ~Feb 15, 2027.
+Official deadline: Dec 22, 2026, 12:00 PM PT.
+Internal target: Submit-ready by Dec 19, 2026 (official close minus 3 days).
+Prize: $120,000+ pool: 1st $15,000 x3 categories, 2nd $8,000 x3, 3rd $5,000 x3; six bonus prizes of $1,500 including Best Agents (Rovo), Best app with Atlassian MCP, Best Teamwork Graph integration, Best Marketplace app.
+Eligibility: Age of majority; individuals, teams and organizations. Excluded: Brazil, Quebec, Russia, Belarus, Crimea, Cuba, Iran, North Korea, Syria, Sudan, Myanmar and OFAC-sanctioned (US otherwise eligible).
+AI tools: Silent beyond the structure: the Best Agents (Rovo) and Atlassian MCP bonus categories directly reward agent tooling.
+Submission: A Forge app integrating at least one Atlassian product/capability (Jira, Confluence, Jira Service Management, Bitbucket, Teamwork Graph, Rovo); installation link for judges; demo video <5 min (YouTube, public); category/bonus selection; text description.
+Status: not started
+Verification: Dates, prizes, eligibility and submission shape read on the event's own Devpost page and rules page (index fetch, 2026-11-11).
+
+Notes:
+- The phext-edit MCP work is the natural seed capability for the Atlassian MCP bonus angle - but the entry must be its own new Forge build, not a resubmission.
+# 8. Agent Harness on Physical-Engineering's Last Exam
+
+Coordinate: 1.1.1/1.1.1/1.1.9
+Organizer / platform: Google (Kaggle Featured Hackathon)
+Event: https://www.kaggle.com/competitions/physical-engineerings-last-exam
+Window: Started ~Nov 10, 2026; Kaggle's own page says '2 months to go'. Close ~Jan 5, 2027 † (third-party estimate only).
+Official deadline: ~Jan 5, 2027 † - NOT confirmed on Kaggle's own page; a third-party listing (TensorHack) showed '55d left' on Nov 11, 2026.
+Internal target: Submit-ready by Dec 29, 2026 (minus ~7 days, hedging the unconfirmed close).
+Prize: $400,000 pool; prizes to the top 3 on the performance-cost Pareto frontier.
+Eligibility: Kaggle entrants; entry is only via Kaggle Writeups (registration via ple-bench.com is closed).
+AI tools: Restrictive by design: the model_api must be one of 8 official sponsored models only; custom API keys, external servers and web search are blocked.
+Submission: Kaggle Writeup (<=2,000 words, rubric-scored, 3 required figures) + a GitHub repo pinned by a 40-character commit SHA containing submission.yaml, serve.py/harness.py, artifacts/, Apache-2.0/MIT license. Theme: autonomous agent harnesses solving structural/civil/electrical/mechanical engineering exam tasks. Top 100 entries advance to live execution on 56 hidden tasks.
+Status: not started
+Verification: Prize pool, format and submission shape confirmed on Kaggle's own page (index fetch, 2026-11-11). The exact closing date is † third-party only - confirm on Kaggle before committing the run.
+
+Notes:
+- The flagship: biggest purse in the sweep and the theme - building agent harnesses - is the home game.
+# 9. NFL Big Data Bowl 2027
+
+Coordinate: 1.1.1/1.1.1/1.1.10
+Organizer / platform: NFL Football Operations (Kaggle)
+Event: https://www.kaggle.com/competitions/nfl-big-data-bowl-2027
+Window: Opened Oct 6, 2026. Final submission Jan 6, 2027, 11:59 PM UTC †.
+Official deadline: Final submission Jan 6, 2027, 11:59 PM UTC †.
+Internal target: Submit-ready by Jan 4, 2027 (official close minus 2 days).
+Prize: $100,000: Open Track $45,000 + University Track $45,000 (undergraduates only) + Grand Prize $10,000 †.
+Eligibility: Open Track has no entry restrictions; teams up to 5; some country exclusions (Crimea/DNR/LNR, Cuba, Iran, North Korea). We enter the Open Track.
+AI tools: Standard Kaggle competition; no special AI-tool stance recorded.
+Submission: Kaggle Writeup <=2,000 words with <10 tables/figures + a public Kaggle notebook; entrants must click Submit (a draft does not count). Theme: 'Combine to NFL Performance' - 10 Hz Combine tracking data vs regular-season performance.
+Status: not started
+Verification: Theme confirmed on Kaggle's own overview (index fetch, 2026-11-11). Exact dates and the prize split are †: secondary sources quoting the Kaggle overview - confirm on Kaggle before committing the run.
+# 10. United Hacks V8
+
+Coordinate: 1.1.1/1.1.1/1.1.11
+Organizer / platform: Hack United (own site + Devpost)
+Event: https://unitedhacks.hackunited.org/
+Window: Live online event Jan 8-10, 2027 (opening Jan 8, 7 PM EST). Submissions due Jan 10, 2027, 12:00 PM EST.
+Official deadline: Submissions Jan 10, 2027, 12:00 PM EST (live weekend event).
+Internal target: Build plan frozen by Jan 6, 2027 (live-weekend event: the plan, stack and team roles are the deliverable before the weekend).
+Prize: Unresolved conflict: the organizer's own site says '$25k+ in prizes'; its Devpost listing says $18,700.
+Eligibility: Ages 13+, anywhere in the world; students and professionals; teams up to 4; solo OK.
+AI tools: Silent. General theme ('build anything: web, mobile, hardware, ai, games') plus a secret theme track revealed at the opening; projects must be original and built during the weekend.
+Submission: Demo video, GitHub repo, text description.
+Status: not started
+Verification: Dates and eligibility read on the organizer's own site (index fetch, 2026-11-11). Prize total unverified - two of the organizer's own surfaces disagree.
+# 11. Name That LLM
+
+Coordinate: 1.1.1/1.1.1/1.1.12
+Organizer / platform: Google LLC, sponsor (Kaggle Featured Code Competition)
+Event: https://www.kaggle.com/competitions/name-that-llm
+Window: Opened Oct 14, 2026. Entry deadline Jan 6, 2027 †. Final submission Jan 13, 2027, 11:59 PM UTC †.
+Official deadline: Final submission Jan 13, 2027, 11:59 PM UTC †.
+Internal target: Submit-ready by Jan 11, 2027 (official close minus 2 days).
+Prize: $50,000 = ten prizes of $5,000 for places 1-10 † (pool confirmed on Kaggle's own page; the split is from secondary coverage).
+Eligibility: Teams up to 5; 18+ / age of majority; worldwide except Crimea/DNR/LNR, Cuba, Iran, North Korea and sanctioned persons †.
+AI tools: Standard Kaggle code competition; notebooks are re-run on a hidden test set with no internet access †.
+Submission: A Kaggle notebook that writes submission.parquet (id, model). Task: classify which of 18 frontier LLMs (OpenAI, Google, Anthropic, Qwen, ZAI, Moonshot AI) wrote a given text passage; scored on balanced accuracy.
+Status: not started
+Verification: Existence, host, $50,000 pool and code-competition format confirmed on Kaggle's own page (index fetch, 2026-11-11). Exact dates, prize split, eligibility detail and the no-internet re-run are †: secondary sources quoting the Kaggle overview - confirm on Kaggle before committing the run.
+# 12. Verifiable Quantum Circuit Compilation
+
+Coordinate: 1.1.1/1.1.1/1.1.13
+Organizer / platform: Google Quantum AI (Kaggle Featured)
+Event: https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation
+Window: Entry deadline Jan 13, 2027 †. Final submission Jan 20, 2027 †. A $10,000 mid-competition milestone prize is tied to the public leaderboard at Nov 20, 2026 and requires a public notebook †.
+Official deadline: Final submission Jan 20, 2027 †.
+Internal target: Submit-ready by Jan 18, 2027 (official close minus 2 days).
+Prize: $150,000 pool (confirmed on Kaggle's own pages; top-prize breakdown NOT captured). Plus the $10,000 milestone prize above †.
+Eligibility: Kaggle entrants; full eligibility detail was NOT captured - verify on Kaggle.
+AI tools: Kaggle's own overview explicitly notes that AI coding agents were used successfully in a similar 2026 challenge - an agent-strong team has a plausible angle despite the niche domain.
+Submission: Compressed 'kickmix' quantum circuits (fusion energy, combinatorial optimization / DQI, quantum chemistry) passing the competition's fuzz-testing verifier; no quantum background required per the overview.
+Status: not started
+Verification: Existence, host, $150,000 pool and '2 months to go' read on Kaggle's own pages (index fetch, 2026-11-11). Exact dates are † (Kaggle LinkedIn + secondary sources); prize breakdown and full eligibility unverified - confirm on Kaggle before committing the run.
+# 13. Hack-Nation - 8th Global AI Hackathon
+
+Coordinate: 1.1.1/1.1.1/1.1.14
+Organizer / platform: Hack-Nation
+Event: https://hack-nation.ai/start
+Window: Event Feb 27-28, 2027 (24-hour build). Submission deadline Feb 28, 2027, 9:00 AM ET. Finalist pitches virtual, Mar 6, 2027.
+Official deadline: Submission Feb 28, 2027, 9:00 AM ET.
+Internal target: Submit-ready by Feb 24, 2027.
+Prize: $30k+ in cash and credits (no top-prize split stated on the page).
+Eligibility: Admission is application/approval-based - applications open does not mean guaranteed entry. Solo entry OK (~50% join solo). Age/region eligibility is not stated on the page viewed.
+AI tools: Silent on the page viewed.
+Submission: Saved project + Demo Video + Tech Video + Team Video + live Demo Link + public GitHub repo + team photo.
+Status: not started
+Verification: VERIFIED LIVE on the organizer's own site, 2026-11-11 - the only event in the sweep verified live rather than by index fetch. Format caveat: HYBRID (online plus global hubs); the FAQ explicitly allows joining virtually from home, but it is not fully virtual-only. A HackerNoon article gave Jan 30-31, 2027; the official site's Feb 27-28 wins.
+
+Notes:
+- The February closer: the only February 2027 AI hackathon found in the scan.
+- Application-based admission means the application itself is an early deliverable - do not leave it to February.
+# Out of scope
+
+Coordinate: 1.1.1/1.1.1/1.1.15
+
+AMD AI League (lablab.ai): Individual participation only - the event page answers 'Can I play in a team? No' - and its final build Match ends Nov 14, 2026, before the campaign window effectively opens; only league points/courses accrue until Dec 1, 2026 (podium $2,500 / $1,500 / $1,000). Out of scope for the team sweep unless Will plays it personally as a solo side-entry.
+
+The research scan also recorded 18 near-misses (closed, student-only, partner-restricted, in-person, or off-theme events, each with its reason and source). They are not itemized here; the full list lives in the research report: ~/workspace/research_notes/online-ai-hackathons-nov2026-feb2027-20261111-0314/report.md (working notes in its notes/ folder). Platform negatives worth remembering: no lablab.ai event runs fully inside the window; no AI-focused online MLH event exists in the window; no Kaggle competition with a February 2027 deadline was found.
