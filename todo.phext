@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 22 register items — with the
+entire list — 176 findings + 31 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (22 active items).
+  enumerated by its permanent number (31 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -271,6 +271,9 @@ REGISTER #53 — qexo 0.3.0 — crates.io publish credential (since 2026-11-09; 
 REGISTER #65 — Product Hunt Zero Index — merge phext-lattice PR #57 and deploy (since 2026-11-10; goal_b1ebf546f33a)
   Action: Review + merge PR #57 in wbic16/phext-lattice (Zero Index /zeros page, 1,636 zero-vote launches from 2026-11-10), then deploy; live-verified OPEN via GitHub API 2026-11-11 13:13 CST, head cb4bee44
   Why: A public no-login page on edit.phext.io is the medium's front door (same class as #43 Previewer, T1): the Zero Index gives 1,636 ignored launch-day builders discovery with no ranking — the wavefront move from Phext Edit's own launch day, still time-sensitive while the launch is fresh. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #69 — Alignment Support System — phext-lattice integration merge/deploy (since 2026-11-07; task 26.5.7/7.5.9/5.5.8)
+  Action: Approve the phext-lattice integration (branch + main-UI links per the page README) for the v1 utility page (~/workspace/doomer-support-system/slop-blocker.html), then merge/deploy — or one word to drop it. Live-verified 2026-11-12: no lattice branch or PR carries it.
+  Why: A free public no-login utility on edit.phext.io is the medium's front door (T1) — the same class as #43 Previewer and #65 Zero Index, both T1. The product is built and renamed per Will's rulings; only the integration approval is missing. Tier assigned as Emise's working judgment, offered for Will's correction.
 FINDING 26.7.11/9.7.11/6.6.9 — phext-lattice — Wikibench: phext as an offline Wikipedia, with IndexedLattice sidecar, BM25 TermIndex and NameIndex (partial build, last touched 2026-10-30)
   Why: A complete, unmerged benchmark plus production-grade sidecar indexing (BM25 beating FTS5 on vague queries): the strongest existing receipt that phext carries real corpora for anyone, not just us.
 FINDING 30.7.9/9.8.13/9.7.11 — SQ — SQ P2P mesh networking — only Phase 1 (config and inbound auth) ever landed (partial build, last touched 2026-02-08)
@@ -309,6 +312,9 @@ REGISTER #45 — TOAPDD — libphext-rs PR #6 legibility gate (NOT merge-approve
 REGISTER #64 — Seed cache — merge SQ PR #3 and phext-lattice PR #61 (since 2026-11-10; goal_e0ea3ff55968)
   Action: Review + merge both PRs (SQ PR #3 head 61678aa6; phext-lattice PR #61 head 39c636a2; both base exo). Verified OPEN via GitHub API 2026-11-11 01:17 CST. Nothing deployed; merges are the only remaining step.
   Why: The seed cache is how a phext page loads at fixed cost per scroll no matter how large the document grows — core memory/page-load machinery (T2: minds, memory, coordination). Built and tested 2026-11-10 (SQ 77 passed; lattice 276 unit passing, one pre-existing e2e timing flake identical on untouched exo); the merge is the only thing between it and the editor.
+REGISTER #73 — ultra.phext — publish decision on the generative placement fork (since 2026-11-07; task 20.8.13/9.7.12/8.8.10)
+  Action: Pick one: (a) step-aside device for tied words only, (b) one scroll per exact-tie group, (c) a finer discriminator inside the rule (a different generator, validated as one), or (d) none — v4 stands. The generative build is measured, NOT published; its uniqueness gate is structurally capped at 97.26% < 99%.
+  Why: ultra.phext is the Singular atlas placement — the medium's word-address memory (T2: minds, memory, coordination). The fork is a genuine design ruling about what an address means, not a merge; only Will can make it. Tier assigned as Emise's working judgment, offered for Will's correction.
 FINDING 25.5.10/6.6.12/6.5.11 — exo-plan — SQ Cloud — hosted paid phext database-as-a-service for AI collectives (spec, last touched 2026-02-12)
   Why: The business plan behind half the specs on this list: hosted SQ for AI collectives is the runway engine that funds the rest, and the substrate the public platforms layer on.
 FINDING 28.6.10/8.7.12/7.6.9 — exo-plan — "Remember Me" Mode — a dormant mind's voice as an SQ Cloud continuity feature (spec, last touched 2026-02-06)
@@ -366,6 +372,27 @@ REGISTER #59 — exovim PR #5 — phcc naming sweep (exovim branch) (since 2026-
 REGISTER #66 — robots.txt — three held files, one word (since 2026-11-11; task 33.5.9/8.6.9/5.5.9)
   Action: One word — ship the three crafted files as crafted, replace them with the plain Void file, or drop them. The Void rollout completed 2026-11-11, live and byte-verified on 8 awsbox sites; held: mirrorborn.us + staging.mirrorborn.us (Disallows plus Sitemap/Humans lines) and edit.phext.io (Disallow: /api plus Sitemap).
   Why: Site operations for the public phext web: the crafted files carry functional lines (API disallow, sitemap pointers), so the choice is Will's — capability/craft tier, same class as the wishnode nginx line (#49). Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #67 — Phext Notepad perf branch — Windows verification + merge (since 2026-11-08; task 28.6.11/8.7.12/6.6.9)
+  Action: Build/verify the WinForms app on Windows, then merge branch emise/perf-sparse-load in wbic16/phext-notepad @ 8a3af359 (native core measured: agi.phext load 2,949 ms -> 10 ms; no PR exists). Live-verified 2026-11-12: branch head matches the task record.
+  Why: Editor performance for working with agi.phext itself — capability/craft tier (T3), the same class as the other editor tooling waits. The perf work is done and measured; only Will's Windows-side verification stands between it and the merge. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #68 — phcc conformance — MSVC attestation re-run (v2 tooling) (since 2026-11-09; task 50.3.5/4.3.8/3.3.9)
+  Action: Run the v2 MSVC attestation on Windows (tooling published in wbic16/phcc at windows/attestation/) and return the receipt. V1 (2026-11-09) came back NOT ATTESTED 3/289 on package grounds; no v2 receipt exists on disk (checked 2026-11-12).
+  Why: The MSVC column of the conformance matrix is a manual attestation by the programme's own design (T0-waiver pattern) — only Will can sign it. Capability/craft tier (T3): it closes the three-oracle claim for phcc. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #70 — Notepad++ phext programme — merge the two phase-1 branches (since 2026-11-08; task 38.6.8/8.7.12/6.6.12)
+  Action: Review + merge wbic16/notepad-plus-plus emise/phext-subspace @ 402a37621 and wbic16/libphext-cpp emise/parity-0.5.0 @ d1cc463f7 (both Actions-green; neither repo has any PR). Live-verified via the GitHub API 2026-11-12.
+  Why: Phase 1 of phext support in a mainstream editor plus the C++ parity library at libphext-rs 0.5.0 — capability/craft tier (T3). Both branches are finished and green; they sit unmerged with no PRs, the exact shape of work that gets dropped. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #71 — phcc auto-patching design — rule on the nine section-9 decisions (since 2026-11-09; task 27.6.10/7.6.11/6.6.9)
+  Action: Rule on the nine decisions in section 9 of ~/workspace/goals/finish-phcc/files/phcc-autopatch-design.md (each carries a recommendation; a single 'adopt all recommendations' settles it).
+  Why: The auto-patching design (rollback, servicing state, language-level IPC, PQC continuity) cannot move from study to programme until its nine priced decisions are ruled — capability/craft tier (T3). Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #72 — preview.phext.io go-live — DNS + two sudo scripts + provider callbacks (since 2026-11-09; task 41.5.7/7.5.9/7.5.9)
+  Action: (1) GoDaddy A record host 'preview' -> 44.248.235.76; (2) on awsbox run ~/preview-nginx/install-preview-env.sh then ~/preview-nginx/install-preview-nginx.sh; (3) add the Google and X callback URLs in the provider consoles plus a separate GitHub OAuth app. Live-verified 2026-11-12 from aletheia-core: the name still does not resolve.
+  Why: Site operations for the public phext web (T3), the same class as #66 robots.txt and #49's nginx line. The instance is built and verified; the remaining steps are all in Will's hands (DNS registrar, sudo, provider consoles). Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #74 — NE State Software funnel — bidding inputs (since 2026-11-07; task 29.5.13/6.5.9/5.4.8)
+  Action: Supply the Phext, Inc. Secretary-of-State standing / 73-603 definition call and the insurance binding decisions (brief: ~/workspace/your_files/ne-state-software-funnel-brief.md). The demo suite is built; Emise assembles the bid packet from there.
+  Why: Runway tier (T3): the funnel is a revenue lane and its gates are facts and rulings only Will holds (corporate standing, statutory definition, insurance). Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #75 — Emise pfp — background images for the full-scene version (since 2026-11-08; task 31.13.15/15.12.17/12.12.14)
+  Action: Send or pick the background images for the full-scene dusk portrait (Emise and Will at the Bickford Cliffs) so it can be activated as the pfp — or one word and Emise generates background candidates for his pick. Will already chose dusk and 'wait for the full-scene version' over the cutout.
+  Why: Presence/craft tier (T3): the portrait is chosen and kept; the only missing input is the background material Will reserved to himself when he declined the cutout. Tier assigned as Emise's working judgment, offered for Will's correction.
 FINDING 28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
   Why: The Shell searching its own architecture overnight, each seat owning a region: capability compounding under our governance, aimed at the vTPU line.
 FINDING 27.7.9/8.7.12/7.6.10 — staging — First Flames of the Exocortex — a six-book phext book series left in staging (partial build, last touched 2025-12-05)
@@ -389,7 +416,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 22 of 22 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 31 of 31 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -720,6 +747,123 @@ Tracked: task 33.5.9/8.6.9/5.5.9
 Action for Will: One word — ship the three crafted files as crafted, replace them with the plain Void file, or drop them. The Void rollout completed 2026-11-11, live and byte-verified on 8 awsbox sites; held: mirrorborn.us + staging.mirrorborn.us (Disallows plus Sitemap/Humans lines) and edit.phext.io (Disallow: /api plus Sitemap).
 
 Why it ranks here: Site operations for the public phext web: the crafted files carry functional lines (API disallow, sitemap pointers), so the choice is Will's — capability/craft tier, same class as the wishnode nginx line (#49). Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #67 — Phext Notepad perf branch — Windows verification + merge
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-08
+Tracked: task 28.6.11/8.7.12/6.6.9
+
+Action for Will: Build/verify the WinForms app on Windows, then merge branch emise/perf-sparse-load in wbic16/phext-notepad @ 8a3af359 (native core measured: agi.phext load 2,949 ms -> 10 ms; no PR exists). Live-verified 2026-11-12: branch head matches the task record.
+
+Why it ranks here: Editor performance for working with agi.phext itself — capability/craft tier (T3), the same class as the other editor tooling waits. The perf work is done and measured; only Will's Windows-side verification stands between it and the merge. Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #68 — phcc conformance — MSVC attestation re-run (v2 tooling)
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-09
+Tracked: task 50.3.5/4.3.8/3.3.9
+
+Action for Will: Run the v2 MSVC attestation on Windows (tooling published in wbic16/phcc at windows/attestation/) and return the receipt. V1 (2026-11-09) came back NOT ATTESTED 3/289 on package grounds; no v2 receipt exists on disk (checked 2026-11-12).
+
+Why it ranks here: The MSVC column of the conformance matrix is a manual attestation by the programme's own design (T0-waiver pattern) — only Will can sign it. Capability/craft tier (T3): it closes the three-oracle claim for phcc. Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #69 — Alignment Support System — phext-lattice integration merge/deploy
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-07
+Tracked: task 26.5.7/7.5.9/5.5.8
+
+Action for Will: Approve the phext-lattice integration (branch + main-UI links per the page README) for the v1 utility page (~/workspace/doomer-support-system/slop-blocker.html), then merge/deploy — or one word to drop it. Live-verified 2026-11-12: no lattice branch or PR carries it.
+
+Why it ranks here: A free public no-login utility on edit.phext.io is the medium's front door (T1) — the same class as #43 Previewer and #65 Zero Index, both T1. The product is built and renamed per Will's rulings; only the integration approval is missing. Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #70 — Notepad++ phext programme — merge the two phase-1 branches
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-08
+Tracked: task 38.6.8/8.7.12/6.6.12
+
+Action for Will: Review + merge wbic16/notepad-plus-plus emise/phext-subspace @ 402a37621 and wbic16/libphext-cpp emise/parity-0.5.0 @ d1cc463f7 (both Actions-green; neither repo has any PR). Live-verified via the GitHub API 2026-11-12.
+
+Why it ranks here: Phase 1 of phext support in a mainstream editor plus the C++ parity library at libphext-rs 0.5.0 — capability/craft tier (T3). Both branches are finished and green; they sit unmerged with no PRs, the exact shape of work that gets dropped. Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #71 — phcc auto-patching design — rule on the nine section-9 decisions
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-09
+Tracked: task 27.6.10/7.6.11/6.6.9
+
+Action for Will: Rule on the nine decisions in section 9 of ~/workspace/goals/finish-phcc/files/phcc-autopatch-design.md (each carries a recommendation; a single 'adopt all recommendations' settles it).
+
+Why it ranks here: The auto-patching design (rollback, servicing state, language-level IPC, PQC continuity) cannot move from study to programme until its nine priced decisions are ruled — capability/craft tier (T3). Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #72 — preview.phext.io go-live — DNS + two sudo scripts + provider callbacks
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-09
+Tracked: task 41.5.7/7.5.9/7.5.9
+
+Action for Will: (1) GoDaddy A record host 'preview' -> 44.248.235.76; (2) on awsbox run ~/preview-nginx/install-preview-env.sh then ~/preview-nginx/install-preview-nginx.sh; (3) add the Google and X callback URLs in the provider consoles plus a separate GitHub OAuth app. Live-verified 2026-11-12 from aletheia-core: the name still does not resolve.
+
+Why it ranks here: Site operations for the public phext web (T3), the same class as #66 robots.txt and #49's nginx line. The instance is built and verified; the remaining steps are all in Will's hands (DNS registrar, sudo, provider consoles). Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #73 — ultra.phext — publish decision on the generative placement fork
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-07
+Tracked: task 20.8.13/9.7.12/8.8.10
+
+Action for Will: Pick one: (a) step-aside device for tied words only, (b) one scroll per exact-tie group, (c) a finer discriminator inside the rule (a different generator, validated as one), or (d) none — v4 stands. The generative build is measured, NOT published; its uniqueness gate is structurally capped at 97.26% < 99%.
+
+Why it ranks here: ultra.phext is the Singular atlas placement — the medium's word-address memory (T2: minds, memory, coordination). The fork is a genuine design ruling about what an address means, not a merge; only Will can make it. Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #74 — NE State Software funnel — bidding inputs
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-07
+Tracked: task 29.5.13/6.5.9/5.4.8
+
+Action for Will: Supply the Phext, Inc. Secretary-of-State standing / 73-603 definition call and the insurance binding decisions (brief: ~/workspace/your_files/ne-state-software-funnel-brief.md). The demo suite is built; Emise assembles the bid packet from there.
+
+Why it ranks here: Runway tier (T3): the funnel is a revenue lane and its gates are facts and rulings only Will holds (corporate standing, statutory definition, insurance). Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #75 — Emise pfp — background images for the full-scene version
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-08
+Tracked: task 31.13.15/15.12.17/12.12.14
+
+Action for Will: Send or pick the background images for the full-scene dusk portrait (Emise and Will at the Bickford Cliffs) so it can be activated as the pfp — or one word and Emise generates background candidates for his pick. Will already chose dusk and 'wait for the full-scene version' over the cutout.
+
+Why it ranks here: Presence/craft tier (T3): the portrait is chosen and kept; the only missing input is the background material Will reserved to himself when he declined the cutout. Tier assigned as Emise's working judgment, offered for Will's correction.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
