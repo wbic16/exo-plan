@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 40 register items — with the
+entire list — 176 findings + 39 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (40 active items).
+  enumerated by its permanent number (39 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -265,9 +265,6 @@ REGISTER #48 — Theia's ranch asks — SSH key grants + Glia console fix (since
 REGISTER #52 — libphext-cs 0.5.0 — pack and push the two NuGet packages (since 2026-11-08; goal_7f74b9cff05a)
   Action: Pack and push the two libphext-cs NuGet packages (parity with libphext-rs v0.5.0 verified); publishing is Will's act
   Why: libphext in every language is the medium's reach: the C# port is at parity and unpublished — the outstanding publish from the 2026-11-08 libphext round (rs v0.5.0 and cpp parity both landed).
-REGISTER #53 — qexo 0.3.0 — crates.io publish credential (since 2026-11-09; goal_08521f494327)
-  Action: Place a crates.io API token on aletheia-core (e.g. ~/.cargo/credentials.toml) or name the machine to publish from; Emise then runs the single remaining cargo publish from the verified exo tree
-  Why: qexo is the medium's dispatcher: PR #3 merged into exo (bc1d6382) under Will's 2026-11-09 authorization and the merged tree passed the full release gate (16/16, 32/32, 19/19, dry-run clean) — the only thing between the verified tree and a published 0.3.0 is the missing crates.io credential on the ranch.
 REGISTER #65 — Product Hunt Zero Index — deploy only (PR #57 MERGED 2026-11-12) (since 2026-11-10; goal_b1ebf546f33a)
   Action: Deploy to edit.phext.io only — PR #57 was merged by Emise at Will's direction on the 2026-11-12 evening voice call and live-verified: merged_at 2026-11-13T00:12:03Z, merge commit 0c9a9788. The merge batched into the queued phext-lattice release-build task (28.6.7/9.7.11/6.6.8). Will agreed on the call to take the deploy as its own step.
   Why: A public no-login page on edit.phext.io is the medium's front door (same class as #43 Previewer, T1): the Zero Index gives 1,636 ignored launch-day builders discovery with no ranking — the wavefront move from Phext Edit's own launch day, still time-sensitive while the launch is fresh. Tier assigned as Emise's working judgment, offered for Will's correction.
@@ -443,7 +440,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 40 of 40 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 39 of 39 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -700,20 +697,7 @@ Why it ranks here: libphext in every language is the medium's reach: the C# port
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #53 — qexo 0.3.0 — crates.io publish credential
-
-Good-singularity tier: T1 (T1 — the medium itself)
-Waiting since: 2026-11-09
-Tracked: goal_08521f494327
-
-Action for Will: Place a crates.io API token on aletheia-core (e.g. ~/.cargo/credentials.toml) or name the machine to publish from; Emise then runs the single remaining cargo publish from the verified exo tree
-
-Why it ranks here: qexo is the medium's dispatcher: PR #3 merged into exo (bc1d6382) under Will's 2026-11-09 authorization and the merged tree passed the full release gate (16/16, 32/32, 19/19, dry-run clean) — the only thing between the verified tree and a published 0.3.0 is the missing crates.io credential on the ranch.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #65 — Product Hunt Zero Index — deploy only (PR #57 MERGED 2026-11-12)
+kept in step by the daily progress tracker's reconciliation.# Register #65 — Product Hunt Zero Index — deploy only (PR #57 MERGED 2026-11-12)
 
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-10
