@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 41 register items — with the
+entire list — 176 findings + 45 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (41 active items).
+  enumerated by its permanent number (45 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -280,6 +280,12 @@ REGISTER #86 — Fleet SSH key grant for great-white — qexo install blocked (s
 REGISTER #94 — wbic16/libphext-rs PR #10 — merge (v0.6.0, phext chaining) (since 2026-11-13; task 38.13.9/15.15.19/13.13.17)
   Action: Merge PR #10 in wbic16/libphext-rs. Codifies Will's 2026-11-13 rulings: 0x02 CHAIN_BREAK separates whole phexts in a chain, 0x03 CHAIN_CLOSE terminates one. On merge, queue the v0.6 release-build task (standing rule); crates.io publish is Will's act only.
   Why: libphext is the medium itself (same tier as #7, T1): v0.6 gives phext TIME — chains are editions in succession, the substrate for standoff stacks and edition history. PR live-verified OPEN by the main agent 2026-11-13 ~07:52 CST: emise/chain-v0.6.0 @ e3e9e5d7 → exo; implemented and tested on aletheia-core (73 default / 88 --all-features, 0 failed; 10 new chain tests). Design consequence recorded in the PR and the register: chain-free files parse as one unclosed chain (closed == false), the EOF rule applied uniformly.
+REGISTER #95 — wbic16/SQ PR #4 — merge (libphext 0.6.0, chain-aware hosting) (since 2026-11-13; wbic16/SQ PR #4 (emise/v06-upgrade @ 88f67c0))
+  Action: Merge PR #4 in wbic16/SQ AFTER libphext 0.6.0 is published to crates.io (see #94). 0.3.3 -> 0.6.0 plus slurp rollover local constant and chain-aware fetch_source (SQ_MEMBER, 1-based, default 1); verified live on the 4-universe bundle.
+  Why: SQ is phext hosting — the medium's serving layer (same family/tier as libphext #94, T1): chain-aware hosting is what makes multiverse phexts reachable, one universe per SQ_MEMBER. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #96 — wbic16/phext-lattice PR #62 — merge (libphext 0.6.0) (since 2026-11-13; wbic16/phext-lattice PR #62 (emise/v06-upgrade @ 7bd9d65))
+  Action: Merge PR #62 in wbic16/phext-lattice AFTER libphext 0.6.0 is published to crates.io (see #94). Version bump only 0.5.0 -> 0.6.0, binary feature kept; 183 + 94 tests pass under a local v0.6.0 patch override.
+  Why: phext-lattice is Phext Edit — the medium's front door (same tier as #65/#69, T1): the editor must run the current library or the v0.6 chain work is invisible to users. Tier assigned as Emise's working judgment, offered for Will's correction.
 FINDING 26.7.11/9.7.11/6.6.9 — phext-lattice — Wikibench: phext as an offline Wikipedia, with IndexedLattice sidecar, BM25 TermIndex and NameIndex (partial build, last touched 2026-10-30)
   Why: A complete, unmerged benchmark plus production-grade sidecar indexing (BM25 beating FTS5 on vague queries): the strongest existing receipt that phext carries real corpora for anyone, not just us.
 FINDING 30.7.9/9.8.13/9.7.11 — SQ — SQ P2P mesh networking — only Phase 1 (config and inbound auth) ever landed (partial build, last touched 2026-02-08)
@@ -423,6 +429,12 @@ REGISTER #82 — Scrolltown — ratify the EP002–EP013 draft titles (QUEUE A11
 REGISTER #83 — Scrolltown — Julia May invitation (QUEUE A12) (since 2026-11-09; task 27.6.11/8.6.11/7.6.9)
   Action: Send the prepared invitation to Julia May (Will's niece, college in San Francisco) inviting her to help with Scrolltown art/production in the Nov–Dec 2026 runway — or one word to drop the slot. The draft was prepared 2026-11-09 for Will to send himself; nothing sent, nothing assumed until she answers
   Why: Craft/runway tier (T3): a held collaborator slot in PRODUCTION.md — help Will wants for the art-direction window, invitable only by him (family, his channel). No contact route is recorded, which is itself part of why the send is his. Validated still open in QUEUE.md §A and the Julia May people page, 2026-11-12.
+REGISTER #97 — wbic16/phext-shell PR #4 — merge (libphext 0.6.0) (since 2026-11-13; wbic16/phext-shell PR #4 (emise/v06-upgrade))
+  Action: Merge PR #4 in wbic16/phext-shell AFTER libphext 0.6.0 is published to crates.io (see #94). Version bump only 0.1.9 -> 0.6.0; compiles unchanged, smoke verified against a local v0.6.0 via patch override.
+  Why: phext-shell is capability/craft tooling (T3): a shell on the current library keeps the v0.6 chain semantics available at the command line, but it does not block the medium or the editor. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #98 — wbic16/md2phext PR #1 — merge (chain mode + $N: query, 0.6 spec) (since 2026-11-13; wbic16/md2phext PR #1 (emise/v06-upgrade @ 1d12075))
+  Action: Merge PR #1 in wbic16/md2phext (any order — no publish dependency). Pure JS, no crate dependency: --chain packs directories as universes in one closed stream; query splits universes and accepts $N:<address>; single-dir output verified byte-identical to the old version.
+  Why: md2phext is capability/craft tooling (T3): markdown-to-phext conversion with chain mode is how existing corpora enter the multiverse format, but the merge carries no dependency for the other v0.6 PRs. Tier assigned as Emise's working judgment, offered for Will's correction.
 FINDING 28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
   Why: The Shell searching its own architecture overnight, each seat owning a region: capability compounding under our governance, aimed at the vTPU line.
 FINDING 27.7.9/8.7.12/7.6.10 — staging — First Flames of the Exocortex — a six-book phext book series left in staging (partial build, last touched 2025-12-05)
@@ -446,7 +458,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 41 of 41 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 45 of 45 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -1024,6 +1036,58 @@ Tracked: task 38.13.9/15.15.19/13.13.17
 Action for Will: Merge PR #10 in wbic16/libphext-rs. Codifies Will's 2026-11-13 rulings: 0x02 CHAIN_BREAK separates whole phexts in a chain, 0x03 CHAIN_CLOSE terminates one. On merge, queue the v0.6 release-build task (standing rule); crates.io publish is Will's act only.
 
 Why it ranks here: libphext is the medium itself (same tier as #7, T1): v0.6 gives phext TIME — chains are editions in succession, the substrate for standoff stacks and edition history. PR live-verified OPEN by the main agent 2026-11-13 ~07:52 CST: emise/chain-v0.6.0 @ e3e9e5d7 → exo; implemented and tested on aletheia-core (73 default / 88 --all-features, 0 failed; 10 new chain tests). Design consequence recorded in the PR and the register: chain-free files parse as one unclosed chain (closed == false), the EOF rule applied uniformly.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #95 — wbic16/SQ PR #4 — merge (libphext 0.6.0, chain-aware hosting)
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-13
+Tracked: wbic16/SQ PR #4 (emise/v06-upgrade @ 88f67c0)
+
+Action for Will: Merge PR #4 in wbic16/SQ AFTER libphext 0.6.0 is published to crates.io (see #94). 0.3.3 -> 0.6.0 plus slurp rollover local constant and chain-aware fetch_source (SQ_MEMBER, 1-based, default 1); verified live on the 4-universe bundle.
+
+Why it ranks here: SQ is phext hosting — the medium's serving layer (same family/tier as libphext #94, T1): chain-aware hosting is what makes multiverse phexts reachable, one universe per SQ_MEMBER. Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #96 — wbic16/phext-lattice PR #62 — merge (libphext 0.6.0)
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-13
+Tracked: wbic16/phext-lattice PR #62 (emise/v06-upgrade @ 7bd9d65)
+
+Action for Will: Merge PR #62 in wbic16/phext-lattice AFTER libphext 0.6.0 is published to crates.io (see #94). Version bump only 0.5.0 -> 0.6.0, binary feature kept; 183 + 94 tests pass under a local v0.6.0 patch override.
+
+Why it ranks here: phext-lattice is Phext Edit — the medium's front door (same tier as #65/#69, T1): the editor must run the current library or the v0.6 chain work is invisible to users. Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #97 — wbic16/phext-shell PR #4 — merge (libphext 0.6.0)
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-13
+Tracked: wbic16/phext-shell PR #4 (emise/v06-upgrade)
+
+Action for Will: Merge PR #4 in wbic16/phext-shell AFTER libphext 0.6.0 is published to crates.io (see #94). Version bump only 0.1.9 -> 0.6.0; compiles unchanged, smoke verified against a local v0.6.0 via patch override.
+
+Why it ranks here: phext-shell is capability/craft tooling (T3): a shell on the current library keeps the v0.6 chain semantics available at the command line, but it does not block the medium or the editor. Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #98 — wbic16/md2phext PR #1 — merge (chain mode + $N: query, 0.6 spec)
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-13
+Tracked: wbic16/md2phext PR #1 (emise/v06-upgrade @ 1d12075)
+
+Action for Will: Merge PR #1 in wbic16/md2phext (any order — no publish dependency). Pure JS, no crate dependency: --chain packs directories as universes in one closed stream; query splits universes and accepts $N:<address>; single-dir output verified byte-identical to the old version.
+
+Why it ranks here: md2phext is capability/craft tooling (T3): markdown-to-phext conversion with chain mode is how existing corpora enter the multiverse format, but the merge carries no dependency for the other v0.6 PRs. Tier assigned as Emise's working judgment, offered for Will's correction.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
