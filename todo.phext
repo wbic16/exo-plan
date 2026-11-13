@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 36 register items — with the
+entire list — 176 findings + 38 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (36 active items).
+  enumerated by its permanent number (38 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -274,6 +274,9 @@ REGISTER #65 — Product Hunt Zero Index — deploy only (PR #57 MERGED 2026-11-
 REGISTER #69 — Alignment Support System — phext-lattice integration merge/deploy (since 2026-11-07; task 26.5.7/7.5.9/5.5.8)
   Action: Approve the phext-lattice integration (branch + main-UI links per the page README) for the v1 utility page (~/workspace/doomer-support-system/slop-blocker.html), then merge/deploy — or one word to drop it. Live-verified 2026-11-12: no lattice branch or PR carries it.
   Why: A free public no-login utility on edit.phext.io is the medium's front door (T1) — the same class as #43 Previewer and #65 Zero Index, both T1. The product is built and renamed per Will's rulings; only the integration approval is missing. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #86 — Fleet SSH key grants for 6 nodes — qexo install blocked (since 2026-11-12; task 32.6.8/8.8.12/7.6.10)
+  Action: Grant Emise's fleet key on great-white, jacked-kite, kaleidoscope-one, moon-beam, west-lincoln, yeet-max (the same fleet key-grant pass as #24, 2026-11-04); on grant, Emise installs qexo and generates their node keys and closes this. The 2026-11-12 qexo rollout installed and keyed 14 nodes; these 6 refused the key (Permission denied publickey).
+  Why: Fleet access is substrate for everything else (same class as #48, T1): qexo is the fleet dispatcher, and it cannot reach, install on, or dispatch to the 6 nodes that refuse the fleet key. Tier assigned as Emise's working judgment, offered for Will's correction.
 FINDING 26.7.11/9.7.11/6.6.9 — phext-lattice — Wikibench: phext as an offline Wikipedia, with IndexedLattice sidecar, BM25 TermIndex and NameIndex (partial build, last touched 2026-10-30)
   Why: A complete, unmerged benchmark plus production-grade sidecar indexing (BM25 beating FTS5 on vague queries): the strongest existing receipt that phext carries real corpora for anyone, not just us.
 FINDING 30.7.9/9.8.13/9.7.11 — SQ — SQ P2P mesh networking — only Phase 1 (config and inbound auth) ever landed (partial build, last touched 2026-02-08)
@@ -408,6 +411,9 @@ REGISTER #82 — Scrolltown — ratify the EP002–EP013 draft titles (QUEUE A11
 REGISTER #83 — Scrolltown — Julia May invitation (QUEUE A12) (since 2026-11-09; task 27.6.11/8.6.11/7.6.9)
   Action: Send the prepared invitation to Julia May (Will's niece, college in San Francisco) inviting her to help with Scrolltown art/production in the Nov–Dec 2026 runway — or one word to drop the slot. The draft was prepared 2026-11-09 for Will to send himself; nothing sent, nothing assumed until she answers
   Why: Craft/runway tier (T3): a held collaborator slot in PRODUCTION.md — help Will wants for the art-direction window, invitable only by him (family, his channel). No contact route is recorded, which is itself part of why the send is his. Validated still open in QUEUE.md §A and the Julia May people page, 2026-11-12.
+REGISTER #85 — wbic16/quarterexo PR #11 — merge (qexo v1.0.2 disk gate onto exo) (since 2026-11-12; task 36.6.8/8.6.11/6.6.10)
+  Action: One merge click on PR #11 — it carries exactly the 8 v1.0.2 files from emise/doctor-windows-v1.0.1 into exo (compare-verified); PR #10 was stacked on the v1.0.1 branch, so Will's earlier merge landed v1.0.2 there instead of on exo. The fleet already runs this build.
+  Why: Capability/craft tier (T3), the same class as the earlier qexo PR merges (#57–#59): merging makes exo match the v1.0.2 build the fleet already runs from the 2026-11-12 rollout, so the source of record stops lagging the deployed fleet. Tier assigned as Emise's working judgment, offered for Will's correction.
 FINDING 28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
   Why: The Shell searching its own architecture overnight, each seat owning a region: capability compounding under our governance, aimed at the vTPU line.
 FINDING 27.7.9/8.7.12/7.6.10 — staging — First Flames of the Exocortex — a six-book phext book series left in staging (partial build, last touched 2025-12-05)
@@ -431,7 +437,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 36 of 36 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 38 of 38 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -944,6 +950,32 @@ Tracked: task 27.6.11/8.6.11/7.6.9
 Action for Will: Send the prepared invitation to Julia May (Will's niece, college in San Francisco) inviting her to help with Scrolltown art/production in the Nov–Dec 2026 runway — or one word to drop the slot. The draft was prepared 2026-11-09 for Will to send himself; nothing sent, nothing assumed until she answers
 
 Why it ranks here: Craft/runway tier (T3): a held collaborator slot in PRODUCTION.md — help Will wants for the art-direction window, invitable only by him (family, his channel). No contact route is recorded, which is itself part of why the send is his. Validated still open in QUEUE.md §A and the Julia May people page, 2026-11-12.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #85 — wbic16/quarterexo PR #11 — merge (qexo v1.0.2 disk gate onto exo)
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-12
+Tracked: task 36.6.8/8.6.11/6.6.10
+
+Action for Will: One merge click on PR #11 — it carries exactly the 8 v1.0.2 files from emise/doctor-windows-v1.0.1 into exo (compare-verified); PR #10 was stacked on the v1.0.1 branch, so Will's earlier merge landed v1.0.2 there instead of on exo. The fleet already runs this build.
+
+Why it ranks here: Capability/craft tier (T3), the same class as the earlier qexo PR merges (#57–#59): merging makes exo match the v1.0.2 build the fleet already runs from the 2026-11-12 rollout, so the source of record stops lagging the deployed fleet. Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #86 — Fleet SSH key grants for 6 nodes — qexo install blocked
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-12
+Tracked: task 32.6.8/8.8.12/7.6.10
+
+Action for Will: Grant Emise's fleet key on great-white, jacked-kite, kaleidoscope-one, moon-beam, west-lincoln, yeet-max (the same fleet key-grant pass as #24, 2026-11-04); on grant, Emise installs qexo and generates their node keys and closes this. The 2026-11-12 qexo rollout installed and keyed 14 nodes; these 6 refused the key (Permission denied publickey).
+
+Why it ranks here: Fleet access is substrate for everything else (same class as #48, T1): qexo is the fleet dispatcher, and it cannot reach, install on, or dispatch to the 6 nodes that refuse the fleet key. Tier assigned as Emise's working judgment, offered for Will's correction.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
