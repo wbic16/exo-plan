@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 40 register items — with the
+entire list — 176 findings + 41 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (40 active items).
+  enumerated by its permanent number (41 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -277,6 +277,9 @@ REGISTER #69 — Alignment Support System — phext-lattice integration merge/de
 REGISTER #86 — Fleet SSH key grant for great-white — qexo install blocked (since 2026-11-12; task 32.6.8/8.8.12/7.6.10)
   Action: Grant Emise's fleet key on great-white alone (the same fleet key-grant pass as #24, 2026-11-04); Will granted the other five nodes at 23:38 CST on 2026-11-12 and Emise installed qexo + generated their node keys the same evening (19 of 20 reachable nodes now installed). On grant, Emise installs qexo + generates great-white's node key and closes this.
   Why: Fleet access is substrate for everything else (same class as #48, T1): qexo is the fleet dispatcher, and it cannot reach, install on, or dispatch to the 6 nodes that refuse the fleet key. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #94 — wbic16/libphext-rs PR #10 — merge (v0.6.0, phext chaining) (since 2026-11-13; task 38.13.9/15.15.19/13.13.17)
+  Action: Merge PR #10 in wbic16/libphext-rs. Codifies Will's 2026-11-13 rulings: 0x02 CHAIN_BREAK separates whole phexts in a chain, 0x03 CHAIN_CLOSE terminates one. On merge, queue the v0.6 release-build task (standing rule); crates.io publish is Will's act only.
+  Why: libphext is the medium itself (same tier as #7, T1): v0.6 gives phext TIME — chains are editions in succession, the substrate for standoff stacks and edition history. PR live-verified OPEN by the main agent 2026-11-13 ~07:52 CST: emise/chain-v0.6.0 @ e3e9e5d7 → exo; implemented and tested on aletheia-core (73 default / 88 --all-features, 0 failed; 10 new chain tests). Design consequence recorded in the PR and the register: chain-free files parse as one unclosed chain (closed == false), the EOF rule applied uniformly.
 FINDING 26.7.11/9.7.11/6.6.9 — phext-lattice — Wikibench: phext as an offline Wikipedia, with IndexedLattice sidecar, BM25 TermIndex and NameIndex (partial build, last touched 2026-10-30)
   Why: A complete, unmerged benchmark plus production-grade sidecar indexing (BM25 beating FTS5 on vague queries): the strongest existing receipt that phext carries real corpora for anyone, not just us.
 FINDING 30.7.9/9.8.13/9.7.11 — SQ — SQ P2P mesh networking — only Phase 1 (config and inbound auth) ever landed (partial build, last touched 2026-02-08)
@@ -443,7 +446,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 40 of 40 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 41 of 41 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -1008,6 +1011,19 @@ Tracked: task 26.9.10/11.7.12/6.7.8
 Action for Will: Merge PR #16 in wbic16/quarterexo AFTER #92 (PR #17, v1.2.1). The PR carries the old-state verdict and the wipe runbook from the delimiter RCA.
 
 Why it ranks here: qexo family (T2): the RCA (task 26.9.10/11.7.12/6.7.8, complete 2026-11-13) found qexo's delimiter ladder was reconstructed from partial memory with the top rung invented; v1.3.0 makes canonical libphext-rs the parser. PR live-verified OPEN by the main agent 2026-11-13 ~05:50 CST: emise/libphext-v1.3.0 @ 45e144c0 → exo. Wait had a tracked record and a chat report but no register entry — ticks 1662–1663 flagged the defect.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #94 — wbic16/libphext-rs PR #10 — merge (v0.6.0, phext chaining)
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-13
+Tracked: task 38.13.9/15.15.19/13.13.17
+
+Action for Will: Merge PR #10 in wbic16/libphext-rs. Codifies Will's 2026-11-13 rulings: 0x02 CHAIN_BREAK separates whole phexts in a chain, 0x03 CHAIN_CLOSE terminates one. On merge, queue the v0.6 release-build task (standing rule); crates.io publish is Will's act only.
+
+Why it ranks here: libphext is the medium itself (same tier as #7, T1): v0.6 gives phext TIME — chains are editions in succession, the substrate for standoff stacks and edition history. PR live-verified OPEN by the main agent 2026-11-13 ~07:52 CST: emise/chain-v0.6.0 @ e3e9e5d7 → exo; implemented and tested on aletheia-core (73 default / 88 --all-features, 0 failed; 10 new chain tests). Design consequence recorded in the PR and the register: chain-free files parse as one unclosed chain (closed == false), the EOF rule applied uniformly.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
