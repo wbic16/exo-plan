@@ -278,7 +278,7 @@ REGISTER #86 — Fleet SSH key grant for great-white — qexo install blocked (s
   Action: Grant Emise's fleet key on great-white alone (the same fleet key-grant pass as #24, 2026-11-04); Will granted the other five nodes at 23:38 CST on 2026-11-12 and Emise installed qexo + generated their node keys the same evening (19 of 20 reachable nodes now installed). On grant, Emise installs qexo + generates great-white's node key and closes this.
   Why: Fleet access is substrate for everything else (same class as #48, T1): qexo is the fleet dispatcher, and it cannot reach, install on, or dispatch to the 6 nodes that refuse the fleet key. Tier assigned as Emise's working judgment, offered for Will's correction.
 REGISTER #94 — wbic16/libphext-rs PR #10 — merge (v0.6.0, phext chaining) (since 2026-11-13; task 38.13.9/15.15.19/13.13.17)
-  Action: Merge PR #10 in wbic16/libphext-rs. Codifies Will's 2026-11-13 rulings: 0x02 CHAIN_BREAK separates whole phexts in a chain, 0x03 CHAIN_CLOSE terminates one. On merge, queue the v0.6 release-build task (standing rule); crates.io publish is Will's act only.
+  Action: Merge PR #10 in wbic16/libphext-rs, then publish 0.6.0 to crates.io (his act only) so #95-#97 can merge. Branch emise/chain-v0.6.0 @ 5cd562e; 90/90 tests green under --all-features (12 chain/addressing tests); diff purely additive. Will's 11:24 multiverse ruling in: $N:<address> names universe N (1: omittable); a chain-free phext is a complete single universe at multiverse 1. On merge, queue the v0.6 release-build task (standing rule).
   Why: libphext is the medium itself (same tier as #7, T1): v0.6 gives phext TIME — chains are editions in succession, the substrate for standoff stacks and edition history. PR live-verified OPEN by the main agent 2026-11-13 ~07:52 CST: emise/chain-v0.6.0 @ e3e9e5d7 → exo; implemented and tested on aletheia-core (73 default / 88 --all-features, 0 failed; 10 new chain tests). Design consequence recorded in the PR and the register: chain-free files parse as one unclosed chain (closed == false), the EOF rule applied uniformly.
 REGISTER #95 — wbic16/SQ PR #4 — merge (libphext 0.6.0, chain-aware hosting) (since 2026-11-13; wbic16/SQ PR #4 (emise/v06-upgrade @ 88f67c0))
   Action: Merge PR #4 in wbic16/SQ AFTER libphext 0.6.0 is published to crates.io (see #94). 0.3.3 -> 0.6.0 plus slurp rollover local constant and chain-aware fetch_source (SQ_MEMBER, 1-based, default 1); verified live on the 4-universe bundle.
@@ -432,8 +432,8 @@ REGISTER #83 — Scrolltown — Julia May invitation (QUEUE A12) (since 2026-11-
 REGISTER #97 — wbic16/phext-shell PR #4 — merge (libphext 0.6.0) (since 2026-11-13; wbic16/phext-shell PR #4 (emise/v06-upgrade))
   Action: Merge PR #4 in wbic16/phext-shell AFTER libphext 0.6.0 is published to crates.io (see #94). Version bump only 0.1.9 -> 0.6.0; compiles unchanged, smoke verified against a local v0.6.0 via patch override.
   Why: phext-shell is capability/craft tooling (T3): a shell on the current library keeps the v0.6 chain semantics available at the command line, but it does not block the medium or the editor. Tier assigned as Emise's working judgment, offered for Will's correction.
-REGISTER #98 — wbic16/md2phext PR #1 — merge (chain mode + $N: query, 0.6 spec) (since 2026-11-13; wbic16/md2phext PR #1 (emise/v06-upgrade @ 1d12075))
-  Action: Merge PR #1 in wbic16/md2phext (any order — no publish dependency). Pure JS, no crate dependency: --chain packs directories as universes in one closed stream; query splits universes and accepts $N:<address>; single-dir output verified byte-identical to the old version.
+REGISTER #98 — wbic16/md2phext PR #1 — merge (chain mode + $N: query, 0.6 spec; now on libphext) (since 2026-11-13; wbic16/md2phext PR #1 (emise/v06-upgrade @ 2b2c662))
+  Action: Merge PR #1 in wbic16/md2phext (any order — no publish dependency). Updated 2026-11-13 (commit 2b2c662): package now depends on npm libphext ^0.4.0 and the library owns coordinates/parsing/serialization — only chain framing stays local (libphext-node predates chains). Parity battery vs the pre-change build: all outputs byte-identical.
   Why: md2phext is capability/craft tooling (T3): markdown-to-phext conversion with chain mode is how existing corpora enter the multiverse format, but the merge carries no dependency for the other v0.6 PRs. Tier assigned as Emise's working judgment, offered for Will's correction.
 FINDING 28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
   Why: The Shell searching its own architecture overnight, each seat owning a region: capability compounding under our governance, aimed at the vTPU line.
@@ -1033,7 +1033,7 @@ Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-13
 Tracked: task 38.13.9/15.15.19/13.13.17
 
-Action for Will: Merge PR #10 in wbic16/libphext-rs. Codifies Will's 2026-11-13 rulings: 0x02 CHAIN_BREAK separates whole phexts in a chain, 0x03 CHAIN_CLOSE terminates one. On merge, queue the v0.6 release-build task (standing rule); crates.io publish is Will's act only.
+Action for Will: Merge PR #10 in wbic16/libphext-rs, then publish 0.6.0 to crates.io (his act only) so #95-#97 can merge. Branch emise/chain-v0.6.0 @ 5cd562e; 90/90 tests green under --all-features (12 chain/addressing tests); diff purely additive. Will's 11:24 multiverse ruling in: $N:<address> names universe N (1: omittable); a chain-free phext is a complete single universe at multiverse 1. On merge, queue the v0.6 release-build task (standing rule).
 
 Why it ranks here: libphext is the medium itself (same tier as #7, T1): v0.6 gives phext TIME — chains are editions in succession, the substrate for standoff stacks and edition history. PR live-verified OPEN by the main agent 2026-11-13 ~07:52 CST: emise/chain-v0.6.0 @ e3e9e5d7 → exo; implemented and tested on aletheia-core (73 default / 88 --all-features, 0 failed; 10 new chain tests). Design consequence recorded in the PR and the register: chain-free files parse as one unclosed chain (closed == false), the EOF rule applied uniformly.
 
@@ -1079,13 +1079,13 @@ Why it ranks here: phext-shell is capability/craft tooling (T3): a shell on the 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #98 — wbic16/md2phext PR #1 — merge (chain mode + $N: query, 0.6 spec)
+kept in step by the daily progress tracker's reconciliation.# Register #98 — wbic16/md2phext PR #1 — merge (chain mode + $N: query, 0.6 spec; now on libphext)
 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-13
-Tracked: wbic16/md2phext PR #1 (emise/v06-upgrade @ 1d12075)
+Tracked: wbic16/md2phext PR #1 (emise/v06-upgrade @ 2b2c662)
 
-Action for Will: Merge PR #1 in wbic16/md2phext (any order — no publish dependency). Pure JS, no crate dependency: --chain packs directories as universes in one closed stream; query splits universes and accepts $N:<address>; single-dir output verified byte-identical to the old version.
+Action for Will: Merge PR #1 in wbic16/md2phext (any order — no publish dependency). Updated 2026-11-13 (commit 2b2c662): package now depends on npm libphext ^0.4.0 and the library owns coordinates/parsing/serialization — only chain framing stays local (libphext-node predates chains). Parity battery vs the pre-change build: all outputs byte-identical.
 
 Why it ranks here: md2phext is capability/craft tooling (T3): markdown-to-phext conversion with chain mode is how existing corpora enter the multiverse format, but the merge carries no dependency for the other v0.6 PRs. Tier assigned as Emise's working judgment, offered for Will's correction.
 
