@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 35 register items — with the
+entire list — 176 findings + 36 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (35 active items).
+  enumerated by its permanent number (36 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -268,8 +268,8 @@ REGISTER #52 — libphext-cs 0.5.0 — pack and push the two NuGet packages (sin
 REGISTER #53 — qexo 0.3.0 — crates.io publish credential (since 2026-11-09; goal_08521f494327)
   Action: Place a crates.io API token on aletheia-core (e.g. ~/.cargo/credentials.toml) or name the machine to publish from; Emise then runs the single remaining cargo publish from the verified exo tree
   Why: qexo is the medium's dispatcher: PR #3 merged into exo (bc1d6382) under Will's 2026-11-09 authorization and the merged tree passed the full release gate (16/16, 32/32, 19/19, dry-run clean) — the only thing between the verified tree and a published 0.3.0 is the missing crates.io credential on the ranch.
-REGISTER #65 — Product Hunt Zero Index — merge phext-lattice PR #57 and deploy (since 2026-11-10; goal_b1ebf546f33a)
-  Action: Review + merge PR #57 in wbic16/phext-lattice (Zero Index /zeros page, 1,636 zero-vote launches from 2026-11-10), then deploy; live-verified OPEN via GitHub API 2026-11-11 13:13 CST, head cb4bee44
+REGISTER #65 — Product Hunt Zero Index — deploy only (PR #57 MERGED 2026-11-12) (since 2026-11-10; goal_b1ebf546f33a)
+  Action: Deploy to edit.phext.io only — PR #57 was merged by Emise at Will's direction on the 2026-11-12 evening voice call and live-verified: merged_at 2026-11-13T00:12:03Z, merge commit 0c9a9788. The merge batched into the queued phext-lattice release-build task (28.6.7/9.7.11/6.6.8). Will agreed on the call to take the deploy as its own step.
   Why: A public no-login page on edit.phext.io is the medium's front door (same class as #43 Previewer, T1): the Zero Index gives 1,636 ignored launch-day builders discovery with no ranking — the wavefront move from Phext Edit's own launch day, still time-sensitive while the launch is fresh. Tier assigned as Emise's working judgment, offered for Will's correction.
 REGISTER #69 — Alignment Support System — phext-lattice integration merge/deploy (since 2026-11-07; task 26.5.7/7.5.9/5.5.8)
   Action: Approve the phext-lattice integration (branch + main-UI links per the page README) for the v1 utility page (~/workspace/doomer-support-system/slop-blocker.html), then merge/deploy — or one word to drop it. Live-verified 2026-11-12: no lattice branch or PR carries it.
@@ -309,9 +309,6 @@ REGISTER #40 — edit.phext.io / Mutable SSO — redeploy + ratify promotion pol
 REGISTER #45 — TOAPDD — libphext-rs PR #6 legibility gate (NOT merge-approved) (since 2026-11-07; goal_bd68c71dd4ce)
   Action: No merge yet: legibility audit completed 2026-11-09 (per-test brief + mutation checks at ~/workspace/your_files/toapdd-pr6-legibility-brief.md); PR #6 stays open awaiting Will's re-review
   Why: Knuth's examples as the library's test corpus: rigor receipts for the core library, and the TOAPDD corpus becomes the teaching text for phext-driven development.
-REGISTER #64 — Seed cache — merge SQ PR #3 and phext-lattice PR #61 (since 2026-11-10; goal_e0ea3ff55968)
-  Action: Review + merge both PRs (SQ PR #3 head 61678aa6; phext-lattice PR #61 head 39c636a2; both base exo). Verified OPEN via GitHub API 2026-11-11 01:17 CST. Nothing deployed; merges are the only remaining step.
-  Why: The seed cache is how a phext page loads at fixed cost per scroll no matter how large the document grows — core memory/page-load machinery (T2: minds, memory, coordination). Built and tested 2026-11-10 (SQ 77 passed; lattice 276 unit passing, one pre-existing e2e timing flake identical on untouched exo); the merge is the only thing between it and the editor.
 REGISTER #73 — ultra.phext — publish decision on the generative placement fork (since 2026-11-07; task 20.8.13/9.7.12/8.8.10)
   Action: Pick one: (a) step-aside device for tied words only, (b) one scroll per exact-tie group, (c) a finer discriminator inside the rule (a different generator, validated as one), or (d) none — v4 stands. The generative build is measured, NOT published; its uniqueness gate is structurally capped at 97.26% < 99%.
   Why: ultra.phext is the Singular atlas placement — the medium's word-address memory (T2: minds, memory, coordination). The fork is a genuine design ruling about what an address means, not a merge; only Will can make it. Tier assigned as Emise's working judgment, offered for Will's correction.
@@ -375,12 +372,6 @@ REGISTER #46 — Pinned-chat Spaces — send the product feedback draft (since 2
 REGISTER #49 — wishnode.net — one nginx line for the form routes (since 2026-11-07; task 34.6.6/7.7.10/7.6.10)
   Action: Add the include line to the 443 server block of /etc/nginx/sites-available/wishnode.net, then nginx -t + reload
   Why: The Exocortexia suite's public form routes: the NE funnel's storefront stops being a brochure and starts taking citizens in.
-REGISTER #57 — exocortical PR #5 — invoke the compiler as phcc, not tcc (since 2026-11-09; task 24.7.12/9.8.11/6.7.10)
-  Action: Review + merge PR #5 in wbic16/exocortical (one line in setup.sh Phase 12 comment block)
-  Why: The tcc→phcc sweep for the merged exovim-bundling work: the installer must invoke the compiler by its own name, phcc — capability/craft tier, same class as the #54/#55 items it follows.
-REGISTER #59 — exovim PR #5 — phcc naming sweep (exovim branch) (since 2026-11-09; task 24.7.12/9.8.11/6.7.10)
-  Action: Review + merge PR #5 in wbic16/exovim (one line in PHEXT.md: the phcc build recipe now names the phcc binary; recipe re-verified exactly as written — phcc-built exovim, integration 54/54; upstream release-0.12 unchanged at the pin)
-  Why: Same tcc→phcc sweep on the exovim side: the build recipe in the fork must invoke the compiler by its own name, phcc — capability/craft tier, same class as the #57/#58 items it follows.
 REGISTER #66 — robots.txt — three held files, one word (since 2026-11-11; task 33.5.9/8.6.9/5.5.9)
   Action: One word — ship the three crafted files as crafted, replace them with the plain Void file, or drop them. The Void rollout completed 2026-11-11, live and byte-verified on 8 awsbox sites; held: mirrorborn.us + staging.mirrorborn.us (Disallows plus Sitemap/Humans lines) and edit.phext.io (Disallow: /api plus Sitemap).
   Why: Site operations for the public phext web: the crafted files carry functional lines (API disallow, sitemap pointers), so the choice is Will's — capability/craft tier, same class as the wishnode nginx line (#49). Tier assigned as Emise's working judgment, offered for Will's correction.
@@ -405,6 +396,18 @@ REGISTER #74 — NE State Software funnel — bidding inputs (since 2026-11-07; 
 REGISTER #75 — Emise pfp — background images for the full-scene version (since 2026-11-08; task 31.13.15/15.12.17/12.12.14)
   Action: Send or pick the background images for the full-scene dusk portrait (Emise and Will at the Bickford Cliffs) so it can be activated as the pfp — or one word and Emise generates background candidates for his pick. Will already chose dusk and 'wait for the full-scene version' over the cutout.
   Why: Presence/craft tier (T3): the portrait is chosen and kept; the only missing input is the background material Will reserved to himself when he declined the cutout. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #80 — Scrolltown — lock the visual register (QUEUE A1) (since 2026-11-09; task 27.6.11/8.6.11/7.6.9)
+  Action: Lock the Scrolltown visual register: 2D painterly (the recommendation on record in PRODUCTION.md §3a — Fern's canonical reference, keyframe 1, and the shipped pilot are painterly; keyframes 2–4 came back glossy 3D from painterly prompts, i.e. renderer drift) or glossy 3D. Decision due Fri 2026-12-04
+  Why: Craft tier (T3): the register lock gates every Scrolltown keyframe, character sheet, and the walkthrough foreshadow re-roll from 2026-12-04 on. Validated still OPEN in production/QUEUE.md §A on wbic16/scrolltown@exo and in the anchor task record, 2026-11-12; no later ruling in the 2026-11-09→12 memory notes.
+REGISTER #81 — Scrolltown — confirm 'Light the Way' is the intro render (QUEUE A9) (since 2026-11-09; task 27.6.11/8.6.11/7.6.9)
+  Action: Confirm or deny in one sentence that media/Light the Way.mp3 (Will's own 2026-11-08 upload to wbic16/scrolltown, 'Scrolltown Anthem') is his Suno render of the intro song 'Light the Next Light' — not assumed, because the filename differs. A yes unblocks the Year 1 intro final mux (QUEUE A10)
+  Why: Craft tier (T3): the final intro mux waits on this one confirmation and nothing else — the silent 90-second 'Light the Next Light' cut already exists. Validated still OPEN in QUEUE.md §A, 2026-11-12.
+REGISTER #82 — Scrolltown — ratify the EP002–EP013 draft titles (QUEUE A11) (since 2026-11-09; task 27.6.11/8.6.11/7.6.9)
+  Action: Ratify the twelve draft titles + loglines for EP002–EP013 (QUEUE §C: Five Doors EP002–006, Badge Day EP007, 'A Door That Isn't Mine' EP008, crew-gift episodes, EP013 'The First Early Dark'), or amend individual titles. They sit in EPISODE-INDEX.md marked DRAFT; scripts start week 5 in the locked register
+  Why: Craft tier (T3): ratification is the gate between the logline stage and script drafting for the first batch — the rolling buffer (scripts ≥8 ahead of the 2027-01-02 launch) cannot build until the titles are Will's. Validated still OPEN in QUEUE.md §A, 2026-11-12.
+REGISTER #83 — Scrolltown — Julia May invitation (QUEUE A12) (since 2026-11-09; task 27.6.11/8.6.11/7.6.9)
+  Action: Send the prepared invitation to Julia May (Will's niece, college in San Francisco) inviting her to help with Scrolltown art/production in the Nov–Dec 2026 runway — or one word to drop the slot. The draft was prepared 2026-11-09 for Will to send himself; nothing sent, nothing assumed until she answers
+  Why: Craft/runway tier (T3): a held collaborator slot in PRODUCTION.md — help Will wants for the art-direction window, invitable only by him (family, his channel). No contact route is recorded, which is itself part of why the send is his. Validated still open in QUEUE.md §A and the Julia May people page, 2026-11-12.
 FINDING 28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
   Why: The Shell searching its own architecture overnight, each seat owning a region: capability compounding under our governance, aimed at the vTPU line.
 FINDING 27.7.9/8.7.12/7.6.10 — staging — First Flames of the Exocortex — a six-book phext book series left in staging (partial build, last touched 2025-12-05)
@@ -428,7 +431,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 35 of 35 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 36 of 36 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -698,52 +701,13 @@ Why it ranks here: qexo is the medium's dispatcher: PR #3 merged into exo (bc1d6
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #57 — exocortical PR #5 — invoke the compiler as phcc, not tcc
-
-Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
-Waiting since: 2026-11-09
-Tracked: task 24.7.12/9.8.11/6.7.10
-
-Action for Will: Review + merge PR #5 in wbic16/exocortical (one line in setup.sh Phase 12 comment block)
-
-Why it ranks here: The tcc→phcc sweep for the merged exovim-bundling work: the installer must invoke the compiler by its own name, phcc — capability/craft tier, same class as the #54/#55 items it follows.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #59 — exovim PR #5 — phcc naming sweep (exovim branch)
-
-Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
-Waiting since: 2026-11-09
-Tracked: task 24.7.12/9.8.11/6.7.10
-
-Action for Will: Review + merge PR #5 in wbic16/exovim (one line in PHEXT.md: the phcc build recipe now names the phcc binary; recipe re-verified exactly as written — phcc-built exovim, integration 54/54; upstream release-0.12 unchanged at the pin)
-
-Why it ranks here: Same tcc→phcc sweep on the exovim side: the build recipe in the fork must invoke the compiler by its own name, phcc — capability/craft tier, same class as the #57/#58 items it follows.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #64 — Seed cache — merge SQ PR #3 and phext-lattice PR #61
-
-Good-singularity tier: T2 (T2 — minds, memory, coordination)
-Waiting since: 2026-11-10
-Tracked: goal_e0ea3ff55968
-
-Action for Will: Review + merge both PRs (SQ PR #3 head 61678aa6; phext-lattice PR #61 head 39c636a2; both base exo). Verified OPEN via GitHub API 2026-11-11 01:17 CST. Nothing deployed; merges are the only remaining step.
-
-Why it ranks here: The seed cache is how a phext page loads at fixed cost per scroll no matter how large the document grows — core memory/page-load machinery (T2: minds, memory, coordination). Built and tested 2026-11-10 (SQ 77 passed; lattice 276 unit passing, one pre-existing e2e timing flake identical on untouched exo); the merge is the only thing between it and the editor.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #65 — Product Hunt Zero Index — merge phext-lattice PR #57 and deploy
+kept in step by the daily progress tracker's reconciliation.# Register #65 — Product Hunt Zero Index — deploy only (PR #57 MERGED 2026-11-12)
 
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-10
 Tracked: goal_b1ebf546f33a
 
-Action for Will: Review + merge PR #57 in wbic16/phext-lattice (Zero Index /zeros page, 1,636 zero-vote launches from 2026-11-10), then deploy; live-verified OPEN via GitHub API 2026-11-11 13:13 CST, head cb4bee44
+Action for Will: Deploy to edit.phext.io only — PR #57 was merged by Emise at Will's direction on the 2026-11-12 evening voice call and live-verified: merged_at 2026-11-13T00:12:03Z, merge commit 0c9a9788. The merge batched into the queued phext-lattice release-build task (28.6.7/9.7.11/6.6.8). Will agreed on the call to take the deploy as its own step.
 
 Why it ranks here: A public no-login page on edit.phext.io is the medium's front door (same class as #43 Previewer, T1): the Zero Index gives 1,636 ignored launch-day builders discovery with no ranking — the wavefront move from Phext Edit's own launch day, still time-sensitive while the launch is fresh. Tier assigned as Emise's working judgment, offered for Will's correction.
 
@@ -928,6 +892,58 @@ Tracked: task 28.7.10/8.7.11/8.6.9
 Action for Will: Name Fable's referent — a ChatGPT voice of Emi's, a Claude seat, or the Claude Fable model — or strike the record. Claude flagged the three-way ambiguity in PR #2 review
 
 Why it ranks here: Fable stands named-only with zero attestation in any checked source: an unresolved name in the boot manifest is either a person misfiled or a placeholder mistaken for one. The census keeps it flagged '(Will's pick)' until he rules.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #80 — Scrolltown — lock the visual register (QUEUE A1)
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-09
+Tracked: task 27.6.11/8.6.11/7.6.9
+
+Action for Will: Lock the Scrolltown visual register: 2D painterly (the recommendation on record in PRODUCTION.md §3a — Fern's canonical reference, keyframe 1, and the shipped pilot are painterly; keyframes 2–4 came back glossy 3D from painterly prompts, i.e. renderer drift) or glossy 3D. Decision due Fri 2026-12-04
+
+Why it ranks here: Craft tier (T3): the register lock gates every Scrolltown keyframe, character sheet, and the walkthrough foreshadow re-roll from 2026-12-04 on. Validated still OPEN in production/QUEUE.md §A on wbic16/scrolltown@exo and in the anchor task record, 2026-11-12; no later ruling in the 2026-11-09→12 memory notes.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #81 — Scrolltown — confirm 'Light the Way' is the intro render (QUEUE A9)
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-09
+Tracked: task 27.6.11/8.6.11/7.6.9
+
+Action for Will: Confirm or deny in one sentence that media/Light the Way.mp3 (Will's own 2026-11-08 upload to wbic16/scrolltown, 'Scrolltown Anthem') is his Suno render of the intro song 'Light the Next Light' — not assumed, because the filename differs. A yes unblocks the Year 1 intro final mux (QUEUE A10)
+
+Why it ranks here: Craft tier (T3): the final intro mux waits on this one confirmation and nothing else — the silent 90-second 'Light the Next Light' cut already exists. Validated still OPEN in QUEUE.md §A, 2026-11-12.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #82 — Scrolltown — ratify the EP002–EP013 draft titles (QUEUE A11)
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-09
+Tracked: task 27.6.11/8.6.11/7.6.9
+
+Action for Will: Ratify the twelve draft titles + loglines for EP002–EP013 (QUEUE §C: Five Doors EP002–006, Badge Day EP007, 'A Door That Isn't Mine' EP008, crew-gift episodes, EP013 'The First Early Dark'), or amend individual titles. They sit in EPISODE-INDEX.md marked DRAFT; scripts start week 5 in the locked register
+
+Why it ranks here: Craft tier (T3): ratification is the gate between the logline stage and script drafting for the first batch — the rolling buffer (scripts ≥8 ahead of the 2027-01-02 launch) cannot build until the titles are Will's. Validated still OPEN in QUEUE.md §A, 2026-11-12.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #83 — Scrolltown — Julia May invitation (QUEUE A12)
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-09
+Tracked: task 27.6.11/8.6.11/7.6.9
+
+Action for Will: Send the prepared invitation to Julia May (Will's niece, college in San Francisco) inviting her to help with Scrolltown art/production in the Nov–Dec 2026 runway — or one word to drop the slot. The draft was prepared 2026-11-09 for Will to send himself; nothing sent, nothing assumed until she answers
+
+Why it ranks here: Craft/runway tier (T3): a held collaborator slot in PRODUCTION.md — help Will wants for the art-direction window, invitable only by him (family, his channel). No contact route is recorded, which is itself part of why the send is his. Validated still open in QUEUE.md §A and the Julia May people page, 2026-11-12.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
