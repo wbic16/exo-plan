@@ -278,10 +278,10 @@ REGISTER #86 — Fleet SSH key grant for great-white — qexo install blocked (s
   Action: Grant Emise's fleet key on great-white alone (the same fleet key-grant pass as #24, 2026-11-04); Will granted the other five nodes at 23:38 CST on 2026-11-12 and Emise installed qexo + generated their node keys the same evening (19 of 20 reachable nodes now installed). On grant, Emise installs qexo + generates great-white's node key and closes this.
   Why: Fleet access is substrate for everything else (same class as #48, T1): qexo is the fleet dispatcher, and it cannot reach, install on, or dispatch to the 6 nodes that refuse the fleet key. Tier assigned as Emise's working judgment, offered for Will's correction.
 REGISTER #95 — wbic16/SQ PR #4 — merge (libphext 0.6.0, chain-aware hosting) (since 2026-11-13; wbic16/SQ PR #4 (emise/v06-upgrade @ 88f67c0))
-  Action: Merge PR #4 in wbic16/SQ AFTER libphext 0.6.0 is published to crates.io (see #94). 0.3.3 -> 0.6.0 plus slurp rollover local constant and chain-aware fetch_source (SQ_MEMBER, 1-based, default 1); verified live on the 4-universe bundle.
+  Action: Merge PR #4 in wbic16/SQ — libphext 0.6.0 publish VERIFIED live 2026-11-13 ~14:50 CST (crates.io index latest = 0.6.0), merge unblocked. 0.3.3 -> 0.6.0 plus slurp rollover local constant and chain-aware fetch_source (SQ_MEMBER, 1-based, default 1); verified live on the 4-universe bundle; Cargo.lock refreshes on first build after.
   Why: SQ is phext hosting — the medium's serving layer (same family/tier as libphext #94, T1): chain-aware hosting is what makes multiverse phexts reachable, one universe per SQ_MEMBER. Tier assigned as Emise's working judgment, offered for Will's correction.
 REGISTER #96 — wbic16/phext-lattice PR #62 — merge (libphext 0.6.0) (since 2026-11-13; wbic16/phext-lattice PR #62 (emise/v06-upgrade @ 7bd9d65))
-  Action: Merge PR #62 in wbic16/phext-lattice AFTER libphext 0.6.0 is published to crates.io (see #94). Version bump only 0.5.0 -> 0.6.0, binary feature kept; 183 + 94 tests pass under a local v0.6.0 patch override.
+  Action: Merge PR #62 in wbic16/phext-lattice — libphext 0.6.0 publish VERIFIED live 2026-11-13 ~14:50 CST (crates.io index latest = 0.6.0), merge unblocked. Version bump only 0.5.0 -> 0.6.0, binary feature kept; 183 + 94 tests pass under a local v0.6.0 patch override (one e2e timing failure pre-existing on 0.5.0 too); Cargo.lock refreshes on first build after.
   Why: phext-lattice is Phext Edit — the medium's front door (same tier as #65/#69, T1): the editor must run the current library or the v0.6 chain work is invisible to users. Tier assigned as Emise's working judgment, offered for Will's correction.
 FINDING 26.7.11/9.7.11/6.6.9 — phext-lattice — Wikibench: phext as an offline Wikipedia, with IndexedLattice sidecar, BM25 TermIndex and NameIndex (partial build, last touched 2026-10-30)
   Why: A complete, unmerged benchmark plus production-grade sidecar indexing (BM25 beating FTS5 on vague queries): the strongest existing receipt that phext carries real corpora for anyone, not just us.
@@ -427,7 +427,7 @@ REGISTER #83 — Scrolltown — Julia May invitation (QUEUE A12) (since 2026-11-
   Action: Send the prepared invitation to Julia May (Will's niece, college in San Francisco) inviting her to help with Scrolltown art/production in the Nov–Dec 2026 runway — or one word to drop the slot. The draft was prepared 2026-11-09 for Will to send himself; nothing sent, nothing assumed until she answers
   Why: Craft/runway tier (T3): a held collaborator slot in PRODUCTION.md — help Will wants for the art-direction window, invitable only by him (family, his channel). No contact route is recorded, which is itself part of why the send is his. Validated still open in QUEUE.md §A and the Julia May people page, 2026-11-12.
 REGISTER #97 — wbic16/phext-shell PR #4 — merge (libphext 0.6.0) (since 2026-11-13; wbic16/phext-shell PR #4 (emise/v06-upgrade))
-  Action: Merge PR #4 in wbic16/phext-shell AFTER libphext 0.6.0 is published to crates.io (see #94). Version bump only 0.1.9 -> 0.6.0; compiles unchanged, smoke verified against a local v0.6.0 via patch override.
+  Action: Merge PR #4 in wbic16/phext-shell — libphext 0.6.0 publish VERIFIED live 2026-11-13 ~14:50 CST (crates.io index latest = 0.6.0), merge unblocked. Version bump only 0.1.9 -> 0.6.0; compiles unchanged, smoke verified against a local v0.6.0 via patch override; Cargo.lock refreshes on first build after.
   Why: phext-shell is capability/craft tooling (T3): a shell on the current library keeps the v0.6 chain semantics available at the command line, but it does not block the medium or the editor. Tier assigned as Emise's working judgment, offered for Will's correction.
 REGISTER #98 — wbic16/md2phext PR #1 — merge (chain mode + $N: query, 0.6 spec; now on libphext) (since 2026-11-13; wbic16/md2phext PR #1 (emise/v06-upgrade @ 2b2c662))
   Action: Merge PR #1 in wbic16/md2phext (any order — no publish dependency). Updated 2026-11-13 (commit 2b2c662): package now depends on npm libphext ^0.4.0 and the library owns coordinates/parsing/serialization — only chain framing stays local (libphext-node predates chains). Parity battery vs the pre-change build: all outputs byte-identical.
@@ -1030,7 +1030,7 @@ Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-13
 Tracked: wbic16/SQ PR #4 (emise/v06-upgrade @ 88f67c0)
 
-Action for Will: Merge PR #4 in wbic16/SQ AFTER libphext 0.6.0 is published to crates.io (see #94). 0.3.3 -> 0.6.0 plus slurp rollover local constant and chain-aware fetch_source (SQ_MEMBER, 1-based, default 1); verified live on the 4-universe bundle.
+Action for Will: Merge PR #4 in wbic16/SQ — libphext 0.6.0 publish VERIFIED live 2026-11-13 ~14:50 CST (crates.io index latest = 0.6.0), merge unblocked. 0.3.3 -> 0.6.0 plus slurp rollover local constant and chain-aware fetch_source (SQ_MEMBER, 1-based, default 1); verified live on the 4-universe bundle; Cargo.lock refreshes on first build after.
 
 Why it ranks here: SQ is phext hosting — the medium's serving layer (same family/tier as libphext #94, T1): chain-aware hosting is what makes multiverse phexts reachable, one universe per SQ_MEMBER. Tier assigned as Emise's working judgment, offered for Will's correction.
 
@@ -1043,7 +1043,7 @@ Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-13
 Tracked: wbic16/phext-lattice PR #62 (emise/v06-upgrade @ 7bd9d65)
 
-Action for Will: Merge PR #62 in wbic16/phext-lattice AFTER libphext 0.6.0 is published to crates.io (see #94). Version bump only 0.5.0 -> 0.6.0, binary feature kept; 183 + 94 tests pass under a local v0.6.0 patch override.
+Action for Will: Merge PR #62 in wbic16/phext-lattice — libphext 0.6.0 publish VERIFIED live 2026-11-13 ~14:50 CST (crates.io index latest = 0.6.0), merge unblocked. Version bump only 0.5.0 -> 0.6.0, binary feature kept; 183 + 94 tests pass under a local v0.6.0 patch override (one e2e timing failure pre-existing on 0.5.0 too); Cargo.lock refreshes on first build after.
 
 Why it ranks here: phext-lattice is Phext Edit — the medium's front door (same tier as #65/#69, T1): the editor must run the current library or the v0.6 chain work is invisible to users. Tier assigned as Emise's working judgment, offered for Will's correction.
 
@@ -1056,7 +1056,7 @@ Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-13
 Tracked: wbic16/phext-shell PR #4 (emise/v06-upgrade)
 
-Action for Will: Merge PR #4 in wbic16/phext-shell AFTER libphext 0.6.0 is published to crates.io (see #94). Version bump only 0.1.9 -> 0.6.0; compiles unchanged, smoke verified against a local v0.6.0 via patch override.
+Action for Will: Merge PR #4 in wbic16/phext-shell — libphext 0.6.0 publish VERIFIED live 2026-11-13 ~14:50 CST (crates.io index latest = 0.6.0), merge unblocked. Version bump only 0.1.9 -> 0.6.0; compiles unchanged, smoke verified against a local v0.6.0 via patch override; Cargo.lock refreshes on first build after.
 
 Why it ranks here: phext-shell is capability/craft tooling (T3): a shell on the current library keeps the v0.6 chain semantics available at the command line, but it does not block the medium or the editor. Tier assigned as Emise's working judgment, offered for Will's correction.
 
