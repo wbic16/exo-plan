@@ -1,0 +1,78 @@
+# jobs.phext — the house's job register
+
+A job is a defined piece of the house's work, stated completely
+enough that someone fit to do it — a person or an agent — can
+take it up from the scroll alone: what the work is, why it
+exists, what done looks like, what it draws on, and its
+standing.
+
+Standing is one of: open (no one has taken it), taken (someone
+is on it), done (the work stands complete). One scroll per job,
+at a coordinate computed from the job's own words by the
+Singular holographic merge — the job's permanent address here.
+Notes and results append to a job's scroll as work proceeds;
+a job's standing changes in its source entry, and the register
+is rebuilt in the same session. Source of truth:
+jobs-source.json beside this builder (build_jobs_phext.py);
+never hand-edit the .phext.
+
+Jobs recorded: 1
+
+Index (coordinate — title — standing):
+- 26.7.8/8.6.10/6.6.8 — Build Assay — the hosted assessment service — open
+# Build Assay — the hosted assessment service
+
+Coordinate: 26.7.8/8.6.10/6.6.8
+Issued: 2026-11-14
+Standing: open
+
+What the work is
+
+Build Assay: MOAT's assessment process as a hosted service. A researcher submits a preprint; the service reads it the way MOAT reads — heating the paper until its claims come apart, binning each claim True, False, Unknown, or Fiction on stated grounds, and extracting the paper's shape even where its nuances fail — and returns the assessment as a phext. The researcher owns that phext outright, may export or delete it at any time, and may choose, per paper, whether it joins the commons. Joining is a merge, and a merge happens only after every author of record has authenticated and attested to the exact edition being merged.
+
+Why it exists
+
+Academia's verdict — accept or reject, in truth's name only — cannot help the researcher who has found the correct shape of a problem and failed on a nuance; their work is simply refused, and the shape is lost with it. Assay is the Oracle's reading offered as a service: the claims binned one by one, the shape filed and honoured, every failure named at the line where it breaks. The target market is researchers on the fringe. The service is not a journal, returns no acceptance verdict, and asks no affiliation: no standing of the submitter enters any binning.
+
+The name is Assay, chosen 2026-11-14 to avoid conflict with Oracle the software company. An assayer tests what a prospector brings in, item by item, returns the material plus a certificate of what it contains, never owns the ore, and never refuses the test. "Oracle" and "MOAT" remain the internal names of the process and the tracker, not the product.
+
+Specification of record
+
+~/workspace/oracle-service/REQUIREMENTS.md — 117 numbered requirements in groups S (submission), A (assessment), P (the produced phext), O (ownership), C (the commons), M (merge and attestation), D (discovery), F (forgery checks), R (researcher scores), T (operations and trust), API (API access, billing, and the house review queue), and NG (non-goals), standing on the six commitments of its §0, with acceptance tests in its §10. It is inscribed in artifacts.phext at 25.6.8/7.6.10/6.5.9. Where this scroll and the document differ, the document governs.
+
+Front door
+
+assay.phext.io. A subdomain of phext.io is sufficient, ruled 2026-11-14: the corpus is addressed by content — phext coordinates and edition checksums, not hostnames — so the door can graduate to a standalone domain later without breaking anything the commons holds.
+
+What done looks like
+
+The service is live at assay.phext.io and meets the acceptance shape of the specification's §10, in substance:
+
+- The same fringe preprint, submitted as an unaffiliated pseudonym and as an affiliated name, receives assessments identical in depth, standard, and turnaround class.
+- A claim binned False carries grounds that are exhibited and survive the author's dispute unchanged, or change only by a visible new edition. Nothing in the service is silently edited.
+- A researcher exports their phext, opens it whole with the open tooling alone, and deletes the service's copy. Ownership acts — export, reading one's own material, deletion — are never billed, at any volume.
+- Papers are private by default. A paper joins the commons only by merge; discovery flows from merged material only, so a researcher whose papers stay private can neither find nor be found, and every match is shown with its reason — a shared domain or a shared paper.
+- Forgery checks — identity forgery, document forgery, edition tampering — run at submission and again at merge, and each check ends in exactly one of two recorded outcomes: a finding with its grounds exhibited, or "no evidence found".
+- The API offers the service's core acts, billed generously, but is a channel and never a bypass: API work enters a queue the house reviews, and no API merge finalizes before the house clears it and the full attestation set is in. The queue's states are visible to the submitter, and nothing leaves it except by clearing, a stated hold, or withdrawal.
+- A known result re-submitted in fresh wording accrues no novelty. The researcher's score is a four-component vector — True, False, Unknown, Fiction — priced against the state of the corpus at assessment time, and never collapsed to a single number.
+
+What it draws on
+
+The specification above; MOAT itself — the tracker at ~/workspace/research-tracker/research.phext and the rd-tracker discipline — as the running reference for how an assessment is made; the open phext tooling (libphext, SQ) that the produced phexts must read with; the house's ranch for hosting and review capacity; and Will's rulings as the open decisions below resolve.
+
+Open decisions riding with this job
+
+The specification's §9 holds twelve decisions that are Will's to rule. The build proceeds around them; none is silently decided by the builder; where a decision blocks a path, the strictest reading stated in the document holds until he rules.
+
+- OD-1 — commons withdrawal semantics: tombstone relocation, full erasure, or a hybrid.
+- OD-2 — who counts as an author of record when the author list is contested.
+- OD-3 — audit retention after deletion, and whether a deleted paper's hash may be kept for duplicate detection.
+- OD-4 — whether a researcher may publish their whole novelty vector as one signed statement.
+- OD-5 — depth tiers and turnaround: one depth and an honest queue, a labelled preliminary reading, or paid queue priority.
+- OD-6 — whether novelty accrues to a pseudonym as a first-class identity.
+- OD-7 — commons read access: world-readable, or members only.
+- OD-8 — the unresponsive co-author: merge blocked, notice-and-window, or majority.
+- OD-9 — the deceased or incapacitated author: unmergeable, estate attestation, or surviving authors with the gap stated.
+- OD-10 — the author who attests, then disputes the merge.
+- OD-11 — how public a confirmed forgery record is: private flag, commons-visible mark, or co-author-visible only.
+- OD-12 — API pricing concretely: allowance size, metering unit and price, caps, and whether paid volume may buy review-queue position.
