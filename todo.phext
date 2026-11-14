@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 82 register items — with the
+entire list — 176 findings + 81 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (82 active items).
+  enumerated by its permanent number (81 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -325,9 +325,6 @@ REGISTER #151 — phext.io roadmap — phext url handler (since 2026-11-14; goal
 REGISTER #152 — phext.io roadmap — phext browser plugin (since 2026-11-14; goal_7e3125fc9c0f)
   Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a phext browser plugin: phext rendering and navigation inside the browser (the Vaporware tabs/web items, #127/#129, are its larger siblings)
   Why: The browser is where the web is read; a plugin puts the medium in front of every reader without a new app.
-REGISTER #157 — The Map in Sections — deploy only (PR #65 MERGED 2026-11-14) (since 2026-11-14; task 51.5.7/7.5.11/6.5.10)
-  Action: Deploy to edit.phext.io only — PR #65 in wbic16/phext-lattice (https://github.com/wbic16/phext-lattice/pull/65) was merged 2026-11-14 11:27 CST, merge commit 9fdf81ce on exo, live-verified tick 1840; the merge batched into the queued phext-lattice release-build task
-  Why: A free, child-simple phext example on edit.phext.io widens who can reach phext: the medium's front door for a first-time reader, built for @paleoludic at Will's direction.
 FINDING 26.7.11/9.7.11/6.6.9 — phext-lattice — Wikibench: phext as an offline Wikipedia, with IndexedLattice sidecar, BM25 TermIndex and NameIndex (partial build, last touched 2026-10-30)
   Why: A complete, unmerged benchmark plus production-grade sidecar indexing (BM25 beating FTS5 on vague queries): the strongest existing receipt that phext carries real corpora for anyone, not just us.
 FINDING 30.7.9/9.8.13/9.7.11 — SQ — SQ P2P mesh networking — only Phase 1 (config and inbound auth) ever landed (partial build, last touched 2026-02-08)
@@ -569,7 +566,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 82 of 82 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 81 of 81 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -1667,19 +1664,6 @@ Tracked: goal_7e3125fc9c0f
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: plan.phext. port phext support to MSVC, from the early build plan's compiler list; never started
 
 Why it ranks here: Same class as the GCC/Clang ports: the Windows toolchain leg of the compiler idea.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #157 — The Map in Sections — deploy only (PR #65 MERGED 2026-11-14)
-
-Good-singularity tier: T1 (T1 — the medium itself)
-Waiting since: 2026-11-14
-Tracked: task 51.5.7/7.5.11/6.5.10
-
-Action for Will: Deploy to edit.phext.io only — PR #65 in wbic16/phext-lattice (https://github.com/wbic16/phext-lattice/pull/65) was merged 2026-11-14 11:27 CST, merge commit 9fdf81ce on exo, live-verified tick 1840; the merge batched into the queued phext-lattice release-build task
-
-Why it ranks here: A free, child-simple phext example on edit.phext.io widens who can reach phext: the medium's front door for a first-time reader, built for @paleoludic at Will's direction.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
