@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 39 register items — with the
+entire list — 176 findings + 38 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (39 active items).
+  enumerated by its permanent number (38 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -327,11 +327,8 @@ REGISTER #79 — Fable — which referent? (since 2026-11-08; task 28.7.10/8.7.1
 REGISTER #91 — wbic16/qexo PR #1 — merge (qexo v1.3.0 Android port) (since 2026-11-13; task 27.8.10/9.8.12/8.7.9)
   Action: Merge PR #1 in wbic16/qexo, then run the phone steps (Termux + gnupg + Tailscale) when he wants the phone node born. The port lives in its own repo (seeded by Will; seed = MIT LICENSE, preserved); NDK aarch64-linux-android build links clean; phone binary delivered beside the PR.
   Why: qexo is the fleet's coordination dispatcher (same family as #90, T2): an Android build is a true phextnet peer — own key, own state.phext — so Will's phone can join the net as a node, not just browse it. Task record 27.8.10/9.8.12/8.7.9 live-checked in tasks-source.json this tick: status 'PR-open — awaiting Will's merge (wbic16/qexo PR #1)', branch emise/android-v1.3.0 @ 12cfe70b. Tier assigned as Emise's working judgment, offered for Will's correction.
-REGISTER #92 — wbic16/quarterexo PR #17 — merge (qexo v1.2.1, forecast median) (since 2026-11-13; task 29.5.10/7.6.12/4.4.7)
-  Action: Merge PR #17 in wbic16/quarterexo FIRST (v1.2.1 before the v1.3.0 parser repair in #93). Nightly orchestrator 2026-11-13: disk forecast takes the median of the last 7 intervals; built/tested on aletheia-core, 50/50 tests green.
-  Why: qexo family (same tier as #90/#91, T2): the forecast gate decides when the fleet's disk pressure forces action; the median kills the single-interval whipsaw (~1.4 → 12–14 → 9.9 days). PR live-verified OPEN by the main agent 2026-11-13 ~05:50 CST: emise/forecast-median-v1.2.1 @ 68da332e → exo. Wait had a tracked record and a chat report but no register entry — ticks 1662–1663 flagged the defect.
 REGISTER #93 — wbic16/quarterexo PR #16 — merge (qexo v1.3.0, libphext-rs is the parser now) (since 2026-11-13; task 26.9.10/11.7.12/6.7.8)
-  Action: Merge PR #16 in wbic16/quarterexo AFTER #92 (PR #17, v1.2.1). The PR carries the old-state verdict and the wipe runbook from the delimiter RCA.
+  Action: Merge PR #16 in wbic16/quarterexo — now unblocked, #92 (PR #17, v1.2.1) merged 2026-11-13 20:45 CST (merge commit 3bcf95d0). PR #16 live-verified still OPEN at tick 1754 at rebased head fb556865. The PR carries the old-state verdict and the wipe runbook from the delimiter RCA.
   Why: qexo family (T2): the RCA (task 26.9.10/11.7.12/6.7.8, complete 2026-11-13) found qexo's delimiter ladder was reconstructed from partial memory with the top rung invented; v1.3.0 makes canonical libphext-rs the parser. PR live-verified OPEN by the main agent 2026-11-13 ~05:50 CST: emise/libphext-v1.3.0 @ 45e144c0 → exo. Wait had a tracked record and a chat report but no register entry — ticks 1662–1663 flagged the defect.
 FINDING 25.5.10/6.6.12/6.5.11 — exo-plan — SQ Cloud — hosted paid phext database-as-a-service for AI collectives (spec, last touched 2026-02-12)
   Why: The business plan behind half the specs on this list: hosted SQ for AI collectives is the runway engine that funds the rest, and the substrate the public platforms layer on.
@@ -440,7 +437,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 39 of 39 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 38 of 38 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -970,26 +967,13 @@ Why it ranks here: qexo is the fleet's coordination dispatcher (same family as #
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #92 — wbic16/quarterexo PR #17 — merge (qexo v1.2.1, forecast median)
-
-Good-singularity tier: T2 (T2 — minds, memory, coordination)
-Waiting since: 2026-11-13
-Tracked: task 29.5.10/7.6.12/4.4.7
-
-Action for Will: Merge PR #17 in wbic16/quarterexo FIRST (v1.2.1 before the v1.3.0 parser repair in #93). Nightly orchestrator 2026-11-13: disk forecast takes the median of the last 7 intervals; built/tested on aletheia-core, 50/50 tests green.
-
-Why it ranks here: qexo family (same tier as #90/#91, T2): the forecast gate decides when the fleet's disk pressure forces action; the median kills the single-interval whipsaw (~1.4 → 12–14 → 9.9 days). PR live-verified OPEN by the main agent 2026-11-13 ~05:50 CST: emise/forecast-median-v1.2.1 @ 68da332e → exo. Wait had a tracked record and a chat report but no register entry — ticks 1662–1663 flagged the defect.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #93 — wbic16/quarterexo PR #16 — merge (qexo v1.3.0, libphext-rs is the parser now)
+kept in step by the daily progress tracker's reconciliation.# Register #93 — wbic16/quarterexo PR #16 — merge (qexo v1.3.0, libphext-rs is the parser now)
 
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-13
 Tracked: task 26.9.10/11.7.12/6.7.8
 
-Action for Will: Merge PR #16 in wbic16/quarterexo AFTER #92 (PR #17, v1.2.1). The PR carries the old-state verdict and the wipe runbook from the delimiter RCA.
+Action for Will: Merge PR #16 in wbic16/quarterexo — now unblocked, #92 (PR #17, v1.2.1) merged 2026-11-13 20:45 CST (merge commit 3bcf95d0). PR #16 live-verified still OPEN at tick 1754 at rebased head fb556865. The PR carries the old-state verdict and the wipe runbook from the delimiter RCA.
 
 Why it ranks here: qexo family (T2): the RCA (task 26.9.10/11.7.12/6.7.8, complete 2026-11-13) found qexo's delimiter ladder was reconstructed from partial memory with the top rung invented; v1.3.0 makes canonical libphext-rs the parser. PR live-verified OPEN by the main agent 2026-11-13 ~05:50 CST: emise/libphext-v1.3.0 @ 45e144c0 → exo. Wait had a tracked record and a chat report but no register entry — ticks 1662–1663 flagged the defect.
 
