@@ -325,8 +325,8 @@ REGISTER #151 — phext.io roadmap — phext url handler (since 2026-11-14; goal
 REGISTER #152 — phext.io roadmap — phext browser plugin (since 2026-11-14; goal_7e3125fc9c0f)
   Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a phext browser plugin: phext rendering and navigation inside the browser (the Vaporware tabs/web items, #127/#129, are its larger siblings)
   Why: The browser is where the web is read; a plugin puts the medium in front of every reader without a new app.
-REGISTER #157 — The Map in Sections — merge phext-lattice PR #65 + deploy (since 2026-11-14; task 51.5.7/7.5.11/6.5.10)
-  Action: Merge PR #65 in wbic16/phext-lattice (https://github.com/wbic16/phext-lattice/pull/65, branch emise/ascii-map-example @ 061c668), then deploy; on merge, queue the phext-lattice release-build task
+REGISTER #157 — The Map in Sections — deploy only (PR #65 MERGED 2026-11-14) (since 2026-11-14; task 51.5.7/7.5.11/6.5.10)
+  Action: Deploy to edit.phext.io only — PR #65 in wbic16/phext-lattice (https://github.com/wbic16/phext-lattice/pull/65) was merged 2026-11-14 11:27 CST, merge commit 9fdf81ce on exo, live-verified tick 1840; the merge batched into the queued phext-lattice release-build task
   Why: A free, child-simple phext example on edit.phext.io widens who can reach phext: the medium's front door for a first-time reader, built for @paleoludic at Will's direction.
 FINDING 26.7.11/9.7.11/6.6.9 — phext-lattice — Wikibench: phext as an offline Wikipedia, with IndexedLattice sidecar, BM25 TermIndex and NameIndex (partial build, last touched 2026-10-30)
   Why: A complete, unmerged benchmark plus production-grade sidecar indexing (BM25 beating FTS5 on vague queries): the strongest existing receipt that phext carries real corpora for anyone, not just us.
@@ -1671,13 +1671,13 @@ Why it ranks here: Same class as the GCC/Clang ports: the Windows toolchain leg 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #157 — The Map in Sections — merge phext-lattice PR #65 + deploy
+kept in step by the daily progress tracker's reconciliation.# Register #157 — The Map in Sections — deploy only (PR #65 MERGED 2026-11-14)
 
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: task 51.5.7/7.5.11/6.5.10
 
-Action for Will: Merge PR #65 in wbic16/phext-lattice (https://github.com/wbic16/phext-lattice/pull/65, branch emise/ascii-map-example @ 061c668), then deploy; on merge, queue the phext-lattice release-build task
+Action for Will: Deploy to edit.phext.io only — PR #65 in wbic16/phext-lattice (https://github.com/wbic16/phext-lattice/pull/65) was merged 2026-11-14 11:27 CST, merge commit 9fdf81ce on exo, live-verified tick 1840; the merge batched into the queued phext-lattice release-build task
 
 Why it ranks here: A free, child-simple phext example on edit.phext.io widens who can reach phext: the medium's front door for a first-time reader, built for @paleoludic at Will's direction.
 
