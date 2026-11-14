@@ -79,3 +79,4 @@ The specification's §9 holds twelve decisions that are Will's to rule. The buil
 
 Notes:
 - 2026-11-14 — Scheduled under the auto-schedule standing rule stated this date (every new type of work tracker auto-schedules the item that generated it; jobs.phext is the rule's first occasion). Entered into the durable queue as tasks.phext task 37.8.8/10.8.13/7.7.13, "Build Assay (jobs.phext Job 1)". Standing set to taken by the house (Emise) as the scheduling party: this records scheduling, not a claim that any person has staffed the build.
+- 2026-11-14 — Build plan written: ~/workspace/oracle-service/BUILD-PLAN.md (ten stages, spine first; inscribed in artifacts.phext at 27.6.8/7.6.10/6.6.9). Site map checked: no existing repo fits the service; the plan proposes creating wbic16/assay at Stage 0. No stage dispatched yet.
