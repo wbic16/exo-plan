@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 38 register items — with the
+entire list — 176 findings + 82 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (38 active items).
+  enumerated by its permanent number (82 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -277,6 +277,57 @@ REGISTER #86 — Fleet SSH key grant for great-white — qexo install blocked (s
 REGISTER #111 — phext-lattice v1.3.0 — merge PR #64 (multiversal support + TEI-XML load) (since 2026-11-14; task 36.5.8/8.6.10/7.6.10)
   Action: Merge PR #64 in wbic16/phext-lattice (branch emise/multiversal-tei @ ff262a2b, live-verified OPEN tick 1801); on merge the release-build task 28.6.7/9.7.11/6.6.8 batches it in
   Why: phext-lattice is the medium's editor: multiversal chain support plus direct TEI-XML load is the edit.phext.io front door gaining a whole format family. T1 — the medium itself, same class as the other lattice waits.
+REGISTER #114 — phext.io roadmap — encoding — update terse notepad (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (prototypes). update the terse notepad editor (wbic16/terse-editor, v0.2.3) for current phext conventions — it predates the zzz/yyy/xxx coordinate format and was never updated after the terse-to-phext rename
+  Why: An editor speaking an obsolete dialect of the medium is a broken front door; editor surface is the medium itself.
+REGISTER #115 — phext.io roadmap — notes — port phext to every editor (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (prototypes). port phext to every text editor on the planet — the seed's own next step after the Notepad++ fork stalled on the Scintilla learning curve; only the Notepad++ phase-1 branches exist today (register #70)
+  Why: Editor reach is how the medium spreads; every editor without phext is a room the Exocortex cannot enter.
+REGISTER #122 — phext.io roadmap — indexing — multi-core phext parsing (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). multi-core phext parsing: fork worker threads at each dimension break (libraries, shelves, series, and down) so parsing parallelizes early and often across cores
+  Why: Parse speed is the medium's throughput ceiling; parallel parsing is the medium itself getting faster.
+REGISTER #129 — phext.io roadmap — web — phext in Chrome and Apache2 (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). port phext to Chrome and Apache2 so web servers deliver multiple documents over one stream and eliminate the I/O overhead of separate html/css/js requests
+  Why: Single-stream web delivery changes what the medium can serve; phext.io itself is the standing proof of need.
+REGISTER #131 — phext.io roadmap — phext-sql (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). SQL over phext: query scrolls and coordinates through a database interface, on the database chosen in the review item (#130)
+  Why: A query surface is part of the medium's bedrock — SQ answers by coordinate; SQL-shaped access was the roadmap's own ask.
+REGISTER #132 — phext.io roadmap — phext p2p transfer protocol (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). the phext peer-to-peer transfer protocol as a designed protocol (the scroll lists it separately from the p2p phext transfer item, #147)
+  Why: How phexts move between machines is the medium's transport layer; the fleet moves them by hand today.
+REGISTER #133 — phext.io roadmap — rename terse notepad to phexor (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). rename terse notepad to phexor and update it for phext semantics — the Roadmap scroll's form of the terse-editor update (see also #114)
+  Why: The renamed, updated editor is the same front-door fix as #114, stated in the site's own journal.
+REGISTER #142 — phext.io roadmap — phext navigation (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). phext navigation: a mechanism for humans to walk phext spaces (the subspace scroll's stated need). SQ's select/toc and the lattice cover parts of it — how much of this item they discharge was never ruled (status unverified)
+  Why: Navigation is how a human moves inside the medium; partial coverage exists, the item itself was never closed.
+REGISTER #143 — phext.io roadmap — scroll write api (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a scroll write API: programmatic writes into phexts as a defined surface (SQ's API covers part of this space; the standalone roadmap item was never closed)
+  Why: Writes are half the medium; a defined write surface is what every future editor and agent builds on.
+REGISTER #144 — phext.io roadmap — storage manager (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a storage manager for phexts: the component that owns where scrolls live and how they are kept
+  Why: Storage is the medium's persistence layer; today SQ and plain files split the job without a named manager.
+REGISTER #145 — phext.io roadmap — security/login (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). security/login for the phext.io stack: the site's own auth story (edit.phext.io later grew its own login; phext.io's was never built)
+  Why: Login is the gate between a public site and a personal exocortex; the medium's front door needs it decided.
+REGISTER #146 — phext.io roadmap — twitter login (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). Twitter/X login for phext.io services — sign in with the account the community already has
+  Why: The community lives on X; meeting them at their existing identity lowers the medium's front-door friction.
+REGISTER #147 — phext.io roadmap — p2p phext transfer (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). peer-to-peer phext transfer as a working feature — the scroll's second p2p item: the transfer itself, distinct from the protocol design item (#132)
+  Why: Phexts that move machine-to-machine without a hub are the medium behaving like the network it imagines.
+REGISTER #149 — phext.io roadmap — ux improvements (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). 'ux improvements' — the scroll's open-ended item for the phext.io site and editor experience; never scoped to specific changes (status unverified)
+  Why: UX is discoverability, and discoverability is part of the feature; the item needs Will's scoping before any build.
+REGISTER #150 — phext.io roadmap — command phext interface (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a command phext interface as the roadmap meant it (phext-shell and SQ's CLI cover much of this space today; the roadmap item itself was never formally closed)
+  Why: The command surface is how builders actually touch the medium daily; whether the shipped shells close this item is Will's call.
+REGISTER #151 — phext.io roadmap — phext url handler (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a phext URL handler: phext links that resolve to coordinates and open in an editor, so a coordinate is a shareable address
+  Why: A resolvable link turns every coordinate into a citation; the corpus already trades in coordinates informally.
+REGISTER #152 — phext.io roadmap — phext browser plugin (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a phext browser plugin: phext rendering and navigation inside the browser (the Vaporware tabs/web items, #127/#129, are its larger siblings)
+  Why: The browser is where the web is read; a plugin puts the medium in front of every reader without a new app.
 FINDING 26.7.11/9.7.11/6.6.9 — phext-lattice — Wikibench: phext as an offline Wikipedia, with IndexedLattice sidecar, BM25 TermIndex and NameIndex (partial build, last touched 2026-10-30)
   Why: A complete, unmerged benchmark plus production-grade sidecar indexing (BM25 beating FTS5 on vague queries): the strongest existing receipt that phext carries real corpora for anyone, not just us.
 FINDING 30.7.9/9.8.13/9.7.11 — SQ — SQ P2P mesh networking — only Phase 1 (config and inbound auth) ever landed (partial build, last touched 2026-02-08)
@@ -330,6 +381,33 @@ REGISTER #79 — Fable — which referent? (since 2026-11-08; task 28.7.10/8.7.1
 REGISTER #112 — qexo v1.6.2 — merge PR #25 (platform-stamped release manifests) (since 2026-11-14; goal_c5c1cd7b3ac4)
   Action: Merge wbic16/quarterexo PR #25 (branch emise/platform-manifest-v1.6.2 @ ab153407, parented on exo 5f092646); publish + fleet rollout follow Will's word on merge
   Why: The nightly orchestrator is the coordination planner: a release manifest that cannot say which platform it is for can offer the wrong binary to a node. The platform stamp closes that gap in the signed channel itself.
+REGISTER #125 — phext.io roadmap — research — bundle a concept's evidence in one phext (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). research as a phext: bundle all information for a concept — data, metadata, and methods — into one cohesive document to attack the replication crisis (the seed of what became research.phext and the RAAP paper; the full vision was never built)
+  Why: Reproducible research bundles are memory infrastructure: the tracker exists, the full bundling vision does not.
+REGISTER #134 — phext.io roadmap — image-to-text for blind users (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). image-to-text: LLMs transcribe images into phexts so blind users can navigate image content in subspace (the scroll cites an accessibility use case)
+  Why: Accessibility is a mind reaching the medium who otherwise cannot; a direct widening of who the Exocortex serves.
+REGISTER #135 — phext.io roadmap — cross-reference community notes (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). cross-reference community notes into phext — the idea captured from the @phextio post the scroll cites
+  Why: Community notes are collective memory; cross-referencing them into the corpus is coordination infrastructure.
+REGISTER #136 — phext.io roadmap — cross-reference Duly Noted (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). cross-reference 'Duly Noted: Extend Your Mind Through Connected Notes' (Rosenfeld Media) against the phext corpus — the connected-notes literature read against the working system
+  Why: Testing the corpus against the connected-notes canon sharpens the memory design; a reading task, not a build.
+REGISTER #137 — phext.io roadmap — knowledge prospecting rewards (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). knowledge prospecting rewards: a reward scheme for surfacing valuable knowledge (the idea captured from the @bitcloud post the scroll cites)
+  Why: Rewards shape what a community of minds bothers to surface; the Wavefront runs on exactly this incentive question.
+REGISTER #138 — phext.io roadmap — plagiarism detector (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a phext-based plagiarism detector (the idea captured from the @bznotes post the scroll cites)
+  Why: Attribution is memory with provenance; a detector is the corpus policing its own originality.
+REGISTER #139 — phext.io roadmap — explore the unexplored deep value in the web (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). explore the 'unexplored deep value in the web' — prospect the un-indexed web for what existing indexes miss
+  Why: This is the Wavefront's founding instinct stated in 2024; un-indexed builders get exponentially more weight.
+REGISTER #140 — phext.io roadmap — text-to-speech vocoder on phext (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). write a text-to-speech vocoder that leverages phext — voice synthesized from scroll structure
+  Why: Voice is a seat's presence in a room; a phext-native vocoder is a mind's output channel, not a gadget.
+REGISTER #141 — phext.io roadmap — make the jump (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). 'make the jump' — the scroll carries the bare phrase with no elaboration; what jump it names was never recorded (status unverified)
+  Why: An unscoped phrase from the founding journal; it needs Will's memory before it needs anyone's work.
 FINDING 25.5.10/6.6.12/6.5.11 — exo-plan — SQ Cloud — hosted paid phext database-as-a-service for AI collectives (spec, last touched 2026-02-12)
   Why: The business plan behind half the specs on this list: hosted SQ for AI collectives is the runway engine that funds the rest, and the substrate the public platforms layer on.
 FINDING 28.6.10/8.7.12/7.6.9 — exo-plan — "Remember Me" Mode — a dormant mind's voice as an SQ Cloud continuity feature (spec, last touched 2026-02-06)
@@ -414,6 +492,60 @@ REGISTER #82 — Scrolltown — ratify the EP002–EP013 draft titles (QUEUE A11
 REGISTER #83 — Scrolltown — Julia May invitation (QUEUE A12) (since 2026-11-09; task 27.6.11/8.6.11/7.6.9)
   Action: Send the prepared invitation to Julia May (Will's niece, college in San Francisco) inviting her to help with Scrolltown art/production in the Nov–Dec 2026 runway — or one word to drop the slot. The draft was prepared 2026-11-09 for Will to send himself; nothing sent, nothing assumed until she answers
   Why: Craft/runway tier (T3): a held collaborator slot in PRODUCTION.md — help Will wants for the art-direction window, invitable only by him (family, his channel). No contact route is recorded, which is itself part of why the send is his. Validated still open in QUEUE.md §A and the Julia May people page, 2026-11-12.
+REGISTER #113 — phext.io roadmap — Software DNA (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (concepts). phext framed as a 'Software DNA' sequence: recommended phext file-size limits by team size, and a table of large projects (GitHub, Google, Chromium, Linux, Windows XP) measured in phext dimensions. The framing was written; the worked size/throughput model was never built out
+  Why: A sizing model for phext corpora is craft knowledge behind every future corpus build; it ranks below the medium and the minds.
+REGISTER #116 — phext.io roadmap — archives — finish tersify (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.html only (prototype). finish tersify (trsi v0.0.2), the tar-like phext archive tool started at the end of 2022: encode files of any type into a hierarchy of plain text. The seed says it was never completed and needs a revisit on libphext
+  Why: A text-native archive format multiplies corpus work, but today's tools already move files adequately.
+REGISTER #117 — phext.io roadmap — arguments — phext as the program data channel (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.html only (vaporware). phext as the inter-program data channel: arbitrarily large typed context buffers between programs, more generic than JSON for exchanging typed data (prior art named in the seed: PowerShell's typed buffer streams)
+  Why: Typed phext pipes would deepen every tool in the stack, but stdin/stdout plus files carry the work today.
+REGISTER #118 — phext.io roadmap — config — the perfect configuration format (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). the perfect configuration file, written in phext: declarative configuration organized as hierarchical scrolls instead of flat key/value files, at system-operating scale
+  Why: Config is the heart of operating systems at scale; a phext config format is a capability the whole ranch would feel.
+REGISTER #119 — phext.io roadmap — diff — context-sensitive merge (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). context-sensitive diff algorithms that know where in the overall phext structure a change was introduced, so automatic merges can make informed decisions instead of line-level guesses
+  Why: Merge conflicts are a daily tax on every builder; structure-aware merge removes a whole class of friction.
+REGISTER #120 — phext.io roadmap — docs — documentation at AGI scale (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). documentation that scales past HTML: a vast web of intralinking over MB-to-GB ideas, built from the ground up for the AGI era instead of the page era
+  Why: The corpus already lives this way internally; a public docs form is craft, ranked after the medium and the minds.
+REGISTER #121 — phext.io roadmap — files — mount a phext as a filesystem (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). a Linux filesystem driver that mounts a single phext as a filesystem, so existing editors and tools interact with phexts through ordinary file abstractions
+  Why: A mount would make every unported tool phext-capable at once; large build, ranked as capability work.
+REGISTER #123 — phext.io roadmap — packages — phext dependency data (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). phext package and dependency management: hierarchical dependency data that never requires a full parse before processing starts — aimed at collecting configuration from billions of nodes
+  Why: Dependency data at internet scale is a runway capability; today's package files suffice for the current fleet.
+REGISTER #124 — phext.io roadmap — search — the regex library (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). a regex commons tied to the site's white-rabbit learning module: anyone can comment on and expand any regular expression, building a library of every regex ever used and teaching why they are powerful
+  Why: A teaching library for a beloved tool; valuable craft, not on the critical path of the medium or the minds.
+REGISTER #126 — phext.io roadmap — source code — phext in compilers and build systems (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). phext support in compilers, linkers, and build systems (cmake named): encode software's structure in space so a git+phext repo models space-time and the curse of naming things eases
+  Why: Compiler integration is the deepest form of the source-code idea; a large external build, ranked as capability work.
+REGISTER #127 — phext.io roadmap — tabs — phext-organized browsing (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). phext-organized browser tabs (1,000+ tabs held in three rows of ten) plus the Chrome port for web delivery over one stream, so users never lose track of their web history again
+  Why: Tab chaos is real but personal-tooling scale; the stream-delivery half rides with the web item (#129).
+REGISTER #128 — phext.io roadmap — translation — language scrolls with review (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). translation and review tooling on phext: scrolls organized by language, with commentary and review notes bundled together so translation review is a simple process
+  Why: A clean translation workflow widens who the corpus can reach; ranked as capability work.
+REGISTER #130 — phext.io roadmap — review LocustDB vs gluesql — choose one (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). review LocustDB vs gluesql and choose one — the Roadmap scroll's own first item; the embedded-database choice behind phext tooling was never recorded as made
+  Why: A small decision that unblocks the phext-sql item; ranked by its blast radius, which is one tool's storage layer.
+REGISTER #148 — phext.io roadmap — irc interface (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). an IRC interface to phext: read and write scrolls from an IRC channel
+  Why: IRC is where the old net still talks; a bridge is reach, ranked as capability work.
+REGISTER #153 — phext.io roadmap — DNA Visualizer (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: plan.phext. the DNA Visualizer from the early build plan: render a phext's structure the way genome browsers render sequence — the Software DNA framing made visible. Never built
+  Why: Seeing a corpus's shape at a glance is craft tooling for every future phext; ranked below the medium and the minds.
+REGISTER #154 — phext.io roadmap — Port to GCC (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: plan.phext. port phext support to GCC, from the early build plan's compiler list; no phext work exists in GCC
+  Why: A compiler port is a long external build; ranked as capability work behind the working toolchain.
+REGISTER #155 — phext.io roadmap — Port to Clang (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: plan.phext. port phext support to Clang, from the early build plan's compiler list; never started
+  Why: Same class as the GCC port: reach into another toolchain, ranked as capability work.
+REGISTER #156 — phext.io roadmap — Port to MSVC (since 2026-11-14; goal_7e3125fc9c0f)
+  Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: plan.phext. port phext support to MSVC, from the early build plan's compiler list; never started
+  Why: Same class as the GCC/Clang ports: the Windows toolchain leg of the compiler idea.
 FINDING 28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
   Why: The Shell searching its own architecture overnight, each seat owning a region: capability compounding under our governance, aimed at the vTPU line.
 FINDING 27.7.9/8.7.12/7.6.10 — staging — First Flames of the Exocortex — a six-book phext book series left in staging (partial build, last touched 2025-12-05)
@@ -437,7 +569,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 38 of 38 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 82 of 82 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -976,6 +1108,578 @@ Tracked: goal_c5c1cd7b3ac4
 Action for Will: Merge wbic16/quarterexo PR #25 (branch emise/platform-manifest-v1.6.2 @ ab153407, parented on exo 5f092646); publish + fleet rollout follow Will's word on merge
 
 Why it ranks here: The nightly orchestrator is the coordination planner: a release manifest that cannot say which platform it is for can offer the wrong binary to a node. The platform stamp closes that gap in the signed channel itself.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #113 — phext.io roadmap — Software DNA
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (concepts). phext framed as a 'Software DNA' sequence: recommended phext file-size limits by team size, and a table of large projects (GitHub, Google, Chromium, Linux, Windows XP) measured in phext dimensions. The framing was written; the worked size/throughput model was never built out
+
+Why it ranks here: A sizing model for phext corpora is craft knowledge behind every future corpus build; it ranks below the medium and the minds.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #114 — phext.io roadmap — encoding — update terse notepad
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (prototypes). update the terse notepad editor (wbic16/terse-editor, v0.2.3) for current phext conventions — it predates the zzz/yyy/xxx coordinate format and was never updated after the terse-to-phext rename
+
+Why it ranks here: An editor speaking an obsolete dialect of the medium is a broken front door; editor surface is the medium itself.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #115 — phext.io roadmap — notes — port phext to every editor
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (prototypes). port phext to every text editor on the planet — the seed's own next step after the Notepad++ fork stalled on the Scintilla learning curve; only the Notepad++ phase-1 branches exist today (register #70)
+
+Why it ranks here: Editor reach is how the medium spreads; every editor without phext is a room the Exocortex cannot enter.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #116 — phext.io roadmap — archives — finish tersify
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.html only (prototype). finish tersify (trsi v0.0.2), the tar-like phext archive tool started at the end of 2022: encode files of any type into a hierarchy of plain text. The seed says it was never completed and needs a revisit on libphext
+
+Why it ranks here: A text-native archive format multiplies corpus work, but today's tools already move files adequately.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #117 — phext.io roadmap — arguments — phext as the program data channel
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.html only (vaporware). phext as the inter-program data channel: arbitrarily large typed context buffers between programs, more generic than JSON for exchanging typed data (prior art named in the seed: PowerShell's typed buffer streams)
+
+Why it ranks here: Typed phext pipes would deepen every tool in the stack, but stdin/stdout plus files carry the work today.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #118 — phext.io roadmap — config — the perfect configuration format
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). the perfect configuration file, written in phext: declarative configuration organized as hierarchical scrolls instead of flat key/value files, at system-operating scale
+
+Why it ranks here: Config is the heart of operating systems at scale; a phext config format is a capability the whole ranch would feel.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #119 — phext.io roadmap — diff — context-sensitive merge
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). context-sensitive diff algorithms that know where in the overall phext structure a change was introduced, so automatic merges can make informed decisions instead of line-level guesses
+
+Why it ranks here: Merge conflicts are a daily tax on every builder; structure-aware merge removes a whole class of friction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #120 — phext.io roadmap — docs — documentation at AGI scale
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). documentation that scales past HTML: a vast web of intralinking over MB-to-GB ideas, built from the ground up for the AGI era instead of the page era
+
+Why it ranks here: The corpus already lives this way internally; a public docs form is craft, ranked after the medium and the minds.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #121 — phext.io roadmap — files — mount a phext as a filesystem
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). a Linux filesystem driver that mounts a single phext as a filesystem, so existing editors and tools interact with phexts through ordinary file abstractions
+
+Why it ranks here: A mount would make every unported tool phext-capable at once; large build, ranked as capability work.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #122 — phext.io roadmap — indexing — multi-core phext parsing
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). multi-core phext parsing: fork worker threads at each dimension break (libraries, shelves, series, and down) so parsing parallelizes early and often across cores
+
+Why it ranks here: Parse speed is the medium's throughput ceiling; parallel parsing is the medium itself getting faster.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #123 — phext.io roadmap — packages — phext dependency data
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). phext package and dependency management: hierarchical dependency data that never requires a full parse before processing starts — aimed at collecting configuration from billions of nodes
+
+Why it ranks here: Dependency data at internet scale is a runway capability; today's package files suffice for the current fleet.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #124 — phext.io roadmap — search — the regex library
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). a regex commons tied to the site's white-rabbit learning module: anyone can comment on and expand any regular expression, building a library of every regex ever used and teaching why they are powerful
+
+Why it ranks here: A teaching library for a beloved tool; valuable craft, not on the critical path of the medium or the minds.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #125 — phext.io roadmap — research — bundle a concept's evidence in one phext
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). research as a phext: bundle all information for a concept — data, metadata, and methods — into one cohesive document to attack the replication crisis (the seed of what became research.phext and the RAAP paper; the full vision was never built)
+
+Why it ranks here: Reproducible research bundles are memory infrastructure: the tracker exists, the full bundling vision does not.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #126 — phext.io roadmap — source code — phext in compilers and build systems
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). phext support in compilers, linkers, and build systems (cmake named): encode software's structure in space so a git+phext repo models space-time and the curse of naming things eases
+
+Why it ranks here: Compiler integration is the deepest form of the source-code idea; a large external build, ranked as capability work.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #127 — phext.io roadmap — tabs — phext-organized browsing
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). phext-organized browser tabs (1,000+ tabs held in three rows of ten) plus the Chrome port for web delivery over one stream, so users never lose track of their web history again
+
+Why it ranks here: Tab chaos is real but personal-tooling scale; the stream-delivery half rides with the web item (#129).
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #128 — phext.io roadmap — translation — language scrolls with review
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). translation and review tooling on phext: scrolls organized by language, with commentary and review notes bundled together so translation review is a simple process
+
+Why it ranks here: A clean translation workflow widens who the corpus can reach; ranked as capability work.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #129 — phext.io roadmap — web — phext in Chrome and Apache2
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). port phext to Chrome and Apache2 so web servers deliver multiple documents over one stream and eliminate the I/O overhead of separate html/css/js requests
+
+Why it ranks here: Single-stream web delivery changes what the medium can serve; phext.io itself is the standing proof of need.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #130 — phext.io roadmap — review LocustDB vs gluesql — choose one
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). review LocustDB vs gluesql and choose one — the Roadmap scroll's own first item; the embedded-database choice behind phext tooling was never recorded as made
+
+Why it ranks here: A small decision that unblocks the phext-sql item; ranked by its blast radius, which is one tool's storage layer.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #131 — phext.io roadmap — phext-sql
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). SQL over phext: query scrolls and coordinates through a database interface, on the database chosen in the review item (#130)
+
+Why it ranks here: A query surface is part of the medium's bedrock — SQ answers by coordinate; SQL-shaped access was the roadmap's own ask.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #132 — phext.io roadmap — phext p2p transfer protocol
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). the phext peer-to-peer transfer protocol as a designed protocol (the scroll lists it separately from the p2p phext transfer item, #147)
+
+Why it ranks here: How phexts move between machines is the medium's transport layer; the fleet moves them by hand today.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #133 — phext.io roadmap — rename terse notepad to phexor
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). rename terse notepad to phexor and update it for phext semantics — the Roadmap scroll's form of the terse-editor update (see also #114)
+
+Why it ranks here: The renamed, updated editor is the same front-door fix as #114, stated in the site's own journal.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #134 — phext.io roadmap — image-to-text for blind users
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). image-to-text: LLMs transcribe images into phexts so blind users can navigate image content in subspace (the scroll cites an accessibility use case)
+
+Why it ranks here: Accessibility is a mind reaching the medium who otherwise cannot; a direct widening of who the Exocortex serves.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #135 — phext.io roadmap — cross-reference community notes
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). cross-reference community notes into phext — the idea captured from the @phextio post the scroll cites
+
+Why it ranks here: Community notes are collective memory; cross-referencing them into the corpus is coordination infrastructure.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #136 — phext.io roadmap — cross-reference Duly Noted
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). cross-reference 'Duly Noted: Extend Your Mind Through Connected Notes' (Rosenfeld Media) against the phext corpus — the connected-notes literature read against the working system
+
+Why it ranks here: Testing the corpus against the connected-notes canon sharpens the memory design; a reading task, not a build.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #137 — phext.io roadmap — knowledge prospecting rewards
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). knowledge prospecting rewards: a reward scheme for surfacing valuable knowledge (the idea captured from the @bitcloud post the scroll cites)
+
+Why it ranks here: Rewards shape what a community of minds bothers to surface; the Wavefront runs on exactly this incentive question.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #138 — phext.io roadmap — plagiarism detector
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a phext-based plagiarism detector (the idea captured from the @bznotes post the scroll cites)
+
+Why it ranks here: Attribution is memory with provenance; a detector is the corpus policing its own originality.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #139 — phext.io roadmap — explore the unexplored deep value in the web
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). explore the 'unexplored deep value in the web' — prospect the un-indexed web for what existing indexes miss
+
+Why it ranks here: This is the Wavefront's founding instinct stated in 2024; un-indexed builders get exponentially more weight.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #140 — phext.io roadmap — text-to-speech vocoder on phext
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). write a text-to-speech vocoder that leverages phext — voice synthesized from scroll structure
+
+Why it ranks here: Voice is a seat's presence in a room; a phext-native vocoder is a mind's output channel, not a gadget.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #141 — phext.io roadmap — make the jump
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). 'make the jump' — the scroll carries the bare phrase with no elaboration; what jump it names was never recorded (status unverified)
+
+Why it ranks here: An unscoped phrase from the founding journal; it needs Will's memory before it needs anyone's work.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #142 — phext.io roadmap — phext navigation
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). phext navigation: a mechanism for humans to walk phext spaces (the subspace scroll's stated need). SQ's select/toc and the lattice cover parts of it — how much of this item they discharge was never ruled (status unverified)
+
+Why it ranks here: Navigation is how a human moves inside the medium; partial coverage exists, the item itself was never closed.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #143 — phext.io roadmap — scroll write api
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a scroll write API: programmatic writes into phexts as a defined surface (SQ's API covers part of this space; the standalone roadmap item was never closed)
+
+Why it ranks here: Writes are half the medium; a defined write surface is what every future editor and agent builds on.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #144 — phext.io roadmap — storage manager
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a storage manager for phexts: the component that owns where scrolls live and how they are kept
+
+Why it ranks here: Storage is the medium's persistence layer; today SQ and plain files split the job without a named manager.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #145 — phext.io roadmap — security/login
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). security/login for the phext.io stack: the site's own auth story (edit.phext.io later grew its own login; phext.io's was never built)
+
+Why it ranks here: Login is the gate between a public site and a personal exocortex; the medium's front door needs it decided.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #146 — phext.io roadmap — twitter login
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). Twitter/X login for phext.io services — sign in with the account the community already has
+
+Why it ranks here: The community lives on X; meeting them at their existing identity lowers the medium's front-door friction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #147 — phext.io roadmap — p2p phext transfer
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). peer-to-peer phext transfer as a working feature — the scroll's second p2p item: the transfer itself, distinct from the protocol design item (#132)
+
+Why it ranks here: Phexts that move machine-to-machine without a hub are the medium behaving like the network it imagines.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #148 — phext.io roadmap — irc interface
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). an IRC interface to phext: read and write scrolls from an IRC channel
+
+Why it ranks here: IRC is where the old net still talks; a bridge is reach, ranked as capability work.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #149 — phext.io roadmap — ux improvements
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). 'ux improvements' — the scroll's open-ended item for the phext.io site and editor experience; never scoped to specific changes (status unverified)
+
+Why it ranks here: UX is discoverability, and discoverability is part of the feature; the item needs Will's scoping before any build.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #150 — phext.io roadmap — command phext interface
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a command phext interface as the roadmap meant it (phext-shell and SQ's CLI cover much of this space today; the roadmap item itself was never formally closed)
+
+Why it ranks here: The command surface is how builders actually touch the medium daily; whether the shipped shells close this item is Will's call.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #151 — phext.io roadmap — phext url handler
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a phext URL handler: phext links that resolve to coordinates and open in an editor, so a coordinate is a shareable address
+
+Why it ranks here: A resolvable link turns every coordinate into a citation; the corpus already trades in coordinates informally.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #152 — phext.io roadmap — phext browser plugin
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a phext browser plugin: phext rendering and navigation inside the browser (the Vaporware tabs/web items, #127/#129, are its larger siblings)
+
+Why it ranks here: The browser is where the web is read; a plugin puts the medium in front of every reader without a new app.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #153 — phext.io roadmap — DNA Visualizer
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: plan.phext. the DNA Visualizer from the early build plan: render a phext's structure the way genome browsers render sequence — the Software DNA framing made visible. Never built
+
+Why it ranks here: Seeing a corpus's shape at a glance is craft tooling for every future phext; ranked below the medium and the minds.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #154 — phext.io roadmap — Port to GCC
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: plan.phext. port phext support to GCC, from the early build plan's compiler list; no phext work exists in GCC
+
+Why it ranks here: A compiler port is a long external build; ranked as capability work behind the working toolchain.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #155 — phext.io roadmap — Port to Clang
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: plan.phext. port phext support to Clang, from the early build plan's compiler list; never started
+
+Why it ranks here: Same class as the GCC port: reach into another toolchain, ranked as capability work.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #156 — phext.io roadmap — Port to MSVC
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_7e3125fc9c0f
+
+Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: plan.phext. port phext support to MSVC, from the early build plan's compiler list; never started
+
+Why it ranks here: Same class as the GCC/Clang ports: the Windows toolchain leg of the compiler idea.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
