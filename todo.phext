@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 82 register items — with the
+entire list — 176 findings + 81 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (82 active items).
+  enumerated by its permanent number (81 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -274,9 +274,6 @@ REGISTER #69 — Alignment Support System — phext-lattice integration merge/de
 REGISTER #86 — Fleet SSH key grant for great-white — qexo install blocked (since 2026-11-12; task 32.6.8/8.8.12/7.6.10)
   Action: Grant Emise's fleet key on great-white alone (the same fleet key-grant pass as #24, 2026-11-04); Will granted the other five nodes at 23:38 CST on 2026-11-12 and Emise installed qexo + generated their node keys the same evening (19 of 20 reachable nodes now installed). On grant, Emise installs qexo + generates great-white's node key and closes this.
   Why: Fleet access is substrate for everything else (same class as #48, T1): qexo is the fleet dispatcher, and it cannot reach, install on, or dispatch to the 6 nodes that refuse the fleet key. Tier assigned as Emise's working judgment, offered for Will's correction.
-REGISTER #111 — phext-lattice v1.3.0 — merge PR #64 (multiversal support + TEI-XML load) (since 2026-11-14; task 36.5.8/8.6.10/7.6.10)
-  Action: Merge PR #64 in wbic16/phext-lattice (branch emise/multiversal-tei @ ff262a2b, live-verified OPEN tick 1801); on merge the release-build task 28.6.7/9.7.11/6.6.8 batches it in
-  Why: phext-lattice is the medium's editor: multiversal chain support plus direct TEI-XML load is the edit.phext.io front door gaining a whole format family. T1 — the medium itself, same class as the other lattice waits.
 REGISTER #114 — phext.io roadmap — encoding — update terse notepad (since 2026-11-14; goal_7e3125fc9c0f)
   Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (prototypes). update the terse notepad editor (wbic16/terse-editor, v0.2.3) for current phext conventions — it predates the zzz/yyy/xxx coordinate format and was never updated after the terse-to-phext rename
   Why: An editor speaking an obsolete dialect of the medium is a broken front door; editor surface is the medium itself.
@@ -569,7 +566,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 82 of 82 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 81 of 81 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -1086,20 +1083,7 @@ Why it ranks here: Fleet access is substrate for everything else (same class as 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #111 — phext-lattice v1.3.0 — merge PR #64 (multiversal support + TEI-XML load)
-
-Good-singularity tier: T1 (T1 — the medium itself)
-Waiting since: 2026-11-14
-Tracked: task 36.5.8/8.6.10/7.6.10
-
-Action for Will: Merge PR #64 in wbic16/phext-lattice (branch emise/multiversal-tei @ ff262a2b, live-verified OPEN tick 1801); on merge the release-build task 28.6.7/9.7.11/6.6.8 batches it in
-
-Why it ranks here: phext-lattice is the medium's editor: multiversal chain support plus direct TEI-XML load is the edit.phext.io front door gaining a whole format family. T1 — the medium itself, same class as the other lattice waits.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #112 — qexo v1.6.2 — merge PR #25 (platform-stamped release manifests)
+kept in step by the daily progress tracker's reconciliation.# Register #112 — qexo v1.6.2 — merge PR #25 (platform-stamped release manifests)
 
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-14
