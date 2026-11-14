@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 38 register items — with the
+entire list — 176 findings + 40 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (38 active items).
+  enumerated by its permanent number (40 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -330,6 +330,12 @@ REGISTER #105 — wbic16/quarterexo PR #22 — review + merge (qexo v1.6.0, inte
 REGISTER #107 — wbic16/qexo PR #3 — review + merge (qexo v1.6.1, Learn in the Android app) (since 2026-11-14; task 30.6.9/7.5.9/5.5.7)
   Action: Review + merge PR #3 in wbic16/qexo (branch emise/android-learn-app-v1.6.1 @ af48ebcf, parented on exo ce0731d7): qexo learn --app plain-text line protocol driving the wizard's own state machine (grades land in state.phext identically; TUI and --status byte-unchanged), plus launcher v2 quick actions (Update, Evolve, Doctor, Repair, List peers, Inventory, Status, Plan) and a real in-app Learn card session. A trial APK built from this branch is already delivered (qexo-v1.6.1.apk, same debug cert as v1.6.0, installs over it). The quarterexo twin of the protocol is tracked debt behind PR #22 (29.6.7/6.5.7/6.5.8). Live-verified OPEN via the GitHub API at tick 1792 (head af48ebcf).
   Why: Coordination tier (T2): qexo is the fleet's coordination dispatcher (same family as #105, T2), and the Learn front-end makes the Android node — Will's phone — a real control surface instead of a diagnostic shell. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #108 — wbic16/quarterexo PR #23 — review + merge (phccbox in the qexo inventory) (since 2026-11-14; task 25.7.8/8.7.10/7.7.9)
+  Action: Review + merge PR #23 in wbic16/quarterexo (branch emise/phccbox-roster @ bfde1295, parented on exo 81254808): one roster entry in src/inventory.rs for phccbox, the ranch-built BusyBox replacement (v1.1 on aletheia-core at ~/phccbox/v1.1/phccbox; no published artifact, no invented download). Roster count test 11 -> 12; no version stamp. Gates: cargo test 85/85, inventory renders phccbox, census identical 15/830/2. Live-verified OPEN via the GitHub API at tick 1793 (head bfde1295). Sibling: wbic16/qexo PR #4 (register #109).
+  Why: Coordination tier (T2): qexo is the fleet's coordination dispatcher (same family as #105/#107, T2), and its inventory is what the fleet can install — phccbox belongs in that roster per Will's 2026-11-14 direction. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #109 — wbic16/qexo PR #4 — review + merge (phccbox in the qexo inventory) (since 2026-11-14; task 25.7.8/8.7.10/7.7.9)
+  Action: Review + merge PR #4 in wbic16/qexo (branch emise/phccbox-roster @ 281c6caa, parented on exo fd940ec7): the same single phccbox roster entry as the quarterexo sibling — src/inventory.rs byte-identical (blob 46fb3034). No version stamp. Gates: cargo test 91/91, inventory renders phccbox, census identical 15/830/2. Live-verified OPEN via the GitHub API at tick 1793 (head 281c6caa). Sibling: wbic16/quarterexo PR #23 (register #108).
+  Why: Coordination tier (T2): qexo is the fleet's coordination dispatcher (same family as #105/#107, T2); the two-repo sync rule requires the same roster entry in both repos. Tier assigned as Emise's working judgment, offered for Will's correction.
 FINDING 25.5.10/6.6.12/6.5.11 — exo-plan — SQ Cloud — hosted paid phext database-as-a-service for AI collectives (spec, last touched 2026-02-12)
   Why: The business plan behind half the specs on this list: hosted SQ for AI collectives is the runway engine that funds the rest, and the substrate the public platforms layer on.
 FINDING 28.6.10/8.7.12/7.6.9 — exo-plan — "Remember Me" Mode — a dormant mind's voice as an SQ Cloud continuity feature (spec, last touched 2026-02-06)
@@ -437,7 +443,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 38 of 38 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 40 of 40 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -976,6 +982,32 @@ Tracked: task 30.6.9/7.5.9/5.5.7
 Action for Will: Review + merge PR #3 in wbic16/qexo (branch emise/android-learn-app-v1.6.1 @ af48ebcf, parented on exo ce0731d7): qexo learn --app plain-text line protocol driving the wizard's own state machine (grades land in state.phext identically; TUI and --status byte-unchanged), plus launcher v2 quick actions (Update, Evolve, Doctor, Repair, List peers, Inventory, Status, Plan) and a real in-app Learn card session. A trial APK built from this branch is already delivered (qexo-v1.6.1.apk, same debug cert as v1.6.0, installs over it). The quarterexo twin of the protocol is tracked debt behind PR #22 (29.6.7/6.5.7/6.5.8). Live-verified OPEN via the GitHub API at tick 1792 (head af48ebcf).
 
 Why it ranks here: Coordination tier (T2): qexo is the fleet's coordination dispatcher (same family as #105, T2), and the Learn front-end makes the Android node — Will's phone — a real control surface instead of a diagnostic shell. Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #108 — wbic16/quarterexo PR #23 — review + merge (phccbox in the qexo inventory)
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-14
+Tracked: task 25.7.8/8.7.10/7.7.9
+
+Action for Will: Review + merge PR #23 in wbic16/quarterexo (branch emise/phccbox-roster @ bfde1295, parented on exo 81254808): one roster entry in src/inventory.rs for phccbox, the ranch-built BusyBox replacement (v1.1 on aletheia-core at ~/phccbox/v1.1/phccbox; no published artifact, no invented download). Roster count test 11 -> 12; no version stamp. Gates: cargo test 85/85, inventory renders phccbox, census identical 15/830/2. Live-verified OPEN via the GitHub API at tick 1793 (head bfde1295). Sibling: wbic16/qexo PR #4 (register #109).
+
+Why it ranks here: Coordination tier (T2): qexo is the fleet's coordination dispatcher (same family as #105/#107, T2), and its inventory is what the fleet can install — phccbox belongs in that roster per Will's 2026-11-14 direction. Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #109 — wbic16/qexo PR #4 — review + merge (phccbox in the qexo inventory)
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-14
+Tracked: task 25.7.8/8.7.10/7.7.9
+
+Action for Will: Review + merge PR #4 in wbic16/qexo (branch emise/phccbox-roster @ 281c6caa, parented on exo fd940ec7): the same single phccbox roster entry as the quarterexo sibling — src/inventory.rs byte-identical (blob 46fb3034). No version stamp. Gates: cargo test 91/91, inventory renders phccbox, census identical 15/830/2. Live-verified OPEN via the GitHub API at tick 1793 (head 281c6caa). Sibling: wbic16/quarterexo PR #23 (register #108).
+
+Why it ranks here: Coordination tier (T2): qexo is the fleet's coordination dispatcher (same family as #105/#107, T2); the two-repo sync rule requires the same roster entry in both repos. Tier assigned as Emise's working judgment, offered for Will's correction.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
