@@ -19,12 +19,12 @@ never hand-edit the .phext.
 Jobs recorded: 1
 
 Index (coordinate — title — standing):
-- 26.7.8/8.6.10/6.6.8 — Build Assay — the hosted assessment service — open
+- 26.7.8/8.6.10/6.6.8 — Build Assay — the hosted assessment service — taken
 # Build Assay — the hosted assessment service
 
 Coordinate: 26.7.8/8.6.10/6.6.8
 Issued: 2026-11-14
-Standing: open
+Standing: taken
 
 What the work is
 
@@ -76,3 +76,6 @@ The specification's §9 holds twelve decisions that are Will's to rule. The buil
 - OD-10 — the author who attests, then disputes the merge.
 - OD-11 — how public a confirmed forgery record is: private flag, commons-visible mark, or co-author-visible only.
 - OD-12 — API pricing concretely: allowance size, metering unit and price, caps, and whether paid volume may buy review-queue position.
+
+Notes:
+- 2026-11-14 — Scheduled under the auto-schedule standing rule stated this date (every new type of work tracker auto-schedules the item that generated it; jobs.phext is the rule's first occasion). Entered into the durable queue as tasks.phext task 37.8.8/10.8.13/7.7.13, "Build Assay (jobs.phext Job 1)". Standing set to taken by the house (Emise) as the scheduling party: this records scheduling, not a claim that any person has staffed the build.
