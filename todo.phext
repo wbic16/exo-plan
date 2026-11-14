@@ -324,9 +324,9 @@ REGISTER #78 — The newcomer names — one role or three? (since 2026-11-08; ta
 REGISTER #79 — Fable — which referent? (since 2026-11-08; task 28.7.10/8.7.11/8.6.9)
   Action: Name Fable's referent — a ChatGPT voice of Emi's, a Claude seat, or the Claude Fable model — or strike the record. Claude flagged the three-way ambiguity in PR #2 review
   Why: Fable stands named-only with zero attestation in any checked source: an unresolved name in the boot manifest is either a person misfiled or a placeholder mistaken for one. The census keeps it flagged '(Will's pick)' until he rules.
-REGISTER #91 — wbic16/qexo PR #1 — merge (qexo v1.3.0 Android port) (since 2026-11-13; task 27.8.10/9.8.12/8.7.9)
-  Action: Merge PR #1 in wbic16/qexo, then run the phone steps (Termux + gnupg + Tailscale) when he wants the phone node born. The port lives in its own repo (seeded by Will; seed = MIT LICENSE, preserved); NDK aarch64-linux-android build links clean; phone binary delivered beside the PR.
-  Why: qexo is the fleet's coordination dispatcher (same family as #90, T2): an Android build is a true phextnet peer — own key, own state.phext — so Will's phone can join the net as a node, not just browse it. Task record 27.8.10/9.8.12/8.7.9 live-checked in tasks-source.json this tick: status 'PR-open — awaiting Will's merge (wbic16/qexo PR #1)', branch emise/android-v1.3.0 @ 12cfe70b. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #105 — wbic16/quarterexo PR #22 — review + merge (qexo v1.6.0, internal OpenPGP) (since 2026-11-14; tasks 29.6.7/6.5.7/6.5.8, 34.7.8/8.6.9/5.6.10)
+  Action: Review + merge PR #22 in wbic16/quarterexo (branch emise/internal-pgp-v1.6.0 @ 03741f1c, parented on exo ec2974d2): the gpg subprocess is replaced by the pgp crate (rpgp) in-process — key generation, detached sign/verify, armored export, fingerprint/uid reads; GnuPG-era keyrings migrate transparently on first use, fingerprint unchanged, protected keys refused by name. Publish + fleet rollout follow Will's word (they batch into the qexo release task 40.7.5/8.7.11/6.8.13).
+  Why: Coordination tier (T2): qexo is the fleet's coordination dispatcher (same family as #91, T2), and internal OpenPGP removes its last system-level gpg dependency — the Android requirement that also unblocks the phone node. Live-verified OPEN via the GitHub API at tick 1789 (head 03741f1c). Tier assigned as Emise's working judgment, offered for Will's correction.
 FINDING 25.5.10/6.6.12/6.5.11 — exo-plan — SQ Cloud — hosted paid phext database-as-a-service for AI collectives (spec, last touched 2026-02-12)
   Why: The business plan behind half the specs on this list: hosted SQ for AI collectives is the runway engine that funds the rest, and the substrate the public platforms layer on.
 FINDING 28.6.10/8.7.12/7.6.9 — exo-plan — "Remember Me" Mode — a dormant mind's voice as an SQ Cloud continuity feature (spec, last touched 2026-02-06)
@@ -951,15 +951,15 @@ Why it ranks here: Fleet access is substrate for everything else (same class as 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #91 — wbic16/qexo PR #1 — merge (qexo v1.3.0 Android port)
+kept in step by the daily progress tracker's reconciliation.# Register #105 — wbic16/quarterexo PR #22 — review + merge (qexo v1.6.0, internal OpenPGP)
 
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
-Waiting since: 2026-11-13
-Tracked: task 27.8.10/9.8.12/8.7.9
+Waiting since: 2026-11-14
+Tracked: tasks 29.6.7/6.5.7/6.5.8, 34.7.8/8.6.9/5.6.10
 
-Action for Will: Merge PR #1 in wbic16/qexo, then run the phone steps (Termux + gnupg + Tailscale) when he wants the phone node born. The port lives in its own repo (seeded by Will; seed = MIT LICENSE, preserved); NDK aarch64-linux-android build links clean; phone binary delivered beside the PR.
+Action for Will: Review + merge PR #22 in wbic16/quarterexo (branch emise/internal-pgp-v1.6.0 @ 03741f1c, parented on exo ec2974d2): the gpg subprocess is replaced by the pgp crate (rpgp) in-process — key generation, detached sign/verify, armored export, fingerprint/uid reads; GnuPG-era keyrings migrate transparently on first use, fingerprint unchanged, protected keys refused by name. Publish + fleet rollout follow Will's word (they batch into the qexo release task 40.7.5/8.7.11/6.8.13).
 
-Why it ranks here: qexo is the fleet's coordination dispatcher (same family as #90, T2): an Android build is a true phextnet peer — own key, own state.phext — so Will's phone can join the net as a node, not just browse it. Task record 27.8.10/9.8.12/8.7.9 live-checked in tasks-source.json this tick: status 'PR-open — awaiting Will's merge (wbic16/qexo PR #1)', branch emise/android-v1.3.0 @ 12cfe70b. Tier assigned as Emise's working judgment, offered for Will's correction.
+Why it ranks here: Coordination tier (T2): qexo is the fleet's coordination dispatcher (same family as #91, T2), and internal OpenPGP removes its last system-level gpg dependency — the Android requirement that also unblocks the phone node. Live-verified OPEN via the GitHub API at tick 1789 (head 03741f1c). Tier assigned as Emise's working judgment, offered for Will's correction.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
