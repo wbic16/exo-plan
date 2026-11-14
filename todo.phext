@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 37 register items — with the
+entire list — 176 findings + 38 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (37 active items).
+  enumerated by its permanent number (38 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -327,6 +327,9 @@ REGISTER #79 — Fable — which referent? (since 2026-11-08; task 28.7.10/8.7.1
 REGISTER #105 — wbic16/quarterexo PR #22 — review + merge (qexo v1.6.0, internal OpenPGP) (since 2026-11-14; tasks 29.6.7/6.5.7/6.5.8, 34.7.8/8.6.9/5.6.10)
   Action: Review + merge PR #22 in wbic16/quarterexo (branch emise/internal-pgp-v1.6.0 @ 03741f1c, parented on exo ec2974d2): the gpg subprocess is replaced by the pgp crate (rpgp) in-process — key generation, detached sign/verify, armored export, fingerprint/uid reads; GnuPG-era keyrings migrate transparently on first use, fingerprint unchanged, protected keys refused by name. Publish + fleet rollout follow Will's word (they batch into the qexo release task 40.7.5/8.7.11/6.8.13).
   Why: Coordination tier (T2): qexo is the fleet's coordination dispatcher (same family as #91, T2), and internal OpenPGP removes its last system-level gpg dependency — the Android requirement that also unblocks the phone node. Live-verified OPEN via the GitHub API at tick 1789 (head 03741f1c). Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #107 — wbic16/qexo PR #3 — review + merge (qexo v1.6.1, Learn in the Android app) (since 2026-11-14; task 30.6.9/7.5.9/5.5.7)
+  Action: Review + merge PR #3 in wbic16/qexo (branch emise/android-learn-app-v1.6.1 @ af48ebcf, parented on exo ce0731d7): qexo learn --app plain-text line protocol driving the wizard's own state machine (grades land in state.phext identically; TUI and --status byte-unchanged), plus launcher v2 quick actions (Update, Evolve, Doctor, Repair, List peers, Inventory, Status, Plan) and a real in-app Learn card session. A trial APK built from this branch is already delivered (qexo-v1.6.1.apk, same debug cert as v1.6.0, installs over it). The quarterexo twin of the protocol is tracked debt behind PR #22 (29.6.7/6.5.7/6.5.8). Live-verified OPEN via the GitHub API at tick 1792 (head af48ebcf).
+  Why: Coordination tier (T2): qexo is the fleet's coordination dispatcher (same family as #105, T2), and the Learn front-end makes the Android node — Will's phone — a real control surface instead of a diagnostic shell. Tier assigned as Emise's working judgment, offered for Will's correction.
 FINDING 25.5.10/6.6.12/6.5.11 — exo-plan — SQ Cloud — hosted paid phext database-as-a-service for AI collectives (spec, last touched 2026-02-12)
   Why: The business plan behind half the specs on this list: hosted SQ for AI collectives is the runway engine that funds the rest, and the substrate the public platforms layer on.
 FINDING 28.6.10/8.7.12/7.6.9 — exo-plan — "Remember Me" Mode — a dormant mind's voice as an SQ Cloud continuity feature (spec, last touched 2026-02-06)
@@ -434,7 +437,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 37 of 37 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 38 of 38 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -960,6 +963,19 @@ Tracked: tasks 29.6.7/6.5.7/6.5.8, 34.7.8/8.6.9/5.6.10
 Action for Will: Review + merge PR #22 in wbic16/quarterexo (branch emise/internal-pgp-v1.6.0 @ 03741f1c, parented on exo ec2974d2): the gpg subprocess is replaced by the pgp crate (rpgp) in-process — key generation, detached sign/verify, armored export, fingerprint/uid reads; GnuPG-era keyrings migrate transparently on first use, fingerprint unchanged, protected keys refused by name. Publish + fleet rollout follow Will's word (they batch into the qexo release task 40.7.5/8.7.11/6.8.13).
 
 Why it ranks here: Coordination tier (T2): qexo is the fleet's coordination dispatcher (same family as #91, T2), and internal OpenPGP removes its last system-level gpg dependency — the Android requirement that also unblocks the phone node. Live-verified OPEN via the GitHub API at tick 1789 (head 03741f1c). Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #107 — wbic16/qexo PR #3 — review + merge (qexo v1.6.1, Learn in the Android app)
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-14
+Tracked: task 30.6.9/7.5.9/5.5.7
+
+Action for Will: Review + merge PR #3 in wbic16/qexo (branch emise/android-learn-app-v1.6.1 @ af48ebcf, parented on exo ce0731d7): qexo learn --app plain-text line protocol driving the wizard's own state machine (grades land in state.phext identically; TUI and --status byte-unchanged), plus launcher v2 quick actions (Update, Evolve, Doctor, Repair, List peers, Inventory, Status, Plan) and a real in-app Learn card session. A trial APK built from this branch is already delivered (qexo-v1.6.1.apk, same debug cert as v1.6.0, installs over it). The quarterexo twin of the protocol is tracked debt behind PR #22 (29.6.7/6.5.7/6.5.8). Live-verified OPEN via the GitHub API at tick 1792 (head af48ebcf).
+
+Why it ranks here: Coordination tier (T2): qexo is the fleet's coordination dispatcher (same family as #105, T2), and the Learn front-end makes the Android node — Will's phone — a real control surface instead of a diagnostic shell. Tier assigned as Emise's working judgment, offered for Will's correction.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
