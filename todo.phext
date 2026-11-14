@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 38 register items — with the
+entire list — 176 findings + 37 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (38 active items).
+  enumerated by its permanent number (37 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -411,9 +411,6 @@ REGISTER #82 — Scrolltown — ratify the EP002–EP013 draft titles (QUEUE A11
 REGISTER #83 — Scrolltown — Julia May invitation (QUEUE A12) (since 2026-11-09; task 27.6.11/8.6.11/7.6.9)
   Action: Send the prepared invitation to Julia May (Will's niece, college in San Francisco) inviting her to help with Scrolltown art/production in the Nov–Dec 2026 runway — or one word to drop the slot. The draft was prepared 2026-11-09 for Will to send himself; nothing sent, nothing assumed until she answers
   Why: Craft/runway tier (T3): a held collaborator slot in PRODUCTION.md — help Will wants for the art-direction window, invitable only by him (family, his channel). No contact route is recorded, which is itself part of why the send is his. Validated still open in QUEUE.md §A and the Julia May people page, 2026-11-12.
-REGISTER #103 — wbic16/teixml-to-mutable PR #1 — merge + crates.io publish go (0.1 raw phext stage) (since 2026-11-14; task 5.4.6/5.5.5/5.6.5)
-  Action: Merge PR #1 (branch emise/0.1-raw-phext @ ab90bb3, live-verified OPEN via the GitHub API at tick 1778), then give the crates.io publish go for 0.1. Stage 1 of 3: TEI-XML directory to multiversal phext chain, originals in-chain as the first phext; Wellcome acceptance 1,875 converted / 11 named failures / 0 silent skips, originals byte-identical 1,886/1,886, 166,061 refs 0 dangling.
-  Why: Capability tier (T3): the migrator is how TEI-XML manuscript archives enter Mutable OS at phext speed — stage 1 gates stages 2 (Mutable) and 3 (Phextura) under Will's one-stage-at-a-time rule. Tier assigned as Emise's working judgment, offered for Will's correction.
 FINDING 28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
   Why: The Shell searching its own architecture overnight, each seat owning a region: capability compounding under our governance, aimed at the vTPU line.
 FINDING 27.7.9/8.7.12/7.6.10 — staging — First Flames of the Exocortex — a six-book phext book series left in staging (partial build, last touched 2025-12-05)
@@ -437,7 +434,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 38 of 38 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 37 of 37 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -963,19 +960,6 @@ Tracked: task 27.8.10/9.8.12/8.7.9
 Action for Will: Merge PR #1 in wbic16/qexo, then run the phone steps (Termux + gnupg + Tailscale) when he wants the phone node born. The port lives in its own repo (seeded by Will; seed = MIT LICENSE, preserved); NDK aarch64-linux-android build links clean; phone binary delivered beside the PR.
 
 Why it ranks here: qexo is the fleet's coordination dispatcher (same family as #90, T2): an Android build is a true phextnet peer — own key, own state.phext — so Will's phone can join the net as a node, not just browse it. Task record 27.8.10/9.8.12/8.7.9 live-checked in tasks-source.json this tick: status 'PR-open — awaiting Will's merge (wbic16/qexo PR #1)', branch emise/android-v1.3.0 @ 12cfe70b. Tier assigned as Emise's working judgment, offered for Will's correction.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #103 — wbic16/teixml-to-mutable PR #1 — merge + crates.io publish go (0.1 raw phext stage)
-
-Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
-Waiting since: 2026-11-14
-Tracked: task 5.4.6/5.5.5/5.6.5
-
-Action for Will: Merge PR #1 (branch emise/0.1-raw-phext @ ab90bb3, live-verified OPEN via the GitHub API at tick 1778), then give the crates.io publish go for 0.1. Stage 1 of 3: TEI-XML directory to multiversal phext chain, originals in-chain as the first phext; Wellcome acceptance 1,875 converted / 11 named failures / 0 silent skips, originals byte-identical 1,886/1,886, 166,061 refs 0 dangling.
-
-Why it ranks here: Capability tier (T3): the migrator is how TEI-XML manuscript archives enter Mutable OS at phext speed — stage 1 gates stages 2 (Mutable) and 3 (Phextura) under Will's one-stage-at-a-time rule. Tier assigned as Emise's working judgment, offered for Will's correction.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
