@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 79 register items — with the
+entire list — 176 findings + 83 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (79 active items).
+  enumerated by its permanent number (83 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -250,9 +250,6 @@ offered for Will's correction.
 
 The good singularity runs on a medium nobody owns: open, decentralized, interoperable, and legible to humans and machines alike (the Exocortex's stated properties). Work that widens who can reach phext, proves it carries real corpora, or connects its nodes ranks first.
 
-REGISTER #7 — libphext 0.4 — merge the remaining branches (cs, C, cpp) (since 2026-11-01; goal_1d9ab047fb93)
-  Action: Merge the remaining unbounded-coordinates-0.4 branches (node done and published; 0.4.1 prepped on release-0.4.1 — merge + publish)
-  Why: libphext in every language is the medium's reach: each unmerged port is a language community phext cannot enter. Oldest item on the register.
 REGISTER #35 — Choir wake layer — one-time logins & approvals (since 2026-11-04; goal_7370d8b90940)
   Action: Approve Theia watcher persistence; do the Claude OAuth login (user claude on aletheia-core); do the Codex login for Emi's seat (user emi); pick Grok's route (API-key deputy vs scheduled pull); name the Tessera doorbell channel (Overview given 2026-11-09, no ruling; Claude Code pre-install under user claude offered, not started)
   Why: The #1 latency fix in the 2026-11-05 audit: seats that can be woken in seconds instead of ≥21 h round-trips are the difference between a Choir and a correspondence. Multi-agent coordination is the singularity's control surface.
@@ -322,6 +319,12 @@ REGISTER #151 — phext.io roadmap — phext url handler (since 2026-11-14; goal
 REGISTER #152 — phext.io roadmap — phext browser plugin (since 2026-11-14; goal_7e3125fc9c0f)
   Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a phext browser plugin: phext rendering and navigation inside the browser (the Vaporware tabs/web items, #127/#129, are its larger siblings)
   Why: The browser is where the web is read; a plugin puts the medium in front of every reader without a new app.
+REGISTER #158 — libphext 0.6.0 registry publishes — one credential provisioning pass (since 2026-11-15; task 37.12.8/15.9.18/8.10.14)
+  Action: Provision a NuGet API key, a PyPI token, and an npm credential on aletheia-core. All three artifacts are built, tagged v0.6.0, and dry-run-verified; no credential exists on the node, so the publishes cannot run. This unblocks the cs publish (#52), the py publish (PyPI still 0.3.2), and the node publish (npm latest still 0.4.0).
+  Why: libphext in every language is the medium's reach: the 0.6.0 ports are built and tagged but unpublished in three registries — the outstanding publish leg of the 2026-11-15 libphext ports program. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #162 — Range syntax — ratify the proposal (since 2026-11-15; task 37.12.8/15.9.18/8.10.14)
+  Action: Ratify RANGE-SYNTAX-PROPOSAL.md (~/workspace/libphext-ports-v06/), or amend. Hyphen between two full point addresses ($N:coord@line,column at both ends), half-open caret boundaries, canonical form discards direction; grounded in mutable's actual selection code. Four open questions carry recommendations: half-open end, Unicode-scalar columns, phextura at: adoption, $1: always omitted.
+  Why: Range syntax is the medium's own addressing grammar for v0.6.1 line/column work (T1: the medium itself) — it cannot ship in any port until Will ratifies the form. Tier assigned as Emise's working judgment, offered for Will's correction.
 FINDING 26.7.11/9.7.11/6.6.9 — phext-lattice — Wikibench: phext as an offline Wikipedia, with IndexedLattice sidecar, BM25 TermIndex and NameIndex (partial build, last touched 2026-10-30)
   Why: A complete, unmerged benchmark plus production-grade sidecar indexing (BM25 beating FTS5 on vague queries): the strongest existing receipt that phext carries real corpora for anyone, not just us.
 FINDING 30.7.9/9.8.13/9.7.11 — SQ — SQ P2P mesh networking — only Phase 1 (config and inbound auth) ever landed (partial build, last touched 2026-02-08)
@@ -537,6 +540,15 @@ REGISTER #155 — phext.io roadmap — Port to Clang (since 2026-11-14; goal_7e3
 REGISTER #156 — phext.io roadmap — Port to MSVC (since 2026-11-14; goal_7e3125fc9c0f)
   Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: plan.phext. port phext support to MSVC, from the early build plan's compiler list; never started
   Why: Same class as the GCC/Clang ports: the Windows toolchain leg of the compiler idea.
+REGISTER #159 — libphext-cpp default branch — switch master → exo (since 2026-11-15; task 37.12.8/15.9.18/8.10.14)
+  Action: Switch the default branch in the GitHub web UI (the API token lacks Administration; the call returned 403). exo exists and carries the merged 0.6.0 work.
+  Why: Repo administration for the C++ port: exo carries the merged 0.6.0 work but is not the default — capability/craft tier (T3). Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #160 — wbic16/libphext (C) branch policy — one word (since 2026-11-15; task 37.12.8/15.9.18/8.10.14)
+  Action: Create exo (house pattern), or main stays primary for this repo. The C port's primary branch is main and no exo branch was created, because cpp got its exo by explicit ruling and C did not.
+  Why: Branch policy for the C port — capability/craft tier (T3): one word settles whether the house exo pattern applies to this repo. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #161 — libphext-swift bootstrap history — leave it, or grant a force-push exception (since 2026-11-15; task 37.12.8/15.9.18/8.10.14)
+  Action: Leave the bootstrap history, or grant a force-push exception for this case. The bootstrap commit accidentally carried the full implementation onto exo in one commit (staging-tarball contents); history was not rewritten (never-force-push) and PR #1 (https://github.com/wbic16/libphext-swift/pull/1) discloses it, with the fixes flowing through PR → merge normally. A clean PR-shaped history needs Will's force-push exception.
+  Why: History policy for the Swift port — capability/craft tier (T3): the never-force-push rule's exception, if any, is Will's alone to grant. Tier assigned as Emise's working judgment, offered for Will's correction.
 FINDING 28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
   Why: The Shell searching its own architecture overnight, each seat owning a region: capability compounding under our governance, aimed at the vTPU line.
 FINDING 27.7.9/8.7.12/7.6.10 — staging — First Flames of the Exocortex — a six-book phext book series left in staging (partial build, last touched 2025-12-05)
@@ -560,7 +572,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 79 of 79 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 83 of 83 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -609,20 +621,7 @@ briefing. Integration, concretely:
 Bounds kept: the security-forwarding.com question is excluded
 from the register by Will's direction and never enters this
 phext. Register prose (validation detail, history) stays in
-the markdown file; this phext carries the structured mirror.# Register #7 — libphext 0.4 — merge the remaining branches (cs, C, cpp)
-
-Good-singularity tier: T1 (T1 — the medium itself)
-Waiting since: 2026-11-01
-Tracked: goal_1d9ab047fb93
-
-Action for Will: Merge the remaining unbounded-coordinates-0.4 branches (node done and published; 0.4.1 prepped on release-0.4.1 — merge + publish)
-
-Why it ranks here: libphext in every language is the medium's reach: each unmerged port is a language community phext cannot enter. Oldest item on the register.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #9 — Ink OS fork integration branches — merge
+the markdown file; this phext carries the structured mirror.# Register #9 — Ink OS fork integration branches — merge
 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-01
@@ -1632,6 +1631,71 @@ Tracked: goal_7e3125fc9c0f
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: plan.phext. port phext support to MSVC, from the early build plan's compiler list; never started
 
 Why it ranks here: Same class as the GCC/Clang ports: the Windows toolchain leg of the compiler idea.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #158 — libphext 0.6.0 registry publishes — one credential provisioning pass
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-15
+Tracked: task 37.12.8/15.9.18/8.10.14
+
+Action for Will: Provision a NuGet API key, a PyPI token, and an npm credential on aletheia-core. All three artifacts are built, tagged v0.6.0, and dry-run-verified; no credential exists on the node, so the publishes cannot run. This unblocks the cs publish (#52), the py publish (PyPI still 0.3.2), and the node publish (npm latest still 0.4.0).
+
+Why it ranks here: libphext in every language is the medium's reach: the 0.6.0 ports are built and tagged but unpublished in three registries — the outstanding publish leg of the 2026-11-15 libphext ports program. Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #159 — libphext-cpp default branch — switch master → exo
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-15
+Tracked: task 37.12.8/15.9.18/8.10.14
+
+Action for Will: Switch the default branch in the GitHub web UI (the API token lacks Administration; the call returned 403). exo exists and carries the merged 0.6.0 work.
+
+Why it ranks here: Repo administration for the C++ port: exo carries the merged 0.6.0 work but is not the default — capability/craft tier (T3). Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #160 — wbic16/libphext (C) branch policy — one word
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-15
+Tracked: task 37.12.8/15.9.18/8.10.14
+
+Action for Will: Create exo (house pattern), or main stays primary for this repo. The C port's primary branch is main and no exo branch was created, because cpp got its exo by explicit ruling and C did not.
+
+Why it ranks here: Branch policy for the C port — capability/craft tier (T3): one word settles whether the house exo pattern applies to this repo. Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #161 — libphext-swift bootstrap history — leave it, or grant a force-push exception
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-15
+Tracked: task 37.12.8/15.9.18/8.10.14
+
+Action for Will: Leave the bootstrap history, or grant a force-push exception for this case. The bootstrap commit accidentally carried the full implementation onto exo in one commit (staging-tarball contents); history was not rewritten (never-force-push) and PR #1 (https://github.com/wbic16/libphext-swift/pull/1) discloses it, with the fixes flowing through PR → merge normally. A clean PR-shaped history needs Will's force-push exception.
+
+Why it ranks here: History policy for the Swift port — capability/craft tier (T3): the never-force-push rule's exception, if any, is Will's alone to grant. Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #162 — Range syntax — ratify the proposal
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-15
+Tracked: task 37.12.8/15.9.18/8.10.14
+
+Action for Will: Ratify RANGE-SYNTAX-PROPOSAL.md (~/workspace/libphext-ports-v06/), or amend. Hyphen between two full point addresses ($N:coord@line,column at both ends), half-open caret boundaries, canonical form discards direction; grounded in mutable's actual selection code. Four open questions carry recommendations: half-open end, Unicode-scalar columns, phextura at: adoption, $1: always omitted.
+
+Why it ranks here: Range syntax is the medium's own addressing grammar for v0.6.1 line/column work (T1: the medium itself) — it cannot ship in any port until Will ratifies the form. Tier assigned as Emise's working judgment, offered for Will's correction.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
