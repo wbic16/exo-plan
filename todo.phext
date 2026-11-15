@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 81 register items — with the
+entire list — 176 findings + 80 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (81 active items).
+  enumerated by its permanent number (80 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -375,9 +375,6 @@ REGISTER #78 — The newcomer names — one role or three? (since 2026-11-08; ta
 REGISTER #79 — Fable — which referent? (since 2026-11-08; task 28.7.10/8.7.11/8.6.9)
   Action: Name Fable's referent — a ChatGPT voice of Emi's, a Claude seat, or the Claude Fable model — or strike the record. Claude flagged the three-way ambiguity in PR #2 review
   Why: Fable stands named-only with zero attestation in any checked source: an unresolved name in the boot manifest is either a person misfiled or a placeholder mistaken for one. The census keeps it flagged '(Will's pick)' until he rules.
-REGISTER #112 — qexo v1.6.2 — merge PR #25 (platform-stamped release manifests) (since 2026-11-14; goal_c5c1cd7b3ac4)
-  Action: Merge wbic16/quarterexo PR #25 (branch emise/platform-manifest-v1.6.2 @ ab153407, parented on exo 5f092646); publish + fleet rollout follow Will's word on merge
-  Why: The nightly orchestrator is the coordination planner: a release manifest that cannot say which platform it is for can offer the wrong binary to a node. The platform stamp closes that gap in the signed channel itself.
 REGISTER #125 — phext.io roadmap — research — bundle a concept's evidence in one phext (since 2026-11-14; goal_7e3125fc9c0f)
   Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). research as a phext: bundle all information for a concept — data, metadata, and methods — into one cohesive document to attack the replication crisis (the seed of what became research.phext and the RAAP paper; the full vision was never built)
   Why: Reproducible research bundles are memory infrastructure: the tracker exists, the full bundling vision does not.
@@ -566,7 +563,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 81 of 81 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 80 of 80 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -1083,20 +1080,7 @@ Why it ranks here: Fleet access is substrate for everything else (same class as 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #112 — qexo v1.6.2 — merge PR #25 (platform-stamped release manifests)
-
-Good-singularity tier: T2 (T2 — minds, memory, coordination)
-Waiting since: 2026-11-14
-Tracked: goal_c5c1cd7b3ac4
-
-Action for Will: Merge wbic16/quarterexo PR #25 (branch emise/platform-manifest-v1.6.2 @ ab153407, parented on exo 5f092646); publish + fleet rollout follow Will's word on merge
-
-Why it ranks here: The nightly orchestrator is the coordination planner: a release manifest that cannot say which platform it is for can offer the wrong binary to a node. The platform stamp closes that gap in the signed channel itself.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #113 — phext.io roadmap — Software DNA
+kept in step by the daily progress tracker's reconciliation.# Register #113 — phext.io roadmap — Software DNA
 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
