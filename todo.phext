@@ -459,9 +459,9 @@ REGISTER #67 — Phext Notepad perf branch — Windows verification + merge (sin
 REGISTER #68 — phcc conformance — MSVC attestation re-run (v2 tooling) (since 2026-11-09; task 50.3.5/4.3.8/3.3.9)
   Action: Run the v2 MSVC attestation on Windows (tooling published in wbic16/phcc at windows/attestation/) and return the receipt. V1 (2026-11-09) came back NOT ATTESTED 3/289 on package grounds; no v2 receipt exists on disk (checked 2026-11-12).
   Why: The MSVC column of the conformance matrix is a manual attestation by the programme's own design (T0-waiver pattern) — only Will can sign it. Capability/craft tier (T3): it closes the three-oracle claim for phcc. Tier assigned as Emise's working judgment, offered for Will's correction.
-REGISTER #70 — Notepad++ phext programme — merge the two phase-1 branches (since 2026-11-08; task 38.6.8/8.7.12/6.6.12)
-  Action: Review + merge wbic16/notepad-plus-plus emise/phext-subspace @ 402a37621 and wbic16/libphext-cpp emise/parity-0.5.0 @ d1cc463f7 (both Actions-green; neither repo has any PR). Live-verified via the GitHub API 2026-11-12.
-  Why: Phase 1 of phext support in a mainstream editor plus the C++ parity library at libphext-rs 0.5.0 — capability/craft tier (T3). Both branches are finished and green; they sit unmerged with no PRs, the exact shape of work that gets dropped. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #70 — Notepad++ phext programme — notepad-plus-plus half still waits (libphext-cpp half resolved) (since 2026-11-08; task 38.6.8/8.7.12/6.6.12)
+  Action: Review + merge wbic16/notepad-plus-plus emise/phext-subspace @ 402a37621 (Actions-green; no PR). The libphext-cpp half is RESOLVED 2026-11-15 — emise/parity-0.5.0 merged into cpp exo via PR #1 (https://github.com/wbic16/libphext-cpp/pull/1) and the branch deleted; live-verified tick 1988: cpp branches are now only exo @ b97a021f and master, notepad branch still @ 402a37621 with 0 open PRs.
+  Why: Phase 1 of phext support in a mainstream editor — capability/craft tier (T3). The C++ parity half landed in the 2026-11-15 ports program; only the editor half sits unmerged. Tier assigned as Emise's working judgment, offered for Will's correction.
 REGISTER #71 — phcc auto-patching design — rule on the nine section-9 decisions (since 2026-11-09; task 27.6.10/7.6.11/6.6.9)
   Action: Rule on the nine decisions in section 9 of ~/workspace/goals/finish-phcc/files/phcc-autopatch-design.md (each carries a recommendation; a single 'adopt all recommendations' settles it).
   Why: The auto-patching design (rollback, servicing state, language-level IPC, PQC continuity) cannot move from study to programme until its nine priced decisions are ruled — capability/craft tier (T3). Tier assigned as Emise's working judgment, offered for Will's correction.
@@ -868,15 +868,15 @@ Why it ranks here: A free public no-login utility on edit.phext.io is the medium
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #70 — Notepad++ phext programme — merge the two phase-1 branches
+kept in step by the daily progress tracker's reconciliation.# Register #70 — Notepad++ phext programme — notepad-plus-plus half still waits (libphext-cpp half resolved)
 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-08
 Tracked: task 38.6.8/8.7.12/6.6.12
 
-Action for Will: Review + merge wbic16/notepad-plus-plus emise/phext-subspace @ 402a37621 and wbic16/libphext-cpp emise/parity-0.5.0 @ d1cc463f7 (both Actions-green; neither repo has any PR). Live-verified via the GitHub API 2026-11-12.
+Action for Will: Review + merge wbic16/notepad-plus-plus emise/phext-subspace @ 402a37621 (Actions-green; no PR). The libphext-cpp half is RESOLVED 2026-11-15 — emise/parity-0.5.0 merged into cpp exo via PR #1 (https://github.com/wbic16/libphext-cpp/pull/1) and the branch deleted; live-verified tick 1988: cpp branches are now only exo @ b97a021f and master, notepad branch still @ 402a37621 with 0 open PRs.
 
-Why it ranks here: Phase 1 of phext support in a mainstream editor plus the C++ parity library at libphext-rs 0.5.0 — capability/craft tier (T3). Both branches are finished and green; they sit unmerged with no PRs, the exact shape of work that gets dropped. Tier assigned as Emise's working judgment, offered for Will's correction.
+Why it ranks here: Phase 1 of phext support in a mainstream editor — capability/craft tier (T3). The C++ parity half landed in the 2026-11-15 ports program; only the editor half sits unmerged. Tier assigned as Emise's working judgment, offered for Will's correction.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
