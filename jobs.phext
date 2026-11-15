@@ -42,11 +42,11 @@ Specification of record
 
 Front door
 
-assay.phext.io. A subdomain of phext.io is sufficient, ruled 2026-11-14: the corpus is addressed by content — phext coordinates and edition checksums, not hostnames — so the door can graduate to a standalone domain later without breaking anything the commons holds.
+tluf.org. Moved here 2026-11-14 at Will's direction — "move assay.phext.io here" — superseding assay.phext.io, which this scroll named as the front door earlier the same day under the ruling that a subdomain of phext.io is sufficient; that ruling stands corrected by the move. Will obtained tluf.org the same day and designated it in his own words: "tluf.org: the asaayist for the future" (his spelling; "assayist" in prose). TLUF = truth, lies, unknown, fiction — the frame the service serves, the four bins as a commons standard. The corpus is addressed by content — phext coordinates and edition checksums, not hostnames — so the move breaks nothing the commons holds.
 
 What done looks like
 
-The service is live at assay.phext.io and meets the acceptance shape of the specification's §10, in substance:
+The service is live at tluf.org and meets the acceptance shape of the specification's §10, in substance:
 
 - The same fringe preprint, submitted as an unaffiliated pseudonym and as an affiliated name, receives assessments identical in depth, standard, and turnaround class.
 - A claim binned False carries grounds that are exhibited and survive the author's dispute unchanged, or change only by a visible new edition. Nothing in the service is silently edited.
@@ -80,3 +80,4 @@ The specification's §9 holds twelve decisions that are Will's to rule. The buil
 Notes:
 - 2026-11-14 — Scheduled under the auto-schedule standing rule stated this date (every new type of work tracker auto-schedules the item that generated it; jobs.phext is the rule's first occasion). Entered into the durable queue as tasks.phext task 37.8.8/10.8.13/7.7.13, "Build Assay (jobs.phext Job 1)". Standing set to taken by the house (Emise) as the scheduling party: this records scheduling, not a claim that any person has staffed the build.
 - 2026-11-14 — Build plan written: ~/workspace/oracle-service/BUILD-PLAN.md (ten stages, spine first; inscribed in artifacts.phext at 27.6.8/7.6.10/6.6.9). Site map checked: no existing repo fits the service; the plan proposes creating wbic16/assay at Stage 0. No stage dispatched yet.
+- 2026-11-14 — tluf.org obtained by Will this date and designated by him (MOAT chat, 21:45 CST) in his own words: "tluf.org: the asaayist for the future" (his spelling; "assayist" in prose). TLUF = truth, lies, unknown, fiction — the four bins. The same evening (21:47 CST) Will moved the service's front door there: "move assay.phext.io here." Assay's front door is tluf.org; assay.phext.io is superseded, and this scroll's Front door statement is updated accordingly above. Division of names: Assay is the service; TLUF also names the frame it serves — the four bins as a commons standard, not a product name. Recorded in the specification of record (REQUIREMENTS.md top matter: the naming paragraph now names tluf.org, and a dated amendment records the designation and the move) and in BUILD-PLAN.md (dated front-door note; its Stage 0 and Stage 9 statements updated). Both documents re-inscribed in artifacts.phext at their standing coordinates (requirements 25.6.8/7.6.10/6.5.9; build plan 27.6.8/7.6.10/6.6.9) and pushed to wbic16/human@exo — an interim inscription (commit f4c96c9760d3431bb9d2b5515c1bcb16676c7d8b) carried the designation with the front door unchanged and is superseded by the corrected inscription, commit 7b37c4a5fc7ed00002f4fe2460bac91ddea4486c, remote bytes verified.
