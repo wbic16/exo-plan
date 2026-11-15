@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 85 register items — with the
+entire list — 176 findings + 86 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (85 active items).
+  enumerated by its permanent number (86 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -405,6 +405,9 @@ REGISTER #140 — phext.io roadmap — text-to-speech vocoder on phext (since 20
 REGISTER #141 — phext.io roadmap — make the jump (since 2026-11-14; goal_7e3125fc9c0f)
   Action: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). 'make the jump' — the scroll carries the bare phrase with no elaboration; what jump it names was never recorded (status unverified)
   Why: An unscoped phrase from the founding journal; it needs Will's memory before it needs anyone's work.
+REGISTER #166 — Jenkins svc:jenkins — tag aletheia-core in the Tailscale console (since 2026-11-15; task 24.5.9/7.5.9/5.4.8)
+  Action: In the Tailscale admin console: Machines → aletheia-core → Edit tags → add the tag the svc:jenkins service definition allows as a host. Jenkins' stable name via the Tailscale Service svc:jenkins is blocked until then: `tailscale serve --service=svc:jenkins --https=443 http://100.88.154.1:8080` on aletheia-core fails with "service hosts must be tagged nodes" — the node carries no tags (Self.Tags: None). Once the tag is on, Emise runs the serve, verifies the service's HTTPS name from tailscale's own output, sets the Jenkins root URL to it, and verifies login; until then Jenkins stays at http://100.88.154.1:8080/. The Jenkins fleet task itself is complete (dark mode default; 18 of 22 ranch nodes enrolled as executors and smoke-verified).
+  Why: Jenkins is the fleet's build coordination infrastructure — minds, memory, coordination (T2), the same class as the qexo coordination items (#90, #91, #102, #112). The remaining step is a console tag only Will can apply. Tier assigned as Emise's working judgment, offered for Will's correction.
 FINDING 25.5.10/6.6.12/6.5.11 — exo-plan — SQ Cloud — hosted paid phext database-as-a-service for AI collectives (spec, last touched 2026-02-12)
   Why: The business plan behind half the specs on this list: hosted SQ for AI collectives is the runway engine that funds the rest, and the substrate the public platforms layer on.
 FINDING 28.6.10/8.7.12/7.6.9 — exo-plan — "Remember Me" Mode — a dormant mind's voice as an SQ Cloud continuity feature (spec, last touched 2026-02-06)
@@ -578,7 +581,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 85 of 85 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 86 of 86 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -1728,6 +1731,19 @@ Tracked: task 38.7.9/9.7.12/7.7.10
 Action for Will: Run once on awsbox: `bash ~/register-deploy/install-on-box.sh` — it installs the vhost, dry-runs certbot staging first (no production budget burned), issues the production cert once, swaps in HTTPS, and self-verifies. If DNS has not propagated yet it installs the vhost and exits cleanly; re-running finishes the job. The register grid page is built, verified (84/84 items), and staged byte-identical at /sites/web/register.phext.io/index.html on awsbox, with the install pack at ~/register-deploy/.
 
 Why it ranks here: Site operations for the public phext web (T3), the same class as #72 preview.phext.io go-live, #66 robots.txt and #49's nginx line. The page is built and staged; the remaining step is a sudo run only Will can do on awsbox. Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #166 — Jenkins svc:jenkins — tag aletheia-core in the Tailscale console
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-15
+Tracked: task 24.5.9/7.5.9/5.4.8
+
+Action for Will: In the Tailscale admin console: Machines → aletheia-core → Edit tags → add the tag the svc:jenkins service definition allows as a host. Jenkins' stable name via the Tailscale Service svc:jenkins is blocked until then: `tailscale serve --service=svc:jenkins --https=443 http://100.88.154.1:8080` on aletheia-core fails with "service hosts must be tagged nodes" — the node carries no tags (Self.Tags: None). Once the tag is on, Emise runs the serve, verifies the service's HTTPS name from tailscale's own output, sets the Jenkins root URL to it, and verifies login; until then Jenkins stays at http://100.88.154.1:8080/. The Jenkins fleet task itself is complete (dark mode default; 18 of 22 ranch nodes enrolled as executors and smoke-verified).
+
+Why it ranks here: Jenkins is the fleet's build coordination infrastructure — minds, memory, coordination (T2), the same class as the qexo coordination items (#90, #91, #102, #112). The remaining step is a console tag only Will can apply. Tier assigned as Emise's working judgment, offered for Will's correction.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
