@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 86 register items — with the
+entire list — 176 findings + 87 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (86 active items).
+  enumerated by its permanent number (87 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -558,6 +558,9 @@ REGISTER #169 — tluf.org paper submissions — root run of install-submit.sh o
 REGISTER #170 — tluf.org Bickford's Library redesign — deploy three files to awsbox (since 2026-11-15; task 22.5.7/7.6.9/5.5.9)
   Action: Stage index.html, keeper-library.webp, and mascot.webp from ~/workspace/tluf-deploy/ to awsbox /sites/web/tluf.org as wbic16 (no nginx change); Emise then runs verify-tluf.sh.
   Why: tluf.org is Assay's front door (T3); the verified redesign cannot go live without Will's deploy keystroke. Found by tick 2066's unregistered-wait sweep.
+REGISTER #173 — Register service — run the staged update on awsbox (per-user scoping + dialog/cancel build) (since 2026-11-16; task 34.6.6/5.7.13/13.6.8)
+  Action: On awsbox: sudo bash ~/register-service-deploy/update-on-box.sh — installs the combined staged update (per-user data scoping + Done-dialog/cancel build + regenerated page), runs the scope migration as regsvc with counts printed, restarts and verifies. Code PR (merging is separate, also Will’s): https://github.com/wbic16/register/pull/9. Same awsbox sudo session can also clear #168.
+  Why: Deploying the register service’s per-user scoping (Will’s 2026-11-16 direction) and the pending dialog/cancel build is a Will’s-hands sudo step on awsbox; staged and hash-verified by Emise 2026-11-16, awaiting his run.
 FINDING 28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
   Why: The Shell searching its own architecture overnight, each seat owning a region: capability compounding under our governance, aimed at the vTPU line.
 FINDING 27.7.9/8.7.12/7.6.10 — staging — First Flames of the Exocortex — a six-book phext book series left in staging (partial build, last touched 2025-12-05)
@@ -581,7 +584,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 86 of 86 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 87 of 87 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -1744,6 +1747,19 @@ Tracked: task 31.6.10/8.6.11/5.5.9
 Action for Will: Grade v3 of the Greaney outreach in the PH: Judgement workshop; nothing sends until Will closes the workshop.
 
 Why it ranks here: The outreach workshop is Judgement-division coordination work (T2) that only Will can grade/close. Found by tick 2066's unregistered-wait sweep.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #173 — Register service — run the staged update on awsbox (per-user scoping + dialog/cancel build)
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-16
+Tracked: task 34.6.6/5.7.13/13.6.8
+
+Action for Will: On awsbox: sudo bash ~/register-service-deploy/update-on-box.sh — installs the combined staged update (per-user data scoping + Done-dialog/cancel build + regenerated page), runs the scope migration as regsvc with counts printed, restarts and verifies. Code PR (merging is separate, also Will’s): https://github.com/wbic16/register/pull/9. Same awsbox sudo session can also clear #168.
+
+Why it ranks here: Deploying the register service’s per-user scoping (Will’s 2026-11-16 direction) and the pending dialog/cancel build is a Will’s-hands sudo step on awsbox; staged and hash-verified by Emise 2026-11-16, awaiting his run.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
