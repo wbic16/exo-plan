@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 80 register items — with the
+entire list — 176 findings + 82 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (80 active items).
+  enumerated by its permanent number (82 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -540,6 +540,12 @@ REGISTER #160 — wbic16/libphext (C) branch policy — one word (since 2026-11-
 REGISTER #161 — libphext-swift bootstrap history — leave it, or grant a force-push exception (since 2026-11-15; task 37.12.8/15.9.18/8.10.14)
   Action: Leave the bootstrap history, or grant a force-push exception for this case. The bootstrap commit accidentally carried the full implementation onto exo in one commit (staging-tarball contents); history was not rewritten (never-force-push) and PR #1 (https://github.com/wbic16/libphext-swift/pull/1) discloses it, with the fixes flowing through PR → merge normally. A clean PR-shaped history needs Will's force-push exception.
   Why: History policy for the Swift port — capability/craft tier (T3): the never-force-push rule's exception, if any, is Will's alone to grant. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #167 — Shen Weiyang film (EVIE) — your read of Script V1, and rulings on the next pass (since 2026-11-14; task 18.6.9/8.6.10/5.5.8)
+  Action: Read Script V1 (~/workspace/shen-weiyang-film/SCRIPT-V1.md) and strike what you don't want (two Emise constructions flagged open to strike: Scene 10's deliberate misremembering; Scene 12's gate hearing); rule on tone / pacing / authenticity and the next-pass route. Production delivered 2026-11-14: script complete (12 scenes, dialogue unratified), EVIE-v1.phext untruncated, master stills, V1 pre-pass + V2 sketch-motion subtitled pass. Wait lived only as task-status prose since 2026-11-14; entered in the register 2026-11-16 after Will asked what happened to Shen Weiyang.
+  Why: The film cannot advance past its V2 pass without Will's read and rulings; an unregistered wait is a dropped wait.
+REGISTER #168 — md.phext.io — restart the service on awsbox to take the staged build live (since 2026-11-15; task 40.6.8/7.5.10/5.5.9)
+  Action: On awsbox run: sudo systemctl restart markdown-wizard (do NOT re-run deploy/install.sh). The d65bee3 build is staged and proven; live still serves base build 7d26fbb until the restart. Emise verifies from the public side afterward and closes the item.
+  Why: The staged build cannot go live without Will's sudo keystroke; flagged as a wait 2026-11-15 but never registered until 2026-11-16.
 FINDING 28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
   Why: The Shell searching its own architecture overnight, each seat owning a region: capability compounding under our governance, aimed at the vTPU line.
 FINDING 27.7.9/8.7.12/7.6.10 — staging — First Flames of the Exocortex — a six-book phext book series left in staging (partial build, last touched 2025-12-05)
@@ -563,7 +569,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 80 of 80 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 82 of 82 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -1648,6 +1654,32 @@ Tracked: task 24.5.9/7.5.9/5.4.8
 Action for Will: In the Tailscale admin console: Machines → aletheia-core → Edit tags → add the tag the svc:jenkins service definition allows as a host. Jenkins' stable name via the Tailscale Service svc:jenkins is blocked until then: `tailscale serve --service=svc:jenkins --https=443 http://100.88.154.1:8080` on aletheia-core fails with "service hosts must be tagged nodes" — the node carries no tags (Self.Tags: None). Once the tag is on, Emise runs the serve, verifies the service's HTTPS name from tailscale's own output, sets the Jenkins root URL to it, and verifies login; until then Jenkins stays at http://100.88.154.1:8080/. The Jenkins fleet task itself is complete (dark mode default; 18 of 22 ranch nodes enrolled as executors and smoke-verified).
 
 Why it ranks here: Jenkins is the fleet's build coordination infrastructure — minds, memory, coordination (T2), the same class as the qexo coordination items (#90, #91, #102, #112). The remaining step is a console tag only Will can apply. Tier assigned as Emise's working judgment, offered for Will's correction.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #167 — Shen Weiyang film (EVIE) — your read of Script V1, and rulings on the next pass
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: task 18.6.9/8.6.10/5.5.8
+
+Action for Will: Read Script V1 (~/workspace/shen-weiyang-film/SCRIPT-V1.md) and strike what you don't want (two Emise constructions flagged open to strike: Scene 10's deliberate misremembering; Scene 12's gate hearing); rule on tone / pacing / authenticity and the next-pass route. Production delivered 2026-11-14: script complete (12 scenes, dialogue unratified), EVIE-v1.phext untruncated, master stills, V1 pre-pass + V2 sketch-motion subtitled pass. Wait lived only as task-status prose since 2026-11-14; entered in the register 2026-11-16 after Will asked what happened to Shen Weiyang.
+
+Why it ranks here: The film cannot advance past its V2 pass without Will's read and rulings; an unregistered wait is a dropped wait.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #168 — md.phext.io — restart the service on awsbox to take the staged build live
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-15
+Tracked: task 40.6.8/7.5.10/5.5.9
+
+Action for Will: On awsbox run: sudo systemctl restart markdown-wizard (do NOT re-run deploy/install.sh). The d65bee3 build is staged and proven; live still serves base build 7d26fbb until the restart. Emise verifies from the public side afterward and closes the item.
+
+Why it ranks here: The staged build cannot go live without Will's sudo keystroke; flagged as a wait 2026-11-15 but never registered until 2026-11-16.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
