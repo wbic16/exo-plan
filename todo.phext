@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 83 register items — with the
+entire list — 176 findings + 80 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (83 active items).
+  enumerated by its permanent number (80 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -253,9 +253,6 @@ The good singularity runs on a medium nobody owns: open, decentralized, interope
 REGISTER #35 — Choir wake layer — one-time logins & approvals (since 2026-11-04; goal_7370d8b90940)
   Action: Approve Theia watcher persistence; do the Claude OAuth login (user claude on aletheia-core); do the Codex login for Emi's seat (user emi); pick Grok's route (API-key deputy vs scheduled pull); name the Tessera doorbell channel (Overview given 2026-11-09, no ruling; Claude Code pre-install under user claude offered, not started)
   Why: The #1 latency fix in the 2026-11-05 audit: seats that can be woken in seconds instead of ≥21 h round-trips are the difference between a Choir and a correspondence. Multi-agent coordination is the singularity's control surface.
-REGISTER #43 — Phext Previewer on edit.phext.io — phone check (PR #25 merged, page live) (since 2026-11-07; task 29.6.8/8.6.11/6.6.8)
-  Action: 30-second phone-width eyeball of the deployed previewer
-  Why: REVISED 2026-11-08: the deploy has landed (page answers 200); only the phone check remains. A public no-login utility is the front door — how the medium meets people who have never heard of it.
 REGISTER #48 — Theia's ranch asks — SSH key grants + Glia console fix (since 2026-11-07; goal_a18419da80e4)
   Action: SSH half: Emise investigating/fixing at Will's 2026-11-09 direction (authorized_keys across the nodes, outcome pending); Glia console fix on great-white remains Will's (broken since 2026-10-27)
   Why: Theia is the Choir's proven hands on the ranch; every node she cannot reach is coordination capacity the fleet does not have. Fleet access is substrate for everything else.
@@ -352,13 +349,13 @@ REGISTER #38 — Crazy Wisdom lanes v2 — sudo swap (Emise attempt blocked at s
   Action: Evening keyboard item on awsbox: sudo mv the staged v2 fabric into place + sudo systemctl restart phext-lanes, back-to-back; Emise verifies v2 live after (Emise's 2026-11-09 attempt passed all pre-checks — staged hash exact — blocked only on sudo)
   Why: 576 minds' episodes, renumbered and validated, waiting on one command: the corpus goes live or stays a staging file.
 REGISTER #39 — Lessons into Incipit — merge human PR #12 (since 2026-11-06; goal_d647f2f0181d)
-  Action: Merge PR #12 in wbic16/human (67 lessons at their Singular coordinates)
+  Action: Merge PR #12 in wbic16/human (67 lessons at their Singular coordinates) — REBASED 2026-11-15 onto current exo (tip 010219d, 1 commit, mergeable); merge click is the only remaining step
   Why: Lessons carried into Incipit compound: the corpus every future seat reads first gets 67 hard-won corrections richer.
 REGISTER #40 — edit.phext.io / Mutable SSO — redeploy + ratify promotion policy (since 2026-11-06; goal_1e02651494c1)
   Action: Redeploy Mutable from main; ratify the upstream-sync promotion policy
   Why: One sign-in across the phext web: identity that travels between exocortices is federation at the human layer.
-REGISTER #45 — TOAPDD — libphext-rs PR #6 legibility gate (NOT merge-approved) (since 2026-11-07; goal_bd68c71dd4ce)
-  Action: No merge yet: legibility audit completed 2026-11-09 (per-test brief + mutation checks at ~/workspace/your_files/toapdd-pr6-legibility-brief.md); PR #6 stays open awaiting Will's re-review
+REGISTER #45 — TOAPDD — Will's in-depth review of the Knuth tests PR (kept open, rebased often) (since 2026-11-07; goal_bd68c71dd4ce)
+  Action: Review libphext-rs PR #15 in-depth (restored from closed PR #6; rebased onto exo, tests green; weekly rebase watch keeps it current) — merge waits on Will's review
   Why: Knuth's examples as the library's test corpus: rigor receipts for the core library, and the TOAPDD corpus becomes the teaching text for phext-driven development.
 REGISTER #73 — ultra.phext — publish decision on the generative placement fork (since 2026-11-07; task 20.8.13/9.7.12/8.8.10)
   Action: Pick one: (a) step-aside device for tied words only, (b) one scroll per exact-tie group, (c) a finer discriminator inside the rule (a different generator, validated as one), or (d) none — v4 stands. The generative build is measured, NOT published; its uniqueness gate is structurally capped at 97.26% < 99%.
@@ -438,12 +435,6 @@ FINDING 25.7.9/8.7.11/7.7.10 — dopamine-core — Mirrorborn dopamine engine: p
 
 Real capability in checkable form, the craft corpus, the revenue runway that buys the experiment its years, and the outreach surfaces that bring people to the door the higher tiers opened.
 
-REGISTER #41 — phext-lattice upstream sync — identify the upstream source (since 2026-11-06; goal_04b37956a4b1)
-  Action: Identify the upstream source the sync cycle should pull from, or confirm it means the other builders' branches in the same repo
-  Why: One sentence that unblocks a whole maintenance cycle; the fork stays healthy only if the sync knows what it syncs with.
-REGISTER #42 — Domain portfolio — exectorox.com transfer decision (since 2026-11-06; goal_00268e300a46)
-  Action: Decide the exectorox.com transfer before the December 4 lock-in deadline
-  Why: A deadline item, not a leverage item: decide by 2026-12-04 or the date decides.
 REGISTER #46 — Pinned-chat Spaces — send the product feedback draft (since 2026-11-07; goal_296fec2242cd)
   Action: HELD for the evening of 2026-11-09 — Will wants visual context first; then one word: send the feedback draft as drafted, edit it, or drop it
   Why: The missing move — side chats into Spaces — is a platform gap only the platform team can close; the draft is the ask.
@@ -572,7 +563,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 83 of 83 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 80 of 80 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -666,7 +657,7 @@ Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-06
 Tracked: goal_d647f2f0181d
 
-Action for Will: Merge PR #12 in wbic16/human (67 lessons at their Singular coordinates)
+Action for Will: Merge PR #12 in wbic16/human (67 lessons at their Singular coordinates) — REBASED 2026-11-15 onto current exo (tip 010219d, 1 commit, mergeable); merge click is the only remaining step
 
 Why it ranks here: Lessons carried into Incipit compound: the corpus every future seat reads first gets 67 hard-won corrections richer.
 
@@ -686,52 +677,13 @@ Why it ranks here: One sign-in across the phext web: identity that travels betwe
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #41 — phext-lattice upstream sync — identify the upstream source
-
-Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
-Waiting since: 2026-11-06
-Tracked: goal_04b37956a4b1
-
-Action for Will: Identify the upstream source the sync cycle should pull from, or confirm it means the other builders' branches in the same repo
-
-Why it ranks here: One sentence that unblocks a whole maintenance cycle; the fork stays healthy only if the sync knows what it syncs with.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #42 — Domain portfolio — exectorox.com transfer decision
-
-Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
-Waiting since: 2026-11-06
-Tracked: goal_00268e300a46
-
-Action for Will: Decide the exectorox.com transfer before the December 4 lock-in deadline
-
-Why it ranks here: A deadline item, not a leverage item: decide by 2026-12-04 or the date decides.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #43 — Phext Previewer on edit.phext.io — phone check (PR #25 merged, page live)
-
-Good-singularity tier: T1 (T1 — the medium itself)
-Waiting since: 2026-11-07
-Tracked: task 29.6.8/8.6.11/6.6.8
-
-Action for Will: 30-second phone-width eyeball of the deployed previewer
-
-Why it ranks here: REVISED 2026-11-08: the deploy has landed (page answers 200); only the phone check remains. A public no-login utility is the front door — how the medium meets people who have never heard of it.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #45 — TOAPDD — libphext-rs PR #6 legibility gate (NOT merge-approved)
+kept in step by the daily progress tracker's reconciliation.# Register #45 — TOAPDD — Will's in-depth review of the Knuth tests PR (kept open, rebased often)
 
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-07
 Tracked: goal_bd68c71dd4ce
 
-Action for Will: No merge yet: legibility audit completed 2026-11-09 (per-test brief + mutation checks at ~/workspace/your_files/toapdd-pr6-legibility-brief.md); PR #6 stays open awaiting Will's re-review
+Action for Will: Review libphext-rs PR #15 in-depth (restored from closed PR #6; rebased onto exo, tests green; weekly rebase watch keeps it current) — merge waits on Will's review
 
 Why it ranks here: Knuth's examples as the library's test corpus: rigor receipts for the core library, and the TOAPDD corpus becomes the teaching text for phext-driven development.
 
