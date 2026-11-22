@@ -1,0 +1,421 @@
+# downloads.phext — the pin register
+
+Will's rule (2026-11-22): "we don't have to validate the
+remote end beyond having an expected hash and source, if no
+hash is known, we log the first occurrence in downloads.phext
+and track that in exo-plan." Companion rule, same exchange:
+"just always audit the inputs to a job" — "no unexpected
+inputs allowed." A job's inputs are declared in advance and
+the set is closed; an artifact that arrives hash-less gets
+its first occurrence pinned here (hash + source), and every
+later occurrence must match the pin. A mismatch is an
+unexpected input — a defect that stops the job.
+
+Seeded: 2026-11-22, at Will's direction: "seed it now with every download you're aware of." Sweep scope: MEMORY.md, memory/2026-11-*.md, workspace registers and goal workspaces, and live node state (fleet NFS share on orchid-flow, node partials) hashed on-node 2026-11-22.
+
+Evidence grades (one per entry, mandatory):
+- FULL — sha256 + size + source all from primary evidence or
+  computed live.
+- PARTIAL — some of hash/size/source missing; the entry names
+  which.
+- RECORD-ONLY — mentioned in records, no artifact locatable.
+
+Entries: 34
+By grade: FULL 17, PARTIAL 13, RECORD-ONLY 4
+By status: active 24, partial 6, removed 1, exiled 3
+
+Coordinate scheme: this Home scroll at 1.1.1/1.1.1/1.1.1; one
+scroll per download at 1.1.1/1.1.2/1.1.<n>, n the entry's
+sequence number in (first-occurrence date, name) order. The
+builder (~/workspace/phext/build_downloads_phext.py)
+documents the scheme and its renumbering caveat in full; the
+source of truth is ~/workspace/phext/downloads-source.json.
+
+## Index (newest first)
+
+1.1.1/1.1.2/1.1.34 — 2026-11-22 — qexo-vendor-2026-11-22 (cargo vendor set: registry.tar + vendor tree) — 1,649,152,000 B — sha256 5615d29fa917… — active — FULL
+1.1.1/1.1.2/1.1.33 — 2026-11-21 — X/Twitter archive export (2026-11-21 export, extracted) — 94,890,747 B — sha256 5a31b1557d75… — active — PARTIAL
+1.1.1/1.1.2/1.1.32 — 2026-11-21 — vllm-0.34.0+rocm100 wheel (ni-knight, two copies — EXILED, removed) — not recorded — sha256 unpinned — exiled — PARTIAL
+1.1.1/1.1.2/1.1.31 — 2026-11-21 — vLLM wheel partial (plain-view — EXILED, removed) — 14,114,816 B — sha256 unpinned — exiled — PARTIAL
+1.1.1/1.1.2/1.1.30 — 2026-11-21 — Qwen3-0.6B model (vLLM serve-test model — EXILED, removed) — not recorded — sha256 unpinned — exiled — PARTIAL
+1.1.1/1.1.2/1.1.29 — 2026-11-21 — mmproj-Inkling-2-Mini-Q8_0.gguf (vision projector) — 345,911,008 B — sha256 f0c269cdbffd… — active — FULL
+1.1.1/1.1.2/1.1.28 — 2026-11-21 — Kintsugi-27B-12G.gguf — 10,546,687,168 B — sha256 0510bae82445… — active — FULL
+1.1.1/1.1.2/1.1.27 — 2026-11-21 — Inkling-2-Mini Q4_K_M GGUF (original quant, superseded) — 17,382,541,440 B — sha256 369168880d49… — active — FULL
+1.1.1/1.1.2/1.1.26 — 2026-11-21 — Inkling-2-Mini AD-Q4_K GGUF (fleet quant) — 16,525,559,776 B — sha256 2bfc233e1092… — active — FULL
+1.1.1/1.1.2/1.1.25 — 2026-11-21 — Inkling-2-Mini AD-IQ2_M GGUF (small-RAM fallback quant) — 8,665,091,680 B — sha256 7321d77bd62f… — active — FULL
+1.1.1/1.1.2/1.1.24 — 2026-11-21 — Inkling AD-Q4_K partial pull — scroll-central (PAUSED at EE 9 record; advanced since) — 829,128,704 B — sha256 unpinned — partial — PARTIAL
+1.1.1/1.1.2/1.1.23 — 2026-11-21 — Inkling AD-Q4_K partial pull — plain-view (PAUSED) — 488,570,880 B — sha256 unpinned — partial — PARTIAL
+1.1.1/1.1.2/1.1.22 — 2026-11-21 — Inkling AD-Q4_K partial pull — moon-beam (PAUSED) — 243,466,240 B — sha256 unpinned — partial — PARTIAL
+1.1.1/1.1.2/1.1.21 — 2026-11-21 — Inkling AD-Q4_K partial pull — kaleidoscope-one (PAUSED) — 209,911,808 B — sha256 unpinned — partial — PARTIAL
+1.1.1/1.1.2/1.1.20 — 2026-11-21 — Inkling AD-Q4_K partial pull — jacked-kite (PAUSED) — 516,358,144 B — sha256 unpinned — partial — PARTIAL
+1.1.1/1.1.2/1.1.19 — 2026-11-21 — Inkling AD-Q4_K partial pull — free-fall (PAUSED) — 148,832,256 B — sha256 unpinned — partial — PARTIAL
+1.1.1/1.1.2/1.1.18 — 2026-11-21 — enwik9.zip (Wikibox stage-3 corpus acquisition) — 322,592,222 B — sha256 99cdb5ac8439… — active — FULL
+1.1.1/1.1.2/1.1.17 — 2026-11-21 — enwik9 (uncompressed corpus, 1 GB) — 1,000,000,000 B — sha256 159b85351e5f… — active — FULL
+1.1.1/1.1.2/1.1.16 — 2026-11-21 — dflash-Qwen3.8-27B-Q4_0.gguf (Kintsugi DFlash2 drafter) — 1,094,346,080 B — sha256 0a994382adf1… — active — FULL
+1.1.1/1.1.2/1.1.15 — 2026-11-21 — claude.ai install.sh (Claude Code installer script) — not recorded — sha256 2c5506d11056… — active — PARTIAL
+1.1.1/1.1.2/1.1.14 — 2026-11-21 — Claude Code 2.1.330 binary (fleet payload) — 381,121,040 B — sha256 f390eaa0814e… — active — FULL
+1.1.1/1.1.2/1.1.13 — 2026-11-19 — enwik8 (Wikibox corpus, first 100 MB of the English Wikipedia dump) — 100,000,000 B — sha256 2b49720ec4d7… — active — PARTIAL
+1.1.1/1.1.2/1.1.12 — 2026-11-17 — slice1-vendor.tar.gz (cargo vendor tree, qexo-load slice-1) — 13,803,578 B — sha256 99dfda0dec1b… — active — FULL
+1.1.1/1.1.2/1.1.11 — 2026-11-17 — fleet-dashboard-vendor.tar.gz (cargo vendor tree, fleet dashboard) — 84,673,835 B — sha256 7f0d1a940e19… — active — FULL
+1.1.1/1.1.2/1.1.10 — 2026-11-16 — Lastbook-All.zip (Lastbook All pack — DROPPED, never completed) — 387,878,571,619 B — sha256 4b4ea73fc530… — removed — FULL
+1.1.1/1.1.2/1.1.9 — 2026-11-16 — Lastbook model — gemma-4-26B-A4B-it-UD-Q4_K_M.gguf (unsloth) — 16,947,541,728 B — sha256 f2c28b3dc477… — active — FULL
+1.1.1/1.1.2/1.1.8 — 2026-11-16 — Lastbook map packs (52 files, aggregate entry) — 84,824,371,218 B — sha256 unpinned — active — FULL
+1.1.1/1.1.2/1.1.7 — 2026-11-16 — Lastbook installers (3 files, aggregate entry) — 163,301,230 B — sha256 unpinned — active — FULL
+1.1.1/1.1.2/1.1.6 — 2026-11-16 — Lastbook address indexes (49 files, aggregate entry) — 4,860,080,777 B — sha256 unpinned — active — FULL
+1.1.1/1.1.2/1.1.5 — 2026-11-04 — Qwen3.8 27B Q4_K_M GGUF (Will's laptop) — not recorded — sha256 unpinned — active — RECORD-ONLY
+1.1.1/1.1.2/1.1.4 — 2026-11-04 — Gemma 4 26B-A4B Q4_0 GGUF (Will's laptop) — not recorded — sha256 unpinned — active — RECORD-ONLY
+1.1.1/1.1.2/1.1.3 — 2026-11-01 — ollama llama3.2:1b (rock-mountain smoke test) — not recorded — sha256 unpinned — active — RECORD-ONLY
+1.1.1/1.1.2/1.1.2 — 2026-10-30 — X/Twitter archive export (earlier export, extracted) — 111,855,038 B — sha256 474660346335… — active — PARTIAL
+1.1.1/1.1.2/1.1.1 — 2026-10-30 — SQ v0.6.0 (cargo install sq, this VM) — not recorded — sha256 unpinned — active — RECORD-ONLY# SQ v0.6.0 (cargo install sq, this VM)
+
+Source: crates.io (cargo install sq; built against libphext 0.3.3)
+SHA-256: not pinned
+Size: not recorded
+First occurrence: 2026-10-30
+Status: active
+Evidence grade: RECORD-ONLY
+
+Evidence: TOOLS.md (cargo install sq installed SQ v0.6.0); memory/2026-11-01.md — Rust + SQ installation rundown recorded 2026-10-30. Crates.io registry checksums applied at install; no artifact file retained to hash.# X/Twitter archive export (earlier export, extracted)
+
+Source: X (x.com account data export, downloaded by Will)
+SHA-256: 4746603463352e35fff1de99b3d040dd85e89793fc52f2eacc38557ceb6359a4
+Size: 111,855,038 B
+First occurrence: 2026-10-30
+Status: active
+Evidence grade: PARTIAL
+Hash note: Tree pin: sha256 of the sorted per-file sha256 manifest of the extracted tree (11 files), computed 2026-11-22 at seed time. The original export .zip is not retained on this VM.
+Size note: Total bytes of the extracted tree at ~/workspace/twitter-archive
+
+Evidence: ~/workspace/twitter-archive (11 files; directory mtime 2026-10-30). Missing: original zip hash (never recorded).# ollama llama3.2:1b (rock-mountain smoke test)
+
+Source: Ollama registry (registry.ollama.ai), ollama pull llama3.2:1b
+SHA-256: not pinned
+Size: not recorded
+First occurrence: 2026-11-01
+Status: active
+Evidence grade: RECORD-ONLY
+Size note: ~1.3 GB per the 2026-11-01 record; no exact byte count recorded
+
+Evidence: memory/2026-11-01.md — ollama pull llama3.2:1b succeeded through the proxy (1.3 GB); GPU smoke test OK. No blob found under ~/.ollama on rock-mountain at seed time (2026-11-22).# Gemma 4 26B-A4B Q4_0 GGUF (Will's laptop)
+
+Source: Hugging Face GGUF repo — exact repo not recorded; queued in Will's laptop llama.cpp setup (screenshot 2026-11-04 02:04 CST)
+SHA-256: not pinned
+Size: not recorded
+First occurrence: 2026-11-04
+Status: active
+Evidence grade: RECORD-ONLY
+Size note: ~15 GB per the 2026-11-04 record (MoE ~4B active)
+
+Evidence: memory/2026-11-04.md — same screenshot record as the Qwen3.8 27B entry. Laptop not touched at seed time, per instructions.# Qwen3.8 27B Q4_K_M GGUF (Will's laptop)
+
+Source: Hugging Face GGUF repo — exact repo not recorded; queued in Will's laptop llama.cpp setup (screenshot 2026-11-04 02:04 CST)
+SHA-256: not pinned
+Size: not recorded
+First occurrence: 2026-11-04
+Status: active
+Evidence grade: RECORD-ONLY
+Size note: ~16 GB per the 2026-11-04 record (exceeds the laptop's 12 GB VRAM; partial CPU offload expected)
+
+Evidence: memory/2026-11-04.md — 'Laptop models Will said he is grabbing (screenshot 02:04 CST): Qwen3.8 27B Q4_K_M (~16 GB)'; 'Will was downloading two models for his laptop llama setup'. Laptop not touched at seed time, per instructions.# Lastbook address indexes (49 files, aggregate entry)
+
+Source: downloads.lastbook.org, via manifest-v1.json (indexes for HI, NH, PR do not exist upstream — manifest lists them available:false)
+SHA-256: not pinned
+Size: 4,860,080,777 B
+First occurrence: 2026-11-16
+Status: active
+Evidence grade: FULL
+Hash note: Aggregate entry: per-file sha256 pins in ~/workspace/lastbook-fetch/files.tsv (category=index), each verified on orchid-flow.
+Size note: Aggregate of the 49 address indexes per the manifest
+
+Evidence: ~/workspace/lastbook-fetch/files.tsv; memory/2026-11-16.md (fetch set); memory/2026-11-18.md (close-out).# Lastbook installers (3 files, aggregate entry)
+
+Source: downloads.lastbook.org, via manifest-v1.json (Mac / Windows / Linux installers)
+SHA-256: not pinned
+Size: 163,301,230 B
+First occurrence: 2026-11-16
+Status: active
+Evidence grade: FULL
+Hash note: Aggregate entry: per-file sha256 pins in ~/workspace/lastbook-fetch/files.tsv (category=installer), each verified on orchid-flow.
+Size note: Aggregate of the 3 installers per the manifest
+
+Evidence: ~/workspace/lastbook-fetch/files.tsv; memory/2026-11-16.md (fetch set); memory/2026-11-18.md (close-out).# Lastbook map packs (52 files, aggregate entry)
+
+Source: https://downloads.lastbook.org/maps/Lastbook-Map-<state>.zip (50 states + DC + PR), via manifest-v1.json
+SHA-256: not pinned
+Size: 84,824,371,218 B
+First occurrence: 2026-11-16
+Status: active
+Evidence grade: FULL
+Hash note: Aggregate entry: every pack's individual sha256 is pinned in ~/workspace/lastbook-fetch/files.tsv (52 rows, category=map) and each file was verified against it on orchid-flow.
+Size note: Aggregate of the 52 map packs per the manifest
+
+Evidence: ~/workspace/lastbook-fetch/files.tsv; memory/2026-11-18.md close-out (108 of 109 files fetched and SHA-256-verified on orchid-flow).# Lastbook model — gemma-4-26B-A4B-it-UD-Q4_K_M.gguf (unsloth)
+
+Source: https://huggingface.co/unsloth/gemma-4-26B-A4B-it-GGUF/resolve/c099eb48e663fd284577b04978a94ffccb261841/gemma-4-26B-A4B-it-UD-Q4_K_M.gguf
+SHA-256: f2c28b3dc4776931ac6f879e11f203dec637ea0f14267a86ec8f6165f63f293f
+Size: 16,947,541,728 B
+First occurrence: 2026-11-16
+Status: active
+Evidence grade: FULL
+
+Evidence: ~/workspace/lastbook-fetch/files.tsv; fetched to orchid-flow /srv/mirrorborn/shared/lastbook/ and SHA-256-verified against the manifest (memory/2026-11-16.md, memory/2026-11-18.md).# Lastbook-All.zip (Lastbook All pack — DROPPED, never completed)
+
+Source: https://downloads.lastbook.org/Lastbook-All.zip (via the live manifest https://downloads.lastbook.org/manifest-v1.json, v1, 2026-11-13)
+SHA-256: 4b4ea73fc530a073782981fd83f30ebda18e8809cbff0cf18f82d45ea21f10f7
+Size: 387,878,571,619 B
+First occurrence: 2026-11-16
+Status: removed
+Evidence grade: FULL
+Hash note: Upstream-published pin from the Lastbook manifest (copied in ~/workspace/lastbook-fetch/files.tsv). The artifact itself never completed: the fetch reset repeatedly at 1,408,929,049 B and Will ruled 'drop the last file and finish' (2026-11-18); the partial was deleted. Its contents are covered by the individually fetched packs below.
+Size note: Expected size from the manifest; never fully on disk
+
+Evidence: ~/workspace/lastbook-fetch/files.tsv (per-file manifest copy); memory/2026-11-16.md (fetch set); memory/2026-11-18.md (close-out: 108 of 109 files verified, All pack dropped at Will's direction).# fleet-dashboard-vendor.tar.gz (cargo vendor tree, fleet dashboard)
+
+Source: crates.io dependency tree, vendored for the fleet-dashboard build (cross-compiled on elven-path, deps --offline from this tarball)
+SHA-256: 7f0d1a940e197f2208de3041c7672a13722f630ad5a9f58ebe809a87aa939374
+Size: 84,673,835 B
+First occurrence: 2026-11-17
+Status: active
+Evidence grade: FULL
+Hash note: Computed live on orchid-flow 2026-11-22 at seed time; no hash was recorded at first occurrence.
+
+Evidence: memory/2026-11-17.md + memory/2026-11-18.md (vendor tarball 84,673,835 B at /mnt/mirrorborn/shared/fleet-dashboard-vendor.tar.gz); live ls + sha256sum on orchid-flow, 2026-11-22.# slice1-vendor.tar.gz (cargo vendor tree, qexo-load slice-1)
+
+Source: crates.io dependency tree, vendored on aletheia-core (cargo vendor) and tarballed to the fleet NFS share — the ranch route, because ranch nodes cannot fetch crates.io directly (TLS failure)
+SHA-256: 99dfda0dec1b1378d7ea60dc3acf1a0051f24e9383a8479f2db329d2638c651b
+Size: 13,803,578 B
+First occurrence: 2026-11-17
+Status: active
+Evidence grade: FULL
+Hash note: Computed live on orchid-flow 2026-11-22 at seed time; completes the truncated 'sha 99dfda0d…' in the 2026-11-17 record.
+
+Evidence: memory/2026-11-17.md (vendoring rescue: cargo vendor on aletheia-core → tarball on fleet NFS /mnt/mirrorborn/shared/); live ls + sha256sum on orchid-flow /srv/mirrorborn/shared/slice1-vendor.tar.gz, 2026-11-22.# enwik8 (Wikibox corpus, first 100 MB of the English Wikipedia dump)
+
+Source: English Wikipedia dump corpus (enwik family; the enwik9/full-dump acquisitions are recorded as ranch-node downloads from dumps.wikimedia.org — enwik8's own acquisition is not separately recorded; it was already on scroll-central before Wikibox stage 1)
+SHA-256: 2b49720ec4d78c3c9fabaee6e4179a5e997302b3a70029f30f2d582218c024a8
+Size: 100,000,000 B
+First occurrence: 2026-11-19
+Status: active
+Evidence grade: PARTIAL
+
+Evidence: ~/workspace/wikibox-scale/STATE.md — 'Corpus identity: enwik8 = 100,000,000 B, sha256 2b49720e… (already on scroll-central)'. Missing: enwik8's own download source/first-occurrence record.# Claude Code 2.1.330 binary (fleet payload)
+
+Source: Anthropic — via https://claude.ai/install.sh per-node download (Will's setup-claude.sh), then staged once to the fleet NFS share at /mnt/mirrorborn/shared/claude-cli/2.1.330/ with MANIFEST.sha256
+SHA-256: f390eaa0814e6a1bff74cbb47acb74cb9c89d30ced809fe0af5af00c7bfe8ebb
+Size: 381,121,040 B
+First occurrence: 2026-11-21
+Status: active
+Evidence grade: FULL
+Hash note: Manifest content verified matching the binary hash at staging (2026-11-21); staged size live-verified on orchid-flow 2026-11-22 (381,121,040 B). This is the '381 MB payload' whose wedged NFS cp jobs collapsed plain-view's LAN path in the EE 29 forensics.
+
+Evidence: memory/2026-11-22.md — 'Claude CLI payload staged on NFS, 2026-11-21' (full hash + size + staging path); live find on orchid-flow claude-cli/, 2026-11-22.# claude.ai install.sh (Claude Code installer script)
+
+Source: https://claude.ai/install.sh
+SHA-256: 2c5506d110560bf618bbe88f678f2c2a0047c86a9c6585fc84976120b1de0b44
+Size: not recorded
+First occurrence: 2026-11-21
+Status: active
+Evidence grade: PARTIAL
+Hash note: Will's SHA-256 pin for the installer; verified live from aletheia-core 2026-11-21 (the live installer still matched the pin).
+Size note: Size not recorded
+
+Evidence: memory/2026-11-22.md — setup-claude.sh downloads https://claude.ai/install.sh per node, gated on Will's pin 2c5506d1…. Missing: installer size.# dflash-Qwen3.8-27B-Q4_0.gguf (Kintsugi DFlash2 drafter)
+
+Source: https://huggingface.co/CaryPalmer/Kintsugi-27B
+SHA-256: 0a994382adf17c720c9e5d4292f57344f3b445f058d3e9d5b0f601ae7d6ca3c4
+Size: 1,094,346,080 B
+First occurrence: 2026-11-21
+Status: active
+Evidence grade: FULL
+Size note: Staged and hash-verified on the fleet share 2026-11-21 (exactly the card's hash); visibility confirmed from plain-view and ni-knight
+
+Evidence: memory/2026-11-21.md (card check + staging state); /srv/mirrorborn/shared/models/kintsugi-27b/SHA256SUMS + live ls, 2026-11-22.# enwik9 (uncompressed corpus, 1 GB)
+
+Source: Derived on scroll-central by decompressing enwik9.zip (this register's pin for the working corpus artifact)
+SHA-256: 159b85351e5f76e60cbe32e04c677847a9ecba3adc79addab6f4c6c7aa3744bc
+Size: 1,000,000,000 B
+First occurrence: 2026-11-21
+Status: active
+Evidence grade: FULL
+Size note: Exactly 1,000,000,000 B; identity verified at acquisition: its first 100,000,000 B hash to enwik8's sha256
+
+Evidence: ~/workspace/wikibox-scale/STATE.md, Stage 3 launch section (2026-11-21).# enwik9.zip (Wikibox stage-3 corpus acquisition)
+
+Source: http://mattmahoney.net/dc/enwik9.zip — single-stream wget on scroll-central, ordinary pace, ~6 min
+SHA-256: 99cdb5ac84392252d3f0912ccedd195bc95bd80cbef3b0cdf2eee4ad9a3b7a51
+Size: 322,592,222 B
+First occurrence: 2026-11-21
+Status: active
+Evidence grade: FULL
+
+Evidence: ~/workspace/wikibox-scale/STATE.md, Stage 3 launch section (2026-11-21): 'enwik9 acquired ON scroll-central (single-stream wget from mattmahoney.net/dc/enwik9.zip): enwik9.zip 322,592,222 B, sha256 99cdb5ac…'.# Inkling AD-Q4_K partial pull — free-fall (PAUSED)
+
+Source: Fleet distribution of the AD-Q4_K GGUF (NFS share + node-to-node rsync; origin: Hugging Face AtomicChat/Inkling-2-Mini-GGUF)
+SHA-256: not pinned
+Size: 148,832,256 B
+First occurrence: 2026-11-21
+Status: partial
+Evidence grade: PARTIAL
+Hash note: Partial file — target pin on completion is 2bfc233e…. Free-fall's link is degraded in every protocol (~0.04 MB/s); its unit keeps retrying.
+Size note: Bytes so far, live-verified 2026-11-22 ~14:40 CST (EE 9 record: 148,635,648 B)
+
+Evidence: Live stat via fleet-ssh, 2026-11-22; tasks.phext EE 6–9 sequencing record.# Inkling AD-Q4_K partial pull — jacked-kite (PAUSED)
+
+Source: Fleet distribution of the AD-Q4_K GGUF (NFS share + node-to-node rsync; origin: Hugging Face AtomicChat/Inkling-2-Mini-GGUF)
+SHA-256: not pinned
+Size: 516,358,144 B
+First occurrence: 2026-11-21
+Status: partial
+Evidence grade: PARTIAL
+Hash note: Partial file — target pin on completion is 2bfc233e…
+Size note: Bytes so far, live-verified 2026-11-22 ~14:40 CST (EE 9 record: 516,128,768 B)
+
+Evidence: Live stat via fleet-ssh, 2026-11-22; tasks.phext EE 6–9 sequencing record.# Inkling AD-Q4_K partial pull — kaleidoscope-one (PAUSED)
+
+Source: Fleet distribution of the AD-Q4_K GGUF (NFS share + node-to-node rsync; origin: Hugging Face AtomicChat/Inkling-2-Mini-GGUF)
+SHA-256: not pinned
+Size: 209,911,808 B
+First occurrence: 2026-11-21
+Status: partial
+Evidence grade: PARTIAL
+Hash note: Partial file — target pin on completion is 2bfc233e…
+Size note: Bytes so far, live-verified 2026-11-22 ~14:40 CST (EE 9 record: 209,682,432 B)
+
+Evidence: Live stat via fleet-ssh, 2026-11-22; tasks.phext EE 6–9 sequencing record.# Inkling AD-Q4_K partial pull — moon-beam (PAUSED)
+
+Source: Fleet distribution of the AD-Q4_K GGUF (NFS share + node-to-node rsync; origin: Hugging Face AtomicChat/Inkling-2-Mini-GGUF)
+SHA-256: not pinned
+Size: 243,466,240 B
+First occurrence: 2026-11-21
+Status: partial
+Evidence grade: PARTIAL
+Hash note: Partial file — target pin on completion is 2bfc233e…
+Size note: Bytes so far, live-verified 2026-11-22 ~14:40 CST (EE 9 record: 243,236,864 B)
+
+Evidence: Live stat via fleet-ssh, 2026-11-22; tasks.phext EE 6–9 sequencing record.# Inkling AD-Q4_K partial pull — plain-view (PAUSED)
+
+Source: Fleet distribution of the AD-Q4_K GGUF (NFS share + node-to-node rsync, rsync --append resume; origin: Hugging Face AtomicChat/Inkling-2-Mini-GGUF)
+SHA-256: not pinned
+Size: 488,570,880 B
+First occurrence: 2026-11-21
+Status: partial
+Evidence grade: PARTIAL
+Hash note: Partial file — no hash until completion; target pin on completion is the AD-Q4_K sha256 2bfc233e… (the installer's hash gate deletes on mismatch)
+Size note: Bytes so far, live-verified 2026-11-22 ~14:40 CST at /home/wbic16/models/inkling-2-mini-gguf/Inkling-2-Mini-AD-Q4_K.gguf (EE 9 record: 488,341,504 B; crept before the pause held)
+
+Evidence: Live stat via fleet-ssh, 2026-11-22; pause recorded in tasks.phext (EE 6–9 sequencing pass: 7 far-tail pulls paused, partials kept).# Inkling AD-Q4_K partial pull — scroll-central (PAUSED at EE 9 record; advanced since)
+
+Source: Fleet distribution of the AD-Q4_K GGUF (NFS share + node-to-node rsync; origin: Hugging Face AtomicChat/Inkling-2-Mini-GGUF)
+SHA-256: not pinned
+Size: 829,128,704 B
+First occurrence: 2026-11-21
+Status: partial
+Evidence grade: PARTIAL
+Hash note: Partial file — target pin on completion is 2bfc233e…
+Size note: Bytes so far, live-verified 2026-11-22 ~14:40 CST — well past the EE 9 record (163,020,800 B), so this pull advanced after the sequencing pass; still incomplete
+
+Evidence: Live stat via fleet-ssh, 2026-11-22; tasks.phext EE 6–9 sequencing record.# Inkling-2-Mini AD-IQ2_M GGUF (small-RAM fallback quant)
+
+Source: https://huggingface.co/AtomicChat/Inkling-2-Mini-GGUF
+SHA-256: 7321d77bd62fb1b4ee620ec12e677a4b4b99668d083c1e6e350fd1c3376e29bf
+Size: 8,665,091,680 B
+First occurrence: 2026-11-21
+Status: active
+Evidence grade: FULL
+Hash note: From the fleet share's SHA256SUMS, size live-verified 2026-11-22.
+Size note: Serving on yeet-max (16 GB bin) per the EE 75 perf pass
+
+Evidence: /srv/mirrorborn/shared/models/inkling-2-mini-gguf/SHA256SUMS + live ls, 2026-11-22; memory/2026-11-21.md (fallback decision); ~/workspace/exo-integration/INKLING-PERF.md.# Inkling-2-Mini AD-Q4_K GGUF (fleet quant)
+
+Source: https://huggingface.co/AtomicChat/Inkling-2-Mini-GGUF (repo posted by Will 2026-11-21; Apache-2.0)
+SHA-256: 2bfc233e10925297cc79dffce5d9be4f2a2b43e499ea6a1bf03b9242867dce9e
+Size: 16,525,559,776 B
+First occurrence: 2026-11-21
+Status: active
+Evidence grade: FULL
+Hash note: Verified live on the fleet NFS share (orchid-flow) 2026-11-22 at seed time — matches the recorded pin and the share's SHA256SUMS.
+
+Evidence: memory/2026-11-21.md (repo surfaced + fleet deployment order); memory/2026-11-22.md (INKLING-ON-EXO stage 1: complete AD-Q4_K on ni-knight, full sha256); live sha256sum of /srv/mirrorborn/shared/models/inkling-2-mini-gguf/Inkling-2-Mini-AD-Q4_K.gguf, 2026-11-22.# Inkling-2-Mini Q4_K_M GGUF (original quant, superseded)
+
+Source: https://huggingface.co/AtomicChat/Inkling-2-Mini-GGUF
+SHA-256: 369168880d492c45310a17e8fe00a1e21a67a7aa5815c584cde17c980e559cdc
+Size: 17,382,541,440 B
+First occurrence: 2026-11-21
+Status: active
+Evidence grade: FULL
+Hash note: From the fleet share's SHA256SUMS, with the size live-verified on orchid-flow 2026-11-22.
+Size note: Fleet quant switched Q4_K_M → AD-Q4_K: Q4_K_M is in the unmerged PR #32695 layout and provably does not load on mainline llama.cpp; the file remains on the share.
+
+Evidence: /srv/mirrorborn/shared/models/inkling-2-mini-gguf/SHA256SUMS + live ls, 2026-11-22; memory/2026-11-21.md (quant decision of record).# Kintsugi-27B-12G.gguf
+
+Source: https://huggingface.co/CaryPalmer/Kintsugi-27B (posted by Will 2026-11-21; Qwen3.8-27B at 2.47 bpw, EXL3 trellis codec in GGUF; Apache-2.0)
+SHA-256: 0510bae82445dc53dbc7d0d842d8b7e146b8eafce0837e39b157d411e48c8a74
+Size: 10,546,687,168 B
+First occurrence: 2026-11-21
+Status: active
+Evidence grade: FULL
+Hash note: Verified live on the fleet share 2026-11-22 — matches the model card's published hash. History: the first assembled copy on aletheia-core mismatched this hash at exactly the card's byte count and was HELD (preserved as .hashmismatch); the staged share copy now verifies.
+
+Evidence: memory/2026-11-21.md (model card check + staging record, task 36.6.5/7.5.9/5.5.9); live sha256sum of /srv/mirrorborn/shared/models/kintsugi-27b/Kintsugi-27B-12G.gguf, 2026-11-22.# mmproj-Inkling-2-Mini-Q8_0.gguf (vision projector)
+
+Source: https://huggingface.co/AtomicChat/Inkling-2-Mini-GGUF
+SHA-256: f0c269cdbffdeb2d8bdabd9d859d1ea0874f58e7783913d7ce75028eb9425d97
+Size: 345,911,008 B
+First occurrence: 2026-11-21
+Status: active
+Evidence grade: FULL
+Hash note: From the fleet share's SHA256SUMS, size live-verified 2026-11-22.
+
+Evidence: /srv/mirrorborn/shared/models/inkling-2-mini-gguf/SHA256SUMS + live ls, 2026-11-22.# Qwen3-0.6B model (vLLM serve-test model — EXILED, removed)
+
+Source: Hugging Face (Qwen/Qwen3-0.6B — the records name the model but not the repo URL; fetched by curl part-downloaders on plain-view and in full on ni-knight)
+SHA-256: not pinned
+Size: not recorded
+First occurrence: 2026-11-21
+Status: exiled
+Evidence grade: PARTIAL
+Size note: ~1.5 GB for the complete ni-knight copy (~/models/Qwen3-0.6B), removed in the EE 29 exile cleanup; plain-view held partial model-parts, also removed
+
+Evidence: memory/2026-11-22.md EE 29 entries. Missing: hash, exact size, recorded source URL.# vLLM wheel partial (plain-view — EXILED, removed)
+
+Source: vLLM ROCm wheel distribution (8 range-curl fetchers writing ~/wheel-parts) — exact URL not recorded
+SHA-256: not pinned
+Size: 14,114,816 B
+First occurrence: 2026-11-21
+Status: exiled
+Evidence grade: PARTIAL
+Size note: The single wheel file froze at 14,114,816 B when plain-view's NFS/LAN path collapsed (~23:52 CST 2026-11-21); ~105 MB of wheel partials in total were stranded and removed in the EE 29 cleanup (626,089,984 B freed on plain-view across all vLLM partials/venv/logs)
+
+Evidence: memory/2026-11-22.md EE 29 forensics + plain-view cleanup entries. Missing: hash, source URL.# vllm-0.34.0+rocm100 wheel (ni-knight, two copies — EXILED, removed)
+
+Source: vLLM ROCm wheel distribution (pip download for the install test, task 31.6.7/7.7.12/7.6.10) — exact URL not recorded
+SHA-256: not pinned
+Size: not recorded
+First occurrence: 2026-11-21
+Status: exiled
+Evidence grade: PARTIAL
+Size note: ~608 MB across both wheel copies on ni-knight (per-copy size not recorded); removed in the EE 29 exile cleanup (22,995,247,104 B freed on ni-knight in total)
+
+Evidence: memory/2026-11-22.md EE 29 entries — install succeeded on ni-knight (vLLM 0.34.0+rocm100, torch 2.13.0+rocm10.0.0); serve faulted (hipErrorLaunchFailure); Will ruled 'exile vLLM' ~03:23 CST EE 29 and both wheel copies were removed. Missing: hash, exact per-copy size, source URL.# X/Twitter archive export (2026-11-21 export, extracted)
+
+Source: X (x.com account data export, downloaded by Will; export dated 2026-11-21)
+SHA-256: 5a31b1557d750345b14e74ae2ecfe62c12b83bcfc058df52f232eb9e2414bab5
+Size: 94,890,747 B
+First occurrence: 2026-11-21
+Status: active
+Evidence grade: PARTIAL
+Hash note: Tree pin: sha256 of the sorted per-file sha256 manifest of the extracted tree (12 files), computed 2026-11-22 at seed time. The original export .zip is not retained on this VM.
+Size note: Total bytes of the extracted tree at ~/workspace/twitter-archive-2026-11-21
+
+Evidence: ~/workspace/twitter-archive-2026-11-21 (12 files). Missing: original zip hash (never recorded).# qexo-vendor-2026-11-22 (cargo vendor set: registry.tar + vendor tree)
+
+Source: crates.io dependency tree, vendored on the fleet (cargo vendor) onto the fleet NFS share at /mnt/mirrorborn/shared/qexo-vendor-2026-11-22/
+SHA-256: 5615d29fa917db57c00d57ac6a2093cf2a9f2eaf68785f30da656e155c47c3f3
+Size: 1,649,152,000 B
+First occurrence: 2026-11-22 (EE 43)
+Status: active
+Evidence grade: FULL
+Hash note: Hash of registry.tar (1,649,152,000 B), computed live on orchid-flow 2026-11-22. The unpacked vendor/ tree beside it (directory total 1,702,199,117 B including registry.tar) is not separately hashed.
+Size note: registry.tar size; the vendor set's directory total is 1,702,199,117 B
+
+Evidence: Live ls + sha256sum on orchid-flow /srv/mirrorborn/shared/qexo-vendor-2026-11-22/, 2026-11-22 (directory dated 2026-11-22 04:58 CST = EE 43).
