@@ -22,13 +22,14 @@ number in run-id order (run-ids open with a UTC timestamp, so
 the order is chronological and a run's coordinate never
 changes). The builder documents the scheme in full.
 
-Runs recorded: 2
+Runs recorded: 3
 
-Latest run: 20261122T182919Z-synthetic
-  host synthetic-test, source synthetic-test, failures 0, blocked-on-docs 0, blocked 0, exit count 0
+Latest run: 20261122T183325Z-awsbox-leg-test
+  host ip-172-30-1-197, source synthetic-test, failures 0, blocked-on-docs 0, blocked 0, exit count 0
 
 ## Index (newest first)
 
+1.1.1/1.1.2/1.1.3 — 20261122T183325Z-awsbox-leg-test — 2026-11-22T18:33:25Z — failures 0, blocked-on-docs 0, blocked 0 — source: synthetic-test
 1.1.1/1.1.2/1.1.2 — 20261122T182919Z-synthetic — 2026-11-22T18:29:19Z — failures 0, blocked-on-docs 0, blocked 0 — source: synthetic-test
 1.1.1/1.1.2/1.1.1 — 20261122T180000Z-ip-172-30-1-197 — 2026-11-22T18:20:50Z — failures 11, blocked-on-docs ?, blocked 5 — source: will-screenshot# Deploy telemetry — 20261122T180000Z-ip-172-30-1-197
 
@@ -70,4 +71,17 @@ Record (verbatim body, in run order):
 
 result: synthetic step alpha: PASS (not a real deploy — pipeline test record)
 result: synthetic step beta: PASS (not a real deploy — pipeline test record)
-note: crafted by Emise 2026-11-22 to test the deploy-telemetry flow end to end (awsbox outbox format -> hub ingest -> telemetry.phext in wbic16/exo-plan). No deploy ran.
+note: crafted by Emise 2026-11-22 to test the deploy-telemetry flow end to end (awsbox outbox format -> hub ingest -> telemetry.phext in wbic16/exo-plan). No deploy ran.# Deploy telemetry — 20261122T183325Z-awsbox-leg-test
+
+Run-id: 20261122T183325Z-awsbox-leg-test
+Host: ip-172-30-1-197
+Source: synthetic-test
+Started: 2026-11-22T18:33:25Z (EE 108)
+Finished: 2026-11-22T18:33:25Z (EE 108)
+Parallel pool: 2 (nproc at run start)
+Counts: steps 32, results 1, failures 0, blocked-on-docs 0, blocked 0, exit count 0
+
+Record (verbatim body, in run order):
+
+result: synthetic awsbox leg test: PASS (not a real deploy — record crafted on awsbox to prove the installed telemetry-push.sh leg end to end)
+note: crafted by Emise 2026-11-22 after installing the parallel+telemetry deploy-all.sh on awsbox; no deploy ran.
