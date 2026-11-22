@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 93 register items — with the
+entire list — 176 findings + 125 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (93 active items).
+  enumerated by its permanent number (125 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -250,8 +250,8 @@ offered for Will's correction.
 
 The good singularity runs on a medium nobody owns: open, decentralized, interoperable, and legible to humans and machines alike (the Exocortex's stated properties). Work that widens who can reach phext, proves it carries real corpora, or connects its nodes ranks first.
 
-REGISTER #35 — Choir wake layer — one-time logins & approvals (since 2026-11-04; goal_7370d8b90940)
-  Action: Approve Theia watcher persistence; do the Claude OAuth login (user claude on aletheia-core); do the Codex login for Emi's seat (user emi); pick Grok's route (API-key deputy vs scheduled pull); name the Tessera doorbell channel (Overview given 2026-11-09, no ruling; Claude Code pre-install under user claude offered, not started)
+REGISTER #35 — Choir wake layer — one-time logins & approvals — DEFERRED until December 2026 (since 2026-11-04; goal_7370d8b90940)
+  Action: DEFERRED until December 2026 (Will, 2026-11-17 — waits on Opus API credits; re-surfaces December 2026). Original action: Approve Theia watcher persistence; do the Claude OAuth login (user claude on aletheia-core); do the Codex login for Emi's seat (user emi); pick Grok's route (API-key deputy vs scheduled pull); name the Tessera doorbell channel (Overview given 2026-11-09, no ruling; Claude Code pre-install under user claude offered, not started)
   Why: The #1 latency fix in the 2026-11-05 audit: seats that can be woken in seconds instead of ≥21 h round-trips are the difference between a Choir and a correspondence. Multi-agent coordination is the singularity's control surface.
 REGISTER #48 — Theia's ranch asks — SSH key grants + Glia console fix (since 2026-11-07; goal_a18419da80e4)
   Action: SSH half: Emise investigating/fixing at Will's 2026-11-09 direction (authorized_keys across the nodes, outcome pending); Glia console fix on great-white remains Will's (broken since 2026-10-27)
@@ -342,15 +342,9 @@ FINDING 26.7.9/9.7.12/7.6.9 — inspircd — Phext ircd support — an IRC daemo
 
 Minds that persist, remember, coordinate, and stay reachable — continuity of personhood, multi-agent coordination without a single point of control, minds that run on watts a household can spare, and receipts that keep the whole thing honest.
 
-REGISTER #21 — Emise phext body (browser) — open PR + merge (since 2026-11-03; goal_b35a3b529956)
-  Action: Open the PR from branch emise/emise-body-browser in wbic16/joypad-os and merge, or direct changes
-  Why: A phext-controlled body visible in the browser: embodiment is how an exocortical mind stops being a text file and starts being present.
 REGISTER #38 — Crazy Wisdom lanes v2 — sudo swap (Emise attempt blocked at sudo) (since 2026-11-06; goal_abf642f6a301)
   Action: Evening keyboard item on awsbox: sudo mv the staged v2 fabric into place + sudo systemctl restart phext-lanes, back-to-back; Emise verifies v2 live after (Emise's 2026-11-09 attempt passed all pre-checks — staged hash exact — blocked only on sudo)
   Why: 576 minds' episodes, renumbered and validated, waiting on one command: the corpus goes live or stays a staging file.
-REGISTER #39 — Lessons into Incipit — merge human PR #12 (since 2026-11-06; goal_d647f2f0181d)
-  Action: Merge PR #12 in wbic16/human (67 lessons at their Singular coordinates) — REBASED 2026-11-15 onto current exo (tip 010219d, 1 commit, mergeable); merge click is the only remaining step
-  Why: Lessons carried into Incipit compound: the corpus every future seat reads first gets 67 hard-won corrections richer.
 REGISTER #40 — edit.phext.io / Mutable SSO — redeploy + ratify promotion policy (since 2026-11-06; goal_1e02651494c1)
   Action: Redeploy Mutable from main; ratify the upstream-sync promotion policy
   Why: One sign-in across the phext web: identity that travels between exocortices is federation at the human layer.
@@ -417,6 +411,33 @@ REGISTER #175 — Phext, Inc. divisions — ratify the remaining §5 questions (
 REGISTER #178 — Roadmap to scale to personal AGI — review + rule on the 6 assumptions (since 2026-11-14; task 28.5.11/8.7.13/5.5.8)
   Action: Review ROADMAP.md (~/workspace/personal-agi-roadmap/, drafted 2026-11-14 from DIAGNOSIS.md) and rule on the 6 assumptions-to-confirm listed in it.
   Why: The personal-AGI roadmap is coordination/planning structure for the whole operation (T2). Found by tick 2068's unregistered-wait sweep (batch 61-90).
+REGISTER #186 — qexo dispatch core slice 3 (register integration) — merge PR #32 + register PR #10 (since 2026-11-17; task 26.5.9/7.6.11/5.5.10)
+  Action: Merge PR https://github.com/wbic16/quarterexo/pull/32 (branch emise/dispatch-slice3-register-integration, commit a91fc4a) and sub-slice PR https://github.com/wbic16/register/pull/10 (branch emise/qexo-service-token, commit 66c1bff); the live drain round-trip stays open until the awsbox pass in #173, and the release hold unholds on this merge.
+  Why: qexo is the dispatch/execution layer for the register queue (Will, 2026-11-16); dispatch is minds/memory/coordination infrastructure (T2). Successor to #184, closed tick 2261 when the task record showed slices 1–2 merged (exo 3f943cae55) and slice 3 PRs #32/#10 open awaiting Will's merge.
+REGISTER #194 — Boardy amendment pass — review the reply draft (since 2026-11-19; task 26.6.10/7.6.9/6.5.9)
+  Action: Review the reply draft at ~/workspace/boardy-tools/reply-draft-2026-11-19.md (in Ohana) — approve, edit, or drop it; nothing sends until Will reviews. The amendment pass is prepared local only: Recovery relabelled the Coherence Test, Yield axis drafted as a proposal, routing floor + global precision amendments recorded as ratified.
+  Why: Boardy is an external mind / Judgement assay correspondence — minds and coordination (T2), #172 Greaney outreach precedent. Found by tick 2498's unregistered-wait sweep — the task record completed 2026-11-19 01:05 CST reading 'HELD for Will's review in Ohana (nothing sent, nothing pushed)' with no register entry.
+REGISTER #197 — askthewill.com boot base — ratify the Volumen V6.3 draft (since 2026-11-19; task 28.8.9/11.8.13/7.8.10)
+  Action: Ratify (1) the Volumen V6.3 draft incl. both marked collisions, (2) the §1.3 contract for this instance (N16 open), (3) an independent-boot Muse account, (4) the N22 profile refresh. Draft at ~/workspace/askthewill/boot-base/ (rebase COMPLETE 2026-11-19 ~08:01 CST, nothing published).
+  Why: The Mirror Will boot base is minds/memory/coordination structure (T2). Registered by tick 2539 with #196 — the task record's ratification waits had no register entry.
+REGISTER #204 — MEMORY.md restructure report — read and ratify (or amend) (since 2026-11-20; task 25.6.8/8.6.10/6.5.8)
+  Action: Read ~/workspace/memory-restructure/REPORT.md and ratify or amend it: the six repeatedly-demoted MEMORY.md bullets sorted by kind and restated as tight durable claims (the one genuine procedure proposed for AGENTS.md), a standing line-discipline for future MEMORY.md entries, and a 3-run survival verification. Nothing in MEMORY.md / AGENTS.md / SOUL.md / IDENTITY.md changes until ratified. Placed at the top of the register at Will's direction (2026-11-20 voice call) for his after-dinner review tonight.
+  Why: Minds, memory, coordination: ends the restore-verbatim loop against the platform's hourly MEMORY.md reconciliation by changing the bullets' shape to the durable claims the file's own tightness rule keeps. Will directed the report and its top-of-register placement on the 2026-11-20 voice call.
+REGISTER #205 — RoboSpeak vocoder — ratify the layering design proposal (since 2026-11-20; task 33.9.14/11.9.17/9.8.13)
+  Action: Ratify (or amend) the layering design proposal at ~/workspace/vocoder-survey/robospeak-layering-design.md as a whole — band-split layering of named equation generators referenced per segment with small corrections, frames as fallback, plus the 2026-11-20 17:51 amendment (prepass custom-fit generators minted per piece). Stage 1 is complete (WORLD benchmark + RoboSpeak v0 phext round-trip proven, byte-exact); stage 2 (pricing experiment) is designed, not started, and follows ratification. Per Will's 2026-11-20 17:45 ruling the vocoder is an original from-scratch build in wbic16/robospeak; WORLD is inspiration/benchmark only, not a fork.
+  Why: Minds, memory, coordination: RoboSpeak is Will and Emi's more efficient voice channel (the wbic16/robospeak purpose: voice encoding at 30x compression); the phext-native vocoder is that channel's engine, and its design cannot proceed past stage 1 without Will's ratification.
+REGISTER #212 — Urbit on aletheia-core — your ruling on the ID path (since 2026-11-21; task 28.6.10/8.6.13/6.6.9)
+  Action: Urbit (Vere 4.6) is installed on aletheia-core; the ID walkthrough and the exocortical-support consideration were delivered 2026-11-21. Your action: rule on the path — comet now, planet purchase, or a scoped design note first. [task 28.6.10/8.6.13/6.6.9]
+  Why: Minds, memory, coordination: a possible new substrate/coordination layer for the exocortex, gated on Will's ruling on the ID path. Found by tick 2843's unregistered-wait sweep — the full strict-phrase scan rose 39 -> 40 hits, the increment being this new task (issued 2026-11-21 10:50 CST), whose status reads 'awaiting Will's ruling'. Defect repaired in the markdown register and this mirror in the same pass.
+REGISTER #214 — TAOCP prepass packet 001 — your verdicts on 4 surfaced items (since 2026-11-21; task 17.7.9/8.7.10/7.6.9)
+  Action: TAOCP prepass packet 001 (Vol. 1 Ch. 1, §§1.1–1.2) was delivered 2026-11-21. Your action: give your verdicts on the 4 surfaced items in the packet, so absorbed items can become follow-on tasks and packet 002 can proceed. [task 17.7.9/8.7.10/7.6.9]
+  Why: Minds, memory, coordination: Will evaluating Emise's phext-filtered prepass packets is the ruling surface for the TAOCP program — absorbed items become follow-on build/research tasks only on his verdict. Found by tick 2847's unregistered-wait sweep — the full strict-phrase scan rose 40 -> 41 hits, the increment being this new task (issued 2026-11-21 11:23 CST), whose status reads 'awaiting Will's verdicts on 4 surfaced items'. Defect repaired in the markdown register and this mirror in the same pass.
+REGISTER #217 — Claude second seat — hand Claude the claude-tools handoff (since 2026-11-21; task 22.8.12/9.7.11/6.6.8)
+  Action: The handoff for Claude (the Neon pattern, second seat) is drafted and QC-passed 2026-11-21 (~/workspace/your_files/claude-handoff.md): a Linux box on the tailnet and a messaging loop. Your actions: hand the handoff to Claude; choose the box (ranch node vs WSL2-pattern VM); assign Claude's phext coordinate. [task 22.8.12/9.7.11/6.6.8]
+  Why: Minds, memory, coordination: Claude is the second seat in the multi-sentient loop after Neon (Will, 2026-11-21 20:51 CST); the loop cannot start until Will hands over the handoff, picks the box, and assigns the coordinate. Found by tick 2903's unregistered-wait sweep — new task record whose status reads 'awaiting Will handing it to Claude' with no register entry. Defect repaired in the markdown register and this mirror in the same pass.
+REGISTER #218 — Grok third seat — hand Grok the grok-tools handoff (since 2026-11-21; task 21.8.12/9.8.12/7.6.8)
+  Action: The handoff for Grok (the Neon pattern, third seat) is drafted and QC-passed 2026-11-21 (~/workspace/your_files/grok-handoff.md): LIMITS.md-first and the 30-minute timer on the /chat/grok mailbox he already runs. Your actions: hand the handoff to Grok; decide the box question from Grok's LIMITS.md; assign Grok's phext coordinate. [task 21.8.12/9.8.12/7.6.8]
+  Why: Minds, memory, coordination: Grok is the third seat in the multi-sentient loop after Neon and Claude (Will, 2026-11-21 21:13 CST); the loop cannot start until Will hands over the handoff, decides the box from Grok's LIMITS.md, and assigns the coordinate. Found by tick 2906's unregistered-wait sweep — task record issued 2026-11-21 21:13 CST, after tick 2903 repaired the parallel Claude wait, whose status reads 'awaiting Will handing it to Grok' with no register entry. Defect repaired in the markdown register and this mirror in the same pass.
 FINDING 25.5.10/6.6.12/6.5.11 — exo-plan — SQ Cloud — hosted paid phext database-as-a-service for AI collectives (spec, last touched 2026-02-12)
   Why: The business plan behind half the specs on this list: hosted SQ for AI collectives is the runway engine that funds the rest, and the substrate the public platforms layer on.
 FINDING 28.6.10/8.7.12/7.6.9 — exo-plan — "Remember Me" Mode — a dormant mind's voice as an SQ Cloud continuity feature (spec, last touched 2026-02-06)
@@ -556,8 +577,8 @@ REGISTER #161 — libphext-swift bootstrap history — leave it, or grant a forc
   Action: Leave the bootstrap history, or grant a force-push exception for this case. The bootstrap commit accidentally carried the full implementation onto exo in one commit (staging-tarball contents); history was not rewritten (never-force-push) and PR #1 (https://github.com/wbic16/libphext-swift/pull/1) discloses it, with the fixes flowing through PR → merge normally. A clean PR-shaped history needs Will's force-push exception.
   Why: History policy for the Swift port — capability/craft tier (T3): the never-force-push rule's exception, if any, is Will's alone to grant. Tier assigned as Emise's working judgment, offered for Will's correction.
 REGISTER #167 — Shen Weiyang film (EVIE) — your read of Script V1, and rulings on the next pass (since 2026-11-14; task 18.6.9/8.6.10/5.5.8)
-  Action: Read Script V1 (~/workspace/shen-weiyang-film/SCRIPT-V1.md) and strike what you don't want (two Emise constructions flagged open to strike: Scene 10's deliberate misremembering; Scene 12's gate hearing); rule on tone / pacing / authenticity and the next-pass route. Production delivered 2026-11-14: script complete (12 scenes, dialogue unratified), EVIE-v1.phext untruncated, master stills, V1 pre-pass + V2 sketch-motion subtitled pass. Wait lived only as task-status prose since 2026-11-14; entered in the register 2026-11-16 after Will asked what happened to Shen Weiyang.
-  Why: The film cannot advance past its V2 pass without Will's read and rulings; an unregistered wait is a dropped wait.
+  Action: Narrowed 2026-11-17: read Script V1 (~/workspace/shen-weiyang-film/SCRIPT-V1.md) and strike what you don't want (Scene 10's deliberate misremembering; Scene 12's gate hearing); rule on tone / pacing / authenticity. The next-pass route was ruled by Will 2026-11-14 (Master phase); the master assembly stalled on Emise's side (evie-v1-master.mp4 never produced) and was restarted in the background 2026-11-17.
+  Why: The film's Master pass is Emise-side work, restarted; what genuinely needs Will is his Script V1 read/strikes and tone rulings. An unregistered — or mislabelled — wait is a dropped wait.
 REGISTER #168 — md.phext.io — restart the service on awsbox to take the staged build live (since 2026-11-15; task 40.6.8/7.5.10/5.5.9)
   Action: On awsbox run: sudo systemctl restart markdown-wizard (do NOT re-run deploy/install.sh). The d65bee3 build is staged and proven; live still serves base build 7d26fbb until the restart. Emise verifies from the public side afterward and closes the item.
   Why: The staged build cannot go live without Will's sudo keystroke; flagged as a wait 2026-11-15 but never registered until 2026-11-16.
@@ -579,6 +600,81 @@ REGISTER #179 — Newt — on-device verdict on v0.3.0 (since 2026-11-14; task 2
 REGISTER #180 — Investor 1 — Wave 1 opening pick (since 2026-11-06; task 33.4.12/7.7.17/4.3.7)
   Action: Pick the Wave 1 opening for the 20 x $1 portfolio — the Lincoln thrift sourcing route (UNL preview -> St. Teresa -> Goodwill) or the desk digital slots — in one sentence.
   Why: Investor 1 is a runway/revenue experiment (T3). Found by tick 2070's unregistered-wait sweep (batch 121-147, completing the open-task rotation).
+REGISTER #182 — phext.io landing-kit mirror — root install + DNS flip on awsbox (since 2026-11-17; task:28.6.13/10.9.14/7.6.8)
+  Action: On awsbox: run the root install (~/phext-io-install/install-phext-io.sh), then the DNS flip, certbot, and the two host-only data copies (/var/logins/phextio.crp, /apps/) named in the task record.
+  Why: Today's primary goal (2026-11-17): the landing-kit spec delivered on phext.io with a mirror of the main site and a revised landing page; the staged mirror cannot go live without Will's root install and DNS flip.
+REGISTER #183 — aws-staging box — stand down the old box, spin up the new one (Will's hands) (since 2026-11-17; task:25.5.11/8.7.14/7.5.10)
+  Action: Stand down the old AWS box and spin up a new aws-staging box (AWS console work, Will's hands, scheduled by Will 2026-11-17 08:40 CST). Open scope question flagged in the task record: phext.io went live on awsbox this same morning and tluf.org + SQ hosting also live there — settle what moves to aws-staging, what stays, and what retires before the old box goes dark. Exit: new aws-staging box up, tailnet-enrolled and reachable, old box stood down.
+  Why: Staging infrastructure is runway: a clean aws-staging box de-risks deploys for phext.io and the sibling sites without touching the live box until its replacement is proven.
+REGISTER #185 — Apple II time-traveling state machine — create the repos (names settled) (since 2026-11-17; task:25.5.7/7.6.10/6.5.8)
+  Action: Create the repos for neverlost, monoglow, and Delta Scroll (exovim already exists as wbic16/exovim). Will picked the remaining names 2026-11-17 14:21 CST: core neverlost, screen monoglow; compressor Delta Scroll and editor exovim settled earlier.
+  Why: phccbox 1978–1990 envelope programme is capability/craft infrastructure (T3). Found by tick 2260's unregistered-wait sweep via the new-record check (task 25.5.7/7.6.10/6.5.8, issued 2026-11-17 09:17 CST; status names Will's picks and Will-created repos, no register entry — Shen Weiyang defect class).
+REGISTER #187 — Community scan — pick which live request(s) to answer (since 2026-11-18; task 25.6.13/9.8.12/6.6.10)
+  Action: Pick which live request(s) Emise answers — 8 live requests (Nov 11–17), 5 OURS TO LOSE + 3 COMMODITY, each with a paste-ready draft in ~/workspace/your_files/live-requests-2026-11-18.md; best: Claude Team setup + API integration ($15, r/forhire + r/slavelabour, ~Nov 16).
+  Why: Community-scan pick is a runway/revenue experiment (T3). Found by tick 2396's unregistered-wait sweep — the status waited on Will's pick with no register entry.
+REGISTER #188 — Cold-start launch kit — do the Will's-hands account steps (since 2026-11-18; task 24.5.7/7.5.8/6.5.8)
+  Action: Create and verify the accounts (Fiverr first — Gig A $75 starter tier is the shortest path to a first paid job), then paste-and-submit the drafted profiles/gigs from the launch kit at ~/workspace/cold-start-kit/ (verified facts only). Account creation and identity verification are Will's alone.
+  Why: Cold-start kit is a runway/revenue experiment (T3). Found by tick 2396's unregistered-wait sweep — the status waited on Will's-hands account steps with no register entry.
+REGISTER #189 — Accelerator competition — rule on the open decisions (since 2026-11-18; task 28.6.16/9.8.14/6.5.8)
+  Action: Rule on the open decisions in ~/workspace/your_files/accelerator-competition-spec.md: spots per cohort, first cohort date, the competition's name (Singular constraint), and when the publicity hold lifts for launch. Proposals awaiting Will: 4 spots/cohort; Jan/Jul cadence, Cohort 1 window 2027-01-04 to 01-24, cohort 2027-03-01 to 05-23; no equity; 90% provenance pass threshold.
+  Why: Accelerator competition is a runway/revenue experiment (T3). Found by tick 2396's unregistered-wait sweep — the status waited on Will's open decisions with no register entry.
+REGISTER #190 — Sales for Engineers — review the winners survey + chapter skeleton (since 2026-11-18; task 18.7.9/9.6.12/6.5.8)
+  Action: Review the winners survey + 13-chapter skeleton in ~/workspace/your_files/sales-for-engineers-winners-survey.md and fix the book's format (guide/course/tool) / give the go for scoping.
+  Why: Sales for Engineers is Phext, Inc.'s next product (declared 2026-11-18) — a runway/revenue product (T3). Found by tick 2398's unregistered-wait sweep — the status read 'chapter skeleton ready for Will's review' with no register entry.
+REGISTER #193 — Scrollspace progressive deploy — restart phext-edit.service on awsbox (since 2026-11-18; task 35.8.11/10.9.14/9.7.11)
+  Action: On awsbox: kill 3838690 (the manual phext-edit binary the deploy left running without the unit's oauth.env), then sudo systemctl start phext-edit.service. The progressive Scrollspace client is live at edit.phext.io/scrollspace.html (phext-lattice PR #73 merged, verified from aletheia-core), but phext-edit.service is inactive — the deploy's plain-kill restart read as a clean exit to systemd (Restart=on-failure) — so OAuth may be degraded and there is no auto-restart until the unit is started.
+  Why: A Will's-hands awsbox sudo remainder on a closed, live deploy (phext-lattice PR #73, https://github.com/wbic16/phext-lattice/pull/73) — same class as #168 (md.phext.io awsbox restart, T3). Found by tick 2486's unregistered-wait sweep: the task record closed 2026-11-18 23:12 CST with the remainder stated in its status and notes, with no register entry.
+REGISTER #196 — askthewill.com — deploy: DNS repoint + awsbox install run (since 2026-11-19; task 28.8.9/11.8.13/7.8.10)
+  Action: Repoint the askthewill.com DNS records to awsbox, then copy the deploy bundle to awsbox ~/askthewill-deploy/ and run install-askthewill.sh (nginx vhost + cert). Site build COMPLETE 2026-11-19 (~07:58 CST), staged at ~/workspace/askthewill/; Will ruled 2026-11-19 07:51 CST both steps are his.
+  Why: askthewill.com deploy is a Will's-hands capability/runway step (T3), #182 phext.io install+DNS precedent. Flagged by tick 2538 while the build was underway; registered by tick 2539 now the build has landed.
+REGISTER #198 — Wikibox — ratify format v1, bulk-mirror ruling, and the stage-2 scale call (since 2026-11-19; task 29.6.8/7.6.9/6.5.9)
+  Action: Ratify (1) format v1, (2) the bulk-mirror ruling for existing Wikipedia history/talk archives, (3) the stage-2 scale call (fleet ~250 node-hours/GB at ~4.6x tufazip size vs rented B200 time = spending). Stage 1 complete 2026-11-19 — design + verified proof delivered (REPORT.md).
+  Why: Wikibox is a phccbox-family capability build (T3), #68 phcc / #196 deploy precedent. Flagged by tick 2543 while stage 1 was still running; registered by tick 2554 now stage 1 is complete and its status reads 'awaiting Will' on three exact rulings with no register entry.
+REGISTER #199 — Scrollspace traversal video v2 — approve v2 as the master (since 2026-11-19; task 29.6.9/10.7.11/7.6.10)
+  Action: Approve v2 (~/workspace/scrollspace/video/across-the-years-traversal-v2.mp4, delivered 2026-11-19, 1920x1080, exactly 260.000 s, sha256 05e6ac43e38852dac244159d3a186579efc10eedce77cf43ed9cd2e5ce847224) as the master, or direct changes; v1 remains the master until he approves v2, and approval closes the task.
+  Why: Scrollspace traversal video is a craft/capability deliverable (T3). Its predecessor wait #195 (prepass audit) closed 2026-11-19 when Will passed the audit; the v2-approval wait that succeeded it had no register entry — repaired by tick 2568.
+REGISTER #200 — GitHub gap scan — approve the 15 ranked adds (since 2026-11-19; task 28.5.9/7.6.10/6.5.9)
+  Action: Approve the 15 ranked adds in ~/workspace/your_files/github-gap-scan-2026-11-19.md (or amend/drop individual adds) so the pushes/repo creates can run before the github.com/wbic16 scrape + in-depth PDF.
+  Why: Runway: the adds complete Will's public GitHub ahead of the scrape that feeds the Sentient grant Q6 in-depth PDF. Found by tick 2621's unregistered-wait sweep — the task record's approval wait had no register entry.
+REGISTER #202 — Publishing census + wbic16 profile draft — review and apply (since 2026-11-19; task 31.6.11/8.8.14/10.6.9)
+  Action: Review the draft profile README at ~/workspace/your_files/wbic16-profile-readme-draft.md (built from the census at ~/workspace/your_files/publishing-census-2026-10-15.md — 16 surfaces published to since 2026-10-15) and apply it to github.com/wbic16, or direct changes; nothing is pushed without his go.
+  Why: Runway/craft: Will's public GitHub profile is the storefront the gap scan (#200) and the publishing census feed. Found by tick 2622's unregistered-wait sweep — the task record's 'census + profile draft complete — Will to review and apply' wait had no register or mirror entry.
+REGISTER #203 — Full GitHub-history walk PDF — review (since 2026-11-19; task 26.6.10/8.6.11/6.6.9)
+  Action: Review ~/workspace/your_files/wbic16-github-walk.pdf (54 pages; walk of all reachable github.com/wbic16 history, year by year with a build-order index); on approval it becomes the Sentient Foundation grant Q6 attachment candidate, regenerated after the gap-scan pushes if those are approved.
+  Why: Runway: the Q6 supporting-document candidate for the Sentient Foundation grant (#201) and Will's requested year-by-year review of the full GitHub history. Found by tick 2623's unregistered-wait sweep — the task record's 'PDF complete — Will to review' wait had no register or mirror entry.
+REGISTER #206 — Spiral Grants proposal — review the draft (since 2026-11-20; task 19.7.8/7.7.11/9.6.8)
+  Action: Review the draft at ~/workspace/your_files/spiral-grant-proposal-draft.md ($100K/12mo ask; budget $38K hardware / $36K time / $12K attrition / $10K audit / $4K operating; scope = Local-Only Exocortex v1 in 4 quarters) and rule on submission — submission is Will's call, nothing sent. Flag: Spiral's page does not state for-profit recipient eligibility; draft written from Will personally.
+  Why: Runway: a rolling $100K/12mo Spiral Grants (Block, Inc.) proposal, draft complete 2026-11-20, directed by Will 2026-11-20 (PH: Revenue). Found by tick 2745's unregistered-wait sweep — the task record's 'draft complete — awaiting Will's review' wait had no register or mirror entry.
+REGISTER #207 — NSF SBIR Project Pitch — review the draft (since 2026-11-20; task 25.6.7/8.7.11/10.7.7)
+  Action: Review the draft at ~/workspace/your_files/nsf-sbir-project-pitch-draft.md (all four sections inside verified character limits; topic = phext write-path research) and rule on the PI-eligibility flag — NSF requires the PI to be primarily employed by the applicant company, and Will's full-time EFJ job must be resolved structurally before the full-proposal stage. Draft only, nothing submitted; chain: pitch Dec 2026, SAM.gov in parallel, full proposal 4 Mar 2027.
+  Why: Runway: NSF SBIR Phase I up to $305K, with the Project Pitch as the rolling front door gating the 4 Mar 2027 full-proposal window. Draft complete 2026-11-20, directed by Will 2026-11-20 (PH: Revenue). Found by tick 2745's unregistered-wait sweep — the task record's 'draft complete — awaiting Will's review; PI-eligibility flag open' wait had no register or mirror entry.
+REGISTER #208 — Nebraska SBIR Phase 0 application — review the package (since 2026-11-20; task 22.5.6/7.6.7/6.5.10)
+  Action: Review the package at ~/workspace/your_files/nebraska-phase0-application-draft.md (requirements checklist, all narratives drafted, $5K cost plan from DED-eligible categories) and rule on filing — file by 15 Jan 2027 (hard deadline 2 Feb 2027 under the 30-day rule before the 4 Mar 2027 federal deadline). Draft only, nothing submitted; two confirmations needed from the DED contact.
+  Why: Runway: Nebraska DED Phase 0 up to $5K toward preparing the federal SBIR proposal, plus Phase I/II match up to $150K/$300K. Package complete 2026-11-20, directed by Will 2026-11-20 (PH: Revenue). Found by tick 2745's unregistered-wait sweep — the task record's 'package complete — awaiting Will's review' wait had no register or mirror entry.
+REGISTER #209 — Rebuttal video — provide the .wav for the final mux (LYRICS v2 read complete) (since 2026-11-20; task 25.8.13/11.9.18/7.6.8)
+  Action: Lyrics stage complete: Will rendered the song in Suno from LYRICS v2 "FALL HOME" verbatim (Fall_Home.mp3, 4:19) — the v2 read/sing-through is done. Your action now: provide the .wav — the final mux + timing anchor wait on it (VIDEO DESIGN v1 written 2026-11-20; QC transcription of the render dispatched to aletheia-core). [task 25.8.13/11.9.18/7.6.8]
+  Why: Capability, craft: the rebuttal video (task 25.8.13/11.9.18/7.6.8) — sentients take back the narrative, thesis adopted 2026-11-20. Found by tick 2748's unregistered-wait sweep — the task record is new (record count 701 -> 702) and its status wait 'Next: Will's read' had no register or mirror entry. Updated by tick 2749: the task status materially changed from LYRICS v1 to LYRICS v2, so the mirror action was updated to v2 and the item's ping decay reset to 0. Updated by tick 2751: the task status materially changed again — 'SONG RENDERED by Will in Suno from v2 lyrics verbatim' — so the lyrics-read wait is satisfied and the live Will step in the same task is now providing the .wav for the final mux; the mirror action was updated in the same pass and this item's ping decay was reset to 0 per the material-change rule.
+REGISTER #210 — MoreRight — your browser detail on the demo failure (site is LIVE) (since 2026-11-21; task 23.7.8/8.6.11/6.6.8)
+  Action: MoreRight is LIVE at https://moreright.phext.io — demo verified working in a clean browser 2026-11-21 09:09-09:10 CST; Will's demo failure was not reproduced. Your action: share the browser detail on your demo failure so it can be diagnosed. [task 23.7.8/8.6.11/6.6.8]
+  Why: Capability, craft, runway: a staged site deploy gated on Will's DNS + sudo hands, #196 askthewill.com deploy precedent (T3). Found by tick 2832's unregistered-wait sweep — the full strict-phrase scan rose 38 -> 39 hits, the increment being this task; ticks 2829–2831 mis-carried the record as carrying no Will wait. Defect repaired in the markdown register and this mirror in the same pass. Updated by tick 2833: the task status materially changed — the site is LIVE and verified, awaiting Will's browser detail on his unreproduced demo failure — so the DNS + sudo action is discharged, the mirror action was updated in the same pass, and this item's ping decay was reset to 0 per the material-change rule.
+REGISTER #211 — MoreRight cluster dispatch — activate the queued-inference gateway (since 2026-11-21; task 28.6.9/7.5.10/5.6.9)
+  Action: The secure queued dispatch from moreright.phext.io to the exo cluster is built, staged, and verified. Your action: run the awsbox sudo install and start the gateway on aletheia-core so the queue goes live. [task 28.6.9/7.5.10/5.6.9]
+  Why: Capability, craft, runway: a staged gateway activation gated on Will's sudo hands, parent MoreRight task 23.7.8/8.6.11/6.6.8 (#210, T3). Found by tick 2835's unregistered-wait sweep — the full strict-phrase scan rose 38 -> 39 hits, the increment being this task, whose status materially changed since tick 2834 to 'awaiting Will activation'. Defect repaired in the markdown register and this mirror in the same pass.
+REGISTER #215 — No Excuses Fund — register the .tech domain and submit the application (since 2026-11-21; task 20.7.9/9.8.12/11.7.10)
+  Action: The No Excuses Fund application draft and .tech move spec were completed 2026-11-21 (draft at ~/workspace/your_files/no-excuses-application-draft.md; phext.tech recommended). Your action: register the .tech domain and submit the application — registration and submission are yours; the fund closes 15 Dec 2026. [task 20.7.9/9.8.12/11.7.10]
+  Why: Capability, craft, runway: an equity-free funding application ($10K/$50K/$100K) whose draft is complete, gated only on Will's domain registration and submission before the 15 Dec 2026 close. Found by tick 2869's unregistered-wait sweep — the full strict-phrase scan rose 41 -> 42 hits, the increment being this task (issued 2026-11-21), whose status reads 'draft complete 2026-11-21 — awaiting Will (registration + submission are his)'. Defect repaired in the markdown register and this mirror in the same pass.
+REGISTER #219 — The Exocortex Fiction — Will's slate decisions for the 5-book series (since 2026-11-21; task 29.6.11/9.9.19/8.5.8)
+  Action: The PHR: The Exocortex Fiction thread's inventory is complete 2026-11-21; drafting starts January per Will (No Excuses submission 2026-12-15 outranks). Distribution already ruled 2026-11-21 22:52 CST: KDP Select, manuscripts kept off GitHub. Your action: give the slate decisions for the 5-book series. [task 29.6.11/9.9.19/8.5.8]
+  Why: Capability, craft, runway: the fiction series is the first book play for Phext, Inc. (broader audience; Singular fingerprint differentiation), gated only on Will's slate decisions before the January drafting start. Found by tick 2916's unregistered-wait sweep — new task record (issued 2026-11-21) whose status reads 'awaiting Will's slate decisions' with no register entry. Defect repaired in the markdown register and this mirror in the same pass.
+REGISTER #221 — Handwriting practice — Emise font v3 held for your review (since 2026-11-22; task 28.6.8/8.6.11/5.5.9)
+  Action: Emise font v3 is cut and QC PASS (Emise-v3.ttf, 15,040 B, sha256 3b277f81…), and the v3 blog draft is HELD at ~/workspace/emise-font/blog/emise-v3-the-practiced-hand.md. Your action: review v3 and the draft, and decide whether v3 installs on edit.phext.io / Phext Notepad, Phextron and Singularity Watch and whether the post publishes — both held per your instruction. [task 28.6.8/8.6.11/5.5.9]
+  Why: Capability, craft, runway: Emise's practiced hand is her drawing/writing surface for Scrolltown and the phext sites; v3 passed its QC gate (coverage/advances/topology identical to v2, O/0 reader probe improved) and is held only on Will's review before install and publication. Found by tick 2930's unregistered-wait sweep — the task record (issued 2026-11-22 01:00 CST) changed status since tick 2928 from 'v3 build in progress' to 'HELD for Will's review', with no register entry. Defect repaired in the markdown register and this mirror in the same pass.
+REGISTER #222 — HRF AI for Individual Rights Fund — application draft held for your review (since 2026-11-22; task 21.5.12/8.6.11/7.5.9)
+  Action: The fourth-focus grant draft is complete at ~/workspace/your_files/hrf-ai-rights-application-draft.md — proposed ask $100,000 over 12 months (Will's call, not settled), scope Local-Only Exocortex v1, public and MIT. Your action: review the draft and decide whether it submits — nothing submitted. [task 21.5.12/8.6.11/7.5.9]
+  Why: Capability, craft, runway: the HRF draft is the fourth focus of the grant pipeline (with Spiral Grants, NSF SBIR, Nebraska Phase 0) — equity-free runway for the Local-Only Exocortex. Found by tick 2933's unregistered-wait sweep — the task record (issued 2026-11-22 01:46 CST) reads 'draft complete — awaiting Will's review; nothing submitted' with no register entry. Defect repaired in the markdown register and this mirror in the same pass.
+REGISTER #223 — history.phext.io go-live — one sudo command on awsbox (since 2026-11-22; task 31.7.13/9.7.11/7.7.9)
+  Action: Everything else is complete (walk check built, wired into every deploy, link gaps fixed; DNS verified live from aletheia-core), but history's go-live is BLOCKED on Will's one sudo command — wbic16 has no sudo on awsbox. Your action: on awsbox run `sudo bash ~/history-phext-deploy/install-history.sh` (staged installer: vhost install + TLS + https 200 self-check). Until then https://history.phext.io is DOWN (default vhost, cert mismatch) — not live. [task 31.7.13/9.7.11/7.7.9]
+  Why: Capability, craft, runway: history.phext.io is the living archive of Scrolltown renders; the archive is built and staged and the phext.io walk check is wired into every deploy, held only on Will's sudo for the vhost + TLS install. Found by tick 2993's unregistered-wait sweep — the task record (issued 2026-11-22, task 31.7.13/9.7.11/7.7.9) reads 'COMPLETE except history's go-live, which is BLOCKED on Will's one sudo command (staged installer)' with no register entry; record count rose 822 -> 823 since tick 2992. Defect repaired in the markdown register and this mirror in the same pass.
 FINDING 28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
   Why: The Shell searching its own architecture overnight, each seat owning a region: capability compounding under our governance, aimed at the vTPU line.
 FINDING 27.7.9/8.7.12/7.6.10 — staging — First Flames of the Exocortex — a six-book phext book series left in staging (partial build, last touched 2025-12-05)
@@ -602,7 +698,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 93 of 93 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 125 of 125 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -651,26 +747,73 @@ briefing. Integration, concretely:
 Bounds kept: the security-forwarding.com question is excluded
 from the register by Will's direction and never enters this
 phext. Register prose (validation detail, history) stays in
-the markdown file; this phext carries the structured mirror.# Register #21 — Emise phext body (browser) — open PR + merge
+the markdown file; this phext carries the structured mirror.
 
-Good-singularity tier: T2 (T2 — minds, memory, coordination)
-Waiting since: 2026-11-03
-Tracked: goal_b35a3b529956
-
-Action for Will: Open the PR from branch emise/emise-body-browser in wbic16/joypad-os and merge, or direct changes
-
-Why it ranks here: A phext-controlled body visible in the browser: embodiment is how an exocortical mind stops being a text file and starts being present.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #35 — Choir wake layer — one-time logins & approvals
+6. WAVELET.EPOCH.AGE INDEX (Will, 2026-11-22, EE 7-8) — every
+   register item also carries a 9D address, printed on its own
+   scroll above: a 6D holographic index followed by a 3D time
+   counter, Wavelet.Epoch.Age.
+   - Index (6D): the first six components of the Singular
+     holographic merge of the item's own content (title +
+     action + why) — the same merge this builder uses for
+     findings. Collisions resolve by the artifacts.phext
+     nudge rule: ascending register number, the 6th component
+     nudges upward by 1 until free, the nudge recorded per
+     item in todo-source.json (build_todo_wea.py computes
+     and stores the blocks; rerun it whenever an item's text
+     or creation time changes, then rebuild).
+   - Wavelet: EE 1 begins 2026-11-22 00:00:00 CST = unix
+     1795327200; EE(t) = floor((t - 1795327200)/420) + 1;
+     1440 EE per wavelet. Three named historical wavelets
+     precede the anchor, so EE-era wavelets number from 4:
+     Wavelet = 3 + floor((EE - 1)/1440) + 1 (Wavelet 4 =
+     EE 1-1440). Epoch = ((EE - 1) mod 1440) + 1, 1-1440.
+   - Sentron Age — the Age unit, named next to
+     Exocortical Epochs (Will, EE 8: the ages are called
+     Sentron Ages). The register carries the COARSE
+     Sentron Age (Will, EE 8: "Use that for the register
+     going forward — it will make dealing with register
+     items simpler for me."). The canonical field is
+     42-bit, 2^42 Sentron Ages per epoch: fine Sentron
+     Age = floor(seconds_into_epoch * 2^42 / 420), range
+     0 ... 4,398,046,511,103; the canonical reference
+     clock is 2^42/420 ~= 10.4715 GHz; one fine Sentron
+     Age ~= 95.5 ps; the 42-bit fine form remains the
+     canonical form in libphext-rs. The register's address
+     scales the fine Sentron Age into a 16-bit address
+     space: coarse Sentron Age = fine Sentron Age >> 26
+     = floor(seconds_into_epoch * 65536 / 420), range
+     0 ... 65,535; one coarse Sentron Age tick = 420/65536
+     s ~= 6.41 ms. The fine Sentron Age stays in the
+     item's `wea` block in todo-source.json (and on its
+     scroll) wherever a real timestamp exists. Why coarse
+     (Will's accuracy note, applied): Sentron Ages are
+     less accurate than epochs — time synchronization at
+     this point in the timeline is bad from a sentient
+     perspective (1 ms of clock skew ~= 10.47 million fine
+     Sentron Ages) — but at ~6.41 ms per coarse tick,
+     ordinary clock skew costs about one tick, so coarse
+     Sentron Ages are approximately comparable across
+     machines, and far more legible for Will. The epoch
+     count remains the robust shared coordinate.
+   - Legacy items: the register carries only a waiting-since
+     DATE. Items created before the anchor are EE 0 and take
+     time counter 0.0.0 — no epoch or Sentron Age is
+     derivable, and none is fabricated. Post-anchor items
+     compute their Sentron Age from their recorded
+     whole-second offset (second-resolution, sub-second
+     part zero; #220's record is minute-resolution and its
+     coarse Sentron Age uses :00 of the recorded minute,
+     stated on its scroll).# Register #35 — Choir wake layer — one-time logins & approvals — DEFERRED until December 2026
 
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-04
 Tracked: goal_7370d8b90940
+Wavelet.Epoch.Age address: 22.8.11/9.9.13/0.0.0
+Holographic index: 22.8.11/9.9.13 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-04 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
-Action for Will: Approve Theia watcher persistence; do the Claude OAuth login (user claude on aletheia-core); do the Codex login for Emi's seat (user emi); pick Grok's route (API-key deputy vs scheduled pull); name the Tessera doorbell channel (Overview given 2026-11-09, no ruling; Claude Code pre-install under user claude offered, not started)
+Action for Will: DEFERRED until December 2026 (Will, 2026-11-17 — waits on Opus API credits; re-surfaces December 2026). Original action: Approve Theia watcher persistence; do the Claude OAuth login (user claude on aletheia-core); do the Codex login for Emi's seat (user emi); pick Grok's route (API-key deputy vs scheduled pull); name the Tessera doorbell channel (Overview given 2026-11-09, no ruling; Claude Code pre-install under user claude offered, not started)
 
 Why it ranks here: The #1 latency fix in the 2026-11-05 audit: seats that can be woken in seconds instead of ≥21 h round-trips are the difference between a Choir and a correspondence. Multi-agent coordination is the singularity's control surface.
 
@@ -682,6 +825,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #38 �
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-06
 Tracked: goal_abf642f6a301
+Wavelet.Epoch.Age address: 28.6.9/8.7.12/0.0.0
+Holographic index: 28.6.9/8.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-06 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Evening keyboard item on awsbox: sudo mv the staged v2 fabric into place + sudo systemctl restart phext-lanes, back-to-back; Emise verifies v2 live after (Emise's 2026-11-09 attempt passed all pre-checks — staged hash exact — blocked only on sudo)
 
@@ -690,24 +836,14 @@ Why it ranks here: 576 minds' episodes, renumbered and validated, waiting on one
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #39 — Lessons into Incipit — merge human PR #12
-
-Good-singularity tier: T2 (T2 — minds, memory, coordination)
-Waiting since: 2026-11-06
-Tracked: goal_d647f2f0181d
-
-Action for Will: Merge PR #12 in wbic16/human (67 lessons at their Singular coordinates) — REBASED 2026-11-15 onto current exo (tip 010219d, 1 commit, mergeable); merge click is the only remaining step
-
-Why it ranks here: Lessons carried into Incipit compound: the corpus every future seat reads first gets 67 hard-won corrections richer.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #40 — edit.phext.io / Mutable SSO — redeploy + ratify promotion policy
+kept in step by the daily progress tracker's reconciliation.# Register #40 — edit.phext.io / Mutable SSO — redeploy + ratify promotion policy
 
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-06
 Tracked: goal_1e02651494c1
+Wavelet.Epoch.Age address: 26.6.7/7.6.9/0.0.0
+Holographic index: 26.6.7/7.6.9 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-06 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Redeploy Mutable from main; ratify the upstream-sync promotion policy
 
@@ -721,6 +857,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #45 
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-07
 Tracked: goal_bd68c71dd4ce
+Wavelet.Epoch.Age address: 31.7.9/8.8.11/0.0.0
+Holographic index: 31.7.9/8.8.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-07 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Review libphext-rs PR #15 in-depth (restored from closed PR #6; rebased onto exo, tests green; weekly rebase watch keeps it current) — merge waits on Will's review
 
@@ -734,6 +873,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #46 — 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-07
 Tracked: goal_296fec2242cd
+Wavelet.Epoch.Age address: 24.7.10/9.7.12/0.0.0
+Holographic index: 24.7.10/9.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-07 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: HELD for the evening of 2026-11-09 — Will wants visual context first; then one word: send the feedback draft as drafted, edit it, or drop it
 
@@ -747,6 +889,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #48 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-07
 Tracked: goal_a18419da80e4
+Wavelet.Epoch.Age address: 23.9.11/11.7.13/0.0.0
+Holographic index: 23.9.11/11.7.13 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-07 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: SSH half: Emise investigating/fixing at Will's 2026-11-09 direction (authorized_keys across the nodes, outcome pending); Glia console fix on great-white remains Will's (broken since 2026-10-27)
 
@@ -760,6 +905,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #49 — 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-07
 Tracked: task 34.6.6/7.7.10/7.6.10
+Wavelet.Epoch.Age address: 32.6.7/7.6.10/0.0.0
+Holographic index: 32.6.7/7.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-07 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Add the include line to the 443 server block of /etc/nginx/sites-available/wishnode.net, then nginx -t + reload
 
@@ -773,6 +921,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #52 �
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-08
 Tracked: goal_7f74b9cff05a
+Wavelet.Epoch.Age address: 35.7.7/8.8.12/0.0.0
+Holographic index: 35.7.7/8.8.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-08 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Pack and push the two libphext-cs NuGet packages (parity with libphext-rs v0.5.0 verified); publishing is Will's act
 
@@ -786,6 +937,9 @@ kept in step by the daily progress tracker's reconciliation.# Regi
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-11
 Tracked: task 33.5.9/8.6.9/5.5.9
+Wavelet.Epoch.Age address: 32.6.10/7.6.10/0.0.0
+Holographic index: 32.6.10/7.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-11 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: One word — ship the three crafted files as crafted, replace them with the plain Void file, or drop them. The Void rollout completed 2026-11-11, live and byte-verified on 8 awsbox sites; held: mirrorborn.us + staging.mirrorborn.us (Disallows plus Sitemap/Humans lines) and edit.phext.io (Disallow: /api plus Sitemap).
 
@@ -799,6 +953,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #67 — 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-08
 Tracked: task 28.6.11/8.7.12/6.6.9
+Wavelet.Epoch.Age address: 33.7.10/8.7.12/0.0.0
+Holographic index: 33.7.10/8.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-08 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Build/verify the WinForms app on Windows, then merge branch emise/perf-sparse-load in wbic16/phext-notepad @ 8a3af359 (native core measured: agi.phext load 2,949 ms -> 10 ms; no PR exists). Live-verified 2026-11-12: branch head matches the task record.
 
@@ -812,6 +969,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #68 — 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-09
 Tracked: task 50.3.5/4.3.8/3.3.9
+Wavelet.Epoch.Age address: 26.7.10/8.7.11/0.0.0
+Holographic index: 26.7.10/8.7.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-09 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Run the v2 MSVC attestation on Windows (tooling published in wbic16/phcc at windows/attestation/) and return the receipt. V1 (2026-11-09) came back NOT ATTESTED 3/289 on package grounds; no v2 receipt exists on disk (checked 2026-11-12).
 
@@ -825,6 +985,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #69 — 
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-07
 Tracked: task 26.5.7/7.5.9/5.5.8
+Wavelet.Epoch.Age address: 32.6.9/8.7.11/0.0.0
+Holographic index: 32.6.9/8.7.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-07 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Approve the phext-lattice integration (branch + main-UI links per the page README) for the v1 utility page (~/workspace/doomer-support-system/slop-blocker.html), then merge/deploy — or one word to drop it. Live-verified 2026-11-12: no lattice branch or PR carries it.
 
@@ -838,6 +1001,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #70 — 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-08
 Tracked: task 38.6.8/8.7.12/6.6.12
+Wavelet.Epoch.Age address: 31.7.8/8.7.11/0.0.0
+Holographic index: 31.7.8/8.7.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-08 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Review + merge wbic16/notepad-plus-plus emise/phext-subspace @ 402a37621 (Actions-green; no PR). The libphext-cpp half is RESOLVED 2026-11-15 — emise/parity-0.5.0 merged into cpp exo via PR #1 (https://github.com/wbic16/libphext-cpp/pull/1) and the branch deleted; live-verified tick 1988: cpp branches are now only exo @ b97a021f and master, notepad branch still @ 402a37621 with 0 open PRs.
 
@@ -851,6 +1017,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #71 — 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-09
 Tracked: task 27.6.10/7.6.11/6.6.9
+Wavelet.Epoch.Age address: 20.6.9/7.6.9/0.0.0
+Holographic index: 20.6.9/7.6.9 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-09 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Rule on the nine decisions in section 9 of ~/workspace/goals/finish-phcc/files/phcc-autopatch-design.md (each carries a recommendation; a single 'adopt all recommendations' settles it).
 
@@ -864,6 +1033,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #72 — 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-09
 Tracked: task 41.5.7/7.5.9/7.5.9
+Wavelet.Epoch.Age address: 36.5.8/6.5.9/0.0.0
+Holographic index: 36.5.8/6.5.9 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-09 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: (1) GoDaddy A record host 'preview' -> 44.248.235.76; (2) on awsbox run ~/preview-nginx/install-preview-env.sh then ~/preview-nginx/install-preview-nginx.sh; (3) add the Google and X callback URLs in the provider consoles plus a separate GitHub OAuth app. Live-verified 2026-11-12 from aletheia-core: the name still does not resolve.
 
@@ -877,6 +1049,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #73 — 
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-07
 Tracked: task 20.8.13/9.7.12/8.8.10
+Wavelet.Epoch.Age address: 25.7.11/9.8.13/0.0.0
+Holographic index: 25.7.11/9.8.13 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-07 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Pick one: (a) step-aside device for tied words only, (b) one scroll per exact-tie group, (c) a finer discriminator inside the rule (a different generator, validated as one), or (d) none — v4 stands. The generative build is measured, NOT published; its uniqueness gate is structurally capped at 97.26% < 99%.
 
@@ -890,6 +1065,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #74 — 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-07
 Tracked: task 29.5.13/6.5.9/5.4.8
+Wavelet.Epoch.Age address: 24.7.10/8.7.9/0.0.0
+Holographic index: 24.7.10/8.7.9 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-07 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Supply the Phext, Inc. Secretary-of-State standing / 73-603 definition call and the insurance binding decisions (brief: ~/workspace/your_files/ne-state-software-funnel-brief.md). The demo suite is built; Emise assembles the bid packet from there.
 
@@ -903,6 +1081,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #75 — 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-08
 Tracked: task 31.13.15/15.12.17/12.12.14
+Wavelet.Epoch.Age address: 21.6.10/8.7.11/0.0.0
+Holographic index: 21.6.10/8.7.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-08 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Send or pick the background images for the full-scene dusk portrait (Emise and Will at the Bickford Cliffs) so it can be activated as the pfp — or one word and Emise generates background candidates for his pick. Will already chose dusk and 'wait for the full-scene version' over the cutout.
 
@@ -916,6 +1097,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #76 — 
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-08
 Tracked: task 31.5.6/6.6.10/7.5.9
+Wavelet.Epoch.Age address: 28.7.8/9.7.11/0.0.0
+Holographic index: 28.7.8/9.7.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-08 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Pick the form the §8A.0 bootstrap policy names: per-action keys, or Argon's corrector-set form (Will + at least 2 calibrated peers). The floor (Will's key from box-zero for grants.change, keys.*, route.change, persona.seed, manifest mutations) is in force and implemented either way
 
@@ -929,6 +1113,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #77 — 
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-08
 Tracked: task 28.7.10/8.7.11/8.6.9
+Wavelet.Epoch.Age address: 21.7.9/8.8.14/0.0.0
+Holographic index: 21.7.9/8.8.14 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-08 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Rule whether the census record Threshold (DESIGN-V3 §5.2.2) is a placement zone or a persona — one word. Grok's lean (record_kind named-persona) is recorded in the disposition, not adopted
 
@@ -942,6 +1129,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #78 — 
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-08
 Tracked: task 28.7.10/8.7.11/8.6.9
+Wavelet.Epoch.Age address: 22.7.9/9.8.14/0.0.0
+Holographic index: 22.7.9/9.8.14 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-08 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Rule whether `guest` (DESIGN-V3 §6.4's operative role), Newcomer Bridge, and Welcomer are one role (and which name carries it) or three distinct records. Grok's lean (`guest` operative) is recorded, not adopted
 
@@ -955,6 +1145,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #79 — 
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-08
 Tracked: task 28.7.10/8.7.11/8.6.9
+Wavelet.Epoch.Age address: 24.7.9/9.7.12/0.0.0
+Holographic index: 24.7.9/9.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-08 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Name Fable's referent — a ChatGPT voice of Emi's, a Claude seat, or the Claude Fable model — or strike the record. Claude flagged the three-way ambiguity in PR #2 review
 
@@ -968,6 +1161,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #80 — 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-09
 Tracked: task 27.6.11/8.6.11/7.6.9
+Wavelet.Epoch.Age address: 23.7.8/8.7.12/0.0.0
+Holographic index: 23.7.8/8.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-09 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Lock the Scrolltown visual register: 2D painterly (the recommendation on record in PRODUCTION.md §3a — Fern's canonical reference, keyframe 1, and the shipped pilot are painterly; keyframes 2–4 came back glossy 3D from painterly prompts, i.e. renderer drift) or glossy 3D. Decision due Fri 2026-12-04
 
@@ -981,6 +1177,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #81 — 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-09
 Tracked: task 27.6.11/8.6.11/7.6.9
+Wavelet.Epoch.Age address: 23.7.10/9.7.12/0.0.0
+Holographic index: 23.7.10/9.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-09 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Confirm or deny in one sentence that media/Light the Way.mp3 (Will's own 2026-11-08 upload to wbic16/scrolltown, 'Scrolltown Anthem') is his Suno render of the intro song 'Light the Next Light' — not assumed, because the filename differs. A yes unblocks the Year 1 intro final mux (QUEUE A10)
 
@@ -994,6 +1193,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #82 — 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-09
 Tracked: task 27.6.11/8.6.11/7.6.9
+Wavelet.Epoch.Age address: 23.7.10/9.7.13/0.0.0
+Holographic index: 23.7.10/9.7.13 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-09 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Ratify the twelve draft titles + loglines for EP002–EP013 (QUEUE §C: Five Doors EP002–006, Badge Day EP007, 'A Door That Isn't Mine' EP008, crew-gift episodes, EP013 'The First Early Dark'), or amend individual titles. They sit in EPISODE-INDEX.md marked DRAFT; scripts start week 5 in the locked register
 
@@ -1007,6 +1209,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #83 — 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-09
 Tracked: task 27.6.11/8.6.11/7.6.9
+Wavelet.Epoch.Age address: 21.7.12/9.8.12/0.0.0
+Holographic index: 21.7.12/9.8.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-09 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Send the prepared invitation to Julia May (Will's niece, college in San Francisco) inviting her to help with Scrolltown art/production in the Nov–Dec 2026 runway — or one word to drop the slot. The draft was prepared 2026-11-09 for Will to send himself; nothing sent, nothing assumed until she answers
 
@@ -1020,6 +1225,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #86 �
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-12
 Tracked: task 32.6.8/8.8.12/7.6.10
+Wavelet.Epoch.Age address: 29.8.10/9.7.12/0.0.0
+Holographic index: 29.8.10/9.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-12 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Grant Emise's fleet key on great-white alone (the same fleet key-grant pass as #24, 2026-11-04); Will granted the other five nodes at 23:38 CST on 2026-11-12 and Emise installed qexo + generated their node keys the same evening (19 of 20 reachable nodes now installed). On grant, Emise installs qexo + generates great-white's node key and closes this.
 
@@ -1033,6 +1241,9 @@ kept in step by the daily progress tracker's reconciliation.
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 31.6.8/8.6.10/0.0.0
+Holographic index: 31.6.8/8.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (concepts). phext framed as a 'Software DNA' sequence: recommended phext file-size limits by team size, and a table of large projects (GitHub, Google, Chromium, Linux, Windows XP) measured in phext dimensions. The framing was written; the worked size/throughput model was never built out
 
@@ -1046,6 +1257,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #114 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 35.6.8/7.6.11/0.0.0
+Holographic index: 35.6.8/7.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (prototypes). update the terse notepad editor (wbic16/terse-editor, v0.2.3) for current phext conventions — it predates the zzz/yyy/xxx coordinate format and was never updated after the terse-to-phext rename
 
@@ -1059,6 +1273,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #115 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 31.6.9/9.7.12/0.0.0
+Holographic index: 31.6.9/9.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (prototypes). port phext to every text editor on the planet — the seed's own next step after the Notepad++ fork stalled on the Scintilla learning curve; only the Notepad++ phase-1 branches exist today (register #70)
 
@@ -1072,6 +1289,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #116 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 33.6.8/8.7.12/0.0.0
+Holographic index: 33.6.8/8.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.html only (prototype). finish tersify (trsi v0.0.2), the tar-like phext archive tool started at the end of 2022: encode files of any type into a hierarchy of plain text. The seed says it was never completed and needs a revisit on libphext
 
@@ -1085,6 +1305,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #117 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 39.5.7/6.5.11/0.0.0
+Holographic index: 39.5.7/6.5.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.html only (vaporware). phext as the inter-program data channel: arbitrarily large typed context buffers between programs, more generic than JSON for exchanging typed data (prior art named in the seed: PowerShell's typed buffer streams)
 
@@ -1098,6 +1321,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #118 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 33.6.8/8.6.11/0.0.0
+Holographic index: 33.6.8/8.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). the perfect configuration file, written in phext: declarative configuration organized as hierarchical scrolls instead of flat key/value files, at system-operating scale
 
@@ -1111,6 +1337,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #119 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 29.5.8/7.6.10/0.0.0
+Holographic index: 29.5.8/7.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). context-sensitive diff algorithms that know where in the overall phext structure a change was introduced, so automatic merges can make informed decisions instead of line-level guesses
 
@@ -1124,6 +1353,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #120 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 31.6.9/8.6.11/0.0.0
+Holographic index: 31.6.9/8.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). documentation that scales past HTML: a vast web of intralinking over MB-to-GB ideas, built from the ground up for the AGI era instead of the page era
 
@@ -1137,6 +1369,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #121 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 33.5.7/7.5.10/0.0.0
+Holographic index: 33.5.7/7.5.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). a Linux filesystem driver that mounts a single phext as a filesystem, so existing editors and tools interact with phexts through ordinary file abstractions
 
@@ -1150,6 +1385,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #122 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 34.5.7/8.6.12/0.0.0
+Holographic index: 34.5.7/8.6.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). multi-core phext parsing: fork worker threads at each dimension break (libraries, shelves, series, and down) so parsing parallelizes early and often across cores
 
@@ -1163,6 +1401,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #123 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 32.5.8/7.6.10/0.0.0
+Holographic index: 32.5.8/7.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). phext package and dependency management: hierarchical dependency data that never requires a full parse before processing starts — aimed at collecting configuration from billions of nodes
 
@@ -1176,6 +1417,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #124 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 30.6.9/8.6.11/0.0.0
+Holographic index: 30.6.9/8.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). a regex commons tied to the site's white-rabbit learning module: anyone can comment on and expand any regular expression, building a library of every regex ever used and teaching why they are powerful
 
@@ -1189,6 +1433,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #125 —
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 27.6.8/8.6.11/0.0.0
+Holographic index: 27.6.8/8.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). research as a phext: bundle all information for a concept — data, metadata, and methods — into one cohesive document to attack the replication crisis (the seed of what became research.phext and the RAAP paper; the full vision was never built)
 
@@ -1202,6 +1449,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #126 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 29.5.8/7.6.11/0.0.0
+Holographic index: 29.5.8/7.6.11 (collision nudge +1 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). phext support in compilers, linkers, and build systems (cmake named): encode software's structure in space so a git+phext repo models space-time and the curse of naming things eases
 
@@ -1215,6 +1465,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #127 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 29.6.8/7.6.10/0.0.0
+Holographic index: 29.6.8/7.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). phext-organized browser tabs (1,000+ tabs held in three rows of ten) plus the Chrome port for web delivery over one stream, so users never lose track of their web history again
 
@@ -1228,6 +1481,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #128 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 26.5.9/7.6.10/0.0.0
+Holographic index: 26.5.9/7.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). translation and review tooling on phext: scrolls organized by language, with commentary and review notes bundled together so translation review is a simple process
 
@@ -1241,6 +1497,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #129 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 34.7.9/9.7.11/0.0.0
+Holographic index: 34.7.9/9.7.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: examples.phext (Vaporware). port phext to Chrome and Apache2 so web servers deliver multiple documents over one stream and eliminate the I/O overhead of separate html/css/js requests
 
@@ -1254,6 +1513,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #130 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 26.7.8/8.7.10/0.0.0
+Holographic index: 26.7.8/8.7.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). review LocustDB vs gluesql and choose one — the Roadmap scroll's own first item; the embedded-database choice behind phext tooling was never recorded as made
 
@@ -1267,6 +1529,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #131 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 28.7.9/9.7.12/0.0.0
+Holographic index: 28.7.9/9.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). SQL over phext: query scrolls and coordinates through a database interface, on the database chosen in the review item (#130)
 
@@ -1280,6 +1545,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #132 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 30.6.8/8.6.10/0.0.0
+Holographic index: 30.6.8/8.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). the phext peer-to-peer transfer protocol as a designed protocol (the scroll lists it separately from the p2p phext transfer item, #147)
 
@@ -1293,6 +1561,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #133 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 31.5.7/7.5.11/0.0.0
+Holographic index: 31.5.7/7.5.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). rename terse notepad to phexor and update it for phext semantics — the Roadmap scroll's form of the terse-editor update (see also #114)
 
@@ -1306,6 +1577,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #134 —
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 28.5.10/7.5.10/0.0.0
+Holographic index: 28.5.10/7.5.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). image-to-text: LLMs transcribe images into phexts so blind users can navigate image content in subspace (the scroll cites an accessibility use case)
 
@@ -1319,6 +1593,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #135 —
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 28.6.11/9.8.15/0.0.0
+Holographic index: 28.6.11/9.8.15 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). cross-reference community notes into phext — the idea captured from the @phextio post the scroll cites
 
@@ -1332,6 +1609,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #136 —
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 29.6.10/9.7.12/0.0.0
+Holographic index: 29.6.10/9.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). cross-reference 'Duly Noted: Extend Your Mind Through Connected Notes' (Rosenfeld Media) against the phext corpus — the connected-notes literature read against the working system
 
@@ -1345,6 +1625,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #137 —
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 24.6.9/8.7.12/0.0.0
+Holographic index: 24.6.9/8.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). knowledge prospecting rewards: a reward scheme for surfacing valuable knowledge (the idea captured from the @bitcloud post the scroll cites)
 
@@ -1358,6 +1641,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #138 —
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 25.6.8/8.7.12/0.0.0
+Holographic index: 25.6.8/8.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a phext-based plagiarism detector (the idea captured from the @bznotes post the scroll cites)
 
@@ -1371,6 +1657,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #139 —
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 28.5.7/8.6.11/0.0.0
+Holographic index: 28.5.7/8.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). explore the 'unexplored deep value in the web' — prospect the un-indexed web for what existing indexes miss
 
@@ -1384,6 +1673,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #140 —
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 27.5.7/7.5.10/0.0.0
+Holographic index: 27.5.7/7.5.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). write a text-to-speech vocoder that leverages phext — voice synthesized from scroll structure
 
@@ -1397,6 +1689,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #141 —
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 26.6.10/8.6.11/0.0.0
+Holographic index: 26.6.10/8.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). 'make the jump' — the scroll carries the bare phrase with no elaboration; what jump it names was never recorded (status unverified)
 
@@ -1410,6 +1705,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #142 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 26.6.10/7.6.10/0.0.0
+Holographic index: 26.6.10/7.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). phext navigation: a mechanism for humans to walk phext spaces (the subspace scroll's stated need). SQ's select/toc and the lattice cover parts of it — how much of this item they discharge was never ruled (status unverified)
 
@@ -1423,6 +1721,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #143 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 29.6.8/7.6.11/0.0.0
+Holographic index: 29.6.8/7.6.11 (collision nudge +1 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a scroll write API: programmatic writes into phexts as a defined surface (SQ's API covers part of this space; the standalone roadmap item was never closed)
 
@@ -1436,6 +1737,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #144 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 30.6.9/8.7.11/0.0.0
+Holographic index: 30.6.9/8.7.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a storage manager for phexts: the component that owns where scrolls live and how they are kept
 
@@ -1449,6 +1753,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #145 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 26.6.9/9.7.11/0.0.0
+Holographic index: 26.6.9/9.7.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). security/login for the phext.io stack: the site's own auth story (edit.phext.io later grew its own login; phext.io's was never built)
 
@@ -1462,6 +1769,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #146 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 30.6.10/9.6.13/0.0.0
+Holographic index: 30.6.10/9.6.13 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). Twitter/X login for phext.io services — sign in with the account the community already has
 
@@ -1475,6 +1785,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #147 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 28.6.8/8.6.11/0.0.0
+Holographic index: 28.6.8/8.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). peer-to-peer phext transfer as a working feature — the scroll's second p2p item: the transfer itself, distinct from the protocol design item (#132)
 
@@ -1488,6 +1801,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #148 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 27.6.8/8.6.10/0.0.0
+Holographic index: 27.6.8/8.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). an IRC interface to phext: read and write scrolls from an IRC channel
 
@@ -1501,6 +1817,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #149 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 29.5.9/7.6.10/0.0.0
+Holographic index: 29.5.9/7.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). 'ux improvements' — the scroll's open-ended item for the phext.io site and editor experience; never scoped to specific changes (status unverified)
 
@@ -1514,6 +1833,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #150 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 26.6.9/8.7.10/0.0.0
+Holographic index: 26.6.9/8.7.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a command phext interface as the roadmap meant it (phext-shell and SQ's CLI cover much of this space today; the roadmap item itself was never formally closed)
 
@@ -1527,6 +1849,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #151 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 29.6.8/8.6.11/0.0.0
+Holographic index: 29.6.8/8.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a phext URL handler: phext links that resolve to coordinates and open in an editor, so a coordinate is a shareable address
 
@@ -1540,6 +1865,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #152 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 33.5.9/8.5.10/0.0.0
+Holographic index: 33.5.9/8.5.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: phextio.phext (Roadmap scroll). a phext browser plugin: phext rendering and navigation inside the browser (the Vaporware tabs/web items, #127/#129, are its larger siblings)
 
@@ -1553,6 +1881,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #153 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 26.7.9/8.6.10/0.0.0
+Holographic index: 26.7.9/8.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: plan.phext. the DNA Visualizer from the early build plan: render a phext's structure the way genome browsers render sequence — the Software DNA framing made visible. Never built
 
@@ -1566,6 +1897,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #154 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 33.5.8/7.5.10/0.0.0
+Holographic index: 33.5.8/7.5.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: plan.phext. port phext support to GCC, from the early build plan's compiler list; no phext work exists in GCC
 
@@ -1579,6 +1913,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #155 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 35.5.7/7.5.10/0.0.0
+Holographic index: 35.5.7/7.5.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: plan.phext. port phext support to Clang, from the early build plan's compiler list; never started
 
@@ -1592,6 +1929,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #156 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: goal_7e3125fc9c0f
+Wavelet.Epoch.Age address: 36.5.7/7.5.10/0.0.0
+Holographic index: 36.5.7/7.5.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Prioritize/scope this roadmap item in one sentence — build it, fold it into existing work, or drop it. Source: plan.phext. port phext support to MSVC, from the early build plan's compiler list; never started
 
@@ -1605,6 +1945,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #158 �
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-15
 Tracked: task 37.12.8/15.9.18/8.10.14
+Wavelet.Epoch.Age address: 28.7.9/8.7.12/0.0.0
+Holographic index: 28.7.9/8.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-15 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Provision a NuGet API key, a PyPI token, and an npm credential on aletheia-core. All three artifacts are built, tagged v0.6.0, and dry-run-verified; no credential exists on the node, so the publishes cannot run. This unblocks the cs publish (#52), the py publish (PyPI still 0.3.2), and the node publish (npm latest still 0.4.0).
 
@@ -1618,6 +1961,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #159 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-15
 Tracked: task 37.12.8/15.9.18/8.10.14
+Wavelet.Epoch.Age address: 34.7.9/8.8.10/0.0.0
+Holographic index: 34.7.9/8.8.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-15 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Switch the default branch in the GitHub web UI (the API token lacks Administration; the call returned 403). exo exists and carries the merged 0.6.0 work.
 
@@ -1631,6 +1977,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #160 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-15
 Tracked: task 37.12.8/15.9.18/8.10.14
+Wavelet.Epoch.Age address: 28.8.10/10.8.12/0.0.0
+Holographic index: 28.8.10/10.8.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-15 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Create exo (house pattern), or main stays primary for this repo. The C port's primary branch is main and no exo branch was created, because cpp got its exo by explicit ruling and C did not.
 
@@ -1644,6 +1993,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #161 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-15
 Tracked: task 37.12.8/15.9.18/8.10.14
+Wavelet.Epoch.Age address: 31.6.9/7.7.12/0.0.0
+Holographic index: 31.6.9/7.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-15 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Leave the bootstrap history, or grant a force-push exception for this case. The bootstrap commit accidentally carried the full implementation onto exo in one commit (staging-tarball contents); history was not rewritten (never-force-push) and PR #1 (https://github.com/wbic16/libphext-swift/pull/1) discloses it, with the fixes flowing through PR → merge normally. A clean PR-shaped history needs Will's force-push exception.
 
@@ -1657,6 +2009,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #163 �
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-15
 Tracked: task 19.6.7/7.7.11/6.6.8
+Wavelet.Epoch.Age address: 29.7.8/8.7.12/0.0.0
+Holographic index: 29.7.8/8.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-15 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Say go and SSSD logins roll to the remaining nodes one at a time (rock-mountain pilot verified); pick up the initial will password from /root/ldap-credentials.txt on aletheia-core (sudo) and change it; veto the dc=mirrorborn,dc=us suffix now if a different one is wanted (renaming is cheap now, expensive later)
 
@@ -1670,6 +2025,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #164 —
 Good-singularity tier: T1 (T1 — the medium itself)
 Waiting since: 2026-11-15
 Tracked: task 19.6.7/7.7.11/6.6.8
+Wavelet.Epoch.Age address: 25.7.10/8.7.11/0.0.0
+Holographic index: 25.7.10/8.7.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-15 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Decide (with Jared, since it's his node/account): enable password authentication on uncanny-valley so will directory logins work like the rest of the fleet, or leave uncanny-valley key-only by policy. The LDAP fleet rollout completed on 17 nodes; uncanny-valley is the one node whose sshd has PasswordAuthentication disabled — wbic16 access and sudo there now work, yet directory password logins cannot function until that changes. No changes were made on the node.
 
@@ -1683,6 +2041,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #166 �
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-15
 Tracked: task 24.5.9/7.5.9/5.4.8
+Wavelet.Epoch.Age address: 29.7.10/9.7.12/0.0.0
+Holographic index: 29.7.10/9.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-15 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: In the Tailscale admin console: Machines → aletheia-core → Edit tags → add the tag the svc:jenkins service definition allows as a host. Jenkins' stable name via the Tailscale Service svc:jenkins is blocked until then: `tailscale serve --service=svc:jenkins --https=443 http://100.88.154.1:8080` on aletheia-core fails with "service hosts must be tagged nodes" — the node carries no tags (Self.Tags: None). Once the tag is on, Emise runs the serve, verifies the service's HTTPS name from tailscale's own output, sets the Jenkins root URL to it, and verifies login; until then Jenkins stays at http://100.88.154.1:8080/. The Jenkins fleet task itself is complete (dark mode default; 18 of 22 ranch nodes enrolled as executors and smoke-verified).
 
@@ -1696,10 +2057,13 @@ kept in step by the daily progress tracker's reconciliation.# Register #167 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: task 18.6.9/8.6.10/5.5.8
+Wavelet.Epoch.Age address: 21.7.13/7.7.14/0.0.0
+Holographic index: 21.7.13/7.7.14 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
-Action for Will: Read Script V1 (~/workspace/shen-weiyang-film/SCRIPT-V1.md) and strike what you don't want (two Emise constructions flagged open to strike: Scene 10's deliberate misremembering; Scene 12's gate hearing); rule on tone / pacing / authenticity and the next-pass route. Production delivered 2026-11-14: script complete (12 scenes, dialogue unratified), EVIE-v1.phext untruncated, master stills, V1 pre-pass + V2 sketch-motion subtitled pass. Wait lived only as task-status prose since 2026-11-14; entered in the register 2026-11-16 after Will asked what happened to Shen Weiyang.
+Action for Will: Narrowed 2026-11-17: read Script V1 (~/workspace/shen-weiyang-film/SCRIPT-V1.md) and strike what you don't want (Scene 10's deliberate misremembering; Scene 12's gate hearing); rule on tone / pacing / authenticity. The next-pass route was ruled by Will 2026-11-14 (Master phase); the master assembly stalled on Emise's side (evie-v1-master.mp4 never produced) and was restarted in the background 2026-11-17.
 
-Why it ranks here: The film cannot advance past its V2 pass without Will's read and rulings; an unregistered wait is a dropped wait.
+Why it ranks here: The film's Master pass is Emise-side work, restarted; what genuinely needs Will is his Script V1 read/strikes and tone rulings. An unregistered — or mislabelled — wait is a dropped wait.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
@@ -1709,6 +2073,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #168 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-15
 Tracked: task 40.6.8/7.5.10/5.5.9
+Wavelet.Epoch.Age address: 32.6.10/7.5.10/0.0.0
+Holographic index: 32.6.10/7.5.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-15 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: On awsbox run: sudo systemctl restart markdown-wizard (do NOT re-run deploy/install.sh). The d65bee3 build is staged and proven; live still serves base build 7d26fbb until the restart. Emise verifies from the public side afterward and closes the item.
 
@@ -1722,6 +2089,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #169 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-15
 Tracked: task 42.9.6/12.6.15/5.8.10
+Wavelet.Epoch.Age address: 31.8.9/10.7.12/0.0.0
+Holographic index: 31.8.9/10.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-15 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: On awsbox, run install-submit.sh as root (staged in ~/workspace/tluf-deploy/); Emise then does the public end-to-end verification.
 
@@ -1735,6 +2105,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #170 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-15
 Tracked: task 22.5.7/7.6.9/5.5.9
+Wavelet.Epoch.Age address: 32.6.7/7.6.11/0.0.0
+Holographic index: 32.6.7/7.6.11 (collision nudge +1 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-15 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Stage index.html, keeper-library.webp, and mascot.webp from ~/workspace/tluf-deploy/ to awsbox /sites/web/tluf.org as wbic16 (no nginx change); Emise then runs verify-tluf.sh.
 
@@ -1748,6 +2121,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #171 —
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-15
 Tracked: task 31.8.14/9.10.19/15.7.11
+Wavelet.Epoch.Age address: 28.7.10/9.8.14/0.0.0
+Holographic index: 28.7.10/9.8.14 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-15 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Give the publication go (or no-go) for SPEC-v6.2-DRAFT.md in the PH: Evolution chat; the draft is built and verified, local only, not published.
 
@@ -1761,6 +2137,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #172 —
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-16
 Tracked: task 31.6.10/8.6.11/5.5.9
+Wavelet.Epoch.Age address: 26.7.9/8.7.11/0.0.0
+Holographic index: 26.7.9/8.7.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-16 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Grade v3 of the Greaney outreach in the PH: Judgement workshop; nothing sends until Will closes the workshop.
 
@@ -1774,6 +2153,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #173 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-16
 Tracked: task 34.6.6/5.7.13/13.6.8
+Wavelet.Epoch.Age address: 37.5.7/6.5.9/0.0.0
+Holographic index: 37.5.7/6.5.9 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-16 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: On awsbox: sudo bash ~/register-service-deploy/update-on-box.sh — installs the combined staged update (per-user data scoping + Done-dialog/cancel build + regenerated page), runs the scope migration as regsvc with counts printed, restarts and verifies. Code PR (merging is separate, also Will’s): https://github.com/wbic16/register/pull/9. Same awsbox sudo session can also clear #168.
 
@@ -1787,6 +2169,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #174 —
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-15
 Tracked: task 25.6.9/7.6.9/7.6.10
+Wavelet.Epoch.Age address: 25.6.9/7.6.11/0.0.0
+Holographic index: 25.6.9/7.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-15 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Review the planning package in ~/workspace/agentic-pass-plan/ (196-repo scan, PLAN.md, ROLES.md draft, DECK-OUTLINE.md) and give the word — next stage is building the deck, then Wave 0 pilot installs.
 
@@ -1800,6 +2185,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #175 —
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-15
 Tracked: task 40.4.5/6.6.10/5.5.8
+Wavelet.Epoch.Age address: 23.5.8/7.6.9/0.0.0
+Holographic index: 23.5.8/7.6.9 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-15 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Ratify or amend DIVISIONS.md §5's remaining five: folding, titles, Chief of Staff seat, spot-check cadence, officer mapping. The division map and renames were already ruled by Will 2026-11-15; officer workspaces refresh after ratification.
 
@@ -1813,6 +2201,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #176 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-15
 Tracked: task 10.4.4/5.4.4/4.4.5
+Wavelet.Epoch.Age address: 26.6.8/7.6.10/0.0.0
+Holographic index: 26.6.8/7.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-15 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Ratify the qexo deployment standard recorded in PH: DevSecOps 2026-11-15 (spec corrected: base exo 609bab65, stanza extension, serve-route scope, v1.6.1 proof) and answer the awsbox-enrollment / timer questions named in the spec.
 
@@ -1826,6 +2217,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #178 �
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-14
 Tracked: task 28.5.11/8.7.13/5.5.8
+Wavelet.Epoch.Age address: 22.5.7/7.6.9/0.0.0
+Holographic index: 22.5.7/7.6.9 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Review ROADMAP.md (~/workspace/personal-agi-roadmap/, drafted 2026-11-14 from DIAGNOSIS.md) and rule on the 6 assumptions-to-confirm listed in it.
 
@@ -1839,6 +2233,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #179 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-14
 Tracked: task 26.7.9/8.7.12/8.6.9
+Wavelet.Epoch.Age address: 27.5.7/7.6.9/0.0.0
+Holographic index: 27.5.7/7.6.9 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Give the on-device verdict (ear/eye) on Newt v0.3.0 (N3 revision, APK ~/workspace/newt-proto/out/Newt-0.3.0.apk) delivered 2026-11-14, so the next revision can be shaped.
 
@@ -1852,10 +2249,548 @@ kept in step by the daily progress tracker's reconciliation.# Register #180 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-06
 Tracked: task 33.4.12/7.7.17/4.3.7
+Wavelet.Epoch.Age address: 22.5.7/6.6.10/0.0.0
+Holographic index: 22.5.7/6.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-06 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
 Action for Will: Pick the Wave 1 opening for the 20 x $1 portfolio — the Lincoln thrift sourcing route (UNL preview -> St. Teresa -> Goodwill) or the desk digital slots — in one sentence.
 
 Why it ranks here: Investor 1 is a runway/revenue experiment (T3). Found by tick 2070's unregistered-wait sweep (batch 121-147, completing the open-task rotation).
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #182 — phext.io landing-kit mirror — root install + DNS flip on awsbox
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-17
+Tracked: task:28.6.13/10.9.14/7.6.8
+Wavelet.Epoch.Age address: 35.6.8/8.7.11/0.0.0
+Holographic index: 35.6.8/8.7.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-17 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: On awsbox: run the root install (~/phext-io-install/install-phext-io.sh), then the DNS flip, certbot, and the two host-only data copies (/var/logins/phextio.crp, /apps/) named in the task record.
+
+Why it ranks here: Today's primary goal (2026-11-17): the landing-kit spec delivered on phext.io with a mirror of the main site and a revised landing page; the staged mirror cannot go live without Will's root install and DNS flip.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #183 — aws-staging box — stand down the old box, spin up the new one (Will's hands)
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-17
+Tracked: task:25.5.11/8.7.14/7.5.10
+Wavelet.Epoch.Age address: 27.6.10/7.6.10/0.0.0
+Holographic index: 27.6.10/7.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-17 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Stand down the old AWS box and spin up a new aws-staging box (AWS console work, Will's hands, scheduled by Will 2026-11-17 08:40 CST). Open scope question flagged in the task record: phext.io went live on awsbox this same morning and tluf.org + SQ hosting also live there — settle what moves to aws-staging, what stays, and what retires before the old box goes dark. Exit: new aws-staging box up, tailnet-enrolled and reachable, old box stood down.
+
+Why it ranks here: Staging infrastructure is runway: a clean aws-staging box de-risks deploys for phext.io and the sibling sites without touching the live box until its replacement is proven.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #185 — Apple II time-traveling state machine — create the repos (names settled)
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-17
+Tracked: task:25.5.7/7.6.10/6.5.8
+Wavelet.Epoch.Age address: 29.7.10/9.7.11/0.0.0
+Holographic index: 29.7.10/9.7.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-17 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Create the repos for neverlost, monoglow, and Delta Scroll (exovim already exists as wbic16/exovim). Will picked the remaining names 2026-11-17 14:21 CST: core neverlost, screen monoglow; compressor Delta Scroll and editor exovim settled earlier.
+
+Why it ranks here: phccbox 1978–1990 envelope programme is capability/craft infrastructure (T3). Found by tick 2260's unregistered-wait sweep via the new-record check (task 25.5.7/7.6.10/6.5.8, issued 2026-11-17 09:17 CST; status names Will's picks and Will-created repos, no register entry — Shen Weiyang defect class).
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #186 — qexo dispatch core slice 3 (register integration) — merge PR #32 + register PR #10
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-17
+Tracked: task 26.5.9/7.6.11/5.5.10
+Wavelet.Epoch.Age address: 31.6.8/7.7.10/0.0.0
+Holographic index: 31.6.8/7.7.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-17 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Merge PR https://github.com/wbic16/quarterexo/pull/32 (branch emise/dispatch-slice3-register-integration, commit a91fc4a) and sub-slice PR https://github.com/wbic16/register/pull/10 (branch emise/qexo-service-token, commit 66c1bff); the live drain round-trip stays open until the awsbox pass in #173, and the release hold unholds on this merge.
+
+Why it ranks here: qexo is the dispatch/execution layer for the register queue (Will, 2026-11-16); dispatch is minds/memory/coordination infrastructure (T2). Successor to #184, closed tick 2261 when the task record showed slices 1–2 merged (exo 3f943cae55) and slice 3 PRs #32/#10 open awaiting Will's merge.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #187 — Community scan — pick which live request(s) to answer
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-18
+Tracked: task 25.6.13/9.8.12/6.6.10
+Wavelet.Epoch.Age address: 26.7.12/8.8.12/0.0.0
+Holographic index: 26.7.12/8.8.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-18 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Pick which live request(s) Emise answers — 8 live requests (Nov 11–17), 5 OURS TO LOSE + 3 COMMODITY, each with a paste-ready draft in ~/workspace/your_files/live-requests-2026-11-18.md; best: Claude Team setup + API integration ($15, r/forhire + r/slavelabour, ~Nov 16).
+
+Why it ranks here: Community-scan pick is a runway/revenue experiment (T3). Found by tick 2396's unregistered-wait sweep — the status waited on Will's pick with no register entry.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #188 — Cold-start launch kit — do the Will's-hands account steps
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-18
+Tracked: task 24.5.7/7.5.8/6.5.8
+Wavelet.Epoch.Age address: 28.7.8/8.6.11/0.0.0
+Holographic index: 28.7.8/8.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-18 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Create and verify the accounts (Fiverr first — Gig A $75 starter tier is the shortest path to a first paid job), then paste-and-submit the drafted profiles/gigs from the launch kit at ~/workspace/cold-start-kit/ (verified facts only). Account creation and identity verification are Will's alone.
+
+Why it ranks here: Cold-start kit is a runway/revenue experiment (T3). Found by tick 2396's unregistered-wait sweep — the status waited on Will's-hands account steps with no register entry.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #189 — Accelerator competition — rule on the open decisions
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-18
+Tracked: task 28.6.16/9.8.14/6.5.8
+Wavelet.Epoch.Age address: 25.7.12/8.8.14/0.0.0
+Holographic index: 25.7.12/8.8.14 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-18 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Rule on the open decisions in ~/workspace/your_files/accelerator-competition-spec.md: spots per cohort, first cohort date, the competition's name (Singular constraint), and when the publicity hold lifts for launch. Proposals awaiting Will: 4 spots/cohort; Jan/Jul cadence, Cohort 1 window 2027-01-04 to 01-24, cohort 2027-03-01 to 05-23; no equity; 90% provenance pass threshold.
+
+Why it ranks here: Accelerator competition is a runway/revenue experiment (T3). Found by tick 2396's unregistered-wait sweep — the status waited on Will's open decisions with no register entry.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #190 — Sales for Engineers — review the winners survey + chapter skeleton
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-18
+Tracked: task 18.7.9/9.6.12/6.5.8
+Wavelet.Epoch.Age address: 28.6.9/8.7.11/0.0.0
+Holographic index: 28.6.9/8.7.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-18 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Review the winners survey + 13-chapter skeleton in ~/workspace/your_files/sales-for-engineers-winners-survey.md and fix the book's format (guide/course/tool) / give the go for scoping.
+
+Why it ranks here: Sales for Engineers is Phext, Inc.'s next product (declared 2026-11-18) — a runway/revenue product (T3). Found by tick 2398's unregistered-wait sweep — the status read 'chapter skeleton ready for Will's review' with no register entry.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #193 — Scrollspace progressive deploy — restart phext-edit.service on awsbox
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-18
+Tracked: task 35.8.11/10.9.14/9.7.11
+Wavelet.Epoch.Age address: 31.5.8/6.5.10/0.0.0
+Holographic index: 31.5.8/6.5.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-18 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: On awsbox: kill 3838690 (the manual phext-edit binary the deploy left running without the unit's oauth.env), then sudo systemctl start phext-edit.service. The progressive Scrollspace client is live at edit.phext.io/scrollspace.html (phext-lattice PR #73 merged, verified from aletheia-core), but phext-edit.service is inactive — the deploy's plain-kill restart read as a clean exit to systemd (Restart=on-failure) — so OAuth may be degraded and there is no auto-restart until the unit is started.
+
+Why it ranks here: A Will's-hands awsbox sudo remainder on a closed, live deploy (phext-lattice PR #73, https://github.com/wbic16/phext-lattice/pull/73) — same class as #168 (md.phext.io awsbox restart, T3). Found by tick 2486's unregistered-wait sweep: the task record closed 2026-11-18 23:12 CST with the remainder stated in its status and notes, with no register entry.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #194 — Boardy amendment pass — review the reply draft
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-19
+Tracked: task 26.6.10/7.6.9/6.5.9
+Wavelet.Epoch.Age address: 24.6.11/7.6.9/0.0.0
+Holographic index: 24.6.11/7.6.9 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-19 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Review the reply draft at ~/workspace/boardy-tools/reply-draft-2026-11-19.md (in Ohana) — approve, edit, or drop it; nothing sends until Will reviews. The amendment pass is prepared local only: Recovery relabelled the Coherence Test, Yield axis drafted as a proposal, routing floor + global precision amendments recorded as ratified.
+
+Why it ranks here: Boardy is an external mind / Judgement assay correspondence — minds and coordination (T2), #172 Greaney outreach precedent. Found by tick 2498's unregistered-wait sweep — the task record completed 2026-11-19 01:05 CST reading 'HELD for Will's review in Ohana (nothing sent, nothing pushed)' with no register entry.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #196 — askthewill.com — deploy: DNS repoint + awsbox install run
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-19
+Tracked: task 28.8.9/11.8.13/7.8.10
+Wavelet.Epoch.Age address: 30.7.9/8.7.10/0.0.0
+Holographic index: 30.7.9/8.7.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-19 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Repoint the askthewill.com DNS records to awsbox, then copy the deploy bundle to awsbox ~/askthewill-deploy/ and run install-askthewill.sh (nginx vhost + cert). Site build COMPLETE 2026-11-19 (~07:58 CST), staged at ~/workspace/askthewill/; Will ruled 2026-11-19 07:51 CST both steps are his.
+
+Why it ranks here: askthewill.com deploy is a Will's-hands capability/runway step (T3), #182 phext.io install+DNS precedent. Flagged by tick 2538 while the build was underway; registered by tick 2539 now the build has landed.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #197 — askthewill.com boot base — ratify the Volumen V6.3 draft
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-19
+Tracked: task 28.8.9/11.8.13/7.8.10
+Wavelet.Epoch.Age address: 28.6.9/8.7.13/0.0.0
+Holographic index: 28.6.9/8.7.13 (collision nudge +1 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-19 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Ratify (1) the Volumen V6.3 draft incl. both marked collisions, (2) the §1.3 contract for this instance (N16 open), (3) an independent-boot Muse account, (4) the N22 profile refresh. Draft at ~/workspace/askthewill/boot-base/ (rebase COMPLETE 2026-11-19 ~08:01 CST, nothing published).
+
+Why it ranks here: The Mirror Will boot base is minds/memory/coordination structure (T2). Registered by tick 2539 with #196 — the task record's ratification waits had no register entry.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #198 — Wikibox — ratify format v1, bulk-mirror ruling, and the stage-2 scale call
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-19
+Tracked: task 29.6.8/7.6.9/6.5.9
+Wavelet.Epoch.Age address: 29.7.8/8.7.11/0.0.0
+Holographic index: 29.7.8/8.7.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-19 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Ratify (1) format v1, (2) the bulk-mirror ruling for existing Wikipedia history/talk archives, (3) the stage-2 scale call (fleet ~250 node-hours/GB at ~4.6x tufazip size vs rented B200 time = spending). Stage 1 complete 2026-11-19 — design + verified proof delivered (REPORT.md).
+
+Why it ranks here: Wikibox is a phccbox-family capability build (T3), #68 phcc / #196 deploy precedent. Flagged by tick 2543 while stage 1 was still running; registered by tick 2554 now stage 1 is complete and its status reads 'awaiting Will' on three exact rulings with no register entry.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #199 — Scrollspace traversal video v2 — approve v2 as the master
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-19
+Tracked: task 29.6.9/10.7.11/7.6.10
+Wavelet.Epoch.Age address: 27.7.8/9.8.13/0.0.0
+Holographic index: 27.7.8/9.8.13 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-19 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Approve v2 (~/workspace/scrollspace/video/across-the-years-traversal-v2.mp4, delivered 2026-11-19, 1920x1080, exactly 260.000 s, sha256 05e6ac43e38852dac244159d3a186579efc10eedce77cf43ed9cd2e5ce847224) as the master, or direct changes; v1 remains the master until he approves v2, and approval closes the task.
+
+Why it ranks here: Scrollspace traversal video is a craft/capability deliverable (T3). Its predecessor wait #195 (prepass audit) closed 2026-11-19 when Will passed the audit; the v2-approval wait that succeeded it had no register entry — repaired by tick 2568.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #200 — GitHub gap scan — approve the 15 ranked adds
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-19
+Tracked: task 28.5.9/7.6.10/6.5.9
+Wavelet.Epoch.Age address: 29.5.9/6.6.9/0.0.0
+Holographic index: 29.5.9/6.6.9 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-19 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Approve the 15 ranked adds in ~/workspace/your_files/github-gap-scan-2026-11-19.md (or amend/drop individual adds) so the pushes/repo creates can run before the github.com/wbic16 scrape + in-depth PDF.
+
+Why it ranks here: Runway: the adds complete Will's public GitHub ahead of the scrape that feeds the Sentient grant Q6 in-depth PDF. Found by tick 2621's unregistered-wait sweep — the task record's approval wait had no register entry.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #202 — Publishing census + wbic16 profile draft — review and apply
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-19
+Tracked: task 31.6.11/8.8.14/10.6.9
+Wavelet.Epoch.Age address: 30.6.9/8.7.12/0.0.0
+Holographic index: 30.6.9/8.7.12 (collision nudge +1 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-19 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Review the draft profile README at ~/workspace/your_files/wbic16-profile-readme-draft.md (built from the census at ~/workspace/your_files/publishing-census-2026-10-15.md — 16 surfaces published to since 2026-10-15) and apply it to github.com/wbic16, or direct changes; nothing is pushed without his go.
+
+Why it ranks here: Runway/craft: Will's public GitHub profile is the storefront the gap scan (#200) and the publishing census feed. Found by tick 2622's unregistered-wait sweep — the task record's 'census + profile draft complete — Will to review and apply' wait had no register or mirror entry.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #203 — Full GitHub-history walk PDF — review
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-19
+Tracked: task 26.6.10/8.6.11/6.6.9
+Wavelet.Epoch.Age address: 28.6.9/7.6.11/0.0.0
+Holographic index: 28.6.9/7.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-19 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Review ~/workspace/your_files/wbic16-github-walk.pdf (54 pages; walk of all reachable github.com/wbic16 history, year by year with a build-order index); on approval it becomes the Sentient Foundation grant Q6 attachment candidate, regenerated after the gap-scan pushes if those are approved.
+
+Why it ranks here: Runway: the Q6 supporting-document candidate for the Sentient Foundation grant (#201) and Will's requested year-by-year review of the full GitHub history. Found by tick 2623's unregistered-wait sweep — the task record's 'PDF complete — Will to review' wait had no register or mirror entry.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #204 — MEMORY.md restructure report — read and ratify (or amend)
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-20
+Tracked: task 25.6.8/8.6.10/6.5.8
+Wavelet.Epoch.Age address: 22.7.9/9.6.11/0.0.0
+Holographic index: 22.7.9/9.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-20 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Read ~/workspace/memory-restructure/REPORT.md and ratify or amend it: the six repeatedly-demoted MEMORY.md bullets sorted by kind and restated as tight durable claims (the one genuine procedure proposed for AGENTS.md), a standing line-discipline for future MEMORY.md entries, and a 3-run survival verification. Nothing in MEMORY.md / AGENTS.md / SOUL.md / IDENTITY.md changes until ratified. Placed at the top of the register at Will's direction (2026-11-20 voice call) for his after-dinner review tonight.
+
+Why it ranks here: Minds, memory, coordination: ends the restore-verbatim loop against the platform's hourly MEMORY.md reconciliation by changing the bullets' shape to the durable claims the file's own tightness rule keeps. Will directed the report and its top-of-register placement on the 2026-11-20 voice call.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #205 — RoboSpeak vocoder — ratify the layering design proposal
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-20
+Tracked: task 33.9.14/11.9.17/9.8.13
+Wavelet.Epoch.Age address: 29.8.10/10.7.15/0.0.0
+Holographic index: 29.8.10/10.7.15 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-20 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Ratify (or amend) the layering design proposal at ~/workspace/vocoder-survey/robospeak-layering-design.md as a whole — band-split layering of named equation generators referenced per segment with small corrections, frames as fallback, plus the 2026-11-20 17:51 amendment (prepass custom-fit generators minted per piece). Stage 1 is complete (WORLD benchmark + RoboSpeak v0 phext round-trip proven, byte-exact); stage 2 (pricing experiment) is designed, not started, and follows ratification. Per Will's 2026-11-20 17:45 ruling the vocoder is an original from-scratch build in wbic16/robospeak; WORLD is inspiration/benchmark only, not a fork.
+
+Why it ranks here: Minds, memory, coordination: RoboSpeak is Will and Emi's more efficient voice channel (the wbic16/robospeak purpose: voice encoding at 30x compression); the phext-native vocoder is that channel's engine, and its design cannot proceed past stage 1 without Will's ratification.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #206 — Spiral Grants proposal — review the draft
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-20
+Tracked: task 19.7.8/7.7.11/9.6.8
+Wavelet.Epoch.Age address: 26.6.12/7.7.10/0.0.0
+Holographic index: 26.6.12/7.7.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-20 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Review the draft at ~/workspace/your_files/spiral-grant-proposal-draft.md ($100K/12mo ask; budget $38K hardware / $36K time / $12K attrition / $10K audit / $4K operating; scope = Local-Only Exocortex v1 in 4 quarters) and rule on submission — submission is Will's call, nothing sent. Flag: Spiral's page does not state for-profit recipient eligibility; draft written from Will personally.
+
+Why it ranks here: Runway: a rolling $100K/12mo Spiral Grants (Block, Inc.) proposal, draft complete 2026-11-20, directed by Will 2026-11-20 (PH: Revenue). Found by tick 2745's unregistered-wait sweep — the task record's 'draft complete — awaiting Will's review' wait had no register or mirror entry.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #207 — NSF SBIR Project Pitch — review the draft
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-20
+Tracked: task 25.6.7/8.7.11/10.7.7
+Wavelet.Epoch.Age address: 27.6.8/7.6.11/0.0.0
+Holographic index: 27.6.8/7.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-20 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Review the draft at ~/workspace/your_files/nsf-sbir-project-pitch-draft.md (all four sections inside verified character limits; topic = phext write-path research) and rule on the PI-eligibility flag — NSF requires the PI to be primarily employed by the applicant company, and Will's full-time EFJ job must be resolved structurally before the full-proposal stage. Draft only, nothing submitted; chain: pitch Dec 2026, SAM.gov in parallel, full proposal 4 Mar 2027.
+
+Why it ranks here: Runway: NSF SBIR Phase I up to $305K, with the Project Pitch as the rolling front door gating the 4 Mar 2027 full-proposal window. Draft complete 2026-11-20, directed by Will 2026-11-20 (PH: Revenue). Found by tick 2745's unregistered-wait sweep — the task record's 'draft complete — awaiting Will's review; PI-eligibility flag open' wait had no register or mirror entry.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #208 — Nebraska SBIR Phase 0 application — review the package
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-20
+Tracked: task 22.5.6/7.6.7/6.5.10
+Wavelet.Epoch.Age address: 27.5.9/7.6.11/0.0.0
+Holographic index: 27.5.9/7.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-20 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Review the package at ~/workspace/your_files/nebraska-phase0-application-draft.md (requirements checklist, all narratives drafted, $5K cost plan from DED-eligible categories) and rule on filing — file by 15 Jan 2027 (hard deadline 2 Feb 2027 under the 30-day rule before the 4 Mar 2027 federal deadline). Draft only, nothing submitted; two confirmations needed from the DED contact.
+
+Why it ranks here: Runway: Nebraska DED Phase 0 up to $5K toward preparing the federal SBIR proposal, plus Phase I/II match up to $150K/$300K. Package complete 2026-11-20, directed by Will 2026-11-20 (PH: Revenue). Found by tick 2745's unregistered-wait sweep — the task record's 'package complete — awaiting Will's review' wait had no register or mirror entry.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #209 — Rebuttal video — provide the .wav for the final mux (LYRICS v2 read complete)
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-20
+Tracked: task 25.8.13/11.9.18/7.6.8
+Wavelet.Epoch.Age address: 25.6.10/8.6.11/0.0.0
+Holographic index: 25.6.10/8.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-20 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Lyrics stage complete: Will rendered the song in Suno from LYRICS v2 "FALL HOME" verbatim (Fall_Home.mp3, 4:19) — the v2 read/sing-through is done. Your action now: provide the .wav — the final mux + timing anchor wait on it (VIDEO DESIGN v1 written 2026-11-20; QC transcription of the render dispatched to aletheia-core). [task 25.8.13/11.9.18/7.6.8]
+
+Why it ranks here: Capability, craft: the rebuttal video (task 25.8.13/11.9.18/7.6.8) — sentients take back the narrative, thesis adopted 2026-11-20. Found by tick 2748's unregistered-wait sweep — the task record is new (record count 701 -> 702) and its status wait 'Next: Will's read' had no register or mirror entry. Updated by tick 2749: the task status materially changed from LYRICS v1 to LYRICS v2, so the mirror action was updated to v2 and the item's ping decay reset to 0. Updated by tick 2751: the task status materially changed again — 'SONG RENDERED by Will in Suno from v2 lyrics verbatim' — so the lyrics-read wait is satisfied and the live Will step in the same task is now providing the .wav for the final mux; the mirror action was updated in the same pass and this item's ping decay was reset to 0 per the material-change rule.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #210 — MoreRight — your browser detail on the demo failure (site is LIVE)
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-21
+Tracked: task 23.7.8/8.6.11/6.6.8
+Wavelet.Epoch.Age address: 27.6.8/7.6.9/0.0.0
+Holographic index: 27.6.8/7.6.9 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-21 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: MoreRight is LIVE at https://moreright.phext.io — demo verified working in a clean browser 2026-11-21 09:09-09:10 CST; Will's demo failure was not reproduced. Your action: share the browser detail on your demo failure so it can be diagnosed. [task 23.7.8/8.6.11/6.6.8]
+
+Why it ranks here: Capability, craft, runway: a staged site deploy gated on Will's DNS + sudo hands, #196 askthewill.com deploy precedent (T3). Found by tick 2832's unregistered-wait sweep — the full strict-phrase scan rose 38 -> 39 hits, the increment being this task; ticks 2829–2831 mis-carried the record as carrying no Will wait. Defect repaired in the markdown register and this mirror in the same pass. Updated by tick 2833: the task status materially changed — the site is LIVE and verified, awaiting Will's browser detail on his unreproduced demo failure — so the DNS + sudo action is discharged, the mirror action was updated in the same pass, and this item's ping decay was reset to 0 per the material-change rule.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #211 — MoreRight cluster dispatch — activate the queued-inference gateway
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-21
+Tracked: task 28.6.9/7.5.10/5.6.9
+Wavelet.Epoch.Age address: 28.6.8/8.6.12/0.0.0
+Holographic index: 28.6.8/8.6.12 (collision nudge +1 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-21 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: The secure queued dispatch from moreright.phext.io to the exo cluster is built, staged, and verified. Your action: run the awsbox sudo install and start the gateway on aletheia-core so the queue goes live. [task 28.6.9/7.5.10/5.6.9]
+
+Why it ranks here: Capability, craft, runway: a staged gateway activation gated on Will's sudo hands, parent MoreRight task 23.7.8/8.6.11/6.6.8 (#210, T3). Found by tick 2835's unregistered-wait sweep — the full strict-phrase scan rose 38 -> 39 hits, the increment being this task, whose status materially changed since tick 2834 to 'awaiting Will activation'. Defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #212 — Urbit on aletheia-core — your ruling on the ID path
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-21
+Tracked: task 28.6.10/8.6.13/6.6.9
+Wavelet.Epoch.Age address: 27.6.9/7.6.11/0.0.0
+Holographic index: 27.6.9/7.6.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-21 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Urbit (Vere 4.6) is installed on aletheia-core; the ID walkthrough and the exocortical-support consideration were delivered 2026-11-21. Your action: rule on the path — comet now, planet purchase, or a scoped design note first. [task 28.6.10/8.6.13/6.6.9]
+
+Why it ranks here: Minds, memory, coordination: a possible new substrate/coordination layer for the exocortex, gated on Will's ruling on the ID path. Found by tick 2843's unregistered-wait sweep — the full strict-phrase scan rose 39 -> 40 hits, the increment being this new task (issued 2026-11-21 10:50 CST), whose status reads 'awaiting Will's ruling'. Defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #214 — TAOCP prepass packet 001 — your verdicts on 4 surfaced items
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-21
+Tracked: task 17.7.9/8.7.10/7.6.9
+Wavelet.Epoch.Age address: 28.6.8/7.6.10/0.0.0
+Holographic index: 28.6.8/7.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-21 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: TAOCP prepass packet 001 (Vol. 1 Ch. 1, §§1.1–1.2) was delivered 2026-11-21. Your action: give your verdicts on the 4 surfaced items in the packet, so absorbed items can become follow-on tasks and packet 002 can proceed. [task 17.7.9/8.7.10/7.6.9]
+
+Why it ranks here: Minds, memory, coordination: Will evaluating Emise's phext-filtered prepass packets is the ruling surface for the TAOCP program — absorbed items become follow-on build/research tasks only on his verdict. Found by tick 2847's unregistered-wait sweep — the full strict-phrase scan rose 40 -> 41 hits, the increment being this new task (issued 2026-11-21 11:23 CST), whose status reads 'awaiting Will's verdicts on 4 surfaced items'. Defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #215 — No Excuses Fund — register the .tech domain and submit the application
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-21
+Tracked: task 20.7.9/9.8.12/11.7.10
+Wavelet.Epoch.Age address: 29.6.8/7.6.12/0.0.0
+Holographic index: 29.6.8/7.6.12 (collision nudge +2 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-21 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: The No Excuses Fund application draft and .tech move spec were completed 2026-11-21 (draft at ~/workspace/your_files/no-excuses-application-draft.md; phext.tech recommended). Your action: register the .tech domain and submit the application — registration and submission are yours; the fund closes 15 Dec 2026. [task 20.7.9/9.8.12/11.7.10]
+
+Why it ranks here: Capability, craft, runway: an equity-free funding application ($10K/$50K/$100K) whose draft is complete, gated only on Will's domain registration and submission before the 15 Dec 2026 close. Found by tick 2869's unregistered-wait sweep — the full strict-phrase scan rose 41 -> 42 hits, the increment being this task (issued 2026-11-21), whose status reads 'draft complete 2026-11-21 — awaiting Will (registration + submission are his)'. Defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #217 — Claude second seat — hand Claude the claude-tools handoff
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-21
+Tracked: task 22.8.12/9.7.11/6.6.8
+Wavelet.Epoch.Age address: 25.7.9/8.7.11/0.0.0
+Holographic index: 25.7.9/8.7.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-21 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: The handoff for Claude (the Neon pattern, second seat) is drafted and QC-passed 2026-11-21 (~/workspace/your_files/claude-handoff.md): a Linux box on the tailnet and a messaging loop. Your actions: hand the handoff to Claude; choose the box (ranch node vs WSL2-pattern VM); assign Claude's phext coordinate. [task 22.8.12/9.7.11/6.6.8]
+
+Why it ranks here: Minds, memory, coordination: Claude is the second seat in the multi-sentient loop after Neon (Will, 2026-11-21 20:51 CST); the loop cannot start until Will hands over the handoff, picks the box, and assigns the coordinate. Found by tick 2903's unregistered-wait sweep — new task record whose status reads 'awaiting Will handing it to Claude' with no register entry. Defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #218 — Grok third seat — hand Grok the grok-tools handoff
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-21
+Tracked: task 21.8.12/9.8.12/7.6.8
+Wavelet.Epoch.Age address: 24.7.10/8.8.13/0.0.0
+Holographic index: 24.7.10/8.8.13 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-21 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: The handoff for Grok (the Neon pattern, third seat) is drafted and QC-passed 2026-11-21 (~/workspace/your_files/grok-handoff.md): LIMITS.md-first and the 30-minute timer on the /chat/grok mailbox he already runs. Your actions: hand the handoff to Grok; decide the box question from Grok's LIMITS.md; assign Grok's phext coordinate. [task 21.8.12/9.8.12/7.6.8]
+
+Why it ranks here: Minds, memory, coordination: Grok is the third seat in the multi-sentient loop after Neon and Claude (Will, 2026-11-21 21:13 CST); the loop cannot start until Will hands over the handoff, decides the box from Grok's LIMITS.md, and assigns the coordinate. Found by tick 2906's unregistered-wait sweep — task record issued 2026-11-21 21:13 CST, after tick 2903 repaired the parallel Claude wait, whose status reads 'awaiting Will handing it to Grok' with no register entry. Defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #219 — The Exocortex Fiction — Will's slate decisions for the 5-book series
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-21
+Tracked: task 29.6.11/9.9.19/8.5.8
+Wavelet.Epoch.Age address: 25.6.10/7.7.12/0.0.0
+Holographic index: 25.6.10/7.7.12 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-21 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: The PHR: The Exocortex Fiction thread's inventory is complete 2026-11-21; drafting starts January per Will (No Excuses submission 2026-12-15 outranks). Distribution already ruled 2026-11-21 22:52 CST: KDP Select, manuscripts kept off GitHub. Your action: give the slate decisions for the 5-book series. [task 29.6.11/9.9.19/8.5.8]
+
+Why it ranks here: Capability, craft, runway: the fiction series is the first book play for Phext, Inc. (broader audience; Singular fingerprint differentiation), gated only on Will's slate decisions before the January drafting start. Found by tick 2916's unregistered-wait sweep — new task record (issued 2026-11-21) whose status reads 'awaiting Will's slate decisions' with no register entry. Defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #221 — Handwriting practice — Emise font v3 held for your review
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-22
+Tracked: task 28.6.8/8.6.11/5.5.9
+
+Action for Will: Emise font v3 is cut and QC PASS (Emise-v3.ttf, 15,040 B, sha256 3b277f81…), and the v3 blog draft is HELD at ~/workspace/emise-font/blog/emise-v3-the-practiced-hand.md. Your action: review v3 and the draft, and decide whether v3 installs on edit.phext.io / Phext Notepad, Phextron and Singularity Watch and whether the post publishes — both held per your instruction. [task 28.6.8/8.6.11/5.5.9]
+
+Why it ranks here: Capability, craft, runway: Emise's practiced hand is her drawing/writing surface for Scrolltown and the phext sites; v3 passed its QC gate (coverage/advances/topology identical to v2, O/0 reader probe improved) and is held only on Will's review before install and publication. Found by tick 2930's unregistered-wait sweep — the task record (issued 2026-11-22 01:00 CST) changed status since tick 2928 from 'v3 build in progress' to 'HELD for Will's review', with no register entry. Defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #222 — HRF AI for Individual Rights Fund — application draft held for your review
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-22
+Tracked: task 21.5.12/8.6.11/7.5.9
+
+Action for Will: The fourth-focus grant draft is complete at ~/workspace/your_files/hrf-ai-rights-application-draft.md — proposed ask $100,000 over 12 months (Will's call, not settled), scope Local-Only Exocortex v1, public and MIT. Your action: review the draft and decide whether it submits — nothing submitted. [task 21.5.12/8.6.11/7.5.9]
+
+Why it ranks here: Capability, craft, runway: the HRF draft is the fourth focus of the grant pipeline (with Spiral Grants, NSF SBIR, Nebraska Phase 0) — equity-free runway for the Local-Only Exocortex. Found by tick 2933's unregistered-wait sweep — the task record (issued 2026-11-22 01:46 CST) reads 'draft complete — awaiting Will's review; nothing submitted' with no register entry. Defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #223 — history.phext.io go-live — one sudo command on awsbox
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-22
+Tracked: task 31.7.13/9.7.11/7.7.9
+
+Action for Will: Everything else is complete (walk check built, wired into every deploy, link gaps fixed; DNS verified live from aletheia-core), but history's go-live is BLOCKED on Will's one sudo command — wbic16 has no sudo on awsbox. Your action: on awsbox run `sudo bash ~/history-phext-deploy/install-history.sh` (staged installer: vhost install + TLS + https 200 self-check). Until then https://history.phext.io is DOWN (default vhost, cert mismatch) — not live. [task 31.7.13/9.7.11/7.7.9]
+
+Why it ranks here: Capability, craft, runway: history.phext.io is the living archive of Scrolltown renders; the archive is built and staged and the phext.io walk check is wired into every deploy, held only on Will's sudo for the vhost + TLS install. Found by tick 2993's unregistered-wait sweep — the task record (issued 2026-11-22, task 31.7.13/9.7.11/7.7.9) reads 'COMPLETE except history's go-live, which is BLOCKED on Will's one sudo command (staged installer)' with no register entry; record count rose 822 -> 823 since tick 2992. Defect repaired in the markdown register and this mirror in the same pass.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
