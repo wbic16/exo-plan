@@ -22,13 +22,14 @@ number in run-id order (run-ids open with a UTC timestamp, so
 the order is chronological and a run's coordinate never
 changes). The builder documents the scheme in full.
 
-Runs recorded: 3
+Runs recorded: 4
 
-Latest run: 20261122T183325Z-awsbox-leg-test
-  host ip-172-30-1-197, source synthetic-test, failures 0, blocked-on-docs 0, blocked 0, exit count 0
+Latest run: 20261123T044224Z-ip-172-30-1-197
+  host ip-172-30-1-197, source deploy-all, failures 11, blocked-on-docs 1, blocked 5, exit count 17
 
 ## Index (newest first)
 
+1.1.1/1.1.2/1.1.4 — 20261123T044224Z-ip-172-30-1-197 — 2026-11-23T04:49:53Z — failures 11, blocked-on-docs 1, blocked 5 — source: deploy-all
 1.1.1/1.1.2/1.1.3 — 20261122T183325Z-awsbox-leg-test — 2026-11-22T18:33:25Z — failures 0, blocked-on-docs 0, blocked 0 — source: synthetic-test
 1.1.1/1.1.2/1.1.2 — 20261122T182919Z-synthetic — 2026-11-22T18:29:19Z — failures 0, blocked-on-docs 0, blocked 0 — source: synthetic-test
 1.1.1/1.1.2/1.1.1 — 20261122T180000Z-ip-172-30-1-197 — 2026-11-22T18:20:50Z — failures 11, blocked-on-docs ?, blocked 5 — source: will-screenshot# Deploy telemetry — 20261122T180000Z-ip-172-30-1-197
@@ -84,4 +85,67 @@ Counts: steps 32, results 1, failures 0, blocked-on-docs 0, blocked 0, exit coun
 Record (verbatim body, in run order):
 
 result: synthetic awsbox leg test: PASS (not a real deploy — record crafted on awsbox to prove the installed telemetry-push.sh leg end to end)
-note: crafted by Emise 2026-11-22 after installing the parallel+telemetry deploy-all.sh on awsbox; no deploy ran.
+note: crafted by Emise 2026-11-22 after installing the parallel+telemetry deploy-all.sh on awsbox; no deploy ran.# Deploy telemetry — 20261123T044224Z-ip-172-30-1-197
+
+Run-id: 20261123T044224Z-ip-172-30-1-197
+Host: ip-172-30-1-197
+Source: deploy-all
+Started: 2026-11-23T04:42:24Z (EE 195)
+Finished: 2026-11-23T04:49:53Z (EE 196)
+Parallel pool: 2 (nproc at run start)
+Counts: steps 32, results 52, failures 11, blocked-on-docs 1, blocked 5, exit count 17
+
+Record (verbatim body, in run order):
+
+result: docs gate phext-lattice: PASS (documentation verified — documented locally and serving — before deploy)
+result: phext.tech phase 1: ALREADY CURRENT (site installed, https 200)
+result: phext.tech phase 2: ALREADY CURRENT (edit.phext.io 301 site installed)
+result: phext-edit deploy (deploy.sh exited non-zero): FAIL
+result: md.phext.io deploy: PASS (docs verified first — documented locally and serving)
+result: singularitywatch.org deploy: PASS (repo current, docs verified — documented locally and serving, https 200)
+result: docs gate quickfork (site-quickfork-net): PASS
+result: quickfork.net: DRIFT (live f7d94f3417755c524539eb422d1d140c9c1ac14d9dd56154716809dc8c57ed91 != repo 66fdad5340e7a55e8b699e3e06230e330fa5bc7d780e726fd22a2542442b8cea — reported, not overwritten)
+result: apertureshift.com deploy: PASS (docs verified first — documented locally and serving)
+result: docs.phext.io deploy (~/docs-phext-launch/deploy.sh exited non-zero): FAIL
+result: phdoc push leg: PASS (wbic16/phdoc remote current via SSH)
+result: mc.phext.io (phext-lanes) deploy: PASS (docs verified first; https 200)
+result: mutable.phext.io (mutable-os) deploy (deploy script exited non-zero): FAIL
+result: mootable.phext.io deploy (update runner exit 40 — see ~/mootable-deploy/reports/): FAIL
+result: Bickford Llama Ranch deploy: BLOCKED-ON-DOCS
+result: admin.bickfordllamaranch.com serving: PASS (https 200, verify-only)
+result: phext.io deploy: PASS (https 200)
+result: register.phext.io deploy (an installer exited non-zero): FAIL
+result: askthewill.com deploy (deploy script exited non-zero): FAIL
+result: moreright.phext.io deploy (deploy script exited non-zero): FAIL
+result: moreright.phext.io queue service: PASS (/api/health 200)
+result: phextura.com deploy (script ran; https phextura.com does not answer 200): FAIL
+result: tluf.org deploy (an installer exited non-zero): FAIL
+result: docs gate mirrorborn.us (site-mirrorborn-us): PASS
+result: mirrorborn.us: ALREADY CURRENT (live index.html matches /source/site-mirrorborn-us)
+result: mirrorborn.us serving: PASS (https 200)
+result: docs gate sotafomo.com (site-sotafomo-com): PASS
+result: sotafomo.com: DRIFT (live 60460457a214389725bdb1196f451b1aa044339a0b64641cd5dfd36fc0520ffa != repo 86efdce40a6dda6cc7d57fe94fbe938e41f2f9577eab614da5c4b9579f8ddb36 — reported, not overwritten)
+result: sotafomo.com serving: PASS (https 200)
+result: docs gate visionquest.me (site-visionquest-me): PASS
+result: visionquest.me: DRIFT (live 217a88825af00cd83b8e5628aa0e5486a28daa2ddcd2bbb256dd337638f907bb != repo 9f29fdfff07ad282b6cb6b684df4ae1fecae4dc9546f8c995078079035a5536c — reported, not overwritten)
+result: visionquest.me serving: PASS (https 200)
+result: docs gate wishnode.net (site-wishnode-net): PASS
+result: wishnode.net: DRIFT (live 7fe2c836eeddab5ce0f4d11fab86b546fadf6fd144d6d6fa28da0c502198687f != repo b142cf9dfe20e6963f054e662cfa3ea0ad6d9cdfe0b943b369ba554be4d08c28 — reported, not overwritten)
+result: wishnode.net serving: PASS (https 200)
+result: sq.mirrorborn.us serving: PASS (https 401, verify-only)
+result: staging.apertureshift.com: https 403 (verify-only — reported)
+result: staging.mirrorborn.us: serving (https 200, verify-only)
+result: staging.quickfork.net: EMPTY (vhost enabled, docroot empty — nothing staged; reported, not a failure)
+result: staging.singularitywatch.org: EMPTY (vhost enabled, docroot empty — nothing staged; reported, not a failure)
+result: staging.sotafomo.com: EMPTY (vhost enabled, docroot empty — nothing staged; reported, not a failure)
+result: staging.visionquest.me: EMPTY (vhost enabled, docroot empty — nothing staged; reported, not a failure)
+result: staging.wishnode.net: EMPTY (vhost enabled, docroot empty — nothing staged; reported, not a failure)
+result: hb-aeromotive.com deploy (no source repo and no deploy mechanism found on the box — vhost + static docroot /sites/web/hb-aeromotive.com only; missing piece: a source of record and a deploy step): BLOCKED
+result: athenaeum.ai deploy (vhost enabled but docroot /sites/web/athenaeum.ai does not exist and no source was found; missing piece: source of record + staged content): BLOCKED
+result: lattice.ai deploy (vhost enabled but docroot /sites/web/lattice.ai does not exist and no source was found; missing piece: source of record + staged content): BLOCKED
+result: principia.ai deploy (vhost enabled but docroot /sites/web/principia.ai does not exist and no source was found; missing piece: source of record + staged content): BLOCKED
+result: tickets.phext.io deploy (no vhost, no webroot, no deploy script staged on this box; missing piece: the staged deploy itself — app build, vhost, and installer, per its own records): BLOCKED
+result: post-deploy check (~/post-deploy-check.sh reported a failure — see its output above): FAIL
+result: phdoc push leg (final pass): PASS (wbic16/phdoc current via SSH through aletheia-core)
+result: history.phext.io serving: PASS (https 200, verify-only)
+result: walk check (a built site is not walk-reachable from phext.io — see its table above): FAIL
