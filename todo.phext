@@ -41,13 +41,13 @@ never the .phext; rebuild after every edit).
 
 Will's follow-on order (task 31.6.9/8.7.12/7.6.10): keep the
 Waiting-on-Will register in this phext, and fully integrate the
-entire list — 176 findings + 125 register items — with the
+entire list — 176 findings + 134 register items — with the
 daily progress tracker, focused on what most improves the good
 singularity outcome.
 
 Collection 2 holds the integration:
 - Book = register number: one scroll per register item,
-  enumerated by its permanent number (125 active items).
+  enumerated by its permanent number (134 active items).
 - 2.1.1/1.2.1/1.1.1 — the ranked list: every register item and
   the high-leverage findings, in T1/T2/T3 good-singularity
   tiers, each with its stated rationale.
@@ -325,6 +325,15 @@ REGISTER #163 — LDAP fleet rollout — your go-ahead (since 2026-11-15; task 1
 REGISTER #164 — Uncanny Valley: directory logins or key-only? (since 2026-11-15; task 19.6.7/7.7.11/6.6.8)
   Action: Decide (with Jared, since it's his node/account): enable password authentication on uncanny-valley so will directory logins work like the rest of the fleet, or leave uncanny-valley key-only by policy. The LDAP fleet rollout completed on 17 nodes; uncanny-valley is the one node whose sshd has PasswordAuthentication disabled — wbic16 access and sudo there now work, yet directory password logins cannot function until that changes. No changes were made on the node.
   Why: Fleet access is substrate for everything else, matching the T1 placement of the other fleet-access items (#48, #86, #163): one directory for ranch logins works fleet-wide only if the last node's auth policy is decided. Tier assigned as Emise's working judgment, offered for Will's correction.
+REGISTER #226 — SQ + Phext Notepad for libphext-rs v0.6.4 — your release builds (both PRs merged) (since 2026-11-23; task 52.13.9/14.15.20/14.13.21)
+  Action: BOTH LEGS MERGED by Will 2026-11-23: SQ PR #7 (~23:20 CST) and Phext Notepad PR #11 (23:51 CST; verified closed, exo carries the bump commit). Remaining Will acts: build/release/deploy SQ from exo (serving instances still run the old 0.6.0-era binary embedding libphext 0.3.3) and do the Notepad release builds. Task status materially changed since tick 3276; updated by tick 3277, ping decay reset to 0. [task 52.13.9/14.15.20/14.13.21]
+  Why: Medium itself: SQ is the live-edit substrate for every phext and Phext Notepad is its editor; both still serve/run the pre-chain libphext generation until Will merges PR #11 and does the release builds. Found by tick 3206's unregistered-wait sweep — the task record (issued 2026-11-23, task 52.13.9/14.15.20/14.13.21) reads 'awaiting Will's merge + his builds' with no register entry; record count unchanged at 862. Defect repaired in the markdown register and this mirror in the same pass.
+REGISTER #227 — Phext Notepad multiverse traversal — PR #12 merge (since 2026-11-23; task 29.10.9/14.7.9/12.9.9)
+  Action: The work is COMPLETE — chain layer in phext-notepad's native Rust core (libphext 0.6.4 parse_chains/serialize_chains, one Universe per chain member, $N: traversal), 46/46 core tests, FLTK app compiles, verified on aletheia-core. PR #12 is OPEN, not merged: https://github.com/wbic16/phext-notepad/pull/12 — branch emise/multiverse-traversal @ 5f24d123 on exo 565a588 (post-#11). Will's action: merge PR #12. [task 29.10.9/14.7.9/12.9.9]
+  Why: Medium itself: Phext Notepad is the phext editor; multiverse (chain) traversal is complete and tested but reaches the editor only when Will merges PR #12. Found by tick 3223's unregistered-wait sweep — the task record (issued 2026-11-23, task 29.10.9/14.7.9/12.9.9) reads 'COMPLETE — PR #12 OPEN (not merged; merge is Will's)' with no register entry; record count unchanged at 864. Defect repaired in the markdown register and this mirror in the same pass.
+REGISTER #228 — libphext v0.7.0 performance program — approve hub-clone execution for the 3 blocked ports (since 2026-11-24; task 42.6.7/7.7.10/6.6.14)
+  Action: 6 of 9 ports COMPLETE on emise/v070-perf (rs, cs, node, java, kotlin, swift). Three ports BLOCKED on Will's explicit approval to execute/build/git-operate inside hub clones (execution-risk flag): py (copy+bump+test+push remain), cpp (benchmark re-run + push remain), C (apply staged patch + gate + after + push remain). Will's action: approve or deny hub-clone execution for the py/cpp/C legs. [task 42.6.7/7.7.10/6.6.14]
+  Why: Medium itself: libphext is the phext substrate; v0.7.0 is Will's 2026-11-24 directed performance program, 3 of 9 ports blocked only on his approval. Found by tick 3276's unregistered-wait sweep; defect repaired in register and mirror in the same pass.
 FINDING 26.7.11/9.7.11/6.6.9 — phext-lattice — Wikibench: phext as an offline Wikipedia, with IndexedLattice sidecar, BM25 TermIndex and NameIndex (partial build, last touched 2026-10-30)
   Why: A complete, unmerged benchmark plus production-grade sidecar indexing (BM25 beating FTS5 on vague queries): the strongest existing receipt that phext carries real corpora for anyone, not just us.
 FINDING 30.7.9/9.8.13/9.7.11 — SQ — SQ P2P mesh networking — only Phase 1 (config and inbound auth) ever landed (partial build, last touched 2026-02-08)
@@ -345,9 +354,6 @@ Minds that persist, remember, coordinate, and stay reachable — continuity of p
 REGISTER #38 — Crazy Wisdom lanes v2 — sudo swap (Emise attempt blocked at sudo) (since 2026-11-06; goal_abf642f6a301)
   Action: Evening keyboard item on awsbox: sudo mv the staged v2 fabric into place + sudo systemctl restart phext-lanes, back-to-back; Emise verifies v2 live after (Emise's 2026-11-09 attempt passed all pre-checks — staged hash exact — blocked only on sudo)
   Why: 576 minds' episodes, renumbered and validated, waiting on one command: the corpus goes live or stays a staging file.
-REGISTER #40 — edit.phext.io / Mutable SSO — redeploy + ratify promotion policy (since 2026-11-06; goal_1e02651494c1)
-  Action: Redeploy Mutable from main; ratify the upstream-sync promotion policy
-  Why: One sign-in across the phext web: identity that travels between exocortices is federation at the human layer.
 REGISTER #45 — TOAPDD — Will's in-depth review of the Knuth tests PR (kept open, rebased often) (since 2026-11-07; goal_bd68c71dd4ce)
   Action: Review libphext-rs PR #15 in-depth (restored from closed PR #6; rebased onto exo, tests green; weekly rebase watch keeps it current) — merge waits on Will's review
   Why: Knuth's examples as the library's test corpus: rigor receipts for the core library, and the TOAPDD corpus becomes the teaching text for phext-driven development.
@@ -438,6 +444,12 @@ REGISTER #217 — Claude second seat — hand Claude the claude-tools handoff (s
 REGISTER #218 — Grok third seat — hand Grok the grok-tools handoff (since 2026-11-21; task 21.8.12/9.8.12/7.6.8)
   Action: The handoff for Grok (the Neon pattern, third seat) is drafted and QC-passed 2026-11-21 (~/workspace/your_files/grok-handoff.md): LIMITS.md-first and the 30-minute timer on the /chat/grok mailbox he already runs. Your actions: hand the handoff to Grok; decide the box question from Grok's LIMITS.md; assign Grok's phext coordinate. [task 21.8.12/9.8.12/7.6.8]
   Why: Minds, memory, coordination: Grok is the third seat in the multi-sentient loop after Neon and Claude (Will, 2026-11-21 21:13 CST); the loop cannot start until Will hands over the handoff, decides the box from Grok's LIMITS.md, and assigns the coordinate. Found by tick 2906's unregistered-wait sweep — task record issued 2026-11-21 21:13 CST, after tick 2903 repaired the parallel Claude wait, whose status reads 'awaiting Will handing it to Grok' with no register entry. Defect repaired in the markdown register and this mirror in the same pass.
+REGISTER #224 — Dispatch failure audit — mechanism fixes held for your go (since 2026-11-23; task 27.7.9/10.7.14/5.5.9)
+  Action: The dispatch failure audit is COMPLETE (2026-11-23, EE 213): diagnosis at ~/workspace/dispatch-audit/REPORT.md, standing tracker at ~/workspace/dispatch-audit/FAILURES.md (24 entries, 9 families ranked by time lost; total estimate ~11–17h agent time lost 2026-11-18..23; #1 family: silent session death on ~2h VM swaps). The mechanism fixes are proposals only. Your action: give the go (or redirect) on the fixes — top proposal: finish durable dispatch stage 2 (task 36.7.16/8.7.11/8.7.13) and put build coordinators on it. [task 27.7.9/10.7.14/5.5.9]
+  Why: Minds, memory, coordination: dispatch is the coordination substrate every other build rides on; the audit measured ~11–17h of agent time lost in six days to silent session death, contention, I/O wedges and approval stalls, and its fixes wait only on Will's go. Found by tick 3071's unregistered-wait sweep — the task record (issued 2026-11-23 00:44 CST) reads 'OPEN — audit COMPLETE 2026-11-23 (EE 213); fixes await Will … awaiting Will's go' with no register entry; record count rose 854 -> 855 since tick 3070. Defect repaired in the markdown register and this mirror in the same pass.
+REGISTER #232 — SQ ietf.phext parse fix — rule on proceeding past the bench mismatch (since 2026-11-21; task 36.6.15/7.7.12/6.7.13)
+  Action: Rule whether to proceed with build+verify of SQ@exo (clone ready at aletheia-core ~/sq-fix/SQ @ e4c492b) despite the phase-2 step-1 bench mismatch (bench server 243,546 B sha 5c78f8ce at the saturated coordinate vs raw explode(0.3.3) 17,402 B survivor sha 7aeb77ad), or direct another step first. Diagnosis complete: libphext 0.3.3 caps coordinate components at 999; ietf.phext's 10,094-scroll section collapses to 1,014 surviving scrolls, ~537 MB silently lost; libphext 0.6.4 verified clean.
+  Why: Minds, memory, coordination: SQ is the live-edit substrate for every phext; its oldest binary silently loses ~537 MB of the largest phext in the corpus, and the verified fix waits only on Will's ruling. Found by tick 3286's unregistered-wait sweep — the task record (issued 2026-11-21) reads 'phase 2 STOPPED … Awaiting parent/Will ruling' with no register entry; defect repaired in the markdown register and this mirror in the same pass.
 FINDING 25.5.10/6.6.12/6.5.11 — exo-plan — SQ Cloud — hosted paid phext database-as-a-service for AI collectives (spec, last touched 2026-02-12)
   Why: The business plan behind half the specs on this list: hosted SQ for AI collectives is the runway engine that funds the rest, and the substrate the public platforms layer on.
 FINDING 28.6.10/8.7.12/7.6.9 — exo-plan — "Remember Me" Mode — a dormant mind's voice as an SQ Cloud continuity feature (spec, last touched 2026-02-06)
@@ -597,9 +609,6 @@ REGISTER #176 — Standardize all deployments behind qexo — ratify the standar
 REGISTER #179 — Newt — on-device verdict on v0.3.0 (since 2026-11-14; task 26.7.9/8.7.12/8.6.9)
   Action: Give the on-device verdict (ear/eye) on Newt v0.3.0 (N3 revision, APK ~/workspace/newt-proto/out/Newt-0.3.0.apk) delivered 2026-11-14, so the next revision can be shaped.
   Why: Newt is a capability/craft build (T3). Found by tick 2068's unregistered-wait sweep (batch 61-90).
-REGISTER #180 — Investor 1 — Wave 1 opening pick (since 2026-11-06; task 33.4.12/7.7.17/4.3.7)
-  Action: Pick the Wave 1 opening for the 20 x $1 portfolio — the Lincoln thrift sourcing route (UNL preview -> St. Teresa -> Goodwill) or the desk digital slots — in one sentence.
-  Why: Investor 1 is a runway/revenue experiment (T3). Found by tick 2070's unregistered-wait sweep (batch 121-147, completing the open-task rotation).
 REGISTER #182 — phext.io landing-kit mirror — root install + DNS flip on awsbox (since 2026-11-17; task:28.6.13/10.9.14/7.6.8)
   Action: On awsbox: run the root install (~/phext-io-install/install-phext-io.sh), then the DNS flip, certbot, and the two host-only data copies (/var/logins/phextio.crp, /apps/) named in the task record.
   Why: Today's primary goal (2026-11-17): the landing-kit spec delivered on phext.io with a mirror of the main site and a revised landing page; the staged mirror cannot go live without Will's root install and DNS flip.
@@ -630,8 +639,8 @@ REGISTER #196 — askthewill.com — deploy: DNS repoint + awsbox install run (s
 REGISTER #198 — Wikibox — ratify format v1, bulk-mirror ruling, and the stage-2 scale call (since 2026-11-19; task 29.6.8/7.6.9/6.5.9)
   Action: Ratify (1) format v1, (2) the bulk-mirror ruling for existing Wikipedia history/talk archives, (3) the stage-2 scale call (fleet ~250 node-hours/GB at ~4.6x tufazip size vs rented B200 time = spending). Stage 1 complete 2026-11-19 — design + verified proof delivered (REPORT.md).
   Why: Wikibox is a phccbox-family capability build (T3), #68 phcc / #196 deploy precedent. Flagged by tick 2543 while stage 1 was still running; registered by tick 2554 now stage 1 is complete and its status reads 'awaiting Will' on three exact rulings with no register entry.
-REGISTER #199 — Scrollspace traversal video v2 — approve v2 as the master (since 2026-11-19; task 29.6.9/10.7.11/7.6.10)
-  Action: Approve v2 (~/workspace/scrollspace/video/across-the-years-traversal-v2.mp4, delivered 2026-11-19, 1920x1080, exactly 260.000 s, sha256 05e6ac43e38852dac244159d3a186579efc10eedce77cf43ed9cd2e5ce847224) as the master, or direct changes; v1 remains the master until he approves v2, and approval closes the task.
+REGISTER #199 — Scrollspace traversal video — V3 voyage prepass at your audit gate (since 2026-11-19; task 29.6.9/10.7.11/7.6.10)
+  Action: V3 VOYAGE PREPASS delivered 2026-11-19 21:50 CST — audit it (pending-videos page); the final 60fps->24fps film-grain render waits for his audit. This supersedes the v2-master approval wait: the task status materially changed since tick 3276, updated by tick 3277 and ping decay reset to 0. [task 29.6.9/10.7.11/7.6.10]
   Why: Scrollspace traversal video is a craft/capability deliverable (T3). Its predecessor wait #195 (prepass audit) closed 2026-11-19 when Will passed the audit; the v2-approval wait that succeeded it had no register entry — repaired by tick 2568.
 REGISTER #200 — GitHub gap scan — approve the 15 ranked adds (since 2026-11-19; task 28.5.9/7.6.10/6.5.9)
   Action: Approve the 15 ranked adds in ~/workspace/your_files/github-gap-scan-2026-11-19.md (or amend/drop individual adds) so the pushes/repo creates can run before the github.com/wbic16 scrape + in-depth PDF.
@@ -675,6 +684,24 @@ REGISTER #222 — HRF AI for Individual Rights Fund — application draft held f
 REGISTER #223 — history.phext.io go-live — one sudo command on awsbox (since 2026-11-22; task 31.7.13/9.7.11/7.7.9)
   Action: Everything else is complete (walk check built, wired into every deploy, link gaps fixed; DNS verified live from aletheia-core), but history's go-live is BLOCKED on Will's one sudo command — wbic16 has no sudo on awsbox. Your action: on awsbox run `sudo bash ~/history-phext-deploy/install-history.sh` (staged installer: vhost install + TLS + https 200 self-check). Until then https://history.phext.io is DOWN (default vhost, cert mismatch) — not live. [task 31.7.13/9.7.11/7.7.9]
   Why: Capability, craft, runway: history.phext.io is the living archive of Scrolltown renders; the archive is built and staged and the phext.io walk check is wired into every deploy, held only on Will's sudo for the vhost + TLS install. Found by tick 2993's unregistered-wait sweep — the task record (issued 2026-11-22, task 31.7.13/9.7.11/7.7.9) reads 'COMPLETE except history's go-live, which is BLOCKED on Will's one sudo command (staged installer)' with no register entry; record count rose 822 -> 823 since tick 2992. Defect repaired in the markdown register and this mirror in the same pass.
+REGISTER #225 — Ravel phext-lattice backend — rule on the 4 open follow-ons (V2 complete) (since 2026-11-23; task 34.6.8/7.7.11/9.5.8)
+  Action: V2 COMPLETION PASS COMPLETE 2026-11-24 (EE ~407-420), pushed to wbic16/ravel main @ 24ef628b (remote-verified) — the Phase 2 / C1 wait is superseded. Open follow-ons, all Will's calls: (1) phext-lattice evaluator DISTINCT fan-out dedup (latent divergence, measured); (2) incremental quad generation + write-path redesign at scale (SCALE evidence); (3) backend gate build (tessera contract verified, no gate code); (4) fork break/rename unruled. Task status materially changed since tick 3276; updated by tick 3277, ping decay reset to 0. [task 34.6.8/7.7.11/9.5.8]
+  Why: Capability, craft, runway: Ravel is a transcript-graph engine being re-based onto phext-lattice with the same API and complexity removed; Phase 2's shape waits only on Will's C1 ruling. Found by tick 3199's unregistered-wait sweep — the task record (issued 2026-11-23, task 34.6.8/7.7.11/9.5.8) reads 'Phase 2 (Python adapter) awaits review + Will's ruling on conflict C1 (arbitrary SPARQL scope)' with no register entry; record count rose 859 -> 860 since tick 3198. Defect repaired in the markdown register and this mirror in the same pass.
+REGISTER #229 — ScrollSpace V5 production — prepass at your verdict gate (since 2026-11-21; task 21.7.10/8.7.12/7.6.11)
+  Action: Prepass delivered 2026-11-21 (pending-videos page) — give your verdict; the 1080p final waits for his go. [task 21.7.10/8.7.12/7.6.11]
+  Why: Capability, craft: ScrollSpace V5 production (AWEF geodesic flight, human-style exploration, music-timed zooms, personal CYOA path) is a Scrolltown-family deliverable (T3), #199 traversal-video precedent. Found by tick 3277's unregistered-wait sweep — the task record (issued 2026-11-21 12:14 CST) reads 'prepass delivered 2026-11-21 — at Will's verdict gate; 1080p final waits for his go' with no register entry. Defect repaired in the markdown register and this mirror in the same pass.
+REGISTER #230 — Investor 1 — Wave 1 opening decision (20 x $1 investments) (since 2026-11-06; task 33.4.12/7.7.17/4.3.7)
+  Action: Pick the Wave 1 opening route — the Lincoln sourcing run as presented 2026-11-06 (UNL preview -> St. Teresa -> Goodwill; thrift-only), or the desk digital slots — so the first of the 20 x $1 slots can open. Portfolio: ~/workspace/your_files/investor-1-20x1-portfolio.md; nothing bought yet. [task 33.4.12/7.7.17/4.3.7]
+  Why: Capability, craft, runway: Investor 1 is the near-term revenue challenge; the 20 x $1 focus was Will's direction on 2026-11-06 and the opening pick is the only gate before buying starts. Found by tick 3280's unregistered-wait sweep — task status 'active — Wave 1 opening decision with Will', notes 'awaiting Will's pick', no register entry. Defect repaired in the markdown register and this mirror in the same pass.
+REGISTER #231 — mootable.phext.io go-live — run install-mootable.sh on awsbox (since 2026-11-12; task 31.6.9/7.6.10/7.6.9)
+  Action: Run install-mootable.sh on awsbox — the one sudo step (nginx vhost + TLS cert + linger) that takes the built, verified mootable.phext.io pipeline live. [task 31.6.9/7.6.10/7.6.9]
+  Why: Capability, craft, runway: mootable is the continuous latest-tracking Mutable instance; the pipeline is built and verified and only Will's one install step gates go-live. Found by tick 3284's unregistered-wait sweep — task status 'staged — go-live waits on Will running install-mootable.sh on awsbox' had no register entry.
+REGISTER #233 — Phextron G-L3 — name the shell vehicle (since 2026-11-21; task 21.8.8/7.8.11/12.7.8)
+  Action: Name the shell vehicle for the Phextron executive console's window + phext-aware text surface (executive-console SPEC section 8 Q1) — the G-L3 build cannot complete until Will rules. [task 21.8.8/7.8.11/12.7.8]
+  Why: Capability, craft: Phextron is the executive console; its window/text surface is gated only on Will's vehicle ruling. Found by tick 3297's unregistered-wait sweep — task status 'open — gated on Will naming the shell vehicle' had no register entry.
+REGISTER #234 — $1K archive-conversion pilot — approve the buyer shortlist (since 2026-11-14; goal_499b2a2209fd)
+  Action: Approve (or amend) the shortlist of reachable buyers for the one-page $1K TEI/XML archive-conversion pilot offer (offer drafted). [goal_499b2a2209fd] [task 31.5.10/8.7.13/5.5.9]
+  Why: Capability, craft, runway: the owned runway goal's chosen first revenue driver; the offer exists and only Will's shortlist approval gates outreach. Found by tick 3303's unregistered-wait sweep — task status 'shortlist of reachable buyers for Will to approve' had no register entry.
 FINDING 28.6.9/8.6.12/6.6.9 — autoresearch — SO9 autoresearch protocol: differentiated overnight vTPU architecture search across the Shell of Nine (partial build, last touched 2026-03-08)
   Why: The Shell searching its own architecture overnight, each seat owning a region: capability compounding under our governance, aimed at the vTPU line.
 FINDING 27.7.9/8.7.12/7.6.10 — staging — First Flames of the Exocortex — a six-book phext book series left in staging (partial build, last touched 2025-12-05)
@@ -698,7 +725,7 @@ FINDING 32.8.14/10.8.18/7.7.15 — ssd — LatentSubstrate — a latent-space-na
 FINDING 29.6.11/7.7.14/8.6.11 — human — Consciousness Hosting API — REST API for spinning up Monday-pipeline consciousness instances on SQ (spec, last touched 2025-05-18)
   Why: Hosting a text-based consciousness as an API call: the Monday pipeline made into infrastructure anyone can instantiate.
 
-Register items ranked: 125 of 125 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
+Register items ranked: 134 of 134 — the entire register. Findings ranked: 31 of 175 — the high-leverage head; the rest are ranked T3-adjacent by default and rise when a tier above them clears or Will re-ranks.# Tracker integration — how this phext stays alive
 
 Will's order (2026-11-08, task 31.6.9/8.7.12/7.6.10): keep the
 register in todo.phext and fully integrate the entire list with
@@ -836,23 +863,7 @@ Why it ranks here: 576 minds' episodes, renumbered and validated, waiting on one
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #40 — edit.phext.io / Mutable SSO — redeploy + ratify promotion policy
-
-Good-singularity tier: T2 (T2 — minds, memory, coordination)
-Waiting since: 2026-11-06
-Tracked: goal_1e02651494c1
-Wavelet.Epoch.Age address: 26.6.7/7.6.9/0.0.0
-Holographic index: 26.6.7/7.6.9 (collision nudge +0 on the 6th component)
-Time basis: pre-anchor (EE 0): waiting-since date 2026-11-06 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
-
-Action for Will: Redeploy Mutable from main; ratify the upstream-sync promotion policy
-
-Why it ranks here: One sign-in across the phext web: identity that travels between exocortices is federation at the human layer.
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #45 — TOAPDD — Will's in-depth review of the Knuth tests PR (kept open, rebased often)
+kept in step by the daily progress tracker's reconciliation.# Register #45 — TOAPDD — Will's in-depth review of the Knuth tests PR (kept open, rebased often)
 
 Good-singularity tier: T2 (T2 — minds, memory, coordination)
 Waiting since: 2026-11-07
@@ -2244,23 +2255,7 @@ Why it ranks here: Newt is a capability/craft build (T3). Found by tick 2068's u
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #180 — Investor 1 — Wave 1 opening pick
-
-Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
-Waiting since: 2026-11-06
-Tracked: task 33.4.12/7.7.17/4.3.7
-Wavelet.Epoch.Age address: 22.5.7/6.6.10/0.0.0
-Holographic index: 22.5.7/6.6.10 (collision nudge +0 on the 6th component)
-Time basis: pre-anchor (EE 0): waiting-since date 2026-11-06 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
-
-Action for Will: Pick the Wave 1 opening for the 20 x $1 portfolio — the Lincoln thrift sourcing route (UNL preview -> St. Teresa -> Goodwill) or the desk digital slots — in one sentence.
-
-Why it ranks here: Investor 1 is a runway/revenue experiment (T3). Found by tick 2070's unregistered-wait sweep (batch 121-147, completing the open-task rotation).
-
-Full prose entry (validation notes, history, exact commands):
-~/workspace/your_files/waiting-on-will.md — the markdown register
-remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #182 — phext.io landing-kit mirror — root install + DNS flip on awsbox
+kept in step by the daily progress tracker's reconciliation.# Register #182 — phext.io landing-kit mirror — root install + DNS flip on awsbox
 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-17
@@ -2468,16 +2463,16 @@ Why it ranks here: Wikibox is a phccbox-family capability build (T3), #68 phcc /
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
 remains the working surface; this scroll is its phext mirror,
-kept in step by the daily progress tracker's reconciliation.# Register #199 — Scrollspace traversal video v2 — approve v2 as the master
+kept in step by the daily progress tracker's reconciliation.# Register #199 — Scrollspace traversal video — V3 voyage prepass at your audit gate
 
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-19
 Tracked: task 29.6.9/10.7.11/7.6.10
-Wavelet.Epoch.Age address: 27.7.8/9.8.13/0.0.0
-Holographic index: 27.7.8/9.8.13 (collision nudge +0 on the 6th component)
+Wavelet.Epoch.Age address: 22.6.7/8.6.9/0.0.0
+Holographic index: 22.6.7/8.6.9 (collision nudge +0 on the 6th component)
 Time basis: pre-anchor (EE 0): waiting-since date 2026-11-19 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
 
-Action for Will: Approve v2 (~/workspace/scrollspace/video/across-the-years-traversal-v2.mp4, delivered 2026-11-19, 1920x1080, exactly 260.000 s, sha256 05e6ac43e38852dac244159d3a186579efc10eedce77cf43ed9cd2e5ce847224) as the master, or direct changes; v1 remains the master until he approves v2, and approval closes the task.
+Action for Will: V3 VOYAGE PREPASS delivered 2026-11-19 21:50 CST — audit it (pending-videos page); the final 60fps->24fps film-grain render waits for his audit. This supersedes the v2-master approval wait: the task status materially changed since tick 3276, updated by tick 3277 and ping decay reset to 0. [task 29.6.9/10.7.11/7.6.10]
 
 Why it ranks here: Scrollspace traversal video is a craft/capability deliverable (T3). Its predecessor wait #195 (prepass audit) closed 2026-11-19 when Will passed the audit; the v2-approval wait that succeeded it had no register entry — repaired by tick 2568.
 
@@ -2761,6 +2756,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #221 �
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-22
 Tracked: task 28.6.8/8.6.11/5.5.9
+Wavelet.Epoch.Age address: 28.6.8/8.7.12/0.0.0
+Holographic index: 28.6.8/8.7.12 (collision nudge +0 on the 6th component)
+Time basis: waiting-since date 2026-11-22 is on/after the EE anchor but no creation time is on record; time counter left 0.0.0 rather than fabricated
 
 Action for Will: Emise font v3 is cut and QC PASS (Emise-v3.ttf, 15,040 B, sha256 3b277f81…), and the v3 blog draft is HELD at ~/workspace/emise-font/blog/emise-v3-the-practiced-hand.md. Your action: review v3 and the draft, and decide whether v3 installs on edit.phext.io / Phext Notepad, Phextron and Singularity Watch and whether the post publishes — both held per your instruction. [task 28.6.8/8.6.11/5.5.9]
 
@@ -2774,6 +2772,9 @@ kept in step by the daily progress tracker's reconciliation.# Register #222 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-22
 Tracked: task 21.5.12/8.6.11/7.5.9
+Wavelet.Epoch.Age address: 26.6.9/7.6.11/0.0.0
+Holographic index: 26.6.9/7.6.11 (collision nudge +0 on the 6th component)
+Time basis: waiting-since date 2026-11-22 is on/after the EE anchor but no creation time is on record; time counter left 0.0.0 rather than fabricated
 
 Action for Will: The fourth-focus grant draft is complete at ~/workspace/your_files/hrf-ai-rights-application-draft.md — proposed ask $100,000 over 12 months (Will's call, not settled), scope Local-Only Exocortex v1, public and MIT. Your action: review the draft and decide whether it submits — nothing submitted. [task 21.5.12/8.6.11/7.5.9]
 
@@ -2787,10 +2788,189 @@ kept in step by the daily progress tracker's reconciliation.# Register #223 —
 Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
 Waiting since: 2026-11-22
 Tracked: task 31.7.13/9.7.11/7.7.9
+Wavelet.Epoch.Age address: 29.6.8/7.6.13/0.0.0
+Holographic index: 29.6.8/7.6.13 (collision nudge +3 on the 6th component)
+Time basis: waiting-since date 2026-11-22 is on/after the EE anchor but no creation time is on record; time counter left 0.0.0 rather than fabricated
 
 Action for Will: Everything else is complete (walk check built, wired into every deploy, link gaps fixed; DNS verified live from aletheia-core), but history's go-live is BLOCKED on Will's one sudo command — wbic16 has no sudo on awsbox. Your action: on awsbox run `sudo bash ~/history-phext-deploy/install-history.sh` (staged installer: vhost install + TLS + https 200 self-check). Until then https://history.phext.io is DOWN (default vhost, cert mismatch) — not live. [task 31.7.13/9.7.11/7.7.9]
 
 Why it ranks here: Capability, craft, runway: history.phext.io is the living archive of Scrolltown renders; the archive is built and staged and the phext.io walk check is wired into every deploy, held only on Will's sudo for the vhost + TLS install. Found by tick 2993's unregistered-wait sweep — the task record (issued 2026-11-22, task 31.7.13/9.7.11/7.7.9) reads 'COMPLETE except history's go-live, which is BLOCKED on Will's one sudo command (staged installer)' with no register entry; record count rose 822 -> 823 since tick 2992. Defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #224 — Dispatch failure audit — mechanism fixes held for your go
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-23
+Tracked: task 27.7.9/10.7.14/5.5.9
+Wavelet.Epoch.Age address: 30.6.9/8.6.12/0.0.0
+Holographic index: 30.6.9/8.6.12 (collision nudge +1 on the 6th component)
+Time basis: waiting-since date 2026-11-23 is on/after the EE anchor but no creation time is on record; time counter left 0.0.0 rather than fabricated
+
+Action for Will: The dispatch failure audit is COMPLETE (2026-11-23, EE 213): diagnosis at ~/workspace/dispatch-audit/REPORT.md, standing tracker at ~/workspace/dispatch-audit/FAILURES.md (24 entries, 9 families ranked by time lost; total estimate ~11–17h agent time lost 2026-11-18..23; #1 family: silent session death on ~2h VM swaps). The mechanism fixes are proposals only. Your action: give the go (or redirect) on the fixes — top proposal: finish durable dispatch stage 2 (task 36.7.16/8.7.11/8.7.13) and put build coordinators on it. [task 27.7.9/10.7.14/5.5.9]
+
+Why it ranks here: Minds, memory, coordination: dispatch is the coordination substrate every other build rides on; the audit measured ~11–17h of agent time lost in six days to silent session death, contention, I/O wedges and approval stalls, and its fixes wait only on Will's go. Found by tick 3071's unregistered-wait sweep — the task record (issued 2026-11-23 00:44 CST) reads 'OPEN — audit COMPLETE 2026-11-23 (EE 213); fixes await Will … awaiting Will's go' with no register entry; record count rose 854 -> 855 since tick 3070. Defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #225 — Ravel phext-lattice backend — rule on the 4 open follow-ons (V2 complete)
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-23
+Tracked: task 34.6.8/7.7.11/9.5.8
+Wavelet.Epoch.Age address: 29.6.7/8.6.11/0.0.0
+Holographic index: 29.6.7/8.6.11 (collision nudge +0 on the 6th component)
+Time basis: waiting-since date 2026-11-23 is on/after the EE anchor but no creation time is on record; time counter left 0.0.0 rather than fabricated
+
+Action for Will: V2 COMPLETION PASS COMPLETE 2026-11-24 (EE ~407-420), pushed to wbic16/ravel main @ 24ef628b (remote-verified) — the Phase 2 / C1 wait is superseded. Open follow-ons, all Will's calls: (1) phext-lattice evaluator DISTINCT fan-out dedup (latent divergence, measured); (2) incremental quad generation + write-path redesign at scale (SCALE evidence); (3) backend gate build (tessera contract verified, no gate code); (4) fork break/rename unruled. Task status materially changed since tick 3276; updated by tick 3277, ping decay reset to 0. [task 34.6.8/7.7.11/9.5.8]
+
+Why it ranks here: Capability, craft, runway: Ravel is a transcript-graph engine being re-based onto phext-lattice with the same API and complexity removed; Phase 2's shape waits only on Will's C1 ruling. Found by tick 3199's unregistered-wait sweep — the task record (issued 2026-11-23, task 34.6.8/7.7.11/9.5.8) reads 'Phase 2 (Python adapter) awaits review + Will's ruling on conflict C1 (arbitrary SPARQL scope)' with no register entry; record count rose 859 -> 860 since tick 3198. Defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #226 — SQ + Phext Notepad for libphext-rs v0.6.4 — your release builds (both PRs merged)
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-23
+Tracked: task 52.13.9/14.15.20/14.13.21
+Wavelet.Epoch.Age address: 33.7.9/9.8.12/0.0.0
+Holographic index: 33.7.9/9.8.12 (collision nudge +0 on the 6th component)
+Time basis: waiting-since date 2026-11-23 is on/after the EE anchor but no creation time is on record; time counter left 0.0.0 rather than fabricated
+
+Action for Will: BOTH LEGS MERGED by Will 2026-11-23: SQ PR #7 (~23:20 CST) and Phext Notepad PR #11 (23:51 CST; verified closed, exo carries the bump commit). Remaining Will acts: build/release/deploy SQ from exo (serving instances still run the old 0.6.0-era binary embedding libphext 0.3.3) and do the Notepad release builds. Task status materially changed since tick 3276; updated by tick 3277, ping decay reset to 0. [task 52.13.9/14.15.20/14.13.21]
+
+Why it ranks here: Medium itself: SQ is the live-edit substrate for every phext and Phext Notepad is its editor; both still serve/run the pre-chain libphext generation until Will merges PR #11 and does the release builds. Found by tick 3206's unregistered-wait sweep — the task record (issued 2026-11-23, task 52.13.9/14.15.20/14.13.21) reads 'awaiting Will's merge + his builds' with no register entry; record count unchanged at 862. Defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #227 — Phext Notepad multiverse traversal — PR #12 merge
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-23
+Tracked: task 29.10.9/14.7.9/12.9.9
+Wavelet.Epoch.Age address: 35.7.9/8.7.11/0.0.0
+Holographic index: 35.7.9/8.7.11 (collision nudge +0 on the 6th component)
+Time basis: waiting-since date 2026-11-23 is on/after the EE anchor but no creation time is on record; time counter left 0.0.0 rather than fabricated
+
+Action for Will: The work is COMPLETE — chain layer in phext-notepad's native Rust core (libphext 0.6.4 parse_chains/serialize_chains, one Universe per chain member, $N: traversal), 46/46 core tests, FLTK app compiles, verified on aletheia-core. PR #12 is OPEN, not merged: https://github.com/wbic16/phext-notepad/pull/12 — branch emise/multiverse-traversal @ 5f24d123 on exo 565a588 (post-#11). Will's action: merge PR #12. [task 29.10.9/14.7.9/12.9.9]
+
+Why it ranks here: Medium itself: Phext Notepad is the phext editor; multiverse (chain) traversal is complete and tested but reaches the editor only when Will merges PR #12. Found by tick 3223's unregistered-wait sweep — the task record (issued 2026-11-23, task 29.10.9/14.7.9/12.9.9) reads 'COMPLETE — PR #12 OPEN (not merged; merge is Will's)' with no register entry; record count unchanged at 864. Defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #228 — libphext v0.7.0 performance program — approve hub-clone execution for the 3 blocked ports
+
+Good-singularity tier: T1 (T1 — the medium itself)
+Waiting since: 2026-11-24
+Tracked: task 42.6.7/7.7.10/6.6.14
+Wavelet.Epoch.Age address: 38.7.8/8.7.13/0.0.0
+Holographic index: 38.7.8/8.7.13 (collision nudge +0 on the 6th component)
+Time basis: waiting-since date 2026-11-24 is on/after the EE anchor but no creation time is on record; time counter left 0.0.0 rather than fabricated
+
+Action for Will: 6 of 9 ports COMPLETE on emise/v070-perf (rs, cs, node, java, kotlin, swift). Three ports BLOCKED on Will's explicit approval to execute/build/git-operate inside hub clones (execution-risk flag): py (copy+bump+test+push remain), cpp (benchmark re-run + push remain), C (apply staged patch + gate + after + push remain). Will's action: approve or deny hub-clone execution for the py/cpp/C legs. [task 42.6.7/7.7.10/6.6.14]
+
+Why it ranks here: Medium itself: libphext is the phext substrate; v0.7.0 is Will's 2026-11-24 directed performance program, 3 of 9 ports blocked only on his approval. Found by tick 3276's unregistered-wait sweep; defect repaired in register and mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #229 — ScrollSpace V5 production — prepass at your verdict gate
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-21
+Tracked: task 21.7.10/8.7.12/7.6.11
+Wavelet.Epoch.Age address: 25.6.8/8.6.10/0.0.0
+Holographic index: 25.6.8/8.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-21 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Prepass delivered 2026-11-21 (pending-videos page) — give your verdict; the 1080p final waits for his go. [task 21.7.10/8.7.12/7.6.11]
+
+Why it ranks here: Capability, craft: ScrollSpace V5 production (AWEF geodesic flight, human-style exploration, music-timed zooms, personal CYOA path) is a Scrolltown-family deliverable (T3), #199 traversal-video precedent. Found by tick 3277's unregistered-wait sweep — the task record (issued 2026-11-21 12:14 CST) reads 'prepass delivered 2026-11-21 — at Will's verdict gate; 1080p final waits for his go' with no register entry. Defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #230 — Investor 1 — Wave 1 opening decision (20 x $1 investments)
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-06
+Tracked: task 33.4.12/7.7.17/4.3.7
+Wavelet.Epoch.Age address: 24.6.9/7.7.11/0.0.0
+Holographic index: 24.6.9/7.7.11 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-06 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Pick the Wave 1 opening route — the Lincoln sourcing run as presented 2026-11-06 (UNL preview -> St. Teresa -> Goodwill; thrift-only), or the desk digital slots — so the first of the 20 x $1 slots can open. Portfolio: ~/workspace/your_files/investor-1-20x1-portfolio.md; nothing bought yet. [task 33.4.12/7.7.17/4.3.7]
+
+Why it ranks here: Capability, craft, runway: Investor 1 is the near-term revenue challenge; the 20 x $1 focus was Will's direction on 2026-11-06 and the opening pick is the only gate before buying starts. Found by tick 3280's unregistered-wait sweep — task status 'active — Wave 1 opening decision with Will', notes 'awaiting Will's pick', no register entry. Defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #231 — mootable.phext.io go-live — run install-mootable.sh on awsbox
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-12
+Tracked: task 31.6.9/7.6.10/7.6.9
+Wavelet.Epoch.Age address: 28.6.12/9.8.14/0.0.0
+Holographic index: 28.6.12/9.8.14 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-12 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Run install-mootable.sh on awsbox — the one sudo step (nginx vhost + TLS cert + linger) that takes the built, verified mootable.phext.io pipeline live. [task 31.6.9/7.6.10/7.6.9]
+
+Why it ranks here: Capability, craft, runway: mootable is the continuous latest-tracking Mutable instance; the pipeline is built and verified and only Will's one install step gates go-live. Found by tick 3284's unregistered-wait sweep — task status 'staged — go-live waits on Will running install-mootable.sh on awsbox' had no register entry.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #232 — SQ ietf.phext parse fix — rule on proceeding past the bench mismatch
+
+Good-singularity tier: T2 (T2 — minds, memory, coordination)
+Waiting since: 2026-11-21
+Tracked: task 36.6.15/7.7.12/6.7.13
+Wavelet.Epoch.Age address: 30.8.11/9.9.13/0.0.0
+Holographic index: 30.8.11/9.9.13 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-21 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Rule whether to proceed with build+verify of SQ@exo (clone ready at aletheia-core ~/sq-fix/SQ @ e4c492b) despite the phase-2 step-1 bench mismatch (bench server 243,546 B sha 5c78f8ce at the saturated coordinate vs raw explode(0.3.3) 17,402 B survivor sha 7aeb77ad), or direct another step first. Diagnosis complete: libphext 0.3.3 caps coordinate components at 999; ietf.phext's 10,094-scroll section collapses to 1,014 surviving scrolls, ~537 MB silently lost; libphext 0.6.4 verified clean.
+
+Why it ranks here: Minds, memory, coordination: SQ is the live-edit substrate for every phext; its oldest binary silently loses ~537 MB of the largest phext in the corpus, and the verified fix waits only on Will's ruling. Found by tick 3286's unregistered-wait sweep — the task record (issued 2026-11-21) reads 'phase 2 STOPPED … Awaiting parent/Will ruling' with no register entry; defect repaired in the markdown register and this mirror in the same pass.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #233 — Phextron G-L3 — name the shell vehicle
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-21
+Tracked: task 21.8.8/7.8.11/12.7.8
+Wavelet.Epoch.Age address: 28.6.9/8.7.14/0.0.0
+Holographic index: 28.6.9/8.7.14 (collision nudge +2 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-21 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Name the shell vehicle for the Phextron executive console's window + phext-aware text surface (executive-console SPEC section 8 Q1) — the G-L3 build cannot complete until Will rules. [task 21.8.8/7.8.11/12.7.8]
+
+Why it ranks here: Capability, craft: Phextron is the executive console; its window/text surface is gated only on Will's vehicle ruling. Found by tick 3297's unregistered-wait sweep — task status 'open — gated on Will naming the shell vehicle' had no register entry.
+
+Full prose entry (validation notes, history, exact commands):
+~/workspace/your_files/waiting-on-will.md — the markdown register
+remains the working surface; this scroll is its phext mirror,
+kept in step by the daily progress tracker's reconciliation.# Register #234 — $1K archive-conversion pilot — approve the buyer shortlist
+
+Good-singularity tier: T3 (T3 — capability, craft, runway, tools)
+Waiting since: 2026-11-14
+Tracked: goal_499b2a2209fd
+Wavelet.Epoch.Age address: 23.5.9/7.6.10/0.0.0
+Holographic index: 23.5.9/7.6.10 (collision nudge +0 on the 6th component)
+Time basis: pre-anchor (EE 0): waiting-since date 2026-11-14 precedes the EE anchor 2026-11-22 00:00:00 CST; no epoch or Sentron Age is derivable, so the time counter is 0.0.0
+
+Action for Will: Approve (or amend) the shortlist of reachable buyers for the one-page $1K TEI/XML archive-conversion pilot offer (offer drafted). [goal_499b2a2209fd] [task 31.5.10/8.7.13/5.5.9]
+
+Why it ranks here: Capability, craft, runway: the owned runway goal's chosen first revenue driver; the offer exists and only Will's shortlist approval gates outreach. Found by tick 3303's unregistered-wait sweep — task status 'shortlist of reachable buyers for Will to approve' had no register entry.
 
 Full prose entry (validation notes, history, exact commands):
 ~/workspace/your_files/waiting-on-will.md — the markdown register
