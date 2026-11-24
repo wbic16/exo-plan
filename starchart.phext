@@ -46,12 +46,14 @@ never the .phext; rebuild after every edit.
 
 ## Counts (calculated from the records by the builder)
 
-Sightings recorded: 1
+Sightings recorded: 3
 Migrated to moonshots.phext: 0
-Still charted (unpromoted): 1
+Still charted (unpromoted): 3
 
 ## Index (sighting — title — coordinate — captured)
 - 1. Solving typos — Craig Weiss X post — 12.5.7/7.6.8/5.5.6 — 2026-11-24
+- 2. inky for Android — 23.8.10/8.7.11/6.6.8 — 2026-11-24
+- 3. inky for iOS — 19.7.9/8.7.11/6.6.8 — 2026-11-24
 # Sighting 1 — Solving typos — Craig Weiss X post
 
 Coordinate: 12.5.7/7.6.8/5.5.6
@@ -75,3 +77,47 @@ Form: text only — no link, no media, no quote. The star's name/theme: solving 
 Enrichment: Content enriched 2026-11-24 in a second inscription pass, from the verified read. V1 of this entry (exo-plan commit ea2c213) recorded the content as NOT YET READ; nothing in v1 asserted what the post says.
 
 Hop-check on listing (charter hop rule, Will 2026-11-24 15:05 CST): a reachable rung exists in embryo — the Singular checker (check_singular.py + atlas.tsv in Will's tooling) already flags words outside his authored lexicon in his own text, a working typo sentinel for his writing. No hop shipped at inscription; the assessment is recorded for Will's call. The star stays charted as the full moonshot regardless.
+# Sighting 3 — inky for iOS
+
+Coordinate: 19.7.9/8.7.11/6.6.8
+Sighting number: 3 (permanent in this chart)
+Seed: inky for iOS — port of the inky writing tool assistant to iOS
+
+URL: https://github.com/wbic16/inky
+Author: Will Bickford (direction, main chat)
+Captured: 2026-11-24
+Star / theme: inky for iOS
+
+Provenance: Will's direction, main chat, 2026-11-24 15:38 CST: "log the android and ios ports as Moonshots in waiting."
+
+Content (CHARTED — Will's direction, main chat, 2026-11-24 15:38 CST):
+inky — the writing tool assistant that shipped today to wbic16/inky (commit 0a1e1e56) — ported to iOS.
+
+The engine is one self-contained stdlib Python file of pure deterministic text logic, so the port itself is not the obstacle (a Swift port of the engine, or an embedded-Python shell, are both straightforward shapes). Product shape, as on Android: a keyboard — on iOS, a keyboard extension.
+
+Prerequisite, named at identification (opportunity-identification discipline): an Apple build machine and a test device. Xcode runs only on macOS, and a keyboard extension can only be truly tested on a real iPhone. Neither is in the fleet: no Mac of any kind, no iPhone. The minimum kit, sized in the main chat 2026-11-24 15:37 CST: a used Apple-silicon Mac mini (M1 or better, ~$300-400 — it would serve as the ranch's iOS build node) and a used iPhone 12 or newer (~$200) as a test device. Will named the need himself today, 15:37 CST: "i need an iPhone and a Mac..."
+
+Hop-check on listing (charter hop rule, Will 2026-11-24 15:05 CST): NOT REACHABLE with current assets. The block is exact and singular: no Apple hardware in the fleet — no Mac to run Xcode, no iPhone to test on. Every other ingredient exists (the engine, the design, the Android rung's proof of shape). The hop waits on the hardware decision, which is Will's: acquire the ~$500 used kit (Mac mini build node + test iPhone) and this star's first rung opens. Until then it stays charted as a Moonshot in waiting, its prerequisite on the record.
+# Sighting 2 — inky for Android
+
+Coordinate: 23.8.10/8.7.11/6.6.8
+Sighting number: 2 (permanent in this chart)
+Seed: inky for Android — port of the inky writing tool assistant to Android
+
+URL: https://github.com/wbic16/inky
+Author: Will Bickford (direction, main chat)
+Captured: 2026-11-24
+Star / theme: inky for Android
+
+Provenance: Will's direction, main chat, 2026-11-24 15:38 CST: "log the android and ios ports as Moonshots in waiting."
+
+Content (CHARTED — Will's direction, main chat, 2026-11-24 15:38 CST):
+inky — the writing tool assistant that shipped today to wbic16/inky (commit 0a1e1e56) — ported to Android.
+
+The engine is one self-contained stdlib Python file (inky.py) of pure text logic: move generation, a feature evaluation (lexicon fit + structure fit), beam search over the sentence, tiers. No services, no state — it ports cleanly in principle.
+
+Product shape: a keyboard (IME). A writing assistant belongs where writing happens.
+
+Rungs, as estimated in the main chat 2026-11-24 15:36 CST: the quick rung is a Chaquopy shell app (the existing Python engine running unmodified inside an Android shell), ~6-10 EE; the full rung is the engine ported to Kotlin as a keyboard, ~40-60 EE.
+
+Hop-check on listing (charter hop rule, Will 2026-11-24 15:05 CST): REACHABLE — and shipped the same hour. The ranch hub (aletheia-core) already carries a full Android toolchain (JDK 21, Android SDK platform 34 + build-tools 34/35, Gradle 8.10.2), so the quick rung was built immediately: a Chaquopy 16.1.0 shell app (io.phext.inky, minSdk 26, targetSdk 34, debug-signed) wrapping the real engine unmodified — bundled inky.py sha256 b92cf2fbea517afffb1625d395073007312c4aee07efc0e29226c51e1a4167b4 matches the shipped source exactly; a thin runner drives it through its own CLI surface. Smoke test: planted typos corrected (teh/thier/freind/recieved class), the hippo form/from flagged in the analysis and NOT auto-fixed, scored lines shown with tiers. Shipped to wbic16/inky@exo commit 6b2aa6e as android/inky-android.apk (37,525,914 bytes, sha256 1a7c35d96c8cd2cde1c396658a6fd457b8f35f500e42ce11ffbffee1e9e4eb85), project sources beside it under android/, README section recording the rung. (A GitHub release asset was attempted first; the API helper cannot perform binary uploads to uploads.github.com, so the APK ships as a repo file.) The star stays charted as the full moonshot regardless: the Kotlin keyboard port is the moonshot; the Chaquopy shell is the reachable rung, now landed.
