@@ -1,0 +1,57 @@
+# starchart.phext — the chart of future Moonshots
+
+Created 2026-11-24 at Will's direction (main chat,
+2026-11-24 15:01 CST): a new phext in exo-plan focused on
+future Moonshots.
+
+## Charter
+
+starchart.phext is the chart of future Moonshots —
+candidates not yet numbered into moonshots.phext. An entry
+here is a sighting, not a commitment: charting something
+records that it was seen and judged worth watching; it
+promises nothing.
+
+Promotion: a sighting becomes a numbered Moonshot only by
+Will's call. On promotion the entry migrates to
+moonshots.phext (the register of record, same exo-plan
+home) and takes its permanent moonshot number there; this
+chart keeps a migration note at the sighting's coordinate.
+Numbers are never reused in either register.
+
+## Entry scheme
+
+Sightings are numbered monotonically from 1, in the order
+charted; a sighting number is permanent in this chart.
+Each sighting lives at a holographic coordinate computed
+once, at inscription, from the sighting's own seed line by
+the Singular merge (task_coordinate.py), and stored in
+the source.
+
+Source of truth: starchart-source.json beside the builder
+(build_starchart_phext.py) in exo-plan. Edit the JSON,
+never the .phext; rebuild after every edit.
+
+## Counts (calculated from the records by the builder)
+
+Sightings recorded: 1
+Migrated to moonshots.phext: 0
+Still charted (unpromoted): 1
+
+## Index (sighting — title — coordinate — captured)
+- 1. Craig Weiss X post — 12.5.7/7.6.8/5.5.6 — 2026-11-24
+# Sighting 1 — Craig Weiss X post
+
+Coordinate: 12.5.7/7.6.8/5.5.6
+Sighting number: 1 (permanent in this chart)
+Seed: Craig Weiss post — first sighting charted in starchart, the chart of future Moonshots
+
+URL: https://x.com/craigweiss/status/2125331955625390138?a=LMVK7swKwsoufLcMMsY&s=19
+Author: @craigweiss
+Status ID: 2125331955625390138
+Captured: 2026-11-24
+
+Provenance: Posted by Will in the main chat, 2026-11-24 15:01 CST, with the direction to chart it in starchart.phext.
+
+Content: NOT YET READ
+The post's text was not captured at inscription (x.com fetch blocked for the inscribing agent; a parallel read was running in the main thread). Nothing about the post's content is asserted here; the sighting records the link and its provenance only. To be enriched when the text is in hand.
