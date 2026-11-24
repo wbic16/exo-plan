@@ -19,6 +19,18 @@ home) and takes its permanent moonshot number there; this
 chart keeps a migration note at the sighting's coordinate.
 Numbers are never reused in either register.
 
+## The hop rule — standing (Will, 2026-11-24 15:05 CST)
+
+Will, verbatim: "whenever I list a new star, see if we can
+already hop to it. just ship immediately if we can."
+
+So: every new star gets a hop-check on listing — an honest
+assessment of whether the star is already reachable with
+current assets. If it is, we ship immediately instead of
+charting-and-waiting, and the entry records the hop and what
+shipped. The star stays charted as the full moonshot
+regardless; a hop ships only the reachable rung.
+
 ## Entry scheme
 
 Sightings are numbered monotonically from 1, in the order
@@ -39,8 +51,8 @@ Migrated to moonshots.phext: 0
 Still charted (unpromoted): 1
 
 ## Index (sighting — title — coordinate — captured)
-- 1. Craig Weiss X post — 12.5.7/7.6.8/5.5.6 — 2026-11-24
-# Sighting 1 — Craig Weiss X post
+- 1. Solving typos — Craig Weiss X post — 12.5.7/7.6.8/5.5.6 — 2026-11-24
+# Sighting 1 — Solving typos — Craig Weiss X post
 
 Coordinate: 12.5.7/7.6.8/5.5.6
 Sighting number: 1 (permanent in this chart)
@@ -49,9 +61,17 @@ Seed: Craig Weiss post — first sighting charted in starchart, the chart of fut
 URL: https://x.com/craigweiss/status/2125331955625390138?a=LMVK7swKwsoufLcMMsY&s=19
 Author: @craigweiss
 Status ID: 2125331955625390138
+Posted: 2026-11-24 14:53 CST
 Captured: 2026-11-24
+Star / theme: Solving typos
 
 Provenance: Posted by Will in the main chat, 2026-11-24 15:01 CST, with the direction to chart it in starchart.phext.
 
-Content: NOT YET READ
-The post's text was not captured at inscription (x.com fetch blocked for the inscribing agent; a parallel read was running in the main thread). Nothing about the post's content is asserted here; the sighting records the link and its provenance only. To be enriched when the text is in hand.
+Content (READ — verified by live read and Will's own screenshot, 2026-11-24):
+"i hate typos. who is solving typos?"
+
+Form: text only — no link, no media, no quote. The star's name/theme: solving typos.
+
+Enrichment: Content enriched 2026-11-24 in a second inscription pass, from the verified read. V1 of this entry (exo-plan commit ea2c213) recorded the content as NOT YET READ; nothing in v1 asserted what the post says.
+
+Hop-check on listing (charter hop rule, Will 2026-11-24 15:05 CST): a reachable rung exists in embryo — the Singular checker (check_singular.py + atlas.tsv in Will's tooling) already flags words outside his authored lexicon in his own text, a working typo sentinel for his writing. No hop shipped at inscription; the assessment is recorded for Will's call. The star stays charted as the full moonshot regardless.
