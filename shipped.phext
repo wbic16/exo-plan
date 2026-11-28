@@ -1,0 +1,77 @@
+# shipped.phext — finished Moonshots, tended
+
+Will's ruling (PH: Revenue, 2026-11-22 08:08 CST): "add a
+shipped.phext, also tracked in exo-plan, for tending
+finished Moonshots. We don't let them languish. We tend
+the garden."
+
+Purpose, in Will's words: "We don't let them languish.
+We tend the garden."
+
+A moonshot that ships gets an entry here, cross-linked both
+ways with its moonshots.phext scroll (number + coordinate).
+The shipped set is derived from the receipts — audit chains,
+ship commits, hash verifications, live-surface checks, state
+files — never from a claim alone. Receipts are durable
+artifacts that stand on their own (Will's definition,
+2026-11-21). Components shipped inside a continuing moonshot
+are not a finished moonshot and do not appear here.
+
+Migration gate (Will, 2026-11-22 08:09 CST; docs clause
+added 08:36 CST): (a) the stated completion bar is met;
+(b) the receipts stand on their own; (c) an audit verdict
+says READY; (c') a QC signoff, and (c") the project's
+behavior documented on docs.phext.io — Will's shipped rule
+(2026-11-22 08:36 CST): "before projects can be
+considered shipped, they must have a QC signoff and
+documented behavior on docs.phext.io"; (d) the shipped
+entry is written at migration, tending items included,
+stamped. Moonshot numbers are permanent across both
+registers. Tending cadence is design work for Will / W4 and
+is not invented here.
+
+Shipped entries: 1 (calculated from the records)
+
+Index (moonshot — shipped date — entry coordinate):
+- #3 rfcbox — shipped 2026-11-18 — 22.8.12/10.9.14/8.7.9 (moonshot scroll: 24.7.10/10.8.13/7.7.9)
+# Shipped — Moonshot 3: rfcbox
+
+Shipped entry coordinate: 22.8.12/10.9.14/8.7.9
+Moonshot: #3 rfcbox — moonshots.phext at 24.7.10/10.8.13/7.7.9 (the number is permanent across both registers)
+Shipped: 2026-11-18
+
+What shipped:
+ietf.phext — every IETF standard in one phext: 10,052 records (9,863 issued RFCs + 189 not-issued, annotated), 9,856 full texts, 96,168 reference edges, 6,888 implementation links across 88 projects; 564,589,207 bytes, sha256 9ecd7946…. Published into wbic16/rfcbox@exo as a 5-part xz stream with a setup.sh that reassembles and hash-verifies; served over SQ (tenant p=ietf).
+
+Verification evidence (the receipts):
+- Task record 25.6.9/8.6.10/6.6.9 (tasks-source.json): status 'COMPLETE — READY on all surfaces (Judge PASS; file + free-fall mirror + SQ hosting all serve sha256 9ecd7946…)'.
+- Artifact of record: ietf.phext, 564,589,207 bytes, sha256 9ecd7946… (size corroborated in the willbox task record 27.8.10/11.8.14/8.7.9: 'ietf.phext 564,589,207 B raw (wbic16/rfcbox@exo, xz 5 parts + setup.sh)').
+- Corpus counts from the audited build record: 10,052 records; 96,168 reference edges; 6,888 implementation links across 88 projects.
+- Serving: SQ endpoint on logos-prime (tenant p=ietf) live at ship; access documented in wbic16/rfcbox docs/access.md (API key custody: Watch/Orion; the key is never printed).
+- Mirror: free-fall holds ietf.phext + ietf-source.json + ietf.index.json, hash-verified on arrival (task 25.6.9 results).
+- Docs-clause check (Will's shipped rule, 2026-11-22): from aletheia-core, docs.phext.io returns NXDOMAIN (ranch resolver; 1.1.1.1 concurs) while phext.io resolves to 44.248.235.76 and serves 200; bypassing DNS, that host answers Host: docs.phext.io with its default 404 ('404 — Exocortex'), 0 rfcbox/ietf mentions. No rfcbox behavior documentation exists on docs.phext.io — clause (c″) is open and carried as a tending item.
+
+Migration gate, shown against this entry:
+- (a) Stated completion bar met: The One Day Build's bar (Will, 2026-11-18): every IETF standard in one phext, MOAT-ruled, organized by exocortex priority, with implementing projects and the dependency graph captured in the coordinate space. Met 2026-11-18 — the full corpus landed with the scope extensions included.
+- (b) Receipts stand on their own: Ship artifact + hash + repo + mirror + live endpoint, each independently checkable: ietf.phext 564,589,207 B, sha256 9ecd7946…, held at wbic16/rfcbox@exo (5-part xz stream + setup.sh that reassembles and hash-verifies) and mirrored on free-fall.
+- (c) Audit verdict READY: Judge audit chain of record: initial verdict NOT READY on one leg → fix landed in rfcbox → re-audit PASS (2026-11-18 10:10 CST): 'READY on all surfaces.' This chain is the migration gate's exemplar.
+- (c′) QC signoff (shipped rule, Will 2026-11-22 08:36 CST): STANDS. Will's rule: 'before projects can be considered shipped, they must have a QC signoff and documented behavior on docs.phext.io.' The QC signoff is the Judge audit chain at (c) — PASS, READY on all surfaces, 2026-11-18.
+- (c″) Behavior documented on docs.phext.io (shipped rule, Will 2026-11-22 08:36 CST): OPEN — the entry's one open clause. Checked 2026-11-22 from aletheia-core (ranch vantage; this VM's DNS is not evidence): docs.phext.io does not resolve — NXDOMAIN from the ranch resolver, confirmed via 1.1.1.1 — and the phext.io host (44.248.235.76) answers the name with its default 404 ('404 — Exocortex'), zero rfcbox/ietf content. There is no rfcbox behavior documentation on docs.phext.io to cite. Recorded below as a tending item; the migration stands — the rule arrived 2026-11-22, after migration, and the register records its arrival and the gap rather than un-migrating.
+- (d) Shipped entry written at migration, tending items included: This entry — written 2026-11-22 at migration, tending items below, each last-tended stamped with the ship date 2026-11-18.
+
+Tending — what must be checked, refreshed, or kept alive:
+- Corpus currency — new RFCs issue over time; ietf.phext is the 2026-11-18 snapshot. A refresh re-runs the rfcbox build and re-audits before the hosted artifact is swapped. Mechanism (2026-11-22): the rfcbox crate's fetch-latest feature — requirements spec ~/workspace/your_files/rfcbox-crate-requirements.md §4; build task 39.6.7/7.6.11/6.5.8 — is the mechanism that tends this item: it discovers RFCs published after the snapshot from the RFC Editor's index, fetches them verbatim, hashes them, and appends them as scrolls with their reference edges computed into the graph; a refresh lands as a new audited snapshot, never an in-place edit.
+  Origin: Build record, task 25.6.9/8.6.10/6.6.9 (the corpus is a snapshot of the RFC Editor's index as of the build).
+  Last tended: 2026-11-18
+- Endpoint health — the SQ endpoint serving ietf.phext (logos-prime, tenant p=ietf) must keep answering; its API key custody sits with Watch/Orion.
+  Origin: Access doc, wbic16/rfcbox docs/access.md (Reed's leg of the One Day Build).
+  Last tended: 2026-11-18
+- Repo state — wbic16/rfcbox@exo holds the artifact as a 5-part xz stream + setup.sh; reassembly must keep verifying against the audited sha256 9ecd7946….
+  Origin: willbox task record 27.8.10/11.8.14/8.7.9 (rfcbox part of record); rfcbox repo itself.
+  Last tended: 2026-11-18
+- Mirror parity — the free-fall mirror (ietf.phext + ietf-source.json + ietf.index.json) stays in step with the audited artifact at every refresh.
+  Origin: Task 25.6.9 results: mirror hash-verified on arrival, 2026-11-18.
+  Last tended: 2026-11-18
+- Document rfcbox behavior on docs.phext.io (Will's shipped rule, 2026-11-22) — the docs clause (c″) of the migration gate. Checked 2026-11-22 from aletheia-core: docs.phext.io is NXDOMAIN (ranch resolver + 1.1.1.1 concur) and the phext.io host answers the name with its default 404 — no rfcbox behavior documentation exists there to cite. Tending this item means the documented behavior standing on docs.phext.io and its page cited in this entry, closing clause (c″). || STAGED (2026-11-22, EE 89): the docs.phext.io site is built and its launch package is staged on awsbox (~/docs-phext-launch/: deploy.sh + generator + nginx configs + runbook + the site prebuilt from wbic16/phdoc@d9f3aa5). Local proof passed: 39 HTML pages — rfcbox latest reference, rfcbox history index, and one historical page per audited commit (32) among them — 0 broken internal links, screenshots verified; the rfcbox chain head (da2c4d704888) equals its latest.md scanned-at commit. DNS precondition changed since the check above: re-verified from aletheia-core at EE 88, docs.phext.io now resolves to 44.248.235.76 (Will added the record 2026-11-22). The deploy step (called by the awsbox deploy roll-up) re-verifies the live phdoc exports before installing, per Will's gate of 2026-11-22 10:11 CST. This item closes — and clause (c'') with it — only when the site verifies LIVE with rfcbox's reference on it; until that live verification exists it stays untended.
+  Origin: Will's shipped rule (PH: Revenue, 2026-11-22 08:36 CST) + the docs.phext.io check from aletheia-core, 2026-11-22 (gate-amendment pass on this register).
+  Last tended: not yet tended

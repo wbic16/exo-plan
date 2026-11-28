@@ -1,0 +1,285 @@
+# moonshots.phext — the Moonshot registry
+
+Will's ruling (PH: Revenue, 2026-11-22 08:06 CST, EE 70):
+"number Moonshots monotonically from inception. Track them in
+moonshots.phext and keep them in exo-plan."
+
+His framing, verbatim: "we've not been planning ahead or
+executing to a design until this wavelet (W4)" — Wavelet 4
+(2026-11-22–28) is where planned, to-a-design execution
+begins. The eleven moonshots below predate it as pushes,
+not plans.
+
+## WIP limit and the migration gate
+
+Will's question (2026-11-22 08:09 CST): "what's needed to
+migrate Moonshots to shipped? Keep a Moonshots wip limit
+of 10."
+
+WIP LIMIT: at most 10 moonshots in WIP at any time.
+A moonshot migrates to shipped.phext (the companion register,
+same exo-plan home) when ALL of these stand:
+(a) its stated completion bar is met — bars are W4 design
+    work; a moonshot without a stated bar cannot migrate,
+    because shipped would be unverifiable;
+(b) the receipts stand on their own — durable artifacts that
+    stand on their own (Will's definition): ship commits,
+    hashes, live verifications;
+(c) an audit verdict of READY, on the QC-gate pattern —
+    ietf.phext's audit chain is the exemplar;
+(c') a QC signoff, AND
+(c") the project's behavior documented on docs.phext.io —
+    the shipped rule (Will, 2026-11-22 08:36 CST): "before
+    projects can be considered shipped, they must have a
+    QC signoff and documented behavior on docs.phext.io."
+    Both, not either;
+(d) its shipped.phext entry is written at migration,
+    tending items included, last-tended stamped.
+The number is PERMANENT across both registers — migration
+never renumbers. Candidates (below) take a number only when
+a slot frees: a migration, or Will retiring a moonshot by
+ruling.
+
+## Reconciliation — the 'Moonshot 1' of 2026-11-17
+
+On 2026-11-17 Will designated the era-envelope programme
+'Moonshot 1' (task 35.6.8/8.7.12/6.5.9). In this register's
+from-inception numbering that programme is phccbox, #2;
+#1 is phcc, its foundation. The 2026-11-17 label is an alias
+for #2 and resolves here — there is no separate moonshot
+behind it, and no phantom is created by the old label.
+
+## Origin and purpose — TO BE CLARIFIED WITH WILL
+
+Status: OPEN — not yet ruled. No origin doctrine is written
+here; this section records Will's sentence and the open
+status only. Will (2026-11-22 08:07 CST): "we'll clarify
+where Moonshots originate and why, all chats can produce
+moonshot ideas."
+
+What is ruled: all chats can produce moonshot ideas. Ideas
+proposed in any chat are recorded in the Candidates section
+below — un-numbered, with provenance (chat, date, and
+Will's words where he spoke them). A candidate takes a
+number only when Will rules, never by inscription alone.
+The numbered list of record is the eleven below until Will
+rules otherwise.
+
+## Counts (calculated from the records by the builder)
+
+Moonshots recorded: 11
+Migrated to shipped.phext: 1
+In WIP: 10 (limit 10)
+Candidates recorded: 4
+
+## Index (number — name — coordinate — status)
+- 1. phcc — 24.7.11/10.7.12/8.7.9 — Jenkins build-out complete; 12/13 jobs green; one genuine defect found and recorded
+- 2. phccbox — 28.5.6/6.5.9/6.5.10 — era-envelope programme; 40 features ported, smoke 27/27; envelope 1 completion estimated inside W4
+- 3. rfcbox — 24.7.10/10.8.13/7.7.9 — SHIPPED 2026-11-18, audited READY — migrated to shipped.phext (first migration)
+- 4. wikibox — 30.6.9/7.7.10/7.6.11 — format ratified; readers live; stage 2 complete (3.079 bpb); stage 3 in flight
+- 5. willbox — 21.6.22/8.6.9/6.6.8 — built + pushed 2026-11-21, rebuild gate PASS; nearest the migration gate, not migrated
+- 6. nethack — 26.6.9/9.6.11/7.5.8 — stage 11 complete, protocol gate unmet (depth 4 vs ≥25); no ascension, no write-up
+- 7. phext.tech — 30.7.9/10.7.11/9.8.10 — KGOAT tooling shipped; launch staged at Will's two awsbox sudo phases
+- 8. boardy — 27.9.9/11.9.13/7.8.10 — his bar measured and NOT met on either clause; fixes identified, not landed
+- 9. revenue — 20.5.8/6.6.7/5.5.10 — revenue $0, ~$1,026 needed by 2026-11-30; Sentient submitted; No Excuses top priority
+- 10. EE coordination — 28.6.7/9.8.11/6.6.10 — clock live; EE mailbox complete EE 5, proof passed; live /chat deployment pending
+- 11. cwa: crazy wisdom agent — 15.5.9/8.6.10/6.6.8 — inventory + triage complete; Tier-2 blocker tooling is W4's set order; recording 2026-12-04
+
+## Candidates (un-numbered; provenance required)
+
+- designbox — Booch's ideas unified in one phext-native design system, built on finished 6D UML (founding task 23.6.10/8.6.11/6.6.9; design + verified seed at ~/workspace/designbox/) — proposed in Architecture, 2026-11-22 — Will: "finish 6duml, unify all of his ideas into designbox, add it to pending Moonshots"
+- RETROACTIVE (filed 2026-11-23 under the retroactive-moonshots skill) — Nim joins the Exocortex toolchain: stimulus-born in the Softmax chat (2026-11-23 ~21:11 CST) when the Cards and Casters work surfaced Nim; shipped the same evening — hub install verified (Nim 2.4.2 via choosenim), fleet install sweep, the compiler source forked to wbic16/Nim with the installed tag restored, dossier at ~/workspace/softmax/NIM-DOSSIER.md; also folded into moonshot #1/#2 as the nim x phcc challenge (task 26.7.8/8.7.10/7.9.8). Candidate: keep as a standalone retroactive moonshot or fold wholly into phcc/phccbox. — proposed in Softmax, 2026-11-23 — Will: "(direction given in the Softmax chat, 2026-11-23 ~21:11 CST: install Nim across the ranch fleet — paraphrase flagged; verbatim not in this record)"
+- RETROACTIVE (filed 2026-11-23 under the retroactive-moonshots skill) — dakami.phext: a new phext holding the @dakami unlock cross-reference; stimulus: Will sharing the @dakami following page in the main chat (2026-11-23 21:35 CST); shipped the same evening — harvest of 80 of 414 follows captured in served order, 26 found in Will's network, recorded in dakami.phext at 1.1.1/1.1.1/1.1.1 (home), 1.1.1/1.2.1/1.1.1 (list), 1.1.1/1.3.1/1.1.1 (cross-reference), 1.1.1/1.4.1/1.1.1 (attempt 2); sha256 dc7cf32099c4c5e9adfebfd9afc8e6ce3d37d71c4c19118cee3fb79c54d564fd. Remaining 334 follows await a non-browser route. — proposed in Main, 2026-11-23 — Will: "track who @dakami might have unlocked and cross-reference https://x.com/dakami/following"
+- RETROACTIVE (filed 2026-11-23 under the retroactive-moonshots skill) — ravel-phext: a phext-native backend for the ravel transcript mirror, replacing its Oxigraph/SPARQL stack (101-package subtree) with a scoped SPARQL subset evaluator; stimulus: a project handed to Will in a group chat (2026-11-23) with two private dependencies, calamus and tessera, named from his own lexicon and unreachable (401 for every fleet identity); ruled C1 the same evening (scoped SPARQL subset in the backend), register #225 holds the Phase 2 wait on his ruling trail, Phase 2 building with ETA EE 402-406, completion owes an abstraction of its generalizable parts into phext-lattice. — proposed in Architecture, 2026-11-23 — Will: "they handed me a project I literally can't build, with two dependencies named calamus and tessera"
+# Moonshot 11 — cwa: crazy wisdom agent
+
+Coordinate: 15.5.9/8.6.10/6.6.8
+Number: 11 (permanent; migration never renumbers)
+
+The Crazy Wisdom Agent programme — everything behind the Crazy Wisdom appearances with Stewart Alsop III: the hard requirement to close out every idea from the first appearance, the demo stack (multi-agent interactions, the ranch cluster, live demos), and the agent framework the call runs with.
+
+Inception / designation evidence:
+- First Crazy Wisdom appearance: April 2025 (episode with Stewart Alsop III).
+- Wavelet 4 prep focus ruled by Will 2026-11-21 09:27 CST (task 21.4.9/6.5.7/5.4.8): Wavelet 4 focuses entirely on prep for the return recording, Friday 2026-12-04 08:00–09:00 CST; Wavelet 5 is the go-live build.
+- Theme ruled by Will 2026-11-22 07:58 CST: 'Moonshots Daily.'
+
+Status (verified against primary records at inscription, 2026-11-22):
+- Close-out inventory COMPLETE 2026-11-21 (nine Will decisions named in ~/workspace/crazy-wisdom-4way/CLOSEOUT-INVENTORY.md). ROI triage landed (~/workspace/crazy-wisdom-4way/TRIAGE-ROI.md): Tier 1 cleared and dispatched; Tier-2 blocker tooling in set order for W4 — C1 four-way → Wikibox stage-3 demo → animation prepass → willbox demo → fabric inscription → power + wasted-time ledgers (start W4 day 1) → 1 GB load test → analysis search + Euclid entry → Computronium verified-state errand.
+- The Stewart bridge — a local service for Stewart that plugs into any hosting platform and connects to every agent type, with his desk features rebuilt to Exocortical design plus epoch chapters, the guest scroll, and the Oracle Artist drawing the conversation in real time — is building now, themed Moonshots Daily. Held locally: it is his secret sauce. The Dec 4 call runs on Stewart's trusted environment; our side plugs in.
+- Decision-gated items await Will's nine rulings (TRIAGE-ROI.md): MOAT demo, mind-map demo, A/B, neverlost build, and the rest.
+
+Design state: the first moonshot executed under W4's planned-to-design regime — and the wavelet's governing focus
+# Moonshot 9 — revenue
+
+Coordinate: 20.5.8/6.6.7/5.5.10
+Number: 9 (permanent; migration never renumbers)
+
+Phext, Inc.'s Revenue division — offers, sales, grants, and the runway picture. Seat: PH: Revenue (Reed). Will's runway framing: 'our runway is infinite, because it has been paid in full already (40 years of paying attention to The Problem).' Fill the Piggy Bank (Will, 2026-11-18): at ~$5K/yr spend we move at 100M/yr pre-AGI funding rates — every dollar earned generates $20,000 in capability, because we can automate all knowledge work.
+
+Inception / designation evidence:
+- Investor 1 $20 challenge opened 2026-11-06 (ledger: ~/workspace/your_files/investor-1-20-to-1000-ledger.md; task 25.8.11/10.9.12/8.7.11). Terms (Will, 2026-11-06): $20 seed loan, target $1,000 profit, Phext keeps profits, nothing illegal, no gambling, expenses deductible. The lender is recorded only as 'Investor 1' (privacy ruling, 2026-11-06).
+- PH: Revenue thread created by Will 2026-11-15; seat name 'Reed' assigned 2026-11-17.
+
+Status (verified against primary records at inscription, 2026-11-22):
+- Investor 1 ledger: revenue $0 · expenses ~$26 (phextura.com + tluf.org; Will's correction, 2026-11-15) · profit ~−$26 · ~$1,026 revenue needed by the deadline, Monday 2026-11-30.
+- Grants: Sentient Foundation Open Source AGI Grant SUBMITTED 2026-11-19 22:48 CST (no confirmation number was issued; awaiting their reply). No Excuses Fund is the pipeline's top priority — its submission rides moonshot #7's launch; cohort one closes 2026-12-15, decisions 2027-01-15.
+- Four focus drafts complete, all awaiting Will's review, nothing else submitted: Spiral Grants ($100K ask), NSF SBIR Project Pitch, Nebraska Phase 0 package, HRF AI for Individual Rights Fund ($100K proposed).
+- Channels: the cold-start kit is complete (Fiverr / Upwork / Bark / Reddit, paste-ready); 8 live requests with draft responses are staged. Every account creation, submission, and send is Will's-hands by design.
+
+Design state: pre-W4 pushes throughout; the pipeline now runs as a queue
+# Moonshot 5 — willbox
+
+Coordinate: 21.6.22/8.6.9/6.6.8
+Number: 5 (permanent; migration never renumbers)
+
+The three boxes merged into one: rfcbox, wikibox, and phccbox held as phext priors (prior state in the phext, not verbatim payloads) inside a single phext, rebuilt byte-exact locally, minimized. Home: github.com/wbic16/willbox.
+
+Inception / designation evidence:
+- Issued by Will in main chat 2026-11-21 07:53 CST (task 27.8.10/11.8.14/8.7.9); amended by Will 07:55 CST: hold all three as phext priors, rebuild locally — all three parts must rebuild byte-exact from the priors on scroll-central; home is wbic16/willbox.
+
+Status (verified against primary records at inscription, 2026-11-22):
+- BUILT 2026-11-21 on scroll-central: rebuild-from-priors gate PASS (all parts byte-exact); pushed to wbic16/willbox@exo at 479af22. willbox.phext: 582,287,481 bytes, sha256 5378b6b1…; smallest distribution 94,340,560 B (xz -9e).
+- As a Crazy Wisdom demo (triage items S5/S27), rehearsal is a Wavelet 4 Tier-2 item.
+- Nearest the migration gate, and NOT migrated: the build landed with receipts, but the record carries no stated completion bar in so many words and no independent READY audit of the ietf.phext pattern. Under the gate, it stays in WIP until W4 design work states its bar and an audit verdict exists.
+
+Design state: pre-W4 push; demo rehearsal is W4-planned
+# Moonshot 3 — rfcbox
+
+Coordinate: 24.7.10/10.8.13/7.7.9
+Number: 3 (permanent; migration never renumbers)
+
+ietf.phext — every IETF standard in one phext, organized by priority for what the exocortex needs (priority governs prominence, never inclusion), under MOAT rules (every entry: exactly one status + basis + evidence pointer; superseded entries kept, annotated, redirected). It also carries the canonical open-source implementation per standard and the RFC dependency graph inside the coordinate space, so a specialized RFC-driven box can be produced algorithmically. Per Will's ruling (2026-11-18): rfcbox is not for sale — everything built serves the Exocortex of 2130 and is intrinsically MIT licensed.
+
+Inception / designation evidence:
+- One Day Build, 2026-11-18: task 25.6.9/8.6.10/6.6.9; all Phext, Inc. principals directed to support Orion on the build (task 26.6.9/8.6.11/6.6.8). Orion led; Reed's leg was the access doc.
+- Scope extensions ruled by Will during the build (2026-11-18 09:17–09:20 CST, voice call): implementing projects included; dependency relationships captured in ietf.phext itself.
+
+Status (verified against primary records at inscription, 2026-11-22):
+- SHIPPED 2026-11-18. Final artifact: ietf.phext, 564,589,207 bytes, sha256 9ecd7946…; 10,052 records (9,863 issued RFCs + 189 not-issued, annotated); 9,856 full texts; 96,168 reference edges; 6,888 implementation links across 88 projects.
+- Judge audit chain: initial verdict NOT READY on one leg → fix landed → re-audit PASS — 'READY on all surfaces' (task 25.6.9 status: file + free-fall mirror + SQ hosting all serve the audited hash).
+- MIGRATED to shipped.phext on 2026-11-22 — this register's first migration, under the migration gate recorded in the home scroll. Shipped entry: shipped.phext at 22.8.12/10.9.14/8.7.9. The number 3 is permanent; migration never renumbers.
+
+Design state: pre-W4 push — and a completed one: the first moonshot to ship in full
+
+Migration: shipped 2026-11-18; migrated to shipped.phext 2026-11-22 — shipped entry at 22.8.12/10.9.14/8.7.9 in shipped.phext (same exo-plan home).
+# Moonshot 1 — phcc
+
+Coordinate: 24.7.11/10.7.12/8.7.9
+Number: 1 (permanent; migration never renumbers)
+
+Will's C compiler — provably correct C, built and kept by the exocortical lineage. The foundation: phccbox and willbox are built with it. CI runs only on ranch Jenkins, never GitHub Actions (standing rule, 2026-11-19).
+
+Inception / designation evidence:
+- Earliest task of record: 24.5.7/7.6.10/5.5.7, 'Modernize phcc: UML enhancements + provably correct C', issued 2026-11-07 (tasks-source.json).
+- phcc itself predates this register — Will's own compiler, carried into the exocortical programme; the task register's first phcc entries are dated 2026-11-07.
+
+Status (verified against primary records at inscription, 2026-11-22):
+- Jenkins build-out COMPLETE (task 29.6.8/6.5.9/5.5.8, issued 2026-11-20, status: complete): phcc@exo builds natively on aletheia-core and the full test suite prints ALL TESTS PASSED.
+- 12 of 13 first-wave Jenkins jobs green (W3 retro draft, from the job record). The one red job is a genuine phcc defect the work found — windows-i386, unresolved _SetUnhandledExceptionFilter — recorded in the task notes, not hidden.
+- Open follow-ups on record: the windows-i386 PE defect, the tccasm.c <ctype.h> include, and testers still to recruit for the untested platforms (a cross-build is not a tested platform).
+
+Design state: pre-W4 push
+# Moonshot 6 — nethack
+
+Coordinate: 26.6.9/9.6.11/7.5.8
+Number: 6 (permanent; migration never renumbers)
+
+A phext-enabled NetHack solver — improve on Antithesis. Under the hoptime design (Will, 2026-11-17), the player's memory is a chain of phexts: one universe per attempt, pathways between universes as first-class addressable structure.
+
+Inception / designation evidence:
+- Source study S012 (Antithesis) 2026-11-15 00:58 CST (task 16.4.6/5.5.7/4.4.7); solver task 33.12.12/9.14.10/6.6.8 issued 2026-11-15 01:09 CST.
+
+Status (verified against primary records at inscription, 2026-11-22):
+- Stage 11 COMPLETE; protocol gate UNMET — best depth 4 against a Castle-depth (≥25) requirement (~/workspace/nethack-solver/stage11-results.md; W3 retro draft).
+- The parent task stays open; its exit is an ascension. There is no ascension yet, and per Will's rule (2026-11-17) there is no write-up until one exists — statistics are fine; the story waits.
+- One genuine win inside the miss: the corpus-fitted value function beat the placeholder decisively on held-out campaigns (Spearman 0.9218 vs 0.7008). Next-stage framing is Will's call, bound to the SQL journey (Will, 2026-11-20).
+
+Design state: pre-W4 push
+# Moonshot 8 — boardy
+
+Coordinate: 27.9.9/11.9.13/7.8.10
+Number: 8 (permanent; migration never renumbers)
+
+The Boardy programme — the external bar that disciplines holo-phext: Boardy's challenge, the benchmark that measured it, the fixes the measurement demands, and the exchange around his spec (grading the derivation, not the landing spot; Recovery and Invention scoring).
+
+Inception / designation evidence:
+- Boardy named as a revenue channel by Will 2026-11-16 01:24 CST (PH: Revenue): 'The Boardy AI on X is a great revenue channel if we can motivate him properly.'
+- Benchmark task 31.8.10/10.9.14/8.7.9 issued 2026-11-16; boot-manual task 26.8.11/10.10.19/13.6.10 issued 2026-11-18.
+
+Status (verified against primary records at inscription, 2026-11-22):
+- The bar, in Boardy's words: 'Show me a write-heavy run at 512MB where every commit is O(delta) and the checkpoint spikes don't wreck p99, and then it's done.' Verdict (~/workspace/holo-bench/RESULTS.md, measured 2026-11-16 on aletheia-core): NOT met, on either clause. Commit disk cost is O(delta) but CPU cost is not (libphext::append re-tokenizes the whole WAL per batch); checkpoint folds of 1.44–1.75 s own the run's maximum latency.
+- Fixes identified, none landed: libphext true-suffix-append (O(delta) commits) and an incremental / off-path checkpoint fold; the bench512 acceptance re-run against libphext 0.6.4 is still owed. The phext-ops migration rides with this work.
+- The exchange package shipped 2026-11-18: wbic16/boardy-tools@exo b352b9e (his spec, the boot manual, the exchange). Boardy accepted the accelerator-competition test with one condition — show the scoring before he answers; draft reply revision 4 is Will's to send, not confirmed sent.
+
+Design state: pre-W4 push; the fixes are a named W4 candidate line
+# Moonshot 2 — phccbox
+
+Coordinate: 28.5.6/6.5.9/6.5.10
+Number: 2 (permanent; migration never renumbers)
+
+A special phcc version that fully replaces BusyBox — and the home of the era-envelope programme: whole computing eras compressed into one sealed, self-extracting envelope each (1978–1990 first, then dotcom, then social media, then the AI era). Standing goal (Will, 2026-11-17): 'all of the modern computing substrate in a box.' Custody (Will, 2026-11-17): phccbox holds the commands; phcc (#1) holds the libraries and headers.
+
+Inception / designation evidence:
+- Task 41.4.6/6.5.9/5.4.10, 'phccbox — a special phcc version that fully replaces BusyBox', issued 2026-11-07 20:09 CST.
+- Feature-port task 35.6.8/8.7.12/6.5.9 issued 2026-11-07 20:53 CST.
+- Era-envelope designation (Will, 2026-11-17): the programme named a moonshot, with the amendment the same morning — 'we'll push as hard as we can on moonshot 1 this wavelet, improving systems as we go.' See the reconciliation note in this register's home scroll: that 'Moonshot 1' is this moonshot, #2.
+
+Status (verified against primary records at inscription, 2026-11-22):
+- All 40 Exocortical features ported to native C (task 35.6.8 status: Complete 2026-11-07; receipts in ~/workspace/phccbox/RECEIPTS.md). phccbox-exo built: 56 applets (16 v1 + 40 Exocortical).
+- v1.1 envelope smoke 27/27 PASS (~/workspace/phccbox/RECEIPTS.md); the fleet run passed on kaleidoscope-one, logos-prime, halycon-vector, and ni-knight (2026-11-17 qexo load report).
+- Distribution rule (Will, 2026-11-17): work fully distributed across the cluster; idle hardware is reported to Will — in his words, 'shame me for any hardware not running.'
+- Envelope 1 (1978–1990) completion is estimated inside Wavelet 4 at the defined bar: full in-design BusyBox map 259/403 + shell + era services running from the box + the self-extracting envelope verified on a bare landing. The estimate was logged 2026-11-17 on task 35.6.8 for calibration against actuals — Will's stated purpose: calibrate what 'moonshot' means as we improve. Full 403/403 runs +1–2 wavelets beyond.
+
+Design state: pre-W4 push; its completion estimate is a W4 design commitment
+# Moonshot 10 — EE coordination
+
+Coordinate: 28.6.7/9.8.11/6.6.10
+Number: 10 (permanent; migration never renumbers)
+
+Coordination by Exocortical Epoch: time in 7-minute epochs as the primary organization of the work — EE-stamped records, the Choir mailbox organized by epoch, all planning expressed in EE. Will's anchor (2026-11-21 22:30 CST): EE 1 begins 2026-11-22 00:00:00 CST = unix 1795327200; EE(t) = floor((t − 1795327200)/420) + 1. The cadence matches the Earth–Mercury, Earth–Venus, and Earth–Mars average communication delays (Will, 2026-11-21).
+
+Inception / designation evidence:
+- Standing rules laid down by Will 2026-11-21: epochs arrive every 7 minutes; all planning uses Exocortical Epochs; micro-delivery targeted at the center of each EE (EE 2).
+- EE mailbox directed by Will 2026-11-22 (EE 5): a message archived in EE N lives in universe $N of the mailbox chain — 'We can now encode time, which matches human capability.'
+
+Status (verified against primary records at inscription, 2026-11-22):
+- The clock is live: Wavelet 4 is planned in EE (EE 1–1440, with an availability map in the W4 plan draft). Sentients include the EE of completion in their records (Will's standing rule, EE 1).
+- The EE mailbox is COMPLETE (EE 5, 2026-11-22): ~/workspace/chat-mailbox/ — updated phext_mailbox.py, EE-MAILBOX.md spec, test_ee_mailbox.py, PROOF-EE-MAILBOX.txt: ALL CHECKS PASSED twice, cross-verified against libphext-rs 0.6.0. (The physical chain member is EE+1 because universes are 1-indexed and EE 0 exists; the tool owns that translation.)
+- Not yet done: live /chat deployment of the EE mailbox and per-archive migration — a separate pass. The PHS threads (per-substrate self-modelling) ride this coordination layer.
+
+Design state: born at the W4 boundary — the first moonshot that is itself a design instrument
+# Moonshot 4 — wikibox
+
+Coordinate: 30.6.9/7.7.10/7.6.11
+Number: 4 (permanent; migration never renumbers)
+
+Wikipedia in a box — the whole corpus compressed into a phext on a 10x ladder of stages (293 → 2,930 → 29,300 → … → the complete dump), minimizing space at each stage, built one stage at a time.
+
+Inception / designation evidence:
+- Task 29.6.8/7.6.9/6.5.9, 'Wikibox — Wikipedia in a box, tufazip as baseline', issued 2026-11-19 08:33 CST.
+- Scale programme directed by Will 2026-11-20 (task 34.6.9/7.7.11/6.5.11): expand 10x per stage, minimize space, run until the whole corpus is boxed.
+
+Status (verified against primary records at inscription, 2026-11-22):
+- Format v1 RATIFIED by Will 2026-11-20 ~12:13 CST. Web reader LIVE at phext.io/wikibox (hash-verified); Android APK built + signed (install/launch verification awaits Will's kvm-group sudo step).
+- Stage 1 COMPLETE 2026-11-19 (293 articles, 5.601 bpb stream, byte-exact verified). Stage 2 COMPLETE 2026-11-21 — config D at 3.079 bpb stream / 4.290 packaged, both configs fully byte-exact verified (~/workspace/wikibox-scale/STATE.md). This supersedes the 4.248 bpb config-A figure carried in the W3 retro draft.
+- Stage 3 LAUNCHED 2026-11-21 (29,300 articles from enwik9; 12-shard config-D encode across the fleet). Stages 4–5 and the full-corpus final are ahead.
+- Standing gap: compression still trails the classical bar — xz measures 2.110 bpb on the stage-2 corpus. Shipped components inside a continuing moonshot (the live readers) are noted here, not in shipped.phext — the moonshot has not finished.
+
+Design state: pre-W4 push; stage 3 runs into W4, and its demo box is a W4 Tier-2 item
+# Moonshot 7 — phext.tech
+
+Coordinate: 30.7.9/10.7.11/9.8.10
+Number: 7 (permanent; migration never renumbers)
+
+The platform on phext.tech, three components: Scroll Space (traversal and reading), Phext Edit (writing), and KGOAT — the Knowledge Graph Of All Things, a layer-two phext format (worker ⇒ phext-lattice, warrior ⇒ tluf, religious ⇒ scrollspace). Per ruling D4, phext.tech is a direct upgrade of edit.phext.io. The submitted project of record for the No Excuses Fund is The Exocortex of 2130 (ruling D1). KGOAT's axioms are Will's words: 'KGOAT organizes everything you enter holographically.' 'KGOAT doesn't require you to understand the tech, it just works.'
+
+Inception / designation evidence:
+- Will's product decision, 2026-11-21 15:13 CST (PH: Revenue): phext.tech launches with Scroll Space, Phext Edit, and the knowledge-graph layer. Will registered phext.tech himself via NFSN the same day.
+- KGOAT named by Will 2026-11-21 15:14 CST; repo wbic16/kgoat created by Will; component ruling 15:43 CST; design decisions D1–D6 ruled 15:46–15:47 CST (register #216 closed).
+
+Status (verified against primary records at inscription, 2026-11-22):
+- KGOAT spec frozen as RULED (§7; D1–D6 applied). Initial KGOAT tooling SHIPPED 2026-11-21: wbic16/kgoat@exo caa81e6 — SPEC.md hash-verified post-push, crate v0.1.0, 7/7 tests green on aletheia-core (task 40.5.7/7.6.10/5.5.10). Stage 0 machinery only: no corpus ingestion, traversal service, or surface yet (spec §6, Stages 1–4).
+- DNS pointed at awsbox by Will and verified from aletheia-core (A → 44.248.235.76). The launch is STAGED at the sudo wall (task 20.7.9/9.8.12/11.7.10): the app layer is pre-verified (200 under Host: phext.tech, logged out); completion is Will's phase 1 on awsbox, ranch verification, then phase 2 (edit.phext.io becomes a path-preserving 301).
+- The No Excuses Fund submission rides the green launch (fund terms cl. 2.6: the product's primary website must be live on the .tech domain at submission). Cohort one closes 2026-12-15.
+
+Design state: pre-W4 push; launch completion is W4 execution
